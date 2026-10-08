@@ -1,0 +1,2 @@
+# Apenas para os testes de navegador; o painel não precisa de pacotes.
+playwright==1.62.0
