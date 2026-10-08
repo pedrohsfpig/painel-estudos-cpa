@@ -1,8 +1,9 @@
 # Painel de estudos CPA
 
 Painel de estudos e simulados em português, importado do arquivo
-`Painel de estudos CPA.html`. O conteúdo original foi preservado integralmente
-em `index.html`, incluindo o visual, as questões e a lógica de funcionamento.
+`Painel de estudos CPA.html`. As 600 perguntas, suas alternativas, gabaritos,
+dificuldades e IDs originais foram preservados em `index.html`. A versão atual
+acrescenta feedback específico para cada alternativa.
 
 ## Executar
 
@@ -44,6 +45,8 @@ local permanece porque a origem do site não muda.
 - 600 questões: 100 em cada uma das 6 aulas.
 - 120 fáceis, 240 médias, 120 difíceis e 120 Hardcore.
 - Estudo com dicas, eliminação de alternativas e correção imediata.
+- Feedback da resposta correta e das três alternativas incorretas após responder,
+  tanto em Estudo quanto em Hardcore, incluindo prática diária e por aula.
 - Simulados com resultado e revisão dos erros ao final.
 - Filtros de aula, dificuldade, questões inéditas e erros pendentes.
 - Estudo de hoje, cronômetro, indicadores e evolução diária.
@@ -79,20 +82,56 @@ Quando Python, Playwright e Chromium já estiverem disponíveis no ambiente:
 python3 tests/smoke.py
 ```
 
+Para conferir o banco de questões, sem instalar pacotes externos:
+
+```bash
+python3 tests/validate_bank.py
+```
+
 O teste inicia e encerra seu próprio servidor local e usa um histórico isolado
 por caso. Ele detecta Chromium no sistema; para informar outro executável,
 use a variável `CHROMIUM_PATH`.
 
 Os casos verificam o banco de questões, os materiais das seis aulas, os três
 modos de prática, ajudas, revisão de erros, filtros, estudo diário, persistência,
-limpeza do histórico e um fluxo em tela móvel. A revisão pedagógica das perguntas
-e a integração com a conta do Claude não fazem parte desses testes.
+limpeza do histórico e um fluxo em tela móvel. Também exercitam as quatro escolhas
+de todas as questões para conferir a associação entre alternativa embaralhada e
+feedback, a ausência de feedback em simulados e o contrato de conteúdo futuro.
+A integração com a conta do Claude não faz parte desses testes.
 
-## Validação da importação
+## Feedback e novas questões
 
-Os 10 testes passaram no Chromium deste ambiente. O HTML foi servido via HTTP
-e conferido byte a byte com o arquivo enviado: nenhuma alteração de conteúdo,
-visual ou lógica foi feita em `index.html`.
+O banco atual inclui 2.400 feedbacks: quatro por questão. A justificativa geral
+original fundamenta a resposta certa. As explicações das demais opções apontam
+conceitos confundidos, papéis trocados, exclusões, erros de cálculo ou afirmações
+indevidamente incluídas/omitidas. Nas perguntas que pedem INCORRETA ou NÃO,
+distinguem afirmação verdadeira de resposta correta ao enunciado.
+
+As explicações são exibidas somente depois da resposta, seja acerto ou erro,
+inclusive para opções eliminadas pela ajuda. A revisão de erros também contém
+os quatro feedbacks. Simulados mantêm o avanço sem feedback imediato e a revisão
+geral já existente no resultado, sem o novo bloco de quatro explicações.
+
+Cada linha de `Q` usa esta estrutura:
+
+```text
+[aula, tema, nível, enunciado,
+ correta, incorreta1, incorreta2, incorreta3,
+ justificativaGeral, somenteEstudo, dica,
+ [feedbackCorreta, feedbackIncorreta1, feedbackIncorreta2, feedbackIncorreta3]]
+```
+
+Os feedbacks ficam em `q[11]` na ordem ORIGINAL, não na ordem A/B/C/D da tela.
+As opções embaralhadas carregam o índice de origem para manter esse vínculo.
+Todas as novas questões precisam de quatro explicações próprias e preenchidas.
+O aplicativo valida isso antes de iniciar, e o GitHub Actions executa a checagem
+de conteúdo em pushes e pull requests. Essa checagem não substitui a revisão
+pedagógica: confira cada explicação com o material usado na aula.
+
+Para preservar históricos, acrescente questões ao final do banco, sem reordenar
+as antigas. Leia `AGENTS.md` antes de implementar novas aulas ou conteúdos.
+
+## Limitação visual conhecida
 
 Uma limitação do visual original foi confirmada: em uma tela de 390 pixels,
 o menu superior amplia a página para 540 pixels e exige rolagem horizontal.

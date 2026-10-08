@@ -95,13 +95,15 @@ class PainelCPA(unittest.TestCase):
 
     def test_01_bank_and_dashboard(self):
         data = self.page.evaluate("Q")
-        self.assertEqual(len(data), 600)
-        self.assertEqual([sum(q[0] == lesson for q in data) for lesson in range(1, 7)], [100] * 6)
-        self.assertEqual([sum(q[2] == level for q in data) for level in range(4)], [120, 240, 120, 120])
+        self.assertGreaterEqual(len(data), 600)
+        self.assertTrue(all(sum(q[0] == lesson for q in data) >= 100 for lesson in range(1, 7)))
+        self.assertTrue(all(sum(q[2] == level for q in data) >= count for level, count in enumerate([120, 240, 120, 120])))
         for q in data:
             self.assertTrue(all(isinstance(value, str) and value.strip() for value in q[3:9]))
         self.assertEqual(self.page.locator(".g4 .mv").all_text_contents(), ["0", "0", "0", "0%"])
-        self.assertIn("480 questões da prova e 120 hardcore, 600 nunca respondidas", self.page.locator("#app").inner_text())
+        regular = sum(q[2] < 3 for q in data)
+        hardcore = sum(q[2] == 3 for q in data)
+        self.assertIn(f"{regular} questões da prova e {hardcore} hardcore, {len(data)} nunca respondidas", self.page.locator("#app").inner_text())
 
     def test_02_navigation_and_all_materials(self):
         self.click("Quadro do SFN")
@@ -132,18 +134,27 @@ class PainelCPA(unittest.TestCase):
         self.click("Eliminar 2 alternativas")
         self.assertEqual(self.page.locator("button.o:disabled").count(), 2)
         self.assertFalse(self.page.evaluate("qz.x.some(i => qz.o[i][1])"))
-        self.finish()
+        self.answer()
+        self.assertEqual(self.page.locator(".feedback .fb-option").count(), 4)
+        self.click("Próxima")
+        for i in range(4):
+            self.answer()
+            self.click("Próxima" if i < 3 else "Ver resultado")
+        self.assertIn("5 de 5 (100%)", self.page.locator("#app").inner_text())
 
     def test_04_simulation_and_review(self):
         self.configure("Simulado")
         self.assertEqual(self.page.locator(".aj").count(), 0)
+        self.assertEqual(self.page.locator(".feedback").count(), 0)
         self.answer(correct=False)
         self.assertIn("questão 2 de 5", self.page.locator(".tb2").inner_text())
         self.assertEqual(self.page.locator("button.o.ok").count(), 0)
+        self.assertEqual(self.page.locator(".feedback").count(), 0)
         for _ in range(4):
             self.answer()
         self.assertIn("4 de 5 (80%)", self.page.locator("#app").inner_text())
         self.assertEqual(self.page.locator("details.rv").count(), 1)
+        self.assertEqual(self.page.locator(".feedback").count(), 0)
         self.page.locator("details.rv summary").click()
         self.assertIn("Resposta correta:", self.page.locator("details.rv").inner_text())
         self.assertEqual(self.page.evaluate("H.map(row => row[3])"), [1] * 5)
@@ -212,6 +223,121 @@ class PainelCPA(unittest.TestCase):
         self.assertTrue(self.page.locator(".en").is_visible())
         self.assertEqual(self.page.locator("button.o").count(), 4)
         self.finish()
+
+    def test_11_feedback_after_right_and_wrong_answers(self):
+        self.configure()
+        for correct in [False, True]:
+            self.assertEqual(self.page.locator(".feedback").count(), 0)
+            self.answer(correct)
+            self.assertEqual(self.page.locator(".fb-option").count(), 4)
+            self.assertEqual(self.page.locator(".fb-correct").count(), 1)
+            self.assertEqual(self.page.locator(".fb-selected").count(), 1)
+            self.assertEqual(self.page.locator(".fb-selected.fb-correct").count(), int(correct))
+            self.assertEqual(self.page.locator("button.o:disabled").count(), 4)
+            self.assertEqual(self.page.locator(".fb-choice").inner_text(), "Sua resposta")
+            self.click("Próxima")
+            self.assertEqual(self.page.locator(".feedback").count(), 0)
+
+    def test_12_all_questions_and_shuffled_alternatives_have_matching_feedback(self):
+        # Exercita os quatro caminhos de resposta das 600 questões no DOM real.
+        result = self.page.evaluate("""() => {
+            let checked = 0;
+            for (let id = 1; id <= Q.length; id++) {
+                for (let originalIndex = 0; originalIndex < 4; originalIndex++) {
+                    begin([id], Q[id - 1][2] === 3 ? 'h' : 'e');
+                    if (document.querySelector('.feedback')) throw Error('Feedback antes da resposta: ' + id);
+                    const chosen = qz.o.findIndex(o => o[2] === originalIndex);
+                    pick(chosen);
+                    const cards = [...document.querySelectorAll('.fb-option')];
+                    if (cards.length !== 4) throw Error('Feedbacks incompletos: ' + id);
+                    cards.forEach((card, displayIndex) => {
+                        const option = qz.o[displayIndex];
+                        if (card.dataset.optionIndex !== String(option[2])) throw Error('Índice trocado: ' + id);
+                        if (card.querySelector('h4').textContent !== 'ABCD'[displayIndex] + ') ' + option[0]) throw Error('Alternativa trocada: ' + id);
+                        if (card.querySelector('p').textContent !== Q[id - 1][11][option[2]]) throw Error('Explicação trocada: ' + id);
+                        if (card.classList.contains('fb-correct') !== Boolean(option[1])) throw Error('Correção trocada: ' + id);
+                        if (card.classList.contains('fb-selected') !== (displayIndex === chosen)) throw Error('Escolha trocada: ' + id);
+                    });
+                    const before = H.length;
+                    pick(chosen);
+                    if (H.length !== before) throw Error('Resposta duplicada: ' + id);
+                    checked++;
+                }
+            }
+            return {checked, questions: Q.length, history: H.length};
+        }""")
+        self.assertEqual(result["checked"], result["questions"] * 4)
+        self.assertEqual(result["history"], result["checked"])
+
+    def test_13_future_question_contract_and_feedback(self):
+        errors = self.page.evaluate("""() => {
+            const invalid = [];
+            const missing = structuredClone(Q[0]);
+            missing.length = 11;
+            invalid.push(missing);
+            for (let index = 0; index < 4; index++) {
+                const empty = structuredClone(Q[0]);
+                empty[11][index] = ' ';
+                invalid.push(empty);
+            }
+            const short = structuredClone(Q[0]); short[11].pop(); invalid.push(short);
+            const generic = structuredClone(Q[0]); generic[11].fill('Uma justificativa para todas.'); invalid.push(generic);
+            return invalid.map(question => {
+                try { validateQuestionBank([...Q, question]); return null; }
+                catch (error) { return error.message; }
+            });
+        }""")
+        self.assertEqual(len(errors), 7)
+        self.assertTrue(all(errors))
+        self.page.evaluate("""() => {
+            const question = structuredClone(Q[0]);
+            question[3] = 'Nova questão com feedback próprio';
+            question[11] = [
+                'Explicação específica da resposta certa futura.',
+                'Explicação específica do primeiro erro futuro.',
+                'Explicação específica do segundo erro futuro.',
+                'Explicação específica do terceiro erro futuro.'
+            ];
+            Q.push(question);
+            validateQuestionBank();
+            begin([Q.length], 'e');
+        }""")
+        self.answer()
+        self.assertEqual(self.page.locator(".fb-option").count(), 4)
+        self.assertIn("Explicação específica da resposta certa futura.", self.page.locator(".feedback").inner_text())
+
+    def test_14_negative_question_explains_true_distractors(self):
+        self.page.evaluate("begin([29], 'e')")
+        self.answer(correct=False)
+        self.assertIn("afirmação incorreta", self.page.locator(".fb-correct p").inner_text())
+        self.assertIn("afirmação é verdadeira", self.page.locator('[data-option-index="1"] p').inner_text())
+        self.assertIn("não é a exceção", self.page.locator('[data-option-index="1"] p').inner_text())
+
+    def test_15_error_review_and_legacy_history(self):
+        self.page.evaluate("localStorage.setItem('cpaH', JSON.stringify([[1,0,1700000000000,0],[600,1,1700000001000,2]]))")
+        self.page.reload()
+        self.page.get_by_text("Progresso salvo neste navegador.", exact=False).wait_for()
+        self.assertEqual(self.page.locator(".g4 .mv").all_text_contents(), ["2", "1", "1", "50%"])
+        self.click("Erros (1)")
+        self.page.locator("details.rv summary").click()
+        self.assertEqual(self.page.locator(".fb-option").count(), 4)
+        self.click("Refazer erros (modo estudo)")
+        self.answer()
+        self.page.reload()
+        self.page.get_by_text("Progresso salvo neste navegador.", exact=False).wait_for()
+        self.assertEqual(self.page.evaluate("H.length"), 3)
+        self.assertEqual(self.page.evaluate("H.slice(0,2).map(row => row[0])"), [1, 600])
+        self.assertEqual(self.page.get_by_role("button", name="Erros (0)", exact=True).count(), 1)
+
+    def test_16_feedback_is_text_not_executable_markup(self):
+        self.page.evaluate("""() => {
+            Q[0][11][0] = '<img src=x onerror="window.feedbackExecuted=true"> & explicação';
+            begin([1], 'e');
+        }""")
+        self.answer()
+        self.assertEqual(self.page.locator(".feedback img").count(), 0)
+        self.assertIn('<img src=x', self.page.locator(".fb-correct p").inner_text())
+        self.assertFalse(self.page.evaluate("Boolean(window.feedbackExecuted)"))
 
 
 if __name__ == "__main__":
