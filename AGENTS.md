@@ -65,3 +65,42 @@ conteúdo pedagógico de cada nova explicação com as aulas e referências forn
 O site publicado usa `main` no GitHub Pages. Quando o usuário pedir atualizações
 para vê-las no site, valide, envie os commits e informe o resultado real do envio.
 Não confunda envio ao GitHub com confirmação de que o Pages já publicou.
+
+## Padrão permanente da trilha, para TODAS as aulas
+
+O usuário exige revisão individual de cada item das três seções de `AL`, inclusive
+nas aulas futuras. Siga a finalidade pedagógica, sem preencher seções por quota:
+
+- `r` / Resumo da aula: conceitos, funções, regras, condições e exemplos essenciais
+  para compreender a aula. Explique os termos; não deixe um conteúdo fundamental
+  disponível apenas numa dica, numa pegadinha ou no feedback de uma questão.
+- `d` / Dicas e macetes: um recurso concreto de estudo por item — associação,
+  mnemônico, sequência, fórmula com exemplo ou roteiro de resolução. Uma definição
+  ou regra isolada pertence ao resumo. Indique limites de macetes e simplificações.
+- `p` / Pegadinhas: cada item deve começar com `Armadilha: ` e conter ` Correção: `.
+  Mostre a afirmação ou raciocínio que induz ao erro, a resposta correta e por que
+  há erro, com exemplo quando útil. Não rotule uma definição isolada como pegadinha.
+  Baseie as confusões no conteúdo ou nos distratores; não prometa que cairão na prova.
+- Um mesmo tema pode aparecer nas três seções se cumprir funções diferentes:
+  conceito no resumo, método na dica, erro explicado na pegadinha. Não copie o
+  mesmo texto entre seções nem repita avisos com redações equivalentes.
+- Antes de incluir uma aula, confira a transcrição e os slides fornecidos, os
+  tópicos de todas as questões e o material de apoio. Faça uma lista de cobertura:
+  cada objetivo/conceito útil precisa estar explicado no resumo; números, exceções
+  e competências precisam ser consistentes com dicas, pegadinhas e feedbacks.
+- Transcrições podem ter erros de reconhecimento. Confira nomes, números, negações
+  e exceções com os slides ou outra fonte fornecida; não invente lacunas nem trate
+  uma fala do professor como confirmação independente de norma vigente. Se houver
+  uma divergência que afete a resposta, resolva ou sinalize antes de publicar.
+- Preserve a aula à qual cada material pertence. Não incorpore uma transcrição
+  enviada para uma aula futura durante uma revisão das aulas existentes.
+- Ao corrigir uma contradição, procure também sua ocorrência em mapas, tabelas,
+  flashcards, dicas e justificativas. Não deixe uma versão antiga ensinando o oposto.
+- Mantenha `AL` como JSON válido. Preserve ordem das aulas, vínculos com `Q` e IDs
+  existentes. `docs/revisao-trilha.md` registra a referência desta revisão e
+  `docs/revisao-trilha-itens.json` rastreia os itens anteriores até os atuais.
+
+Antes de publicar mudanças na trilha, execute os quatro comandos de validação
+acima. O teste de navegação abre e confere as três seções das seis aulas. Faça
+também revisão pedagógica manual: testes de estrutura e renderização não provam
+completude, qualidade de um macete ou validade jurídica.

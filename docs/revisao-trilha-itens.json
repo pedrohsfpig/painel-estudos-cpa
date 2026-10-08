@@ -1,0 +1,1402 @@
+{
+  "base": "0c11f1d083f4b60b39b4a999b25914dd097e1f96",
+  "data": "2026-10-08",
+  "legenda": {
+    "r": "Resumo da aula",
+    "d": "Dicas e macetes",
+    "p": "Pegadinhas"
+  },
+  "indices": "Os destinos r1/d1/p1 são posições de itens, a partir de 1, na respectiva seção de AL da aula indicada. Não são IDs de questões.",
+  "contagem_anterior": {
+    "r": 50,
+    "d": 42,
+    "p": 36
+  },
+  "contagem_atual": {
+    "r": 83,
+    "d": 42,
+    "p": 57
+  },
+  "itens_anteriores_revisados": 128,
+  "itens": [
+    {
+      "aula": 1,
+      "secao_anterior": "r",
+      "item_anterior": 1,
+      "texto_anterior": "O SFN é o conjunto de entidades e instituições que promovem a intermediação financeira entre poupadores (superavitários) e tomadores (deficitários).",
+      "destinos": [
+        "r1"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 1,
+      "secao_anterior": "r",
+      "item_anterior": 2,
+      "texto_anterior": "Vantagens das instituições como intermediárias: fornecem liquidez, gerenciam riscos e informações, acessam dados dos clientes, são reguladas e supervisionadas e podem cobrar juros acima do teto da Lei da Usura (12% ao ano; Decreto 22.626/1933), conforme o risco.",
+      "destinos": [
+        "r2",
+        "r3",
+        "r11"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 1,
+      "secao_anterior": "r",
+      "item_anterior": 3,
+      "texto_anterior": "Liquidez: facilidade e rapidez de converter um ativo em dinheiro sem perda significativa de valor.",
+      "destinos": [
+        "r4"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 1,
+      "secao_anterior": "r",
+      "item_anterior": 4,
+      "texto_anterior": "Na intermediação, o spread (taxa cobrada do tomador menos taxa paga ao poupador) é receita bruta: o lucro só aparece depois de abater custos como agências e funcionários.",
+      "destinos": [
+        "r5"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 1,
+      "secao_anterior": "r",
+      "item_anterior": 5,
+      "texto_anterior": "Prestação de serviços e gerenciamento de recursos: sistema de pagamentos, custódia de valores, meios de pagamento (cartões, cheques) e seguros.",
+      "destinos": [
+        "r6"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 1,
+      "secao_anterior": "r",
+      "item_anterior": 6,
+      "texto_anterior": "Mercados: monetário (curto prazo e liquidez), crédito, câmbio, capitais (longo prazo), seguros (inclui previdência aberta) e previdência fechada.",
+      "destinos": [
+        "r7",
+        "r8"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 1,
+      "secao_anterior": "r",
+      "item_anterior": 7,
+      "texto_anterior": "Estrutura: entidades normativas (diretrizes, sem função executiva), supervisoras (fiscalização) e operacionais (intermediação ou serviços).",
+      "destinos": [
+        "r9"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 1,
+      "secao_anterior": "r",
+      "item_anterior": 8,
+      "texto_anterior": "Regulação: heterorregulação (órgãos externos e independentes) e autorregulação (a própria indústria cria e aplica suas normas).",
+      "destinos": [
+        "r11"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 1,
+      "secao_anterior": "r",
+      "item_anterior": 9,
+      "texto_anterior": "Quem é quem: moeda, crédito, capitais e câmbio (CMN; BCB e CVM), seguros privados (CNSP; Susep) e previdência fechada (CNPC; Previc).",
+      "destinos": [
+        "r10"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 1,
+      "secao_anterior": "d",
+      "item_anterior": 1,
+      "texto_anterior": "Quem tem sobra é superavitário; quem tem falta é deficitário.",
+      "destinos": [
+        "d1",
+        "p1"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 1,
+      "secao_anterior": "d",
+      "item_anterior": 2,
+      "texto_anterior": "Fixe os prazos: monetário (curto), crédito (curto e médio), capitais (longo).",
+      "destinos": [
+        "r7",
+        "d4",
+        "p5"
+      ],
+      "observacao": "Prazo deixou de ser atalho absoluto: a identificação considera instrumento e finalidade."
+    },
+    {
+      "aula": 1,
+      "secao_anterior": "d",
+      "item_anterior": 3,
+      "texto_anterior": "Trio-chave: normativo faz a regra, supervisor fiscaliza, operacional atende o cliente.",
+      "destinos": [
+        "d5"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 1,
+      "secao_anterior": "d",
+      "item_anterior": 4,
+      "texto_anterior": "Memorize o quadro: cada segmento tem um normativo e um supervisor (CMN com BCB e CVM; CNSP com Susep; CNPC com Previc).",
+      "destinos": [
+        "r10",
+        "d6"
+      ],
+      "observacao": "Corrigida a frase sobre um supervisor por segmento: o financeiro tem BCB e CVM."
+    },
+    {
+      "aula": 1,
+      "secao_anterior": "d",
+      "item_anterior": 5,
+      "texto_anterior": "Seguros inclui a previdência complementar aberta; a previdência fechada é outro mercado.",
+      "destinos": [
+        "r8",
+        "p6"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 1,
+      "secao_anterior": "d",
+      "item_anterior": 6,
+      "texto_anterior": "Na prova, primeiro identifique em qual mercado ou função o cenário se encaixa.",
+      "destinos": [
+        "d4"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 1,
+      "secao_anterior": "d",
+      "item_anterior": 7,
+      "texto_anterior": "Mnemônico dos normativos: os três principais são “Conselhos” (CMN, CNSP e CNPC): todos começam com C e têm “Nacional” no nome.",
+      "destinos": [
+        "d5"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 1,
+      "secao_anterior": "d",
+      "item_anterior": 8,
+      "texto_anterior": "Spread não é lucro: é receita bruta, antes dos custos operacionais.",
+      "destinos": [
+        "r5",
+        "d3",
+        "p2"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 1,
+      "secao_anterior": "d",
+      "item_anterior": 9,
+      "texto_anterior": "“Poupador”, no SFN, é o agente superavitário, e não a caderneta de poupança.",
+      "destinos": [
+        "r1",
+        "p1"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 1,
+      "secao_anterior": "d",
+      "item_anterior": 10,
+      "texto_anterior": "Meta de desempenho do professor: busque mais de 80% de aproveitamento nos simulados.",
+      "destinos": [
+        "d7"
+      ],
+      "observacao": "Mantida como método de autoavaliação, distinguindo recomendação de nota oficial."
+    },
+    {
+      "aula": 1,
+      "secao_anterior": "p",
+      "item_anterior": 1,
+      "texto_anterior": "Não troque superavitário (sobra) e deficitário (falta).",
+      "destinos": [
+        "r1",
+        "d1"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 1,
+      "secao_anterior": "p",
+      "item_anterior": 2,
+      "texto_anterior": "O spread tende a subir quando o risco de calote sobe.",
+      "destinos": [
+        "r5",
+        "p4"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 1,
+      "secao_anterior": "p",
+      "item_anterior": 3,
+      "texto_anterior": "As instituições financeiras podem cobrar juros acima do teto da Lei da Usura.",
+      "destinos": [
+        "r11",
+        "p9"
+      ],
+      "observacao": "Unificada com p8 anterior; a exceção da Lei da Usura ganhou afirmação enganosa e correção."
+    },
+    {
+      "aula": 1,
+      "secao_anterior": "p",
+      "item_anterior": 4,
+      "texto_anterior": "Seguros inclui previdência aberta; a previdência fechada é um mercado à parte.",
+      "destinos": [
+        "r8",
+        "p6"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 1,
+      "secao_anterior": "p",
+      "item_anterior": 5,
+      "texto_anterior": "Heterorregulação é externa; autorregulação é feita pela própria indústria.",
+      "destinos": [
+        "r11",
+        "p8"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 1,
+      "secao_anterior": "p",
+      "item_anterior": 6,
+      "texto_anterior": "Spread não é lucro bancário: é receita bruta.",
+      "destinos": [
+        "p2"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 1,
+      "secao_anterior": "p",
+      "item_anterior": 7,
+      "texto_anterior": "Poupador é o agente superavitário, não a caderneta de poupança.",
+      "destinos": [
+        "p1"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 1,
+      "secao_anterior": "p",
+      "item_anterior": 8,
+      "texto_anterior": "O teto da Lei da Usura é de 12% ao ano, mas as instituições financeiras são exceção.",
+      "destinos": [
+        "p9"
+      ],
+      "observacao": "Duplicava p3; os dois foram reunidos numa única pegadinha."
+    },
+    {
+      "aula": 2,
+      "secao_anterior": "r",
+      "item_anterior": 1,
+      "texto_anterior": "O CMN é o órgão deliberativo máximo e normativo superior do SFN, com funções normativas e não executivas.",
+      "destinos": [
+        "r1"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 2,
+      "secao_anterior": "r",
+      "item_anterior": 2,
+      "texto_anterior": "Composição: Ministro da Fazenda (preside), Ministro do Planejamento e Orçamento e Presidente do Banco Central.",
+      "destinos": [
+        "r2"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 2,
+      "secao_anterior": "r",
+      "item_anterior": 3,
+      "texto_anterior": "Atua como conselho de política econômica, coordenando as políticas monetária, creditícia, orçamentária, fiscal e da dívida pública.",
+      "destinos": [
+        "r3"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 2,
+      "secao_anterior": "r",
+      "item_anterior": 4,
+      "texto_anterior": "Objetivos: orientar, propiciar, zelar (liquidez e solvência) e coordenar.",
+      "destinos": [
+        "r3",
+        "d1"
+      ],
+      "observacao": "Expandido: os verbos agora explicam seus objetos e o mnemônico fica em dicas."
+    },
+    {
+      "aula": 2,
+      "secao_anterior": "r",
+      "item_anterior": 5,
+      "texto_anterior": "Define a meta de inflação (meta contínua, 12 meses); o Banco Central a persegue. Mudanças exigem aviso de 36 meses.",
+      "destinos": [
+        "r7",
+        "r8"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 2,
+      "secao_anterior": "r",
+      "item_anterior": 6,
+      "texto_anterior": "Reuniões mensais, decisão por maioria simples; em urgência, o presidente decide ad referendum. As normas saem como Resoluções CMN no DOU.",
+      "destinos": [
+        "r9",
+        "r10"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 2,
+      "secao_anterior": "r",
+      "item_anterior": 7,
+      "texto_anterior": "Comoc faz o assessoramento técnico; a Secretaria-Executiva do CMN e da Comoc é do Banco Central.",
+      "destinos": [
+        "r11",
+        "r12",
+        "r13"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 2,
+      "secao_anterior": "d",
+      "item_anterior": 1,
+      "texto_anterior": "O verbo engana: o CMN decide e escreve a regra; quem fiscaliza e executa é o Banco Central ou a CVM.",
+      "destinos": [
+        "r4",
+        "p1"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 2,
+      "secao_anterior": "d",
+      "item_anterior": 2,
+      "texto_anterior": "Pergunta-teste: isso cria a regra ou confere o cumprimento?",
+      "destinos": [
+        "r4",
+        "p1"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 2,
+      "secao_anterior": "d",
+      "item_anterior": 3,
+      "texto_anterior": "Macete dos objetivos: O Povo Zela pelo Crescimento (Orientar, Propiciar, Zelar, Coordenar).",
+      "destinos": [
+        "d1"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 2,
+      "secao_anterior": "d",
+      "item_anterior": 4,
+      "texto_anterior": "O CMN tem 3 membros; os diretores do BC aparecem na Comoc.",
+      "destinos": [
+        "r2",
+        "r12",
+        "d5",
+        "p3"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 2,
+      "secao_anterior": "d",
+      "item_anterior": 5,
+      "texto_anterior": "O número a lembrar sobre mudança de meta é 36 meses.",
+      "destinos": [
+        "d6"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 2,
+      "secao_anterior": "p",
+      "item_anterior": 1,
+      "texto_anterior": "O CMN não fiscaliza: escreve a regra.",
+      "destinos": [
+        "p1"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 2,
+      "secao_anterior": "p",
+      "item_anterior": 2,
+      "texto_anterior": "A meta da Selic é do Copom; a meta de inflação é do CMN.",
+      "destinos": [
+        "p2"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 2,
+      "secao_anterior": "p",
+      "item_anterior": 3,
+      "texto_anterior": "Comoc (assessoria técnica) e Copom (Selic) têm nomes parecidos.",
+      "destinos": [
+        "r11",
+        "d4",
+        "p4"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 2,
+      "secao_anterior": "p",
+      "item_anterior": 4,
+      "texto_anterior": "Orçamentos monetários: o BC prepara e o CMN aprova.",
+      "destinos": [
+        "r6",
+        "d3"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 2,
+      "secao_anterior": "p",
+      "item_anterior": 5,
+      "texto_anterior": "Ad referendum: o presidente decide e os demais confirmam depois.",
+      "destinos": [
+        "r9",
+        "p7"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 3,
+      "secao_anterior": "r",
+      "item_anterior": 1,
+      "texto_anterior": "O BACEN é autarquia de natureza especial: sem vinculação a Ministério, sem tutela nem subordinação hierárquica, com autonomia técnica, operacional, administrativa e financeira.",
+      "destinos": [
+        "r1"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 3,
+      "secao_anterior": "r",
+      "item_anterior": 2,
+      "texto_anterior": "Objetivo fundamental: assegurar a estabilidade dos preços. Também zela pela estabilidade e eficiência do sistema financeiro, suaviza flutuações da atividade econômica e fomenta o pleno emprego.",
+      "destinos": [
+        "r2"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 3,
+      "secao_anterior": "r",
+      "item_anterior": 3,
+      "texto_anterior": "Quatro funções: banco do governo, banco dos bancos, executor da política monetária e supervisor do SFN.",
+      "destinos": [
+        "r3"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 3,
+      "secao_anterior": "r",
+      "item_anterior": 4,
+      "texto_anterior": "O CMN define a meta de inflação e o BACEN conduz a política monetária. Seis meses consecutivos fora da tolerância é descumprimento: nota no Relatório de Política Monetária e carta aberta ao Ministro da Fazenda.",
+      "destinos": [
+        "r8",
+        "r9"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 3,
+      "secao_anterior": "r",
+      "item_anterior": 5,
+      "texto_anterior": "Diretoria Colegiada de 9 membros (presidente + 8 diretores). Diretores: indicados e nomeados pelo Presidente da República, aprovados pelo Senado, mandato de 4 anos com uma recondução.",
+      "destinos": [
+        "r4",
+        "r5",
+        "r6"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 3,
+      "secao_anterior": "r",
+      "item_anterior": 6,
+      "texto_anterior": "Mandatos escalonados: 2 diretores por ano, e o presidente do BACEN começa no início do 3º ano do mandato presidencial. Exoneração por desempenho insuficiente: proposta do CMN e prévia aprovação do Senado (maioria absoluta).",
+      "destinos": [
+        "r6",
+        "r7"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 3,
+      "secao_anterior": "r",
+      "item_anterior": 7,
+      "texto_anterior": "Competências: emitir moeda, determinar e receber compulsórios, redesconto e empréstimos, controlar crédito e capitais estrangeiros, ser depositário das reservas, fiscalizar e punir, comprar e vender títulos públicos e regulamentar o câmbio. Autoriza as instituições a funcionar, operar câmbio, alterar estatutos etc.",
+      "destinos": [
+        "r10",
+        "r11",
+        "r12",
+        "r13"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 3,
+      "secao_anterior": "d",
+      "item_anterior": 1,
+      "texto_anterior": "Verbos de execução (emitir, realizar, exercer, efetuar) tendem a apontar para o BACEN; regular e regulamentar são mais do CMN, com exceções (câmbio). É um macete, não uma regra absoluta.",
+      "destinos": [
+        "d5"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 3,
+      "secao_anterior": "d",
+      "item_anterior": 2,
+      "texto_anterior": "Zelar: estabilidade e eficiência do sistema financeiro é BACEN; liquidez e solvência das instituições é CMN.",
+      "destinos": [
+        "d6"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 3,
+      "secao_anterior": "d",
+      "item_anterior": 3,
+      "texto_anterior": "Emissão da moeda (processo econômico) é do BACEN; a impressão (processo físico) é da Casa da Moeda.",
+      "destinos": [
+        "r10",
+        "d7",
+        "p8"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 3,
+      "secao_anterior": "d",
+      "item_anterior": 4,
+      "texto_anterior": "Desde 2002 o BACEN não pode emitir títulos de dívida pública.",
+      "destinos": [
+        "r11",
+        "p9"
+      ],
+      "observacao": "Regra histórica transferida ao resumo; pegadinha distingue emitir de negociar títulos."
+    },
+    {
+      "aula": 3,
+      "secao_anterior": "d",
+      "item_anterior": 5,
+      "texto_anterior": "Vigilância do mercado de capitais: a lei cita o BACEN, mas hoje a função principal é da CVM. Atenção ao contexto da questão.",
+      "destinos": [
+        "r14"
+      ],
+      "observacao": "Distinção de competências transferida ao resumo, sem chamá-la de macete."
+    },
+    {
+      "aula": 3,
+      "secao_anterior": "p",
+      "item_anterior": 1,
+      "texto_anterior": "Zelar: BACEN (estabilidade e eficiência) x CMN (liquidez e solvência).",
+      "destinos": [
+        "d6"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 3,
+      "secao_anterior": "p",
+      "item_anterior": 2,
+      "texto_anterior": "Emissão é do BACEN; impressão é da Casa da Moeda.",
+      "destinos": [
+        "p8"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 3,
+      "secao_anterior": "p",
+      "item_anterior": 3,
+      "texto_anterior": "Vigilância do mercado de capitais: hoje, função da CVM.",
+      "destinos": [
+        "r14"
+      ],
+      "observacao": "Definição/ressalva transferida ao resumo; não era por si uma armadilha."
+    },
+    {
+      "aula": 3,
+      "secao_anterior": "p",
+      "item_anterior": 4,
+      "texto_anterior": "Exoneração por desempenho: o CMN propõe e o Senado aprova.",
+      "destinos": [
+        "r7",
+        "d2",
+        "p4"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 3,
+      "secao_anterior": "p",
+      "item_anterior": 5,
+      "texto_anterior": "O Presidente do BACEN começa no início do 3º ano do mandato presidencial.",
+      "destinos": [
+        "r6",
+        "d3",
+        "p5"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 4,
+      "secao_anterior": "r",
+      "item_anterior": 1,
+      "texto_anterior": "A CVM é uma autarquia em regime especial, vinculada ao Ministério da Fazenda, responsável pela regulação e fiscalização do mercado de capitais. É vinculada, mas não subordinada, e tem sede no Rio de Janeiro.",
+      "destinos": [
+        "r1"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 4,
+      "secao_anterior": "r",
+      "item_anterior": 2,
+      "texto_anterior": "Tem personalidade jurídica e patrimônio próprios, autoridade administrativa e autonomia financeira e orçamentária.",
+      "destinos": [
+        "r1"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 4,
+      "secao_anterior": "r",
+      "item_anterior": 3,
+      "texto_anterior": "Diretoria Colegiada de 5 membros (presidente + 4 diretores), nomeados pelo Presidente da República e aprovados pelo Senado, com mandato fixo de 5 anos, vedada a recondução. Requisitos: reputação ilibada e notória especialização em assuntos econômico-financeiros.",
+      "destinos": [
+        "r2"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 4,
+      "secao_anterior": "r",
+      "item_anterior": 4,
+      "texto_anterior": "Exoneração: renúncia, condenação judicial transitada em julgado ou processo administrativo disciplinar.",
+      "destinos": [
+        "r3"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 4,
+      "secao_anterior": "r",
+      "item_anterior": 5,
+      "texto_anterior": "Valores mobiliários: ações, debêntures, bônus de subscrição, cotas de fundos, notas comerciais, derivativos e contratos de investimento coletivo ofertados publicamente. Não são: títulos da dívida pública e títulos cambiais de instituição financeira (exceto debêntures).",
+      "destinos": [
+        "r4",
+        "r5",
+        "r6"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 4,
+      "secao_anterior": "r",
+      "item_anterior": 6,
+      "texto_anterior": "Atribuições em cinco blocos: desenvolvimento do mercado, eficiência e funcionamento, proteção dos investidores, acesso à informação e fiscalização e punição.",
+      "destinos": [
+        "r7"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 4,
+      "secao_anterior": "r",
+      "item_anterior": 7,
+      "texto_anterior": "Poderes: normativo (regula os agentes do mercado) e punitivo (com ampla defesa). Penalidades: advertência, multa, inabilitação, suspensão e proibição temporária. Também adota a autorregulação para aumentar a eficiência.",
+      "destinos": [
+        "r8",
+        "r9",
+        "r10",
+        "r12"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 4,
+      "secao_anterior": "d",
+      "item_anterior": 1,
+      "texto_anterior": "Regra de ouro: se a atribuição envolve valores mobiliários (ações, debêntures, fundos), pense em CVM.",
+      "destinos": [
+        "d1"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 4,
+      "secao_anterior": "d",
+      "item_anterior": 2,
+      "texto_anterior": "Vinculação: a CVM é vinculada ao Ministério da Fazenda, mas não subordinada; o BACEN não tem vinculação a Ministério.",
+      "destinos": [
+        "r1",
+        "d2",
+        "p1"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 4,
+      "secao_anterior": "d",
+      "item_anterior": 3,
+      "texto_anterior": "Mandatos: CVM, 5 anos sem recondução; BACEN, 4 anos com uma recondução.",
+      "destinos": [
+        "d2",
+        "p2"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 4,
+      "secao_anterior": "d",
+      "item_anterior": 4,
+      "texto_anterior": "Duas coisas não são valores mobiliários: títulos da dívida pública e títulos cambiais de instituição financeira (a exceção são as debêntures).",
+      "destinos": [
+        "r6",
+        "d3",
+        "p3",
+        "p4"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 4,
+      "secao_anterior": "d",
+      "item_anterior": 5,
+      "texto_anterior": "Na CVM, os poderes normativo e fiscalizador ficam no mesmo órgão; no sistema do BACEN, a normatização geral é do CMN.",
+      "destinos": [
+        "r13",
+        "p6"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 4,
+      "secao_anterior": "d",
+      "item_anterior": 6,
+      "texto_anterior": "A CVM segue as diretrizes do CMN e edita normas detalhadas (Resoluções CVM); uma norma da CVM não pode contrariar o CMN nem a lei.",
+      "destinos": [
+        "r13"
+      ],
+      "observacao": "Regra de hierarquia normativa transferida ao resumo."
+    },
+    {
+      "aula": 4,
+      "secao_anterior": "p",
+      "item_anterior": 1,
+      "texto_anterior": "Mandato da CVM é de 5 anos sem recondução; o do BACEN é de 4 anos com recondução.",
+      "destinos": [
+        "p2"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 4,
+      "secao_anterior": "p",
+      "item_anterior": 2,
+      "texto_anterior": "A CVM é vinculada ao Ministério da Fazenda, mas não é subordinada.",
+      "destinos": [
+        "p1"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 4,
+      "secao_anterior": "p",
+      "item_anterior": 3,
+      "texto_anterior": "Título da dívida pública não é valor mobiliário.",
+      "destinos": [
+        "p3"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 4,
+      "secao_anterior": "p",
+      "item_anterior": 4,
+      "texto_anterior": "Debêntures de instituições financeiras são a exceção: são valores mobiliários.",
+      "destinos": [
+        "p4"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 4,
+      "secao_anterior": "p",
+      "item_anterior": 5,
+      "texto_anterior": "A CVM pode punir, mas deve assegurar ampla defesa.",
+      "destinos": [
+        "r8",
+        "p8"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 4,
+      "secao_anterior": "p",
+      "item_anterior": 6,
+      "texto_anterior": "Arrependimento eficaz ou confissão espontânea podem atenuar as penalidades.",
+      "destinos": [
+        "r11",
+        "p8"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 5,
+      "secao_anterior": "r",
+      "item_anterior": 1,
+      "texto_anterior": "O SFN tem um segmento de seguros privados (CNSP normativo e Susep supervisora) e um de previdência complementar fechada (CNPC normativo e Previc supervisora).",
+      "destinos": [
+        "r1",
+        "r2"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 5,
+      "secao_anterior": "r",
+      "item_anterior": 2,
+      "texto_anterior": "CNSP: órgão do Ministério da Fazenda que fixa as diretrizes e normas da política de seguros privados, resseguros, previdência complementar aberta e capitalização. Representantes: Fazenda (presidente), Justiça, Previdência e Assistência Social, Susep, BACEN e CVM. Reúne-se ao menos a cada 3 meses; decide por maioria simples; reunião extraordinária por convocação do presidente ou proposta de pelo menos 2/3 dos membros.",
+      "destinos": [
+        "r3",
+        "r4",
+        "r5"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 5,
+      "secao_anterior": "r",
+      "item_anterior": 3,
+      "texto_anterior": "Competências do CNSP: regular constituição, organização, funcionamento e fiscalização; estipular condições técnicas sobre tarifas e investimentos; fixar características gerais dos contratos e normas de contabilidade; delimitar o capital das seguradoras e resseguradores; estabelecer diretrizes de resseguro; disciplinar cosseguro, corretagem e Bolsas de Seguro.",
+      "destinos": [
+        "r4"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 5,
+      "secao_anterior": "r",
+      "item_anterior": 4,
+      "texto_anterior": "Susep: autarquia especial vinculada à Fazenda, com sede e foro no Rio de Janeiro, que controla e fiscaliza os mercados de seguro, previdência complementar aberta, capitalização e resseguro, seguindo as diretrizes do CNSP.",
+      "destinos": [
+        "r6",
+        "r7"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 5,
+      "secao_anterior": "r",
+      "item_anterior": 5,
+      "texto_anterior": "Susep: Conselho Diretor de 5 membros (superintendente + 4 diretores), indicados pelo Ministro da Fazenda e nomeados pelo Presidente da República. Reúne-se quinzenalmente; extraordinária por convocação do superintendente ou de, no mínimo, 2 diretores; decisão por maioria simples.",
+      "destinos": [
+        "r6",
+        "r8"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 5,
+      "secao_anterior": "r",
+      "item_anterior": 6,
+      "texto_anterior": "Finalidades da Susep: proteger a poupança popular, promover desenvolvimento, concorrência e estabilidade, zelar pelos direitos dos segurados e pela liquidez e solvência das entidades, disciplinar e acompanhar investimentos e prover a secretaria do CNSP.",
+      "destinos": [
+        "r7"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 5,
+      "secao_anterior": "r",
+      "item_anterior": 7,
+      "texto_anterior": "CNPC: órgão colegiado do Ministério da Previdência Social que regula o regime de previdência complementar das entidades fechadas. Presidido pelo Ministro da Previdência Social; 9 membros, com mandato de 2 anos e uma única recondução; reúne-se por maioria simples, com presença mínima de 5 membros.",
+      "destinos": [
+        "r9",
+        "r10"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 5,
+      "secao_anterior": "r",
+      "item_anterior": 8,
+      "texto_anterior": "Previc: autarquia especial vinculada ao Ministério da Previdência Social, com sede e foro no Distrito Federal, que fiscaliza e supervisiona as entidades fechadas e executa as políticas do regime. Diretoria de 5 membros (superintendente + 4 diretores), indicados pelo Ministro da Previdência e nomeados pelo Presidente.",
+      "destinos": [
+        "r11"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 5,
+      "secao_anterior": "r",
+      "item_anterior": 9,
+      "texto_anterior": "Competências da Previc: fiscalizar, apurar e julgar infrações, aplicar penalidades, expedir instruções, autorizar constituição, funcionamento, fusão, cisão e incorporação, decretar intervenção e liquidação extrajudicial, nomear administrador especial e promover mediação e conciliação.",
+      "destinos": [
+        "r12",
+        "r13"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 5,
+      "secao_anterior": "r",
+      "item_anterior": 10,
+      "texto_anterior": "Previdência aberta: qualquer pessoa pode contratar, oferecida por bancos e seguradoras (CNSP e Susep). Previdência fechada: grupos específicos, como funcionários de uma empresa, em fundos de pensão (CNPC e Previc).",
+      "destinos": [
+        "r1"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 5,
+      "secao_anterior": "d",
+      "item_anterior": 1,
+      "texto_anterior": "Verbos: CNSP fixa, estabelece e regula (normativo); Susep executa, fiscaliza, supervisiona e zela.",
+      "destinos": [
+        "d1"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 5,
+      "secao_anterior": "d",
+      "item_anterior": 2,
+      "texto_anterior": "Vinculação: CNSP e Susep ficam no Ministério da Fazenda; CNPC e Previc, no Ministério da Previdência Social.",
+      "destinos": [
+        "r2",
+        "d3"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 5,
+      "secao_anterior": "d",
+      "item_anterior": 3,
+      "texto_anterior": "Entidades fechadas ou fundos de pensão: pense em CNPC (normativo) e Previc (supervisor). Entidades abertas: CNSP e Susep.",
+      "destinos": [
+        "d1",
+        "d2"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 5,
+      "secao_anterior": "d",
+      "item_anterior": 4,
+      "texto_anterior": "Seguros privados inclui resseguro, previdência complementar aberta e capitalização.",
+      "destinos": [
+        "r2"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 5,
+      "secao_anterior": "d",
+      "item_anterior": 5,
+      "texto_anterior": "Autorização para constituição ou funcionamento de entidade fechada: sempre a Previc.",
+      "destinos": [
+        "r13",
+        "d7"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 5,
+      "secao_anterior": "d",
+      "item_anterior": 6,
+      "texto_anterior": "A Previc pode decretar intervenção e liquidação extrajudicial das entidades fechadas que não sigam as normas.",
+      "destinos": [
+        "r13"
+      ],
+      "observacao": "Competência transferida ao resumo; dica passou a usar um cenário concreto."
+    },
+    {
+      "aula": 5,
+      "secao_anterior": "d",
+      "item_anterior": 7,
+      "texto_anterior": "Quando a Susep “zela”, trata-se de liquidez, solvência e defesa dos direitos dos segurados.",
+      "destinos": [
+        "r7",
+        "d6"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 5,
+      "secao_anterior": "d",
+      "item_anterior": 8,
+      "texto_anterior": "Os três conselhos normativos: CMN, CNSP e CNPC (C de Conselho, todos “Nacional”).",
+      "destinos": [
+        "d1"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 5,
+      "secao_anterior": "p",
+      "item_anterior": 1,
+      "texto_anterior": "CNSP e Susep: Ministério da Fazenda. CNPC e Previc: Ministério da Previdência Social.",
+      "destinos": [
+        "p4"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 5,
+      "secao_anterior": "p",
+      "item_anterior": 2,
+      "texto_anterior": "Previdência aberta é do mercado de seguros (CNSP e Susep); a fechada (fundos de pensão), de CNPC e Previc.",
+      "destinos": [
+        "p1",
+        "p2"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 5,
+      "secao_anterior": "p",
+      "item_anterior": 3,
+      "texto_anterior": "Sede: Susep no Rio de Janeiro; Previc no Distrito Federal.",
+      "destinos": [
+        "r6",
+        "r11",
+        "d3",
+        "p4"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 5,
+      "secao_anterior": "p",
+      "item_anterior": 4,
+      "texto_anterior": "Reuniões ordinárias: CNSP a cada 3 meses; Susep quinzenalmente.",
+      "destinos": [
+        "p7"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 5,
+      "secao_anterior": "p",
+      "item_anterior": 5,
+      "texto_anterior": "Quórum: CNPC exige 5 membros presentes; a Previc, a maioria dos membros.",
+      "destinos": [
+        "r10",
+        "r11",
+        "p5",
+        "p6"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 5,
+      "secao_anterior": "p",
+      "item_anterior": 6,
+      "texto_anterior": "Mandato no CNPC: 2 anos, com uma única recondução.",
+      "destinos": [
+        "r10",
+        "d4",
+        "p9"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 6,
+      "secao_anterior": "r",
+      "item_anterior": 1,
+      "texto_anterior": "Operações ativas: a instituição empresta recursos aos agentes deficitários e tem um direito a receber (ativo). Passivas: capta recursos dos superavitários e assume uma obrigação (passivo). Acessórias: presta serviços e é remunerada por tarifas.",
+      "destinos": [
+        "r1"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 6,
+      "secao_anterior": "r",
+      "item_anterior": 2,
+      "texto_anterior": "Exemplos de ativas: abertura de crédito, desconto de títulos, crédito rural, capital de giro, aplicações próprias, depósitos interfinanceiros e repasses. Exemplos de passivas: depósito à vista, depósito a prazo, poupança, obrigações de repasses e emissão de CDI. Exemplos de acessórias: pagamentos, câmbio, custódia e fianças.",
+      "destinos": [
+        "r2",
+        "r3",
+        "r4",
+        "r5"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 6,
+      "secao_anterior": "r",
+      "item_anterior": 3,
+      "texto_anterior": "Empréstimo: o dinheiro não tem destinação obrigatória. Financiamento: o dinheiro está vinculado à compra de um bem ou serviço, como um veículo ou equipamento.",
+      "destinos": [
+        "r6"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 6,
+      "secao_anterior": "r",
+      "item_anterior": 4,
+      "texto_anterior": "Instituições monetárias (bancárias) recebem depósitos à vista e criam moeda escritural: bancos comerciais, múltiplos com carteira comercial, cooperativas de crédito, bancos cooperativos e Caixa Econômica Federal. As não monetárias (não bancárias) não recebem depósitos à vista.",
+      "destinos": [
+        "r7"
+      ],
+      "observacao": "Acrescentada ressalva de autorização e categoria de cooperativa que não capta depósitos."
+    },
+    {
+      "aula": 6,
+      "secao_anterior": "r",
+      "item_anterior": 5,
+      "texto_anterior": "Banco comercial: instituição monetária, sociedade anônima, com “Banco” na denominação, que financia a curto e médio prazo comércio, indústria, serviços e pessoas físicas e capta por depósito à vista e a prazo.",
+      "destinos": [
+        "r9"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 6,
+      "secao_anterior": "r",
+      "item_anterior": 6,
+      "texto_anterior": "Banco múltiplo: no mínimo duas carteiras, sendo uma comercial ou de investimento. Carteiras: comercial, investimento, desenvolvimento (exclusiva de bancos públicos), crédito imobiliário, arrendamento mercantil e crédito, financiamento e investimento. As operações são contabilizadas separadamente por carteira; a instituição pode publicar um balanço único.",
+      "destinos": [
+        "r10",
+        "r11"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 6,
+      "secao_anterior": "r",
+      "item_anterior": 7,
+      "texto_anterior": "Caixas econômicas: empresas públicas com atividades típicas de banco comercial e prioridade social. Captam depósito à vista e poupança. A única em atividade é a Caixa Econômica Federal, vinculada ao Ministério da Fazenda.",
+      "destinos": [
+        "r12"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 6,
+      "secao_anterior": "r",
+      "item_anterior": 8,
+      "texto_anterior": "Cooperativas de crédito: formadas por associação de pessoas, atendem em regra aos associados, com exceções legais para certos serviços a não associados, não visam lucro, têm adesão livre e voluntária e capital em cotas-partes. Captam só de associados, mas podem prestar certos serviços a não associados.",
+      "destinos": [
+        "r13",
+        "r14",
+        "r17"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 6,
+      "secao_anterior": "r",
+      "item_anterior": 9,
+      "texto_anterior": "Pirâmide cooperativa: singulares (1º grau, mínimo de 20 pessoas), centrais (2º grau, mínimo de 3 singulares) e confederação (3º grau, mínimo de 3 centrais). A singular pode ser plena, clássica ou de capital e empréstimo.",
+      "destinos": [
+        "r15",
+        "r16"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 6,
+      "secao_anterior": "r",
+      "item_anterior": 10,
+      "texto_anterior": "Banco cooperativo: banco comercial ou múltiplo sob controle de cooperativas centrais, com no mínimo 51% das ações com voto. Dá às cooperativas acesso à câmara de compensação, a créditos oficiais, à reserva bancária e ao mercado interfinanceiro.",
+      "destinos": [
+        "r18"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 6,
+      "secao_anterior": "d",
+      "item_anterior": 1,
+      "texto_anterior": "Lógica do balanço: operação ativa gera direito (ativo); passiva gera obrigação (passivo).",
+      "destinos": [
+        "d1"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 6,
+      "secao_anterior": "d",
+      "item_anterior": 2,
+      "texto_anterior": "Quem empresta faz ativa; quem capta faz passiva; quem presta serviço faz acessória.",
+      "destinos": [
+        "d1"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 6,
+      "secao_anterior": "d",
+      "item_anterior": 3,
+      "texto_anterior": "Se a instituição é um “Banco” (comercial, múltiplo ou cooperativo), a palavra “Banco” é obrigatória na denominação.",
+      "destinos": [
+        "r9",
+        "r10",
+        "r18"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 6,
+      "secao_anterior": "d",
+      "item_anterior": 4,
+      "texto_anterior": "Regra dos 51% no banco cooperativo: não confunda com a maioria simples de 50% mais um.",
+      "destinos": [
+        "d7",
+        "p11"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 6,
+      "secao_anterior": "d",
+      "item_anterior": 5,
+      "texto_anterior": "Banco múltiplo: mínimo de duas carteiras, uma comercial ou de investimento.",
+      "destinos": [
+        "d4"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 6,
+      "secao_anterior": "d",
+      "item_anterior": 6,
+      "texto_anterior": "Monetária ou bancária: pergunte se recebe depósito à vista.",
+      "destinos": [
+        "d5"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 6,
+      "secao_anterior": "d",
+      "item_anterior": 7,
+      "texto_anterior": "Cooperativas: singular (1º grau), central (2º grau) e confederação (3º grau).",
+      "destinos": [
+        "r15",
+        "d6"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 6,
+      "secao_anterior": "d",
+      "item_anterior": 8,
+      "texto_anterior": "O banco cooperativo existe para dar à cooperativa acesso a serviços que ela sozinha não tem, como a câmara de compensação.",
+      "destinos": [
+        "r18"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 6,
+      "secao_anterior": "p",
+      "item_anterior": 1,
+      "texto_anterior": "Depósito interfinanceiro não é só ativo nem só passivo: quem emite tem obrigação (passivo); quem aplica tem direito (ativo).",
+      "destinos": [
+        "r5",
+        "d2",
+        "p2"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 6,
+      "secao_anterior": "p",
+      "item_anterior": 2,
+      "texto_anterior": "A cooperativa capta só de associados, mas pode prestar certos serviços (custódia, pagamentos, cobrança) a não associados.",
+      "destinos": [
+        "r17",
+        "d8",
+        "p10"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 6,
+      "secao_anterior": "p",
+      "item_anterior": 3,
+      "texto_anterior": "Banco múltiplo: cada carteira tem CNPJ, mas o balanço publicado é um só.",
+      "destinos": [
+        "r11",
+        "p6"
+      ],
+      "observacao": "Corrigida a referência a CNPJ por carteira, em coerência com as questões já revistas."
+    },
+    {
+      "aula": 6,
+      "secao_anterior": "p",
+      "item_anterior": 4,
+      "texto_anterior": "A carteira de desenvolvimento é exclusiva de bancos públicos.",
+      "destinos": [
+        "r10",
+        "d4",
+        "p5"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 6,
+      "secao_anterior": "p",
+      "item_anterior": 5,
+      "texto_anterior": "Acessórias rendem tarifas; ativas e passivas envolvem juros.",
+      "destinos": [
+        "r1",
+        "r4",
+        "p3"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    },
+    {
+      "aula": 6,
+      "secao_anterior": "p",
+      "item_anterior": 6,
+      "texto_anterior": "Banco cooperativo: 51% das ações com voto, e não 50% mais uma.",
+      "destinos": [
+        "d7",
+        "p11"
+      ],
+      "observacao": "Reescrito, expandido ou integrado com função pedagógica própria nos destinos indicados."
+    }
+  ]
+}

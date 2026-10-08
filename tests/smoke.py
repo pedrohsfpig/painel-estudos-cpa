@@ -112,6 +112,24 @@ class PainelCPA(unittest.TestCase):
         for lesson in range(1, 7):
             self.page.locator("button.tb").nth(lesson - 1).click()
             self.assertIn(f"Aula {lesson} de 6", self.page.locator(".hero").inner_text())
+            content = self.page.evaluate("AL[tr - 1]")
+            for section, title in [("r", "Resumo da aula"), ("d", "Dicas e macetes"), ("p", "Pegadinhas")]:
+                accordion = self.page.locator("details.acc").filter(
+                    has=self.page.get_by_text(title, exact=True)
+                )
+                accordion.locator("summary").click()
+                self.assertEqual(accordion.locator(".pt").all_text_contents(), content[section])
+                self.assertTrue(accordion.locator(".acb > p").is_visible())
+                self.assertGreater(len(content[section]), 0)
+                self.assertEqual(len(content[section]), len(set(content[section])))
+                if section == "p":
+                    for item in content[section]:
+                        self.assertTrue(item.startswith("Armadilha: "))
+                        self.assertIn(" Correção: ", item)
+                for other in (key for key in ["r", "d", "p"] if key != section):
+                    self.assertFalse(set(content[section]) & set(content[other]))
+            if lesson == 6:
+                self.assertNotIn("cada carteira tem CNPJ", self.page.locator("#app").inner_text())
         self.page.locator(".nav").get_by_role("button", name="Material de apoio", exact=True).click()
         for lesson in range(1, 7):
             self.click(f"Aula {lesson}")

@@ -55,6 +55,20 @@ local permanece porque a origem do site não muda.
 - Trilha de aulas, quadro do SFN, mapas mentais, diagramas, tabelas,
   linhas do tempo e flashcards.
 
+## Organização da trilha
+
+As três seções das seis aulas foram revistas individualmente e confrontadas com
+as questões e o material de apoio existente. **Resumo da aula** explica conceitos
+e regras; **Dicas e macetes** oferece métodos para memorizar ou resolver;
+**Pegadinhas** mostra uma afirmação enganosa, sua correção e o motivo do erro.
+Um tema pode voltar em outra seção com uma função diferente, sem copiar o texto.
+
+O padrão vale para todas as futuras aulas, usando as transcrições e os slides
+fornecidos como fontes e conferindo também a consistência das questões e dos
+materiais. A revisão e os conteúdos recuperados estão em
+[docs/revisao-trilha.md](docs/revisao-trilha.md); a rastreabilidade dos 128 itens
+anteriores está em [docs/revisao-trilha-itens.json](docs/revisao-trilha-itens.json).
+
 ## Histórico
 
 Fora do Claude, o progresso é salvo no `localStorage` do navegador, na chave
