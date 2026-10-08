@@ -1,4 +1,4 @@
-name: Validar feedbacks das questões
+name: Validar conteúdo das questões
 
 on:
   push:
@@ -15,3 +15,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Conferir feedback de todas as alternativas
         run: python3 tests/validate_bank.py
+      - name: Detectar pistas de tamanho nas alternativas
+        run: python3 tests/audit_alternatives.py --check
+      - name: Conferir a auditoria de alternativas
+        run: python3 tests/test_alternative_quality.py

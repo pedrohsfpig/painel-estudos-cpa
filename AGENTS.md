@@ -32,6 +32,8 @@ Antes de publicar alterações em questões ou feedbacks, execute:
 
 ```bash
 python3 tests/validate_bank.py
+python3 tests/audit_alternatives.py --check
+python3 tests/test_alternative_quality.py
 python3 tests/smoke.py
 ```
 
@@ -39,6 +41,26 @@ A validação de conteúdo é feita também na inicialização. Nenhuma questão
 deve ser publicada com explicação faltando, vazia ou repetida para todas as opções.
 Os testes automáticos verificam estrutura e comportamento; confira também o
 conteúdo pedagógico de cada nova explicação com as aulas e referências fornecidas.
+
+## Qualidade permanente das alternativas
+
+- Redija as quatro opções com o mesmo tipo de resposta e estruturas comparáveis.
+  Em números, use as mesmas unidades; em associações, o mesmo número de posições.
+- Não deixe explicações, ressalvas ou listas completas exclusivamente na correta.
+  Informação para ensinar a resposta deve ficar no feedback depois da escolha.
+- Use distratores plausíveis do tema: confusão de competências, troca de etapas,
+  inversão de termos ou erros de cálculo. Evite assuntos alheios e opções absurdas.
+- Revise o conjunto inteiro para ter uma única resposta defensável. Se a pergunta
+  é sobre um mínimo, diga mínimo; se exige uma ordem, explicite a ordem.
+- Ao reescrever uma opção, confira seu feedback, a dica e o material de apoio.
+  Distinga regra legal, simplificação da aula e mnemônico; não trate macete como lei.
+- Audite as quatro posições de tamanho, por caracteres e palavras, com empates.
+  Não transforme a menor ou uma posição intermediária em nova pista.
+- Use `shuffle` (Fisher–Yates) para embaralhar opções, sem perder o índice de
+  origem; não use `sort` com comparador aleatório, que favorece certas posições.
+- Os limites automáticos são alertas editoriais, não quotas de autoria. Não use
+  preenchimento artificial para atingir métricas nem nomes falsos para igualar
+  o tamanho de nomes reais. O teste de tamanho não substitui revisão pedagógica.
 
 O site publicado usa `main` no GitHub Pages. Quando o usuário pedir atualizações
 para vê-las no site, valide, envie os commits e informe o resultado real do envio.

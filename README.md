@@ -1,9 +1,11 @@
 # Painel de estudos CPA
 
 Painel de estudos e simulados em português, importado do arquivo
-`Painel de estudos CPA.html`. As 600 perguntas, suas alternativas, gabaritos,
-dificuldades e IDs originais foram preservados em `index.html`. A versão atual
-acrescenta feedback específico para cada alternativa.
+`Painel de estudos CPA.html`. O banco mantém 600 perguntas, com os mesmos IDs,
+temas e dificuldades. A versão atual contém feedback específico para cada
+alternativa e uma revisão de redação para reduzir pistas de tamanho e melhorar
+a plausibilidade das opções. As correções estão em
+[docs/auditoria-alternativas.md](docs/auditoria-alternativas.md).
 
 ## Executar
 
@@ -86,6 +88,8 @@ Para conferir o banco de questões, sem instalar pacotes externos:
 
 ```bash
 python3 tests/validate_bank.py
+python3 tests/audit_alternatives.py --check
+python3 tests/test_alternative_quality.py
 ```
 
 O teste inicia e encerra seu próprio servidor local e usa um histórico isolado
@@ -127,6 +131,26 @@ Todas as novas questões precisam de quatro explicações próprias e preenchida
 O aplicativo valida isso antes de iniciar, e o GitHub Actions executa a checagem
 de conteúdo em pushes e pull requests. Essa checagem não substitui a revisão
 pedagógica: confira cada explicação com o material usado na aula.
+
+## Qualidade das alternativas
+
+A auditoria mede caracteres e palavras nas questões normais e Hardcore, incluindo
+os empates. Compara as estratégias de escolher a menor, a segunda menor, a
+segunda maior e a maior. Os testes alertam quando uma posição de tamanho fica
+demasiado associada ao gabarito ou quando uma alternativa longa destoa das outras.
+As opções de uma mesma pergunta também precisam ter textos distintos.
+
+Para comparar outra versão do HTML:
+
+```bash
+python3 tests/audit_alternatives.py --html /caminho/versao-anterior.html --json
+```
+
+Essas métricas são alertas editoriais: não imponha tamanho exato nem acrescente
+texto de preenchimento. Distratores precisam testar confusões plausíveis no mesmo
+tema, com formato paralelo, e ter feedback coerente com a redação atual.
+A checagem automática não prova plausibilidade, resposta única ou atualização
+das normas; esses pontos precisam de revisão humana.
 
 Para preservar históricos, acrescente questões ao final do banco, sem reordenar
 as antigas. Leia `AGENTS.md` antes de implementar novas aulas ou conteúdos.

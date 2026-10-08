@@ -22,6 +22,8 @@ def validate_questions(questions):
             isinstance(text, str) and text.strip() for text in question[4:8]
         ):
             raise ValueError(f"Questão {question_id}: são obrigatórias quatro alternativas.")
+        if len({text.strip().lower() for text in question[4:8]}) != 4:
+            raise ValueError(f"Questão {question_id}: as quatro alternativas precisam ser distintas.")
         feedbacks = question[11]
         if not isinstance(feedbacks, list) or len(feedbacks) != 4 or not all(
             isinstance(text, str) and text.strip() for text in feedbacks
@@ -66,6 +68,12 @@ class QuestionBankTests(unittest.TestCase):
         question = load_questions()[0]
         question[11] = ["A mesma justificativa para todas as alternativas."] * 4
         with self.assertRaisesRegex(ValueError, "explicação própria"):
+            validate_questions([question])
+
+    def test_duplicate_choices_cannot_create_multiple_identical_answers(self):
+        question = load_questions()[0]
+        question[5] = " " + question[4].upper() + " "
+        with self.assertRaisesRegex(ValueError, "alternativas precisam ser distintas"):
             validate_questions([question])
 
 

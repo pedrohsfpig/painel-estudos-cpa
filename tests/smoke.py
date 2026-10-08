@@ -282,12 +282,13 @@ class PainelCPA(unittest.TestCase):
             }
             const short = structuredClone(Q[0]); short[11].pop(); invalid.push(short);
             const generic = structuredClone(Q[0]); generic[11].fill('Uma justificativa para todas.'); invalid.push(generic);
+            const duplicate = structuredClone(Q[0]); duplicate[5] = ' ' + duplicate[4].toLocaleUpperCase('pt-BR') + ' '; invalid.push(duplicate);
             return invalid.map(question => {
                 try { validateQuestionBank([...Q, question]); return null; }
                 catch (error) { return error.message; }
             });
         }""")
-        self.assertEqual(len(errors), 7)
+        self.assertEqual(len(errors), 8)
         self.assertTrue(all(errors))
         self.page.evaluate("""() => {
             const question = structuredClone(Q[0]);
@@ -338,6 +339,34 @@ class PainelCPA(unittest.TestCase):
         self.assertEqual(self.page.locator(".feedback img").count(), 0)
         self.assertIn('<img src=x', self.page.locator(".fb-correct p").inner_text())
         self.assertFalse(self.page.evaluate("Boolean(window.feedbackExecuted)"))
+
+    def test_17_shuffle_has_24_equiprobable_permutations_with_feedback_links(self):
+        result = self.page.evaluate("""() => {
+            const options = questionOptions(Q[0]);
+            const original = JSON.stringify(options);
+            const permutations = new Set();
+            const correctPositions = [0, 0, 0, 0];
+            for (let first = 0; first < 4; first++) {
+                for (let second = 0; second < 3; second++) {
+                    for (let third = 0; third < 2; third++) {
+                        const draws = [(first + .5) / 4, (second + .5) / 3, (third + .5) / 2];
+                        const shuffled = shuffle(options, () => draws.shift());
+                        const indices = shuffled.map(option => option[2]);
+                        permutations.add(indices.join(','));
+                        correctPositions[shuffled.findIndex(option => option[1])]++;
+                        if (new Set(indices).size !== 4) throw Error('Alternativa perdida');
+                        for (const option of shuffled) {
+                            if (option[0] !== Q[0][4 + option[2]]) throw Error('Texto desvinculado');
+                            if (option[1] !== Number(option[2] === 0)) throw Error('Gabarito desvinculado');
+                        }
+                    }
+                }
+            }
+            return { count: permutations.size, correctPositions, unchanged: JSON.stringify(options) === original };
+        }""")
+        self.assertEqual(result["count"], 24)
+        self.assertEqual(result["correctPositions"], [6, 6, 6, 6])
+        self.assertTrue(result["unchanged"])
 
 
 if __name__ == "__main__":
