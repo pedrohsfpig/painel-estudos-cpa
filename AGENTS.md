@@ -131,6 +131,16 @@ vagas e esclareça respostas, preservando os conceitos, a ordem e a dificuldade.
   Comparações têm colunas de conteúdo com larguras iguais, cores por entidade
   consistentes via `MATERIAL_COLUMN_COLORS` e destaque nas diferenças, inclusive
   negativas. Use negrito nos números e condições, sem mudar textos das células.
+  Centralize cabeçalhos e corpo de todas as células. Entidades e conceitos de
+  comparação são colunas; os aspectos são linhas. Quadros de classificação e
+  hierarquia mantêm categorias/níveis nas linhas (no quadro do SFN: normativo,
+  supervisor e operadores). Registre inversões em `MATERIAL_TRANSPOSE_TABLES`,
+  preservando o conteúdo original de `MAT` e os vínculos de cada célula.
+- Use `collegiateChart` para composições: presidência/coordenação acima dos demais
+  membros, com o mesmo desenho para todos os órgãos. Mostre somente papéis e
+  quantidades disponíveis no material. Identifique o que se renova antes da taxa
+  (por exemplo, renovação do colegiado: 1/5 por ano); mantenha datas em calendário
+  e durações em escala. Não invente mandatos ou datas para preencher campos.
 - Linhas conectadas com setas representam apenas sequências e cronologias que
   existem no material. Durações comparáveis usam trilhas em escala comum;
   periodicidades mostram recorrência; regras e quóruns usam linhas de referência.
@@ -148,8 +158,12 @@ vagas e esclareça respostas, preservando os conceitos, a ordem e a dificuldade.
   o que comparar; cálculos devem indicar a grandeza e a unidade pedidas. Uma
   possibilidade de recondução não pode virar permanência automática.
 - Nos materiais de contexto, aplique vermelho (`--hd`) à frase negativa e ao
-  objeto negado: “não recebem depósitos à vista”, “sem recondução”, “não
-  monetárias”. Use `contextText` nos mapas, diagramas, tabelas e prazos;
+  objeto negado: “não recebem depósitos à vista”, “sem recondução”. Rótulos de
+  classificação (“não monetárias”, “não bancárias”, “não associados”) não são
+  afirmações negativas e não recebem vermelho. Nas comparações, use cores
+  distintas e constantes por conceito/órgão; `contextHeading` distingue as
+  classificações monetária (azul) e não monetária (lilás). Use `contextText` nos
+  mapas, diagramas, tabelas e prazos;
   `lessonText` mantém os marcadores e também destaca negativas na trilha.
   Preserve exceções e condições afirmativas fora do trecho negativo. Não pinte
   negativas em questões, alternativas, seus feedbacks, controles do sistema ou

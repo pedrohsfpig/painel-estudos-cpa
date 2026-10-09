@@ -92,7 +92,24 @@ class PainelCPA(unittest.TestCase):
             self.assertEqual(len(panels), len(material["tb"]))
             for panel, table in zip(panels, material["tb"]):
                 self.assertEqual(panel.locator("h3").inner_text(), table[0])
-                self.assertEqual(panel.locator("table th,table td").all_text_contents(), strings(table[1:]))
+                title, headers, rows = table
+                # A transposição muda os eixos, sem perder células nem associações.
+                transpose = {"Intermediação x serviços", "Quadro do SFN", "Heterorregulação x autorregulação",
+                             "Emissão x impressão", "Composição do CNSP e do CNPC",
+                             "Ativas, passivas e acessórias", "Cooperativa de crédito: atividades"}
+                if title in transpose:
+                    expected_headers = [headers[0]] + [row[0] for row in rows]
+                    expected_rows = [[headers[i]] + [row[i] for row in rows]
+                                     for i in range(1, len(headers))]
+                else:
+                    expected_headers, expected_rows = headers, rows
+                self.assertEqual(panel.locator("thead th").all_text_contents(), expected_headers)
+                for rendered, expected in zip(panel.locator("tbody tr").all(), expected_rows):
+                    self.assertEqual(rendered.locator("th,td").all_text_contents(), expected)
+                self.assertEqual(panel.locator("tbody tr").count(), len(expected_rows))
+                self.assertTrue(panel.locator("th,td").evaluate_all(
+                    "cells => cells.every(e=>getComputedStyle(e).textAlign==='center')"
+                ))
         elif kind == "Linha do tempo":
             panels = self.page.locator(".material-time-panel").all()
             self.assertEqual(len(panels), len(material["tl"]))
@@ -704,6 +721,12 @@ class PainelCPA(unittest.TestCase):
                 const sample=document.createElement('span');sample.style.color='var(--hd)';e.append(sample);
                 const expected=getComputedStyle(sample).color;sample.remove();return getComputedStyle(e).color===expected;
             })"""))
+            self.assertFalse(any(re.search(r"não (?:monetári|bancári|associad)", text, re.I)
+                                 for text in self.page.locator(".context-negative").all_text_contents()))
+            classifications = self.page.locator(".mind-group>.mind-node .context-classification")
+            self.assertGreaterEqual(classifications.count(), 2)
+            self.assertNotEqual(classifications.first.evaluate("e=>getComputedStyle(e).color"),
+                                classifications.last.evaluate("e=>getComputedStyle(e).color"))
             self.assertEqual(self.page.locator(".mind-branch h3").first.evaluate(
                 "e=>getComputedStyle(e).textAlign"
             ), "center")
@@ -717,6 +740,23 @@ class PainelCPA(unittest.TestCase):
             self.assertEqual(self.page.locator(".timeline-value").all_text_contents(),
                              ["1º de janeiro", "15 de julho"])
             self.assertEqual(self.page.locator(".material-body .number-card").count(), 0)
+            composition = self.page.locator(".collegiate-facts .collegiate-chart")
+            self.assertEqual(composition.locator(".collegiate-leader span").inner_text(), "Presidente")
+            self.assertEqual(composition.locator(".collegiate-peer").count(), 4)
+            self.assertIn("Renovação do colegiado", self.page.locator(".collegiate-fact").inner_text())
+            self.assertIn("1/5 por ano", self.page.locator(".collegiate-fact").inner_text())
+            leader = composition.locator(".collegiate-leader").bounding_box()
+            peer = composition.locator(".collegiate-peer").first.bounding_box()
+            self.assertLess(leader["y"] + leader["height"], peer["y"])
+            for lesson, count in [(3, 8), (4, 4)]:
+                self.page.evaluate("lesson=>{chooseMaterial('a',lesson);chooseMaterial('c','mapa')}", lesson)
+                self.assertEqual(self.page.locator(".collegiate-leader span").inner_text(), "Presidente")
+                self.assertEqual(self.page.locator(".collegiate-peer").count(), count)
+            self.page.evaluate("chooseMaterial('a',5);chooseMaterial('c','mapa')")
+            self.assertEqual(self.page.locator(".collegiate-chart").count(), 4)
+            self.assertEqual(self.page.locator(".collegiate-leader span").all_text_contents(),
+                             ["Fazenda (presidente)", "Superintendente",
+                              "Presidido pelo Ministro da Previdência Social", "Superintendente"])
 
             self.page.evaluate("chooseMaterial('a',6);chooseMaterial('c','fc');fi=8;go()")
             self.assertIn("destinação do dinheiro", self.page.locator(".flashcard-text").inner_text())
