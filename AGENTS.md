@@ -106,7 +106,8 @@ nas aulas futuras. Siga a finalidade pedagógica, sem preencher seções por quo
 - Use `**conceito**` para negrito em palavras-chave, responsáveis e números úteis.
   Evite destacar parágrafos inteiros ou dar destaque a todas as palavras.
 - Cores semânticas, iguais em todas as aulas e seções, inclusive futuras:
-  `{{atencao|condição/exceção}}` → amarelo (`--md`);
+  `{{atencao|condição/exceção}}` → lilás (`--lesson-attention`), claro no tema
+  escuro e mais escuro no tema claro para preservar a legibilidade;
   `{{negacao|negação/proibição}}` → vermelho (`--hd`). Destaque comum permanece
   na cor do texto. A borda identifica a seção: resumo azul, dicas amarelo,
   pegadinhas vermelho. Não atribua uma cor diferente a um órgão ou número sem

@@ -123,7 +123,7 @@ class PainelCPA(unittest.TestCase):
                 self.assertEqual(accordion.locator(".pt").all_text_contents(), expected)
                 self.assertEqual(accordion.locator(".acb > p").count(), 0)
                 self.assertGreater(accordion.locator(".pt strong").count(), 0)
-                for selector, variable in [(".lesson-attention", "--md"), (".lesson-negative", "--hd")]:
+                for selector, variable in [(".lesson-attention", "--lesson-attention"), (".lesson-negative", "--hd")]:
                     colors = accordion.locator(selector).evaluate_all("""(elements, variable) => elements.map(element => {
                         const sample = document.createElement('span');
                         sample.style.color = `var(${variable})`;
