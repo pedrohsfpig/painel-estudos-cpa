@@ -94,8 +94,17 @@ class PainelCPA(unittest.TestCase):
                 self.assertEqual(panel.locator("h3").inner_text(), table[0])
                 self.assertEqual(panel.locator("table th,table td").all_text_contents(), strings(table[1:]))
         elif kind == "Linha do tempo":
-            actual = self.page.locator(".material-body .material-panel h3,.timeline-value,.timeline-detail p,.timeline-extra,.number-value,.number-card p").all_text_contents()
-            self.assertEqual(actual, strings(material["tl"]))
+            panels = self.page.locator(".material-time-panel").all()
+            self.assertEqual(len(panels), len(material["tl"]))
+            for panel, (title, items) in zip(panels, material["tl"]):
+                self.assertEqual(panel.locator("h3").inner_text(), title)
+                self.assertEqual(panel.locator(".time-record").count(), len(items))
+                for index, item in enumerate(items):
+                    record = panel.locator(f'.time-record[data-source-index="{index}"]')
+                    self.assertEqual(record.count(), 1)
+                    self.assertEqual(record.locator(".time-value,.timeline-value").inner_text(), item[0])
+                    self.assertEqual(record.locator(".time-description").inner_text(), item[1])
+                    self.assertEqual(record.locator(".timeline-extra").all_text_contents(), item[2:])
         else:
             self.assertEqual(self.page.locator(".flashcard-text").inner_text(), material["fc"][0][0])
 
@@ -663,6 +672,66 @@ class PainelCPA(unittest.TestCase):
             self.assertIn("Resultado do " + title.lower(), self.page.locator("#app").inner_text())
             self.assertIn("2 de 3 (67%)", self.page.locator("#app").inner_text())
             self.assertEqual(self.page.get_by_role("progressbar", name="Andamento da sessão").count(), 0)
+
+
+    def test_25_material_comparison_negatives_timelines_and_card_faces(self):
+        for theme in ["light", "dark"]:
+            self.page.evaluate("theme => document.documentElement.dataset.theme=theme", theme)
+            self.page.evaluate("view='m';chooseMaterial('a',4);chooseMaterial('c','tab')")
+            table = self.page.locator(".material-table").filter(
+                has=self.page.locator("h3").filter(has_text=re.compile(r"^CVM x BACEN$"))
+            )
+            geometry = table.locator("thead th").evaluate_all(
+                "cells => cells.map(e=>e.getBoundingClientRect().width)"
+            )
+            self.assertAlmostEqual(geometry[1], geometry[2], delta=1)
+            colors = table.locator(".comparison-head").evaluate_all(
+                "cells => cells.map(e=>getComputedStyle(e).backgroundColor)"
+            )
+            self.assertNotEqual(colors[0], colors[1])
+            self.assertEqual(table.locator("tbody tr:first-child th").evaluate(
+                "e => getComputedStyle(e).borderRightWidth"
+            ), "1px")
+            backgrounds = table.locator("tbody tr td:nth-child(2)").evaluate_all(
+                "cells => cells.map(e=>getComputedStyle(e).backgroundColor)"
+            )
+            self.assertEqual(len(set(backgrounds)), 1, "A coluna não deve ter listras por linha")
+            self.assertIn("sem recondução", table.locator(".context-negative").all_text_contents())
+
+            self.page.evaluate("chooseMaterial('a',6);chooseMaterial('c','mapa')")
+            self.assertIn("Não recebem depósitos à vista", self.page.locator(".context-negative").all_text_contents())
+            self.assertTrue(self.page.locator(".context-negative").evaluate_all("""elements=>elements.every(e=>{
+                const sample=document.createElement('span');sample.style.color='var(--hd)';e.append(sample);
+                const expected=getComputedStyle(sample).color;sample.remove();return getComputedStyle(e).color===expected;
+            })"""))
+            self.assertEqual(self.page.locator(".mind-branch h3").first.evaluate(
+                "e=>getComputedStyle(e).textAlign"
+            ), "center")
+
+            self.page.evaluate("chooseMaterial('a',4);chooseMaterial('c','tl')")
+            ratios = self.page.locator(".duration-row .duration-track").evaluate_all("""tracks=>tracks.map(e=>
+                e.querySelector('.duration-line').getBoundingClientRect().width/e.getBoundingClientRect().width)""")
+            for actual, expected in zip(ratios, [.25, 1, .5]):
+                self.assertAlmostEqual(actual, expected, delta=.01)
+            self.assertEqual(len(ratios), 3)
+            self.assertEqual(self.page.locator(".timeline-value").all_text_contents(),
+                             ["1º de janeiro", "15 de julho"])
+            self.assertEqual(self.page.locator(".material-body .number-card").count(), 0)
+
+            self.page.evaluate("chooseMaterial('a',6);chooseMaterial('c','fc');fi=8;go()")
+            self.assertIn("destinação do dinheiro", self.page.locator(".flashcard-text").inner_text())
+            question_color = self.page.locator(".fcd").evaluate("e=>getComputedStyle(e).backgroundColor")
+            self.page.locator(".fcd").click()
+            self.assertEqual(self.page.locator(".fcd.is-answer").count(), 1)
+            self.assertNotEqual(self.page.locator(".fcd").evaluate("e=>getComputedStyle(e).backgroundColor"), question_color)
+            self.assertEqual(self.page.locator(".fcd .context-negative").count(), 0)
+            self.page.locator(".fcd").press("Space")
+            self.assertEqual(self.page.locator(".fcd.is-answer").count(), 0)
+
+            self.page.evaluate("begin([1,2,3,4,5],'e')")
+            self.assertEqual(self.page.locator(".en .context-negative,.o .context-negative").count(), 0)
+            self.answer()
+            self.assertEqual(self.page.locator(".feedback .context-negative").count(), 0)
 
 
 if __name__ == "__main__":

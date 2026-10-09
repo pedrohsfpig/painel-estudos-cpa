@@ -110,29 +110,50 @@ da primeira renderização e respeite os destaques semânticos nos dois temas.
 
 ## Apresentação dos materiais de apoio
 
-O usuário exige preservar integralmente os dados de `MAT`: textos, quantidades,
-ordem e hierarquia de cada mapa, diagrama, tabela, sequência e flashcard. Uma
-mudança visual não autoriza resumir, reescrever ou excluir informações. Confira
-os dados antes/depois e a presença de cada texto renderizado nas seis aulas.
+O usuário exige preservar os textos, quantidades e hierarquia dos mapas,
+diagramas, tabelas e prazos de `MAT`. Uma mudança visual não autoriza resumir,
+reescrever ou excluir informações. Confira os dados antes/depois e a presença de
+cada texto renderizado. Na revisão solicitada de flashcards, reformule perguntas
+vagas e esclareça respostas, preservando os conceitos, a ordem e a dificuldade.
 
 - Mostre o nome completo da aula selecionada e mantenha abas com ícones pequenos.
 - Mapas usam conceito central, conexões e ramificações; preserve os subgrupos e
   deixe todas as informações abertas para consulta. Não transforme tópicos pares
-  em etapas sucessivas ou em subordinados entre si.
+  em etapas sucessivas ou em subordinados entre si. Títulos principais são
+  centralizados e destacados em maiúsculas; subtítulos abrem grupos delimitados
+  que contêm os tópicos correspondentes, com recuo e conexões próprios.
 - Diagramas `f` mantêm os fluxos e a ordem das setas; diagramas `g` ligam os
   elementos do mesmo grupo ao título, sem criar relações sequenciais. Preserve
   as cores de papéis já existentes em cada nó. Conexões decorativas usam a cor
   de destaque do tema.
-- Tabelas mantêm todas as células e usam cabeçalhos, linhas alternadas discretas
-  e negrito nos números e condições relevantes, sem mudar o texto das células.
+- Tabelas mantêm todas as células, com grade horizontal e vertical, cabeçalhos de
+  coluna padronizados e cabeçalhos de linha distintos. Não use listras alternadas.
+  Comparações têm colunas de conteúdo com larguras iguais, cores por entidade
+  consistentes via `MATERIAL_COLUMN_COLORS` e destaque nas diferenças, inclusive
+  negativas. Use negrito nos números e condições, sem mudar textos das células.
 - Linhas conectadas com setas representam apenas sequências e cronologias que
-  existem no material. Números, prazos independentes e quóruns usam cartões;
-  não invente datas ou ordem temporal. Ao acrescentar uma sequência, registre seu
-  título em `MATERIAL_SEQUENCES`, sem modificar os conteúdos para caber no desenho.
+  existem no material. Durações comparáveis usam trilhas em escala comum;
+  periodicidades mostram recorrência; regras e quóruns usam linhas de referência.
+  Não use hashtags nem invente cronologia entre penalidades. O calendário pode
+  ordenar visualmente janeiro antes de julho, mantendo todos os fatos e os dados
+  originais. Ao acrescentar uma sequência, registre o título em
+  `MATERIAL_SEQUENCES`, sem reescrever seu conteúdo para caber no desenho.
 - Flashcards mantêm pergunta/resposta, dificuldade e navegação circular, com
   controles por mouse e teclado. A barra mostra a posição do cartão, sem sugerir
   domínio ou memorização. Trocar aula/tipo reinicia apenas o cartão, não a sessão
   de questões nem o histórico. Alternar tema preserva o cartão e sua face.
+  A resposta tem fundo lilás, borda e rótulo próprios. Cada pergunta deve indicar
+  explicitamente o conceito, órgão ou aspecto que a pessoa precisa recordar;
+  evite fragmentos como “Empréstimo x financiamento?”. Comparações devem dizer
+  o que comparar; cálculos devem indicar a grandeza e a unidade pedidas. Uma
+  possibilidade de recondução não pode virar permanência automática.
+- Nos materiais de contexto, aplique vermelho (`--hd`) à frase negativa e ao
+  objeto negado: “não recebem depósitos à vista”, “sem recondução”, “não
+  monetárias”. Use `contextText` nos mapas, diagramas, tabelas e prazos;
+  `lessonText` mantém os marcadores e também destaca negativas na trilha.
+  Preserve exceções e condições afirmativas fora do trecho negativo. Não pinte
+  negativas em questões, alternativas, seus feedbacks, controles do sistema ou
+  flashcards. Confira a marcação no contexto; cores não autorizam mudar fatos.
 - Confira os dois temas e larguras de PC. Restrinja os estilos aos materiais e
   preserve o painel, a trilha, as questões, os simulados e o armazenamento.
 

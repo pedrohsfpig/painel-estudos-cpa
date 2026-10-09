@@ -63,11 +63,18 @@ local permanece porque a origem do site não muda.
 - Trilha de aulas, quadro do SFN, mapas mentais, diagramas, tabelas,
   linhas do tempo e flashcards.
 - Materiais com nome completo da aula e abas com ícones. Mapas mostram o conceito
-  central e suas ramificações abertas; diagramas distinguem fluxos de grupos.
-  Tabelas têm cabeçalhos e linhas alternadas; sequências usam linhas com setas,
-  enquanto números independentes ficam em cartões. Todos os textos são mantidos.
+  central e ramificações abertas, títulos centralizados e subtópicos agrupados.
+  Diagramas distinguem fluxos de grupos. Tabelas usam grade completa, cabeçalhos
+  padronizados e cores por coluna nas comparações, sem listras por linha.
+- Datas e sequências usam conexões; durações comparáveis usam uma escala de tempo,
+  e periodicidades mostram recorrência. Todos os textos desses materiais são
+  mantidos; negativas recebem destaque vermelho, assim como na trilha, sem
+  aplicar a formatação às questões, alternativas ou feedbacks.
 - Flashcards com pergunta e resposta identificadas, posição no conjunto e
   controles agrupados; o cartão também vira com Enter ou espaço quando em foco.
+  A face da resposta tem fundo lilás. Os 240 cartões foram revisados; 90 perguntas
+  ganharam contexto explícito, e oito respostas foram esclarecidas, mantendo
+  quantidades, conceitos, ordem e dificuldades.
 - Sumário lateral nas aulas, com atalhos que abrem e focam números, resumo,
   dicas e pegadinhas; ícones pequenos identificam as seções.
 - Cabeçalho das questões com cronômetro e barra de respostas concluídas nos
