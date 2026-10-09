@@ -68,6 +68,37 @@ class PainelCPA(unittest.TestCase):
     def click(self, text):
         self.page.get_by_role("button", name=text, exact=True).click()
 
+    def assert_material_content(self, kind):
+        material = self.page.evaluate("MAT[mt.a]")
+
+        def strings(value):
+            if isinstance(value, str):
+                return [value]
+            return [text for child in value for text in strings(child)]
+
+        if kind == "Mapa mental":
+            actual = self.page.locator(".mind-root>span,.mind-branch h3>span,.mind-node").all_text_contents()
+            self.assertEqual(actual, strings(material["mm"]))
+            self.assertTrue(self.page.locator(".mind-node").evaluate_all(
+                "nodes => nodes.every(node => node.getBoundingClientRect().height > 0)"
+            ))
+        elif kind == "Diagramas":
+            actual = self.page.locator(".material-body .material-panel h3,.diagram-step strong,.diagram-step p").all_text_contents()
+            expected = [text for diagram in material["dg"] for text in
+                        [diagram[1]] + [text for node in diagram[2] for text in node[:2]]]
+            self.assertEqual(actual, expected)
+        elif kind == "Tabelas":
+            panels = self.page.locator(".material-table").all()
+            self.assertEqual(len(panels), len(material["tb"]))
+            for panel, table in zip(panels, material["tb"]):
+                self.assertEqual(panel.locator("h3").inner_text(), table[0])
+                self.assertEqual(panel.locator("table th,table td").all_text_contents(), strings(table[1:]))
+        elif kind == "Linha do tempo":
+            actual = self.page.locator(".material-body .material-panel h3,.timeline-value,.timeline-detail p,.timeline-extra,.number-value,.number-card p").all_text_contents()
+            self.assertEqual(actual, strings(material["tl"]))
+        else:
+            self.assertEqual(self.page.locator(".flashcard-text").inner_text(), material["fc"][0][0])
+
     def configure(self, mode="Estudo", count=5):
         self.click("Praticar")
         self.page.locator("button.oc").filter(
@@ -146,9 +177,12 @@ class PainelCPA(unittest.TestCase):
         self.page.locator(".nav").get_by_role("button", name="Material de apoio", exact=True).click()
         for lesson in range(1, 7):
             self.click(f"Aula {lesson}")
+            content = self.page.evaluate("lesson => AL[lesson - 1]", lesson)
             for kind in ["Mapa mental", "Diagramas", "Tabelas", "Linha do tempo", "Flashcards"]:
                 self.click(kind)
                 self.assertGreater(len(self.page.locator("#app").inner_text()), 300)
+                self.assertEqual(self.page.locator(".material-lesson h2").inner_text(), content["t"])
+                self.assert_material_content(kind)
             question = self.page.locator(".fcd").inner_text()
             self.click("Virar cartão")
             self.assertNotEqual(question, self.page.locator(".fcd").inner_text())
@@ -157,6 +191,16 @@ class PainelCPA(unittest.TestCase):
             self.click("Próximo")
             self.click("Anterior")
             self.assertEqual(question, self.page.locator(".fcd").inner_text())
+            self.page.locator(".fcd").focus()
+            self.page.locator(".fcd").press("Space")
+            self.assertNotEqual(question, self.page.locator(".fcd").inner_text())
+            self.page.locator(".fcd").press("Enter")
+            self.assertEqual(question, self.page.locator(".fcd").inner_text())
+            self.click("Aleatório")
+            self.assertEqual(self.page.locator(".flashcard-text").inner_text(),
+                             self.page.evaluate("MAT[mt.a].fc[fi][0]"))
+            self.assertEqual(self.page.locator(".flashcard-progress").get_attribute("aria-valuenow"),
+                             str(self.page.evaluate("fi + 1")))
 
     def test_03_study_aids_and_result(self):
         self.configure()

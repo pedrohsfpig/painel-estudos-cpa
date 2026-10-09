@@ -62,6 +62,12 @@ local permanece porque a origem do site não muda.
 - Estudo de hoje, cronômetro, indicadores e evolução diária.
 - Trilha de aulas, quadro do SFN, mapas mentais, diagramas, tabelas,
   linhas do tempo e flashcards.
+- Materiais com nome completo da aula e abas com ícones. Mapas mostram o conceito
+  central e suas ramificações abertas; diagramas distinguem fluxos de grupos.
+  Tabelas têm cabeçalhos e linhas alternadas; sequências usam linhas com setas,
+  enquanto números independentes ficam em cartões. Todos os textos são mantidos.
+- Flashcards com pergunta e resposta identificadas, posição no conjunto e
+  controles agrupados; o cartão também vira com Enter ou espaço quando em foco.
 - Sumário lateral nas aulas, com atalhos que abrem e focam números, resumo,
   dicas e pegadinhas; ícones pequenos identificam as seções.
 - Cabeçalho das questões com cronômetro e barra de respostas concluídas nos

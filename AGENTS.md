@@ -108,6 +108,34 @@ em `cpaTheme`, separada de `cpaH`, e deve funcionar mesmo sem armazenamento loca
 sem escolha salva, acompanhe o tema do dispositivo. Aplique a escolha salva antes
 da primeira renderização e respeite os destaques semânticos nos dois temas.
 
+## Apresentação dos materiais de apoio
+
+O usuário exige preservar integralmente os dados de `MAT`: textos, quantidades,
+ordem e hierarquia de cada mapa, diagrama, tabela, sequência e flashcard. Uma
+mudança visual não autoriza resumir, reescrever ou excluir informações. Confira
+os dados antes/depois e a presença de cada texto renderizado nas seis aulas.
+
+- Mostre o nome completo da aula selecionada e mantenha abas com ícones pequenos.
+- Mapas usam conceito central, conexões e ramificações; preserve os subgrupos e
+  deixe todas as informações abertas para consulta. Não transforme tópicos pares
+  em etapas sucessivas ou em subordinados entre si.
+- Diagramas `f` mantêm os fluxos e a ordem das setas; diagramas `g` ligam os
+  elementos do mesmo grupo ao título, sem criar relações sequenciais. Preserve
+  as cores de papéis já existentes em cada nó. Conexões decorativas usam a cor
+  de destaque do tema.
+- Tabelas mantêm todas as células e usam cabeçalhos, linhas alternadas discretas
+  e negrito nos números e condições relevantes, sem mudar o texto das células.
+- Linhas conectadas com setas representam apenas sequências e cronologias que
+  existem no material. Números, prazos independentes e quóruns usam cartões;
+  não invente datas ou ordem temporal. Ao acrescentar uma sequência, registre seu
+  título em `MATERIAL_SEQUENCES`, sem modificar os conteúdos para caber no desenho.
+- Flashcards mantêm pergunta/resposta, dificuldade e navegação circular, com
+  controles por mouse e teclado. A barra mostra a posição do cartão, sem sugerir
+  domínio ou memorização. Trocar aula/tipo reinicia apenas o cartão, não a sessão
+  de questões nem o histórico. Alternar tema preserva o cartão e sua face.
+- Confira os dois temas e larguras de PC. Restrinja os estilos aos materiais e
+  preserve o painel, a trilha, as questões, os simulados e o armazenamento.
+
 ## Padrão permanente da trilha, para TODAS as aulas
 
 O usuário exige revisão individual de cada item das três seções de `AL`, inclusive
