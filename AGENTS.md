@@ -122,6 +122,13 @@ vagas e esclareça respostas, preservando os conceitos, a ordem e a dificuldade.
   em etapas sucessivas ou em subordinados entre si. Títulos principais são
   centralizados e destacados em maiúsculas; subtítulos abrem grupos delimitados
   que contêm os tópicos correspondentes, com recuo e conexões próprios.
+  A estrutura principal de TODOS os mapas é azul (`--ac`): títulos de ramificação,
+  ícones, conexões e composições não herdam a cor do órgão na tabela. Outras cores
+  distinguem somente conceitos comparados dentro dos grupos, via
+  `MATERIAL_MAP_COMPARISONS`; negativas reais continuam vermelhas. Priorize a
+  composição/diretoria na primeira linha, após a natureza, usando `mapBranches`
+  sem reordenar os dados de `MAT`. Em aulas com vários órgãos, preserve a ordem
+  dos órgãos e mantenha cada composição na ramificação do próprio órgão.
 - Diagramas `f` mantêm os fluxos e a ordem das setas; diagramas `g` ligam os
   elementos do mesmo grupo ao título, sem criar relações sequenciais. Preserve
   as cores de papéis já existentes em cada nó. Conexões decorativas usam a cor
@@ -132,13 +139,23 @@ vagas e esclareça respostas, preservando os conceitos, a ordem e a dificuldade.
   consistentes via `MATERIAL_COLUMN_COLORS` e destaque nas diferenças, inclusive
   negativas. Use negrito nos números e condições, sem mudar textos das células.
   Centralize cabeçalhos e corpo de todas as células. Entidades e conceitos de
-  comparação são colunas; os aspectos são linhas. Quadros de classificação e
-  hierarquia mantêm categorias/níveis nas linhas (no quadro do SFN: normativo,
-  supervisor e operadores). Registre inversões em `MATERIAL_TRANSPOSE_TABLES`,
+  comparação são colunas; os aspectos são linhas. O eixo depende do objetivo:
+  em “Os três tipos de entidade”, Normativa/Supervisora/Operacional são colunas,
+  com Papel e Exemplos nas linhas. Já no “Quadro do SFN”, os segmentos são
+  colunas e Normativo/Supervisor/Operadores são linhas. Não escolha o eixo só
+  pela palavra “tipo” ou “classificação”; examine o que se deseja comparar.
+  Registre inversões em `MATERIAL_TRANSPOSE_TABLES`,
   preservando o conteúdo original de `MAT` e os vínculos de cada célula.
 - Use `collegiateChart` para composições: presidência/coordenação acima dos demais
   membros, com o mesmo desenho para todos os órgãos. Mostre somente papéis e
-  quantidades disponíveis no material. Identifique o que se renova antes da taxa
+  quantidades disponíveis no material. Dentro do quadro de liderança, mostre o
+  cargo e o órgão entre parênteses, via `collegiateOrgan` e `collegiateChart`.
+  Preserve a distinção entre presidente, coordenador e superintendente; a Comoc
+  é coordenada pelo presidente do BC. Use nomes pessoais apenas se fornecidos
+  nas fontes e pertinentes à aula, sem inventar titulares atuais. No CNSP, a
+  fonte identifica o representante da Fazenda; não o substitua automaticamente
+  pelo ministro. Imagens precisam expressar relações reais, sem sugerir
+  subordinação entre diretores pares. Identifique o que se renova antes da taxa
   (por exemplo, renovação do colegiado: 1/5 por ano); mantenha datas em calendário
   e durações em escala. Não invente mandatos ou datas para preencher campos.
 - Linhas conectadas com setas representam apenas sequências e cronologias que

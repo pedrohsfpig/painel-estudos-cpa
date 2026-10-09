@@ -77,8 +77,14 @@ class PainelCPA(unittest.TestCase):
             return [text for child in value for text in strings(child)]
 
         if kind == "Mapa mental":
-            actual = self.page.locator(".mind-root>span,.mind-branch h3>span,.mind-node").all_text_contents()
-            self.assertEqual(actual, strings(material["mm"]))
+            self.assertEqual(self.page.locator(".mind-root>span").inner_text(), material["mm"][0])
+            branches = self.page.locator(".mind-branch")
+            self.assertEqual(branches.count(), len(material["mm"][1]))
+            for index, branch in enumerate(material["mm"][1]):
+                rendered = self.page.locator(
+                    f'.mind-branch[data-source-index="{index}"]')
+                self.assertEqual(rendered.count(), 1)
+                self.assertEqual(rendered.locator("h3>span,.mind-node").all_text_contents(), strings(branch))
             self.assertTrue(self.page.locator(".mind-node").evaluate_all(
                 "nodes => nodes.every(node => node.getBoundingClientRect().height > 0)"
             ))
@@ -95,7 +101,7 @@ class PainelCPA(unittest.TestCase):
                 title, headers, rows = table
                 # A transposição muda os eixos, sem perder células nem associações.
                 transpose = {"Intermediação x serviços", "Quadro do SFN", "Heterorregulação x autorregulação",
-                             "Emissão x impressão", "Composição do CNSP e do CNPC",
+                             "Os três tipos de entidade", "Emissão x impressão", "Composição do CNSP e do CNPC",
                              "Ativas, passivas e acessórias", "Cooperativa de crédito: atividades"}
                 if title in transpose:
                     expected_headers = [headers[0]] + [row[0] for row in rows]
@@ -755,8 +761,8 @@ class PainelCPA(unittest.TestCase):
             self.page.evaluate("chooseMaterial('a',5);chooseMaterial('c','mapa')")
             self.assertEqual(self.page.locator(".collegiate-chart").count(), 4)
             self.assertEqual(self.page.locator(".collegiate-leader span").all_text_contents(),
-                             ["Fazenda (presidente)", "Superintendente",
-                              "Presidido pelo Ministro da Previdência Social", "Superintendente"])
+                             ["Representante do Ministério da Fazenda", "Superintendente",
+                              "Ministro da Previdência Social", "Superintendente"])
 
             self.page.evaluate("chooseMaterial('a',6);chooseMaterial('c','fc');fi=8;go()")
             self.assertIn("destinação do dinheiro", self.page.locator(".flashcard-text").inner_text())
@@ -772,6 +778,46 @@ class PainelCPA(unittest.TestCase):
             self.assertEqual(self.page.locator(".en .context-negative,.o .context-negative").count(), 0)
             self.answer()
             self.assertEqual(self.page.locator(".feedback .context-negative").count(), 0)
+
+    def test_26_map_structure_has_blue_titles_and_identified_leaders(self):
+        expected_orgs = {2: ["CMN", "Comoc"], 3: ["BACEN"], 4: ["CVM"],
+                         5: ["CNSP", "Susep", "CNPC", "Previc"]}
+        for theme in ["light", "dark"]:
+            self.page.evaluate("theme=>document.documentElement.dataset.theme=theme", theme)
+            for lesson in range(1, 7):
+                self.page.evaluate("lesson=>{view='m';mt={a:lesson,c:'mapa'};go()}", lesson)
+                self.assert_material_content("Mapa mental")
+                self.assertTrue(self.page.locator(".mind-branch h3,.mind-branch h3>span").evaluate_all(
+                    """nodes=>nodes.every(e=>{
+                        const sample=document.createElement('span');sample.style.color='var(--ac)';e.append(sample);
+                        const expected=getComputedStyle(sample).color;sample.remove();return getComputedStyle(e).color===expected;
+                    })"""), f"Títulos principais da aula {lesson} devem ser azuis")
+                charts = self.page.locator(".mind-map .collegiate-chart")
+                self.assertEqual(charts.evaluate_all("nodes=>nodes.map(e=>e.dataset.organ)"),
+                                 expected_orgs.get(lesson, []))
+                self.assertEqual(charts.locator(".collegiate-affiliation").all_text_contents(),
+                                 [f"({organ})" for organ in expected_orgs.get(lesson, [])])
+                if lesson in [2, 3, 4]:
+                    self.assertEqual(self.page.locator(".mind-row").first.locator("h3>span").all_text_contents(),
+                                     ["Natureza", "Composição" if lesson == 2 else "Diretoria"])
+            self.page.evaluate("mt={a:1,c:'tab'};go()")
+            table = self.page.locator(".material-table").filter(
+                has=self.page.locator("h3").filter(has_text=re.compile(r"^Os três tipos de entidade$")))
+            self.assertEqual(table.locator("thead th").all_text_contents(),
+                             ["Tipo", "Normativa", "Supervisora", "Operacional"])
+            self.assertEqual(table.locator("tbody th").all_text_contents(), ["Papel", "Exemplos"])
+            self.assertEqual(len(set(table.locator(".comparison-head").evaluate_all(
+                "nodes=>nodes.map(e=>getComputedStyle(e).color)"))), 3)
+            self.assertIn("sem função executiva", table.locator(".context-negative").all_text_contents())
+            # Nem a priorização visual nem a identificação alteram os dados originais.
+            self.assertEqual(self.page.evaluate("MAT[3].mm[1].map(branch=>branch[0])"),
+                             ["Natureza", "Objetivos", "Quatro funções", "Política monetária", "Diretoria",
+                              "Competências", "Autorizações", "Macetes"])
+            for lesson, organ in [(3, "BACEN"), (4, "CVM")]:
+                self.page.evaluate("lesson=>{mt={a:lesson,c:'tl'};go()}", lesson)
+                self.assertEqual(self.page.locator(".collegiate-affiliation").all_text_contents(), [f"({organ})"])
+            self.page.evaluate("mt={a:2,c:'diag'};go()")
+            self.assertEqual(self.page.locator(".collegiate-affiliation").all_text_contents(), ["(CMN)"])
 
 
 if __name__ == "__main__":
