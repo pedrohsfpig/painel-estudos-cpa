@@ -44,6 +44,9 @@ local permanece porque a origem do site não muda.
 
 ## Funcionalidades preservadas
 
+- Menu lateral fixo no computador, com ícones e indicação da tela atual.
+- Painel com estatísticas reais, andamento por aula, prioridades de revisão,
+  evolução dos acertos e acesso à última aula praticada.
 - Botão de lâmpada fixo para alternar claro/escuro em qualquer tela, com escolha
   salva neste navegador. Sem escolha salva, acompanha o tema do dispositivo.
 - 600 questões: 100 em cada uma das 6 aulas.
@@ -82,6 +85,23 @@ O HTML original também tenta sincronizar o histórico pela API `claude.use`.
 Essa integração foi preservada, mas não está disponível neste ambiente.
 Não há login nem sincronização entre dispositivos na versão independente.
 
+## Indicadores do painel
+
+Respondidas, acertos e erros contam **tentativas**, inclusive respostas repetidas.
+O aproveitamento é a proporção de acertos nessas tentativas. Os filtros de nível
+e origem valem para esses indicadores, o gráfico e o desempenho detalhado.
+
+O andamento da trilha conta **questões diferentes praticadas** em cada aula,
+incluindo Hardcore, usando todo o histórico. Responder novamente à mesma questão
+não aumenta esse andamento; a barra não representa domínio do conteúdo.
+
+As prioridades agrupam **erros pendentes** por aula e tema: uma questão fica
+pendente quando sua última resposta foi errada e sai da lista ao ser acertada.
+Mostramos os três grupos com mais pendências, com acesso à revisão completa.
+O botão de retomar abre o material da última aula praticada; não restaura uma
+sessão de questões após fechar o navegador. Com histórico vazio, o painel orienta
+o início dos estudos sem inventar dados.
+
 ## Testes de navegador
 
 Os testes usam Python 3 e Playwright; essas dependências são necessárias
@@ -118,6 +138,10 @@ limpeza do histórico e um fluxo em tela móvel. Também exercitam as quatro esc
 de todas as questões para conferir a associação entre alternativa embaralhada e
 feedback, a ausência de feedback em simulados e o contrato de conteúdo futuro.
 A integração com a conta do Claude não faz parte desses testes.
+
+Também verificamos a diferença entre tentativas, cobertura única e erros
+pendentes, a aplicação dos filtros e o menu fixo nos dois temas, em larguras
+de 1024, 1280, 1440 e 1920 pixels.
 
 ## Feedback e novas questões
 
@@ -171,9 +195,5 @@ das normas; esses pontos precisam de revisão humana.
 Para preservar históricos, acrescente questões ao final do banco, sem reordenar
 as antigas. Leia `AGENTS.md` antes de implementar novas aulas ou conteúdos.
 
-## Limitação visual conhecida
-
-Uma limitação do visual original foi confirmada: em uma tela de 390 pixels,
-o menu superior amplia a página para 540 pixels e exige rolagem horizontal.
-O fluxo de responder questões funciona nessa largura, mas a adaptação do menu
-para celular fica como melhoria futura.
+O visual prioriza o computador. Em janelas pequenas, o menu passa para o topo
+para manter os controles acessíveis.

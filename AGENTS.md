@@ -66,6 +66,19 @@ O site publicado usa `main` no GitHub Pages. Quando o usuário pedir atualizaç�
 para vê-las no site, valide, envie os commits e informe o resultado real do envio.
 Não confunda envio ao GitHub com confirmação de que o Pages já publicou.
 
+## Painel e navegação no computador
+
+O menu lateral usa ícones pequenos e permanece fixo nas telas de computador.
+Preserve as ações existentes ao modificar a apresentação; não reinicie uma
+sessão ao navegar ou trocar de tema. Os indicadores devem usar dados reais:
+tentativas incluem repetições; andamento da aula mede questões únicas praticadas
+(prova + Hardcore); pendências seguem a última resposta de cada questão. Não
+apresente cobertura como domínio. Filtros de estatísticas afetam tentativas,
+evolução e desempenho detalhado; trilha e pendências usam o histórico completo.
+O acesso à última aula se baseia no histórico e abre seus materiais, sem alegar
+restauração de uma sessão. Trate histórico vazio e novas aulas sem números fixos.
+Confira os dois temas e os fluxos existentes antes de publicar mudanças no painel.
+
 ## Alternância global de tema
 
 O botão de lâmpada fica fixo no canto superior esquerdo, fora de `#app`, em todas

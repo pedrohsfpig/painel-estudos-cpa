@@ -95,6 +95,79 @@ table.tx{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5}.tx 
 .fb-choice{padding:2px 8px;border:1px solid var(--bd);border-radius:6px;font-size:12px}
 .fb-option h4{font-size:16px;font-weight:500;margin:0 0 6px}.fb-option p{margin:0;line-height:1.6}
 button.o:disabled{cursor:default}
+
+/* Estrutura para estudo no computador; os controles de estudo mantêm suas ações. */
+:root{--sidebar-width:226px}
+*{box-sizing:border-box}
+.w{max-width:none;margin:0;padding:0}
+button:focus-visible,summary:focus-visible{outline:3px solid var(--ac);outline-offset:3px}
+.ui-icon{width:22px;height:22px;flex:none;vertical-align:middle}
+.sidebar{position:fixed;inset:0 auto 0 0;width:var(--sidebar-width);padding:76px 14px 20px;border-right:1px solid var(--bd);display:flex;flex-direction:column;gap:20px;background:var(--bg);overflow-y:auto;z-index:20}
+.brand{font-size:21px;letter-spacing:-.5px;padding:0 12px}.brand b{color:var(--ac)}
+.brand small{display:block;color:var(--mu);font-size:12px;letter-spacing:0;margin-top:3px}
+.sidebar .nav{display:flex;flex-direction:column;gap:7px;margin:0}
+.nav-item{display:flex;align-items:center;gap:12px;width:100%;text-align:left;border:1px solid transparent;border-radius:10px;padding:12px 10px;font-size:14px;min-height:48px}
+.nav-item.on{background:var(--cd);color:var(--ac);border-color:var(--bd);box-shadow:inset 3px 0 var(--ac);font-weight:600}
+.nav-item .nav-count{margin-left:auto;font-size:12px;color:var(--hd);background:var(--hdb);border-radius:20px;padding:1px 7px}
+.sidebar-footer{margin-top:auto;padding:14px 10px 0;border-top:1px solid var(--bd);display:flex;gap:8px;align-items:flex-start;font-size:11px;color:var(--mu)}
+.sidebar-footer .ui-icon{width:17px;height:17px;margin-top:2px}
+.workspace-main{margin-left:var(--sidebar-width);padding:28px 32px 36px;min-width:0}
+.main-inner{max-width:1360px;margin:0 auto}
+.page-head{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-bottom:22px}
+.page-head h1{font-size:30px;line-height:1.25;font-weight:650;letter-spacing:-.7px;margin:0 0 7px}
+.page-head p{margin:0;color:var(--mu);font-size:14px}
+.bank-pill{display:flex;align-items:center;gap:9px;white-space:nowrap;border:1px solid var(--bd);background:var(--cd);border-radius:24px;padding:9px 14px;font-size:12px;color:var(--mu)}
+.flow-content{max-width:780px;margin:0 auto}.flow-content.material-content{max-width:1040px}
+.dashboard .pn{padding:20px;border-radius:14px;margin:0;min-width:0}
+.dashboard h2{font-size:19px;line-height:1.3;font-weight:600;margin:0}
+.dashboard p{margin:6px 0 0}
+.dashboard .hoje{margin:0 0 18px;padding:20px;border:1px solid var(--bd);border-radius:14px;border-left:3px solid var(--ac);flex-wrap:nowrap}
+.daily-copy{display:flex;gap:18px;align-items:center;min-width:0}
+.icon-disc{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;flex:none;background:var(--bg);color:var(--ac);border:1px solid var(--bd)}
+.icon-disc .ui-icon{width:29px;height:29px}
+.primary-action{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--ac);border-color:var(--ac);color:var(--bg);font-weight:600;padding:11px 20px;white-space:nowrap}
+.primary-action:hover{background:var(--ac);filter:brightness(1.08)}
+.dashboard .g4{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.dashboard .m{display:flex;align-items:center;gap:12px;border:1px solid var(--bd);padding:16px;border-radius:13px;min-width:0}
+.metric-icon{width:39px;height:39px;flex:none;display:grid;place-items:center;border-radius:50%;background:var(--bg);color:var(--ac)}
+.metric-icon.correct{background:var(--okb);color:var(--ok)}.metric-icon.incorrect{background:var(--hdb);color:var(--hd)}
+.dashboard .mv{font-size:30px;font-weight:650;line-height:1.3;font-variant-numeric:tabular-nums}
+.metric-label{font-size:12px;color:var(--mu)}
+.metric-note{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--mu);margin:9px 0 18px}
+.dashboard-filters{border:1px solid var(--bd);border-radius:12px;margin-bottom:18px;background:var(--cd)}
+.dashboard-filters>summary{cursor:pointer;padding:10px 14px;font-size:13px}
+.filter-body{display:flex;gap:26px;flex-wrap:wrap;padding:0 14px 10px}.filter-body .chip{font-size:12px;padding:4px 10px}
+.dashboard-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(300px,1fr);gap:18px}
+.panel-title{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:4px}
+.text-action{display:inline-flex;align-items:center;gap:5px;white-space:nowrap;border:0;color:var(--ac);padding:4px 0;font-size:13px}
+.text-action:hover{background:transparent;text-decoration:underline}.text-action .ui-icon{width:16px;height:16px}
+.panel-caption{font-size:12px;color:var(--mu);margin-bottom:12px!important}
+.trail-row{display:grid;grid-template-columns:27px minmax(0,1fr) minmax(94px,.6fr);gap:10px;align-items:center;width:100%;text-align:left;border:0;border-top:1px solid var(--bd);border-radius:0;padding:11px 0;font-size:13px}
+.trail-row:hover{background:var(--bg)}.trail-number{font-variant-numeric:tabular-nums;color:var(--mu);font-size:12px}
+.trail-title{font-weight:500;line-height:1.4}.trail-count{display:block;font-size:11px;color:var(--mu);font-weight:400;margin-top:2px}
+.trail-progress{display:flex;align-items:center;gap:8px}.trail-progress .bar{flex:1;height:7px;background:var(--bd);margin:0}.trail-progress .bar i{background:var(--ac)}
+.trail-percent{min-width:32px;text-align:right;font-size:12px;font-variant-numeric:tabular-nums}
+.priority-list{list-style:none;margin:0;padding:0}.priority-list li{border-top:1px solid var(--bd)}
+.priority-row{display:flex;align-items:center;gap:10px;width:100%;text-align:left;border:0;border-radius:0;padding:12px 0;font-size:13px;line-height:1.4}
+.priority-row:hover{background:var(--bg)}.priority-dot{width:8px;height:8px;border-radius:50%;background:var(--hd);flex:none}.priority-row small{display:block;color:var(--mu);font-size:11px;margin-top:4px}
+.outline-action{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;color:var(--ac);border-color:var(--ac);font-weight:500;font-size:13px;margin-top:14px;padding:9px 12px}
+.empty-state{padding:22px 0;color:var(--mu);font-size:13px}.empty-state .ui-icon{display:block;color:var(--ac);width:30px;height:30px;margin-bottom:10px}
+.recent-lesson{display:flex;gap:14px;align-items:flex-start;margin-top:22px}.recent-lesson h3{font-size:16px;margin:0;font-weight:600;line-height:1.5}
+.recent-lesson .icon-disc{width:48px;height:48px;color:var(--lesson-attention,#8150b0)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .recent-lesson .icon-disc{color:#b580e8}}
+:root[data-theme="dark"] .recent-lesson .icon-disc{color:#b580e8}
+.detail-stats{margin-top:22px;border:1px solid var(--bd);border-radius:12px}
+.detail-stats>summary{cursor:pointer;padding:13px 18px;font-size:14px;font-weight:500}
+.detail-stats-content{padding:0 18px 18px}.detail-stats .gp .pn{background:var(--cd)}
+.dashboard-footer{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-top:18px;color:var(--mu);font-size:12px}
+.dashboard-footer p{margin:0}.reset-history{font-size:12px}
+.dashboard .evolution svg{display:block;max-height:225px;margin-top:18px}
+.dashboard .evolution .rs{margin-top:10px}
+.tr{flex-basis:220px}.tb2{top:0}
+@media(min-width:1500px){.workspace-main{padding:32px 44px}.dashboard .pn{padding:24px}.trail-row{padding:13px 0}}
+@media(max-width:1150px) and (min-width:981px){:root{--sidebar-width:202px}.workspace-main{padding:24px}.dashboard-grid{grid-template-columns:minmax(0,1.4fr) minmax(250px,1fr)}.dashboard .m{padding:12px;gap:8px}.metric-icon{width:30px;height:30px}.page-head h1{font-size:26px}.bank-pill{padding:8px 10px;font-size:11px}.nav-item{font-size:13px;gap:8px}.trail-row{grid-template-columns:22px minmax(0,1fr)}.trail-progress{grid-column:2}}
+@media(max-width:980px){.sidebar{position:static;width:auto;padding:76px 16px 0;border:0;gap:16px;overflow:visible}.sidebar .nav{flex-direction:row;flex-wrap:wrap;gap:6px}.nav-item{width:auto;font-size:12px;min-height:42px;padding:8px}.nav-item .ui-icon{width:18px;height:18px}.brand small,.sidebar-footer{display:none}.workspace-main{margin-left:0;padding:22px 16px}.dashboard-grid{grid-template-columns:minmax(0,1fr) minmax(260px,.8fr)}.tb2{top:64px}}
+@media(max-width:650px){.page-head{align-items:flex-start;flex-direction:column;gap:10px}.page-head h1{font-size:26px}.dashboard .hoje{flex-wrap:wrap}.daily-copy{gap:12px}.daily-copy .icon-disc{width:42px;height:42px}.dashboard .g4{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.dashboard .m{padding:12px;gap:8px}.dashboard-grid{grid-template-columns:minmax(0,1fr)}.dashboard .pn{padding:16px}.filter-body{gap:8px}.panel-title{gap:8px}.dashboard h2{font-size:17px}.dashboard .mv{font-size:27px}.tr{flex-basis:100%}.gp{grid-template-columns:minmax(0,1fr)}}
 </style></head><body>
 <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Alternar modo claro e escuro" aria-pressed="false" title="Alternar modo claro e escuro">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="bulb" d="M9 17v-1.2c0-.7-.4-1.3-.9-1.8A5.8 5.8 0 0 1 6 9.5a6 6 0 0 1 12 0 5.8 5.8 0 0 1-2.1 4.5c-.5.5-.9 1.1-.9 1.8V17z"/><path d="M9 20h6M10 22h4M12 1V0M3 4l1.3 1.3M21 4l-1.3 1.3M1 10h2M21 10h2"/></svg>
@@ -1153,17 +1226,33 @@ const sem=p=>p>=80?"ok":p>=60?"md":"hd";
 function bars(m,lab,col,byP){return Object.entries(m).sort((a,b)=>byP?pct(...a[1])-pct(...b[1]):(a[0]>b[0]?1:-1)).map(([k,v])=>{const p=pct(v[0],v[1]);return `<div class="r"><div class="rt"><span>${lab(k)}</span><b>${p}%</b></div><div class="bar"><i style="width:${p}%;background:var(--${col?col(k):sem(p)})"></i></div><div class="rs">${v[0]} de ${v[1]} corretas</div></div>`}).join("")||'<p class="mu s">Sem respostas ainda.</p>'}
 function badge(n){return `<span class="bd" style="background:var(--${LC[n]}b);color:var(--${LC[n]})">${L[n]}</span>`}
 function chips(t,key,o){return `<div class="s mu">${t}</div><div class="chips">${o.map(([l,v])=>`<button class="chip${cfg[key]===v?" on":""}" onclick="cfg['${key}']=${JSON.stringify(v).replace(/"/g,"'")};go()">${l}</button>`).join("")}</div>`}
-function dash(){const t=HF(),a=t.filter(x=>x[1]).length,seen=new Set(H.map(x=>x[0])),mt=agg(q=>q[1]),w=Object.entries(mt).sort((x,y)=>pct(...x[1])-pct(...y[1]))[0];
-return `<div class="card hoje"><div><div style="font-size:18px;font-weight:500">Estudo de hoje</div><div class="mu s">10 questões em modo estudo: erros pendentes, inéditas e revisão das mais antigas, na proporção de dificuldade da prova.</div></div><button class="chip on" onclick="hoje()">Começar</button></div>
-<div class="s mu">Nível</div><div class="chips">${["Todos",...L].map((n,i)=>`<button class="chip${fl===i-1?" on":""}" onclick="fl=${i-1};go()">${n}</button>`).join("")}</div><div class="s mu">Origem</div><div class="chips">${["Qualquer","Estudo","Simulado"].map((n,i)=>`<button class="chip${fm===i-1?" on":""}" onclick="fm=${i-1};go()">${n}</button>`).join("")}</div>
-<div class="g4">${[["Respondidas",t.length],["Acertos",a],["Erros",t.length-a],["Aproveitamento",pct(a,t.length)+"%",t.length?sem(pct(a,t.length)):""]].map(([l,v,c])=>`<div class="m"><div class="mu s">${l}</div><div class="mv"${c?` style="color:var(--${c})"`:""}>${v}</div></div>`).join("")}</div>
-${w?`<div class="card" style="border-left:4px solid var(--${sem(pct(...w[1]))})">Foco sugerido: ${w[0]} (${pct(...w[1])}% de acerto)</div>`:""}
-<div class="pn"><h3>Evolução diária do aproveitamento</h3>${evo()}</div>
-<div class="lg s mu"><span><i class="dt" style="background:var(--ok)"></i>80% ou mais</span><span><i class="dt" style="background:var(--md)"></i>60 a 79%</span><span><i class="dt" style="background:var(--hd)"></i>abaixo de 60%</span><span>Em aula e tema, a cor indica o desempenho. Em nível, a cor identifica o nível.</span></div>
+const UI_ICONS={home:'<path d="m3 10 9-7 9 7v11h-7v-7h-4v7H3z"/>',book:'<path d="M12 5c-3-2-6-2-10-1v15c4-1 7-1 10 1 3-2 6-2 10-1V4c-4-1-7-1-10 1zM12 5v15"/>',practice:'<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h3"/>',warning:'<path d="m12 3 10 17H2zM12 9v4M12 16h.01"/>',file:'<path d="M14 2H5v20h14V7zM14 2v5h5M8 12h8M8 16h6"/>',bank:'<path d="m2 7 10-5 10 5zM4 10v8M9 10v8M15 10v8M20 10v8M2 21h20"/>',check:'<path d="m5 12 4 4L19 6"/>',cross:'<path d="m6 6 12 12M6 18 18 6"/>',chart:'<path d="M5 20v-6M12 20V9M19 20V4"/>',arrow:'<path d="M4 12h16m-6-6 6 6-6 6"/>',save:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 3v6h10V3M7 21v-7h10v7"/>'};
+function uiIcon(name){return `<svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${UI_ICONS[name]||UI_ICONS.book}</svg>`}
+// Apenas leitura do histórico: tentativas, cobertura e erros pendentes são medidas distintas.
+function dashboardData(){
+const history=H.filter(([id])=>Q[id-1]),seen=new Set(history.map(([id])=>id)),pending=errs(),groups=new Map();
+pending.forEach(id=>{const q=Q[id-1],key=JSON.stringify([q[0],q[1]]);if(!groups.has(key))groups.set(key,{lesson:q[0],topic:q[1],count:0});groups.get(key).count++});
+const lessons=AL.map((lesson,i)=>{const ids=Q.map((q,j)=>q[0]===i+1?j+1:0).filter(Boolean),covered=ids.filter(id=>seen.has(id)).length;return {lesson:i+1,title:lesson.t.split(": ").slice(1).join(": "),covered,total:ids.length,percent:ids.length?Math.floor(covered*100/ids.length):0}});
+return {seen,lessons,pending,priorities:[...groups.values()].sort((a,b)=>b.count-a.count||a.lesson-b.lesson||a.topic.localeCompare(b.topic,"pt-BR")),recent:history.length?Q[history[history.length-1][0]-1][0]:null};
+}
+function dash(){const t=HF(),a=t.filter(x=>x[1]).length,data=dashboardData(),mt=agg(q=>q[1]),w=Object.entries(mt).sort((x,y)=>pct(...x[1])-pct(...y[1]))[0],filtered=fl>=0||fm>=0,recent=data.recent||1;
+return `<div class="dashboard">
+<section class="card hoje" aria-labelledby="daily-title"><div class="daily-copy"><span class="icon-disc">${uiIcon("book")}</span><div><h2 id="daily-title">Estudo de hoje</h2><p class="mu s">10 questões para revisar erros, descobrir questões novas e retomar conceitos.</p></div></div><button class="primary-action" onclick="hoje()">Começar ${uiIcon("arrow")}</button></section>
+<div class="g4" aria-label="Estatísticas de respostas">${[["Respondidas",t.length,"file",""],["Acertos",a,"check","correct"],["Erros",t.length-a,"cross","incorrect"],["Aproveitamento",pct(a,t.length)+"%","chart","",t.length?sem(pct(a,t.length)):""]].map(([l,v,icon,kind,c])=>`<div class="m"><span class="metric-icon ${kind}">${uiIcon(icon)}</span><div><div class="metric-label">${l}</div><div class="mv"${c?` style="color:var(--${c})"`:""}>${v}</div></div></div>`).join("")}</div>
+<div class="metric-note"><span>${t.length?"Cada resposta conta como uma tentativa, inclusive nas repetições.":filtered?"Nenhuma resposta com estes filtros.":"Ainda sem respostas. Os indicadores aparecerão conforme você praticar."}</span>${filtered?'<span>Indicadores de respostas filtrados.</span>':""}</div>
+<details class="dashboard-filters"${filtered?" open":""}><summary>Filtrar estatísticas${filtered?` · ${fl<0?"Todos os níveis":L[fl]} · ${["Estudo","Simulado"][fm]||"Qualquer origem"}`:""}</summary><div class="filter-body"><div><div class="s mu">Nível</div><div class="chips">${["Todos",...L].map((n,i)=>`<button class="chip${fl===i-1?" on":""}" onclick="fl=${i-1};go()">${n}</button>`).join("")}</div></div><div><div class="s mu">Origem</div><div class="chips">${["Qualquer","Estudo","Simulado"].map((n,i)=>`<button class="chip${fm===i-1?" on":""}" onclick="fm=${i-1};go()">${n}</button>`).join("")}</div></div></div><p class="s mu" style="padding:0 14px 12px;margin:0">Filtros valem para respostas, evolução e desempenho detalhado. A trilha e os erros pendentes usam o histórico completo.</p></details>
+<div class="dashboard-grid">
+<section class="pn" aria-labelledby="trail-title"><div class="panel-title"><h2 id="trail-title">Sua trilha</h2><button class="text-action" onclick="view='t';go()">Ver trilha ${uiIcon("arrow")}</button></div><p class="panel-caption">Andamento: questões diferentes praticadas, incluindo Hardcore.</p>${data.lessons.map(l=>`<button class="trail-row" data-lesson="${l.lesson}" onclick="tr=${l.lesson};view='t';go()"><span class="trail-number">${String(l.lesson).padStart(2,"0")}</span><span class="trail-title">${escapeText(l.title)}<span class="trail-count">${l.covered} de ${l.total} questões</span></span><span class="trail-progress"><span class="bar" role="progressbar" aria-label="Questões praticadas da aula ${l.lesson}" aria-valuemin="0" aria-valuemax="${l.total}" aria-valuenow="${l.covered}"><i style="width:${l.percent}%"></i></span><span class="trail-percent">${l.percent}%</span></span></button>`).join("")}</section>
+<section class="pn" aria-labelledby="priority-title"><h2 id="priority-title">Prioridades de revisão</h2><p class="panel-caption">${data.pending.length?`${data.pending.length} ${data.pending.length===1?"questão ainda precisa":"questões ainda precisam"} de revisão.`:"Acompanhe os temas que precisam de atenção."}</p>${data.priorities.length?`<ul class="priority-list">${data.priorities.slice(0,3).map(p=>`<li><button class="priority-row" onclick="tr=${p.lesson};view='t';go()"><span class="priority-dot"></span><span>${escapeText(p.topic)}<small>Aula ${p.lesson} · ${p.count} ${p.count===1?"erro pendente":"erros pendentes"}</small></span></button></li>`).join("")}</ul><button class="outline-action" onclick="view='e';go()">Revisar ${data.pending.length} ${data.pending.length===1?"erro":"erros"} ${uiIcon("arrow")}</button>`:`<div class="empty-state">${uiIcon(data.seen.size?"check":"book")}${data.seen.size?"Nenhum erro pendente. Continue praticando para consolidar os conceitos.":"Ao responder, seus erros pendentes e os temas para revisar aparecem aqui."}</div><button class="outline-action" onclick="view='q';go()">Praticar questões ${uiIcon("arrow")}</button>`}</section>
+<section class="pn evolution" aria-labelledby="evolution-title"><h2 id="evolution-title">Evolução dos acertos</h2><p class="panel-caption">Aproveitamento nos últimos 14 dias com respostas registradas.</p>${evo()}</section>
+<section class="pn" aria-labelledby="recent-title"><h2 id="recent-title">${data.recent?"Retomar a última aula":"Seu próximo passo"}</h2><p class="panel-caption">${data.recent?"Última aula praticada no histórico completo.":"Comece pelos fundamentos do sistema financeiro."}</p><div class="recent-lesson"><span class="icon-disc">${uiIcon("book")}</span><div><h3>${escapeText(AL[recent-1].t)}</h3><p class="mu s">Resumo, dicas e pontos de atenção.</p></div></div><button class="outline-action" onclick="tr=${recent};view='t';go()">Abrir aula ${uiIcon("arrow")}</button></section>
+</div>
+<details class="detail-stats"><summary>Desempenho detalhado por aula, tema e dificuldade</summary><div class="detail-stats-content">
+${w?`<p class="s">Foco sugerido: <b>${escapeText(w[0])}</b> (${pct(...w[1])}% de acerto nas tentativas).</p>`:""}
+<div class="lg s mu"><span><i class="dt" style="background:var(--ok)"></i>80% ou mais</span><span><i class="dt" style="background:var(--md)"></i>60 a 79%</span><span><i class="dt" style="background:var(--hd)"></i>abaixo de 60%</span><span>Em aula e tema, a cor indica o desempenho. Em nível, identifica a dificuldade.</span></div>
 <div class="gp"><div class="pn"><h3>Por nível</h3>${bars(agg(q=>q[2]),k=>L[k],k=>LC[k])}</div><div class="pn"><h3>Por aula</h3>${bars(agg(q=>q[0]),k=>AU[k])}</div></div>
-<div class="pn"><h3>Por tema (piores primeiro)</h3><div class="gt">${bars(mt,k=>k,0,1)}</div></div>
-<p class="mu s">Banco: ${Q.filter(q=>q[2]<3).length} questões da prova e ${Q.filter(q=>q[2]===3).length} hardcore, ${Q.length-seen.size} nunca respondidas. ${store?"Progresso salvo na sua conta.":"Progresso salvo neste navegador."}</p>
-<button onclick="rs=rs?(H=[],save(),0):1;go()">${rs?"Confirmar: apagar tudo":"Zerar histórico"}</button>`}
+<div class="pn"><h3>Por tema (piores primeiro)</h3><div class="gt">${bars(mt,k=>k,0,1)}</div></div></div></details>
+<footer class="dashboard-footer"><p>Banco: ${Q.filter(q=>q[2]<3).length} questões da prova e ${Q.filter(q=>q[2]===3).length} hardcore, ${Q.length-data.seen.size} nunca respondidas.</p><button class="reset-history" onclick="rs=rs?(H=[],save(),0):1;go()">${rs?"Confirmar: apagar tudo":"Zerar histórico"}</button></footer></div>`}
 function pool(){const l={};H.forEach(([id,ok])=>l[id]=ok);return Q.map((q,i)=>i+1).filter(id=>{const q=Q[id-1];return(!cfg.a||q[0]===cfg.a)&&(cfg.md==="h"?q[2]===3:q[2]<3&&(cfg.md!=="s"||!q[9])&&(cfg.n<0||q[2]===cfg.n))&&(cfg.m==="all"||(cfg.m==="new"&&!(id in l))||(cfg.m==="err"&&l[id]===0))})}
 function ocb(key,val,t,d,cls){return `<button class="oc${cfg[key]===val?" on":""} ${cls||""}" onclick="cfg['${key}']=${JSON.stringify(val).replace(/"/g,"'")};go()"><b>${t}</b>${d?`<span class="s mu">${d}</span>`:""}</button>`}
 function stp(n,t,h,b){return `<div class="stp"><div class="sth"><span class="sn">${n}</span><div><div class="stt">${t}</div><div class="s mu">${h}</div></div></div>${b}</div>`}
@@ -1278,6 +1367,8 @@ function quadro(){return `<p class="mu s">Quadro do SFN: quem normatiza, quem su
 <div class="qv" style="background:#0a2463">Órgãos normativos</div><div class="qc qw1">${qbx("CMN","Conselho Monetário Nacional")}</div><div class="qc qg1">${qbx("CNSP","Conselho Nacional de Seguros Privados")}</div><div class="qc qg1">${qbx("CNPC","Conselho Nacional de Previdência Complementar")}</div>
 <div class="qv" style="background:#3f8cff">Supervisores</div><div class="qc qw1">${qbx("BCB","Banco Central do Brasil")}${qbx("CVM","Comissão de Valores Mobiliários")}</div><div class="qc qg1">${qbx("Susep","Superintendência de Seguros Privados")}</div><div class="qc qg1">${qbx("Previc","Superintendência Nacional de Previdência Complementar")}</div>
 <div class="qv" style="background:#19a7d6">Operadores</div><div class="qc qw1"><div class="qops">${[["bk","Bancos e caixas econômicas"],["ch","Administradoras de consórcios"],["bv","Bolsa de Valores"],["co","Cooperativas de crédito"],["cr","Corretoras e distribuidoras*"],["bm","Bolsa de mercadorias e futuros"],["ip","Instituições de pagamento**"],["dn","Demais instituições não bancárias"]].map(x=>qo(...x)).join("")}</div></div><div class="qc qg1 qcol">${qo("sg","Seguradoras e Resseguradoras")}${qo("ea","Entidades abertas de previdência")}${qo("sc","Sociedades de capitalização")}</div><div class="qc qg1 qtop">${qo("fp","Entidades fechadas de previdência complementar (fundos de pensão)")}</div></div></div>`}
-function go(){$("#app").innerHTML=`<h1>Painel de estudos CPA</h1><div class="nav">${[["d","Painel"],["x","Quadro do SFN"],["t","Trilha"],["q","Praticar"],["e","Erros ("+errs().length+")"],["m","Material de apoio"]].map(([v,t])=>`<button class="chip${view===v?" on":""}" onclick="view='${v}';${v==="d"?"sync();":""}go()">${t}</button>`).join("")}</div>`+(view==="d"?'<div style="max-width:960px">'+dash()+'</div>':view==="x"?quadro():view==="t"?trilhaV():'<div style="max-width:'+(view==="m"?"900":"720")+'px">'+(view==="m"?mat():view==="e"?revisao():qz?(qz.i>=qz.ids.length?fin():ques()):setup())+'</div>')}
+function go(){const pending=errs().length,pages={d:["Seu painel de estudos","Uma visão clara do que revisar e do próximo passo."],t:["Trilha de aulas","Conceitos essenciais, dicas e pontos de atenção."],q:["Praticar","Estude, simule a prova e consolide seus conhecimentos."],e:["Revisar erros","Retome as questões que ainda precisam de revisão."],m:["Material de apoio","Mapas, tabelas e cartões para fortalecer a memória."],x:["Quadro do SFN","Quem normatiza, quem supervisiona e quem opera."]};
+$("#app").innerHTML=`<aside class="sidebar"><div class="brand"><b>CPA</b> · Estudos<small>Seu espaço de aprendizagem</small></div><nav class="nav" aria-label="Navegação principal">${[["d","Painel","home"],["t","Trilha","book"],["q","Praticar","practice"],["e","Erros","warning"],["m","Material de apoio","file"],["x","Quadro do SFN","bank"]].map(([v,t,icon])=>`<button class="nav-item${view===v?" on":""}"${view===v?' aria-current="page"':""} onclick="view='${v}';${v==="d"?"sync();":""}go()">${uiIcon(icon)}<span>${t}</span>${v==="e"?`<span class="nav-count">(${pending})</span>`:""}</button>`).join("")}</nav><div class="sidebar-footer">${uiIcon("save")}<span>${store?"Progresso salvo na sua conta.":"Progresso salvo neste navegador."}</span></div></aside>
+<main class="workspace-main"><div class="main-inner"><header class="page-head"><div><h1>${pages[view][0]}</h1><p>${pages[view][1]}</p></div><div class="bank-pill">${uiIcon("book")}<span>${Q.length} questões · ${AL.length} aulas</span></div></header>${view==="d"?dash():view==="x"?quadro():view==="t"?trilhaV():`<div class="flow-content${view==="m"?" material-content":""}">${view==="m"?mat():view==="e"?revisao():qz?(qz.i>=qz.ids.length?fin():ques()):setup()}</div>`}</div></main>`}
 try{validateQuestionBank();go();init()}catch(e){err(e);$("#app").innerHTML='<div class="card">Não foi possível carregar as questões. O conteúdo precisa ser corrigido antes de iniciar os estudos.</div>'}
 </script></body></html>

@@ -484,6 +484,72 @@ class PainelCPA(unittest.TestCase):
         self.assertEqual(self.page.locator("html").get_attribute("data-theme"), "light")
         self.toggle_theme()
 
+    def test_21_dashboard_distinguishes_attempts_coverage_and_pending_errors(self):
+        fixture = self.page.evaluate("""() => {
+            const find = (lesson, level) => Q.findIndex(q => q[0] === lesson && q[2] === level) + 1;
+            const [a, b, c, h] = [find(1, 0), find(1, 1), find(3, 2), find(6, 3)];
+            const now = Date.now();
+            H = [[a,0,now,0],[a,1,now,0],[a,1,now,1],
+                 [b,0,now,0],[c,0,now,1],[h,1,now,2],[99999,0,now,0]];
+            save();go();return {history:H,pending:[b,c]};
+        }""")
+        self.assertEqual(self.page.locator(".g4 .mv").all_text_contents(), ["6", "3", "3", "50%"])
+        progress = self.page.get_by_role("progressbar").evaluate_all(
+            "elements => elements.map(e => [Number(e.getAttribute('aria-valuenow')), Number(e.getAttribute('aria-valuemax'))])"
+        )
+        self.assertEqual(progress, [[2,100],[0,100],[1,100],[0,100],[0,100],[1,100]])
+        self.assertEqual(self.page.locator(".trail-percent").all_text_contents(), ["2%","0%","1%","0%","0%","1%"])
+        self.assertEqual(self.page.locator(".priority-list li").count(), 2)
+        self.assertIn("596 nunca respondidas", self.page.locator(".dashboard-footer").inner_text())
+        self.page.locator(".dashboard-filters > summary").click()
+        self.click("Estudo")
+        self.assertEqual(self.page.locator(".g4 .mv").all_text_contents(), ["3", "1", "2", "33%"])
+        self.assertEqual(self.page.locator(".trail-count").nth(0).inner_text(), "2 de 100 questões")
+        self.assertEqual(self.page.get_by_role("button", name="Revisar 2 erros", exact=True).count(), 1)
+        self.assertIn("33%", self.page.get_by_role("img", name="Aproveitamento por dia").text_content())
+        self.click("Hardcore")
+        self.assertEqual(self.page.locator(".g4 .mv").all_text_contents(), ["0", "0", "0", "0%"])
+        self.assertIn("Nenhuma resposta com estes filtros.", self.page.locator(".metric-note").inner_text())
+        self.click("Qualquer")
+        self.assertEqual(self.page.locator(".g4 .mv").all_text_contents(), ["1", "1", "0", "100%"])
+        self.page.locator(".trail-row[data-lesson='3']").click()
+        self.assertEqual(self.page.evaluate("[view,tr]"), ["t",3])
+        self.click("Painel")
+        self.click("Abrir aula")
+        self.assertEqual(self.page.evaluate("[view,tr]"), ["t",6])
+        self.click("Painel")
+        self.click("Revisar 2 erros")
+        self.assertEqual(self.page.locator("details.rv").count(), 2)
+        self.assertEqual(sorted(self.page.evaluate("errs()")), sorted(fixture["pending"]))
+        self.assertEqual(self.page.evaluate("H"), fixture["history"])
+        self.page.reload()
+        self.page.get_by_text("Progresso salvo neste navegador.", exact=False).wait_for()
+        self.assertEqual(self.page.evaluate("H"), fixture["history"])
+        self.assertEqual(self.page.locator(".g4 .mv").all_text_contents(), ["6", "3", "3", "50%"])
+
+    def test_22_desktop_sidebar_and_dashboard_layout_in_both_themes(self):
+        for theme in ["light", "dark"]:
+            if self.page.locator("html").get_attribute("data-theme") != theme:
+                self.page.locator("#theme-toggle").click()
+            for width in [1024,1280,1440,1920]:
+                self.page.set_viewport_size({"width":width,"height":900})
+                self.click("Painel")
+                self.assertEqual(self.page.locator(".nav button[aria-current='page']").inner_text(), "Painel")
+                self.assertEqual(self.page.locator(".nav button .ui-icon").count(), 6)
+                self.assertEqual(self.page.locator(".sidebar").evaluate("e => getComputedStyle(e).position"), "fixed")
+                main = self.page.locator("main").bounding_box()
+                sidebar = self.page.locator(".sidebar").bounding_box()
+                self.assertGreaterEqual(main["x"], sidebar["x"] + sidebar["width"])
+                for screen in ["Painel","Quadro do SFN","Trilha","Praticar","Erros (0)","Material de apoio"]:
+                    self.click(screen)
+                    self.assertTrue(self.page.evaluate("document.documentElement.scrollWidth <= innerWidth"), f"Rolagem horizontal: {width}, {theme}, {screen}")
+                self.click("Painel")
+                self.page.locator(".detail-stats > summary").click()
+                self.page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+                self.assertEqual(self.page.locator(".sidebar").bounding_box()["y"], 0)
+                self.assertTrue(self.page.locator("#theme-toggle").is_visible())
+                self.page.evaluate("window.scrollTo(0,0)")
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
