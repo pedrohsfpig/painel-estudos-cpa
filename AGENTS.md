@@ -149,7 +149,13 @@ vagas e esclareça respostas, preservando os conceitos, a ordem e a dificuldade.
 - Use `collegiateChart` para composições: presidência/coordenação acima dos demais
   membros, com o mesmo desenho para todos os órgãos. Mostre somente papéis e
   quantidades disponíveis no material. Dentro do quadro de liderança, mostre o
-  cargo e o órgão entre parênteses, via `collegiateOrgan` e `collegiateChart`.
+  cargo com a instituição escrito por completo, via `collegiateOrgan` e
+  `collegiateChart`: “Presidente do BACEN”, “Diretor do BACEN”, “Presidente da
+  CVM”, “Diretor da CVM”. Não use “Presidente”/“Diretor” isolados, nem dependa
+  de uma sigla entre parênteses. Isso vale para TODOS os nós de pessoas, em mapas,
+  diagramas e calendários. Nos conselhos, explicite a função e a origem:
+  “Ministro da Fazenda — presidente do CMN”; nos representantes, indique a
+  instituição representada. Não troque um cargo institucional por “CEO”.
   Preserve a distinção entre presidente, coordenador e superintendente; a Comoc
   é coordenada pelo presidente do BC. Use nomes pessoais apenas se fornecidos
   nas fontes e pertinentes à aula, sem inventar titulares atuais. No CNSP, a

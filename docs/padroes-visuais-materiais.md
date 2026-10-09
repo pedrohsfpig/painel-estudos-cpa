@@ -21,19 +21,22 @@ Padrão atualizado conforme o feedback de 9 de outubro de 2026. É complementar
 
 ## Liderança nos quadros de composição
 
-O cargo aparece dentro do quadro superior, com o órgão entre parênteses. O
-mesmo componente é usado nos mapas, diagramas de composição e calendários.
+Cada pessoa aparece com cargo e instituição escritos por completo, no próprio
+quadro: “Presidente do BACEN” e “Diretor do BACEN”, por exemplo. Uma sigla
+isolada entre parênteses não substitui essa identificação. O mesmo componente
+é usado nos mapas, diagramas de composição e calendários. Representantes também
+identificam a instituição de origem, sem atribuir a eles cargos não informados.
 
 | Órgão | Identificação da liderança na fonte existente |
 | --- | --- |
-| CMN | Ministro da Fazenda |
-| Comoc | Presidente do BC, coordenador |
-| BACEN | Presidente |
-| CVM | Presidente |
-| CNSP | Representante do Ministério da Fazenda |
-| Susep | Superintendente |
-| CNPC | Ministro da Previdência Social |
-| Previc | Superintendente |
+| CMN | Ministro da Fazenda — presidente do CMN |
+| Comoc | Presidente do Banco Central — coordenador da Comoc |
+| BACEN | Presidente do BACEN |
+| CVM | Presidente da CVM |
+| CNSP | Representante do Ministério da Fazenda — presidente do CNSP |
+| Susep | Superintendente da Susep |
+| CNPC | Ministro da Previdência Social — presidente do CNPC |
+| Previc | Superintendente da Previc |
 
 Não se acrescentam nomes pessoais ou cargos não informados. Ao incluir outro
 órgão, conferir sua liderança nas fontes fornecidas e o vínculo de cada figura.

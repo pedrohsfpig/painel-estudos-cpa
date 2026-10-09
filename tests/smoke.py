@@ -747,7 +747,7 @@ class PainelCPA(unittest.TestCase):
                              ["1º de janeiro", "15 de julho"])
             self.assertEqual(self.page.locator(".material-body .number-card").count(), 0)
             composition = self.page.locator(".collegiate-facts .collegiate-chart")
-            self.assertEqual(composition.locator(".collegiate-leader span").inner_text(), "Presidente")
+            self.assertEqual(composition.locator(".collegiate-leader span").inner_text(), "Presidente da CVM")
             self.assertEqual(composition.locator(".collegiate-peer").count(), 4)
             self.assertIn("Renovação do colegiado", self.page.locator(".collegiate-fact").inner_text())
             self.assertIn("1/5 por ano", self.page.locator(".collegiate-fact").inner_text())
@@ -756,13 +756,14 @@ class PainelCPA(unittest.TestCase):
             self.assertLess(leader["y"] + leader["height"], peer["y"])
             for lesson, count in [(3, 8), (4, 4)]:
                 self.page.evaluate("lesson=>{chooseMaterial('a',lesson);chooseMaterial('c','mapa')}", lesson)
-                self.assertEqual(self.page.locator(".collegiate-leader span").inner_text(), "Presidente")
+                self.assertEqual(self.page.locator(".collegiate-leader span").inner_text(),
+                                 "Presidente do BACEN" if lesson == 3 else "Presidente da CVM")
                 self.assertEqual(self.page.locator(".collegiate-peer").count(), count)
             self.page.evaluate("chooseMaterial('a',5);chooseMaterial('c','mapa')")
             self.assertEqual(self.page.locator(".collegiate-chart").count(), 4)
             self.assertEqual(self.page.locator(".collegiate-leader span").all_text_contents(),
-                             ["Representante do Ministério da Fazenda", "Superintendente",
-                              "Ministro da Previdência Social", "Superintendente"])
+                             ["Representante do Ministério da Fazenda — presidente do CNSP", "Superintendente da Susep",
+                              "Ministro da Previdência Social — presidente do CNPC", "Superintendente da Previc"])
 
             self.page.evaluate("chooseMaterial('a',6);chooseMaterial('c','fc');fi=8;go()")
             self.assertIn("destinação do dinheiro", self.page.locator(".flashcard-text").inner_text())
@@ -795,8 +796,24 @@ class PainelCPA(unittest.TestCase):
                 charts = self.page.locator(".mind-map .collegiate-chart")
                 self.assertEqual(charts.evaluate_all("nodes=>nodes.map(e=>e.dataset.organ)"),
                                  expected_orgs.get(lesson, []))
-                self.assertEqual(charts.locator(".collegiate-affiliation").all_text_contents(),
-                                 [f"({organ})" for organ in expected_orgs.get(lesson, [])])
+                leader_labels = {
+                    "CMN": "Ministro da Fazenda — presidente do CMN",
+                    "Comoc": "Presidente do Banco Central — coordenador da Comoc",
+                    "BACEN": "Presidente do BACEN", "CVM": "Presidente da CVM",
+                    "CNSP": "Representante do Ministério da Fazenda — presidente do CNSP",
+                    "Susep": "Superintendente da Susep",
+                    "CNPC": "Ministro da Previdência Social — presidente do CNPC",
+                    "Previc": "Superintendente da Previc"}
+                self.assertEqual(charts.locator(".collegiate-leader span").all_text_contents(),
+                                 [leader_labels[organ] for organ in expected_orgs.get(lesson, [])])
+                for chart in charts.all():
+                    self.assertFalse(any(text in ["Diretor", "Presidente", "Superintendente"]
+                                         for text in chart.locator(".collegiate-peer span").all_text_contents()))
+                for organ, article in [("BACEN", "do"), ("CVM", "da"), ("Susep", "da"), ("Previc", "da")]:
+                    chart = self.page.locator(f'.collegiate-chart[data-organ="{organ}"]')
+                    if chart.count():
+                        self.assertTrue(all(text == f"Diretor {article} {organ}"
+                                            for text in chart.locator(".collegiate-peer span").all_text_contents()))
                 if lesson in [2, 3, 4]:
                     self.assertEqual(self.page.locator(".mind-row").first.locator("h3>span").all_text_contents(),
                                      ["Natureza", "Composição" if lesson == 2 else "Diretoria"])
@@ -815,9 +832,12 @@ class PainelCPA(unittest.TestCase):
                               "Competências", "Autorizações", "Macetes"])
             for lesson, organ in [(3, "BACEN"), (4, "CVM")]:
                 self.page.evaluate("lesson=>{mt={a:lesson,c:'tl'};go()}", lesson)
-                self.assertEqual(self.page.locator(".collegiate-affiliation").all_text_contents(), [f"({organ})"])
+                self.assertEqual(self.page.locator(".collegiate-leader span").inner_text(),
+                                 "Presidente do BACEN" if organ == "BACEN" else "Presidente da CVM")
+                self.assertEqual(set(self.page.locator(".collegiate-peer span").all_text_contents()),
+                                 {"Diretor do BACEN" if organ == "BACEN" else "Diretor da CVM"})
             self.page.evaluate("mt={a:2,c:'diag'};go()")
-            self.assertEqual(self.page.locator(".collegiate-affiliation").all_text_contents(), ["(CMN)"])
+            self.assertEqual(self.page.locator(".collegiate-affiliation").all_text_contents(), ["Presidente do CMN"])
 
 
 if __name__ == "__main__":
