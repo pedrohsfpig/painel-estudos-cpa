@@ -62,6 +62,12 @@ local permanece porque a origem do site não muda.
 - Estudo de hoje, cronômetro, indicadores e evolução diária.
 - Trilha de aulas, quadro do SFN, mapas mentais, diagramas, tabelas,
   linhas do tempo e flashcards.
+- Sumário lateral nas aulas, com atalhos que abrem e focam números, resumo,
+  dicas e pegadinhas; ícones pequenos identificam as seções.
+- Cabeçalho das questões com cronômetro e barra de respostas concluídas nos
+  três modos. Nos simulados, o avanço automático continua sem feedback imediato.
+- Feedback com destaque para a resposta correta e a alternativa escolhida,
+  mantendo as quatro explicações completas e a ordem das opções apresentada.
 
 ## Organização da trilha
 
@@ -145,6 +151,8 @@ A integração com a conta do Claude não faz parte desses testes.
 Também verificamos a diferença entre tentativas, cobertura única e erros
 pendentes, a aplicação dos filtros e o menu fixo nos dois temas, em larguras
 de 1024, 1280, 1440 e 1920 pixels.
+Os atalhos da aula também são exercitados por teclado, sem alterar uma sessão
+de questões em andamento. A barra de progresso é conferida nos três modos.
 
 ## Feedback e novas questões
 

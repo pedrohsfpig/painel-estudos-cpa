@@ -84,6 +84,13 @@ textos secundários discretos; padronize bordas e ícones sem sugerir que cartõ
 estáticos sejam clicáveis. Reações ao mouse devem ser suaves e respeitar a
 preferência por movimento reduzido. Ao renomear uma aula, mantenha consistência
 entre `AL.t`, `AU` e o título do mapa em `MAT`, preservando IDs e conteúdos.
+O sumário da aula abre e foca a seção escolhida sem renderizar novamente o app,
+alterar o histórico ou reiniciar sessões. Preserve ícones e cores das seções.
+A barra da sessão conta respostas concluídas: `qz.i` mais a resposta atual,
+quando existente; não marque a questão apenas exibida como já respondida. O
+cronômetro continua usando `qz.t0`. Destaques de feedback devem manter a ordem
+e o índice original das alternativas e as quatro explicações integralmente
+visíveis após responder, sem feedback imediato nos simulados.
 
 ## Alternância global de tema
 

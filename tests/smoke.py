@@ -178,7 +178,7 @@ class PainelCPA(unittest.TestCase):
         self.assertEqual(self.page.locator(".aj").count(), 0)
         self.assertEqual(self.page.locator(".feedback").count(), 0)
         self.answer(correct=False)
-        self.assertIn("questão 2 de 5", self.page.locator(".tb2").inner_text())
+        self.assertEqual("Questão 2 de 5", self.page.locator(".quiz-position").inner_text())
         self.assertEqual(self.page.locator("button.o.ok").count(), 0)
         self.assertEqual(self.page.locator(".feedback").count(), 0)
         for _ in range(4):
@@ -549,6 +549,65 @@ class PainelCPA(unittest.TestCase):
                 self.assertEqual(self.page.locator(".sidebar").bounding_box()["y"], 0)
                 self.assertTrue(self.page.locator("#theme-toggle").is_visible())
                 self.page.evaluate("window.scrollTo(0,0)")
+
+
+    def test_23_lesson_shortcuts_open_sections_without_changing_study_state(self):
+        self.page.emulate_media(reduced_motion="reduce")
+        self.configure()
+        state = self.page.evaluate("({ids:qz.ids,index:qz.i,start:qz.t0,history:H})")
+        self.click("Trilha")
+        sections = [("Números","lesson-numbers"),("Resumo","lesson-summary"),
+                    ("Dicas e macetes","lesson-tips"),("Pegadinhas","lesson-traps")]
+        for lesson in range(1,7):
+            self.page.locator("button.tb").nth(lesson-1).click()
+            shortcuts = self.page.get_by_role("navigation", name="Atalhos desta aula")
+            self.assertEqual(shortcuts.get_by_role("link").count(), 4)
+            self.assertEqual(self.page.locator(".lesson-section > summary .ui-icon").count(), 3)
+            for label, section_id in sections:
+                shortcut = shortcuts.get_by_role("link", name=label, exact=True)
+                shortcut.focus()
+                shortcut.press("Enter")
+                section = self.page.locator("#" + section_id)
+                if section_id != "lesson-numbers":
+                    self.assertTrue(section.evaluate("e => e.open"))
+                self.assertTrue(section.evaluate("e => e.contains(document.activeElement)"))
+                # A seção pode já caber na tela: o atalho precisa tornar seu título visível.
+                heading = section.locator("summary, h3").first.bounding_box()
+                self.assertGreaterEqual(heading["y"], 0)
+                self.assertLessEqual(heading["y"] + heading["height"], self.page.viewport_size["height"])
+            self.assertEqual(self.page.evaluate("location.hash"), "")
+            self.assertEqual(self.page.evaluate("({ids:qz.ids,index:qz.i,start:qz.t0,history:H})"), state)
+        self.toggle_theme()
+        self.assertEqual(self.page.evaluate("({ids:qz.ids,index:qz.i,start:qz.t0,history:H})"), state)
+        self.click("Praticar")
+        self.assertEqual(self.page.get_by_role("progressbar", name="Andamento da sessão").get_attribute("aria-valuenow"), "0")
+
+    def test_24_session_progress_matches_answers_in_all_modes(self):
+        for mode, title in [("e","Estudo"),("h","Hardcore"),("s","Simulado")]:
+            self.page.evaluate("mode => begin(Q.map((q,i)=>i+1).filter(id => mode==='h' ? Q[id-1][2]===3 : Q[id-1][2]<3).slice(0,3),mode)", mode)
+            started = self.page.evaluate("qz.t0")
+            for i in range(3):
+                progress = self.page.get_by_role("progressbar", name="Andamento da sessão")
+                self.assertEqual(progress.get_attribute("aria-valuenow"), str(i))
+                self.assertEqual(progress.get_attribute("aria-valuemax"), "3")
+                self.assertEqual(self.page.locator(".quiz-position").inner_text(), f"Questão {i+1} de 3")
+                self.assertEqual(self.page.get_by_role("timer", name="Tempo da sessão").count(), 1)
+                self.answer(correct=i != 1)
+                self.assertEqual(self.page.evaluate("qz.t0"), started)
+                if mode == "s":
+                    self.assertEqual(self.page.locator(".feedback, .answer-result").count(), 0)
+                    if i < 2:
+                        self.assertEqual(progress.get_attribute("aria-valuenow"), str(i+1))
+                else:
+                    self.assertEqual(progress.get_attribute("aria-valuenow"), str(i+1))
+                    self.assertEqual(progress.get_attribute("aria-valuetext"), f"{i+1} de 3 respondidas")
+                    self.assertEqual(self.page.locator(".fb-option").count(), 4)
+                    self.assertEqual(self.page.locator(".fb-heading .ui-icon").count(), 1 if i != 1 else 2)
+                    self.assertEqual(self.page.locator(".result-correct" if i != 1 else ".result-incorrect").count(), 1)
+                    self.click("Próxima" if i < 2 else "Ver resultado")
+            self.assertIn("Resultado do " + title.lower(), self.page.locator("#app").inner_text())
+            self.assertIn("2 de 3 (67%)", self.page.locator("#app").inner_text())
+            self.assertEqual(self.page.get_by_role("progressbar", name="Andamento da sessão").count(), 0)
 
 
 if __name__ == "__main__":
