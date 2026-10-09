@@ -47,9 +47,12 @@ local permanece porque a origem do site não muda.
 - Menu lateral fixo no computador, com ícones e indicação da tela atual.
 - Painel com estatísticas reais, andamento por aula, prioridades de revisão,
   evolução dos acertos e acesso à última aula praticada.
+- Painel em duas colunas independentes: trilha e evolução na principal;
+  revisão e última aula empilhadas na lateral, com textos e controles legíveis.
 - Botão de lâmpada fixo para alternar claro/escuro em qualquer tela, com escolha
   salva neste navegador. Sem escolha salva, acompanha o tema do dispositivo.
 - 600 questões: 100 em cada uma das 6 aulas.
+- Aula 6 identificada como **Operadores Monetários**, mantendo os conteúdos e IDs.
 - 120 fáceis, 240 médias, 120 difíceis e 120 Hardcore.
 - Estudo com dicas, eliminação de alternativas e correção imediata.
 - Feedback da resposta correta e das três alternativas incorretas após responder,

@@ -78,6 +78,12 @@ evolução e desempenho detalhado; trilha e pendências usam o histórico comple
 O acesso à última aula se baseia no histórico e abre seus materiais, sem alegar
 restauração de uma sessão. Trate histórico vazio e novas aulas sem números fixos.
 Confira os dois temas e os fluxos existentes antes de publicar mudanças no painel.
+Mantenha as colunas independentes: trilha e evolução na principal, prioridades
+e última aula empilhadas na lateral. Priorize números e títulos legíveis, com
+textos secundários discretos; padronize bordas e ícones sem sugerir que cartões
+estáticos sejam clicáveis. Reações ao mouse devem ser suaves e respeitar a
+preferência por movimento reduzido. Ao renomear uma aula, mantenha consistência
+entre `AL.t`, `AU` e o título do mapa em `MAT`, preservando IDs e conteúdos.
 
 ## Alternância global de tema
 
