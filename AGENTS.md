@@ -71,22 +71,27 @@ Não confunda envio ao GitHub com confirmação de que o Pages já publicou.
 O usuário exige revisão individual de cada item das três seções de `AL`, inclusive
 nas aulas futuras. Siga a finalidade pedagógica, sem preencher seções por quota:
 
-- `r` / Resumo da aula: conceitos, funções, regras, condições e exemplos essenciais
-  para compreender a aula. Explique os termos; não deixe um conteúdo fundamental
-  disponível apenas numa dica, numa pegadinha ou no feedback de uma questão.
-- `d` / Dicas e macetes: um recurso concreto de estudo por item — associação,
-  mnemônico, sequência, fórmula com exemplo ou roteiro de resolução. Uma definição
-  ou regra isolada pertence ao resumo. Indique limites de macetes e simplificações.
-- `p` / Pegadinhas: cada item deve começar com `Armadilha: ` e conter ` Correção: `.
-  Mostre a afirmação ou raciocínio que induz ao erro, a resposta correta e por que
-  há erro, com exemplo quando útil. Não rotule uma definição isolada como pegadinha.
-  Baseie as confusões no conteúdo ou nos distratores; não prometa que cairão na prova.
+- Priorize **efetividade e consulta rápida**. O usuário quer bater o olho e lembrar
+  conceitos, não reler a aula. Use frases diretas e destaque o essencial. Não há
+  quota de itens ou palavras; não aumente o texto só para explicar tudo.
+- `r` / Resumo da aula: conceitos, funções e regras essenciais, na forma mais
+  curta que preserve o sentido. Um fato isolado sobre composição, competência,
+  início de mandato ou fluxo de exoneração pertence aqui, não em pegadinhas.
+- `d` / Dicas e macetes: associações mentais, mnemônicos, sequências, fórmulas e
+  orientações úteis à aprendizagem. Seja direto; não imponha passos ou exemplos
+  quando a associação por si já cumpre o objetivo.
+- `p` / Pegadinhas: ambiguidades, conceitos confundíveis, ressalvas ou pontos de
+  atenção para não errar. Compare o que pode ser trocado ou marque a condição que
+  muda a resposta. Uma definição isolada deve voltar ao resumo.
+- **Não use os prefixos “Armadilha” ou “Correção”. Não imponha feedback.** Só
+  explique o motivo ou use um exemplo se for necessário à compreensão. Não
+  prometa que uma distinção aparecerá na prova.
 - Um mesmo tema pode aparecer nas três seções se cumprir funções diferentes:
-  conceito no resumo, método na dica, erro explicado na pegadinha. Não copie o
+  conceito no resumo, associação na dica, ambiguidade na pegadinha. Não copie o
   mesmo texto entre seções nem repita avisos com redações equivalentes.
 - Antes de incluir uma aula, confira a transcrição e os slides fornecidos, os
   tópicos de todas as questões e o material de apoio. Faça uma lista de cobertura:
-  cada objetivo/conceito útil precisa estar explicado no resumo; números, exceções
+  conceitos importantes precisam estar acessíveis no resumo; números, exceções
   e competências precisam ser consistentes com dicas, pegadinhas e feedbacks.
 - Transcrições podem ter erros de reconhecimento. Confira nomes, números, negações
   e exceções com os slides ou outra fonte fornecida; não invente lacunas nem trate
@@ -94,11 +99,25 @@ nas aulas futuras. Siga a finalidade pedagógica, sem preencher seções por quo
   uma divergência que afete a resposta, resolva ou sinalize antes de publicar.
 - Preserve a aula à qual cada material pertence. Não incorpore uma transcrição
   enviada para uma aula futura durante uma revisão das aulas existentes.
-- Ao corrigir uma contradição, procure também sua ocorrência em mapas, tabelas,
-  flashcards, dicas e justificativas. Não deixe uma versão antiga ensinando o oposto.
+- Respeite o escopo da solicitação: na revisão restrita destes três tópicos,
+  altere apenas `AL.r/d/p` e a apresentação específica dessas seções. **Não altere
+  questões, feedbacks, números para decorar, mapas, tabelas ou outras áreas.**
+  Se identificar divergência fora desse escopo, informe sem modificar esses dados.
+- Use `**conceito**` para negrito em palavras-chave, responsáveis e números úteis.
+  Evite destacar parágrafos inteiros ou dar destaque a todas as palavras.
+- Cores semânticas, iguais em todas as aulas e seções, inclusive futuras:
+  `{{atencao|condição/exceção}}` → amarelo (`--md`);
+  `{{negacao|negação/proibição}}` → vermelho (`--hd`). Destaque comum permanece
+  na cor do texto. A borda identifica a seção: resumo azul, dicas amarelo,
+  pegadinhas vermelho. Não atribua uma cor diferente a um órgão ou número sem
+  motivo semântico; não use cores arbitrárias nem dependa só delas para ensinar.
+- A formatação passa por `lessonText`, que escapa o texto e interpreta apenas
+  esses marcadores. Não use HTML bruto nos itens de `AL`. Não altere estilos de
+  outras áreas para formatar os três tópicos.
 - Mantenha `AL` como JSON válido. Preserve ordem das aulas, vínculos com `Q` e IDs
-  existentes. `docs/revisao-trilha.md` registra a referência desta revisão e
-  `docs/revisao-trilha-itens.json` rastreia os itens anteriores até os atuais.
+  existentes. Os relatórios em `docs/revisao-trilha*` são registros históricos
+  da primeira reorganização; este padrão incorpora a correção posterior do
+  usuário sobre concisão, remanejo e destaque visual.
 
 Antes de publicar mudanças na trilha, execute os quatro comandos de validação
 acima. O teste de navegação abre e confere as três seções das seis aulas. Faça

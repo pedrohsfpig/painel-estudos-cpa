@@ -1,6 +1,7 @@
 """Testes dos fluxos do HTML importado, usando um navegador real."""
 
 import os
+import re
 from pathlib import Path
 import shutil
 from functools import partial
@@ -118,14 +119,26 @@ class PainelCPA(unittest.TestCase):
                     has=self.page.get_by_text(title, exact=True)
                 )
                 accordion.locator("summary").click()
-                self.assertEqual(accordion.locator(".pt").all_text_contents(), content[section])
-                self.assertTrue(accordion.locator(".acb > p").is_visible())
+                expected = [re.sub(r"\{\{(?:atencao|negacao)\|([^{}]+)\}\}", r"\1", item.replace("**", "")) for item in content[section]]
+                self.assertEqual(accordion.locator(".pt").all_text_contents(), expected)
+                self.assertEqual(accordion.locator(".acb > p").count(), 0)
+                self.assertGreater(accordion.locator(".pt strong").count(), 0)
+                for selector, variable in [(".lesson-attention", "--md"), (".lesson-negative", "--hd")]:
+                    colors = accordion.locator(selector).evaluate_all("""(elements, variable) => elements.map(element => {
+                        const sample = document.createElement('span');
+                        sample.style.color = `var(${variable})`;
+                        element.append(sample);
+                        const expected = getComputedStyle(sample).color;
+                        sample.remove();
+                        return getComputedStyle(element).color === expected;
+                    })""", variable)
+                    self.assertTrue(all(colors))
                 self.assertGreater(len(content[section]), 0)
                 self.assertEqual(len(content[section]), len(set(content[section])))
                 if section == "p":
                     for item in content[section]:
-                        self.assertTrue(item.startswith("Armadilha: "))
-                        self.assertIn(" Correção: ", item)
+                        self.assertNotIn("Armadilha:", item)
+                        self.assertNotIn("Correção:", item)
                 for other in (key for key in ["r", "d", "p"] if key != section):
                     self.assertFalse(set(content[section]) & set(content[other]))
             if lesson == 6:

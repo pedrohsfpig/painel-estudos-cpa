@@ -62,6 +62,7 @@ table.tx{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5}.tx 
 .fcd{min-height:160px;display:flex;flex-direction:column;justify-content:center;gap:8px;text-align:center;font-size:20px;padding:24px;background:var(--cd);border:1px solid var(--bd);border-radius:14px;cursor:pointer;margin:12px 0}
 .hero{background:var(--cd);border:1px solid var(--bd);border-radius:16px;padding:20px 22px;margin-bottom:14px}.hero h2{font-size:26px;font-weight:500;margin:4px 0 8px}
 .sec{font-size:18px;font-weight:500;margin:26px 0 10px}.pt{background:var(--cd);border-left:4px solid var(--ac);border-radius:10px;padding:12px 16px;margin:0 0 10px;font-size:16px;line-height:1.6}
+.acc .lesson-attention{color:var(--md)}.acc .lesson-negative{color:var(--hd)}
 .qd{min-width:900px;display:grid;grid-template-columns:38px 2.4fr 1fr 1fr;gap:6px}.qw{overflow-x:auto}
 .qhd{padding:12px 14px;color:#fff;font-weight:500;border-radius:8px;text-align:center}
 .qv{writing-mode:vertical-rl;transform:rotate(180deg);color:#fff;font-weight:500;text-align:center;border-radius:0 8px 8px 0;padding:10px 0;display:flex;align-items:center;justify-content:center}
@@ -694,26 +695,28 @@ const AL=[
     "t": "Aula 1: Sistema Financeiro Nacional",
     "o": "O que é o SFN, quem são os agentes, como o dinheiro circula e quem é quem na estrutura do sistema.",
     "r": [
-      "SFN e agentes: o Sistema Financeiro Nacional reúne entidades que regulam, fiscalizam, intermedeiam ou facilitam a transferência de recursos. Superavitários têm recursos excedentes para aplicar; deficitários precisam captar recursos. A posição depende da operação: uma empresa pode aplicar seu caixa e também tomar um financiamento.",
-      "Intermediação financeira: a instituição capta de poupadores e empresta a tomadores. Usa informações e controles para gerir o risco de crédito; no exemplo do CDB, a obrigação de remunerar o investidor é do banco emissor, mesmo se um tomador atrasar seu empréstimo.",
-      "Vantagens das intermediárias: oferecem liquidez, analisam cadastros e históricos de crédito e são reguladas e supervisionadas. Isso ajuda a avaliar riscos e aumenta a confiança, sem eliminar a possibilidade de perdas.",
-      "Liquidez: facilidade e rapidez de converter um ativo em dinheiro sem perda significativa de valor. Ela combina tempo de conversão e preservação do valor; não é sinônimo de rentabilidade.",
-      "Spread bancário: taxa cobrada do tomador menos taxa paga na captação. É uma diferença de taxas, expressa em pontos percentuais, antes de descontar custos e perdas; não representa o lucro líquido. Mais risco de inadimplência tende a exigir maior spread.",
-      "Serviços e gestão de recursos: pagamentos, transferências, arrecadação de tributos, custódia de bens e títulos, cartões, cheques, seguros e administração de recursos de terceiros. Taxas e tarifas remuneram esses serviços; a diferença entre juros remunera a intermediação.",
-      "Mercados monetário, de crédito, de câmbio e de capitais: monetário gerencia liquidez e juros com operações de curtíssimo e curto prazo; crédito reúne empréstimos e financiamentos; câmbio negocia moedas estrangeiras; capitais permite captar e investir por ações e títulos corporativos, associado ao longo prazo na aula. Identifique também o instrumento e a finalidade, não apenas o prazo.",
-      "Seguros e previdência: o segmento de seguros privados abrange seguros, resseguros, capitalização e previdência complementar aberta. A previdência complementar fechada forma outro segmento, operado por fundos de pensão.",
-      "Estrutura do SFN: conselhos normativos definem políticas e diretrizes gerais, sem função executiva; supervisoras verificam o cumprimento das regras; operadores intermedeiam recursos ou prestam serviços. Supervisores também podem editar normas específicas de sua competência.",
-      "Quadro dos segmentos: CMN é normativo de moeda, crédito, capitais e câmbio, com BCB e CVM como supervisores. CNSP normatiza seguros privados e Susep supervisiona; CNPC normatiza previdência fechada e Previc supervisiona. Bancos, cooperativas, corretoras, distribuidoras, bolsas e administradoras de consórcios são operadores do segmento financeiro; seguradoras, resseguradoras, entidades abertas e sociedades de capitalização, de seguros; fundos de pensão, da previdência fechada.",
-      "Regulação e juros: heterorregulação é exercida por órgãos externos às instituições reguladas; autorregulação, pela própria indústria. No conteúdo da aula sobre a Lei da Usura (Decreto 22.626/1933), o teto de 12% ao ano não se aplica às operações das instituições financeiras do SFN; essa exceção não significa ausência de regras."
+      "**SFN:** conecta poupadores e tomadores; reúne quem regula, fiscaliza e opera o sistema financeiro.",
+      "**Superavitário:** tem sobra e aplica. **Deficitário:** precisa de recursos e capta.",
+      "**Intermediação:** capta do poupador e empresta ao tomador. Instituições oferecem liquidez, analisam informações e gerenciam riscos.",
+      "**Liquidez:** rapidez e facilidade para transformar um ativo em dinheiro, sem perda significativa de valor.",
+      "**Spread:** taxa do empréstimo − taxa de captação. Custos e perdas ainda precisam ser descontados para chegar ao resultado líquido.",
+      "**Serviços:** pagamentos, transferências, custódia, meios de pagamento, seguros e gestão de recursos. Remuneração por **taxas e tarifas**.",
+      "**Monetário:** liquidez e juros, no curtíssimo/curto prazo. **Crédito:** empréstimos e financiamentos.",
+      "**Câmbio:** moedas estrangeiras. **Capitais:** ações e títulos corporativos; captação e investimento, associados ao longo prazo na aula.",
+      "**Seguros privados:** seguros, resseguros, capitalização e previdência aberta. **Previdência fechada:** fundos de pensão.",
+      "**Estrutura:** normativos definem diretrizes; supervisores fiscalizam; operadores intermedeiam e prestam serviços.",
+      "**Financeiro:** CMN → BCB/CVM. **Seguros:** CNSP → Susep. **Previdência fechada:** CNPC → Previc.",
+      "**Operadores:** bancos, cooperativas, corretoras e bolsas no financeiro; seguradoras e entidades abertas em seguros; fundos de pensão na fechada.",
+      "**Heterorregulação:** órgãos externos à indústria. **Autorregulação:** a própria indústria cria e aplica regras.",
+      "**Lei da Usura:** teto de 12% a.a. estudado na aula; instituições do SFN são {{atencao|exceção ao teto}}."
     ],
     "d": [
-      "Associação de palavras: SUPERavitário lembra sobra; DEFicitário lembra déficit. Antes de marcar, pergunte quem fornece e quem recebe recursos naquela operação.",
-      "Desenhe o fluxo: poupador → instituição → tomador. Depois anote a receita: diferença entre juros = intermediação; taxa de administração, custódia ou pagamento = serviço.",
-      "Roteiro de cálculo: spread = taxa de empréstimo − taxa de captação. Se a questão pedir a margem após despesas, desconte também custos e perdas nas mesmas bases do enunciado. Exemplo simplificado: 20 − 8 − 3 − 2 = 7 p.p. Para achar a taxa necessária, some captação + custos + perdas + margem desejada.",
-      "Identifique o mercado pelo objeto: moeda estrangeira → câmbio; empréstimo → crédito; ação ou debênture → capitais; liquidez e juros básicos → monetário. Separe cada operação quando o cenário tiver mais de uma.",
-      "Memorize a cadeia regra → fiscalização → atendimento: conselho normativo → supervisor → operador. CMN, CNSP e CNPC começam com C de Conselho; o macete ajuda a lembrar o nível, sem negar que supervisores também editam normas.",
-      "Treine os pares em voz alta: seguros = CNSP/Susep; fechada = CNPC/Previc; financeiro = CMN com BCB/CVM. Depois cubra o quadro e associe um operador a cada segmento.",
-      "Autoavaliação: use a recomendação do professor de mais de 80% nos simulados como meta de treino. Revise os temas dos erros antes de repetir; esse percentual é uma orientação de estudo, não a nota oficial de aprovação."
+      "**SUPER**avitário → sobra. **DEF**icitário → déficit. Identifique o papel do agente **naquela operação**.",
+      "**Regra → fiscalização → atendimento:** normativo → supervisor → operador. Os três conselhos começam com **C**: CMN, CNSP e CNPC.",
+      "**Objeto da operação:** euros → câmbio; empréstimo → crédito; debênture → capitais; liquidez da economia → monetário.",
+      "**Conta em etapas:** spread primeiro; depois custos e perdas. Exemplo simplificado: **20 − 8 − 3 − 2 = 7 p.p.**",
+      "Para achar a **taxa necessária**, some: captação + custos + perdas + margem desejada.",
+      "**Meta de treino:** mais de 80% nos simulados, conforme o professor. Use os erros para escolher o que revisar."
     ],
     "n": [
       [
@@ -746,42 +749,40 @@ const AL=[
       ]
     ],
     "p": [
-      "Armadilha: “poupador” significa apenas quem tem caderneta de poupança. Correção: é qualquer agente superavitário naquela operação; aplicar em CDB também fornece recursos ao sistema.",
-      "Armadilha: todo recurso recebido pelo banco é lucro. Correção: spread é diferença entre taxas, antes dos custos e perdas; tarifas são receitas de serviços. Na conta simplificada, 18% − 10% = 8 p.p., não lucro líquido garantido de 8%.",
-      "Armadilha: a intermediação elimina o risco de crédito ou transfere ao poupador a dívida do tomador. Correção: o banco emissor continua obrigado perante o investidor no exemplo do CDB; analisar e gerir risco não é eliminá-lo.",
-      "Armadilha: mais inadimplência aumenta automaticamente o lucro. Correção: o spread pode subir para compensar perdas esperadas; o resultado depende dos custos e das perdas, não só da diferença de juros.",
-      "Armadilha: qualquer operação de curto prazo pertence ao mercado monetário. Correção: um empréstimo de 90 dias é crédito; compra de euros é câmbio. O objeto e a finalidade distinguem mercados com prazos semelhantes.",
-      "Armadilha: previdência aberta e fechada têm os mesmos supervisores. Correção: aberta fica com CNSP/Susep; fundos de pensão, com CNPC/Previc. O vínculo de acesso ao plano muda o segmento.",
-      "Armadilha: CMN, CNSP e CNPC fiscalizam diretamente os operadores. Correção: são conselhos normativos; a fiscalização cabe às supervisoras. Ter poder de editar regras não torna a CVM um desses conselhos.",
-      "Armadilha: autorregulação é fiscalização por órgão externo à indústria. Correção: isso descreve heterorregulação; na autorregulação, a própria indústria cria e aplica regras. A existência de autorregulação não elimina a supervisão pública.",
-      "Armadilha: um banco jamais pode cobrar mais de 12% ao ano por causa da Lei da Usura. Correção: a exceção das instituições do SFN afasta esse teto no conteúdo da aula; não autoriza ignorar as demais regras da operação."
+      "**Poupador ≠ caderneta de poupança:** quem aplica em CDB também é superavitário.",
+      "**Spread ≠ lucro líquido.** E **18% − 10% = 8 pontos percentuais**, não uma variação relativa de 8%.",
+      "**Risco gerenciado ≠ risco eliminado.** No CDB, o banco emissor deve ao investidor, mesmo se o tomador atrasar.",
+      "**Prazo curto ≠ mercado monetário:** um empréstimo de 90 dias continua sendo crédito. Confira o instrumento.",
+      "**Previdência aberta ≠ fechada:** aberta → CNSP/Susep; fundos de pensão → CNPC/Previc.",
+      "**Fiscalizar e editar normas podem coexistir.** A CVM é supervisora e tem poder normativo; {{negacao|não}} é um conselho como o CMN."
     ]
   },
   {
     "t": "Aula 2: Conselho Monetário Nacional (CMN)",
     "o": "O órgão que cria as regras do sistema financeiro e define a meta de inflação.",
     "r": [
-      "Natureza do CMN: Conselho Monetário Nacional, órgão deliberativo máximo e normativo superior do SFN. Define diretrizes e regras gerais; não concede crédito ao público nem executa a fiscalização diária das instituições.",
-      "Composição e presidência: Ministro da Fazenda (presidente), Ministro do Planejamento e Orçamento e Presidente do Banco Central. São três membros; o Presidente do BC participa, mas não preside o CMN.",
-      "Objetivos: orientar a aplicação de recursos para o desenvolvimento harmônico da economia; propiciar o aperfeiçoamento das instituições e instrumentos; zelar pela liquidez e solvência; coordenar as políticas monetária, creditícia, orçamentária, fiscal e da dívida pública.",
-      "Crédito, juros e instituições: disciplina o crédito, pode limitar juros, descontos e comissões, fixa limites de concentração por cliente ou grupo e expede normas gerais de contabilidade e estatística. Regular a constituição, o funcionamento e a fiscalização significa definir as regras dessas atividades, não executá-las diretamente.",
-      "Câmbio: fixa diretrizes da política cambial. Na competência excepcional apresentada na aula, pode outorgar ao BC o monopólio das operações de câmbio diante de grave desequilíbrio, ou sua iminência, no balanço de pagamentos; isso não é a rotina do mercado.",
-      "Mercado e orçamento: disciplina atividades de bolsas e corretores nas competências estudadas, aprova os orçamentos monetários preparados pelo BC e colabora com o Senado na instrução de empréstimos externos de estados, Distrito Federal e municípios.",
-      "Regime de metas: adotado desde 1999. O CMN define a meta de inflação e o intervalo de tolerância; o Banco Central escolhe e executa as medidas para alcançá-la. Meta pública e prévia, autonomia operacional, comunicação transparente e prestação de contas sustentam o regime. O Copom, no BC, define a meta da Selic.",
-      "Meta contínua: a inflação acumulada em 12 meses é comparada à meta e ao intervalo de tolerância a cada mês, em janela móvel. Não se espera apenas o encerramento do ano civil. Mudanças na meta ou na tolerância exigem anúncio com antecedência mínima de 36 meses.",
-      "Reuniões e decisões: ordinárias mensais; extraordinárias por convocação do presidente. As decisões são por maioria simples dos votos. Em urgência e relevante interesse, o presidente pode decidir ad referendum e submeter a decisão aos demais na primeira reunião seguinte.",
-      "Normas e divulgação: matérias aprovadas são divulgadas como Resoluções CMN no Diário Oficial da União. A função normativa do conselho é distinta da manifestação técnica prévia da Comoc e das tarefas administrativas da Secretaria-Executiva.",
-      "Comoc: Comissão Técnica da Moeda e do Crédito, que assessora o CMN e se manifesta antes das deliberações. Coordenada pelo Presidente do BC, reúne-se ordinariamente uma vez por mês, em caráter reservado; as extraordinárias podem ser convocadas pelo coordenador ou pela maioria de seus membros.",
-      "Composição da Comoc apresentada na aula: Presidente do BC, Presidente da CVM, secretários-executivos da Fazenda e do Planejamento e Orçamento, Secretário do Tesouro Nacional, secretários de Reformas Econômicas e de Política Econômica e quatro diretores do BC. Total: 11 membros, dos quais cinco vêm do BC.",
-      "Secretaria-Executiva: exercida pelo Banco Central tanto para o CMN quanto para a Comoc. Organiza e encaminha pautas e propostas para a análise técnica, realiza os procedimentos de convocação, elabora atas e colhe assinaturas após sua aprovação."
+      "**CMN:** órgão deliberativo máximo e normativo superior do SFN; funções normativas, {{negacao|não executivas}}.",
+      "**Composição — 3 membros:** Fazenda (**preside**), Planejamento e Orçamento e Presidente do Banco Central.",
+      "**Objetivos:** orientar recursos, propiciar aperfeiçoamento, zelar pela liquidez e solvência e coordenar políticas econômicas.",
+      "**Políticas coordenadas:** monetária, creditícia, orçamentária, fiscal e da dívida pública.",
+      "**Crédito e instituições:** disciplina crédito, limita juros/comissões e concentração por cliente; define normas gerais de funcionamento, contabilidade e fiscalização.",
+      "**Câmbio:** fixa diretrizes. Em {{atencao|grave desequilíbrio do balanço de pagamentos}}, pode outorgar monopólio cambial ao BC, na competência estudada.",
+      "**Mercado e orçamento:** disciplina bolsas/corretores; aprova orçamentos monetários; colabora com o Senado em empréstimos externos de entes públicos.",
+      "**Inflação:** CMN define meta e tolerância; **BC** adota medidas para alcançá-las. Regime de metas desde **1999**.",
+      "**Meta contínua:** inflação dos últimos **12 meses**, comparada à meta a cada mês. Mudança de meta/tolerância: {{atencao|antecedência mínima de 36 meses}}.",
+      "**Regime de metas:** meta pública e prévia, autonomia do BC, comunicação transparente e prestação de contas.",
+      "**Reuniões:** ordinárias mensais; extraordinárias pelo presidente. Decisões por **maioria simples**; normas em **Resoluções CMN**, no DOU.",
+      "**Ad referendum:** decisão urgente do presidente, submetida aos demais na **primeira reunião seguinte**.",
+      "**Comoc:** assessoria técnica prévia ao CMN; coordenada pelo Presidente do BC. Reuniões **mensais e reservadas**; extraordinárias pelo coordenador ou maioria.",
+      "**Comoc — 11 membros:** Presidente do BC + 4 diretores; Presidente da CVM; secretários-executivos da Fazenda/Planejamento; secretários do Tesouro, Reformas Econômicas e Política Econômica.",
+      "**Secretaria-Executiva:** BC, para CMN e Comoc. Cuida de pauta, encaminhamento de propostas, convocação, atas e assinaturas."
     ],
     "d": [
-      "Mnemônico O-P-Z-C: “O Povo Zela pelo Crescimento” → Orientar, Propiciar, Zelar, Coordenar. Complete mentalmente: zelar pela liquidez e solvência, não executar operações diárias.",
-      "Três perguntas para achar o órgão: meta de inflação? CMN. Meta da Selic? Copom. Medidas para alcançar a inflação? BC. Leia qual objeto vem depois da palavra “meta”.",
-      "Fluxo do orçamento: BC prepara → Comoc se manifesta → CMN aprova. Use preparar → assessorar → deliberar para não trocar as etapas.",
-      "Associe o nome à função: Comoc = comissão técnica antes da decisão do CMN; Copom = comitê da política monetária e da Selic. A semelhança das siglas não muda a função.",
-      "Faça a conta da Comoc por blocos: 5 do BC (presidente + 4 diretores) + 1 da CVM + 5 secretários = 11. No CMN, lembre Fazenda + Planejamento + BC = 3.",
-      "Calendário: 12 meses é a janela medida; cada mês é a frequência da comparação; 36 meses é a antecedência da mudança. Para calcular a vigência mínima, some três anos ao mês do anúncio: março de 2026 → março de 2029."
+      "**O Povo Zela pelo Crescimento:** **O**rientar, **P**ropiciar, **Z**elar, **C**oordenar.",
+      "**Pergunta-chave:** cria a regra ou confere o cumprimento? CMN → regra; BC/CVM → execução e fiscalização, em suas competências.",
+      "**Orçamento monetário:** BC prepara → Comoc analisa → CMN aprova.",
+      "**Comoc em blocos:** 5 do BC + 1 da CVM + 5 secretários = **11**.",
+      "**Calendário da meta:** 12 meses medidos; comparação mensal; 36 meses de aviso. Março/2026 + 3 anos = **março/2029**."
     ],
     "n": [
       [
@@ -802,43 +803,44 @@ const AL=[
       ]
     ],
     "p": [
-      "Armadilha: “regular a fiscalização” significa fiscalizar pessoalmente cada banco. Correção: o CMN estabelece regras e limites; o BC verifica o cumprimento. A expressão descreve uma competência normativa.",
-      "Armadilha: a meta da Selic é do CMN porque ele define a meta de inflação. Correção: inflação é do CMN; Selic, do Copom. A taxa é um instrumento de política monetária, não a inflação medida.",
-      "Armadilha: os diretores do BC e os ministros integram os dois colegiados da mesma forma. Correção: CMN tem os dois ministros e o Presidente do BC; a Comoc inclui secretários-executivos e quatro diretores do BC. Ministro e secretário-executivo não são o mesmo cargo.",
-      "Armadilha: a Comoc decide no lugar do CMN ou exerce a secretaria. Correção: ela assessora previamente; o CMN delibera e o BC exerce a Secretaria-Executiva. Participar da análise não transfere o poder de decisão.",
-      "Armadilha: meta contínua é a inflação de um único mês ou apenas janeiro a dezembro. Correção: todo mês se olha a inflação acumulada nos últimos 12 meses; a janela se desloca.",
-      "Armadilha: o CMN pode mudar meta ou tolerância para vigorar imediatamente. Correção: a regra estudada exige ao menos 36 meses de antecedência. Não confunda esse prazo com os 12 meses da medição.",
-      "Armadilha: ad referendum dispensa o colegiado para sempre. Correção: a decisão urgente do presidente vai à apreciação dos demais na primeira reunião posterior; o ato inicial não elimina essa etapa.",
-      "Armadilha: o Presidente do BC preside o CMN e o Ministro da Fazenda coordena a Comoc. Correção: é o inverso: Fazenda preside o CMN, Presidente do BC coordena a Comoc. Com os três votando no CMN, dois votos favoráveis já formam maioria simples; unanimidade não é exigida."
+      "**Meta de inflação → CMN; meta da Selic → Copom.** As duas são metas, mas têm objetos e responsáveis diferentes.",
+      "**Comoc ≠ Copom:** Comoc assessora o CMN; Copom decide a meta da Selic no BC.",
+      "**Ministros no CMN; secretários-executivos na Comoc.** Os quatro diretores do BC integram a Comoc, {{negacao|não}} o CMN.",
+      "**Regular a fiscalização ≠ fiscalizar:** o CMN define regras de fiscalização; {{negacao|não}} faz a inspeção diária.",
+      "**12 meses ≠ inflação de um mês nem só janeiro–dezembro.** A meta contínua usa uma **janela móvel**.",
+      "**Ad referendum ≠ decisão sem revisão:** os demais membros ainda apreciam o ato do presidente."
     ]
   },
   {
     "t": "Aula 3: Banco Central do Brasil (BACEN)",
     "o": "A autarquia que executa a política monetária e supervisiona as instituições financeiras.",
     "r": [
-      "Natureza e sede: Banco Central do Brasil (BCB ou BACEN), autarquia de natureza especial, sem vinculação a ministério, tutela ou subordinação hierárquica. Possui autonomia técnica, operacional, administrativa e financeira. A aula indica sede em Brasília e nove regionais.",
-      "Objetivos: o fundamental é assegurar a estabilidade dos preços. Também zela pela estabilidade e eficiência do sistema financeiro, suaviza as flutuações da atividade econômica e fomenta o pleno emprego, sem substituir o objetivo fundamental.",
-      "Quatro funções: banco do governo (guarda das reservas oficiais); banco dos bancos (depósitos de instituições, compulsórios, redesconto e empréstimos); executor da política monetária (medidas para alcançar a meta e gerir a liquidez); supervisor do SFN (autorizações, normas específicas, fiscalização e intervenção).",
-      "Diretoria Colegiada: nove membros, sendo presidente e oito diretores. Entre as diretorias estudadas estão Política Monetária, Fiscalização e Relacionamento, Cidadania e Supervisão de Conduta. “Valores Mobiliários” não é uma diretoria do BC na aula.",
-      "Escolha e requisitos: brasileiros idôneos, com reputação ilibada e capacidade comprovada em assuntos econômico-financeiros. O Presidente da República indica; o Senado aprova; o Presidente da República nomeia. O Senado não faz a nomeação.",
-      "Mandatos: quatro anos, com uma recondução possível por decisão do Presidente da República. São escalonados, com dois diretores iniciando por ano; no primeiro ano presidencial, os dois primeiros começam em 1º de março, e os demais pares, em 1º de janeiro dos anos seguintes. O Presidente do BC inicia no começo do terceiro ano do mandato presidencial.",
-      "Exoneração: ocorre nas hipóteses legais, como pedido do dirigente, enfermidade incapacitante, condenação com impedimento de exercer cargo público ou desempenho insuficiente comprovado e recorrente. Neste último caso, o CMN propõe ao Presidente da República, o Senado aprova previamente por maioria absoluta e o Presidente exonera.",
-      "Política monetária e inflação: o CMN define meta e tolerância; o BC conduz a política para alcançá-las. Na meta contínua estudada, seis meses consecutivos fora do intervalo caracterizam descumprimento.",
-      "Prestação de contas: no descumprimento, divulga nota no Relatório de Política Monetária e carta aberta ao Ministro da Fazenda, com causas, medidas para retorno e prazo esperado. Nova comunicação é necessária se o retorno não ocorrer no prazo ou se medidas ou prazo precisarem ser atualizados.",
-      "Moeda e compulsórios: o BC emite moeda; a Casa da Moeda faz a produção física. O BC determina os percentuais e recebe recolhimentos compulsórios. Os tetos apresentados na aula são até 100% dos depósitos à vista e até 60% de outros títulos contábeis; são limites, não as alíquotas efetivamente aplicadas a toda operação.",
-      "Crédito, reservas e títulos: realiza redesconto e empréstimos às instituições, controla crédito e capitais estrangeiros, guarda reservas internacionais e compra e vende títulos públicos federais para gerir a liquidez. Desde 2002, não pode emitir títulos próprios de dívida pública; operar títulos existentes é uma competência diferente.",
-      "Supervisão e autorizações: fiscaliza e aplica penalidades. No conteúdo estudado, autoriza funcionamento, instalação ou transferência de sedes, transformação, fusão, incorporação, operação de câmbio, alterações estatutárias e transferência de controle. Agências de instituições estrangeiras envolvem análise técnica e reconhecimento do interesse do Governo.",
-      "Normas e câmbio: regulamenta o mercado de câmbio no âmbito da Lei 14.286/2021 e regula a execução da compensação de cheques e outros papéis. A aula cita Portarias, Resoluções BCB, Instruções Normativas e atos conjuntos. Também exerce a Secretaria-Executiva do CMN e da Comoc.",
-      "Divisão com CMN e CVM: o CMN estabelece diretrizes gerais; o BC executa políticas e supervisiona instituições em sua competência, com poder normativo próprio. Para vigilância dos valores mobiliários, a aula distingue a referência histórica ao BC da atuação especializada da CVM."
+      "**BACEN/BCB:** autarquia especial, {{negacao|sem vinculação ministerial}}. Autonomia técnica, operacional, administrativa e financeira; sede em **Brasília** e nove regionais, conforme a aula.",
+      "**Objetivo fundamental:** estabilidade dos preços. Adicionais: estabilidade/eficiência do SFN, suavizar flutuações econômicas e fomentar pleno emprego.",
+      "**Banco do governo:** guarda reservas internacionais. **Banco dos bancos:** recebe compulsórios/depósitos e oferece redesconto/empréstimos às instituições.",
+      "**Executor monetário:** conduz políticas para alcançar a meta. **Supervisor:** autoriza, regulamenta, fiscaliza e intervém nas instituições.",
+      "**Diretoria:** 9 membros = presidente + 8 diretores. Exemplos: Política Monetária, Fiscalização e Relacionamento/Cidadania/Supervisão de Conduta.",
+      "**Nomeação:** Presidente da República indica → Senado aprova → Presidente nomeia. Requisitos: idoneidade, reputação ilibada e capacidade econômico-financeira.",
+      "**Mandato:** 4 anos, com {{atencao|uma recondução possível}}. Dois diretores iniciam por ano; presidente do BC no **início do 3º ano presidencial**.",
+      "**Escalonamento:** primeiro par de diretores em **1º de março do 1º ano**; demais pares em **1º de janeiro** dos anos seguintes.",
+      "**Exoneração:** a pedido, enfermidade incapacitante, condenação com impedimento ou desempenho insuficiente comprovado e recorrente.",
+      "**Desempenho insuficiente:** CMN propõe → Senado aprova previamente, por **maioria absoluta** → Presidente da República exonera.",
+      "**Descumprimento da meta:** inflação fora da tolerância por {{atencao|6 meses consecutivos}}.",
+      "**Prestação de contas:** nota no Relatório de Política Monetária + carta ao **Ministro da Fazenda**: causas, medidas e prazo de retorno.",
+      "**Nova comunicação:** retorno fora do prazo ou necessidade de atualizar medidas/prazo.",
+      "**Moeda:** BC emite; Casa da Moeda produz. **Compulsórios:** BC determina e recebe; tetos da aula: **100% à vista / 60% outros títulos contábeis**.",
+      "**Competências:** redesconto, controle do crédito/capitais estrangeiros, reservas e negociação de títulos públicos. Desde 2002, {{negacao|não emite títulos próprios de dívida pública}}.",
+      "**Autorizações:** funcionamento, sedes, fusão/incorporação, câmbio, estatutos e controle acionário. Instituições estrangeiras: análise técnica e reconhecimento de interesse do Governo.",
+      "**Normas:** regulamenta câmbio (Lei 14.286/2021) e compensação; edita atos BCB. Exerce a Secretaria-Executiva do CMN/Comoc.",
+      "**Mercado de capitais:** vigilância especializada da **CVM**; a aula distingue essa atuação da referência histórica ao BC na lei."
     ],
     "d": [
-      "Associe a função ao destinatário: reservas do governo → banco do governo; compulsórios e redesconto de instituições → banco dos bancos; liquidez e juros → executor monetário; autorização e fiscalização → supervisor.",
-      "Escreva as duas sequências: ingresso = Presidente indica → Senado aprova → Presidente nomeia; desempenho insuficiente = CMN propõe → Senado aprova previamente → Presidente exonera. A mesma instituição não executa todas as etapas.",
-      "Memorize os números por pergunta: 1 + 8 = 9 membros; 4 + 4 = máximo com uma recondução; 2 diretores por ano; presidente no 3º ano. Para contar diretores já empossados, multiplique os anos por dois e só inclua o presidente se o enunciado pedir.",
-      "Carta de descumprimento em três palavras: causas → medidas → prazo. Conte seis meses seguidos fora da tolerância; uma volta ao intervalo interrompe a sequência.",
-      "Macete dos verbos: emitir, realizar, exercer e efetuar sugerem execução pelo BC. Use como pista inicial, depois confira objeto e competência; BC e CVM também regulamentam em seu âmbito, então “regular” não decide a resposta sozinho.",
-      "Para “zelar”, complete a frase: estabilidade e eficiência do sistema → BC; liquidez e solvência das instituições, na comparação desta aula → CMN. Em seguros, a Susep também zela por liquidez e solvência; o segmento é indispensável.",
-      "Separe físico de econômico: Casa da Moeda fabrica cédulas e moedas; BC faz a emissão. Ao ler “títulos”, pergunte também se o ato é emitir dívida própria ou comprar e vender títulos já emitidos."
+      "**Destinatário da operação:** reservas oficiais → governo; compulsórios/redesconto → bancos; autorizações → supervisor.",
+      "**9–4–2–3:** 9 membros; 4 anos; 2 diretores por ano; presidente começa no 3º ano presidencial.",
+      "**Emissão = econômico; produção = físico.** BC põe em circulação; Casa da Moeda fabrica.",
+      "**Carta em três palavras:** causas → medidas → prazo.",
+      "**Verbos de execução:** emitir, realizar, exercer, efetuar sugerem BC. Confira o objeto: o macete {{negacao|não é regra absoluta}}.",
+      "**“Zelar” + complemento:** estabilidade/eficiência → BC; liquidez/solvência, na comparação desta aula → CMN. O segmento também importa."
     ],
     "n": [
       [
@@ -867,44 +869,43 @@ const AL=[
       ]
     ],
     "p": [
-      "Armadilha: o BC é subordinado à Fazenda por ser uma autarquia pública. Correção: sua natureza especial prevê ausência de vinculação ministerial e autonomia; a condição da CVM é diferente, embora ela também seja autarquia.",
-      "Armadilha: pleno emprego substitui estabilidade dos preços como objetivo fundamental. Correção: estabilidade dos preços é o fundamental; os demais objetivos são adicionais.",
-      "Armadilha: guardar reservas internacionais é “banco dos bancos”, e receber compulsórios é “banco do governo”. Correção: estão trocados: reservas oficiais são do governo; compulsórios vêm das instituições financeiras.",
-      "Armadilha: o Senado nomeia os diretores ou o CMN os exonera. Correção: o Presidente da República pratica esses atos; o Senado aprova nas etapas previstas e o CMN propõe na hipótese de desempenho insuficiente.",
-      "Armadilha: eleição de um novo governo encerra automaticamente todos os mandatos do BC. Correção: os mandatos são fixos e escalonados; o Presidente do BC começa no terceiro ano presidencial. A estabilidade só cede às hipóteses legais de exoneração.",
-      "Armadilha: quatro anos mais uma recondução significam permanência automática por oito anos. Correção: oito é o máximo com recondução; ela é uma possibilidade, não uma extensão obrigatória.",
-      "Armadilha: seis meses fora da tolerância, mesmo intercalados, descumprem a meta. Correção: a regra pede seis consecutivos. Cinco fora e um dentro interrompem a contagem; a carta vai à Fazenda, não ao Senado, e precisa explicar causas, medidas e prazo.",
-      "Armadilha: o BC imprime dinheiro e a Casa da Moeda decide sua emissão. Correção: produção física é da Casa da Moeda; emissão é do BC. Os verbos não são intercambiáveis.",
-      "Armadilha: a proibição de emitir títulos próprios impede o BC de comprar e vender títulos públicos. Correção: emissão de dívida própria está vedada desde 2002; operações com títulos públicos continuam como instrumento de política monetária.",
-      "Armadilha: o compulsório é sempre de 100%, ou o teto de 100% vale para todos os títulos. Correção: os números da aula são tetos: 100% para depósitos à vista e 60% para outros títulos contábeis. Teto legal e percentual aplicado são coisas diferentes."
+      "**Estabilidade dos preços é o objetivo fundamental.** Pleno emprego é adicional; {{negacao|não}} o substitui.",
+      "**Indicação ≠ aprovação ≠ nomeação.** Senado aprova; Presidente nomeia. Na exoneração por desempenho, o CMN propõe, {{negacao|não exonera}}.",
+      "**Mandato fixo ≠ demissão livre.** Troca de governo {{negacao|não encerra automaticamente}} os mandatos do BC.",
+      "**4 + 4 anos é um máximo possível**, {{negacao|não}} permanência automática: depende de recondução.",
+      "**6 meses precisam ser consecutivos.** Uma volta à tolerância interrompe a sequência.",
+      "**Teto do compulsório ≠ alíquota aplicada.** E o teto de 100% é para depósitos à vista, {{negacao|não}} para todos os títulos.",
+      "**Emitir dívida própria ≠ negociar títulos públicos.** A vedação desde 2002 {{negacao|não impede}} compra e venda para política monetária."
     ]
   },
   {
     "t": "Aula 4: Comissão de Valores Mobiliários (CVM)",
     "o": "A autarquia que regula e fiscaliza o mercado de capitais e os valores mobiliários.",
     "r": [
-      "Natureza e área: CVM é a Comissão de Valores Mobiliários, autarquia em regime especial que regula e fiscaliza o mercado de capitais. É vinculada ao Ministério da Fazenda, sem subordinação hierárquica, com sede no Rio de Janeiro, personalidade e patrimônio próprios, autoridade administrativa e autonomia financeira e orçamentária.",
-      "Colegiado: presidente e quatro diretores, total de cinco membros. O Presidente da República nomeia após aprovação do Senado; exige-se reputação ilibada e notória especialização econômico-financeira. Mandatos de cinco anos, sem recondução, com renovação de um quinto do colegiado por ano. O material indica início em 15 de julho para o presidente e 1º de janeiro para os diretores.",
-      "Exoneração: nas hipóteses estudadas, renúncia, condenação judicial transitada em julgado ou processo administrativo disciplinar. Vinculação ministerial não transforma o mandato em cargo de livre demissão por divergência política.",
-      "Valores mobiliários: ações, debêntures, bônus de subscrição, cupons, direitos e recibos de subscrição, certificados de desdobramento e de depósito de valores mobiliários, cédulas de debêntures, cotas de fundos e clubes de investimento, notas comerciais e derivativos nos termos estudados.",
-      "Investimento coletivo: contratos ofertados publicamente que conferem participação, parceria ou remuneração, com rendimentos decorrentes do esforço do empreendedor ou de terceiros, podem ser valores mobiliários. O enquadramento depende dessas características, não apenas do nome “investimento”.",
-      "Exclusões: títulos da dívida pública federal, estadual ou municipal e títulos cambiais de responsabilidade de instituição financeira não são valores mobiliários na classificação estudada; as debêntures são a exceção expressa à segunda exclusão.",
-      "Cinco blocos de atribuições: desenvolvimento (poupança, investimento e expansão do mercado); eficiência e funcionamento (bolsa, balcão e práticas equitativas); proteção dos investidores (emissões irregulares, fraude, manipulação e informação privilegiada); acesso à informação (dados de emissores e valores mobiliários); fiscalização e punição (verificar infrações e sancionar).",
-      "Poderes e instrumentos: poder normativo para regular os agentes e poder punitivo com ampla defesa. Pode examinar livros e registros, intimar pessoas, aplicar multa pelo descumprimento de intimação, requisitar informações a órgãos públicos e apurar práticas não equitativas por inquérito administrativo.",
-      "Penalidades: advertência, multa, inabilitação temporária, suspensão de autorização ou registro e proibição temporária. Os limites devem ser associados à sanção e ao seu alcance, não usados como um único prazo para todas as punições.",
-      "Tetos estudados: até 20 anos para inabilitação de administrador ou conselheiro fiscal de companhia aberta e demais atividades previstas; até 20 anos para proibição de atividades ou operações de integrantes da distribuição e entidades registradas; até 10 anos para proibição de atuar, direta ou indiretamente, em modalidades de operação no mercado.",
-      "Atenuantes e comunicação: arrependimento eficaz ou posterior e confissão espontânea podem atenuar penalidades, sem garantir sua eliminação. Indícios de ilícito penal são comunicados ao Ministério Público; de ilícito fiscal, à Receita Federal.",
-      "Regulação e autorregulação: fundamentos são interesse público, confiabilidade, eficiência, competitividade e mercado livre. A autorregulação procura aumentar eficiência e evitar centralização excessiva, com menor custo para o regulador, proximidade e conhecimento da indústria e maior aceitação das regras; não substitui integralmente a CVM.",
-      "Relação com o CMN: a CVM integra o nível supervisor e também edita normas específicas de seu mercado, respeitando a lei e as diretrizes gerais do CMN. O material cita Portarias, Resoluções CVM, Instruções Normativas e atos conjuntos; ter poder normativo próprio não a transforma em conselho normativo."
+      "**CVM:** autarquia especial que regula e fiscaliza valores mobiliários. Vinculada à **Fazenda**, {{negacao|sem subordinação}}; sede no **Rio de Janeiro**.",
+      "**Autonomia:** personalidade/patrimônio próprios, autoridade administrativa e autonomia financeira/orçamentária.",
+      "**Colegiado:** presidente + 4 diretores = **5 membros**. Nomeação presidencial após aprovação do Senado; reputação ilibada e especialização econômico-financeira.",
+      "**Mandato:** 5 anos, {{negacao|sem recondução}}. Renovação de 1/5 por ano; início do presidente em **15 de julho**, diretores em **1º de janeiro**, no material.",
+      "**Exoneração:** renúncia, condenação transitada em julgado ou processo administrativo disciplinar, nas hipóteses estudadas.",
+      "**Valores mobiliários:** ações, debêntures, bônus de subscrição, cotas de fundos/clubes, notas comerciais e derivativos.",
+      "**Também incluídos:** cupons, direitos/recibos de subscrição, certificados de desdobramento/de depósito de valores mobiliários e cédulas de debêntures.",
+      "**Investimento coletivo:** oferta pública; direitos de participação/parceria/remuneração; rendimentos do esforço do empreendedor ou de terceiros.",
+      "**Exclusões:** dívida pública e títulos cambiais de instituição financeira; {{atencao|debêntures são exceção à segunda exclusão}}.",
+      "**Cinco blocos:** desenvolvimento; eficiência/funcionamento; proteção dos investidores; acesso à informação; fiscalização/punição.",
+      "**Poderes:** normativo e punitivo, com **ampla defesa**. Investiga por livros/registros, intimações, requisições de informações e inquérito administrativo.",
+      "**Penalidades:** advertência, multa, inabilitação, suspensão de autorização/registro e proibição temporária.",
+      "**Até 20 anos:** inabilitação e proibição de atividades/operações na distribuição. **Até 10 anos:** proibição de atuar no mercado, nas modalidades estudadas.",
+      "**Atenuantes:** arrependimento eficaz/posterior e confissão espontânea. **Ilícitos:** penal → Ministério Público; fiscal → Receita Federal.",
+      "**Regulação:** interesse público, confiabilidade, eficiência, competitividade e mercado livre. Autorregulação: menor custo, proximidade da indústria e aceitação das regras.",
+      "**Normas da CVM:** detalham sua competência e respeitam a lei e as diretrizes gerais do **CMN**."
     ],
     "d": [
-      "Filtro inicial: o objeto envolve ações, debêntures, fundos ou outros valores mobiliários? Comece pela CVM e confira o ato pedido. Se envolver títulos públicos ou moeda, não conclua apenas pelo nome “mercado financeiro”.",
-      "Ficha comparativa para memorizar: CVM = 5 membros / 5 anos / sem recondução / Rio / vinculada à Fazenda; BC = 9 membros / 4 anos / uma recondução / Brasília / sem vinculação ministerial.",
-      "Lista de exclusão em duas linhas: dívida pública fica fora; título cambial de instituição financeira fica fora, exceto debênture. Teste cada item de uma lista separadamente antes de escolher uma combinação.",
-      "Associe o verbo ao bloco: estimular → desenvolvimento; assegurar bolsa/balcão → eficiência; coibir fraude → proteção; divulgar dados → informação; verificar e sancionar → fiscalização e punição.",
-      "Para sanções, escreva alcance + teto: inabilitação = 20; atividades na distribuição = 20; atuação no mercado = 10. Em casos com dois prazos, compare cada um com sua própria modalidade.",
-      "Memorize destinatários por natureza do ilícito: penal → Ministério Público; fiscal → Receita Federal. A comunicação não é uma nova pena aplicada pela CVM.",
-      "Cálculo do colegiado: 1/5 de 5 = 1 membro renovado por ano. Não confunda os cinco anos de mandato com cinco novos integrantes todo ano."
+      "**Valores mobiliários no enunciado?** Comece pela CVM; confira a competência e as exclusões antes de marcar.",
+      "**CVM 5–5–sem; BC 9–4–com:** membros, anos de mandato e recondução.",
+      "**Blocos por verbo:** estimular → desenvolver; fazer bolsa/balcão funcionar → eficiência; coibir fraude → proteger; divulgar → informar; sancionar → punir.",
+      "**Sanções 20–20–10:** inabilitação; atividades na distribuição; atuação no mercado. Associe o número ao **alcance**.",
+      "**Renovação:** 1/5 de 5 = **1 membro por ano**.",
+      "**Destino pelo ilícito:** penal → MP; fiscal → Receita Federal."
     ],
     "n": [
       [
@@ -929,45 +930,43 @@ const AL=[
       ]
     ],
     "p": [
-      "Armadilha: vinculada à Fazenda significa subordinada às ordens do ministro. Correção: a CVM tem autonomia e não possui subordinação hierárquica; vinculação institucional e subordinação são conceitos diferentes.",
-      "Armadilha: CVM e BC têm diretoria e mandato iguais. Correção: CVM tem cinco membros e cinco anos sem recondução; BC tem nove membros e quatro anos com uma recondução. Na CVM, renovar 1/5 significa um membro por ano.",
-      "Armadilha: todo título negociado no mercado é valor mobiliário. Correção: títulos da dívida pública ficam fora dessa classificação, mesmo que sejam negociáveis e tenham rendimento.",
-      "Armadilha: todo título cambial de instituição financeira fica fora, inclusive debêntures. Correção: a debênture é a exceção expressa; não apague a ressalva ao aplicar a exclusão.",
-      "Armadilha: qualquer contrato chamado “investimento coletivo” entra automaticamente na competência da CVM. Correção: confira a oferta pública, os direitos conferidos e a origem dos rendimentos no esforço do empreendedor ou de terceiros; o nome sozinho não basta.",
-      "Armadilha: a CVM só fiscaliza e não pode editar normas porque está no nível supervisor. Correção: ela tem poder normativo próprio para seu mercado, respeitando a lei e as diretrizes gerais do CMN. Nível na estrutura e competência específica não são a mesma coisa.",
-      "Armadilha: toda proibição temporária pode durar até 20 anos. Correção: a modalidade de atuar no mercado tem teto de 10 anos; a de atividades ou operações na distribuição tem teto de 20. Leia o alcance, não só a palavra “proibição”.",
-      "Armadilha: confissão espontânea apaga a infração ou permite punir sem defesa. Correção: confissão e arrependimento podem atenuar; a ampla defesa continua obrigatória no exercício do poder punitivo.",
-      "Armadilha: proteger contra fraude é o mesmo bloco que publicar informações ou incentivar poupança. Correção: fraude → proteção; dados ao público → informação; incentivo a investir → desenvolvimento. Todas são atribuições da CVM, mas respondem a objetivos diferentes.",
-      "Armadilha: autorregulação elimina a CVM e aumenta o custo do regulador. Correção: a proposta estudada é complementar a regulação com conhecimento próximo da indústria, reduzir custos e evitar centralização excessiva; o supervisor continua atuando."
+      "**Vinculada ≠ subordinada.** CVM é vinculada à Fazenda; BC {{negacao|não tem vinculação ministerial}}.",
+      "**Título negociável ≠ valor mobiliário:** dívida pública fica fora dessa classificação.",
+      "**Título cambial de banco:** excluído, {{atencao|exceto debêntures}}. A ressalva muda a resposta.",
+      "**“Investimento coletivo” no nome não basta:** confira **oferta pública** e rendimentos do esforço de empreendedor/terceiros.",
+      "**Proibição temporária:** o teto muda com o alcance — **distribuição: 20 anos; atuação no mercado: 10 anos**.",
+      "**Confissão pode atenuar**, {{negacao|não apaga automaticamente}} a infração. Ampla defesa continua necessária.",
+      "**Autorregulação complementa a CVM**, {{negacao|não elimina}} a supervisão pública nem concentra todo o poder no regulador."
     ]
   },
   {
     "t": "Aula 5: Seguros e Previdência (CNSP, Susep, CNPC e Previc)",
     "o": "Quem normatiza e quem supervisiona os seguros privados e a previdência complementar fechada.",
     "r": [
-      "Segmentos e acesso: previdência complementar aberta é acessível ao público em geral e integra seguros privados, com CNSP e Susep. A fechada atende grupos com vínculo, como empregados de patrocinadores ou associados de instituidores, por entidades fechadas (fundos de pensão), com CNPC e Previc. Bancos podem distribuir produtos abertos, sem mudar o supervisor do segmento.",
-      "Órgãos e ministérios no material: CNSP é normativo e Susep supervisora, ligados à Fazenda; CNPC é normativo e Previc supervisora, ligados à Previdência Social. Seguros privados inclui seguro, resseguro, previdência complementar aberta e capitalização.",
-      "CNSP — composição: presidido pelo representante da Fazenda; a composição apresentada reúne Fazenda, Justiça, Previdência e Assistência Social, Susep, BC e CVM, seis representações. É um conselho normativo, não a entidade que fiscaliza seguradoras diariamente.",
-      "CNSP — competências: fixa diretrizes e normas; regula constituição, organização, funcionamento e fiscalização; estipula condições técnicas de tarifas e investimentos; define características gerais de contratos, contabilidade e estatística; delimita capital; disciplina resseguro, cosseguro, corretagem e Bolsas de Seguro.",
-      "CNSP — funcionamento: reuniões ordinárias ao menos uma vez a cada três meses, com decisões por maioria simples. Extraordinárias por convocação do presidente ou proposta aprovada por pelo menos dois terços dos membros. Três meses é o intervalo máximo ordinário, não uma vedação a reuniões mais frequentes.",
-      "Susep — natureza e direção: autarquia especial vinculada à Fazenda, com sede e foro no Rio de Janeiro. Conselho Diretor de cinco membros (superintendente e quatro diretores), indicados pelo Ministro da Fazenda e nomeados pelo Presidente da República.",
-      "Susep — finalidades: controla e fiscaliza seguros, resseguro, capitalização e previdência aberta, seguindo o CNSP. Protege a poupança popular e os direitos dos segurados; promove desenvolvimento, concorrência e estabilidade; zela pela liquidez e solvência; acompanha investimentos e presta secretaria ao CNSP.",
-      "Susep — funcionamento e atos: ordinárias quinzenais, decisões por maioria simples; extraordinárias convocadas pelo superintendente ou por ao menos dois diretores. A tabela da aula destaca Circulares como matérias normativas.",
-      "CNPC — composição: presidido pelo Ministro da Previdência Social, total de nove membros. O material inclui Previc, Secretaria de Políticas de Previdência Complementar, Casa Civil, Fazenda, Gestão e Inovação, entidades fechadas, patrocinadores e instituidores, participantes e assistidos. Não é composto apenas por representantes do governo.",
-      "CNPC — designação e funcionamento: integrantes designados pelo Ministro da Previdência após indicação dos órgãos e entidades representados; mandato de dois anos, com uma recondução. Presença mínima de cinco membros para reunir-se; decisões por maioria simples dos votos.",
-      "Previc — natureza e direção: autarquia especial vinculada à Previdência Social, com autonomia administrativa e financeira, sede e foro no Distrito Federal. Diretoria de cinco membros (superintendente e quatro diretores), indicados pelo Ministro da Previdência e nomeados pelo Presidente da República. Reúne-se com a maioria dos membros presentes e decide por maioria simples.",
-      "Previc — fiscalização e sanções: supervisiona as entidades fechadas e suas operações, executa as políticas do regime, apura e julga infrações e aplica penalidades. Expede instruções e procedimentos para aplicação das normas; o CNPC estabelece as diretrizes normativas do segmento.",
-      "Previc — autorizações e medidas: autoriza constituição, funcionamento, fusão, cisão, incorporação e transferências de patrocínio, grupos, planos e reservas. Pode decretar intervenção e liquidação extrajudicial, nomear administrador especial e promover mediação e conciliação.",
-      "Sistema Nacional de Seguros Privados no material: CNSP, Susep, resseguradores, sociedades autorizadas a operar em seguros privados e corretores habilitados. O conselho e a supervisora são partes do sistema, que também inclui seus operadores."
+      "**Seguros privados:** seguros, resseguros, capitalização e previdência aberta. **CNSP** normatiza; **Susep** supervisiona.",
+      "**Previdência fechada:** fundos de pensão para grupos com vínculo. **CNPC** normatiza; **Previc** supervisiona.",
+      "**Vinculação:** CNSP/Susep → Fazenda; CNPC/Previc → Previdência Social, na estrutura estudada.",
+      "**CNSP — composição:** Fazenda (**preside**), Justiça, Previdência/Assistência Social, Susep, BC e CVM: **6 representações** na aula.",
+      "**CNSP — competências:** diretrizes, contratos, tarifas/investimentos, capital, contabilidade, resseguro, cosseguro, corretagem e Bolsas de Seguro.",
+      "**CNSP — reuniões:** ordinárias ao menos trimestrais; extraordinárias pelo presidente ou proposta de **2/3** dos membros. Decisões por **maioria simples**.",
+      "**Susep:** autarquia especial da Fazenda, sede no **Rio**. Conselho Diretor: superintendente + 4 diretores = **5**.",
+      "**Susep — finalidades:** poupança popular, direitos dos segurados, desenvolvimento/concorrência/estabilidade, liquidez/solvência e investimentos. Presta secretaria ao CNSP.",
+      "**Susep — direção e reuniões:** Fazenda indica; Presidente da República nomeia. Ordinárias quinzenais; extraordinárias pelo superintendente ou **2 diretores**; maioria simples.",
+      "**Susep — atos:** a tabela da aula destaca **Circulares**.",
+      "**CNPC:** presidido pelo Ministro da Previdência; **9 membros**, com representantes do governo, entidades fechadas, patrocinadores/instituidores e participantes/assistidos.",
+      "**CNPC — mandato:** 2 anos + {{atencao|uma recondução}}. Ministro designa após indicação. **Presença mínima: 5**; decisões por maioria simples.",
+      "**Previc:** autarquia especial da Previdência, sede no **Distrito Federal**; autonomia administrativa/financeira. Diretoria: superintendente + 4 = **5**.",
+      "**Previc — direção e quórum:** Previdência indica; Presidente da República nomeia. Presença da **maioria dos membros**; decisão por maioria simples.",
+      "**Previc — competências:** fiscaliza, apura infrações, pune, expede instruções e autoriza funcionamento, reorganizações e transferências de planos/patrocínio/reservas.",
+      "**Previc — medidas:** intervenção, liquidação extrajudicial, administrador especial, mediação e conciliação de entidades fechadas.",
+      "**Sistema Nacional de Seguros Privados:** CNSP, Susep, resseguradores, sociedades autorizadas e corretores habilitados, no material."
     ],
     "d": [
-      "Roteiro em duas etapas: primeiro aberta/seguro ou fechada/fundo de pensão; depois regra ou fiscalização. Seguro/aberta + regra → CNSP; + fiscalização → Susep. Fechada + regra → CNPC; + fiscalização → Previc.",
-      "Associe o P de Previc à previdência fechada e o S de Susep ao segmento de seguros. Depois complete o par com o conselho correspondente; não use apenas o nome “previdência” para decidir.",
-      "Memorize o par de vinculação e sede: seguros → Fazenda, Susep no Rio; fechada → Previdência Social, Previc no Distrito Federal. O ministério é uma associação institucional, não a sede física da autarquia.",
-      "Cartão numérico: Susep 1 + 4 = 5; Previc 1 + 4 = 5; CNPC 9, mandato 2 + 2 e mínimo de 5 presentes. “2 + 2” é o máximo com uma recondução, não duração automática de quatro anos.",
-      "Calendário de reuniões: CNSP → até 3 meses entre ordinárias; Susep → quinzenal. Para extraordinárias, acrescente a chave: CNSP presidente ou 2/3; Susep superintendente ou 2 diretores.",
-      "Quando ler “zelar”, procure o complemento: direitos dos segurados e solvência de entidades de seguros → Susep. O verbo também aparece em outros órgãos; o mercado do enunciado resolve a associação.",
-      "Decore autorizações por cenário: uma entidade fechada pede para funcionar, fundir-se ou transferir planos → Previc. Uma regra geral para contratos de seguros → CNSP. Troque o cenário e repita sem olhar o quadro."
+      "**Duas perguntas:** aberta ou fechada? Regra ou fiscalização? Assim você encontra um dos quatro órgãos.",
+      "**Aberta → CNSP/Susep; fechada → CNPC/Previc.** Associe “fundo de pensão” ao par da fechada.",
+      "**Número + contexto:** Susep 5; Previc 5; CNPC 9. CNPC: **2 + 2** de mandato e **5 presentes**.",
+      "**Calendário:** CNSP → trimestre; Susep → quinzena. Extraordinárias: CNSP **2/3**; Susep **2 diretores**, além dos respectivos presidentes.",
+      "**“Zelar” em seguros:** procure direitos dos segurados e liquidez/solvência → **Susep**."
     ],
     "n": [
       [
@@ -1004,49 +1003,51 @@ const AL=[
       ]
     ],
     "p": [
-      "Armadilha: toda previdência é regulada pelo CNPC e fiscalizada pela Previc. Correção: esses órgãos tratam da fechada; a aberta pertence ao segmento CNSP/Susep. A palavra “complementar” aparece nos dois tipos e não resolve sozinha.",
-      "Armadilha: um plano aberto vendido por um banco passa a ser supervisionado pelo BC. Correção: o canal de venda não muda o segmento do produto; a previdência aberta continua com Susep e CNSP.",
-      "Armadilha: CNSP fiscaliza fundos de pensão e Previc define contratos de seguro. Correção: CNSP define regras de seguros; Susep fiscaliza esse mercado; CNPC regula o regime fechado; Previc fiscaliza fundos de pensão. Órgão e segmento foram trocados.",
-      "Armadilha: por ter “Previdência” no assunto, Susep fica na Previdência Social e Previc na Fazenda. Correção: Susep/CNSP ficam na Fazenda; Previc/CNPC na Previdência Social, na estrutura estudada. Susep tem sede no Rio; Previc no Distrito Federal.",
-      "Armadilha: o CNPC tem cinco membros porque precisa de cinco presentes. Correção: são nove integrantes e quórum mínimo de presença de cinco. Presença para reunir-se e maioria simples para decidir são requisitos diferentes.",
-      "Armadilha: a Previc precisa dos mesmos cinco presentes do CNPC. Correção: sua diretoria tem cinco membros e o material exige presença da maioria, isto é, ao menos três; as decisões seguem maioria simples. Não copie o número de um órgão para o outro.",
-      "Armadilha: CNSP reúne-se quinzenalmente e Susep a cada três meses. Correção: as frequências estão invertidas. CNSP tem ordinárias ao menos trimestrais; Susep, quinzenais. Uma reunião extraordinária tem regra própria de convocação.",
-      "Armadilha: nomeação de dirigentes da Susep ou da Previc segue o mesmo fluxo de aprovação do Senado usado para BC e CVM. Correção: no material desta aula, o ministro correspondente indica e o Presidente da República nomeia. Para os representantes do CNPC, há designação pelo Ministro da Previdência após indicação.",
-      "Armadilha: o mandato de dois anos do CNPC permite reconduções ilimitadas. Correção: há uma recondução no conteúdo estudado; quatro anos é o máximo desse ciclo, não a duração inicial do mandato."
+      "**Previdência complementar ≠ apenas fechada:** aberta também é complementar, mas fica com **CNSP/Susep**.",
+      "**Banco vendedor ≠ supervisor do produto.** Previdência aberta vendida por banco continua no segmento **Susep/CNSP**.",
+      "**Composição ≠ quórum:** CNPC tem **9 membros**, mas exige **5 presentes**. A decisão segue maioria simples dos votos.",
+      "**CNPC ≠ Previc no quórum:** CNPC exige 5; Previc exige maioria de sua diretoria de 5, ou seja, **ao menos 3**.",
+      "**Ao menos trimestral ≠ exatamente trimestral:** CNSP pode reunir-se com mais frequência. A periodicidade quinzenal é da **Susep**.",
+      "**Nomeação da Susep/Previc:** no fluxo da aula, ministro indica e Presidente nomeia; {{negacao|não confunda}} com a aprovação do Senado de BC/CVM."
     ]
   },
   {
     "t": "Aula 6: Operadores do SFN (bancos, cooperativas e operações)",
     "o": "Como as instituições operam (ativas, passivas e acessórias) e quem são os bancos comerciais, múltiplos, cooperativos, as caixas econômicas e as cooperativas de crédito.",
     "r": [
-      "Ponto de vista da instituição: operação ativa aplica recursos e gera direito a receber; passiva capta recursos e gera obrigação de devolver; acessória é prestação de serviço, remunerada por tarifas. A classificação depende do papel da instituição naquela operação.",
-      "Ativas — exemplos: abertura de crédito, desconto de títulos, crédito rural, empréstimo para capital de giro, aplicações próprias em títulos e repasses de recursos. Abertura de crédito permite saques até um limite aprovado; desconto antecipa títulos antes do vencimento, deduzindo juros; capital de giro cobre despesas operacionais.",
-      "Passivas — exemplos: depósitos à vista, a prazo e poupança, emissão de certificado de depósito interfinanceiro para captação e recursos de repasses obtidos. Depósitos à vista ficam disponíveis em conta; a prazo seguem vencimento e remuneração contratados.",
-      "Acessórias — exemplos do material: processamento de pagamentos, custódia, prestação de fianças e garantias e câmbio quando prestado como serviço. Não confunda uma tarifa de serviço com os juros de uma aplicação ou captação.",
-      "Interfinanceiro e repasses: captar entre instituições gera passivo para quem recebe e deve devolver; aplicar recursos gera ativo para quem tem o direito a receber. O mesmo tipo de instrumento pode aparecer em lados diferentes do balanço.",
-      "Empréstimo e financiamento: no empréstimo, o uso não tem destinação obrigatória no sentido apresentado na aula; no financiamento, há finalidade contratual ligada a um bem ou serviço, como veículo ou equipamento. Ambos geram crédito a receber para a instituição que concede.",
-      "Monetárias e não monetárias: o critério é poder receber depósitos à vista e criar moeda escritural, não ter “Banco” no nome nem operar apenas no longo prazo. A aula lista comerciais, múltiplos com carteira comercial, bancos cooperativos, CEF e cooperativas autorizadas nessa modalidade entre as monetárias; investimento, desenvolvimento e corretoras entre as não monetárias. A categoria de capital e empréstimo das cooperativas não capta depósitos.",
-      "Grupos de atuação do material: curto prazo — comerciais, CEF e cooperativas habilitadas; médio e longo — bancos de desenvolvimento e de investimento, agências de fomento e sociedades de crédito ao microempreendedor; imobiliário — CEF, sociedades de crédito imobiliário, associações de poupança e empréstimo e companhias hipotecárias; capitais — corretoras, distribuidoras e bancos com carteira de investimento; leasing — sociedades e carteiras de arrendamento mercantil. Uma instituição pode atuar em mais de um grupo.",
-      "Banco comercial: público ou privado, constituído como sociedade anônima, com “Banco” na denominação. Financia comércio, indústria, serviços e pessoas físicas, sobretudo a curto e médio prazo na aula; pode captar depósitos à vista e a prazo.",
-      "Banco múltiplo: público ou privado, sociedade anônima, com “Banco” na denominação; exige no mínimo duas carteiras, sendo uma comercial ou de investimento. As seis carteiras estudadas são comercial, investimento, desenvolvimento, crédito imobiliário, arrendamento mercantil e crédito, financiamento e investimento. Desenvolvimento é exclusiva de bancos públicos.",
-      "Contabilidade do múltiplo: operações contabilizadas separadamente por carteira, com possibilidade de publicação de balanço único pela instituição. Separação contábil não permite concluir que cada carteira precisa de um CNPJ diferente.",
-      "Caixas econômicas: empresas públicas com atividades típicas de banco comercial e prioridade ao crédito social. Captam depósitos à vista, a prazo e poupança. A única caixa econômica em atividade citada no material é a Caixa Econômica Federal, vinculada à Fazenda.",
-      "Cooperativas — natureza: associação de pessoas para atender os associados, sem finalidade lucrativa, com adesão livre e voluntária e igualdade de direitos e deveres. Capital variável formado por cotas-partes dos associados, não transferíveis a terceiros estranhos à sociedade.",
-      "Cooperativas — resultados: ausência de finalidade lucrativa não impede sobras. No material, sobras retornam proporcionalmente às operações dos associados e perdas são rateadas na proporção dos serviços usufruídos, observadas as regras aplicáveis; não se trata de dividendos proporcionais às ações de um banco.",
-      "Pirâmide cooperativa: singular (1º grau, mínimo de 20 pessoas) atende associados; central (2º grau, mínimo de três singulares) organiza serviços das filiadas em maior escala; confederação (3º grau, mínimo de três centrais) coordena atividades que excedem a capacidade das filiadas. Na conta mínima da aula: uma central reúne 3 × 20 = 60 pessoas; uma confederação reúne 3 × 3 = 9 singulares.",
-      "Categorias de singular na aula: plena pode exercer operações amplas entre as autorizadas às cooperativas; clássica segue requisitos de perfil de risco simplificado; capital e empréstimo tem perfil simplificado e vedação à captação de depósitos. “Plena” não significa autorização irrestrita para qualquer operação financeira.",
-      "Associados e não associados no material: depósitos são captados de associados; crédito, garantias e emissão de moeda eletrônica ou instrumento pós-pago aparecem no grupo de atividades aos associados. Certos serviços, como cobrança, custódia, recebimentos, correspondente, distribuição de cotas de fundos, credenciamento e iniciação de pagamentos, podem alcançar não associados. As exceções não abrem indiscriminadamente toda a atuação ao público.",
-      "Banco cooperativo: constituído como banco comercial ou múltiplo, sob controle de cooperativas centrais com ao menos 51% das ações com voto. Se múltiplo cooperativo, a carteira comercial é obrigatória. Proporciona acesso à compensação, créditos oficiais, reserva bancária e mercado interfinanceiro; não é o mesmo tipo societário que a cooperativa de crédito."
+      "**Ativas:** instituição aplica/empresta → direito a receber. **Passivas:** capta → obrigação de devolver. **Acessórias:** presta serviços → tarifas.",
+      "**Crédito ativo:** abertura de crédito, desconto de títulos, crédito rural e capital de giro; também aplicações próprias e repasses concedidos.",
+      "**Abertura de crédito:** uso até limite aprovado. **Desconto de títulos:** antecipação com juros abatidos. **Capital de giro:** despesas operacionais.",
+      "**Captação passiva:** depósitos à vista, a prazo, poupança, certificados interfinanceiros emitidos e repasses obtidos.",
+      "**À vista:** disponível em conta. **A prazo:** vencimento/remuneração contratados. **Interfinanceiro:** operações entre instituições.",
+      "**Acessórias:** pagamentos, custódia, fianças/garantias e câmbio quando prestado como serviço.",
+      "**Empréstimo:** sem destinação obrigatória, no sentido da aula. **Financiamento:** finalidade contratual ligada a um bem/serviço.",
+      "**Monetárias:** recebem depósitos à vista e criam moeda escritural. **Não monetárias:** {{negacao|não recebem depósitos à vista}}.",
+      "**Exemplos monetários:** comerciais, múltiplos com carteira comercial, bancos cooperativos, CEF e cooperativas habilitadas a captar à vista.",
+      "**Grupos de atuação:** comerciais → curto prazo; investimento/desenvolvimento/fomento → médio/longo; corretoras/distribuidoras → capitais; sociedades de arrendamento → leasing.",
+      "**Crédito imobiliário:** CEF, sociedades de crédito imobiliário, associações de poupança e empréstimo, companhias hipotecárias e múltiplos com essa carteira.",
+      "**Comercial:** S.A. pública ou privada; “Banco” na denominação; crédito a pessoas/empresas, curto/médio prazo; depósitos à vista e a prazo.",
+      "**Múltiplo:** S.A.; mínimo de **2 carteiras**, sendo {{atencao|uma comercial ou de investimento}}.",
+      "**Seis carteiras:** comercial, investimento, desenvolvimento, crédito imobiliário, arrendamento mercantil e crédito/financiamento/investimento. Desenvolvimento: {{atencao|exclusiva de bancos públicos}}.",
+      "**Contabilidade do múltiplo:** separada por carteira; publicação de **balanço único possível** pela instituição.",
+      "**Caixas econômicas:** empresas públicas com prioridade ao crédito social; captam à vista, a prazo e poupança. **CEF:** única citada em atividade, vinculada à Fazenda.",
+      "**Cooperativa:** associação de pessoas, sem finalidade lucrativa; adesão livre, direitos/deveres iguais e capital variável em **cotas-partes**.",
+      "**Resultados cooperativos:** sobras pelas operações; perdas pelos serviços usufruídos, no material. Cotas {{negacao|não transferíveis a terceiros estranhos}} à sociedade.",
+      "**Pirâmide:** singular = 20 pessoas; central = 3 singulares; confederação = 3 centrais. Graus: **1º → 2º → 3º**.",
+      "**Papéis:** singular atende associados; central organiza serviços; confederação coordena atividades que excedem a capacidade das filiadas.",
+      "**Singulares:** plena → operações amplas autorizadas; clássica → perfil de risco simplificado; capital e empréstimo → perfil simplificado, {{negacao|sem captar depósitos}}, na aula.",
+      "**Associados:** depósitos, crédito, garantias e emissão de moeda eletrônica/pós-pago, no quadro estudado.",
+      "**Serviços com exceções para não associados:** cobrança, custódia, correspondente, cotas de fundos, credenciamento e iniciação de pagamentos.",
+      "**Banco cooperativo:** comercial ou múltiplo; centrais detêm **ao menos 51% das ações com voto**. Múltiplo cooperativo: {{atencao|carteira comercial obrigatória}}.",
+      "**Acesso pelo banco cooperativo:** compensação, créditos oficiais, reserva bancária e mercado interfinanceiro."
     ],
     "d": [
-      "Pergunta do balanço: a instituição tem direito a receber, obrigação de devolver ou presta um serviço? Responda nessa ordem para identificar ativa, passiva ou acessória. Sempre fixe de quem é o balanço antes de classificar.",
-      "Exemplo de ida e volta: emite depósito interfinanceiro para captar → passiva; aplica no depósito emitido por outra instituição → ativa. Para repasses, faça a mesma pergunta: obteve os recursos ou os emprestou?",
-      "Associe finalidade ao contrato: dinheiro para uso sem destinação obrigatória → empréstimo; recurso vinculado ao veículo ou equipamento → financiamento. Desconto de duplicata → recebe hoje um título que venceria depois, com juros abatidos.",
-      "Checklist do banco múltiplo: 2 ou mais carteiras? Há comercial OU investimento? Se público, pode ter desenvolvimento; se cooperativo múltiplo, precisa de comercial. Confira todos os requisitos, não apenas o número de carteiras.",
-      "Teste monetário: procure autorização para depósito à vista. Use o tipo e a carteira da instituição para responder; o nome “banco” ou a palavra “digital” não bastam para classificar.",
-      "Pirâmide 20–3–3: 20 pessoas formam a singular; 3 singulares formam a central; 3 centrais formam a confederação. Escreva a unidade ao lado de cada número e multiplique apenas os níveis pedidos.",
-      "Regra dos 51%: calcule sobre ações COM voto. Com 1.000 ações votantes, o mínimo é 510; 501 dá maioria, mas não atende a 51%. Verifique percentual e base da conta.",
-      "Para cooperativas, divida a folha em “depósitos dos associados” e “serviços com exceções para não associados”. Ao revisar uma questão, localize a atividade específica antes de concluir quem pode ser atendido."
+      "**Olhe o balanço da instituição:** direito → ativa; obrigação → passiva; serviço → acessória.",
+      "**Interfinanceiro/repasses:** captou → passiva; aplicou/emprestou → ativa. Identifique de qual instituição a pergunta trata.",
+      "**Múltiplo: confira 2 requisitos:** quantidade de carteiras + comercial ou investimento. Se cooperativo, precisa de **comercial**.",
+      "**20–3–3 com unidades:** pessoas → singulares → centrais. Central: **3 × 20 = 60 pessoas**; confederação: **3 × 3 = 9 singulares**.",
+      "**51% sobre ações com voto:** em 1.000, precisa de **510**. Faça a conta sobre a base pedida.",
+      "**Monetária?** Procure depósito à vista autorizado; o nome da instituição sozinho {{negacao|não basta}}."
     ],
     "n": [
       [
@@ -1075,17 +1076,14 @@ const AL=[
       ]
     ],
     "p": [
-      "Armadilha: o depósito do cliente é ativo do banco porque o dinheiro entrou. Correção: para o banco, é passivo, pois há obrigação de devolver; para o depositante, existe um direito a receber. Entrada de caixa não define sozinha a classificação.",
-      "Armadilha: depósito interfinanceiro e repasse são sempre ativos ou sempre passivos. Correção: quem capta assume obrigação; quem aplica ou empresta tem direito a receber. O lado do balanço muda com o papel da instituição.",
-      "Armadilha: custódia, pagamentos e fianças rendem spread como um empréstimo. Correção: são serviços acessórios no material, remunerados por tarifas; spread vem da diferença entre juros de captação e aplicação.",
-      "Armadilha: qualquer instituição chamada “banco” é monetária, e toda não monetária opera só no longo prazo. Correção: o critério é depósito à vista e moeda escritural; banco de investimento não recebe depósito à vista. Uma cooperativa de capital e empréstimo também não capta depósitos.",
-      "Armadilha: duas carteiras quaisquer bastam para ser múltiplo. Correção: uma deve ser comercial ou de investimento; imobiliária + arrendamento, sozinhas, não atendem. No múltiplo cooperativo, a comercial é obrigatória, e desenvolvimento é exclusiva de bancos públicos.",
-      "Armadilha: contabilidade por carteira significa CNPJ e balanço publicado separados para cada uma. Correção: contabilizam-se as operações separadamente por carteira; é possível um balanço único da instituição. Não confunda segmentação contábil com novas pessoas jurídicas.",
-      "Armadilha: cooperativa e banco cooperativo têm a mesma natureza e a mesma regra de capital. Correção: cooperativa é associação de pessoas com cotas-partes; banco cooperativo é comercial ou múltiplo, controlado pelas centrais via ações com voto. O controle mínimo de 51% refere-se ao banco.",
-      "Armadilha: sem finalidade lucrativa significa que nunca há sobras ou perdas. Correção: cooperativas podem ter resultados; o material prevê retorno de sobras e rateio de perdas pelas operações ou serviços, sem transformar cotas-partes em ações com dividendos por capital.",
-      "Armadilha: cada central precisa de 20 pessoas, e uma confederação tem só três singulares. Correção: as unidades foram trocadas: singular exige 20 pessoas; central, três singulares; confederação, três centrais — ao menos nove singulares no exemplo mínimo.",
-      "Armadilha: cooperativa nunca atende não associados, ou a permissão de serviços permite captar depósitos de qualquer pessoa. Correção: certos serviços podem alcançar não associados; a regra de depósitos estudada continua ligada aos associados. Verifique a atividade e a exceção, sem generalizar.",
-      "Armadilha: 50% mais uma ação atende automaticamente ao mínimo de 51% das ações com voto. Correção: com 1.000 ações, 501 é menos que 510; maioria e o percentual específico não são equivalentes. Ações sem voto não entram nessa base."
+      "**Dinheiro entrando ≠ operação ativa:** depósito do cliente é **passivo do banco** e direito do depositante.",
+      "**Duas carteiras quaisquer não bastam:** imobiliária + leasing, sozinhas, {{negacao|não atendem}} à exigência comercial ou investimento.",
+      "**Separação contábil ≠ CNPJ por carteira.** Pode haver um balanço único da instituição.",
+      "**“Banco” no nome ≠ monetária:** investimento {{negacao|não capta à vista}}. Cooperativa de capital e empréstimo {{negacao|não capta depósitos}}.",
+      "**Cooperativa ≠ banco cooperativo:** a primeira tem associados/cotas-partes; o segundo é banco comercial ou múltiplo, controlado por centrais via ações.",
+      "**Sem finalidade lucrativa ≠ sem sobras ou perdas.** Resultado cooperativo {{negacao|não é dividendo}} proporcional às ações de um banco.",
+      "**Serviços a não associados ≠ depósitos do público em geral.** A permissão depende da atividade; {{negacao|não generalize}} a exceção.",
+      "**50% + uma ação ≠ 51%:** 501 de 1.000 dá maioria, mas é menor que **510**. A base é ações **com voto**."
     ]
   }
 ];
@@ -1238,12 +1236,14 @@ function fcv(F){const c=F[fi];return `<div class="fcd" onclick="ff=!ff;go()">${f
 function mchips(t,key,o){return `<div class="s mu">${t}</div><div class="chips">${o.map(([l,v])=>`<button class="chip${mt[key]===v?" on":""}" onclick="mt['${key}']=${JSON.stringify(v).replace(/"/g,"'")};fi=0;ff=0;go()">${l}</button>`).join("")}</div>`}
 function mat(){const M=MAT[mt.a];return `<p class="mu s">Material de apoio, separado por aula e por tipo. Eu redesenho o conteúdo a partir das aulas, então confira com o que o professor ensina.</p>${mchips("Aula","a",AL.map((a,i)=>["Aula "+(i+1),i+1]))}${mchips("Tipo","c",MC)}`+({mapa:()=>mapa(M),diag:()=>'<p class="s mu">Nos diagramas, a mesma cor indica o mesmo papel.</p>'+M.dg.map(dgv).join(""),tab:()=>M.tb.map(x=>tbl(...x)).join(""),tl:()=>M.tl.map(x=>tlv(...x)).join(""),fc:()=>fcv(M.fc)})[mt.c]()}
 function estuda(n,md){cfg.a=n;cfg.n=-1;cfg.m="all";cfg.md=md;cfg.c=10;begin(mix(),md)}
-function acc(t,it,c,description=""){return `<details class="acc" style="--c:var(--${c})"><summary>${t}</summary><div class="acb">${description?`<p class="s mu">${escapeText(description)}</p>`:""}${it.map(x=>`<div class="pt" style="border-left-color:var(--${c})">${escapeText(x)}</div>`).join("")}</div></details>`}
+// Destaques exclusivos da trilha: negrito, condições/exceções e negações/proibições.
+function lessonText(text){return escapeText(text).replace(/\*\*([^*]+)\*\*/g,"<strong>$1</strong>").replace(/\{\{(atencao|negacao)\|([^{}]+)\}\}/g,(_,kind,label)=>`<strong class="lesson-${kind==="atencao"?"attention":"negative"}">${label}</strong>`)}
+function acc(t,it,c){return `<details class="acc" style="--c:var(--${c})"><summary>${t}</summary><div class="acb">${it.map(x=>`<div class="pt" style="border-left-color:var(--${c})">${lessonText(x)}</div>`).join("")}</div></details>`}
 function trilhaV(){const n=tr,a=AL[n-1],E=H.filter(x=>Q[x[0]-1]&&Q[x[0]-1][0]===n),p=pct(E.filter(x=>x[1]).length,E.length),c=E.length?sem(p):"",er=errs().filter(i=>Q[i-1][0]===n).length,tot=Q.filter(q=>q[0]===n&&q[2]<3).length,hc=Q.filter(q=>q[0]===n&&q[2]===3).length;
 return `<div class="lay"><nav class="tr"><div class="s mu" style="margin-bottom:8px">Minha trilha</div>${AL.map((x,i)=>{const k=x.t.split(": ");return `<div class="st"><button class="tb${tr===i+1?" on":""}" onclick="tr=${i+1};go()"><span>${k[0]}<br><span class="s mu">${k[1]}</span></span>${pc(i+1)}</button></div>`}).join("")}</nav>
 <div class="mn" style="max-width:820px"><div class="hero"><div class="s mu">Aula ${n} de ${AL.length}</div><h2>${a.t.split(": ")[1]}</h2><p class="mu" style="margin:0 0 12px">${a.o}</p><div class="chips" style="margin:0"><button class="chip on" onclick="estuda(${n},'e')">Estudar esta aula</button><button class="chip" style="border-color:var(--hc);color:var(--hc)" onclick="estuda(${n},'h')">Hardcore desta aula</button><button class="chip" onclick="mt.a=${n};fi=0;ff=0;view='m';go()">Material de apoio</button></div></div>
 <div class="g4">${[["Aproveitamento",E.length?p+"%":"sem dados",c],["Respondidas",E.length,""],["Erros pendentes",er,""],["Questões",tot+" + "+hc+" hardcore",""]].map(([l,v,k])=>`<div class="m"><div class="mu s">${l}</div><div class="mv" style="${k?`color:var(--${k});`:""}font-size:22px">${v}</div></div>`).join("")}</div>
-<h3 class="sec">Números para decorar</h3><div class="g4">${a.n.map(([v,l])=>`<div class="m"><div class="mv" style="color:var(--ac)">${v}</div><div class="s mu">${l}</div></div>`).join("")}</div><div style="margin-top:22px">${acc("Resumo da aula",a.r,"ac","Conceitos, funções e regras essenciais para compreender a aula.")}${acc("Dicas e macetes",a.d,"md","Associações, sequências e passos para memorizar e resolver questões.")}${acc("Pegadinhas",a.p,"hd","Afirmações que induzem ao erro, com a correção e o motivo. São exemplos de confusão, não uma previsão de questões da prova.")}</div></div></div>`}
+<h3 class="sec">Números para decorar</h3><div class="g4">${a.n.map(([v,l])=>`<div class="m"><div class="mv" style="color:var(--ac)">${v}</div><div class="s mu">${l}</div></div>`).join("")}</div><div style="margin-top:22px">${acc("Resumo da aula",a.r,"ac")}${acc("Dicas e macetes",a.d,"md")}${acc("Pegadinhas",a.p,"hd")}</div></div></div>`}
 const IC={bk:'<path d="M8 40V18l6-4v-4h4v4h4v-4h4v4h4v-4h4v4l6 4v22z" fill="#f5a623"/><rect x="20" y="26" width="8" height="14" fill="#fff" opacity=".4"/>',ch:'<circle cx="30" cy="14" r="7" fill="none" stroke="#f5a623" stroke-width="4"/><path d="M26 19L10 38M14 33l5 4M18 29l5 4" stroke="#f5a623" stroke-width="4" fill="none"/>',bv:'<rect x="6" y="8" width="36" height="32" fill="#e8f0fb" stroke="#4a86d6" stroke-width="2"/><path d="M10 34l8-10 6 6 10-14" stroke="#4a86d6" stroke-width="3" fill="none"/><circle cx="18" cy="24" r="2.5" fill="#f5a623"/><circle cx="34" cy="16" r="2.5" fill="#f5a623"/>',co:'<circle cx="16" cy="14" r="5" fill="#1d3b72"/><path d="M8 40V26a8 8 0 0116 0v14z" fill="#1d3b72"/><circle cx="32" cy="14" r="5" fill="#3d5f9e"/><path d="M24 40V26a8 8 0 0116 0v14z" fill="#3d5f9e"/>',cr:'<ellipse cx="22" cy="36" rx="14" ry="5" fill="#f5a623"/><ellipse cx="22" cy="29" rx="14" ry="5" fill="#f8bb4a"/><ellipse cx="22" cy="22" rx="14" ry="5" fill="#f5a623"/><circle cx="38" cy="14" r="5" fill="#1d3b72"/>',bm:'<path d="M8 10h22a4 4 0 014 4v10a4 4 0 01-4 4H20l-8 7v-7H8a4 4 0 01-4-4V14a4 4 0 014-4z" fill="#f5a623"/><circle cx="34" cy="28" r="11" fill="#bfe0f5" stroke="#4a86d6" stroke-width="2"/><text x="34" y="33" text-anchor="middle" font-size="14" font-weight="bold" fill="#1d3b72">$</text>',ip:'<rect x="4" y="12" width="28" height="19" rx="3" fill="#2f5fb0"/><rect x="14" y="20" width="28" height="19" rx="3" fill="#4a86d6"/><rect x="14" y="24" width="28" height="4" fill="#1d3b72"/>',dn:'<rect x="6" y="20" width="12" height="20" fill="#7ab0e6"/><rect x="18" y="8" width="14" height="32" fill="#4a86d6"/><rect x="32" y="16" width="10" height="24" fill="#2f5fb0"/>',sg:'<rect x="6" y="8" width="36" height="32" rx="4" fill="#4a86d6"/><rect x="12" y="14" width="24" height="20" rx="2" fill="#e8f0fb"/><circle cx="24" cy="24" r="5" fill="#f5a623"/>',ea:'<path d="M10 8c-6 8-6 24 0 32M38 8c6 8 6 24 0 32" stroke="#4a86d6" stroke-width="4" fill="none"/><text x="24" y="31" text-anchor="middle" font-size="22" font-weight="bold" fill="#4a86d6">$</text>',sc:'<rect x="6" y="30" width="6" height="10" fill="#4a86d6"/><rect x="16" y="24" width="6" height="16" fill="#4a86d6"/><rect x="26" y="18" width="6" height="22" fill="#4a86d6"/><circle cx="34" cy="12" r="8" fill="#f5a623"/><text x="34" y="17" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">$</text>',fp:'<circle cx="24" cy="24" r="16" fill="#e8f0fb" stroke="#4a86d6" stroke-width="3"/><text x="24" y="31" text-anchor="middle" font-size="20" font-weight="bold" fill="#4a86d6">$</text>'};
 const ico=k=>`<svg viewBox="0 0 48 48" width="54" height="54" aria-hidden="true">${IC[k]}</svg>`;
 const qo=(k,t)=>`<div class="qo">${ico(k)}<div class="ql">${t}</div></div>`;
