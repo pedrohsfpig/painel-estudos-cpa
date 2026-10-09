@@ -1,11 +1,22 @@
 <!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Painel de estudos CPA</title>
+<script>
+// Aplicar a preferência antes de exibir a página evita piscar no tema errado.
+try{const savedTheme=localStorage.getItem("cpaTheme");if(savedTheme==="light"||savedTheme==="dark")document.documentElement.dataset.theme=savedTheme}catch(e){}
+</script>
 <style>
+:root{color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark}}
+:root[data-theme="dark"]{color-scheme:dark}
 :root{--bg:#fbfaf7;--fg:#1f1f1d;--mu:#6b6a65;--bd:#d9d7cf;--cd:#f1efe8;--ok:#2f7d32;--okb:#e3f1dd;--md:#8a5d00;--mdb:#faeeda;--hd:#a32d2d;--hdb:#fcebeb;--hc:#7b1e3a;--hcb:#f4dfe5;--ac:#185fa5;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c1c1a;--fg:#ece9df;--mu:#a8a69d;--bd:#3d3c38;--cd:#2a2a27;--ok:#9bd18a;--okb:#1f3a1f;--md:#efb85a;--mdb:#3a2c10;--hd:#f09595;--hdb:#3d1a1a;--hc:#c2506e;--hcb:#3b1424;--ac:#85b7eb}}
 :root[data-theme="dark"]{--bg:#1c1c1a;--fg:#ece9df;--mu:#a8a69d;--bd:#3d3c38;--cd:#2a2a27;--ok:#9bd18a;--okb:#1f3a1f;--md:#efb85a;--mdb:#3a2c10;--hd:#f09595;--hdb:#3d1a1a;--hc:#c2506e;--hcb:#3b1424;--ac:#85b7eb}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
+html{scroll-padding-top:calc(64px + env(safe-area-inset-top,0px))}
 body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
-.w{max-width:1100px;margin:0 auto;padding:16px}
+.w{max-width:1100px;margin:0 auto;padding:calc(64px + env(safe-area-inset-top,0px)) 16px 16px}
+.theme-toggle{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));left:calc(12px + env(safe-area-inset-left,0px));z-index:1000;width:44px;height:44px;padding:0;border-radius:50%;display:grid;place-items:center;background:var(--cd);box-shadow:0 2px 6px rgba(0,0,0,.15)}
+.theme-toggle:hover{background:var(--bg)}.theme-toggle:focus-visible{outline:3px solid var(--ac);outline-offset:3px}
+.theme-toggle svg{width:23px;height:23px;pointer-events:none}
+:root[data-theme="light"] .theme-toggle .bulb{fill:var(--mdb)}
 h1{font-size:22px;font-weight:500;margin:4px 0 12px}h3{font-size:16px;font-weight:500;margin:22px 0 8px}
 button{font:inherit;color:var(--fg);background:transparent;border:1px solid var(--bd);border-radius:8px;padding:6px 14px;cursor:pointer}
 button:hover{background:var(--cd)}
@@ -33,7 +44,7 @@ button:hover{background:var(--cd)}
 .pn .bar{height:14px;border-radius:7px;background:var(--bg);margin-top:5px}.pn .bar i{border-radius:7px}
 .rs{font-size:12px;color:var(--mu);margin-top:4px}
 .en{font-size:20px;line-height:1.5;font-weight:500;margin:14px 0 18px;padding:16px 18px;background:var(--cd);border-left:4px solid var(--ac);border-radius:10px}
-.tb2{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);display:flex;justify-content:space-between;align-items:center;padding:8px 0;margin-bottom:6px;border-bottom:1px solid var(--bd)}
+.tb2{position:sticky;top:calc(64px + env(safe-area-inset-top,0px));z-index:5;background:var(--bg);display:flex;justify-content:space-between;align-items:center;padding:8px 0;margin-bottom:6px;border-bottom:1px solid var(--bd)}
 .tm{font-variant-numeric:tabular-nums;font-size:18px;font-weight:500;background:var(--cd);border:1px solid var(--bd);border-radius:20px;padding:2px 16px}
 .aj{border:1px dashed var(--bd);border-radius:12px;padding:12px 14px;margin-top:18px}.aj .chips{margin:8px 0 0}
 .hb{border-color:var(--ac);color:var(--ac)}.hb[disabled]{opacity:.45;cursor:default}
@@ -84,8 +95,21 @@ table.tx{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5}.tx 
 .fb-choice{padding:2px 8px;border:1px solid var(--bd);border-radius:6px;font-size:12px}
 .fb-option h4{font-size:16px;font-weight:500;margin:0 0 6px}.fb-option p{margin:0;line-height:1.6}
 button.o:disabled{cursor:default}
-</style></head><body><div class="w"><div id="app"></div></div>
+</style></head><body>
+<button id="theme-toggle" class="theme-toggle" type="button" aria-label="Alternar modo claro e escuro" aria-pressed="false" title="Alternar modo claro e escuro">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="bulb" d="M9 17v-1.2c0-.7-.4-1.3-.9-1.8A5.8 5.8 0 0 1 6 9.5a6 6 0 0 1 12 0 5.8 5.8 0 0 1-2.1 4.5c-.5.5-.9 1.1-.9 1.8V17z"/><path d="M9 20h6M10 22h4M12 1V0M3 4l1.3 1.3M21 4l-1.3 1.3M1 10h2M21 10h2"/></svg>
+</button>
+<div class="w"><div id="app"></div></div>
 <script>
+function initThemeToggle(){
+const root=document.documentElement,button=document.getElementById("theme-toggle"),systemTheme=matchMedia("(prefers-color-scheme: dark)");
+let preference=root.dataset.theme||null;
+const apply=theme=>{root.dataset.theme=theme;const dark=theme==="dark",label=dark?"Ativar modo claro":"Ativar modo escuro";button.setAttribute("aria-label",label);button.setAttribute("aria-pressed",String(dark));button.title=label};
+apply(preference||(systemTheme.matches?"dark":"light"));
+button.addEventListener("click",()=>{preference=root.dataset.theme==="dark"?"light":"dark";apply(preference);try{localStorage.setItem("cpaTheme",preference)}catch(e){}});
+systemTheme.addEventListener("change",event=>{if(!preference)apply(event.matches?"dark":"light")});
+}
+initThemeToggle();
 const L=["Fácil","Médio","Difícil","Hardcore"],LC=["ok","md","hd","hc"],AU=["","Aula 1: SFN","Aula 2: CMN","Aula 3: BACEN","Aula 4: CVM","Aula 5: Seguros e previdência","Aula 6: Operadores"];
 const Q=[
 [1,"Agentes e intermediação",0,"Sobre a intermediação financeira no SFN, é correto afirmar:","O SFN conecta poupadores a tomadores por meio de instituições financeiras.","O SFN conecta deficitários que aplicam recursos a superavitários que tomam crédito.","A intermediação conecta poupadores e tomadores sem participação de instituições.","Superavitários tomam crédito porque suas despesas excedem os recursos disponíveis.","Superavitário tem sobra; deficitário tem falta de recursos.",0,"Pense no papel de intermediário: o sistema aproxima quem tem dinheiro parado de quem precisa dele. Desconfie das frases que invertem esses papéis.",["Superavitário tem sobra; deficitário tem falta de recursos.","Deficitários precisam de recursos; quem tem sobra é superavitário.","A intermediação envolve instituições e também pessoas jurídicas, não só pessoas físicas.","Gastos maiores que a renda caracterizam o deficitário, não o superavitário."]],

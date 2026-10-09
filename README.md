@@ -44,6 +44,8 @@ local permanece porque a origem do site não muda.
 
 ## Funcionalidades preservadas
 
+- Botão de lâmpada fixo para alternar claro/escuro em qualquer tela, com escolha
+  salva neste navegador. Sem escolha salva, acompanha o tema do dispositivo.
 - 600 questões: 100 em cada uma das 6 aulas.
 - 120 fáceis, 240 médias, 120 difíceis e 120 Hardcore.
 - Estudo com dicas, eliminação de alternativas e correção imediata.

@@ -66,6 +66,17 @@ O site publicado usa `main` no GitHub Pages. Quando o usuário pedir atualizaç�
 para vê-las no site, valide, envie os commits e informe o resultado real do envio.
 Não confunda envio ao GitHub com confirmação de que o Pages já publicou.
 
+## Alternância global de tema
+
+O botão de lâmpada fica fixo no canto superior esquerdo, fora de `#app`, em todas
+as telas, incluindo questões e resultados. Não remova esse controle ao renderizar
+uma view nem reinicie questões, cronômetros ou materiais ao alternar o tema.
+Reserve espaço para evitar sobreposição no celular e mantenha rótulo acessível,
+foco por teclado e área clicável de pelo menos 44 × 44 pixels. A preferência fica
+em `cpaTheme`, separada de `cpaH`, e deve funcionar mesmo sem armazenamento local;
+sem escolha salva, acompanhe o tema do dispositivo. Aplique a escolha salva antes
+da primeira renderização e respeite os destaques semânticos nos dois temas.
+
 ## Padrão permanente da trilha, para TODAS as aulas
 
 O usuário exige revisão individual de cada item das três seções de `AL`, inclusive

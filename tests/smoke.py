@@ -399,6 +399,91 @@ class PainelCPA(unittest.TestCase):
         self.assertEqual(result["correctPositions"], [6, 6, 6, 6])
         self.assertTrue(result["unchanged"])
 
+    def toggle_theme(self):
+        button = self.page.locator("#theme-toggle")
+        current = self.page.locator("html").get_attribute("data-theme")
+        expected = "light" if current == "dark" else "dark"
+        background = self.page.locator("body").evaluate("element => getComputedStyle(element).backgroundColor")
+        snapshot = "element => {const copy=element.cloneNode(true);const timer=copy.querySelector('#tm');if(timer)timer.textContent='';return copy.innerHTML}"
+        content = self.page.locator("#app").evaluate(snapshot)
+        self.assertEqual(button.count(), 1)
+        self.assertTrue(button.is_visible())
+        self.assertEqual(button.evaluate("element => getComputedStyle(element).position"), "fixed")
+        button.click()
+        self.assertEqual(self.page.locator("html").get_attribute("data-theme"), expected)
+        self.assertEqual(button.get_attribute("aria-pressed"), str(expected == "dark").lower())
+        self.assertEqual(button.get_attribute("aria-label"), "Ativar modo " + ("claro" if expected == "dark" else "escuro"))
+        self.assertNotEqual(self.page.locator("body").evaluate("element => getComputedStyle(element).backgroundColor"), background)
+        self.assertEqual(self.page.locator("#app").evaluate(snapshot), content)
+
+    def test_18_theme_button_is_global_and_remembers_choice(self):
+        self.assertEqual(self.page.locator("#theme-toggle svg").count(), 1)
+        for screen in ["Painel", "Quadro do SFN", "Trilha", "Praticar", "Erros (0)", "Material de apoio"]:
+            self.click(screen)
+            self.toggle_theme()
+        self.click("Flashcards")
+        self.click("Virar cartão")
+        self.toggle_theme()
+        self.assertEqual(self.page.get_by_role("button", name="Voltar à pergunta", exact=True).count(), 1)
+        self.page.locator("#theme-toggle").focus()
+        previous = self.page.locator("html").get_attribute("data-theme")
+        self.page.locator("#theme-toggle").press("Space")
+        chosen = self.page.locator("html").get_attribute("data-theme")
+        self.assertNotEqual(chosen, previous)
+        self.assertEqual(self.page.evaluate("localStorage.getItem('cpaTheme')"), chosen)
+        self.page.reload()
+        self.page.get_by_text("Progresso salvo neste navegador.", exact=False).wait_for()
+        self.assertEqual(self.page.locator("html").get_attribute("data-theme"), chosen)
+        self.assertTrue(self.page.locator("#theme-toggle").is_visible())
+
+    def test_19_theme_switch_preserves_quizzes_and_stays_clickable_on_mobile(self):
+        self.page.set_viewport_size({"width": 390, "height": 720})
+        for mode in ["Estudo", "Hardcore", "Simulado"]:
+            self.configure(mode)
+            state = self.page.evaluate("({ids:qz.ids,index:qz.i,start:qz.t0,history:H})")
+            self.toggle_theme()
+            self.assertEqual(self.page.evaluate("({ids:qz.ids,index:qz.i,start:qz.t0,history:H})"), state)
+            self.answer()
+            state = self.page.evaluate("({index:qz.i,chosen:qz.a,history:H})")
+            self.page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+            self.toggle_theme()
+            self.assertEqual(self.page.evaluate("({index:qz.i,chosen:qz.a,history:H})"), state)
+            box = self.page.locator("#theme-toggle").bounding_box()
+            self.assertLessEqual(box["x"], 16)
+            self.assertLessEqual(box["y"], 16)
+            self.assertEqual(box["width"], box["height"])
+            self.assertGreaterEqual(box["width"], 44)
+            self.assertTrue(self.page.locator("#theme-toggle").evaluate("""element => {
+                const rect=element.getBoundingClientRect();
+                return document.elementFromPoint(rect.x+rect.width/2,rect.y+rect.height/2).closest('#theme-toggle')===element;
+            }"""))
+            if mode != "Simulado":
+                self.click("Próxima")
+            for index in range(4):
+                self.answer()
+                if mode != "Simulado":
+                    self.click("Próxima" if index < 3 else "Ver resultado")
+            self.assertIn("Resultado do " + mode.lower(), self.page.locator("#app").inner_text())
+            self.toggle_theme()
+            self.click("Nova prática")
+
+    def test_20_theme_system_preference_and_unavailable_storage(self):
+        self.page.evaluate("localStorage.removeItem('cpaTheme')")
+        self.page.emulate_media(color_scheme="dark")
+        self.page.reload()
+        self.assertEqual(self.page.locator("html").get_attribute("data-theme"), "dark")
+        self.page.emulate_media(color_scheme="light")
+        self.page.wait_for_function("document.documentElement.dataset.theme === 'light'")
+        self.toggle_theme()
+        self.page.reload()
+        self.assertEqual(self.page.locator("html").get_attribute("data-theme"), "dark")
+        self.page.emulate_media(color_scheme="light")
+        self.assertEqual(self.page.locator("html").get_attribute("data-theme"), "dark")
+        self.page.add_init_script("Storage.prototype.getItem = () => {throw Error('Armazenamento indisponível')}; Storage.prototype.setItem = () => {throw Error('Armazenamento indisponível')}")
+        self.page.reload()
+        self.assertEqual(self.page.locator("html").get_attribute("data-theme"), "light")
+        self.toggle_theme()
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
