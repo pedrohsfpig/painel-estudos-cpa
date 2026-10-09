@@ -167,6 +167,8 @@ class PainelCPA(unittest.TestCase):
         self.assertFalse(self.page.evaluate("qz.x.some(i => qz.o[i][1])"))
         self.answer()
         self.assertEqual(self.page.locator(".feedback .fb-option").count(), 4)
+        for explanation in self.page.locator(".feedback .fb-option p").all():
+            self.assertTrue(explanation.is_visible())
         self.click("Próxima")
         for i in range(4):
             self.answer()
@@ -266,6 +268,13 @@ class PainelCPA(unittest.TestCase):
             self.assertEqual(self.page.locator(".fb-selected.fb-correct").count(), int(correct))
             self.assertEqual(self.page.locator("button.o:disabled").count(), 4)
             self.assertEqual(self.page.locator(".fb-choice").inner_text(), "Sua resposta")
+            pairs = self.page.locator(".feedback .answer-row").evaluate_all("""rows => rows.map(row => {
+                const option=row.querySelector('button.o'), feedback=row.querySelector('.fb-option');
+                const left=option.getBoundingClientRect(), right=feedback.getBoundingClientRect();
+                return right.x >= left.right && Math.abs(right.y-left.y) < 1 &&
+                       option.getAttribute('aria-describedby') === feedback.querySelector('p').id;
+            })""")
+            self.assertEqual(pairs, [True] * 4)
             self.click("Próxima")
             self.assertEqual(self.page.locator(".feedback").count(), 0)
 
@@ -284,7 +293,9 @@ class PainelCPA(unittest.TestCase):
                     cards.forEach((card, displayIndex) => {
                         const option = qz.o[displayIndex];
                         if (card.dataset.optionIndex !== String(option[2])) throw Error('Índice trocado: ' + id);
-                        if (card.querySelector('h4').textContent !== 'ABCD'[displayIndex] + ') ' + option[0]) throw Error('Alternativa trocada: ' + id);
+                        const button = card.parentElement.querySelector('button.o');
+                        if (button.querySelector('.answer-text').textContent !== 'ABCD'[displayIndex] + ') ' + option[0]) throw Error('Alternativa trocada: ' + id);
+                        if (button.getAttribute('aria-describedby') !== card.querySelector('p').id) throw Error('Feedback associado à alternativa errada: ' + id);
                         if (card.querySelector('p').textContent !== Q[id - 1][11][option[2]]) throw Error('Explicação trocada: ' + id);
                         if (card.classList.contains('fb-correct') !== Boolean(option[1])) throw Error('Correção trocada: ' + id);
                         if (card.classList.contains('fb-selected') !== (displayIndex === chosen)) throw Error('Escolha trocada: ' + id);

@@ -21,6 +21,11 @@ estudo diário, prática por aula, revisão de erros e futuras aulas ou conteúd
   os papéis ou posições trocados. Evite apenas repetir que a resposta está errada.
 - O feedback acompanha o índice original da opção, inclusive após embaralhar.
   Nunca derive seu vínculo de A/B/C/D nem do lugar da opção na tela.
+- No computador, apresente cada alternativa à esquerda e seu feedback à direita
+  na mesma linha. Use o mesmo vínculo na revisão de erros e mantenha as quatro
+  explicações visíveis, inclusive para alternativas eliminadas pelas ajudas.
+  Evite repetir o texto da alternativa em outro bloco abaixo; em janelas pequenas,
+  a explicação pode ficar imediatamente abaixo da alternativa correspondente.
 - Não exiba os feedbacks antes da resposta. Mostre os quatro depois de acertar
   OU errar, inclusive das alternativas eliminadas pelas ajudas.
 - Nos simulados, preserve o avanço sem feedback imediato e a revisão geral já

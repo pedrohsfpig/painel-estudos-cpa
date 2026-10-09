@@ -67,7 +67,8 @@ local permanece porque a origem do site não muda.
 - Cabeçalho das questões com cronômetro e barra de respostas concluídas nos
   três modos. Nos simulados, o avanço automático continua sem feedback imediato.
 - Feedback com destaque para a resposta correta e a alternativa escolhida,
-  mantendo as quatro explicações completas e a ordem das opções apresentada.
+  à direita de cada alternativa no computador, mantendo as quatro explicações
+  completas e a ordem das opções apresentada, inclusive na revisão de erros.
 
 ## Organização da trilha
 
