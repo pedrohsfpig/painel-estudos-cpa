@@ -1046,6 +1046,143 @@ class PainelCPA(unittest.TestCase):
                     self.assertTrue(self.page.evaluate("document.documentElement.scrollWidth<=innerWidth"))
                     self.assertEqual(self.page.evaluate("({ids:qz.ids,index:qz.i,start:qz.t0,history:H,questions:Q,lessons:AL})"), state)
 
+    def test_34_lesson_sections_remember_independent_open_and_closed_choices(self):
+        self.click("Trilha")
+        self.page.locator("button.tb").nth(6).click()
+        self.page.locator("#lesson-summary>summary").click()
+        self.page.locator("#lesson-traps>summary").click()
+        for block in [1,2,3,4,0]:
+            self.page.locator(f".lesson-blocks button[data-lesson-block='{block}']").click()
+            self.assertEqual(self.page.evaluate("['lesson-summary','lesson-tips','lesson-traps'].map(id=>document.getElementById(id).open)"), [True,False,True])
+        self.page.locator("#lesson-summary>summary").click()
+        self.page.locator(".hero").get_by_role("button", name="Material de apoio", exact=True).click()
+        self.click("Trilha")
+        self.assertEqual(self.page.evaluate("['lesson-summary','lesson-tips','lesson-traps'].map(id=>document.getElementById(id).open)"), [False,False,True])
+        self.page.locator("button.tb").nth(0).click()
+        self.assertEqual(self.page.locator("details.lesson-section[open]").count(), 0)
+        self.page.locator("button.tb").nth(6).click()
+        self.assertTrue(self.page.locator("#lesson-traps").evaluate("e=>e.open"))
+        for theme in ["light","dark"]:
+            self.page.evaluate("theme=>document.documentElement.dataset.theme=theme", theme)
+            colors = self.page.locator(".lesson-blocks button:not([data-lesson-block='0'])").evaluate_all("nodes=>nodes.map(e=>getComputedStyle(e).borderTopColor)")
+            self.assertEqual(len(set(colors)), 4)
+
+    def test_35_multiple_lesson_selection_preview_matches_balanced_session(self):
+        self.click("Praticar")
+        for lesson in [1,2,3]:
+            self.page.locator(f"[data-practice-lesson='{lesson}']").click()
+        self.assertEqual(self.page.locator("[data-practice-lesson][aria-pressed='true']").evaluate_all("nodes=>nodes.map(e=>+e.dataset.practiceLesson)"), [1,2,3])
+        self.page.locator("button.oc").filter(has=self.page.get_by_text("30", exact=True)).click()
+        plan = self.page.evaluate("sessionPlan()")
+        self.assertEqual([g["count"] for g in plan["groups"]], [10,10,10])
+        self.assertEqual([sum(g["counts"][level] for g in plan["groups"]) for level in range(3)], [8,15,7])
+        for group in plan["groups"]:
+            for actual, weight in zip(group["counts"], [.25,.5,.25]):
+                self.assertLessEqual(abs(actual-group["count"]*weight), 1)
+        self.assertEqual(self.page.locator(".session-distribution>div").count(), 3)
+        self.click("Iniciar estudo")
+        actual = self.page.evaluate("[1,2,3].map(lesson=>[0,1,2,3].map(level=>qz.ids.filter(id=>Q[id-1][0]===lesson&&Q[id-1][2]===level).length))")
+        self.assertEqual(actual, [g["counts"] for g in plan["groups"]])
+        self.assertEqual(self.page.evaluate("new Set(qz.ids).size"), 30)
+        self.click("Encerrar")
+        self.assertNotEqual(self.page.evaluate("sessionPlan().groups.map(g=>g.counts)"),
+                            [g["counts"] for g in plan["groups"]],
+                            "O arredondamento dos níveis não deve favorecer sempre as mesmas aulas")
+        self.page.locator("[data-practice-lesson='3']").click()
+        self.page.locator("button.oc").filter(has=self.page.get_by_text("5", exact=True)).click()
+        extra_before = self.page.evaluate("sessionPlan().groups.map(g=>g.count)")
+        self.click("Iniciar estudo")
+        self.click("Encerrar")
+        self.assertEqual(self.page.evaluate("sessionPlan().groups.map(g=>g.count)"), extra_before[::-1])
+        self.page.locator("[data-practice-lesson='0']").click()
+        self.assertEqual(self.page.evaluate("selectedPracticeLessons()"), [])
+        self.assertEqual(self.page.locator("[data-practice-lesson][aria-pressed='true']").count(), 1)
+
+    def test_36_balanced_multiple_lessons_respect_all_modes_levels_and_integer_sizes(self):
+        cases = self.page.evaluate("""() => {
+            const results=[];
+            for(const md of ['e','s','h'])for(const as of [[1,2],[1,2,3],[1,2,3,4],[1,7],[2,5,7],[1,2,3,4,5,6,7]])
+            for(const c of [5,10,20,30,40])for(const n of (md==='h'?[-1]:[-1,0,1,2])){
+                cfg={a:0,as,b:0,n,c,md,m:'all'};
+                const plan=sessionPlan(),ids=mix(plan);
+                results.push({md,as,c,n,total:plan.n,note:plan.note,
+                    counts:as.map(a=>ids.filter(id=>Q[id-1][0]===a).length),
+                    levels:[0,1,2,3].map(l=>ids.filter(id=>Q[id-1][2]===l).length),
+                    preview:plan.groups.map(g=>g.counts),
+                    actual:as.map(a=>[0,1,2,3].map(l=>ids.filter(id=>Q[id-1][0]===a&&Q[id-1][2]===l).length)),
+                    unique:new Set(ids).size===ids.length,
+                    valid:ids.every(id=>as.includes(Q[id-1][0])&&(md!=='s'||!Q[id-1][9]))});
+            }
+            return results;
+        }""")
+        for case in cases:
+            with self.subTest(mode=case["md"], lessons=case["as"], count=case["c"], level=case["n"]):
+                self.assertTrue(case["unique"] and case["valid"])
+                self.assertEqual(sum(case["counts"]), case["total"])
+                self.assertLessEqual(max(case["counts"])-min(case["counts"]), 1)
+                self.assertEqual(case["preview"], case["actual"])
+                if case["c"] < len(case["as"]):
+                    self.assertEqual(case["total"], 0)
+                    self.assertIn("pelo menos", case["note"])
+                elif case["md"] == "h":
+                    self.assertEqual(case["levels"], [0,0,0,case["total"]])
+                elif case["n"] >= 0:
+                    self.assertEqual(case["levels"][case["n"]], case["total"])
+                elif "Alguns níveis" not in case["note"]:
+                    medium = int(case["total"]/2+.5)
+                    easy = (case["total"]-medium+1)//2
+                    self.assertEqual(case["levels"], [easy,medium,case["total"]-medium-easy,0])
+
+    def test_37_sparse_filters_reduce_quantity_without_silently_dropping_lessons(self):
+        result = self.page.evaluate("""() => {
+            const one=Q.findIndex(q=>q[0]===1&&q[2]===0)+1;
+            const two=Q.findIndex(q=>q[0]===2&&q[2]===1)+1;
+            H=[[one,0,1700000000000,0],[two,0,1700000001000,0]];
+            cfg={a:0,as:[1,2],b:0,n:-1,c:20,md:'e',m:'err'};
+            const plan=sessionPlan(),ids=mix(plan);
+            cfg.as=[1,2,3];const empty=sessionPlan();view='q';go();
+            return {plan,ids,one,two,empty};
+        }""")
+        self.assertEqual(result["plan"]["n"], 2)
+        self.assertEqual([g["count"] for g in result["plan"]["groups"]], [1,1])
+        self.assertEqual(set(result["ids"]), {result["one"], result["two"]})
+        self.assertIn("Quantidade reduzida", result["plan"]["note"])
+        self.assertEqual(result["empty"]["n"], 0)
+        self.assertIn("aula 3", result["empty"]["note"])
+        self.assertTrue(self.page.get_by_role("button", name="Iniciar estudo", exact=True).is_disabled())
+        self.assertIn("aula 3", self.page.locator(".sum").inner_text())
+
+    def test_38_multiple_lessons_do_not_leak_into_single_lesson_or_block_shortcuts(self):
+        self.page.evaluate("cfg.as=[1,2,3];cfg.a=0;view='t';tr=7;go()")
+        self.page.locator(".lesson-blocks button[data-lesson-block='2']").click()
+        self.click("Estudar este bloco")
+        self.assertEqual(self.page.evaluate("selectedPracticeLessons()"), [7])
+        self.assertTrue(self.page.evaluate("qz.ids.every(id=>Q[id-1][0]===7&&AL[6].b[1].topics.includes(Q[id-1][1]))"))
+        self.click("Encerrar")
+        self.page.locator("[data-practice-lesson='1']").click()
+        self.assertEqual(self.page.evaluate("selectedPracticeLessons()"), [1,7])
+        self.assertEqual(self.page.locator(".practice-blocks").count(), 0)
+        self.assertEqual(self.page.evaluate("cfg.b"), 0)
+        self.page.locator("[data-practice-lesson='1']").click()
+        self.assertEqual(self.page.evaluate("selectedPracticeLessons()"), [7])
+        self.assertEqual(self.page.locator(".practice-blocks").count(), 1)
+
+    def test_39_available_levels_are_allocated_jointly_without_breaking_lesson_shares(self):
+        result = self.page.evaluate("""() => {
+            const failed=(lesson,level,count)=>Q.map((q,i)=>({q,id:i+1})).filter(x=>x.q[0]===lesson&&x.q[2]===level).slice(0,count).map(x=>[x.id,0,1700000000000,0]);
+            cfg={a:0,as:[1,2],b:0,n:-1,c:20,md:'e',m:'err'};
+            H=[...failed(1,0,5),...failed(1,1,10),...failed(2,0,5),...failed(2,2,5)];
+            const possible=sessionPlan(),possibleIds=mix(possible);
+            H=[...failed(1,0,10),...failed(2,2,10)];
+            const unavailable=sessionPlan(),unavailableIds=mix(unavailable);
+            return {possible:possible.groups.map(g=>g.counts),possibleLevels:[0,1,2].map(level=>possibleIds.filter(id=>Q[id-1][2]===level).length),unavailable:unavailable.groups.map(g=>g.counts),unavailableLevels:[0,1,2].map(level=>unavailableIds.filter(id=>Q[id-1][2]===level).length),note:unavailable.note};
+        }""")
+        self.assertEqual(result["possible"], [[0,10,0,0],[5,0,5,0]])
+        self.assertEqual(result["possibleLevels"], [5,10,5])
+        self.assertEqual(result["unavailable"], [[10,0,0,0],[0,0,10,0]])
+        self.assertEqual(result["unavailableLevels"], [10,0,10])
+        self.assertIn("Alguns níveis", result["note"])
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

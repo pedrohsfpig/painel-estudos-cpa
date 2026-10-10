@@ -275,6 +275,11 @@ pedagógicas solicitadas e evitando perguntas repetidas.
   Na trilha, o filtro deve estar junto do conteúdo, acima de números, resumo,
   dicas e pegadinhas. Ao trocar de bloco, mantenha abertas as seções que o usuário
   já abriu, para permitir comparar os conteúdos sem novos cliques.
+  `lessonSectionState` registra separadamente abertas e fechadas por aula;
+  `rememberLessonSections` captura o estado antes de qualquer renderização.
+  Os quatro blocos têm contornos discretos e constantes: azul, lilás, verde e
+  rosa, nos controles da trilha, dos materiais e da prática. As cores dos
+  controles não alteram a semântica dos destaques no conteúdo.
   `currentMaterial` fornece os cartões e materiais do bloco selecionado.
   Preserve a face do flashcard ao trocar tema e reinicie sua posição ao trocar
   aula/bloco. Consultar materiais não reinicia a sessão de questões em andamento.
@@ -295,3 +300,35 @@ pedagógicas solicitadas e evitando perguntas repetidas.
 O relatório `docs/aula-7-cobertura.json` registra os 18 participantes, as fontes,
 o alcance da revisão e os exercícios desta entrega; seus volumes não são quotas
 obrigatórias para futuros materiais. O número de questões segue a regra acima.
+
+## Prática com várias aulas
+
+O usuário pode marcar e desmarcar aulas individualmente em Praticar. `cfg.as`
+guarda a seleção múltipla; `cfg.a` continua identificando uma aula única, para
+preservar os atalhos existentes. Use `selectedPracticeLessons` em vez de testar
+somente `cfg.a`. “Todas as aulas” limpa a seleção específica e usa o banco geral.
+Ao iniciar por um atalho de aula/bloco, limpe `cfg.as`; ao combinar aulas, limpe
+`cfg.b`. O bloco aparece na configuração apenas quando uma única aula está marcada.
+
+- `sessionPlan` define vagas por aula e por nível antes de sortear os IDs; a
+  prévia da sessão e `mix` precisam usar a mesma distribuição.
+- Aulas selecionadas recebem quantidades iguais. Quando a divisão não for exata,
+  a diferença é de no máximo uma questão; `practiceRound` alterna as vagas extras
+  entre sessões consecutivas. Não fixe o excedente sempre na primeira aula.
+- Nos níveis Todos, mantenha a proporção 25% fácil, 50% médio e 25% difícil,
+  com arredondamento e distribuição proporcional dentro de cada aula. Calcule
+  os níveis conjuntamente para não concentrar todas as vagas de arredondamento
+  no mesmo nível. Se o usuário escolher um nível, use somente esse nível;
+  Hardcore usa somente Hardcore. Simulado continua excluindo `somenteEstudo`.
+- Nunca repita questões para preencher vagas nem inclua aulas fora da seleção.
+  Se uma aula tiver pouca disponibilidade com os filtros, reduza a quantidade
+  e avise. Se uma aula não tiver questões, mostre qual é e peça ajuste dos
+  filtros/seleção na interface; não a exclua silenciosamente.
+- Escassez de um nível pode exigir outra proporção entre os níveis disponíveis;
+  preserve as vagas por aula e explique a exceção na prévia. Não invente questões
+  nem altere sua dificuldade para forçar a proporção.
+- Teste seleção/desmarcação, 2/3/4 aulas, restos de divisão, limites de estoque,
+  inéditas/erros, nível fixo, Hardcore, Simulado e transição para atalhos únicos.
+  Preserve feedbacks, histórico, IDs e o estudo diário.
+
+O comportamento e exemplos estão em `docs/pratica-varias-aulas.md`.

@@ -63,6 +63,8 @@ local permanece porque a origem do site não muda.
   tanto em Estudo quanto em Hardcore, incluindo prática diária e por aula.
 - Simulados com resultado e revisão dos erros ao final.
 - Filtros de aula, dificuldade, questões inéditas e erros pendentes.
+  É possível selecionar várias aulas, com participação igual e distribuição
+  proporcional de níveis; a prévia mostra os números de cada aula.
 - Estudo de hoje, cronômetro, indicadores e evolução diária.
 - Trilha de aulas, quadro do SFN, mapas mentais, diagramas, tabelas,
   linhas do tempo e flashcards.
@@ -172,6 +174,11 @@ feedback, a ausência de feedback em simulados e o contrato de conteúdo futuro.
 Os blocos da aula 7 também são conferidos na leitura, na prática e nos simulados,
 incluindo os 18 participantes, o limite de 100 questões e a preservação dos IDs.
 A integração com a conta do Claude não faz parte desses testes.
+
+A seleção múltipla também é testada em todos os modos e dificuldades, incluindo
+arredondamento, pouca disponibilidade, ausência de questões em uma aula e
+transição para atalhos de uma aula/bloco. Veja as regras e exemplos em
+[docs/pratica-varias-aulas.md](docs/pratica-varias-aulas.md).
 
 Também verificamos a diferença entre tentativas, cobertura única e erros
 pendentes, a aplicação dos filtros e o menu fixo nos dois temas, em larguras
