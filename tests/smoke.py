@@ -1011,6 +1011,41 @@ class PainelCPA(unittest.TestCase):
         self.assertEqual(self.page.locator(".feedback").count(), 0)
         self.assertEqual(self.page.evaluate("H.map(row=>row[3])"), [1] * 50)
 
+    def test_33_lesson7_content_filter_is_next_to_sections_and_keeps_them_open(self):
+        self.page.evaluate("begin([1,2],'e')")
+        state = self.page.evaluate("({ids:qz.ids,index:qz.i,start:qz.t0,history:H,questions:Q,lessons:AL})")
+        self.click("Trilha")
+        self.page.locator("button.tb").nth(6).click()
+        for section in ["lesson-summary", "lesson-tips", "lesson-traps"]:
+            self.page.locator(f"#{section}>summary").click()
+
+        def plain(text):
+            return re.sub(r"\{\{(?:atencao|negacao)\|([^{}]+)\}\}", r"\1", text).replace("**", "")
+
+        for theme in ["light", "dark"]:
+            self.page.evaluate("theme=>document.documentElement.dataset.theme=theme", theme)
+            for block_id in [1,2,3,4,0]:
+                with self.subTest(theme=theme, block=block_id):
+                    controls = self.page.locator(".lesson-content-filter")
+                    self.assertEqual(controls.count(), 1)
+                    self.assertEqual(controls.get_by_role("heading").inner_text(), "Filtrar conteúdo da aula")
+                    self.assertEqual(controls.get_by_role("button").count(), 5)
+                    controls.locator(f"button[data-lesson-block='{block_id}']").click()
+                    expected = next((b for b in state["lessons"][6]["b"] if b["id"] == block_id), state["lessons"][6])
+                    self.assertEqual(controls.locator("button[aria-pressed='true']").get_attribute("data-lesson-block"), str(block_id))
+                    self.assertEqual(self.page.evaluate("document.activeElement.dataset.lessonBlock"), str(block_id))
+                    for section, key in [("lesson-summary","r"),("lesson-tips","d"),("lesson-traps","p")]:
+                        self.assertTrue(self.page.locator(f"#{section}").evaluate("e=>e.open"))
+                        self.assertEqual(self.page.locator(f"#{section} .pt").all_text_contents(),
+                                         [plain(text) for text in expected[key]])
+                    self.assertEqual(self.page.locator("#lesson-numbers .mv").all_text_contents(),
+                                     [item[0] for item in expected["n"]])
+                    first_section = self.page.locator("#lesson-numbers" if expected["n"] else "#lesson-summary")
+                    filter_box, section_box = controls.bounding_box(), first_section.bounding_box()
+                    self.assertLessEqual(filter_box["y"] + filter_box["height"], section_box["y"])
+                    self.assertTrue(self.page.evaluate("document.documentElement.scrollWidth<=innerWidth"))
+                    self.assertEqual(self.page.evaluate("({ids:qz.ids,index:qz.i,start:qz.t0,history:H,questions:Q,lessons:AL})"), state)
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

@@ -55,6 +55,8 @@ local permanece porque a origem do site não muda.
 - Aula 6 identificada como **Operadores Monetários**, mantendo os conteúdos e IDs.
 - Aula 7: **Operadores Não Monetários**, com 18 participantes em quatro blocos.
   A leitura, os materiais e a prática podem abranger toda a aula ou um bloco.
+  Na trilha, o filtro fica acima dos números, resumo, dicas e pegadinhas; trocar
+  de bloco mantém abertas as seções em consulta.
 - 140 fáceis, 280 médias, 140 difíceis e 140 Hardcore.
 - Estudo com dicas, eliminação de alternativas e correção imediata.
 - Feedback da resposta correta e das três alternativas incorretas após responder,

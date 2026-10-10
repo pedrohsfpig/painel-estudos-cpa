@@ -272,6 +272,9 @@ pedagógicas solicitadas e evitando perguntas repetidas.
   compartilhados por questões relacionadas, evitando um tema novo por pergunta
   ou o prefixo Hardcore no nome do tema. A dificuldade já é um campo separado.
 - A seleção de leitura usa `selectedLessonBlocks`; a prática usa `cfg.b`.
+  Na trilha, o filtro deve estar junto do conteúdo, acima de números, resumo,
+  dicas e pegadinhas. Ao trocar de bloco, mantenha abertas as seções que o usuário
+  já abriu, para permitir comparar os conteúdos sem novos cliques.
   `currentMaterial` fornece os cartões e materiais do bloco selecionado.
   Preserve a face do flashcard ao trocar tema e reinicie sua posição ao trocar
   aula/bloco. Consultar materiais não reinicia a sessão de questões em andamento.
