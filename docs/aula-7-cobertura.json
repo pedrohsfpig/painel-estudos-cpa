@@ -1,0 +1,788 @@
+{
+  "lesson": 7,
+  "title": "Aula 7: Operadores Não Monetários",
+  "sources": {
+    "transcript": "Texto colado.txt — três aulas, 1.457 linhas",
+    "slides": "Screenshot_1_compressed_compressed.pdf — 21 páginas"
+  },
+  "priority": "Mais exercícios e casos de CTVM/DTVM e B3 dentro do conteúdo fornecido; foco adicional em bancos de investimento e financeiras. Critério pedagógico solicitado, sem estimativa de frequência de prova.",
+  "blocks": [
+    {
+      "id": 1,
+      "title": "Bancos especializados e fomento",
+      "operators": [
+        "Bancos de investimento",
+        "Bancos de desenvolvimento",
+        "Bancos de câmbio",
+        "Agências de fomento"
+      ],
+      "first_question_id": 601,
+      "last_question_id": 625,
+      "normal_questions": 20,
+      "hardcore_questions": 5,
+      "flashcards": 24,
+      "topics": [
+        "Bancos de investimento",
+        "Bancos de desenvolvimento",
+        "Agências de fomento",
+        "Bancos de câmbio"
+      ],
+      "coverage": [
+        {
+          "operator": "Bancos de investimento",
+          "concepts": [
+            "natureza privada, S.A., BACEN",
+            "participação temporária",
+            "capital fixo e giro",
+            "administração de terceiros/fundos",
+            "não captar à vista",
+            "contas sem remuneração/cheque",
+            "subscrição versus distribuição",
+            "metais e títulos próprios/terceiros",
+            "bolsa/futuros/balcão",
+            "autorização de câmbio",
+            "reestruturação empresarial",
+            "captação a prazo, LF, CDI e repasses",
+            "aplicações e interfinanceiros"
+          ],
+          "sources": [
+            "Transcrição AULA 01, linhas 1–198",
+            "Slides 1–2",
+            "Slide 3: exemplo, com correção das simplificações descritas em issues"
+          ]
+        },
+        {
+          "operator": "Bancos de desenvolvimento",
+          "concepts": [
+            "público estadual versus investimento privado",
+            "médio/longo prazo",
+            "prioridade privada",
+            "exceção limítrofe com interesse comum",
+            "expansão, produtividade e saneamento",
+            "capital fixo/semifixo rural",
+            "tecnologia, gestão e pessoal",
+            "setores da estrutura",
+            "S.A., sede e denominação",
+            "sem agências como banco independente",
+            "captação e aplicações",
+            "cédula pignoratícia com lastro externo",
+            "distinção do BNDES federal"
+          ],
+          "sources": [
+            "Transcrição AULA 01, linhas 199–414",
+            "Slides 4–5"
+          ]
+        },
+        {
+          "operator": "Agências de fomento",
+          "concepts": [
+            "S.A. fechada e controle UF",
+            "denominação",
+            "uma por UF",
+            "não captar público",
+            "não transformar em outra IF",
+            "fundo 10% obrigações em TPF",
+            "beneficiários/setores",
+            "linhas para municípios",
+            "exceção limítrofe com interesse comum",
+            "fontes oficiais, orçamentos e organismos",
+            "DIM vinculados a microfinanças",
+            "crédito rural, cessão e leasing"
+          ],
+          "sources": [
+            "Transcrição AULA 01, linhas 415–543",
+            "Slide 6"
+          ]
+        },
+        {
+          "operator": "Bancos de câmbio",
+          "concepts": [
+            "moedas e transferências",
+            "crédito vinculado ao câmbio",
+            "importação/exportação e ACC",
+            "operações próprias em bolsa/balcão ligadas a moeda/câmbio",
+            "depósitos interfinanceiros",
+            "denominação",
+            "contas sem remuneração/movimentação",
+            "não captar à vista",
+            "captação por repasses, interfinanceiros e exterior",
+            "atividade não exclusiva"
+          ],
+          "sources": [
+            "Transcrição AULA 01, linhas 544–616",
+            "Slide 7"
+          ]
+        }
+      ],
+      "selected_authoring_questions": [
+        1,
+        3,
+        5,
+        6,
+        7,
+        9,
+        13,
+        16,
+        20,
+        23,
+        25,
+        30,
+        32,
+        33,
+        34,
+        35,
+        37,
+        38,
+        39,
+        40,
+        41,
+        43,
+        44,
+        47,
+        49
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Crédito especializado",
+      "operators": [
+        "Sociedades de crédito imobiliário",
+        "Companhias hipotecárias",
+        "Sociedades de crédito, financiamento e investimento",
+        "Sociedades de crédito ao microempreendedor e à empresa de pequeno porte"
+      ],
+      "first_question_id": 626,
+      "last_question_id": 642,
+      "normal_questions": 14,
+      "hardcore_questions": 3,
+      "flashcards": 20,
+      "topics": [
+        "SCI",
+        "Companhias hipotecárias",
+        "Financeiras (SCFI)",
+        "SCMEPP",
+        "Crédito especializado"
+      ],
+      "coverage": [
+        {
+          "operator": "SCI",
+          "concepts": [
+            "IF/SFN/SFH",
+            "S.A. e denominação",
+            "habitação e terrenos",
+            "materiais e condição de propriedade/posse",
+            "empresas de projetos residenciais",
+            "capital de giro setorial",
+            "repasses e garantias",
+            "fontes de recursos do quadro",
+            "poupança: autorização versus prática de repasse",
+            "múltiplo com carteira imobiliária"
+          ],
+          "sources": [
+            "Transcrição AULA 02, linhas 617–665",
+            "PDF, página 8 / slide-08.png"
+          ]
+        },
+        {
+          "operator": "Companhias hipotecárias",
+          "concepts": [
+            "IF/S.A.",
+            "imóveis residenciais e não residenciais",
+            "terrenos e materiais",
+            "hipoteca e alienação fiduciária",
+            "compra/venda/refinanciamento/administração de créditos",
+            "administração de FII com autorização CVM",
+            "repasses e garantias",
+            "vedação à poupança",
+            "fontes de recursos do quadro"
+          ],
+          "sources": [
+            "Transcrição AULA 02, linhas 665–689",
+            "PDF, página 9 / slide-09.png"
+          ]
+        },
+        {
+          "operator": "Financeiras (SCFI)",
+          "concepts": [
+            "IF privada/S.A. e denominação",
+            "bens, serviços e capital de giro",
+            "braço de grupos comerciais/industriais",
+            "não exige vínculo bancário",
+            "veículos usados/convênios/nichos de risco",
+            "risco e juros sem universalização",
+            "LC tradicional não exclusiva",
+            "demais fontes listadas e ressalva de condições",
+            "ativa versus passiva"
+          ],
+          "sources": [
+            "Transcrição AULA 02, linhas 689–730",
+            "PDF, página 10 / slide-10.png"
+          ]
+        },
+        {
+          "operator": "SCMEPP",
+          "concepts": [
+            "microempreendedores PF e pequenas empresas PJ",
+            "companhia fechada ou Ltda.",
+            "denominação",
+            "vedação de captação pública",
+            "vedação de títulos em oferta pública",
+            "correspondente no país",
+            "instituições financeiras/fomento/OSCIPs/fundos oficiais",
+            "DIM vinculado a microfinanças",
+            "financiamentos e garantias conforme objeto social"
+          ],
+          "sources": [
+            "Transcrição AULA 02, linhas 730–753",
+            "PDF, página 11 / slide-11.png"
+          ]
+        }
+      ],
+      "selected_authoring_questions": [
+        1,
+        3,
+        6,
+        7,
+        8,
+        10,
+        13,
+        18,
+        19,
+        20,
+        22,
+        25,
+        26,
+        30,
+        31,
+        35,
+        37
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Consórcios e mercado de capitais",
+      "operators": [
+        "Administradoras de consórcios",
+        "Bolsas de valores / B3",
+        "Corretoras (CTVM)",
+        "Distribuidoras (DTVM)"
+      ],
+      "first_question_id": 643,
+      "last_question_id": 678,
+      "normal_questions": 28,
+      "hardcore_questions": 8,
+      "flashcards": 26,
+      "topics": [
+        "Consórcios",
+        "Bolsa e B3",
+        "CTVM e DTVM"
+      ],
+      "coverage": [
+        {
+          "operator": "Administradoras de consórcios",
+          "concepts": [
+            "natureza e formas societárias",
+            "grupo de pessoas físicas e jurídicas",
+            "prazo e cotas",
+            "autofinanciamento",
+            "taxa de administração",
+            "competências e informações ao BACEN",
+            "sorteio, lance e ordem",
+            "liberdade de escolha e categoria"
+          ],
+          "sources": [
+            "transcrição AULA 02, linhas 742–820",
+            "PDF, página 12"
+          ]
+        },
+        {
+          "operator": "Bolsas e B3",
+          "concepts": [
+            "ambiente organizado",
+            "acesso por intermediários",
+            "ofertas e formação de preço",
+            "CVM e autorregulação do mercado de valores mobiliários",
+            "B3 S.A., São Paulo, união em 2017",
+            "registro",
+            "compensação e liquidação",
+            "depositária central",
+            "contraparte central e seus limites"
+          ],
+          "sources": [
+            "transcrição AULA 02, linhas 820–878",
+            "PDF, páginas 13–14"
+          ]
+        },
+        {
+          "operator": "CTVM",
+          "concepts": [
+            "instituição financeira não monetária",
+            "S.A. ou limitada",
+            "BACEN e CVM",
+            "denominação",
+            "home broker",
+            "conta própria e terceiros",
+            "subscrição de emissões",
+            "carteiras e custódia",
+            "agente fiduciário",
+            "câmbio autorizado",
+            "fundos e clubes",
+            "conta margem",
+            "metais",
+            "certificados de ações e cédulas pignoratícias",
+            "taxas e comissões",
+            "conta de registro/trânsito distinta de depósito à vista"
+          ],
+          "sources": [
+            "transcrição AULA 02, linhas 878–913",
+            "PDF, página 15",
+            "aula 6: distinção monetária/não monetária; pedido do usuário sobre contas de trânsito"
+          ]
+        },
+        {
+          "operator": "DTVM",
+          "concepts": [
+            "formas societárias e supervisão",
+            "denominação",
+            "mesmo campo operacional das CTVM",
+            "eliminação da restrição de bolsa em 2009",
+            "câmbio condicionado",
+            "remuneração de serviços"
+          ],
+          "sources": [
+            "transcrição AULA 02, linhas 913–936",
+            "PDF, página 16"
+          ]
+        }
+      ],
+      "selected_authoring_questions": [
+        1,
+        3,
+        6,
+        7,
+        9,
+        13,
+        15,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        25,
+        29,
+        33,
+        36,
+        37,
+        38,
+        39,
+        40,
+        42,
+        45,
+        47,
+        49,
+        50,
+        10,
+        12,
+        51,
+        53,
+        54,
+        55,
+        57,
+        58,
+        59,
+        60
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Seguros, capitalização e previdência",
+      "operators": [
+        "Sociedades de capitalização",
+        "Entidades abertas de previdência complementar",
+        "Entidades fechadas de previdência complementar",
+        "Sociedades seguradoras",
+        "Resseguradoras",
+        "Corretores de seguros"
+      ],
+      "first_question_id": 679,
+      "last_question_id": 700,
+      "normal_questions": 18,
+      "hardcore_questions": 4,
+      "flashcards": 24,
+      "topics": [
+        "Capitalização",
+        "Previdência aberta",
+        "Previdência fechada",
+        "Seguradoras",
+        "Resseguro e retrocessão",
+        "Corretores de seguros",
+        "Previdência: comparações"
+      ],
+      "coverage": [
+        {
+          "operator": "Sociedades de capitalização",
+          "concepts": [
+            "S.A.",
+            "pagamentos contratados",
+            "reserva e resgate",
+            "sorteios condicionais",
+            "custos e despesas",
+            "CNSP / Susep",
+            "distinção de conta poupança"
+          ],
+          "sources": [
+            "Transcrição AULA 03, linhas 937–1046",
+            "Slide 17"
+          ]
+        },
+        {
+          "operator": "EAPC",
+          "concepts": [
+            "S.A. lucrativa",
+            "adesão voluntária",
+            "planos individuais",
+            "planos coletivos",
+            "valor e periodicidade contratual",
+            "PGBL e base tributável com condições",
+            "seguradoras autorizadas",
+            "CNSP / Susep"
+          ],
+          "sources": [
+            "Transcrição AULA 03, linhas 1047–1167",
+            "Slide 18"
+          ]
+        },
+        {
+          "operator": "EFPC",
+          "concepts": [
+            "fundação ou sociedade civil sem fins lucrativos",
+            "vínculo com patrocinador ou instituidor",
+            "empregados, servidores e associados",
+            "administração e execução de planos",
+            "CNPC / Previc",
+            "distinção de EAPC coletiva"
+          ],
+          "sources": [
+            "Transcrição AULA 03, linhas 1168–1215",
+            "Slide 19"
+          ]
+        },
+        {
+          "operator": "Seguradoras",
+          "concepts": [
+            "contrato",
+            "assunção de risco",
+            "prêmio",
+            "indenização",
+            "beneficiário",
+            "limites da cobertura",
+            "modalidades exemplificativas",
+            "CNSP / Susep"
+          ],
+          "sources": [
+            "Transcrição AULA 03, linhas 1216–1293",
+            "Slide 20"
+          ]
+        },
+        {
+          "operator": "Resseguradoras",
+          "concepts": [
+            "seguro do seguro",
+            "distribuição de risco",
+            "retrocessão",
+            "retrocessionário",
+            "responsabilidade perante o segurado",
+            "mercado de seguros privados"
+          ],
+          "sources": [
+            "Transcrição AULA 03, linhas 1294–1358",
+            "Slide 20"
+          ]
+        },
+        {
+          "operator": "Corretores de seguros",
+          "concepts": [
+            "pessoa física ou jurídica",
+            "habilitação e registro",
+            "intermediação",
+            "identificação de riscos",
+            "recomendação de modalidade e seguradora",
+            "assistência vigência/sinistro/renovação",
+            "corretagem incluída no prêmio no modelo estudado"
+          ],
+          "sources": [
+            "Transcrição AULA 03, linhas 1359–1457",
+            "Slide 21"
+          ]
+        }
+      ],
+      "selected_authoring_questions": [
+        1,
+        3,
+        6,
+        7,
+        9,
+        10,
+        13,
+        17,
+        18,
+        23,
+        24,
+        26,
+        32,
+        33,
+        34,
+        37,
+        38,
+        39,
+        41,
+        43,
+        45,
+        47
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "block": 1,
+      "issue": "A transcrição diz que BNDES não é banco de desenvolvimento de maneira absoluta.",
+      "resolution": "Distinção reformulada: finalidade de desenvolvimento versus categoria regulatória dos bancos estaduais. Nenhuma alternativa afirma que BNDES não atua no desenvolvimento."
+    },
+    {
+      "block": 1,
+      "issue": "Slide 3 chama preparo de documentos de subscrição/aquisição, e afirma que uma grande empresa não iria a banco comercial.",
+      "resolution": "Conceito de subscrição segue slides 1–2 e transcrição: aquisição de títulos. Exemplo de consultoria/distribuição mantido sem exclusividade do banco de investimento ou limitação absoluta ao banco comercial."
+    },
+    {
+      "block": 1,
+      "issue": "Slide 2 coloca distribuição de valores mobiliários no quadro de operações ativas, enquanto a transcrição a descreve como prestação de serviço.",
+      "resolution": "Materiais e questões distinguem aquisição própria de distribuição para clientes. Não se criou questão classificando distribuição pura como aplicação de recursos."
+    },
+    {
+      "block": 1,
+      "issue": "Reconhecimento de fala gera valores imobiliários, debentory, BNDS e sessão de créditos.",
+      "resolution": "Normalizados para valores mobiliários, debêntures, BNDES e cessão de créditos, com slides como apoio."
+    },
+    {
+      "block": 1,
+      "issue": "Nenhuma norma vigente foi certificada de forma independente neste bloco.",
+      "resolution": "Proveniência identificada como slides/transcrição do usuário. Não foram adicionadas alterações regulatórias supostas, datas ausentes ou garantias de frequência na prova."
+    },
+    {
+      "block": 2,
+      "issue": "SCI: o slide lista poupança e, ao mesmo tempo, afirma atuação apenas como repassadora desde os anos 1980.",
+      "resolution": "Separadas possibilidade de captação descrita no quadro e prática apresentada pelo professor. Não se transformou a afirmação operacional em proibição normativa e não se criou questão sobre a data ou universalidade dessa prática."
+    },
+    {
+      "block": 2,
+      "issue": "CH: a transcrição omite a condição da CVM para administrar FII e não enfatiza o alcance não residencial.",
+      "resolution": "Confirmados os dois pontos visualmente no slide 9. Incluídos em resumo, mapa, flashcards e questões específicas."
+    },
+    {
+      "block": 2,
+      "issue": "SCFI: a aula lista CDB, RDB, DPGE, LF, LC, LCA e LIG, sem detalhar as condições de cada instrumento.",
+      "resolution": "Lista preservada como conteúdo apresentado na aula, com ressalva de regras próprias. Questões de captação concentram-se em LC e classificação passiva; não pressupõem autorização irrestrita para todos os títulos nem LF como depósito a prazo."
+    },
+    {
+      "block": 2,
+      "issue": "SCMEPP: a transcrição diz genericamente depósito interfinanceiro, mas o slide especifica DIM.",
+      "resolution": "Usado o nome completo depósito interfinanceiro vinculado a operações de microfinanças (DIM) nas fontes, materiais e perguntas."
+    },
+    {
+      "block": 2,
+      "issue": "A transcrição reconhece valores imobiliários em trecho sobre emissão pública de títulos pela SCMEPP.",
+      "resolution": "Corrigido para valores mobiliários, conforme o slide 11."
+    },
+    {
+      "block": 2,
+      "issue": "O exemplo de risco nas financeiras pode induzir a aprovação automática ou juros sempre superiores.",
+      "resolution": "Tratado como possibilidade de nicho e relação econômica condicional, com análise de crédito e sem generalização universal."
+    },
+    {
+      "block": 2,
+      "issue": "O bloco não apresenta calendário, duração ou composição numérica que exija linha do tempo.",
+      "resolution": "Sem números artificiais, mandatos inventados ou cronologia de fontes de recursos; numbers e timelines permanecem vazios."
+    },
+    {
+      "block": 2,
+      "issue": "O slide SCMEPP inclui garantias em operações ativas, enquanto outras aulas classificam fianças como serviço acessório.",
+      "resolution": "Preservada a possibilidade de financiar e prestar garantias ao público-alvo, sem questão que classifique toda prestação de garantia como operação ativa."
+    },
+    {
+      "block": 3,
+      "issue": "A transcrição diz Decisão conjunta em 17 de setembro de 2009; o slide traz BACEN/CVM 17/09, que identifica o número/ano da decisão, não comprova dia e mês.",
+      "resolution": "Usado apenas 2009 e a convergência operacional; nenhuma questão cobra dia ou mês da decisão."
+    },
+    {
+      "block": 3,
+      "issue": "A fala chama títulos de valores imobiliários, B13 e debentores em pontos.",
+      "resolution": "Normalizados para valores mobiliários, B3 e debêntures, conferidos com os slides."
+    },
+    {
+      "block": 3,
+      "issue": "A explicação da contraparte central pode ser lida como garantia de qualquer operação ou do retorno do investimento.",
+      "resolution": "Limitada às operações cobertas pelas regras do serviço; risco de mercado e valorização não garantidos."
+    },
+    {
+      "block": 3,
+      "issue": "Intermediação por serviços poderia virar proibição absoluta de crédito pelas corretoras.",
+      "resolution": "Preservada a conta margem prevista no slide e na fala; contraposta apenas à captação de depósito à vista e à intermediação bancária típica."
+    },
+    {
+      "block": 3,
+      "issue": "CVM aparece na fiscalização da bolsa, mas a B3 também oferece atividades de infraestrutura com competências distintas.",
+      "resolution": "CVM e autorregulação citadas para o mercado de valores mobiliários; evitada afirmação de supervisão exclusiva da B3 pela CVM."
+    },
+    {
+      "block": 3,
+      "issue": "Consórcio sem juros pode ser confundido com gratuidade ou crédito imediato na adesão.",
+      "resolution": "Mantidos taxa de administração, possíveis encargos contratuais e requisito de contemplação; não criadas questões sobre cancelamento/restituição fora da fonte."
+    },
+    {
+      "block": 3,
+      "issue": "A fonte não detalha autorização individual de cada serviço ou condições operacionais de conta margem.",
+      "resolution": "Usadas ressalvas de habilitação/autorização; não inventadas taxas, limites, garantias ou prazos legais."
+    },
+    {
+      "block": 3,
+      "issue": "Contas de registro/trânsito não são detalhadas nos slides ou na transcrição.",
+      "resolution": "Incluída só a distinção conceitual solicitada pelo usuário e compatível com a natureza não monetária; não ensinados saldos remunerados, prazos de transferência nem garantias específicas."
+    },
+    {
+      "block": 3,
+      "issue": "Números 100 pessoas, R$ 1.000 e 72 meses são exemplos da aula, não exigências legais.",
+      "resolution": "Não incluídos em números para decorar; cálculos têm premissas explícitas no próprio enunciado."
+    },
+    {
+      "block": 3,
+      "issue": "O ranking sugerido contém participantes de outras aulas e não comprova frequência da prova.",
+      "resolution": "Mais questões para CTVM/DTVM e B3 como prioridade didática do usuário; sem afirmações de probabilidade e sem inserir IPs, SCD/SEP ou outros operadores fora das aulas."
+    },
+    {
+      "block": 4,
+      "issue": "Slide 20 atribui ao beneficiário o pagamento do prêmio; a fala usa segurado/contratante.",
+      "resolution": "Identificar contratante como pagador do prêmio e segurado ou beneficiário como destinatário da indenização; não tratar beneficiário necessariamente como pagador."
+    },
+    {
+      "block": 4,
+      "issue": "Fala sobre PGBL mistura dedução da base e diminuição da alíquota.",
+      "resolution": "Corrigido para possível dedução da base, sujeita às condições e ao limite; não criar questão sobre restituição garantida ou redução automática de alíquota. Não aprofundar regimes, 12% ou VGBL não desenvolvidos na fonte."
+    },
+    {
+      "block": 4,
+      "issue": "Exemplo de resseguro pode sugerir pagamento direto do ressegurador ao cliente.",
+      "resolution": "Preservar a responsabilidade da seguradora no seguro e separar a relação de resseguro; não ensinar substituição automática de devedor."
+    },
+    {
+      "block": 4,
+      "issue": "Fala em pagamentos de capitalização e previdência mensais, com prazos de exemplo.",
+      "resolution": "Não transformar 5 anos, R$ 200 ou um calendário mensal em regra geral; pagamentos e periodicidade seguem o contrato."
+    },
+    {
+      "block": 4,
+      "issue": "Slide 20 trata todas as resseguradoras como S.A. sem apresentar modalidades local/admitido/eventual.",
+      "resolution": "Não publicar afirmação universal de forma societária para resseguradores estrangeiros nem criar requisitos atuais de modalidades não fornecidas."
+    },
+    {
+      "block": 4,
+      "issue": "Slide 21 descreve canais alternativos de registro e corretagem incluída no prêmio.",
+      "resolution": "Ensinar habilitação/registro sem afirmar a existência operacional atual de determinada entidade autorreguladora; explicitar o modelo de remuneração descrito na aula."
+    },
+    {
+      "block": 4,
+      "issue": "DPVAT aparece como exemplo de seguro.",
+      "resolution": "Não gerar questão sobre operação atual do DPVAT; manter exemplos estáveis de automóvel, residência e pessoas."
+    },
+    {
+      "block": 4,
+      "issue": "A EFPC é descrita como incapaz de prestar benefícios fora da finalidade previdenciária.",
+      "resolution": "Manter o objetivo previdenciário sem ampliar a afirmação a atividades financeiras de suporte previstas em regulamentação não conferida."
+    }
+  ],
+  "audit": {
+    "normal": {
+      "questions": 80,
+      "characters": {
+        "correct_strictly_longest": 12,
+        "correct_strictly_shortest": 11,
+        "correct_tied_for_longest": 11,
+        "rank_strategy_rates": [
+          0.178125,
+          0.3531249999999999,
+          0.265625,
+          0.203125
+        ]
+      },
+      "words": {
+        "correct_strictly_longest": 8,
+        "correct_strictly_shortest": 12,
+        "correct_tied_for_longest": 29,
+        "rank_strategy_rates": [
+          0.29375000000000007,
+          0.2270833333333334,
+          0.2645833333333333,
+          0.21458333333333335
+        ]
+      },
+      "correct_over_50_percent_longer_than_all_distractors": 0
+    },
+    "hardcore": {
+      "questions": 20,
+      "characters": {
+        "correct_strictly_longest": 2,
+        "correct_strictly_shortest": 2,
+        "correct_tied_for_longest": 6,
+        "rank_strategy_rates": [
+          0.26666666666666666,
+          0.3583333333333333,
+          0.18333333333333332,
+          0.19166666666666668
+        ]
+      },
+      "words": {
+        "correct_strictly_longest": 1,
+        "correct_strictly_shortest": 3,
+        "correct_tied_for_longest": 9,
+        "rank_strategy_rates": [
+          0.39166666666666666,
+          0.2833333333333333,
+          0.15833333333333333,
+          0.16666666666666666
+        ]
+      },
+      "correct_over_50_percent_longer_than_all_distractors": 0
+    },
+    "normal_by_lesson": {
+      "7": {
+        "questions": 80,
+        "characters": {
+          "correct_strictly_longest": 12,
+          "correct_strictly_shortest": 11,
+          "correct_tied_for_longest": 11,
+          "rank_strategy_rates": [
+            0.178125,
+            0.3531249999999999,
+            0.265625,
+            0.203125
+          ]
+        },
+        "words": {
+          "correct_strictly_longest": 8,
+          "correct_strictly_shortest": 12,
+          "correct_tied_for_longest": 29,
+          "rank_strategy_rates": [
+            0.29375000000000007,
+            0.2270833333333334,
+            0.2645833333333333,
+            0.21458333333333335
+          ]
+        },
+        "correct_over_50_percent_longer_than_all_distractors": 0
+      }
+    }
+  },
+  "review_scope": "Transcrições e slides confrontados integralmente; estrutura, alternativas e funcionamento verificados. Consulta independente aos sites oficiais permaneceu indisponível por bloqueio de acesso; não há certificação jurídica de atualização normativa.",
+  "preservation": "As 600 questões anteriores mantêm ordem e conteúdo; AL e MAT das aulas 1–6 são comparados com a versão anterior nesta entrega.",
+  "question_count_standard": "100 questões por aula: 20 fáceis, 40 médias, 20 difíceis e 20 Hardcore, conforme as aulas existentes e a instrução explícita do usuário."
+}

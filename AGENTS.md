@@ -252,3 +252,43 @@ Antes de publicar mudanças na trilha, execute os quatro comandos de validação
 acima. O teste de navegação abre e confere as três seções das seis aulas. Faça
 também revisão pedagógica manual: testes de estrutura e renderização não provam
 completude, qualidade de um macete ou validade jurídica.
+
+## Novas aulas com vários blocos
+
+A aula 7 reúne as três transcrições e os 21 slides em quatro blocos internos,
+mantendo uma única entrada na trilha. `AL[n].b` contém os blocos com `id`, `t`,
+`operators`, `topics`, `r`, `d`, `p` e `n`; `MAT[n].b` contém seus materiais.
+As listas agregadas de `AL` e `MAT` continuam completas para “Toda a aula”.
+Blocos são opcionais; não os imponha às aulas antigas ou a conteúdos pequenos.
+
+**Quantidade de questões:** mantenha o padrão de **100 por aula**, com **80
+normais (20 fáceis, 40 médias, 20 difíceis) e 20 Hardcore**. O usuário exigiu
+explicitamente que a aula 7 tenha o mesmo número das anteriores. Reunir várias
+transcrições não autoriza aumentar esse número. Só mude mediante pedido explícito.
+Distribua a seleção entre todos os participantes, preservando as prioridades
+pedagógicas solicitadas e evitando perguntas repetidas.
+
+- Os tópicos de questões pertencem a um único bloco. Use temas úteis à revisão,
+  compartilhados por questões relacionadas, evitando um tema novo por pergunta
+  ou o prefixo Hardcore no nome do tema. A dificuldade já é um campo separado.
+- A seleção de leitura usa `selectedLessonBlocks`; a prática usa `cfg.b`.
+  `currentMaterial` fornece os cartões e materiais do bloco selecionado.
+  Preserve a face do flashcard ao trocar tema e reinicie sua posição ao trocar
+  aula/bloco. Consultar materiais não reinicia a sessão de questões em andamento.
+- Na trilha, estatísticas do bloco usam seus tópicos; no painel, os indicadores
+  de aula e o histórico continuam completos. “Todas as aulas” não herda um
+  filtro de bloco de uma aula específica. Não altere os IDs de `Q` existentes.
+- O usuário pediu maior atenção a CTVM/DTVM, B3, bancos múltiplos e aos demais
+  participantes priorizados, quando presentes nas fontes da aula. Aplique isso
+  na variedade e profundidade das questões. Não crie capítulos sem material nem
+  apresente esse critério como frequência oficial ou previsão garantida da prova.
+- Ausência de números, prazos ou cronologia é válida: não invente informações
+  para preencher “Números” ou “Linha do tempo”. Relações operacionais pertencem
+  aos diagramas; conceitos comparáveis pertencem às tabelas.
+- Cruze transcrições e slides; resolva erros de reconhecimento e inconsistências
+  antes de criar gabaritos. Registre cobertura e correções em relatório de aula,
+  diferenciando verificação das fontes fornecidas de consulta normativa oficial.
+
+O relatório `docs/aula-7-cobertura.json` registra os 18 participantes, as fontes,
+o alcance da revisão e os exercícios desta entrega; seus volumes não são quotas
+obrigatórias para futuros materiais. O número de questões segue a regra acima.

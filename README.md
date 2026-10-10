@@ -1,9 +1,9 @@
 # Painel de estudos CPA
 
 Painel de estudos e simulados em português, importado do arquivo
-`Painel de estudos CPA.html`. O banco mantém 600 perguntas, com os mesmos IDs,
-temas e dificuldades. A versão atual contém feedback específico para cada
-alternativa e uma revisão de redação para reduzir pistas de tamanho e melhorar
+`Painel de estudos CPA.html`. O banco contém 700 perguntas; as 600 anteriores
+mantêm seus IDs, temas e dificuldades. A versão atual contém feedback específico
+para cada alternativa e uma revisão de redação para reduzir pistas de tamanho e melhorar
 a plausibilidade das opções. As correções estão em
 [docs/auditoria-alternativas.md](docs/auditoria-alternativas.md).
 
@@ -51,9 +51,11 @@ local permanece porque a origem do site não muda.
   revisão e última aula empilhadas na lateral, com textos e controles legíveis.
 - Botão de lâmpada fixo para alternar claro/escuro em qualquer tela, com escolha
   salva neste navegador. Sem escolha salva, acompanha o tema do dispositivo.
-- 600 questões: 100 em cada uma das 6 aulas.
+- 700 questões: 100 em cada uma das 7 aulas, sendo 80 de estudo e 20 Hardcore.
 - Aula 6 identificada como **Operadores Monetários**, mantendo os conteúdos e IDs.
-- 120 fáceis, 240 médias, 120 difíceis e 120 Hardcore.
+- Aula 7: **Operadores Não Monetários**, com 18 participantes em quatro blocos.
+  A leitura, os materiais e a prática podem abranger toda a aula ou um bloco.
+- 140 fáceis, 280 médias, 140 difíceis e 140 Hardcore.
 - Estudo com dicas, eliminação de alternativas e correção imediata.
 - Feedback da resposta correta e das três alternativas incorretas após responder,
   tanto em Estudo quanto em Hardcore, incluindo prática diária e por aula.
@@ -85,7 +87,7 @@ local permanece porque a origem do site não muda.
 
 ## Organização da trilha
 
-As três seções das seis aulas foram revistas individualmente e confrontadas com
+As três seções das aulas foram revistas individualmente e confrontadas com
 as questões e o material de apoio existente. **Resumo da aula** explica conceitos
 e regras; **Dicas e macetes** oferece métodos para memorizar ou resolver;
 **Pegadinhas** mostra uma afirmação enganosa, sua correção e o motivo do erro.
@@ -96,6 +98,11 @@ fornecidos como fontes e conferindo também a consistência das questões e dos
 materiais. A revisão e os conteúdos recuperados estão em
 [docs/revisao-trilha.md](docs/revisao-trilha.md); a rastreabilidade dos 128 itens
 anteriores está em [docs/revisao-trilha-itens.json](docs/revisao-trilha-itens.json).
+
+A aula 7 reúne três aulas do professor, sem aumentar o padrão de 100 questões.
+O bloco de mercado de capitais recebe mais exercícios, conforme a prioridade
+solicitada. Fontes, cobertura e correções estão em
+[docs/aula-7-operadores-nao-monetarios.md](docs/aula-7-operadores-nao-monetarios.md).
 
 ## Histórico
 
@@ -155,11 +162,13 @@ O teste inicia e encerra seu próprio servidor local e usa um histórico isolado
 por caso. Ele detecta Chromium no sistema; para informar outro executável,
 use a variável `CHROMIUM_PATH`.
 
-Os casos verificam o banco de questões, os materiais das seis aulas, os três
+Os casos verificam o banco de questões, os materiais das sete aulas, os três
 modos de prática, ajudas, revisão de erros, filtros, estudo diário, persistência,
 limpeza do histórico e um fluxo em tela móvel. Também exercitam as quatro escolhas
 de todas as questões para conferir a associação entre alternativa embaralhada e
 feedback, a ausência de feedback em simulados e o contrato de conteúdo futuro.
+Os blocos da aula 7 também são conferidos na leitura, na prática e nos simulados,
+incluindo os 18 participantes, o limite de 100 questões e a preservação dos IDs.
 A integração com a conta do Claude não faz parte desses testes.
 
 Também verificamos a diferença entre tentativas, cobertura única e erros
@@ -170,7 +179,7 @@ de questões em andamento. A barra de progresso é conferida nos três modos.
 
 ## Feedback e novas questões
 
-O banco atual inclui 2.400 feedbacks: quatro por questão. A justificativa geral
+O banco atual inclui 2.800 feedbacks: quatro por questão. A justificativa geral
 original fundamenta a resposta certa. As explicações das demais opções apontam
 conceitos confundidos, papéis trocados, exclusões, erros de cálculo ou afirmações
 indevidamente incluídas/omitidas. Nas perguntas que pedem INCORRETA ou NÃO,

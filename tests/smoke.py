@@ -68,8 +68,11 @@ class PainelCPA(unittest.TestCase):
     def click(self, text):
         self.page.get_by_role("button", name=text, exact=True).click()
 
+    def lesson_numbers(self):
+        return range(1, self.page.evaluate("AL.length") + 1)
+
     def assert_material_content(self, kind):
-        material = self.page.evaluate("MAT[mt.a]")
+        material = self.page.evaluate("typeof currentMaterial === 'function' ? currentMaterial() : MAT[mt.a]")
 
         def strings(value):
             if isinstance(value, str):
@@ -160,8 +163,13 @@ class PainelCPA(unittest.TestCase):
     def test_01_bank_and_dashboard(self):
         data = self.page.evaluate("Q")
         self.assertGreaterEqual(len(data), 600)
+        # As seis aulas originais continuam completas; futuras aulas não herdam
+        # uma quota editorial, mas precisam oferecer Estudo e Hardcore.
         self.assertTrue(all(sum(q[0] == lesson for q in data) >= 100 for lesson in range(1, 7)))
         self.assertTrue(all(sum(q[2] == level for q in data) >= count for level, count in enumerate([120, 240, 120, 120])))
+        for lesson in self.lesson_numbers():
+            self.assertTrue(any(q[0] == lesson and q[2] < 3 for q in data))
+            self.assertTrue(any(q[0] == lesson and q[2] == 3 for q in data))
         for q in data:
             self.assertTrue(all(isinstance(value, str) and value.strip() for value in q[3:9]))
         self.assertEqual(self.page.locator(".g4 .mv").all_text_contents(), ["0", "0", "0", "0%"])
@@ -173,9 +181,10 @@ class PainelCPA(unittest.TestCase):
         self.click("Quadro do SFN")
         self.assertIn("Banco Central do Brasil", self.page.locator("#app").inner_text())
         self.click("Trilha")
-        for lesson in range(1, 7):
+        total_lessons = self.page.evaluate("AL.length")
+        for lesson in self.lesson_numbers():
             self.page.locator("button.tb").nth(lesson - 1).click()
-            self.assertIn(f"Aula {lesson} de 6", self.page.locator(".hero").inner_text())
+            self.assertIn(f"Aula {lesson} de {total_lessons}", self.page.locator(".hero").inner_text())
             content = self.page.evaluate("AL[tr - 1]")
             for section, title in [("r", "Resumo da aula"), ("d", "Dicas e macetes"), ("p", "Pegadinhas")]:
                 accordion = self.page.locator("details.acc").filter(
@@ -207,7 +216,7 @@ class PainelCPA(unittest.TestCase):
             if lesson == 6:
                 self.assertNotIn("cada carteira tem CNPJ", self.page.locator("#app").inner_text())
         self.page.locator(".nav").get_by_role("button", name="Material de apoio", exact=True).click()
-        for lesson in range(1, 7):
+        for lesson in self.lesson_numbers():
             self.click(f"Aula {lesson}")
             content = self.page.evaluate("lesson => AL[lesson - 1]", lesson)
             for kind in ["Mapa mental", "Diagramas", "Tabelas", "Linha do tempo", "Flashcards"]:
@@ -355,7 +364,7 @@ class PainelCPA(unittest.TestCase):
             self.assertEqual(self.page.locator(".feedback").count(), 0)
 
     def test_12_all_questions_and_shuffled_alternatives_have_matching_feedback(self):
-        # Exercita os quatro caminhos de resposta das 600 questões no DOM real.
+        # Exercita os quatro caminhos de resposta de todo o banco no DOM real.
         result = self.page.evaluate("""() => {
             let checked = 0;
             for (let id = 1; id <= Q.length; id++) {
@@ -584,14 +593,17 @@ class PainelCPA(unittest.TestCase):
         progress = self.page.get_by_role("progressbar").evaluate_all(
             "elements => elements.map(e => [Number(e.getAttribute('aria-valuenow')), Number(e.getAttribute('aria-valuemax'))])"
         )
-        self.assertEqual(progress, [[2,100],[0,100],[1,100],[0,100],[0,100],[1,100]])
-        self.assertEqual(self.page.locator(".trail-percent").all_text_contents(), ["2%","0%","1%","0%","0%","1%"])
+        totals = self.page.evaluate("AL.map((_,i)=>Q.filter(q=>q[0]===i+1).length)")
+        covered = [2, 0, 1, 0, 0, 1] + [0] * (len(totals) - 6)
+        self.assertEqual(progress, [[seen,total] for seen,total in zip(covered,totals)])
+        self.assertEqual(self.page.locator(".trail-percent").all_text_contents(),
+                         [f"{seen * 100 // total}%" for seen,total in zip(covered,totals)])
         self.assertEqual(self.page.locator(".priority-list li").count(), 2)
-        self.assertIn("596 nunca respondidas", self.page.locator(".dashboard-footer").inner_text())
+        self.assertIn(f"{sum(totals) - 4} nunca respondidas", self.page.locator(".dashboard-footer").inner_text())
         self.page.locator(".dashboard-filters > summary").click()
         self.click("Estudo")
         self.assertEqual(self.page.locator(".g4 .mv").all_text_contents(), ["3", "1", "2", "33%"])
-        self.assertEqual(self.page.locator(".trail-count").nth(0).inner_text(), "2 de 100 questões")
+        self.assertEqual(self.page.locator(".trail-count").nth(0).inner_text(), f"2 de {totals[0]} questões")
         self.assertEqual(self.page.get_by_role("button", name="Revisar 2 erros", exact=True).count(), 1)
         self.assertIn("33%", self.page.get_by_role("img", name="Aproveitamento por dia").text_content())
         self.click("Hardcore")
@@ -645,7 +657,7 @@ class PainelCPA(unittest.TestCase):
         self.click("Trilha")
         sections = [("Números","lesson-numbers"),("Resumo","lesson-summary"),
                     ("Dicas e macetes","lesson-tips"),("Pegadinhas","lesson-traps")]
-        for lesson in range(1,7):
+        for lesson in self.lesson_numbers():
             self.page.locator("button.tb").nth(lesson-1).click()
             shortcuts = self.page.get_by_role("navigation", name="Atalhos desta aula")
             self.assertEqual(shortcuts.get_by_role("link").count(), 4)
@@ -737,6 +749,13 @@ class PainelCPA(unittest.TestCase):
                 "e=>getComputedStyle(e).textAlign"
             ), "center")
 
+            self.page.evaluate("chooseMaterial('a',7);chooseLessonBlock(7,2);chooseMaterial('c','mapa')")
+            negatives = self.page.locator(".context-negative").all_text_contents()
+            self.assertFalse(any(re.search(r"não residenciais", text, re.I) for text in negatives),
+                             "Não residenciais é uma classificação, não uma proibição")
+            self.assertIn("Não recebe depósitos de poupança", negatives,
+                          "Proibições reais devem continuar destacadas")
+
             self.page.evaluate("chooseMaterial('a',4);chooseMaterial('c','tl')")
             ratios = self.page.locator(".duration-row .duration-track").evaluate_all("""tracks=>tracks.map(e=>
                 e.querySelector('.duration-line').getBoundingClientRect().width/e.getBoundingClientRect().width)""")
@@ -785,7 +804,7 @@ class PainelCPA(unittest.TestCase):
                          5: ["CNSP", "Susep", "CNPC", "Previc"]}
         for theme in ["light", "dark"]:
             self.page.evaluate("theme=>document.documentElement.dataset.theme=theme", theme)
-            for lesson in range(1, 7):
+            for lesson in self.lesson_numbers():
                 self.page.evaluate("lesson=>{view='m';mt={a:lesson,c:'mapa'};go()}", lesson)
                 self.assert_material_content("Mapa mental")
                 self.assertTrue(self.page.locator(".mind-branch h3,.mind-branch h3>span").evaluate_all(
@@ -838,6 +857,159 @@ class PainelCPA(unittest.TestCase):
                                  {"Diretor do BACEN" if organ == "BACEN" else "Diretor da CVM"})
             self.page.evaluate("mt={a:2,c:'diag'};go()")
             self.assertEqual(self.page.locator(".collegiate-affiliation").all_text_contents(), ["Presidente do CMN"])
+
+    def test_27_lesson7_blocks_cover_operators_and_question_modes(self):
+        data = self.page.evaluate("({lesson:AL[6],material:MAT[7],questions:Q})")
+        lesson, material, questions = data["lesson"], data["material"], data["questions"]
+        self.assertIn("Operadores Não Monetários", lesson["t"])
+        self.assertEqual([block["id"] for block in lesson["b"]], [1, 2, 3, 4])
+        self.assertEqual([block["id"] for block in material["b"]], [1, 2, 3, 4])
+        operators = [operator for block in lesson["b"] for operator in block["operators"]]
+        self.assertEqual(len(operators), 18)
+        self.assertEqual(len(set(operators)), 18, "Um operador não pode desaparecer na divisão da aula")
+        topics = [topic for block in lesson["b"] for topic in block["topics"]]
+        self.assertEqual(len(topics), len(set(topics)), "O filtro de um bloco não deve incluir outro bloco")
+        new_questions = [(index + 1, q) for index, q in enumerate(questions) if q[0] == 7]
+        self.assertEqual(len(new_questions), 100,
+                         "A aula 7 deve ter a mesma quantidade de questões das anteriores")
+        self.assertEqual([sum(q[2] == level for _, q in new_questions) for level in range(4)],
+                         [20, 40, 20, 20], "Preserve a distribuição de dificuldade por aula")
+        self.assertTrue(all(question_id > 600 for question_id, _ in new_questions),
+                        "As questões novas precisam preservar os IDs do histórico existente")
+        self.assertEqual({q[1] for _, q in new_questions}, set(topics))
+        for block in lesson["b"]:
+            with self.subTest(block=block["id"]):
+                block_questions = [q for _, q in new_questions if q[1] in block["topics"]]
+                self.assertGreater(sum(q[2] < 3 for q in block_questions), 1)
+                self.assertGreater(sum(q[2] == 3 for q in block_questions), 1)
+                self.assertTrue(all(len(q[11]) == 4 and len(set(q[11])) == 4
+                                    for q in block_questions))
+
+    def test_28_lesson7_block_shortcuts_filter_study_and_hardcore(self):
+        self.click("Trilha")
+        self.page.locator("button.tb").nth(6).click()
+        self.assertEqual(self.page.locator(".lesson-blocks button").count(), 5)
+        for block in self.page.evaluate("AL[6].b"):
+            for mode, shortcut in [("e", "Estudar este bloco"), ("h", "Hardcore deste bloco")]:
+                with self.subTest(block=block["id"], mode=mode):
+                    self.click("Trilha")
+                    self.page.locator(".lesson-blocks button[data-lesson-block='%d']" % block["id"]).click()
+                    self.assertEqual(self.page.locator("#lesson-numbers").count(), int(bool(block["n"])))
+                    expected_shortcuts = 4 if block["n"] else 3
+                    self.assertEqual(self.page.get_by_role("navigation", name="Atalhos desta aula").get_by_role("link").count(), expected_shortcuts)
+                    self.click(shortcut)
+                    session = self.page.evaluate("({mode:qz.md,ids:qz.ids,questions:qz.ids.map(id=>Q[id-1])})")
+                    self.assertEqual(session["mode"], mode)
+                    self.assertGreater(len(session["ids"]), 0)
+                    self.assertEqual(len(session["ids"]), len(set(session["ids"])))
+                    self.assertTrue(all(q[0] == 7 and q[1] in block["topics"]
+                                        and (q[2] == 3 if mode == "h" else q[2] < 3)
+                                        for q in session["questions"]))
+                    self.assertEqual(self.page.locator(".feedback").count(), 0)
+                    self.assertEqual(self.page.locator(".aj").count(), int(mode == "e"))
+                    self.answer(correct=mode == "h")
+                    self.assertEqual(self.page.locator(".fb-option").count(), 4)
+                    self.assertEqual(self.page.locator(".fb-selected.fb-correct").count(), int(mode == "h"))
+                    self.assertTrue(self.page.evaluate("[...document.querySelectorAll('.fb-option')].every((e,i)=>e.querySelector('p').textContent===Q[qz.ids[qz.i]-1][11][qz.o[i][2]])"))
+        self.assertEqual(self.page.evaluate("H.map(row=>row[3])"), [0, 2] * 4)
+
+    def test_29_lesson7_material_blocks_preserve_all_contents_and_quiz(self):
+        self.page.evaluate("begin([Q.findIndex(q=>q[0]===7&&q[2]<3)+1],'e')")
+        state = self.page.evaluate("({ids:qz.ids,index:qz.i,start:qz.t0,history:H})")
+        self.page.locator(".nav").get_by_role("button", name="Material de apoio", exact=True).click()
+        self.click("Aula 7")
+        for block in self.page.evaluate("AL[6].b"):
+            self.page.locator(".lesson-blocks button[data-lesson-block='%d']" % block["id"]).click()
+            self.assertEqual(self.page.locator(".lesson-blocks button[aria-pressed='true']").get_attribute("data-lesson-block"), str(block["id"]))
+            for kind in ["Mapa mental", "Diagramas", "Tabelas", "Linha do tempo", "Flashcards"]:
+                with self.subTest(block=block["id"], kind=kind):
+                    self.click(kind)
+                    self.assert_material_content(kind)
+                    self.assertTrue(self.page.evaluate("document.documentElement.scrollWidth<=innerWidth"),
+                                    "Materiais do bloco não devem criar rolagem horizontal da página")
+                    self.assertEqual(self.page.evaluate("({ids:qz.ids,index:qz.i,start:qz.t0,history:H})"), state)
+        self.page.locator(".lesson-blocks button[data-lesson-block='0']").click()
+        self.click("Mapa mental")
+        self.assert_material_content("Mapa mental")
+        self.assertEqual(self.page.evaluate("({ids:qz.ids,index:qz.i,start:qz.t0,history:H})"), state)
+
+    def test_30_lesson7_flashcards_wrap_by_selected_block_and_keep_face_on_theme_change(self):
+        self.page.locator(".nav").get_by_role("button", name="Material de apoio", exact=True).click()
+        self.click("Aula 7")
+        self.click("Flashcards")
+        for block_id in [0, 1, 2, 3, 4]:
+            with self.subTest(block=block_id):
+                self.page.locator(".lesson-blocks button[data-lesson-block='%d']" % block_id).click()
+                cards = self.page.evaluate("currentMaterial().fc")
+                self.assertGreater(len(cards), 1)
+                self.assertEqual(self.page.evaluate("[fi,ff]"), [0, 0])
+                self.assertEqual(self.page.locator(".flashcard-text").inner_text(), cards[0][0])
+                self.assertEqual(self.page.locator(".flashcard-progress").get_attribute("aria-valuemax"), str(len(cards)))
+                self.click("Anterior")
+                self.assertEqual(self.page.evaluate("fi"), len(cards) - 1)
+                self.assertEqual(self.page.locator(".flashcard-text").inner_text(), cards[-1][0])
+                self.page.locator(".fcd").click()
+                self.assertEqual(self.page.locator(".flashcard-text").inner_text(), cards[-1][1])
+                self.assertEqual(self.page.locator(".fcd.is-answer").count(), 1)
+                self.toggle_theme()
+                self.assertEqual(self.page.locator(".flashcard-text").inner_text(), cards[-1][1])
+                self.click("Próximo")
+                self.assertEqual(self.page.evaluate("[fi,ff]"), [0, 0])
+                self.assertEqual(self.page.locator(".flashcard-text").inner_text(), cards[0][0])
+        self.assertEqual(self.page.evaluate("H"), [])
+
+    def test_31_lesson7_history_appends_to_legacy_progress_and_retry_updates_only_pending_error(self):
+        legacy = [[1, 0, 1700000000000, 0], [600, 1, 1700000001000, 2]]
+        self.page.evaluate("history=>localStorage.setItem('cpaH',JSON.stringify(history))", legacy)
+        self.page.reload()
+        self.page.get_by_text("Progresso salvo neste navegador.", exact=False).wait_for()
+        self.assertEqual(self.page.evaluate("H"), legacy)
+        new_id = self.page.evaluate("Q.findIndex(q=>q[0]===7&&q[2]<3)+1")
+        self.page.evaluate("id=>begin([id],'e')", new_id)
+        self.answer(correct=False)
+        self.click("Ver resultado")
+        self.click("Ver painel")
+        total = self.page.evaluate("Q.filter(q=>q[0]===7).length")
+        progress = self.page.get_by_role("progressbar", name="Questões praticadas da aula 7")
+        self.assertEqual(progress.get_attribute("aria-valuenow"), "1")
+        self.assertEqual(progress.get_attribute("aria-valuemax"), str(total))
+        self.assertEqual(self.page.locator(".g4 .mv").all_text_contents(), ["3", "1", "2", "33%"])
+        self.click("Abrir aula")
+        self.assertEqual(self.page.evaluate("tr"), 7)
+        self.click("Erros (2)")
+        self.assertEqual(self.page.locator("details.rv").count(), 2)
+        self.click("Refazer erros (modo estudo)")
+        self.assertEqual(set(self.page.evaluate("qz.ids")), {1, new_id})
+        self.page.evaluate("id=>begin([id],'e')", new_id)
+        self.answer(correct=True)
+        self.page.reload()
+        self.page.get_by_text("Progresso salvo neste navegador.", exact=False).wait_for()
+        self.assertEqual(self.page.evaluate("H.slice(0,2)"), legacy)
+        self.assertEqual(self.page.evaluate("H.map(row=>row[0])"), [1, 600, new_id, new_id])
+        self.assertEqual(self.page.evaluate("errs()"), [1])
+        self.assertEqual(self.page.get_by_role("progressbar", name="Questões praticadas da aula 7").get_attribute("aria-valuenow"), "1")
+
+    def test_32_lesson7_practice_block_filter_and_fifty_question_simulation(self):
+        self.click("Praticar")
+        self.page.locator("button.oc").filter(has=self.page.get_by_text("Aula 7", exact=True)).click()
+        self.assertEqual(self.page.locator(".practice-blocks button").count(), 5)
+        for block in self.page.evaluate("AL[6].b"):
+            self.page.locator(".practice-blocks button[data-lesson-block='%d']" % block["id"]).click()
+            self.assertTrue(self.page.evaluate("topics=>pool().every(id=>Q[id-1][0]===7&&topics.includes(Q[id-1][1]))", block["topics"]))
+            self.assertGreater(self.page.evaluate("pool().length"), 0)
+        self.page.locator(".practice-blocks button[data-lesson-block='0']").click()
+        self.page.evaluate("cfg.a=7;cfg.b=0;cfg.n=-1;cfg.m='all';cfg.md='s';cfg.c=50;start()")
+        self.assertEqual(self.page.evaluate("qz.ids.length"), 50)
+        self.assertEqual(len(set(self.page.evaluate("qz.ids"))), 50)
+        self.assertTrue(self.page.evaluate("qz.ids.every(id=>Q[id-1][0]===7&&Q[id-1][2]<3&&!Q[id-1][9])"))
+        for index in range(50):
+            self.assertEqual(self.page.locator(".feedback,.answer-result,.aj").count(), 0)
+            self.answer(correct=index != 0)
+        self.assertIn("49 de 50 (98%)", self.page.locator("#app").inner_text())
+        self.assertIn("2h30 para 50 questões", self.page.locator("#app").inner_text())
+        self.assertEqual(self.page.locator("details.rv").count(), 1)
+        self.assertEqual(self.page.locator(".feedback").count(), 0)
+        self.assertEqual(self.page.evaluate("H.map(row=>row[3])"), [1] * 50)
 
 
 if __name__ == "__main__":
