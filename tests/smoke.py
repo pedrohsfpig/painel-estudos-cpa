@@ -1184,5 +1184,150 @@ class PainelCPA(unittest.TestCase):
         self.assertIn("Alguns níveis", result["note"])
 
 
+    def complete_ids(self, ids, mode, correct_positions):
+        self.page.evaluate("([ids,mode])=>begin(ids,mode)", [ids, mode])
+        for index in range(len(ids)):
+            self.answer(correct=index in correct_positions)
+            if mode != "s":
+                self.click("Próxima" if index < len(ids)-1 else "Ver resultado")
+
+    def test_40_roman_statements_are_lists_in_every_question_view(self):
+        for mode, question in [("e",85),("h",491),("s",85)]:
+            self.page.evaluate("([id,mode])=>begin([id],mode)", [question, mode])
+            labels = self.page.locator(".en .statement-label").all_text_contents()
+            self.assertEqual(labels, ["I.","II.","III."] if question == 85 else ["I.","II.","III.","IV."])
+            tops = self.page.locator(".en li").evaluate_all("nodes=>nodes.map(n=>n.getBoundingClientRect().top)")
+            self.assertEqual(tops, sorted(set(tops)))
+            self.assertEqual(self.page.locator(".en .stem-intro").count(), 1)
+            self.assertEqual(self.page.locator(".en .stem-question").count(), 1)
+            self.answer(correct=False)
+            if mode != "s":
+                self.click("Ver resultado")
+            self.page.locator("details.rv summary").click()
+            self.assertEqual(self.page.locator(".rv .statement-label").all_text_contents(), labels)
+            self.assertEqual(self.page.locator(".fb-option").count(), 0 if mode == "s" else 4)
+
+    def test_41_all_current_and_future_statements_preserve_text_and_uppercase(self):
+        result = self.page.evaluate("""() => {
+            let checked=0;
+            const clean=s=>s.replace(/\\s+/g,' ').trim();
+            for (const [index,q] of Q.entries()) {
+                const markers=[...q[3].matchAll(/^([IVX]+)\\. /gm)];
+                if (!markers.length) continue;
+                const box=document.createElement('div');box.innerHTML=questionStemHtml(q[3]);
+                if (box.querySelectorAll('li').length!==markers.length) throw Error('Lista incompleta: '+(index+1));
+                const labels=[...box.querySelectorAll('.statement-label')].map(n=>n.textContent);
+                if (JSON.stringify(labels)!==JSON.stringify(markers.map(m=>m[1]+'.'))) throw Error('Romano incorreto: '+(index+1));
+                box.querySelectorAll('.statement-label').forEach(n=>n.remove());
+                if(clean(box.textContent)!==clean(q[3].replace(/^([IVX]+)\\. /gm,''))) {
+                    // Elementos adjacentes podem não inserir espaço em textContent.
+                    const p=questionStemParts(q[3]);
+                    if(clean([p.intro,...p.items,p.footer].join(' '))!==clean(q[3].replace(/^([IVX]+)\\. /gm,'')))
+                        throw Error('Texto perdido: '+(index+1));
+                }
+                checked++;
+            }
+            const future=questionStemParts('Considere: i. Uma afirmação. ii. Outra afirmação. iii. A última. Estão corretas:');
+            const other=questionStemParts('No estágio II da análise, qual providência é adequada?');
+            const secure=document.createElement('div');secure.innerHTML=questionStemHtml('Considere: I. <img src=x onerror=alert(1)> II. Texto. Estão corretas:');
+            return {checked,future,plain:!other.items,images:secure.querySelectorAll('img').length};
+        }""")
+        self.assertGreaterEqual(result["checked"], 70)
+        self.assertEqual(result["future"]["items"], ["Uma afirmação.","Outra afirmação.","A última."])
+        self.assertEqual(result["future"]["footer"], "Estão corretas:")
+        self.assertTrue(result["plain"])
+        self.assertEqual(result["images"], 0)
+
+    def test_42_result_counts_current_session_not_prior_history(self):
+        self.page.evaluate("H=Array.from({length:100},()=>[121,0,1700000000000,0]);save()")
+        self.complete_ids([501,502,509,529,20,235], "e", {0,1,4})
+        self.assertEqual(self.page.locator("[data-result-score]").inner_text(), "3 de 6 (50%)")
+        self.assertEqual(self.page.evaluate("H.length"), 106)
+        for level, percent in [(0,"100%"),(1,"0%"),(2,"50%")]:
+            self.assertIn(percent, self.page.locator(f'[data-result-level="{level}"]').inner_text())
+        self.assertIn("2 de 4 corretas", self.page.locator('[data-result-lesson="6"]').inner_text())
+        self.assertIn("1 de 2 corretas", self.page.locator('[data-result-lesson="2"]').inner_text())
+        priority = self.page.locator(".result-priority").first
+        self.assertIn("Aula 6 · 2 erros em 4 respostas", priority.inner_text())
+        self.assertEqual(self.page.locator(".result-patterns li").count(), 1)
+        self.assertIn("2 dos 3 erros", self.page.locator(".result-patterns").inner_text())
+        self.assertIn("Amostra pequena", self.page.locator(".session-result").inner_text())
+        self.assertEqual(self.page.locator("details.rv").count(), 3)
+
+    def test_43_result_dashboard_all_modes_and_retry_session_only(self):
+        for mode, ids in [("e",[1,2,16]),("s",[1,2,16]),("h",[496,599,698])]:
+            self.page.evaluate("H=[[121,0,1700000000000,0]];save()")
+            self.complete_ids(ids, mode, {1})
+            self.assertEqual(self.page.locator("[data-result-score]").inner_text(), "1 de 3 (33%)")
+            self.assertEqual(self.page.locator(".result-review details.rv").count(), 2)
+            self.assertEqual(self.page.locator(".result-patterns").count(), 0)
+            self.assertIn("Nenhum grupo de assuntos", self.page.locator(".session-result").inner_text())
+            self.click("Refazer erros desta sessão")
+            self.assertEqual(self.page.evaluate("qz.ids"), [ids[0],ids[2]])
+            self.assertEqual(self.page.evaluate("qz.md"), "h" if mode == "h" else "e")
+            self.assertEqual(self.page.evaluate("H.length"), 4)
+            self.answer()
+            self.assertEqual(self.page.locator(".fb-option").count(), 4)
+
+    def test_44_result_content_shortcut_keeps_session_and_opens_correct_block(self):
+        self.complete_ids([601,626], "s", {1})
+        state = self.page.evaluate("JSON.stringify(qz)")
+        history = self.page.evaluate("H")
+        self.click("Revisar conteúdo da aula 7")
+        self.assertEqual(self.page.evaluate("selectedLessonBlocks[7]"), 1)
+        self.assertTrue(self.page.locator("#lesson-summary").evaluate("node=>node.open"))
+        self.assertEqual(self.page.evaluate("JSON.stringify(qz)"), state)
+        self.assertEqual(self.page.evaluate("H"), history)
+        self.click("Praticar")
+        self.assertEqual(self.page.locator("[data-result-score]").inner_text(), "1 de 2 (50%)")
+        self.click("Nova prática")
+        self.assertTrue(self.page.evaluate("qz===null"))
+        self.assertEqual(self.page.evaluate("H"), history)
+
+    def test_45_results_handle_empty_perfect_and_zero_scores(self):
+        self.page.evaluate("begin([], 'e')")
+        self.assertIn("Nenhuma questão respondida", self.page.locator(".session-result").inner_text())
+        self.assertNotIn("NaN", self.page.locator(".session-result").inner_text())
+        for correct, percent in [(True,"100%"),(False,"0%")]:
+            self.complete_ids([1,2], "e", {0,1} if correct else set())
+            self.assertIn(percent, self.page.locator("[data-result-score]").inner_text())
+            self.assertEqual(self.page.locator(".result-priority").count(), 0 if correct else 2)
+            self.assertEqual(self.page.locator(".result-success").count(), 1 if correct else 0)
+            self.assertTrue(self.page.locator(".result-bar span").evaluate_all(
+                "nodes=>nodes.every(n=>Number.isFinite(parseFloat(n.style.width)))"))
+
+    def test_46_final_response_stops_timer_before_feedback_reading(self):
+        self.page.evaluate("begin([1], 'e');qz.t0=Date.now()-60000")
+        self.answer()
+        end = self.page.evaluate("qz.end")
+        self.assertGreater(end, 0)
+        self.page.evaluate("qz.t0-=60000")
+        self.click("Ver resultado")
+        self.assertEqual(self.page.evaluate("qz.end"), end)
+        self.assertIn("02:00", self.page.locator(".result-stat").last.inner_text())
+        self.page.evaluate("go()")
+        self.assertEqual(self.page.evaluate("qz.end"), end)
+
+    def test_47_results_and_statement_lists_fit_desktop_in_both_themes(self):
+        self.complete_ids([496,599,698,534,672], "h", {1,4})
+        state = self.page.evaluate("JSON.stringify(qz)")
+        history = self.page.evaluate("H")
+        for width in [1024,1280,1440,1920]:
+            self.page.set_viewport_size({"width":width,"height":1000})
+            for theme in ["light","dark"]:
+                self.page.evaluate("theme=>document.documentElement.dataset.theme=theme", theme)
+                self.assertTrue(self.page.evaluate("document.documentElement.scrollWidth<=innerWidth"))
+                self.assertTrue(self.page.locator(".result-panel,.result-overview,.result-stat").evaluate_all(
+                    "nodes=>nodes.every(n=>n.getBoundingClientRect().width>100 && n.scrollWidth<=n.clientWidth+1)"))
+                self.page.locator("#theme-toggle").click()
+                self.assertEqual(self.page.evaluate("JSON.stringify(qz)"), state)
+                self.assertEqual(self.page.evaluate("H"), history)
+                if width == 1440:
+                    self.page.evaluate("theme=>document.documentElement.dataset.theme=theme", theme)
+                    self.page.screenshot(path=f"/tmp/cpa-result-{theme}.png", full_page=True)
+        self.page.evaluate("begin([491], 'h')")
+        self.page.screenshot(path="/tmp/cpa-roman-statements.png", full_page=True)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

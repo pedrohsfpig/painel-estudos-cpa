@@ -39,6 +39,7 @@ Antes de publicar alterações em questões ou feedbacks, execute:
 python3 tests/validate_bank.py
 python3 tests/audit_alternatives.py --check
 python3 tests/test_alternative_quality.py
+python3 tests/test_question_design.py
 python3 tests/smoke.py
 ```
 
@@ -332,3 +333,63 @@ Ao iniciar por um atalho de aula/bloco, limpe `cfg.as`; ao combinar aulas, limpe
   Preserve feedbacks, histórico, IDs e o estudo diário.
 
 O comportamento e exemplos estão em `docs/pratica-varias-aulas.md`.
+
+## Exigência cognitiva das questões e enunciados
+
+O usuário exige questões que testem conhecimento do conteúdo, em todos os modos.
+Fácil pode reconhecer um conceito; Médio deve discriminar ou aplicar um conceito;
+Difícil deve combinar condições ou distinguir regras próximas; Hardcore deve
+exigir aplicação integrada, análise de limites, exceções ou procedimentos.
+O nível não se torna alto apenas por conter números, texto longo ou romanos.
+
+- Não forneça no enunciado a regra, a definição completa ou todos os fatores
+  cuja repetição, soma ou multiplicação já resolva a resposta sem conhecimento.
+  Exemplo proibido como Hardcore: informar “2 anos, uma recondução” e perguntar
+  o total. Prefira avaliar admissibilidade de outra recondução, procedimento e
+  competência sem fornecer a regra que está sendo avaliada.
+- Contas financeiras são válidas quando exigem conceito: base correta, natureza
+  da operação, limites e interpretação. Conta genérica isolada não é Hardcore.
+- Use distratores plausíveis, da mesma categoria, sem exclusões absurdas que
+  permitam acertar por bom senso. Nenhuma opção deve ser correta por repetição
+  exclusiva de palavras do enunciado. Uma questão deve ter resposta única.
+- Ao alterar uma questão, atualize alternativas, justificativa geral, dica e
+  os quatro feedbacks. Preserve ID, ordem e distribuição por aula/nível; revise
+  também variantes da mesma falha em todas as aulas e no conjunto de simulados.
+- Afirmações em romanos usam I, II, III, IV etc. em maiúsculas, uma por linha,
+  com introdução e pergunta final separadas. Grave texto simples em `Q`, usando
+  novas linhas e marcadores; não grave HTML. `questionStemHtml` é o renderizador
+  compartilhado por sessão e revisões. Não formate somente um modo nem transforme
+  menções soltas a uma fase “II” em listas. Escape todos os textos exibidos.
+- Faça leitura editorial de todo o conjunto solicitado. Registre por ID as
+  alterações e o alcance da revisão. Heurísticas, contagens de palavras e testes
+  não certificam grau de dificuldade nem validade normativa.
+
+## Feedback visual depois da sessão
+
+Estudo, Hardcore, Simulado e seus atalhos usam o mesmo resultado em `fin`.
+`sessionAnalysis` usa exclusivamente `qz.rev`, sem misturar o histórico completo
+nem avaliar como erros as questões que não foram respondidas.
+
+- Mostre acertos/erros com números, proporções e gráficos por aula e nível.
+  Cada barra usa como denominador as respostas daquele grupo, não as do banco.
+- Prioridades são assuntos com erros reais, separados por aula. Recomendações
+  orientam revisão e comparação de regras; não afirmam a causa do erro.
+- Repetição de erros é agrupamento explícito por assunto (`sessionTheme`), com
+  pelo menos dois erros e contagem visível. Não apresente esse agrupamento como
+  correlação estatística comprovada, diagnóstico ou medida de domínio.
+- Mostre limite de amostra e trate sem respostas, tudo certo e tudo errado.
+  Não invente áreas fracas quando não houve erros. Não compare velocidades sem
+  base nem declare aprovação na prova oficial com base numa prática local.
+- Pare o cronômetro ao registrar a última resposta. O tempo de leitura do
+  resultado ou do último feedback não entra no tempo de resposta.
+- A revisão mostra escolha e resposta correta; Estudo/Hardcore conservam os
+  quatro feedbacks. Simulado mantém só a explicação geral após finalizar, sem
+  feedback imediato nem bloco de quatro alternativas no resultado.
+- Refazer erros considera somente esta sessão e começa em Estudo ou Hardcore,
+  com feedback após responder; consultar a aula mantém o resultado acessível
+  em Praticar. Preserve o histórico, a escolha de tema e os filtros anteriores.
+- Verifique todos os modos, valores percentuais, histórico anterior distinto,
+  recomendações/atalhos, romanos, estados extremos e os dois temas no PC.
+
+O registro desta revisão está em `docs/revisao-questoes-sessoes.json`, e o
+relatório pedagógico e funcional em `docs/revisao-questoes-sessoes.md`.
