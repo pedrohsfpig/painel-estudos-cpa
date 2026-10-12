@@ -86,7 +86,9 @@ Esta é uma síntese das aulas fornecidas; não uma nova certificação normativ
   largura da página, com Reduzir/Escape e lâmpada global sempre acessível.
 - Ampliação e tema mantêm a posição da tabela; troca de bloco volta ao topo.
 - A sessão ativa, seu cronômetro, o histórico e os dados anteriores são preservados.
-- A troca para outra aula deixa a aba Quadro geral e retorna ao mapa mental.
+- A troca para uma aula sem quadro retorna ao mapa mental. Aulas 1, 5 e 6 também
+  possuem quadro; entre essas aulas, a aba é mantida. A ampliação desse padrão
+  está registrada em `quadros-gerais-comparativos.md`.
 
 Validação funcional em Chromium, nos dois temas, em **1024, 1280, 1440 e 1920 px**.
 Os testes 48–52 em `tests/smoke.py` verificam conteúdo, contagem, relações,

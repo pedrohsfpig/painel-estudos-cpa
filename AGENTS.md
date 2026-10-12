@@ -394,7 +394,39 @@ nem avaliar como erros as questões que não foram respondidas.
 O registro desta revisão está em `docs/revisao-questoes-sessoes.json`, e o
 relatório pedagógico e funcional em `docs/revisao-questoes-sessoes.md`.
 
-## Quadro geral de operadores da aula 7
+## Quadros gerais comparativos — padrão permanente
+
+Quando uma aula reunir vários órgãos, operadores ou conceitos comparáveis,
+acrescente a aba **Quadro geral** e o atalho **Quadro comparativo** na trilha.
+Escolha o objetivo da comparação antes de definir suas linhas, grupos e colunas.
+Não imponha o quadro a aulas de um único foco, como a aula do Banco Central.
+Isso vale também para futuras aulas, quando seus conteúdos forem fornecidos.
+
+- `LESSON_OVERVIEWS` registra as configurações por aula. Use o mesmo renderizador,
+  aparência, filtros, ícones, ampliação, cabeçalhos fixos e controles da aula 7.
+  Cadastrar outra aula nesse registro deve habilitar a aba e o atalho sem
+  acrescentar condições numéricas espalhadas pela navegação.
+- **As colunas podem e devem variar conforme a aula**: composição, competências,
+  vinculação e reuniões são adequadas a órgãos; captação e carteiras a operadores.
+  Não force recursos/remuneração ou público-alvo quando não ajudam a comparação.
+  Preserve Observações como última coluna e o participante nas linhas neste
+  quadro de consulta amplo; não mude os eixos das tabelas detalhadas existentes.
+- Escreva sínteses adicionais com fontes por linha; preserve `Q`, `AL` e `MAT`.
+  Não misture agentes, mercados e órgãos como se fossem participantes equivalentes.
+  Distinga o papel do órgão dos operadores do seu segmento; listar operadores
+  de um segmento não atribui a todos os supervisores competência indistinta.
+- Aulas 1, 5 e 6 têm quadros próprios: estrutura do SFN (7 órgãos), seguros e
+  previdência (4 órgãos), operadores monetários (5 tipos). Na aula 6, explicite
+  carteira comercial no múltiplo e autorização de depósitos na cooperativa;
+  cooperativas de capital e empréstimo não captam depósitos.
+- `selectedOverviewGroups` guarda filtros próprios dos quadros sem blocos de aula.
+  A aula 7 continua compartilhando `selectedLessonBlocks[7]` com seus materiais.
+  Não crie blocos pedagógicos artificiais em `AL` só para filtrar uma tabela.
+  Filtros e rolagem não devem vazar entre aulas, nem alterar a prática/histórico.
+
+Consulte `docs/quadros-gerais-comparativos.md` para os eixos e a validação.
+
+### Conteúdo específico da aula 7
 
 O usuário solicitou uma tabela grande de consulta no PC, com cada operador nas
 **linhas**, características nas colunas e **Observações na última coluna**.
@@ -424,7 +456,7 @@ entidades em colunas. Não transponha o quadro geral nem altere as tabelas antig
 - Ausência de informação é identificada como “Não detalhado na aula”, nunca
   completada com restrições, fontes de recursos ou regras inventadas. Não use
   vermelho para sugerir proibição quando apenas falta informação na aula.
-- A aba Quadro geral pertence apenas à aula 7; a trilha tem atalho correspondente.
+- A aba Quadro geral aparece nas aulas registradas; a trilha tem atalho correspondente.
   O cabeçalho e a primeira coluna ficam fixos dentro da área de rolagem.
   Ampliação usa a largura da página, com botão Reduzir e Escape; a lâmpada global
   continua clicável. Preserve posição da tabela ao ampliar/reduzir e trocar tema;
