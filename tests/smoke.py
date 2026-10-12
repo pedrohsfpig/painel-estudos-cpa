@@ -1329,5 +1329,149 @@ class PainelCPA(unittest.TestCase):
         self.page.screenshot(path="/tmp/cpa-roman-statements.png", full_page=True)
 
 
+    def open_operator_overview(self):
+        self.page.locator(".nav").get_by_role("button", name="Material de apoio", exact=True).click()
+        self.click("Aula 7")
+        self.click("Quadro geral")
+
+    def test_48_operator_overview_covers_participants_with_meaningful_columns(self):
+        self.open_operator_overview()
+        table = self.page.locator(".operator-overview-table")
+        self.assertEqual(table.locator("thead th").all_text_contents(), [
+            "Operador / forma","Foco e público","Atuação","Recursos / remuneração",
+            "Limites e condições","Regulação / supervisão","Observações"])
+        self.assertEqual(table.locator("tbody tr").count(), 18)
+        self.assertEqual(table.locator("tbody th[scope='row']").count(), 18)
+        self.assertEqual(table.locator("tbody td").count(), 108)
+        self.assertEqual(table.locator("tbody .overview-notes").count(), 18)
+        self.assertEqual(table.locator(".overview-operator-icon svg").count(), 18)
+        self.assertIn("10% das obrigações", table.locator('[data-operator="fomento"] .overview-notes').inner_text())
+        self.assertIn("público", table.locator('[data-operator="fomento"] [data-feature="limits"]').inner_text())
+        self.assertIn("não é proibição legal geral", table.locator('[data-operator="sci"] .overview-notes').inner_text())
+        self.assertIn("Não recebe depósitos de poupança", table.locator('[data-operator="hipotecaria"] [data-feature="limits"]').inner_text())
+        self.assertIn("2009", table.locator('[data-operator="dtvm"] .overview-notes').inner_text())
+        self.assertIn("CNSP", table.locator('[data-operator="eapc"] [data-feature="oversight"]').inner_text())
+        self.assertIn("CNPC", table.locator('[data-operator="efpc"] [data-feature="oversight"]').inner_text())
+        self.assertEqual(table.locator(".overview-missing").count(), 3)
+        self.assertEqual(table.locator("th .context-negative").count(), 0)
+        self.assertIn("não uma proibição", self.page.locator(".overview-footnote").inner_text())
+        def plain(text):
+            return re.sub(r"\{\{(?:atencao|negacao)\|([^{}]+)\}\}", r"\1", text).replace("**", "")
+        for row in self.page.evaluate("OPERATOR_OVERVIEW_ROWS"):
+            rendered = table.locator(f'[data-operator="{row["id"]}"]')
+            for feature in ["focus","activity","resources","limits","oversight","notes"]:
+                cell = rendered.locator(f'[data-feature="{feature}"]')
+                if row[feature]:
+                    self.assertEqual(cell.locator("li").all_text_contents(), [plain(x) for x in row[feature]],
+                                     f'{row["id"]} / {feature}')
+                else:
+                    self.assertEqual(cell.inner_text(), "Não detalhado na aula")
+        self.assertTrue(table.locator("th,td").evaluate_all(
+            "cells=>cells.every(c=>getComputedStyle(c).textAlign==='center')"))
+        for theme in ["light","dark"]:
+            self.page.evaluate("theme=>document.documentElement.dataset.theme=theme", theme)
+            colors = self.page.evaluate("""()=>{
+                const panel=document.querySelector('.operator-overview'),s=document.createElement('span');panel.append(s);
+                s.style.color='var(--hd)';const negative=getComputedStyle(s).color;
+                s.style.color='var(--material-violet)';const attention=getComputedStyle(s).color;s.remove();
+                return {negative,attention,actualNegative:getComputedStyle(panel.querySelector('.context-negative')).color,
+                    actualAttention:getComputedStyle(panel.querySelector('.lesson-attention')).color};
+            }""")
+            self.assertEqual(colors["negative"], colors["actualNegative"])
+            self.assertEqual(colors["attention"], colors["actualAttention"])
+
+    def test_49_operator_filters_cover_four_blocks_and_share_material_selection(self):
+        self.open_operator_overview()
+        blocks = {
+            1:["investimento","desenvolvimento","fomento","cambio"],
+            2:["sci","hipotecaria","financeira","scmepp"],
+            3:["consorcio","b3","ctvm","dtvm"],
+            4:["capitalizacao","eapc","efpc","seguradora","resseguradora","corretor-seguros"],
+        }
+        for block, ids in blocks.items():
+            self.page.locator(f'[data-overview-block="{block}"]').click()
+            self.assertEqual(self.page.locator(".operator-overview-table tbody tr").evaluate_all(
+                "rows=>rows.map(row=>row.dataset.operator)"), ids)
+            self.assertEqual(self.page.evaluate("selectedLessonBlocks[7]"), block)
+            self.assertEqual(self.page.locator(".overview-filters [aria-pressed='true']").get_attribute("data-overview-block"), str(block))
+            self.assertEqual(self.page.evaluate("document.activeElement.dataset.overviewBlock"), str(block))
+        self.click("Mapa mental")
+        self.assertEqual(self.page.evaluate("currentMaterial().mm[0]"), "Seguros, capitalização e previdência")
+        self.click("Quadro geral")
+        self.assertEqual(self.page.locator(".operator-overview-table tbody tr").count(), 6)
+        self.page.locator('[data-overview-block="0"]').click()
+        self.assertEqual(self.page.locator(".operator-overview-table tbody tr").count(), 18)
+        self.click("Tabelas")
+        self.assert_material_content("Tabelas")
+
+    def test_50_operator_overview_shortcut_and_lesson_transition_keep_quiz(self):
+        self.page.evaluate("begin([601,626],'e')")
+        state = self.page.evaluate("JSON.stringify(qz)")
+        self.click("Trilha")
+        self.page.locator("button.tb").nth(6).click()
+        self.click("Quadro comparativo")
+        self.assertEqual(self.page.evaluate("[mt.a,mt.c,view]"), [7,"geral","m"])
+        self.assertEqual(self.page.evaluate("JSON.stringify(qz)"), state)
+        self.click("Aula 3")
+        self.assertEqual(self.page.evaluate("mt.c"), "mapa")
+        self.assertEqual(self.page.get_by_role("button", name="Quadro geral", exact=True).count(), 0)
+        self.click("Trilha")
+        self.page.locator("button.tb").nth(2).click()
+        self.page.locator(".hero").get_by_role("button", name="Material de apoio", exact=True).click()
+        self.assertEqual(self.page.evaluate("mt.a"), 3)
+        self.click("Praticar")
+        self.assertEqual(self.page.evaluate("JSON.stringify(qz)"), state)
+        self.assertEqual(self.page.locator(".en").count(), 1)
+
+    def test_51_operator_overview_expansion_keeps_theme_scroll_filters_and_history(self):
+        self.page.evaluate("begin([601,626],'e');H=[[1,0,1700000000000,0]];save()")
+        self.open_operator_overview()
+        state = self.page.evaluate("({quiz:JSON.stringify(qz),history:H,questions:Q})")
+        self.page.locator("#overview-scroll").evaluate("node=>{node.scrollTop=400;node.scrollLeft=40}")
+        self.page.get_by_role("button", name="Ampliar quadro comparativo", exact=True).click()
+        self.assertTrue(self.page.locator("body").evaluate("node=>node.classList.contains('overview-expanded')"))
+        self.assertFalse(self.page.locator(".sidebar").is_visible())
+        top = self.page.locator("#overview-scroll").evaluate("node=>node.scrollTop")
+        self.assertEqual(top, 400)
+        self.page.locator("#theme-toggle").click()
+        self.assertEqual(self.page.locator("#overview-scroll").evaluate("node=>node.scrollTop"), top)
+        self.assertEqual(self.page.evaluate("({quiz:JSON.stringify(qz),history:H,questions:Q})"), state)
+        self.page.locator('[data-overview-block="4"]').click()
+        self.assertEqual(self.page.locator("#overview-scroll").evaluate("node=>node.scrollTop"), 0)
+        self.assertEqual(self.page.locator(".operator-overview-table tbody tr").count(), 6)
+        self.page.keyboard.press("Escape")
+        self.assertFalse(self.page.locator("body").evaluate("node=>node.classList.contains('overview-expanded')"))
+        self.assertTrue(self.page.locator(".sidebar").is_visible())
+        self.assertEqual(self.page.evaluate("document.activeElement.id"), "overview-expand")
+        self.assertEqual(self.page.evaluate("({quiz:JSON.stringify(qz),history:H,questions:Q})"), state)
+        self.click("Praticar")
+        self.assertFalse(self.page.locator("body").evaluate("node=>node.classList.contains('overview-expanded')"))
+
+    def test_52_operator_overview_sticky_headers_and_columns_fit_desktop(self):
+        self.open_operator_overview()
+        for width in [1024,1280,1440,1920]:
+            self.page.set_viewport_size({"width":width,"height":1000})
+            for expanded in [False,True]:
+                self.page.evaluate("expanded=>{overviewExpanded=expanded;go()}", expanded)
+                for theme in ["light","dark"]:
+                    self.page.evaluate("theme=>document.documentElement.dataset.theme=theme", theme)
+                    self.assertTrue(self.page.evaluate("document.documentElement.scrollWidth<=innerWidth"))
+                    cells = self.page.locator(".operator-overview-table th,.operator-overview-table td")
+                    self.assertTrue(cells.evaluate_all(
+                        "nodes=>nodes.every(n=>n.getBoundingClientRect().width>90 && n.scrollWidth<=n.clientWidth+1)"))
+                    self.page.locator("#overview-scroll").evaluate("node=>{node.scrollTop=1000;node.scrollLeft=100}")
+                    rects = self.page.evaluate("""()=>{
+                        const sc=document.getElementById('overview-scroll').getBoundingClientRect(),
+                         head=document.querySelector('.operator-overview-table thead th').getBoundingClientRect(),
+                         row=document.querySelector('.operator-overview-table tbody th').getBoundingClientRect();
+                        return {container:sc.toJSON(),head:head.toJSON(),row:row.toJSON()};
+                    }""")
+                    self.assertLess(abs(rects["container"]["top"]-rects["head"]["top"]), 3)
+                    self.assertLess(abs(rects["container"]["left"]-rects["row"]["left"]), 3)
+                    if width == 1440:
+                        self.page.locator("#overview-scroll").evaluate("node=>{node.scrollTop=0;node.scrollLeft=0}")
+                        self.page.screenshot(path=f"/tmp/cpa-overview7-{theme}-{'expanded' if expanded else 'normal'}.png", full_page=True)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

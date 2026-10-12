@@ -393,3 +393,43 @@ nem avaliar como erros as questões que não foram respondidas.
 
 O registro desta revisão está em `docs/revisao-questoes-sessoes.json`, e o
 relatório pedagógico e funcional em `docs/revisao-questoes-sessoes.md`.
+
+## Quadro geral de operadores da aula 7
+
+O usuário solicitou uma tabela grande de consulta no PC, com cada operador nas
+**linhas**, características nas colunas e **Observações na última coluna**.
+Essa orientação é uma exceção explícita às comparações curtas de `MAT` que põem
+entidades em colunas. Não transponha o quadro geral nem altere as tabelas antigas.
+
+- `OPERATOR_OVERVIEW_ROWS` guarda a síntese adicional e suas fontes; `MAT`, `AL`
+  e `Q` permanecem intactos. Há 18 participantes da aula, incluindo CTVM e DTVM
+  separadas. Funções da B3 não viram operadores novos; não acrescente operadores
+  de outras aulas para completar uma quantidade presumida.
+- Os sete eixos são operador/forma, foco/público, atuação, recursos/remuneração,
+  limites/condições, regulação/supervisão e observações. A forma jurídica fica
+  junto do nome para evitar mais uma coluna larga. Compare funções reais:
+  captação bancária, recursos do grupo/plano e remuneração de serviços diferem.
+  Não classifique todos os participantes como instituições financeiras.
+- Observações registram distinções úteis e particularidades do participante.
+  Preserve SCI/poupança versus prática de repasse, conta vinculada versus à vista,
+  DTVM/acesso à bolsa, limites de fomento, aberta versus fechada, seguro versus
+  resseguro e responsabilidade de corretor e seguradora.
+- Use os quatro blocos existentes como filtro exclusivo, mais Todos. Compartilhe
+  `selectedLessonBlocks[7]` com a leitura e os materiais; não altere `cfg.b`,
+  seleção de aulas da prática, sessão ativa ou histórico ao consultar o quadro.
+- Bordas e ícones identificam os blocos com azul, lilás, verde e rosa, nas mesmas
+  cores dos filtros. Cabeçalhos estruturais são azuis, células centralizadas e
+  grade completa. Vermelho marca negativas reais; lilás no texto marca condições.
+  Natureza, classificação e ausência de detalhe nas fontes ficam neutras.
+- Ausência de informação é identificada como “Não detalhado na aula”, nunca
+  completada com restrições, fontes de recursos ou regras inventadas. Não use
+  vermelho para sugerir proibição quando apenas falta informação na aula.
+- A aba Quadro geral pertence apenas à aula 7; a trilha tem atalho correspondente.
+  O cabeçalho e a primeira coluna ficam fixos dentro da área de rolagem.
+  Ampliação usa a largura da página, com botão Reduzir e Escape; a lâmpada global
+  continua clicável. Preserve posição da tabela ao ampliar/reduzir e trocar tema;
+  mudar bloco inicia a consulta desse grupo no topo.
+- Confira todos os participantes e as associações entre células, as duas
+  aparências, larguras de PC, filtros, atalhos, transição para outra aula e uma
+  sessão de questões em andamento. Não substitua os materiais detalhados pelo
+  quadro de síntese. Consulte `docs/aula-7-quadro-comparativo.md`.
