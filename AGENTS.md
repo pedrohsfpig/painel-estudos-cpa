@@ -493,6 +493,46 @@ O nível não se torna alto apenas por conter números, texto longo ou romanos.
   alterações e o alcance da revisão. Heurísticas, contagens de palavras e testes
   não certificam grau de dificuldade nem validade normativa.
 
+### Questões autossuficientes em todos os modos
+
+O usuário exige que **cada questão traga seu próprio contexto**, inclusive em
+Estudo, Hardcore, Simulado, estudo diário e conteúdos futuros. As perguntas
+avaliam conhecimentos financeiros, não lembrança do que um professor disse.
+
+- Não remeta enunciado, alternativa, dica ou feedback a “na aula”, “segundo o
+  professor”, “no slide”, “no material enviado” ou à classificação vista em uma
+  tabela externa. A questão deve ser compreensível fora da tela da respectiva aula.
+- Nomeie órgão, instrumento, relação financeira e perspectiva quando necessários:
+  “meta de inflação”, “diretores do BACEN”, “participação no STR”, “código ANBIMA”.
+  Não use só “qual associação” ou “qual bloco” se o objeto depender do título.
+- Uma pergunta direta de conceito pode continuar curta. Casos de aplicação devem
+  conter os fatos relevantes e pedir uma decisão específica. Não alongue todos
+  os enunciados nem entregue a definição/regra solicitada para fornecer contexto.
+- Expanda siglas quando isso ajuda a compreensão, exceto se a expansão entregar
+  a própria resposta pedida. Não dê no Hardcore a regra que basta somar/aplicar
+  mecanicamente. Dicas opcionais orientam a análise, sem remeter ao professor.
+- Fonte, data de conferência e limitações normativas pertencem ao relatório da
+  aula. Eliminar a referência ao professor não é autorização para inventar uma
+  regra vigente. Preserve condições, qualificação de hipóteses e limites de escopo.
+- Ao corrigir, preserve IDs, nível, aula, assunto e flags do Simulado. Alinhe
+  alternativas, explicação geral, dica e quatro feedbacks somente quando preciso;
+  mantenha o vínculo pelo índice original. Não modifique materiais ou histórico
+  numa revisão restrita às questões.
+- Registre quais IDs mudaram, os campos, motivos e contagens sem dupla contagem.
+  O usuário dispensou Excel nesta revisão: apresente quantidades e achados no chat.
+
+A revisão de 13/10/2026 cobriu os 900 IDs. O registro está em
+`docs/revisao-enunciados-autossuficientes.json` e o resumo em
+`docs/revisao-enunciados-autossuficientes.md`. São 182 enunciados e 113 outras
+questões com ajustes só em apoio; 605 ficaram intactas. As contagens são desta
+entrega, não metas editoriais para futuras revisões.
+
+Execute também `python3 tests/test_question_context.py`. O helper
+`tests/question_revision.py` encadeia a autoria das aulas 8/9 aos campos revisados:
+valida a versão atual e reconstrói a anterior, sem atualizar hashes históricos
+para esconder divergências. Futuras alterações autorizadas precisam manter essa
+rastreabilidade e a ausência de dependência externa.
+
 ## Feedback visual depois da sessão
 
 Estudo, Hardcore, Simulado e seus atalhos usam o mesmo resultado em `fin`.

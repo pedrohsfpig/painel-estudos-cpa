@@ -8,6 +8,7 @@ import unittest
 
 from validate_bank import load_questions, validate_questions
 from audit_alternatives import check_balance
+from question_revision import questions_before_context_revision
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -15,6 +16,7 @@ class Aula8Tests(unittest.TestCase):
     def setUp(self):
         self.all_questions=load_questions()
         self.questions=[q for q in self.all_questions if q[0]==8]
+        self.authored=questions_before_context_revision(self.all_questions)
         self.report=json.loads((ROOT/'docs/aula-8-cobertura.json').read_text())
 
     def test_final_fifty_fifty_split_is_preserved_at_every_level(self):
@@ -28,7 +30,7 @@ class Aula8Tests(unittest.TestCase):
         ledger=self.report['questoes']
         self.assertEqual([row['id'] for row in ledger],list(range(701,801)))
         for row in ledger:
-            question=self.all_questions[row['id']-1]
+            question=self.authored[row['id']-1]
             digest=hashlib.sha256(json.dumps(question,ensure_ascii=False,separators=(',',':')).encode()).hexdigest()
             self.assertEqual(digest,row['hash'])
             self.assertTrue(row['slides'])

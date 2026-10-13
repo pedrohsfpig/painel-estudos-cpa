@@ -2061,5 +2061,36 @@ class PainelCPA(unittest.TestCase):
                 self.page.keyboard.press('Escape')
 
 
+    def test_75_revised_questions_render_independent_context_in_all_modes(self):
+        self.page.evaluate("H=[[1,1,1700000000000,0],[800,0,1700000000001,2]];save()")
+        history=self.page.evaluate('H')
+        for theme in ['light','dark']:
+            self.page.evaluate('theme=>document.documentElement.dataset.theme=theme',theme)
+            for mode,ids in [('e',[808,732,880]),('h',[747,888]),('s',[808,732,788,880])]:
+                self.page.evaluate('args=>begin(args[1],args[0])',[mode,ids])
+                for index,id in enumerate(ids):
+                    expected=self.page.evaluate('id=>Q[id-1][3]',id)
+                    actual=self.page.locator('.en').inner_text()
+                    self.assertEqual(re.sub(r'\s+',' ',actual).strip(),re.sub(r'\s+',' ',expected).strip())
+                    self.assertNotRegex(actual,r'(?i)\baula\b|\bslide\b|conteúdo enviado')
+                    self.assertTrue(self.page.evaluate('document.documentElement.scrollWidth<=innerWidth'))
+                    if id==808 and mode=='e':
+                        self.assertIn('cumprimento obrigatório',actual)
+                        self.page.locator('button.o').filter(has_text='Programa educacional.').click()
+                        self.assertIn('capacita profissionais',self.page.locator('.fb-option[data-option-index="3"] p').inner_text())
+                        self.page.screenshot(path=f'/tmp/cpa-enunciado808-{theme}.png',full_page=True)
+                    else:
+                        self.answer()
+                    if mode=='s':
+                        self.assertEqual(self.page.locator('.feedback').count(),0)
+                    else:
+                        question=self.page.evaluate('id=>Q[id-1]',id)
+                        for row in self.page.locator('.fb-option').all():
+                            self.assertEqual(row.locator('p').inner_text(),question[11][int(row.get_attribute('data-option-index'))])
+                        self.click('Próxima' if index<len(ids)-1 else 'Ver resultado')
+                self.assertEqual(self.page.locator('.session-result').count(),1)
+        self.assertEqual(self.page.evaluate('H.slice(0,2)'),history)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

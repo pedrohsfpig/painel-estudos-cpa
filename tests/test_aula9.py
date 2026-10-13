@@ -7,6 +7,7 @@ import re
 import unittest
 from validate_bank import load_questions, validate_questions
 from audit_alternatives import check_balance
+from question_revision import questions_before_context_revision
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -17,6 +18,7 @@ class Aula9Tests(unittest.TestCase):
     def setUp(self):
         self.all=load_questions()
         self.rows=[q for q in self.all if q[0]==9]
+        self.authored=questions_before_context_revision(self.all)
         self.report=json.loads((ROOT/'docs/aula-9-cobertura.json').read_text())
 
     def test_requested_weights_hold_in_each_level_including_hardcore(self):
@@ -34,14 +36,14 @@ class Aula9Tests(unittest.TestCase):
         self.assertEqual({p for r in self.report['cobertura'] for p in r['slides']},set(range(1,16)))
         self.assertEqual({r['transcricao'] for r in self.report['cobertura']},{1,2,3})
         for r in self.report['questoes']:
-            q=self.all[r['id']-1]
+            q=self.authored[r['id']-1]
             self.assertEqual(digest(q),r['hash'])
             self.assertEqual(q[1],r['tema'])
             self.assertEqual(q[2],r['nivel'])
             self.assertTrue(all(1<=p<=15 for p in r['slides']))
 
     def test_prior_eight_hundred_questions_keep_ids_and_complete_content(self):
-        self.assertEqual(digest(self.all[:800]),self.report['preservacao']['hash_primeiras_800'])
+        self.assertEqual(digest(self.authored[:800]),self.report['preservacao']['hash_primeiras_800'])
         self.assertEqual(self.report['preservacao']['ids_anteriores'],list(range(1,801)))
 
     def test_three_blocks_retain_other_entities_and_all_materials(self):
