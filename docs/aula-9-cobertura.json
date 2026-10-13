@@ -1,0 +1,2244 @@
+{
+  "aula": 9,
+  "titulo": "Aula 9: Autorregulação, Garantias e Liberdade Econômica",
+  "fontes": {
+    "slides": "Screenshot_1 (2).pdf — 15 páginas",
+    "transcricoes": "Texto colado.txt — Autorreguladores; FGC e FGCoop; Lei de Liberdade Econômica",
+    "criterio": "Cruzamento de todas as páginas com a fala; transcrição complementa trechos encobertos pelo professor."
+  },
+  "distribuicao": {
+    "total": 100,
+    "normal": 80,
+    "hardcore": 20,
+    "niveis": [
+      20,
+      40,
+      20,
+      20
+    ],
+    "ANBIMA": [
+      10,
+      20,
+      10,
+      10
+    ],
+    "FGC_FGCoop": [
+      8,
+      16,
+      8,
+      8
+    ],
+    "Liberdade_Economica": [
+      2,
+      4,
+      2,
+      2
+    ],
+    "criterio": "Prioridade solicitada pelo usuário; não é previsão oficial de frequência."
+  },
+  "consulta_normativa": {
+    "certificacao_de_vigencia": false,
+    "data": "2026-10-13",
+    "resultado": "Acesso HTTP aos sites oficiais bloqueado pelo proxy: Tunnel connection failed: 403 Forbidden.",
+    "urls": [
+      "https://www.fgc.org.br/garantia-fgc/sobre-a-garantia-fgc",
+      "https://www.fgcoop.coop.br/",
+      "https://www.anbima.com.br/pt_br/autorregular/autorregulacao.htm",
+      "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13874.htm"
+    ],
+    "alcance": "Validação das fontes fornecidas, sem certificação normativa independente. Taxas e siglas específicas não confirmadas permanecem referências, sem questões numéricas de contribuição."
+  },
+  "decisoes": [
+    "DPGE: slide 10 traz R$ 40k, enquanto slide 9 e transcrição dizem R$ 40 milhões. Corrigida a unidade; não ocultada a divergência.",
+    "Conta conjunta: falas R50.000 são erros de reconhecimento; slide e exemplos indicam R$ 250 mil para a conta, dividido pelos titulares.",
+    "ANBIMA: Ambima/BIMA/MIMA normalizados; valores mobiliários corrigido de imobiliários; FGCoop corrigido de FGCOP e saldo existente de resistente.",
+    "ANBIMA: slide 2 cita mais de 1.400 participantes, fala transcrita 100. Quantidade mantida como referência do slide, não dado atual nem questão de prova.",
+    "Outras entidades foram preservadas nos materiais. A quota de 50 é centrada em ANBIMA, incluindo comparações institucionais sem criar questões isoladas de outras entidades.",
+    "Conselho independente: soberania apenas na apreciação de autorregulação; não acima de leis ou CVM.",
+    "Parecer não vinculante não torna opcional obrigação existente no código; deliberação vincula no seu âmbito, sem revogar norma estatal.",
+    "FGC: produtos elegíveis exigem titularidade abrangida; CDB de fundo e cotas de fundo não são garantidos.",
+    "Compromissadas: não generalizar toda operação. Condições explícitas do slide FGCoop (empresa ligada e emissão após 8/3/2012) mantidas como recorte da fonte; não criado gabarito de data.",
+    "FGCoop: não transplantado teto de R$ 1 milhão/4 anos nem garantia especial do FGC; não foram detalhados para esse fundo nas fontes.",
+    "Contribuições 0,01%/0,03% e menção a 0,02% ficam em tabela de referências; não usados como gabaritos de taxa vigente.",
+    "APIMEC/ANCORD: certificação e credenciamento profissional são distintos de códigos institucionais; evitar generalizar poderes estatais às associações.",
+    "AAI mantido como denominação da fonte, com assessor de investimento na leitura; CNPI/T/P conferidos no slide; siglas RPPS, AGRO 100 e CCA ficam referências sem certificar vigência.",
+    "Liberdade econômica: baixo risco, normas ambientais/trabalhistas/segurança e limites legais preservados; digitalização condicionada a requisitos de validade, não a qualquer arquivo."
+  ],
+  "cobertura": [
+    {
+      "slides": [
+        1,
+        2
+      ],
+      "transcricao": 1,
+      "conteudo": "ANBIMA: natureza, missão, quatro compromissos, códigos, participantes, acompanhamento, julgamento, deliberações e pareceres",
+      "material": "Bloco 1: resumo, mapa, 2 diagramas de vínculo/processo, tabelas de fontes e quadro geral",
+      "questoes": [
+        801,
+        802,
+        803,
+        804,
+        805,
+        806,
+        807,
+        808,
+        809,
+        810,
+        811,
+        812,
+        813,
+        814,
+        815,
+        816,
+        817,
+        818,
+        819,
+        820,
+        821,
+        822,
+        823,
+        824,
+        825,
+        826,
+        827,
+        828,
+        829,
+        830,
+        831,
+        832,
+        833,
+        834,
+        835,
+        836,
+        837,
+        838,
+        839,
+        840,
+        841,
+        842,
+        843,
+        844,
+        845,
+        846,
+        847,
+        848,
+        849,
+        850
+      ]
+    },
+    {
+      "slides": [
+        3,
+        4
+      ],
+      "transcricao": 1,
+      "conteudo": "APIMEC: funções, certificações CNPI/T/P, referências RPPS e ética",
+      "material": "Bloco 1: resumo, mapa, comparação de entidades, tabela de certificações e flashcards",
+      "questoes": "Comparações com ANBIMA; não há subquota fora das 50 questões ANBIMA"
+    },
+    {
+      "slides": [
+        5
+      ],
+      "transcricao": 1,
+      "conteudo": "Planejar: CFP, FPSB, requisitos, ética e planejamento",
+      "material": "Bloco 1: resumo, mapa, comparativo e flashcards",
+      "questoes": "Comparações institucionais com foco no vínculo ANBIMA"
+    },
+    {
+      "slides": [
+        6,
+        7
+      ],
+      "transcricao": 1,
+      "conteudo": "ANCORD: assessoria, representação, funções, certificações e limites do assessor",
+      "material": "Bloco 1: resumo, mapa, tabela e flashcards",
+      "questoes": "Comparações com ANBIMA e distinção vínculo/credenciamento"
+    },
+    {
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "transcricao": 2,
+      "conteudo": "FGC: natureza, associados, contribuições, eventos, suporte, ordinária, DPGE, produtos, titulares e exclusões",
+      "material": "Bloco 2: trilha, mapa, tabelas e comparativo; taxas ficam em referências identificadas",
+      "questoes": [
+        851,
+        852,
+        853,
+        854,
+        855,
+        856,
+        858,
+        859,
+        860,
+        861,
+        862,
+        863,
+        864,
+        865,
+        866,
+        867,
+        868,
+        869,
+        870,
+        872,
+        873,
+        875,
+        876,
+        877,
+        878,
+        879,
+        881,
+        882,
+        883,
+        884,
+        885,
+        886,
+        887,
+        888,
+        890
+      ]
+    },
+    {
+      "slides": [
+        11,
+        12
+      ],
+      "transcricao": 2,
+      "conteudo": "Casos: mesma instituição, conglomerados distintos, teto global e conta conjunta",
+      "material": "Bloco 2: tabela de casos, diagramas de análise e flashcards",
+      "questoes": "Aplicações novas de limites, bases elegíveis, pagamentos anteriores e contas conjuntas"
+    },
+    {
+      "slides": [
+        13
+      ],
+      "transcricao": 2,
+      "conteudo": "FGCoop: instituições associadas, limite, depósitos e lastro de compromissadas",
+      "material": "Bloco 2: resumo, mapa, comparativo, referência de data e flashcards",
+      "questoes": [
+        857,
+        871,
+        874,
+        880,
+        889
+      ]
+    },
+    {
+      "slides": [
+        14,
+        15
+      ],
+      "transcricao": 3,
+      "conteudo": "Lei 13.874/2019: objetivos, escopo, fundamentos, baixo risco, autonomia, previsibilidade, entraves e documentos digitais",
+      "material": "Bloco 3: trilha, mapa, tabelas, diagramas e flashcards",
+      "questoes": [
+        891,
+        892,
+        893,
+        894,
+        895,
+        896,
+        897,
+        898,
+        899,
+        900
+      ]
+    }
+  ],
+  "questoes": [
+    {
+      "id": 801,
+      "tema": "ANBIMA: natureza e missão",
+      "nivel": 0,
+      "slides": [
+        1
+      ],
+      "transcricao": 1,
+      "criterio": "Reconhecer um conceito sem fornecer sua definição no enunciado.",
+      "hash": "9a4157978156f945f32c5722adfdafcf109d391bb387ca930ee2a5daaa668567"
+    },
+    {
+      "id": 802,
+      "tema": "ANBIMA: hierarquia regulatória",
+      "nivel": 0,
+      "slides": [
+        1
+      ],
+      "transcricao": 1,
+      "criterio": "Reconhecer um conceito sem fornecer sua definição no enunciado.",
+      "hash": "920d7b2c2ca3697f97f1bc57abd8847451be9be06a66127e95894e43bb0eaf56"
+    },
+    {
+      "id": 803,
+      "tema": "ANBIMA: compromissos",
+      "nivel": 0,
+      "slides": [
+        1
+      ],
+      "transcricao": 1,
+      "criterio": "Reconhecer um conceito sem fornecer sua definição no enunciado.",
+      "hash": "929e98e0bcfc6c4ef1c345429950533c9455b1402c0de70c3d150cb20a433bd0"
+    },
+    {
+      "id": 804,
+      "tema": "ANBIMA: compromissos",
+      "nivel": 0,
+      "slides": [
+        1
+      ],
+      "transcricao": 1,
+      "criterio": "Reconhecer um conceito sem fornecer sua definição no enunciado.",
+      "hash": "3d5d8cf1217d964ba9348800654cb901d55092da30c8e114b776a9abd49f259b"
+    },
+    {
+      "id": 805,
+      "tema": "ANBIMA: compromissos",
+      "nivel": 0,
+      "slides": [
+        1
+      ],
+      "transcricao": 1,
+      "criterio": "Reconhecer um conceito sem fornecer sua definição no enunciado.",
+      "hash": "d2fe8a97ef1ebae6c631701b671755dae77f155e2d360014a41b96b563719d42"
+    },
+    {
+      "id": 806,
+      "tema": "ANBIMA: códigos e supervisão",
+      "nivel": 0,
+      "slides": [
+        1,
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Reconhecer um conceito sem fornecer sua definição no enunciado.",
+      "hash": "0f8b07c4b5810ea2d17103ea6e3038f199a73360d6a722cbb67227e8a42a9257"
+    },
+    {
+      "id": 807,
+      "tema": "ANBIMA: adesão e participantes",
+      "nivel": 0,
+      "slides": [
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Reconhecer um conceito sem fornecer sua definição no enunciado.",
+      "hash": "ba5a16a0c5d82da03147d1d22b728705c6691e5e4d8696202cc6d4c86356300c"
+    },
+    {
+      "id": 808,
+      "tema": "ANBIMA: fontes de autorregulação",
+      "nivel": 0,
+      "slides": [
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Reconhecer um conceito sem fornecer sua definição no enunciado.",
+      "hash": "1a64103842b402b5e5867dc3426a8179deb3d88dd2692d9ae50cd8c1b55b131b"
+    },
+    {
+      "id": 809,
+      "tema": "ANBIMA: fontes de autorregulação",
+      "nivel": 0,
+      "slides": [
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Reconhecer um conceito sem fornecer sua definição no enunciado.",
+      "hash": "71701fb9deb895672d462e957211d4613ee020738c409d5b7f4a38568431f8f5"
+    },
+    {
+      "id": 810,
+      "tema": "ANBIMA: códigos e supervisão",
+      "nivel": 0,
+      "slides": [
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Reconhecer um conceito sem fornecer sua definição no enunciado.",
+      "hash": "eb099789480dc0cc8f2433e8423cdc283981c440baa5b08c7d9b7cf259bbc328"
+    },
+    {
+      "id": 811,
+      "tema": "ANBIMA: hierarquia regulatória",
+      "nivel": 1,
+      "slides": [
+        1,
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "a1c28269080dcf935b0674abaf0ddb015f7aaac7ffd3cc63be1d4a1cca254026"
+    },
+    {
+      "id": 812,
+      "tema": "ANBIMA: adesão e participantes",
+      "nivel": 1,
+      "slides": [
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "dd0d424459c54e8d811a5e2a9de78ca42a43b1a800078247c1d04d7d797d3587"
+    },
+    {
+      "id": 813,
+      "tema": "ANBIMA: compromissos",
+      "nivel": 1,
+      "slides": [
+        1
+      ],
+      "transcricao": 1,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "8bdf549af57232dfdfce56a8475464f15fee6e600ccd35ce68fbb4b7cd962cf1"
+    },
+    {
+      "id": 814,
+      "tema": "ANBIMA: compromissos",
+      "nivel": 1,
+      "slides": [
+        1,
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "075ec55a60d17254f3a5fd985f58ae171ce29418fda318e2fa6d699ce95cfe7c"
+    },
+    {
+      "id": 815,
+      "tema": "ANBIMA: códigos e supervisão",
+      "nivel": 1,
+      "slides": [
+        1,
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "0f64f8475dba5f9b5ffdd39cd0a3313073ba3bdc999f15a4da20e4837e8aef5f"
+    },
+    {
+      "id": 816,
+      "tema": "ANBIMA: códigos e supervisão",
+      "nivel": 1,
+      "slides": [
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "d95cae22f44b6a5d5ad61c2e35710efbafa945c6d793cdc8a0816a8baf7d4ab0"
+    },
+    {
+      "id": 817,
+      "tema": "ANBIMA: fontes de autorregulação",
+      "nivel": 1,
+      "slides": [
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "79a0aee74ed5b85759e02d00562d37a3cb557aa9d322e480e03a7bf2cd90517b"
+    },
+    {
+      "id": 818,
+      "tema": "ANBIMA: natureza e missão",
+      "nivel": 1,
+      "slides": [
+        1
+      ],
+      "transcricao": 1,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "d49b1ea04ad283d579628a2bbef0b1cafe6e4ce4b2be332fd09ac38208a6b7fb"
+    },
+    {
+      "id": 819,
+      "tema": "ANBIMA: compromissos",
+      "nivel": 1,
+      "slides": [
+        1,
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "1a91e38392fd7d2dc8a55330fd8bdc699d2b6857bb0f2b2043110c4c0018532d"
+    },
+    {
+      "id": 820,
+      "tema": "ANBIMA: adesão e participantes",
+      "nivel": 1,
+      "slides": [
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "12e51289ffc677f9aba74a89706aabbf6f55ed6be5bf9c6d86e7f5879c34fe95"
+    },
+    {
+      "id": 821,
+      "tema": "ANBIMA: fontes de autorregulação",
+      "nivel": 1,
+      "slides": [
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "5fb6c9b229ebdbf01911042921acd8226b6100f48f70fb94e0628bd4ff6c9c52"
+    },
+    {
+      "id": 822,
+      "tema": "ANBIMA: códigos e supervisão",
+      "nivel": 1,
+      "slides": [
+        1,
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "705475bfa103b59067594cd1220893d0d160576d31c6e66416cbb49e7a79fa0a"
+    },
+    {
+      "id": 823,
+      "tema": "ANBIMA: compromissos",
+      "nivel": 1,
+      "slides": [
+        1
+      ],
+      "transcricao": 1,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "d9609506bf732c52340a4785c21a6cf2b12de95c033629e975be8d12bbdc2ba4"
+    },
+    {
+      "id": 824,
+      "tema": "ANBIMA: adesão e participantes",
+      "nivel": 1,
+      "slides": [
+        1,
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "1d2f54f5d24579942efa4ccf1cbfd155bc0248ef16424cfd967ba14bdbbbb9f7"
+    },
+    {
+      "id": 825,
+      "tema": "ANBIMA: comparações institucionais",
+      "nivel": 1,
+      "slides": [
+        1,
+        2,
+        3
+      ],
+      "transcricao": 1,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "6cab197eafccd1e639a56619416a23c3c78bde2c7a7916c6e11d0c55fd24ca6d"
+    },
+    {
+      "id": 826,
+      "tema": "ANBIMA: comparações institucionais",
+      "nivel": 1,
+      "slides": [
+        1,
+        5
+      ],
+      "transcricao": 1,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "1984599e6ee7e510b8c60d687c2f6eda5db09551abb1b592d2251041d9c0a28f"
+    },
+    {
+      "id": 827,
+      "tema": "ANBIMA: comparações institucionais",
+      "nivel": 1,
+      "slides": [
+        1,
+        2,
+        6,
+        7
+      ],
+      "transcricao": 1,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "1f97f015945fbc0e190cabed49ad46c633f3fa1d8838deaca203681bac0753e0"
+    },
+    {
+      "id": 828,
+      "tema": "ANBIMA: códigos e supervisão",
+      "nivel": 1,
+      "slides": [
+        1,
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "b1211cb6015ab76ffeabf47fad6efae877dca1943f9b98bb8382f42b7c71616f"
+    },
+    {
+      "id": 829,
+      "tema": "ANBIMA: natureza e missão",
+      "nivel": 1,
+      "slides": [
+        1
+      ],
+      "transcricao": 1,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "dcce67747842003070b5de5a761629ebd6538f717b0fa09100bf074154ec466f"
+    },
+    {
+      "id": 830,
+      "tema": "ANBIMA: fontes de autorregulação",
+      "nivel": 1,
+      "slides": [
+        1,
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "ec00e346b417081d7feb5b98cd913d4813faa7929ceb7c9229585c8d8f3d8af1"
+    },
+    {
+      "id": 831,
+      "tema": "ANBIMA: adesão e participantes",
+      "nivel": 2,
+      "slides": [
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Combinar condições e distinguir regras próximas.",
+      "hash": "8a889fb7b3298ef208692a3b85f5ee461da0be7a229d93875166fd373a80f3db"
+    },
+    {
+      "id": 832,
+      "tema": "ANBIMA: hierarquia regulatória",
+      "nivel": 2,
+      "slides": [
+        1,
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Combinar condições e distinguir regras próximas.",
+      "hash": "0a1a8f9510532db2dc06875574fe53cd90ccd488585312f892fac861a3cfaf19"
+    },
+    {
+      "id": 833,
+      "tema": "ANBIMA: fontes de autorregulação",
+      "nivel": 2,
+      "slides": [
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Combinar condições e distinguir regras próximas.",
+      "hash": "3077bde271f4e82dcbb0e56ce1bed94460f32dd035bf0e72524516c730c4123d"
+    },
+    {
+      "id": 834,
+      "tema": "ANBIMA: códigos e supervisão",
+      "nivel": 2,
+      "slides": [
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Combinar condições e distinguir regras próximas.",
+      "hash": "8bb2bd4ee045c0554ee5152e7a5d52c396113dad467c5dd8cbae73dcc2a0cf69"
+    },
+    {
+      "id": 835,
+      "tema": "ANBIMA: compromissos",
+      "nivel": 2,
+      "slides": [
+        1,
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Combinar condições e distinguir regras próximas.",
+      "hash": "22b6bfd99413c119a660bb6701e8e60f7a342c0ad6d6f53309093e373531c7f6"
+    },
+    {
+      "id": 836,
+      "tema": "ANBIMA: comparações institucionais",
+      "nivel": 2,
+      "slides": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "transcricao": 1,
+      "criterio": "Combinar condições e distinguir regras próximas.",
+      "hash": "0e14c515942d35d9c11695ee7629b64633ffe82d01affab991444e2ce193c7c4"
+    },
+    {
+      "id": 837,
+      "tema": "ANBIMA: comparações institucionais",
+      "nivel": 2,
+      "slides": [
+        1,
+        2,
+        5
+      ],
+      "transcricao": 1,
+      "criterio": "Combinar condições e distinguir regras próximas.",
+      "hash": "33c2e387144e3a2f3a6534ba77453db8341c9b8c26107915e4f6463ea5f800cd"
+    },
+    {
+      "id": 838,
+      "tema": "ANBIMA: adesão e participantes",
+      "nivel": 2,
+      "slides": [
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Combinar condições e distinguir regras próximas.",
+      "hash": "f8fb336005a626215657d5ffd0f4444ec938cbdfae748b448f03176ba85b6ca1"
+    },
+    {
+      "id": 839,
+      "tema": "ANBIMA: natureza e missão",
+      "nivel": 2,
+      "slides": [
+        1,
+        2,
+        8,
+        10
+      ],
+      "transcricao": 1,
+      "criterio": "Combinar condições e distinguir regras próximas.",
+      "hash": "9d390e4ab68835f98602927388169f6f856bbef205c00bb9b2161b3e77e57ab3"
+    },
+    {
+      "id": 840,
+      "tema": "ANBIMA: códigos e supervisão",
+      "nivel": 2,
+      "slides": [
+        1,
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Combinar condições e distinguir regras próximas.",
+      "hash": "4a1fde5553b95134679d03afbe019e337ba3b31c7731407b420531e86e13bcd6"
+    },
+    {
+      "id": 841,
+      "tema": "ANBIMA: hierarquia regulatória",
+      "nivel": 3,
+      "slides": [
+        1,
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Analisar um caso com condições, papéis ou limites integrados.",
+      "hash": "8eb4c13f15e1544e734334679f47710f8cb966e344ecb057570f3ee85731d426"
+    },
+    {
+      "id": 842,
+      "tema": "ANBIMA: códigos e supervisão",
+      "nivel": 3,
+      "slides": [
+        1,
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Analisar um caso com condições, papéis ou limites integrados.",
+      "hash": "9b6fc3ca291e876213a4be49c6035f8a9b869f22d1cb5802e63454dadf3acfef"
+    },
+    {
+      "id": 843,
+      "tema": "ANBIMA: fontes de autorregulação",
+      "nivel": 3,
+      "slides": [
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Analisar um caso com condições, papéis ou limites integrados.",
+      "hash": "6969d325bcb4020728507554bef8a4116ad5ef6382e502e0c46aca884fcf5a5a"
+    },
+    {
+      "id": 844,
+      "tema": "ANBIMA: adesão e participantes",
+      "nivel": 3,
+      "slides": [
+        1,
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Analisar um caso com condições, papéis ou limites integrados.",
+      "hash": "8b6be660504bd398f13aacbd1079b5a38a4390771b0bcd1899cb0f199d299dc4"
+    },
+    {
+      "id": 845,
+      "tema": "ANBIMA: compromissos",
+      "nivel": 3,
+      "slides": [
+        1,
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Analisar um caso com condições, papéis ou limites integrados.",
+      "hash": "dd82c0d46959ef6832475104d657ef972262ac040371fc849d4b4154842cb2de"
+    },
+    {
+      "id": 846,
+      "tema": "ANBIMA: comparações institucionais",
+      "nivel": 3,
+      "slides": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "transcricao": 1,
+      "criterio": "Analisar um caso com condições, papéis ou limites integrados.",
+      "hash": "e89a0dbbc4fd3a49affb90cee7ac394598a80329d12e30cbb3074abb22dfd76a"
+    },
+    {
+      "id": 847,
+      "tema": "ANBIMA: códigos e supervisão",
+      "nivel": 3,
+      "slides": [
+        1,
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Analisar um caso com condições, papéis ou limites integrados.",
+      "hash": "8bc9c7466d29efc60ea0bf13b6f722662064ec02567604159886e6f0a6895560"
+    },
+    {
+      "id": 848,
+      "tema": "ANBIMA: adesão e participantes",
+      "nivel": 3,
+      "slides": [
+        1,
+        2
+      ],
+      "transcricao": 1,
+      "criterio": "Analisar um caso com condições, papéis ou limites integrados.",
+      "hash": "d554bf539434bca144ab5509aa34607ee243ff9feda42732baa4d05ac537031c"
+    },
+    {
+      "id": 849,
+      "tema": "ANBIMA: natureza e missão",
+      "nivel": 3,
+      "slides": [
+        1,
+        2,
+        10
+      ],
+      "transcricao": 1,
+      "criterio": "Analisar um caso com condições, papéis ou limites integrados.",
+      "hash": "2cb3747b6a7a922a8c47babd63cde54271bd18887aca03fc7e6422bc5e2db959"
+    },
+    {
+      "id": 850,
+      "tema": "ANBIMA: comparações institucionais",
+      "nivel": 3,
+      "slides": [
+        1,
+        2,
+        6,
+        7
+      ],
+      "transcricao": 1,
+      "criterio": "Analisar um caso com condições, papéis ou limites integrados.",
+      "hash": "4742e802e1fdba3d11e8bd09cb8ec39e2fdd9f41109bd15e76c433a8b312ad62"
+    },
+    {
+      "id": 851,
+      "tema": "Garantias: natureza e finalidade",
+      "nivel": 0,
+      "slides": [
+        8
+      ],
+      "transcricao": 2,
+      "criterio": "Reconhecer um conceito sem fornecer sua definição no enunciado.",
+      "hash": "3d637d5a77b65c391a8c077d7d99aeb3f4aa25011215322e41b7919da11d095e"
+    },
+    {
+      "id": 852,
+      "tema": "Garantias: limites ordinários",
+      "nivel": 0,
+      "slides": [
+        9
+      ],
+      "transcricao": 2,
+      "criterio": "Reconhecer um conceito sem fornecer sua definição no enunciado.",
+      "hash": "8e9b172685c6903464834f05f6e5dae32968b3c2c3ac51896acfbcdaf9ff8adf"
+    },
+    {
+      "id": 853,
+      "tema": "Garantias: limites ordinários",
+      "nivel": 0,
+      "slides": [
+        9,
+        12
+      ],
+      "transcricao": 2,
+      "criterio": "Reconhecer um conceito sem fornecer sua definição no enunciado.",
+      "hash": "60404b161a6420973a7d61ef87d8dcd2dc4a657de84038a22a0473f5dd30a7a3"
+    },
+    {
+      "id": 854,
+      "tema": "Garantias: produtos cobertos e exclusões",
+      "nivel": 0,
+      "slides": [
+        10
+      ],
+      "transcricao": 2,
+      "criterio": "Reconhecer um conceito sem fornecer sua definição no enunciado.",
+      "hash": "223fe3154a3de5cc61c689bf6443461ef4b5e3f5c6614b1221cb8134b04aa509"
+    },
+    {
+      "id": 855,
+      "tema": "Garantias: produtos cobertos e exclusões",
+      "nivel": 0,
+      "slides": [
+        10
+      ],
+      "transcricao": 2,
+      "criterio": "Reconhecer um conceito sem fornecer sua definição no enunciado.",
+      "hash": "f3f4d2ea1e0b4f7eeb8fa0a4116229364ec9fe00c578e778a699a9ea6e0bbc3a"
+    },
+    {
+      "id": 856,
+      "tema": "Garantias: DPGE e garantia especial",
+      "nivel": 0,
+      "slides": [
+        9,
+        10
+      ],
+      "transcricao": 2,
+      "criterio": "Reconhecer um conceito sem fornecer sua definição no enunciado.",
+      "hash": "d96d186385b5275e7199c7c3590fc27beb1dc2679aa44da19b16743269cb540f"
+    },
+    {
+      "id": 857,
+      "tema": "Garantias: FGCoop",
+      "nivel": 0,
+      "slides": [
+        13
+      ],
+      "transcricao": 2,
+      "criterio": "Reconhecer um conceito sem fornecer sua definição no enunciado.",
+      "hash": "523cc6a97cc28994527fa9816fa7f5f5fe0e6b57630c1ed2cba725684ac05b10"
+    },
+    {
+      "id": 858,
+      "tema": "Garantias: natureza e finalidade",
+      "nivel": 0,
+      "slides": [
+        8
+      ],
+      "transcricao": 2,
+      "criterio": "Reconhecer um conceito sem fornecer sua definição no enunciado.",
+      "hash": "3f5cd9581089d9a415a6ec69e35a9afa9b6ab1e91bddcde5c34836f5361d9fca"
+    },
+    {
+      "id": 859,
+      "tema": "Garantias: limites ordinários",
+      "nivel": 1,
+      "slides": [
+        9,
+        10,
+        11
+      ],
+      "transcricao": 2,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "5112d73554d55b3ae8795bbf46b43d9c383ffa9f4f39505a813b7e09a18da759"
+    },
+    {
+      "id": 860,
+      "tema": "Garantias: limites ordinários",
+      "nivel": 1,
+      "slides": [
+        9,
+        11
+      ],
+      "transcricao": 2,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "a9808cb2fac7d73381633b6a61bb4122f7c510005d540866e4b1ba3ed80ac144"
+    },
+    {
+      "id": 861,
+      "tema": "Garantias: contas conjuntas",
+      "nivel": 1,
+      "slides": [
+        9,
+        12
+      ],
+      "transcricao": 2,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "d0631e90b30b6cc9c02e7393c7c74fa9aadcc9910be9b30c42f28b719aa78799"
+    },
+    {
+      "id": 862,
+      "tema": "Garantias: contas conjuntas",
+      "nivel": 1,
+      "slides": [
+        9,
+        12
+      ],
+      "transcricao": 2,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "aabd2ec188dcdccc50396b2caf8e8c2b0281f9b6908c982e2317a925cb8539e0"
+    },
+    {
+      "id": 863,
+      "tema": "Garantias: produtos cobertos e exclusões",
+      "nivel": 1,
+      "slides": [
+        9,
+        10
+      ],
+      "transcricao": 2,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "38941e63fb910b7026c6d5ea7e710840824e93b0c289cbfb4850d883dd18050e"
+    },
+    {
+      "id": 864,
+      "tema": "Garantias: produtos cobertos e exclusões",
+      "nivel": 1,
+      "slides": [
+        10
+      ],
+      "transcricao": 2,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "0a8d02daeed685df636b3784c00203e401f2eb2371aed5f71e20f5ebf5e2df90"
+    },
+    {
+      "id": 865,
+      "tema": "Garantias: produtos cobertos e exclusões",
+      "nivel": 1,
+      "slides": [
+        10
+      ],
+      "transcricao": 2,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "bcb26efaa6c09cfea833cbca74b748bebb73628ef94da6d55397604325ee75de"
+    },
+    {
+      "id": 866,
+      "tema": "Garantias: limites ordinários",
+      "nivel": 1,
+      "slides": [
+        9,
+        12
+      ],
+      "transcricao": 2,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "d32a25767f9f0bc5e2a5551298b65b75046ad5ee71e2952ee60343c51c09d01b"
+    },
+    {
+      "id": 867,
+      "tema": "Garantias: limites ordinários",
+      "nivel": 1,
+      "slides": [
+        9
+      ],
+      "transcricao": 2,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "7dda7a8055eaefe8bdf6c958ae9058b514458b6995740d84e8fe3651f401f7e6"
+    },
+    {
+      "id": 868,
+      "tema": "Garantias: DPGE e garantia especial",
+      "nivel": 1,
+      "slides": [
+        9,
+        10
+      ],
+      "transcricao": 2,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "5c2dfa55bacf15b42a8e8e2656584e6a7de192dc7fa2b41c647398d994b59c28"
+    },
+    {
+      "id": 869,
+      "tema": "Garantias: natureza e finalidade",
+      "nivel": 1,
+      "slides": [
+        8,
+        9
+      ],
+      "transcricao": 2,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "c7369b0ce21ea04097d8fce85ae92cf72ea787e8b8f298c9333944f4c13ab3fe"
+    },
+    {
+      "id": 870,
+      "tema": "Garantias: natureza e finalidade",
+      "nivel": 1,
+      "slides": [
+        8
+      ],
+      "transcricao": 2,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "2670e12ffcef51683aadf5e82f204dcd67209aa9a17e5aeef9afafc58bcaca94"
+    },
+    {
+      "id": 871,
+      "tema": "Garantias: FGCoop",
+      "nivel": 1,
+      "slides": [
+        13
+      ],
+      "transcricao": 2,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "3d898667272abb3a59db6270f689369542cb525535ebf4da9191192d626074e1"
+    },
+    {
+      "id": 872,
+      "tema": "Garantias: produtos cobertos e exclusões",
+      "nivel": 1,
+      "slides": [
+        10
+      ],
+      "transcricao": 2,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "e04957c5b41044d698ffb4d02c0478f2459603311643f032f032b69200b775cf"
+    },
+    {
+      "id": 873,
+      "tema": "Garantias: limites ordinários",
+      "nivel": 1,
+      "slides": [
+        9
+      ],
+      "transcricao": 2,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "be5357cdda8086f6e642735e4b77f51362dc720e77b40bbc03b3f5f7f5a58810"
+    },
+    {
+      "id": 874,
+      "tema": "Garantias: FGCoop",
+      "nivel": 1,
+      "slides": [
+        13
+      ],
+      "transcricao": 2,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "50fd2bf3d8edf4f37346630b62923280e0a466ebca55648e91beb54247e2d39f"
+    },
+    {
+      "id": 875,
+      "tema": "Garantias: limites ordinários",
+      "nivel": 2,
+      "slides": [
+        9,
+        10,
+        11
+      ],
+      "transcricao": 2,
+      "criterio": "Combinar condições e distinguir regras próximas.",
+      "hash": "8f385857ec9f31a1ddd5ab7e377dbd32d69538e88559e8e34dd57b0f9e0baecd"
+    },
+    {
+      "id": 876,
+      "tema": "Garantias: produtos cobertos e exclusões",
+      "nivel": 2,
+      "slides": [
+        9,
+        10
+      ],
+      "transcricao": 2,
+      "criterio": "Combinar condições e distinguir regras próximas.",
+      "hash": "37b01df43c1cc436d97abc657ed958def770364f9d8bdf2a98ccdffb3582e0f6"
+    },
+    {
+      "id": 877,
+      "tema": "Garantias: limites ordinários",
+      "nivel": 2,
+      "slides": [
+        9,
+        12
+      ],
+      "transcricao": 2,
+      "criterio": "Combinar condições e distinguir regras próximas.",
+      "hash": "9d9a3e34e60309a6fbd24630e60bad433f4c1e2390ed283454f189c208e94e12"
+    },
+    {
+      "id": 878,
+      "tema": "Garantias: contas conjuntas",
+      "nivel": 2,
+      "slides": [
+        9,
+        12
+      ],
+      "transcricao": 2,
+      "criterio": "Combinar condições e distinguir regras próximas.",
+      "hash": "2dd3716e9fe25c4c11d542bd45cb04d97c0757c640b5e8602c9695ee059d45a5"
+    },
+    {
+      "id": 879,
+      "tema": "Garantias: produtos cobertos e exclusões",
+      "nivel": 2,
+      "slides": [
+        10
+      ],
+      "transcricao": 2,
+      "criterio": "Combinar condições e distinguir regras próximas.",
+      "hash": "395b21607383989166728c78ac1e630e7283e0ef1a03a5157ed8dfd6d20170d9"
+    },
+    {
+      "id": 880,
+      "tema": "Garantias: FGCoop",
+      "nivel": 2,
+      "slides": [
+        10,
+        13
+      ],
+      "transcricao": 2,
+      "criterio": "Combinar condições e distinguir regras próximas.",
+      "hash": "f97931011ae5dfb0555e050923f9a890b9afc9ceb28ad9a70aaa96e19f7712cc"
+    },
+    {
+      "id": 881,
+      "tema": "Garantias: DPGE e garantia especial",
+      "nivel": 2,
+      "slides": [
+        9,
+        10
+      ],
+      "transcricao": 2,
+      "criterio": "Combinar condições e distinguir regras próximas.",
+      "hash": "d41bd1ebabf69ab2ca51e59894c140df3f610d6c3aa08e36974dcd0e5672ccb7"
+    },
+    {
+      "id": 882,
+      "tema": "Garantias: natureza e finalidade",
+      "nivel": 2,
+      "slides": [
+        8
+      ],
+      "transcricao": 2,
+      "criterio": "Combinar condições e distinguir regras próximas.",
+      "hash": "8d901d87cc9c40e982a76cf0b7d8ef8b410fa3bb634cd9c4f3a763f96805182f"
+    },
+    {
+      "id": 883,
+      "tema": "Garantias: limites ordinários",
+      "nivel": 3,
+      "slides": [
+        9,
+        10,
+        12
+      ],
+      "transcricao": 2,
+      "criterio": "Analisar um caso com condições, papéis ou limites integrados.",
+      "hash": "9d8a4e6ab2c6d5b0b1892e637e70c3335e067ff85fc38fbb3123b87d03d43814"
+    },
+    {
+      "id": 884,
+      "tema": "Garantias: produtos cobertos e exclusões",
+      "nivel": 3,
+      "slides": [
+        9,
+        10
+      ],
+      "transcricao": 2,
+      "criterio": "Analisar um caso com condições, papéis ou limites integrados.",
+      "hash": "d284f76604045ad997dd9acaa765da5c17153eaf8839014e3c25480400339a23"
+    },
+    {
+      "id": 885,
+      "tema": "Garantias: contas conjuntas",
+      "nivel": 3,
+      "slides": [
+        9,
+        12
+      ],
+      "transcricao": 2,
+      "criterio": "Analisar um caso com condições, papéis ou limites integrados.",
+      "hash": "ea2f10ca8a7f7c39b593b1ec099670def52d77b7a6a471bcc0b99c3d225d1c99"
+    },
+    {
+      "id": 886,
+      "tema": "Garantias: limites ordinários",
+      "nivel": 3,
+      "slides": [
+        9,
+        10,
+        12
+      ],
+      "transcricao": 2,
+      "criterio": "Analisar um caso com condições, papéis ou limites integrados.",
+      "hash": "40274696bee87f0f69715dcf5a35ff7849ccf4aa3b67bbfc48b15f2a4ef4d8c6"
+    },
+    {
+      "id": 887,
+      "tema": "Garantias: produtos cobertos e exclusões",
+      "nivel": 3,
+      "slides": [
+        10
+      ],
+      "transcricao": 2,
+      "criterio": "Analisar um caso com condições, papéis ou limites integrados.",
+      "hash": "fe9401c6bc8d218c020bdef4710f79e00e25d9ae2f218e8ed8c14da327783544"
+    },
+    {
+      "id": 888,
+      "tema": "Garantias: DPGE e garantia especial",
+      "nivel": 3,
+      "slides": [
+        9,
+        10
+      ],
+      "transcricao": 2,
+      "criterio": "Analisar um caso com condições, papéis ou limites integrados.",
+      "hash": "0bf566a868fc376f88d7da87f97e71def6488ac3e45d51b1c312b49fb9eb3832"
+    },
+    {
+      "id": 889,
+      "tema": "Garantias: FGCoop",
+      "nivel": 3,
+      "slides": [
+        13
+      ],
+      "transcricao": 2,
+      "criterio": "Analisar um caso com condições, papéis ou limites integrados.",
+      "hash": "bb377390ddbc51c728cf534bd156825ca644bdeea987e0cc7366c908e956f472"
+    },
+    {
+      "id": 890,
+      "tema": "Garantias: natureza e finalidade",
+      "nivel": 3,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "transcricao": 2,
+      "criterio": "Analisar um caso com condições, papéis ou limites integrados.",
+      "hash": "8487732f337c4418f0b6e69a30691448a6a4c5eee44ed99310fc7bd6f223daa6"
+    },
+    {
+      "id": 891,
+      "tema": "Liberdade: objetivos e fundamentos",
+      "nivel": 0,
+      "slides": [
+        14
+      ],
+      "transcricao": 3,
+      "criterio": "Reconhecer um conceito sem fornecer sua definição no enunciado.",
+      "hash": "38af4793e83441b42f4a685d08f828fdb134ac3c8bc5665c60b4f3659966c76a"
+    },
+    {
+      "id": 892,
+      "tema": "Liberdade: objetivos e fundamentos",
+      "nivel": 0,
+      "slides": [
+        14
+      ],
+      "transcricao": 3,
+      "criterio": "Reconhecer um conceito sem fornecer sua definição no enunciado.",
+      "hash": "f44c261cf11ecff66f7e357d3043171ac98c1f7a35cf8c95ce6562c01286ad72"
+    },
+    {
+      "id": 893,
+      "tema": "Liberdade: baixo risco e limites",
+      "nivel": 1,
+      "slides": [
+        14,
+        15
+      ],
+      "transcricao": 3,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "f24bd91eee5b919c1a105c771e7c14f1a12062fc649e2b570093bbf7ceec4ac2"
+    },
+    {
+      "id": 894,
+      "tema": "Liberdade: segurança jurídica e contratos",
+      "nivel": 1,
+      "slides": [
+        15
+      ],
+      "transcricao": 3,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "2b2c8c354e979a15f7df53491b1481c4cb684da4dbac0465adb856c2f94ee485"
+    },
+    {
+      "id": 895,
+      "tema": "Liberdade: segurança jurídica e contratos",
+      "nivel": 1,
+      "slides": [
+        15
+      ],
+      "transcricao": 3,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "9e0100e427d3d0330cf7b955da426c794608075981e862d3da61cc795c7208d7"
+    },
+    {
+      "id": 896,
+      "tema": "Liberdade: documentos digitais",
+      "nivel": 1,
+      "slides": [
+        15
+      ],
+      "transcricao": 3,
+      "criterio": "Discriminar funções ou aplicar uma condição do conteúdo.",
+      "hash": "e54f6af04885d5c308cfabde7d03b65234e885aa1827c418e2fecc4976cab7db"
+    },
+    {
+      "id": 897,
+      "tema": "Liberdade: baixo risco e limites",
+      "nivel": 2,
+      "slides": [
+        14,
+        15
+      ],
+      "transcricao": 3,
+      "criterio": "Combinar condições e distinguir regras próximas.",
+      "hash": "133c300acf3052cc97a6bd800920c4e981e4b7a3a58e5ed383d906000e859356"
+    },
+    {
+      "id": 898,
+      "tema": "Liberdade: objetivos e fundamentos",
+      "nivel": 2,
+      "slides": [
+        14,
+        15
+      ],
+      "transcricao": 3,
+      "criterio": "Combinar condições e distinguir regras próximas.",
+      "hash": "59f910d728443bc91b2182d373f7007b660ad023360d34e9a4d05c0aab3481ea"
+    },
+    {
+      "id": 899,
+      "tema": "Liberdade: baixo risco e limites",
+      "nivel": 3,
+      "slides": [
+        14,
+        15
+      ],
+      "transcricao": 3,
+      "criterio": "Analisar um caso com condições, papéis ou limites integrados.",
+      "hash": "c73daafb1de7c880f5ae469b0a1e599fa27f4e4a77766da48db4306e6d8539a0"
+    },
+    {
+      "id": 900,
+      "tema": "Liberdade: segurança jurídica e contratos",
+      "nivel": 3,
+      "slides": [
+        14,
+        15
+      ],
+      "transcricao": 3,
+      "criterio": "Analisar um caso com condições, papéis ou limites integrados.",
+      "hash": "edd90cab2ba4f32bffee6e60910d4cda16ce9132bd7b6f0aaeda78e509d6ee0c"
+    }
+  ],
+  "preservacao": {
+    "ids_anteriores": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      241,
+      242,
+      243,
+      244,
+      245,
+      246,
+      247,
+      248,
+      249,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255,
+      256,
+      257,
+      258,
+      259,
+      260,
+      261,
+      262,
+      263,
+      264,
+      265,
+      266,
+      267,
+      268,
+      269,
+      270,
+      271,
+      272,
+      273,
+      274,
+      275,
+      276,
+      277,
+      278,
+      279,
+      280,
+      281,
+      282,
+      283,
+      284,
+      285,
+      286,
+      287,
+      288,
+      289,
+      290,
+      291,
+      292,
+      293,
+      294,
+      295,
+      296,
+      297,
+      298,
+      299,
+      300,
+      301,
+      302,
+      303,
+      304,
+      305,
+      306,
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313,
+      314,
+      315,
+      316,
+      317,
+      318,
+      319,
+      320,
+      321,
+      322,
+      323,
+      324,
+      325,
+      326,
+      327,
+      328,
+      329,
+      330,
+      331,
+      332,
+      333,
+      334,
+      335,
+      336,
+      337,
+      338,
+      339,
+      340,
+      341,
+      342,
+      343,
+      344,
+      345,
+      346,
+      347,
+      348,
+      349,
+      350,
+      351,
+      352,
+      353,
+      354,
+      355,
+      356,
+      357,
+      358,
+      359,
+      360,
+      361,
+      362,
+      363,
+      364,
+      365,
+      366,
+      367,
+      368,
+      369,
+      370,
+      371,
+      372,
+      373,
+      374,
+      375,
+      376,
+      377,
+      378,
+      379,
+      380,
+      381,
+      382,
+      383,
+      384,
+      385,
+      386,
+      387,
+      388,
+      389,
+      390,
+      391,
+      392,
+      393,
+      394,
+      395,
+      396,
+      397,
+      398,
+      399,
+      400,
+      401,
+      402,
+      403,
+      404,
+      405,
+      406,
+      407,
+      408,
+      409,
+      410,
+      411,
+      412,
+      413,
+      414,
+      415,
+      416,
+      417,
+      418,
+      419,
+      420,
+      421,
+      422,
+      423,
+      424,
+      425,
+      426,
+      427,
+      428,
+      429,
+      430,
+      431,
+      432,
+      433,
+      434,
+      435,
+      436,
+      437,
+      438,
+      439,
+      440,
+      441,
+      442,
+      443,
+      444,
+      445,
+      446,
+      447,
+      448,
+      449,
+      450,
+      451,
+      452,
+      453,
+      454,
+      455,
+      456,
+      457,
+      458,
+      459,
+      460,
+      461,
+      462,
+      463,
+      464,
+      465,
+      466,
+      467,
+      468,
+      469,
+      470,
+      471,
+      472,
+      473,
+      474,
+      475,
+      476,
+      477,
+      478,
+      479,
+      480,
+      481,
+      482,
+      483,
+      484,
+      485,
+      486,
+      487,
+      488,
+      489,
+      490,
+      491,
+      492,
+      493,
+      494,
+      495,
+      496,
+      497,
+      498,
+      499,
+      500,
+      501,
+      502,
+      503,
+      504,
+      505,
+      506,
+      507,
+      508,
+      509,
+      510,
+      511,
+      512,
+      513,
+      514,
+      515,
+      516,
+      517,
+      518,
+      519,
+      520,
+      521,
+      522,
+      523,
+      524,
+      525,
+      526,
+      527,
+      528,
+      529,
+      530,
+      531,
+      532,
+      533,
+      534,
+      535,
+      536,
+      537,
+      538,
+      539,
+      540,
+      541,
+      542,
+      543,
+      544,
+      545,
+      546,
+      547,
+      548,
+      549,
+      550,
+      551,
+      552,
+      553,
+      554,
+      555,
+      556,
+      557,
+      558,
+      559,
+      560,
+      561,
+      562,
+      563,
+      564,
+      565,
+      566,
+      567,
+      568,
+      569,
+      570,
+      571,
+      572,
+      573,
+      574,
+      575,
+      576,
+      577,
+      578,
+      579,
+      580,
+      581,
+      582,
+      583,
+      584,
+      585,
+      586,
+      587,
+      588,
+      589,
+      590,
+      591,
+      592,
+      593,
+      594,
+      595,
+      596,
+      597,
+      598,
+      599,
+      600,
+      601,
+      602,
+      603,
+      604,
+      605,
+      606,
+      607,
+      608,
+      609,
+      610,
+      611,
+      612,
+      613,
+      614,
+      615,
+      616,
+      617,
+      618,
+      619,
+      620,
+      621,
+      622,
+      623,
+      624,
+      625,
+      626,
+      627,
+      628,
+      629,
+      630,
+      631,
+      632,
+      633,
+      634,
+      635,
+      636,
+      637,
+      638,
+      639,
+      640,
+      641,
+      642,
+      643,
+      644,
+      645,
+      646,
+      647,
+      648,
+      649,
+      650,
+      651,
+      652,
+      653,
+      654,
+      655,
+      656,
+      657,
+      658,
+      659,
+      660,
+      661,
+      662,
+      663,
+      664,
+      665,
+      666,
+      667,
+      668,
+      669,
+      670,
+      671,
+      672,
+      673,
+      674,
+      675,
+      676,
+      677,
+      678,
+      679,
+      680,
+      681,
+      682,
+      683,
+      684,
+      685,
+      686,
+      687,
+      688,
+      689,
+      690,
+      691,
+      692,
+      693,
+      694,
+      695,
+      696,
+      697,
+      698,
+      699,
+      700,
+      701,
+      702,
+      703,
+      704,
+      705,
+      706,
+      707,
+      708,
+      709,
+      710,
+      711,
+      712,
+      713,
+      714,
+      715,
+      716,
+      717,
+      718,
+      719,
+      720,
+      721,
+      722,
+      723,
+      724,
+      725,
+      726,
+      727,
+      728,
+      729,
+      730,
+      731,
+      732,
+      733,
+      734,
+      735,
+      736,
+      737,
+      738,
+      739,
+      740,
+      741,
+      742,
+      743,
+      744,
+      745,
+      746,
+      747,
+      748,
+      749,
+      750,
+      751,
+      752,
+      753,
+      754,
+      755,
+      756,
+      757,
+      758,
+      759,
+      760,
+      761,
+      762,
+      763,
+      764,
+      765,
+      766,
+      767,
+      768,
+      769,
+      770,
+      771,
+      772,
+      773,
+      774,
+      775,
+      776,
+      777,
+      778,
+      779,
+      780,
+      781,
+      782,
+      783,
+      784,
+      785,
+      786,
+      787,
+      788,
+      789,
+      790,
+      791,
+      792,
+      793,
+      794,
+      795,
+      796,
+      797,
+      798,
+      799,
+      800
+    ],
+    "hash_primeiras_800": "60a08da8553e1b73af73c580f0d81bc9b81738bead42269acab0e28af9984708",
+    "novos_ids": [
+      801,
+      900
+    ],
+    "historico": "Formato de cpaH/cpaDaily inalterado; IDs anteriores não reordenados."
+  },
+  "materiais": {
+    "blocos": 3,
+    "flashcards": 54,
+    "tabelas": 11,
+    "diagramas": 8,
+    "comparativo_itens": 7
+  }
+}

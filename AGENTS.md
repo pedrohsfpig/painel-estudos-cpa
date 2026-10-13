@@ -396,6 +396,41 @@ Além das verificações gerais, execute `python3 tests/test_aula8.py` ao altera
 esta aula; confira a proporção, a associação entre fontes/questões e a separação
 entre referência de slide e gabarito numérico de norma vigente.
 
+### Aula 9 — Autorregulação, Garantias e Liberdade Econômica
+
+A aula 9 cruza **todos os 15 slides** de `Screenshot_1 (2).pdf` com as três
+transcrições. O usuário reforçou a regra permanente: **sempre comparar slides e
+transcrição**, incluindo nomes, números, negações e condições. Registre qualquer
+divergência e o critério adotado; trechos encobertos podem ser completados pela fala.
+
+O pedido específico é **50% ANBIMA / 40% FGC e FGCoop / 10% Liberdade Econômica**.
+Preserve em cada nível: ANBIMA 10/20/10/10; garantias 8/16/8/8; liberdade 2/4/2/2,
+na ordem Fácil/Médio/Difícil/Hardcore. Os IDs são 801–900. APIMEC, Planejar e
+ANCORD ficam nos materiais e comparações centradas em ANBIMA; não reduza a quota
+ANBIMA para criar questões isoladas das outras entidades.
+
+- Três blocos opcionais: Autorreguladores, FGC/FGCoop e Liberdade Econômica.
+  Preserve conteúdo agregado, seções abertas e separação dos filtros de prática.
+- DPGE: `R$ 40k` no slide 10 conflita com slide 9 e transcrição: **R$ 40 milhões**.
+  A inconsistência foi corrigida e registrada. Conta conjunta limita o total antes
+  de dividir, conferindo a janela/limites de cada titular.
+- Produto, titular e emissor/conglomerado são filtros distintos. CDB de fundo e
+  cota de fundo não herdam cobertura por canal bancário. Compromissadas exigem
+  condições do lastro; não generalize a partir de uma lista resumida.
+- Não transporte automaticamente teto global ou garantia especial do FGC para
+  FGCoop: esses pontos não foram detalhados para o segundo fundo nas fontes.
+- Parecer sem força própria não elimina dever do código; deliberação vincula no
+  âmbito aplicável; conselho interno não está acima do regulador estatal.
+- A consulta oficial foi bloqueada. Taxas de contribuição e certas siglas de
+  certificações ficam como referências da fonte, sem gabarito de vigência atual.
+- Liberdade econômica mantém condições de baixo risco, limites legais e requisitos
+  de documentos digitais; intervenção mínima não é ausência de regulação.
+
+Consulte `docs/aula-9-cobertura.json` e
+`docs/aula-9-autorregulacao-garantias-liberdade.md`. Além dos testes gerais, execute
+`python3 tests/test_aula9.py` ao alterar esta aula. Atualize os testes de rotação
+do checkpoint para a quantidade real de aulas, preservando 20 questões e 5/10/5.
+
 ## Prática com várias aulas
 
 O usuário pode marcar e desmarcar aulas individualmente em Praticar. `cfg.as`
