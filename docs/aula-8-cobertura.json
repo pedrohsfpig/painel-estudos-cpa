@@ -1,0 +1,1948 @@
+{
+  "aula": 8,
+  "titulo": "Aula 8: Inovação, Pagamentos e Crédito Digital",
+  "fontes": [
+    {
+      "arquivo": "Screenshot_1 (1).pdf",
+      "paginas": 19,
+      "sha256": "93a598d92665874cd42f90b57e17ad0363b0258b6751b858ab2746e3c86aef91"
+    },
+    {
+      "arquivo": "Texto colado.txt",
+      "aulas_professor": [
+        10,
+        11,
+        14
+      ],
+      "sha256": "0e77c75a29aaa947d4686e3dc71c30bc0b533fa5082e4d9d2d84f714afda017d"
+    }
+  ],
+  "distribuicao": {
+    "total": 100,
+    "facil": 20,
+    "medio": 40,
+    "dificil": 20,
+    "hardcore": 20,
+    "instituicoes_pagamento": 25,
+    "fintechs": 25,
+    "spb": 50
+  },
+  "blocos": [
+    {
+      "id": 1,
+      "titulo": "1. Instituições de Pagamento",
+      "temas": [
+        "IP: contas e limites",
+        "IP: modalidades",
+        "IP: natureza e serviços"
+      ],
+      "slides": [
+        1,
+        2,
+        3,
+        19
+      ],
+      "questoes": [
+        701,
+        702,
+        703,
+        704,
+        705,
+        706,
+        707,
+        708,
+        709,
+        710,
+        711,
+        712,
+        713,
+        714,
+        715,
+        716,
+        717,
+        718,
+        719,
+        720,
+        721,
+        722,
+        723,
+        724,
+        725
+      ],
+      "materiais": {
+        "mapas": 4,
+        "diagramas": 2,
+        "tabelas": 2,
+        "flashcards": 12
+      }
+    },
+    {
+      "id": 2,
+      "titulo": "2. Fintechs de Crédito",
+      "temas": [
+        "Fintechs: SCD",
+        "Fintechs: SEP",
+        "Fintechs: autorização e SCR",
+        "Fintechs: modelos de crédito",
+        "Fintechs: serviços adicionais"
+      ],
+      "slides": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "questoes": [
+        726,
+        727,
+        728,
+        729,
+        730,
+        731,
+        732,
+        733,
+        734,
+        735,
+        736,
+        737,
+        738,
+        739,
+        740,
+        741,
+        742,
+        743,
+        744,
+        745,
+        746,
+        747,
+        748,
+        749,
+        750
+      ],
+      "materiais": {
+        "mapas": 4,
+        "diagramas": 3,
+        "tabelas": 3,
+        "flashcards": 14
+      }
+    },
+    {
+      "id": 3,
+      "titulo": "3. SPB e Arranjos de Pagamento",
+      "temas": [
+        "SPB: SPI e conta PI",
+        "SPB: STR e reservas",
+        "SPB: arranjos e papéis",
+        "SPB: infraestruturas",
+        "SPB: sistemas e títulos",
+        "SPB: supervisão dos arranjos",
+        "SPB: visão e riscos"
+      ],
+      "slides": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "questoes": [
+        751,
+        752,
+        753,
+        754,
+        755,
+        756,
+        757,
+        758,
+        759,
+        760,
+        761,
+        762,
+        763,
+        764,
+        765,
+        766,
+        767,
+        768,
+        769,
+        770,
+        771,
+        772,
+        773,
+        774,
+        775,
+        776,
+        777,
+        778,
+        779,
+        780,
+        781,
+        782,
+        783,
+        784,
+        785,
+        786,
+        787,
+        788,
+        789,
+        790,
+        791,
+        792,
+        793,
+        794,
+        795,
+        796,
+        797,
+        798,
+        799,
+        800
+      ],
+      "materiais": {
+        "mapas": 7,
+        "diagramas": 4,
+        "tabelas": 7,
+        "flashcards": 26
+      }
+    }
+  ],
+  "preservacao": "IDs 1–700, AL[1..7], MAT[1..7], quadros anteriores e armazenamento não alterados.",
+  "consulta_normativa": {
+    "resultado": "Bloqueada: proxy retornou 403 ao acesso às páginas oficiais do BCB.",
+    "certificacao_de_vigencia": false,
+    "referencias_nao_usadas_como_gabarito_numerico": [
+      "R$15.000 de exposição de SEP",
+      "R$20 bilhões e 100 milhões de transações no enquadramento de arranjos"
+    ]
+  },
+  "ajustes_de_leitura": [
+    "Pix é arranjo; SPI é infraestrutura.",
+    "LBTR de um sistema não se generaliza a todo SPB.",
+    "STR não liquida literalmente toda obrigação financeira do país.",
+    "Pagamentos pós-pagos não exigem débito imediato universal do saldo do comprador.",
+    "Exemplos de pagamento no slide 11 não foram classificados como títulos; classes definidas pela função.",
+    "Referência numérica da SEP não foi transformada em limite por contrato ou regra vigente; unidade pendente.",
+    "Volumetria examinada nas duas métricas; a fala com “ou” não libera pelo menor indicador.",
+    "IP não é instituição financeira; participação em pagamentos não equivale a autorização de crédito."
+  ],
+  "quadros": {
+    "linhas": 13,
+    "grupos": 3,
+    "fontes_por_linha": [
+      {
+        "id": "emissor-eletronico",
+        "block": 1,
+        "name": "Emissor de moeda eletrônica",
+        "short": "",
+        "kind": "Modalidade de IP",
+        "form": "IP: Ltda. ou S.A., no material",
+        "icon": "credit",
+        "sources": [
+          "MAT[8].b[0]",
+          "Slides [1, 3, 19]",
+          "Transcrição da aula 10"
+        ],
+        "role": [
+          "**Gerencia conta pré-paga** e emite moeda eletrônica."
+        ],
+        "flows": [
+          "Recursos aportados **antes da utilização**."
+        ],
+        "account": [
+          "Conta de pagamento **pré-paga**."
+        ],
+        "rules": [
+          "Saldos {{negacao|não são funding para empréstimos a terceiros}}.",
+          "Uma IP pode acumular modalidades."
+        ],
+        "example": [
+          "Cartão **pré-pago**."
+        ],
+        "notes": [
+          "**Aporte prévio ≠ pagamento posterior de fatura.**"
+        ]
+      },
+      {
+        "id": "emissor-pos",
+        "block": 1,
+        "name": "Emissor de instrumento pós-pago",
+        "short": "",
+        "kind": "Modalidade de IP",
+        "form": "IP: Ltda. ou S.A., no material",
+        "icon": "credit",
+        "sources": [
+          "MAT[8].b[0]",
+          "Slides [3, 19]",
+          "Transcrição da aula 10"
+        ],
+        "role": [
+          "**Emite instrumento** e gerencia conta pós-paga."
+        ],
+        "flows": [
+          "Obrigações assumidas **antes do pagamento**."
+        ],
+        "account": [
+          "Conta de pagamento **pós-paga**."
+        ],
+        "rules": [
+          "Emissão de instrumento {{negacao|não é autorização geral de crédito da IP}}."
+        ],
+        "example": [
+          "Cartão com **fatura posterior**."
+        ],
+        "notes": [
+          "**Fatura do comprador ≠ liquidação da venda ao lojista.**"
+        ]
+      },
+      {
+        "id": "credenciador",
+        "block": 1,
+        "name": "Credenciador",
+        "short": "",
+        "kind": "Modalidade de IP",
+        "form": "IP: Ltda. ou S.A., no material",
+        "icon": "shop",
+        "sources": [
+          "MAT[8].b[0]",
+          "Slides [3, 16, 19]",
+          "Transcrição da aula 10"
+        ],
+        "role": [
+          "**Habilita o estabelecimento** para aceitar instrumentos."
+        ],
+        "flows": [
+          "Aceitação de compras e repasse contratado ao lojista."
+        ],
+        "account": [
+          "{{negacao|Não gerencia conta de usuário final nessa função}}."
+        ],
+        "rules": [
+          "Gestão de conta exige outra modalidade correspondente."
+        ],
+        "example": [
+          "Aceitação com **maquininha**."
+        ],
+        "notes": [
+          "**Credenciador ≠ emissor ≠ instituidor.**"
+        ]
+      },
+      {
+        "id": "iniciador",
+        "block": 1,
+        "name": "Iniciador de transação de pagamento",
+        "short": "",
+        "kind": "Modalidade de IP",
+        "form": "IP: Ltda. ou S.A., no material",
+        "icon": "exchange",
+        "sources": [
+          "MAT[8].b[0]",
+          "Slides [3, 19]",
+          "Transcrição da aula 10"
+        ],
+        "role": [
+          "Inicia **ordem autorizada** pelo usuário."
+        ],
+        "flows": [
+          "Ordem de pagamento; {{negacao|não detém os fundos}}."
+        ],
+        "account": [
+          "Conta permanece na instituição que a mantém."
+        ],
+        "rules": [
+          "{{negacao|Não gerencia conta nem retém fundos}} da transação iniciada."
+        ],
+        "example": [
+          "Checkout com iniciação a partir de outra conta."
+        ],
+        "notes": [
+          "**Transmitir a ordem ≠ receber o dinheiro.**"
+        ]
+      },
+      {
+        "id": "scd",
+        "block": 2,
+        "name": "Sociedade de Crédito Direto",
+        "short": "SCD",
+        "kind": "Instituição financeira de crédito",
+        "form": "Sociedade anônima",
+        "icon": "bank",
+        "sources": [
+          "MAT[8].b[1]",
+          "Slides [4, 5, 7]",
+          "Transcrição da aula 11"
+        ],
+        "role": [
+          "Concede crédito e adquire **direitos creditórios**."
+        ],
+        "flows": [
+          "Funding próprio e fonte originária do **BNDES**, no recorte da aula."
+        ],
+        "account": [
+          "**SCR:** informações das operações de crédito."
+        ],
+        "rules": [
+          "**S.A.**; operações por plataforma eletrônica; autorização do **BCB**.",
+          "{{negacao|Não capta depósitos do público}}, no modelo apresentado."
+        ],
+        "example": [
+          "Financiamento digital com recursos da sociedade."
+        ],
+        "notes": [
+          "**Ações capitalizam**; {{negacao|não são depósitos}}.",
+          "Serviços adicionais {{negacao|não dispensam autorização nem mudam suas restrições}}."
+        ]
+      },
+      {
+        "id": "sep",
+        "block": 2,
+        "name": "Sociedade de Empréstimo entre Pessoas",
+        "short": "SEP",
+        "kind": "Instituição financeira de crédito",
+        "form": "Sociedade anônima",
+        "icon": "users",
+        "sources": [
+          "MAT[8].b[1]",
+          "Slides [4, 6, 7]",
+          "Transcrição da aula 11"
+        ],
+        "role": [
+          "Conecta **credores e tomadores** por peer-to-peer."
+        ],
+        "flows": [
+          "Recursos de credores {{atencao|vinculados aos empréstimos intermediados}}."
+        ],
+        "account": [
+          "**SCR:** informações das operações de crédito."
+        ],
+        "rules": [
+          "**S.A.**; plataforma eletrônica; autorização do **BCB**.",
+          "Principal {{negacao|não é funding livre da plataforma}}."
+        ],
+        "example": [
+          "Credor disponibiliza capital para um tomador."
+        ],
+        "notes": [
+          "Modelo {{negacao|não equivale ao crédito próprio da SCD}}.",
+          "Referência de exposição está na tabela específica da fonte; {{negacao|não presumir limite por contrato}}."
+        ]
+      },
+      {
+        "id": "str",
+        "block": 3,
+        "name": "Sistema de Transferência de Reservas",
+        "short": "STR",
+        "kind": "Sistema de pagamentos",
+        "form": "Operado pelo BCB",
+        "icon": "bank",
+        "sources": [
+          "MAT[8].b[2]",
+          "Slides [8, 10, 12]",
+          "Transcrição da aula 14"
+        ],
+        "role": [
+          "Liquida **transferências interbancárias** em contas no BCB."
+        ],
+        "flows": [
+          "Fundos entre participantes; operações monetárias, cambiais e de capitais."
+        ],
+        "account": [
+          "**Reservas Bancárias** ou **Conta de Liquidação**."
+        ],
+        "rules": [
+          "Enquadramento depende da classe do participante.",
+          "Dias **úteis** do mercado financeiro, no recorte."
+        ],
+        "example": [
+          "Movimentação entre contas institucionais."
+        ],
+        "notes": [
+          "**STR ≠ todo o SPB.**",
+          "**STN:** Conta Única do Tesouro."
+        ]
+      },
+      {
+        "id": "spi",
+        "block": 3,
+        "name": "Sistema de Pagamentos Instantâneos",
+        "short": "SPI",
+        "kind": "Sistema de pagamentos",
+        "form": "Operado pelo BCB",
+        "icon": "exchange",
+        "sources": [
+          "MAT[8].b[2]",
+          "Slides [13, 15]",
+          "Transcrição da aula 14"
+        ],
+        "role": [
+          "Liquida pagamentos instantâneos **entre instituições**."
+        ],
+        "flows": [
+          "Transferência individual de fundos no **SPI**."
+        ],
+        "account": [
+          "**Conta PI** do participante direto no BCB."
+        ],
+        "rules": [
+          "**LBTR:** transação por transação.",
+          "{{negacao|Não admite descoberto em PI}}; concluída, liquidação **irrevogável**."
+        ],
+        "example": [
+          "Liquidação interinstitucional de um **Pix**."
+        ],
+        "notes": [
+          "**Pix:** arranjo; **SPI:** infraestrutura.",
+          "Conta PI {{negacao|não é conta de varejo do usuário}}."
+        ]
+      },
+      {
+        "id": "selic",
+        "block": 3,
+        "name": "Sistema Especial de Liquidação e de Custódia",
+        "short": "Selic",
+        "kind": "Liquidação e depósito de títulos",
+        "form": "Infraestrutura de títulos",
+        "icon": "layers",
+        "sources": [
+          "MAT[8].b[2]",
+          "Slides [10, 11, 14]",
+          "Transcrição da aula 14"
+        ],
+        "role": [
+          "Liquidação e custódia de **títulos públicos federais**."
+        ],
+        "flows": [
+          "Títulos e respectivas obrigações da operação."
+        ],
+        "account": [
+          "Registros e posições em **títulos federais**."
+        ],
+        "rules": [
+          "Combina funções de **SSS** e **CSD**."
+        ],
+        "example": [
+          "Liquidação e depósito de título público federal."
+        ],
+        "notes": [
+          "**Sistema Selic ≠ taxa Selic.**"
+        ]
+      },
+      {
+        "id": "b3",
+        "block": 3,
+        "name": "Brasil, Bolsa, Balcão",
+        "short": "B3",
+        "kind": "Estruturas de infraestrutura",
+        "form": "Funções variadas em suas estruturas",
+        "icon": "chart",
+        "sources": [
+          "MAT[8].b[2]",
+          "Slides [10, 11, 14]",
+          "Transcrição da aula 14"
+        ],
+        "role": [
+          "Compensação, liquidação, depósito e registro, conforme a estrutura."
+        ],
+        "flows": [
+          "Ativos, contratos e operações dos mercados abrangidos."
+        ],
+        "account": [
+          "Registros e posições conforme o serviço prestado."
+        ],
+        "rules": [
+          "Pode reunir funções distintas; CCP {{negacao|não garante retorno do investimento}}."
+        ],
+        "example": [
+          "Câmara B3, Câmara de Câmbio e depositária."
+        ],
+        "notes": [
+          "**Registrar ≠ custodiar ≠ liquidar ≠ assumir posição de CCP.**"
+        ]
+      },
+      {
+        "id": "sitraf",
+        "block": 3,
+        "name": "Sistema de Transferência de Fundos",
+        "short": "Sitraf",
+        "kind": "Sistema de pagamentos",
+        "form": "Sistema citado no material",
+        "icon": "exchange",
+        "sources": [
+          "MAT[8].b[2]",
+          "Slides [14]",
+          "Transcrição da aula 14"
+        ],
+        "role": [
+          "Compensação/liquidação de transferências eletrônicas."
+        ],
+        "flows": [
+          "Fundos transferidos entre instituições."
+        ],
+        "account": [
+          "Posições das transferências processadas."
+        ],
+        "rules": [
+          "Referência operacional: **CIP**, na nomenclatura da aula."
+        ],
+        "example": [
+          "**TED** no quadro do material."
+        ],
+        "notes": [
+          "{{negacao|Não confundir com Selic nem com o SPI}}."
+        ]
+      },
+      {
+        "id": "siloc",
+        "block": 3,
+        "name": "Sistema de Liquidação Diferida das Transferências Interbancárias de Ordens de Crédito",
+        "short": "SILOC",
+        "kind": "Sistema de pagamentos",
+        "form": "Sistema citado no material",
+        "icon": "clock",
+        "sources": [
+          "MAT[8].b[2]",
+          "Slides [14]",
+          "Transcrição da aula 14"
+        ],
+        "role": [
+          "**Liquidação diferida** de ordens de crédito interbancárias."
+        ],
+        "flows": [
+          "Ordens de crédito para transferências."
+        ],
+        "account": [
+          "Posições das ordens processadas."
+        ],
+        "rules": [
+          "Referência operacional: **CIP**, na nomenclatura da aula."
+        ],
+        "example": [
+          "Liquidação de ordens de crédito interbancárias."
+        ],
+        "notes": [
+          "“Crédito” aqui {{negacao|não significa cadastro de empréstimo no SCR}}."
+        ]
+      },
+      {
+        "id": "compe",
+        "block": 3,
+        "name": "Centralizadora da Compensação de Cheques",
+        "short": "Compe",
+        "kind": "Sistema de pagamentos",
+        "form": "Sistema citado no material",
+        "icon": "file",
+        "sources": [
+          "MAT[8].b[2]",
+          "Slides [14]",
+          "Transcrição da aula 14"
+        ],
+        "role": [
+          "Compensação e liquidação de **cheques**."
+        ],
+        "flows": [
+          "Obrigações originadas em cheques."
+        ],
+        "account": [
+          "Processamento e posições de compensação."
+        ],
+        "rules": [
+          "No material: **BCB** regula; **Banco do Brasil** operacionaliza."
+        ],
+        "example": [
+          "Compensação de cheque entre instituições."
+        ],
+        "notes": [
+          "Cheque {{negacao|não é pagamento instantâneo no SPI}}."
+        ]
+      }
+    ]
+  },
+  "questoes": [
+    {
+      "id": 701,
+      "bloco": 1,
+      "nivel": 0,
+      "tema": "IP: natureza e serviços",
+      "slides": [
+        1
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "0e8ae35f1194a4f4b50f69e969a1a3586841cd58248a757915dc0dc7f86ecb34"
+    },
+    {
+      "id": 702,
+      "bloco": 1,
+      "nivel": 0,
+      "tema": "IP: modalidades",
+      "slides": [
+        3,
+        19
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "2bceab11f18ec4015f312a223812bacec990334151a54c11c734f0fd2143f080"
+    },
+    {
+      "id": 703,
+      "bloco": 1,
+      "nivel": 0,
+      "tema": "IP: modalidades",
+      "slides": [
+        3,
+        19
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "e7a5d5cde8891dc60dd5e1485c0e95e020bb4a4a35bac8c0ce24c88921fece2a"
+    },
+    {
+      "id": 704,
+      "bloco": 1,
+      "nivel": 0,
+      "tema": "IP: contas e limites",
+      "slides": [
+        1,
+        17
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "9ab6e8df54b3eeb1df7cc08d9b53e83ce6e312e4162b54dc734d89ad9dc683bb"
+    },
+    {
+      "id": 705,
+      "bloco": 1,
+      "nivel": 0,
+      "tema": "IP: modalidades",
+      "slides": [
+        3,
+        19
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "947b333abaf276295a3d4a24ddcad4717e118e562c2862b8e0fc8b73e582b913"
+    },
+    {
+      "id": 706,
+      "bloco": 1,
+      "nivel": 1,
+      "tema": "IP: modalidades",
+      "slides": [
+        3
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "085c0939b39b877289ca2e9277bb5ab640770b462c560af7b650b802e6b9c399"
+    },
+    {
+      "id": 707,
+      "bloco": 1,
+      "nivel": 1,
+      "tema": "IP: modalidades",
+      "slides": [
+        3,
+        19
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "2943fbccf1980717dc8fa3803aa72afba2456b6bc7e21d5ab66bb61dd0276a6d"
+    },
+    {
+      "id": 708,
+      "bloco": 1,
+      "nivel": 1,
+      "tema": "IP: modalidades",
+      "slides": [
+        3
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "c5ff5a13bbae2b10d329de7ad414379d1f94f44e2aa9bde41df91e2b17370853"
+    },
+    {
+      "id": 709,
+      "bloco": 1,
+      "nivel": 1,
+      "tema": "IP: contas e limites",
+      "slides": [
+        1,
+        17
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "09ebad69006dfb8fa252e6c048438a16c2ef54961afcae0358897d1123c3338a"
+    },
+    {
+      "id": 710,
+      "bloco": 1,
+      "nivel": 1,
+      "tema": "IP: natureza e serviços",
+      "slides": [
+        1
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "2b66bf4f4820f332ac63dfc103b08626e159e98e7d9a29f6b8cdf38162f6516d"
+    },
+    {
+      "id": 711,
+      "bloco": 1,
+      "nivel": 1,
+      "tema": "IP: natureza e serviços",
+      "slides": [
+        1,
+        2
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "3d319b46960199c7e303594e3f9ac8901941b83b53bec82841a3d04a17bc5cc8"
+    },
+    {
+      "id": 712,
+      "bloco": 1,
+      "nivel": 1,
+      "tema": "IP: modalidades",
+      "slides": [
+        3,
+        19
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "05796a9a07dd4c4ce363f2d5af368b9a3869e77fbeb650b0b903b18cf3df93aa"
+    },
+    {
+      "id": 713,
+      "bloco": 1,
+      "nivel": 1,
+      "tema": "IP: contas e limites",
+      "slides": [
+        1,
+        13
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "d0449174e5be2c037c882aecebb9d979a35d918e08aa2d5a9d657510642bb3d1"
+    },
+    {
+      "id": 714,
+      "bloco": 1,
+      "nivel": 1,
+      "tema": "IP: modalidades",
+      "slides": [
+        3
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "cdbedca386bd8434c8ea1dd2cf68f8be4e052b3d3486d695cd29b2e79c0cea26"
+    },
+    {
+      "id": 715,
+      "bloco": 1,
+      "nivel": 1,
+      "tema": "IP: natureza e serviços",
+      "slides": [
+        2
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "bb8e7c81d5d3fd82e2e88149897306ee659e8cc54855f6ada1e80c9ea585b76a"
+    },
+    {
+      "id": 716,
+      "bloco": 1,
+      "nivel": 2,
+      "tema": "IP: contas e limites",
+      "slides": [
+        3,
+        19
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "6009c482707dd41274756bfe5777f945eee2eb2eef34b1a4bcc782e02e5abf4e"
+    },
+    {
+      "id": 717,
+      "bloco": 1,
+      "nivel": 2,
+      "tema": "IP: modalidades",
+      "slides": [
+        3
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "f8317cbaadbf0d8b8c1c2087c6240142d4882c643b1464c4cd9b14498b262bca"
+    },
+    {
+      "id": 718,
+      "bloco": 1,
+      "nivel": 2,
+      "tema": "IP: natureza e serviços",
+      "slides": [
+        1,
+        17
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "11f8b227f6b937b27254501cb7309da8d33a690d9e85afbdab2aa88592745413"
+    },
+    {
+      "id": 719,
+      "bloco": 1,
+      "nivel": 2,
+      "tema": "IP: contas e limites",
+      "slides": [
+        1,
+        13,
+        17
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "4b10c95593f600b5225d7edbc89868a66b0ce380f69a0cc2fad05534aaaba63c"
+    },
+    {
+      "id": 720,
+      "bloco": 1,
+      "nivel": 2,
+      "tema": "IP: modalidades",
+      "slides": [
+        3
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "42f2fb9c41eeb28cea0e35fdb60369c2b18f4b168bf26bafaf1b29700185aa71"
+    },
+    {
+      "id": 721,
+      "bloco": 1,
+      "nivel": 3,
+      "tema": "IP: modalidades",
+      "slides": [
+        3,
+        19
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "dd7ba5df3695a05584f7e37f4a5b44752fc1453615318021fe14c42099445141"
+    },
+    {
+      "id": 722,
+      "bloco": 1,
+      "nivel": 3,
+      "tema": "IP: natureza e serviços",
+      "slides": [
+        1,
+        5,
+        17
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "5b34621920b458bba2c689be2627c4f61ae43dad93148b6fbb5ccaf51baf7c34"
+    },
+    {
+      "id": 723,
+      "bloco": 1,
+      "nivel": 3,
+      "tema": "IP: contas e limites",
+      "slides": [
+        3,
+        12,
+        17
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "0876fc70f96f1da3dce5b5b61284e57c698ccc124040227266e4d86ab4ba5e51"
+    },
+    {
+      "id": 724,
+      "bloco": 1,
+      "nivel": 3,
+      "tema": "IP: modalidades",
+      "slides": [
+        2,
+        3,
+        16
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "9851490a8351d95e4f75e97997c0a60408d4a5562ab01cb0d6cc9fbddce224b3"
+    },
+    {
+      "id": 725,
+      "bloco": 1,
+      "nivel": 3,
+      "tema": "IP: natureza e serviços",
+      "slides": [
+        1,
+        2,
+        17
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "99585e7b7f97c15414390c84d51a2546f740f03d8a0740698b8b3391dd4b2f99"
+    },
+    {
+      "id": 726,
+      "bloco": 2,
+      "nivel": 0,
+      "tema": "Fintechs: modelos de crédito",
+      "slides": [
+        4
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "80dac5cb97b8b238ddf13d923b4ce1e90588a5d11ac8d51dfd5190ad70faec66"
+    },
+    {
+      "id": 727,
+      "bloco": 2,
+      "nivel": 0,
+      "tema": "Fintechs: SCD",
+      "slides": [
+        5
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "f7b0ef26f68d30b8ab8ade2e5f33247fb2961a94957b738e99b297d244ce9fb3"
+    },
+    {
+      "id": 728,
+      "bloco": 2,
+      "nivel": 0,
+      "tema": "Fintechs: SEP",
+      "slides": [
+        6
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "32c6efd4b81c9db975782522b5442f9eefa30c43e71b78a418254309f4448f50"
+    },
+    {
+      "id": 729,
+      "bloco": 2,
+      "nivel": 0,
+      "tema": "Fintechs: autorização e SCR",
+      "slides": [
+        7
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "a1d3942956c742fd4ae428e65a8cd4d6d444a42ab364c908cee4d096ec5bc3f0"
+    },
+    {
+      "id": 730,
+      "bloco": 2,
+      "nivel": 0,
+      "tema": "Fintechs: autorização e SCR",
+      "slides": [
+        4
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "7839f457f2389b142c2ee688829283e20ff7f36efc820017b1d6a171709ab440"
+    },
+    {
+      "id": 731,
+      "bloco": 2,
+      "nivel": 1,
+      "tema": "Fintechs: SCD",
+      "slides": [
+        5
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "b2d8d4e95f9de88a5bc4b5694c727315ebab564b95fedee424c379d106412326"
+    },
+    {
+      "id": 732,
+      "bloco": 2,
+      "nivel": 1,
+      "tema": "Fintechs: SCD",
+      "slides": [
+        5
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "2efa076786c4fc6e2132588411890ca729ed8d71170faebb8a64fda64af5d790"
+    },
+    {
+      "id": 733,
+      "bloco": 2,
+      "nivel": 1,
+      "tema": "Fintechs: SEP",
+      "slides": [
+        6
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "05ce9d8a0d58bf600c584dde75684d4909b7c5156fdd921f821e7ad985f84656"
+    },
+    {
+      "id": 734,
+      "bloco": 2,
+      "nivel": 1,
+      "tema": "Fintechs: SEP",
+      "slides": [
+        6
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "730034cac730437b0ba1a97695949250b2a0c7e3483fb02c76d78eef95996af9"
+    },
+    {
+      "id": 735,
+      "bloco": 2,
+      "nivel": 1,
+      "tema": "Fintechs: autorização e SCR",
+      "slides": [
+        7
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "480c2a2251cd39279806928a06f87d16c9fce28bc753de1880a9c38c691472a2"
+    },
+    {
+      "id": 736,
+      "bloco": 2,
+      "nivel": 1,
+      "tema": "Fintechs: serviços adicionais",
+      "slides": [
+        5,
+        6
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "27f4ba18056c8ce553a607278df8196d1c72bf0679552e01444ebf93e125fd45"
+    },
+    {
+      "id": 737,
+      "bloco": 2,
+      "nivel": 1,
+      "tema": "Fintechs: autorização e SCR",
+      "slides": [
+        7
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "e99b58d29af167261d848a0f55f3e9f10e51d2ce60e505b6b2d9acbed153b7c8"
+    },
+    {
+      "id": 738,
+      "bloco": 2,
+      "nivel": 1,
+      "tema": "Fintechs: modelos de crédito",
+      "slides": [
+        4,
+        5,
+        6
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "e56050c2f5f51f68c3135eaa60fe1ee646609f6dcc1b975aa91c20273e2ea755"
+    },
+    {
+      "id": 739,
+      "bloco": 2,
+      "nivel": 1,
+      "tema": "Fintechs: serviços adicionais",
+      "slides": [
+        3,
+        4
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "2acee0f96cd3d81a8ca530716f3d40f13fbe0bfe22e092bd95e82f413ba52b64"
+    },
+    {
+      "id": 740,
+      "bloco": 2,
+      "nivel": 1,
+      "tema": "Fintechs: modelos de crédito",
+      "slides": [
+        4,
+        7
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "611f18e6607d4c63d9d5b631cece8881cb54f4f9dffbcd932dc5bcd0f9bca53e"
+    },
+    {
+      "id": 741,
+      "bloco": 2,
+      "nivel": 2,
+      "tema": "Fintechs: SCD",
+      "slides": [
+        1,
+        5,
+        6
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "c3b378fe5523d87c8838eb778199427b3908cc29b4011121d253d8672ef9cebc"
+    },
+    {
+      "id": 742,
+      "bloco": 2,
+      "nivel": 2,
+      "tema": "Fintechs: SEP",
+      "slides": [
+        6
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "f14ee45c553e232a8b9e2a1f24c9f08e3a0ac294c4c7326fea92a9cfe5e1c71f"
+    },
+    {
+      "id": 743,
+      "bloco": 2,
+      "nivel": 2,
+      "tema": "Fintechs: modelos de crédito",
+      "slides": [
+        5,
+        6,
+        7
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "170719cc853c2475e1f359fa26d887ccc65c16b349abbd13ee0cc975228be306"
+    },
+    {
+      "id": 744,
+      "bloco": 2,
+      "nivel": 2,
+      "tema": "Fintechs: autorização e SCR",
+      "slides": [
+        4,
+        7,
+        13
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "8b8f661f543ddcea42231fa91f5fc4677fe16791f994564f69677a79cdd78d8b"
+    },
+    {
+      "id": 745,
+      "bloco": 2,
+      "nivel": 2,
+      "tema": "Fintechs: serviços adicionais",
+      "slides": [
+        3,
+        4,
+        5
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "6704a92a65f68c8c8b6347e30cb5b94886c97dd2ec51892fc80652dd88fe4bc4"
+    },
+    {
+      "id": 746,
+      "bloco": 2,
+      "nivel": 3,
+      "tema": "Fintechs: SCD",
+      "slides": [
+        5
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "8c34e22370b297ef1402ce89d755aed951d31011b374df55d5c67976fa45ba60"
+    },
+    {
+      "id": 747,
+      "bloco": 2,
+      "nivel": 3,
+      "tema": "Fintechs: SEP",
+      "slides": [
+        6
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "320923d38995e67e2edb402560f79bb800f6b06e87f18b8286ba3080cf2d6d8a"
+    },
+    {
+      "id": 748,
+      "bloco": 2,
+      "nivel": 3,
+      "tema": "Fintechs: modelos de crédito",
+      "slides": [
+        4,
+        5,
+        6
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "d5669e60e09677d01cc5133287e30effea2cef618512d215f777efcbc4ec4d88"
+    },
+    {
+      "id": 749,
+      "bloco": 2,
+      "nivel": 3,
+      "tema": "Fintechs: autorização e SCR",
+      "slides": [
+        4,
+        7,
+        13
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "6454d4d27961e128b287f53f3c16f7860125baa4a2b42a6d69072b569799771a"
+    },
+    {
+      "id": 750,
+      "bloco": 2,
+      "nivel": 3,
+      "tema": "Fintechs: serviços adicionais",
+      "slides": [
+        3,
+        4,
+        5
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "64fc858710d2c2a77f0458ad5fab30ccbf2d3e8be5fce07e27027831c3004278"
+    },
+    {
+      "id": 751,
+      "bloco": 3,
+      "nivel": 0,
+      "tema": "SPB: visão e riscos",
+      "slides": [
+        8,
+        9
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "15d639afbfc6fc118cf5da126577ed2836e808d96886cec43e67954709831084"
+    },
+    {
+      "id": 752,
+      "bloco": 3,
+      "nivel": 0,
+      "tema": "SPB: visão e riscos",
+      "slides": [
+        8
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "a8fb3f11b3d29b4e51776140466510dd43ab1cc4d0c7a1efbe5d32f46922703a"
+    },
+    {
+      "id": 753,
+      "bloco": 3,
+      "nivel": 0,
+      "tema": "SPB: STR e reservas",
+      "slides": [
+        12
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "24c3485e510ec8633775aadd0f2252235aca80ebb55dadcec27421689027e666"
+    },
+    {
+      "id": 754,
+      "bloco": 3,
+      "nivel": 0,
+      "tema": "SPB: SPI e conta PI",
+      "slides": [
+        13
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "9a153c513ee2d322f9c168de9bb39583227af2281e72c71d1b31e5680ef8542a"
+    },
+    {
+      "id": 755,
+      "bloco": 3,
+      "nivel": 0,
+      "tema": "SPB: sistemas e títulos",
+      "slides": [
+        11,
+        14
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "b2b839d302706980313e9217a91be07b4a373250fcd1fd877366e8e5822f818b"
+    },
+    {
+      "id": 756,
+      "bloco": 3,
+      "nivel": 0,
+      "tema": "SPB: infraestruturas",
+      "slides": [
+        10,
+        11
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "92413e07b0ff8f5d29455445a09dd65238310e9921a11f93f7ea477d508dcbb0"
+    },
+    {
+      "id": 757,
+      "bloco": 3,
+      "nivel": 0,
+      "tema": "SPB: arranjos e papéis",
+      "slides": [
+        15
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "7ecc0b33864e3e1fbbfb2095f4cdc23f895173f74bc0b4ee0db974b1ea638cc2"
+    },
+    {
+      "id": 758,
+      "bloco": 3,
+      "nivel": 0,
+      "tema": "SPB: arranjos e papéis",
+      "slides": [
+        16,
+        17
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "2c30da117ef6d2769f6d82eb242af09e36099fb38003706cdbbf778e496d6e3a"
+    },
+    {
+      "id": 759,
+      "bloco": 3,
+      "nivel": 0,
+      "tema": "SPB: SPI e conta PI",
+      "slides": [
+        13
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "dc33ad705c7015901792a5a08c6258bcaeec049a8b1f5236da45b97e6f922033"
+    },
+    {
+      "id": 760,
+      "bloco": 3,
+      "nivel": 0,
+      "tema": "SPB: sistemas e títulos",
+      "slides": [
+        14
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "819c5318144a7cfebbf6159332684a37f636cd157f5965231b79ddcb6f44b352"
+    },
+    {
+      "id": 761,
+      "bloco": 3,
+      "nivel": 1,
+      "tema": "SPB: visão e riscos",
+      "slides": [
+        8
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "8ceba5ab6f103a04d3af4fdcd9090dd20761d9b16da4b85b5d803057bcbe938f"
+    },
+    {
+      "id": 762,
+      "bloco": 3,
+      "nivel": 1,
+      "tema": "SPB: SPI e conta PI",
+      "slides": [
+        13
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "79cbd8b6e0fb0e705fac2ff68e6ad842be14dd4aad629d9cf18dba0724d0a466"
+    },
+    {
+      "id": 763,
+      "bloco": 3,
+      "nivel": 1,
+      "tema": "SPB: SPI e conta PI",
+      "slides": [
+        13
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "4eebafcf9966db274d4079339bbe710119bc3b232607edc0b21de2331e56e1df"
+    },
+    {
+      "id": 764,
+      "bloco": 3,
+      "nivel": 1,
+      "tema": "SPB: arranjos e papéis",
+      "slides": [
+        13,
+        15,
+        17
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "9c477fa641040f0e4ae5c7fdf0091e8d376ebc426be9a3d6a7be1f4b503bfdb0"
+    },
+    {
+      "id": 765,
+      "bloco": 3,
+      "nivel": 1,
+      "tema": "SPB: STR e reservas",
+      "slides": [
+        12
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "183dbeae09ea50a9a76159c8ac46b0b43de03514e99c94fdb1b22f8b8db6427a"
+    },
+    {
+      "id": 766,
+      "bloco": 3,
+      "nivel": 1,
+      "tema": "SPB: STR e reservas",
+      "slides": [
+        12
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "54b33b10e046a22be28614961d1a736b6661a0378d6c74b4ae1684c44a054b96"
+    },
+    {
+      "id": 767,
+      "bloco": 3,
+      "nivel": 1,
+      "tema": "SPB: STR e reservas",
+      "slides": [
+        12
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "60b012fab302dae46ed1c616f4977d2fc65ef8c5478b322b1030b8d0310121e9"
+    },
+    {
+      "id": 768,
+      "bloco": 3,
+      "nivel": 1,
+      "tema": "SPB: infraestruturas",
+      "slides": [
+        10,
+        11
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "3a7f6146c4f4038e6f3225172604c401016e359eee61e49958df0c5f29517b4c"
+    },
+    {
+      "id": 769,
+      "bloco": 3,
+      "nivel": 1,
+      "tema": "SPB: infraestruturas",
+      "slides": [
+        10,
+        11
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "a2320e8b700d30d51bf1ba5ac5e9d813c81d52d4747fe63892659d8fe56a89a7"
+    },
+    {
+      "id": 770,
+      "bloco": 3,
+      "nivel": 1,
+      "tema": "SPB: sistemas e títulos",
+      "slides": [
+        10,
+        11,
+        14
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "dfcd53986a7d1193486ec3e37b6ebe3e3951ab36e44ea32640727bddad657f91"
+    },
+    {
+      "id": 771,
+      "bloco": 3,
+      "nivel": 1,
+      "tema": "SPB: sistemas e títulos",
+      "slides": [
+        14
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "df49ce925659e2cb3c6f01eef79eb346a6cf66adca26a0aaa92b03e7c5c092f3"
+    },
+    {
+      "id": 772,
+      "bloco": 3,
+      "nivel": 1,
+      "tema": "SPB: sistemas e títulos",
+      "slides": [
+        14
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "52799fecf387547c9bcd4fc0e49f9eaa5b70db1e84d77edcc553765b9d55b2a2"
+    },
+    {
+      "id": 773,
+      "bloco": 3,
+      "nivel": 1,
+      "tema": "SPB: arranjos e papéis",
+      "slides": [
+        16,
+        17
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "1da6152506a2c208aa494c8268c967638e220d953cd61971a20e1de14ce0cf06"
+    },
+    {
+      "id": 774,
+      "bloco": 3,
+      "nivel": 1,
+      "tema": "SPB: arranjos e papéis",
+      "slides": [
+        16
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "cc0279deaa0d88348979dcbc2ca7deb22d6ad02ee9f1f3dc78560dd3e2f2e504"
+    },
+    {
+      "id": 775,
+      "bloco": 3,
+      "nivel": 1,
+      "tema": "SPB: arranjos e papéis",
+      "slides": [
+        16
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "d43537ecd49ccedcd9830099f3883baaabc97a03760346236cbebb313dbeea80"
+    },
+    {
+      "id": 776,
+      "bloco": 3,
+      "nivel": 1,
+      "tema": "SPB: arranjos e papéis",
+      "slides": [
+        3,
+        16
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "b2e2dc7348b5b6671b6de3d96bce792a9d22bd80fd47781f83c1a0cb540a7ce5"
+    },
+    {
+      "id": 777,
+      "bloco": 3,
+      "nivel": 1,
+      "tema": "SPB: STR e reservas",
+      "slides": [
+        12,
+        13
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "e3a51b1a00105ee8e769c2511a48b3db45e95e78964f126390882d5ecb614e3e"
+    },
+    {
+      "id": 778,
+      "bloco": 3,
+      "nivel": 1,
+      "tema": "SPB: visão e riscos",
+      "slides": [
+        8,
+        13
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "b8a48c2454496098914b040b361e7682d7c64cd066abb7981a64af569d6c580d"
+    },
+    {
+      "id": 779,
+      "bloco": 3,
+      "nivel": 1,
+      "tema": "SPB: supervisão dos arranjos",
+      "slides": [
+        1,
+        18,
+        19
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "b8695bd60be2d7384ce939c7926ba71766e95a5235c4801a067e8613339cdfbb"
+    },
+    {
+      "id": 780,
+      "bloco": 3,
+      "nivel": 1,
+      "tema": "SPB: infraestruturas",
+      "slides": [
+        10,
+        11,
+        14
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "b899ff607ef4a062ddcb102926b8ca31303fc96b24cb08700e64abfddde96abe"
+    },
+    {
+      "id": 781,
+      "bloco": 3,
+      "nivel": 2,
+      "tema": "SPB: STR e reservas",
+      "slides": [
+        12
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "931febf574ff80f2fef62979cc6376b90eb0e699c41be44697ddfda1a94269d3"
+    },
+    {
+      "id": 782,
+      "bloco": 3,
+      "nivel": 2,
+      "tema": "SPB: infraestruturas",
+      "slides": [
+        10,
+        11
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "7dffb375c70c7c3ba3c872398420dce1c198ffbe7deb645e2064bc3168ef1d81"
+    },
+    {
+      "id": 783,
+      "bloco": 3,
+      "nivel": 2,
+      "tema": "SPB: SPI e conta PI",
+      "slides": [
+        13
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "616c1c043959370fc5aa3d4e28e3be44cb8e1da6603fc947af1fb87c21ccb2fe"
+    },
+    {
+      "id": 784,
+      "bloco": 3,
+      "nivel": 2,
+      "tema": "SPB: sistemas e títulos",
+      "slides": [
+        4,
+        13,
+        14
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "c7a3ef838fd7b6fbf1a11458c250546f42de94108c9bdb3d0573dd7fcea9cd02"
+    },
+    {
+      "id": 785,
+      "bloco": 3,
+      "nivel": 2,
+      "tema": "SPB: arranjos e papéis",
+      "slides": [
+        2,
+        16,
+        17
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "977ed0a6d1a1062f6d72cdcb5b102888f896ab117cc357766f0d53194c56c4af"
+    },
+    {
+      "id": 786,
+      "bloco": 3,
+      "nivel": 2,
+      "tema": "SPB: visão e riscos",
+      "slides": [
+        8,
+        13,
+        14
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "fd07bf78a0f72f98f707676b74fe7c505e9b1e48b2375f3254b0d7b4dea4b7cc"
+    },
+    {
+      "id": 787,
+      "bloco": 3,
+      "nivel": 2,
+      "tema": "SPB: sistemas e títulos",
+      "slides": [
+        11,
+        14
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "2096d58d62a1837a6a50eba819d5aca2585b46b99b98cddac99a4f9b03b7a13d"
+    },
+    {
+      "id": 788,
+      "bloco": 3,
+      "nivel": 2,
+      "tema": "SPB: STR e reservas",
+      "slides": [
+        12
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "ec60063987b557588c6b1007abd3a85d1ad6e0516b2b111ad3beb488e43d6d7c"
+    },
+    {
+      "id": 789,
+      "bloco": 3,
+      "nivel": 2,
+      "tema": "SPB: arranjos e papéis",
+      "slides": [
+        3,
+        16
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "41c36935aaaa0fa51a4f1a02f2e29a8b6bb34ebc321aca8a22ae0d3dceef13aa"
+    },
+    {
+      "id": 790,
+      "bloco": 3,
+      "nivel": 2,
+      "tema": "SPB: supervisão dos arranjos",
+      "slides": [
+        18
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "ec6661ba30bae5f8ccf72221275fabeed7e57f08319e336fe311eb4907ac2b87"
+    },
+    {
+      "id": 791,
+      "bloco": 3,
+      "nivel": 3,
+      "tema": "SPB: STR e reservas",
+      "slides": [
+        12
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "fcf275261eb270c5180d71db1ffa0b018c58f9197115dc560110364beb3ae546"
+    },
+    {
+      "id": 792,
+      "bloco": 3,
+      "nivel": 3,
+      "tema": "SPB: SPI e conta PI",
+      "slides": [
+        13
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "567eeaa6ee33f3926a69bae3ba7a666e45fc14bddee95e221e554aca4ee1d7be"
+    },
+    {
+      "id": 793,
+      "bloco": 3,
+      "nivel": 3,
+      "tema": "SPB: infraestruturas",
+      "slides": [
+        10,
+        11
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "b6b1ac422de26cc76762f64d8c844c72c7d8e3a12788fe849a7f2dc144e499b1"
+    },
+    {
+      "id": 794,
+      "bloco": 3,
+      "nivel": 3,
+      "tema": "SPB: visão e riscos",
+      "slides": [
+        8,
+        11,
+        13,
+        14
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "cb84faddb32aa3ffdf7aaf43e6ad60c26d86c5caffa7a2969c1416922aa64774"
+    },
+    {
+      "id": 795,
+      "bloco": 3,
+      "nivel": 3,
+      "tema": "SPB: arranjos e papéis",
+      "slides": [
+        3,
+        16,
+        17
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "edf05e5cc8e4022176b36baf6d514a287505da1eedecae6a9d23c2452252cfbf"
+    },
+    {
+      "id": 796,
+      "bloco": 3,
+      "nivel": 3,
+      "tema": "SPB: sistemas e títulos",
+      "slides": [
+        13,
+        14,
+        15
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "f5bbeb5eab537ff6a28d680f3e153ab6661ec7fb784387f0deb668697c3997b5"
+    },
+    {
+      "id": 797,
+      "bloco": 3,
+      "nivel": 3,
+      "tema": "SPB: infraestruturas",
+      "slides": [
+        10,
+        11
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "8cdf0d9b04ea15d99eb9ba2f029941834ed6b4e2ac5f6772a4914edea557cf05"
+    },
+    {
+      "id": 798,
+      "bloco": 3,
+      "nivel": 3,
+      "tema": "SPB: supervisão dos arranjos",
+      "slides": [
+        1,
+        17,
+        18,
+        19
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "ed6607b288980ddf95298c6f52a6e1f44581b18dd3543c3ca4e7cacdceeedeb7"
+    },
+    {
+      "id": 799,
+      "bloco": 3,
+      "nivel": 3,
+      "tema": "SPB: SPI e conta PI",
+      "slides": [
+        12,
+        13
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "e666300c2a8e080a35cdd11c0817573892bc3376f04b434f33da00c8db9ee50d"
+    },
+    {
+      "id": 800,
+      "bloco": 3,
+      "nivel": 3,
+      "tema": "SPB: visão e riscos",
+      "slides": [
+        4,
+        11,
+        13
+      ],
+      "criterio": "Alternativas da mesma categoria; justificativas específicas; enunciado exige conceito, sem fornecer a regra avaliada.",
+      "hash": "031bf1a67ae0b8fefbf1788e6bdd217aed8c678407ba9a4e2aa08370e123d5cb"
+    }
+  ],
+  "verificacao": {
+    "testes_aprovados": 83,
+    "navegador": "Chromium",
+    "temas": [
+      "light",
+      "dark"
+    ],
+    "larguras_pc": [
+      1024,
+      1280,
+      1440,
+      1920
+    ],
+    "auditoria_alternativas_aula8": {
+      "normal": {
+        "questions": 80,
+        "characters": {
+          "correct_strictly_longest": 21,
+          "correct_strictly_shortest": 14,
+          "correct_tied_for_longest": 13,
+          "rank_strategy_rates": [
+            0.240625,
+            0.18854166666666666,
+            0.23229166666666665,
+            0.33854166666666663
+          ]
+        },
+        "words": {
+          "correct_strictly_longest": 6,
+          "correct_strictly_shortest": 9,
+          "correct_tied_for_longest": 31,
+          "rank_strategy_rates": [
+            0.25625000000000003,
+            0.26250000000000007,
+            0.28125000000000006,
+            0.2
+          ]
+        },
+        "correct_over_50_percent_longer_than_all_distractors": 0
+      },
+      "hardcore": {
+        "questions": 20,
+        "characters": {
+          "correct_strictly_longest": 3,
+          "correct_strictly_shortest": 6,
+          "correct_tied_for_longest": 0,
+          "rank_strategy_rates": [
+            0.3416666666666667,
+            0.2666666666666667,
+            0.2416666666666667,
+            0.15
+          ]
+        },
+        "words": {
+          "correct_strictly_longest": 3,
+          "correct_strictly_shortest": 5,
+          "correct_tied_for_longest": 2,
+          "rank_strategy_rates": [
+            0.3583333333333333,
+            0.25833333333333336,
+            0.18333333333333335,
+            0.2
+          ]
+        },
+        "correct_over_50_percent_longer_than_all_distractors": 0
+      },
+      "normal_by_lesson": {
+        "8": {
+          "questions": 80,
+          "characters": {
+            "correct_strictly_longest": 21,
+            "correct_strictly_shortest": 14,
+            "correct_tied_for_longest": 13,
+            "rank_strategy_rates": [
+              0.240625,
+              0.18854166666666666,
+              0.23229166666666665,
+              0.33854166666666663
+            ]
+          },
+          "words": {
+            "correct_strictly_longest": 6,
+            "correct_strictly_shortest": 9,
+            "correct_tied_for_longest": 31,
+            "rank_strategy_rates": [
+              0.25625000000000003,
+              0.26250000000000007,
+              0.28125000000000006,
+              0.2
+            ]
+          },
+          "correct_over_50_percent_longer_than_all_distractors": 0
+        }
+      }
+    },
+    "preservacao_confirmada": true,
+    "fontes_oficiais_acessiveis": false
+  }
+}

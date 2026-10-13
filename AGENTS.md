@@ -302,6 +302,47 @@ O relatório `docs/aula-7-cobertura.json` registra os 18 participantes, as fonte
 o alcance da revisão e os exercícios desta entrega; seus volumes não são quotas
 obrigatórias para futuros materiais. O número de questões segue a regra acima.
 
+### Aula 8 — Inovação, Pagamentos e Crédito Digital
+
+A aula 8 reúne as transcrições das aulas 10, 11 e 14 do professor e os 19 slides
+do PDF `Screenshot_1 (1).pdf`. Tem três blocos: IP, fintechs de crédito e SPB/
+arranjos. O pedido final do usuário foi **50% IP + fintechs / 50% SPB**:
+25 questões de IP, 25 de fintechs e 50 de SPB. Em cada dificuldade, preserve
+essa proporção: IP 5/10/5/5, fintechs 5/10/5/5 e SPB 10/20/10/10, na ordem
+Fácil/Médio/Difícil/Hardcore. Isso não é uma previsão oficial de frequência na prova.
+Os IDs novos são 701–800; a divisão não reordena as primeiras 700 questões.
+
+- Os três filtros de leitura e materiais compartilham `selectedLessonBlocks[8]`;
+  os filtros de prática continuam separados. Preservam-se seções abertas.
+- O quadro geral compara modalidades de IP, instituições financeiras de crédito
+  e infraestruturas, identificando suas naturezas. As colunas são função, objeto
+  movimentado, conta/registro, condições, aplicação e observações. Não trate
+  SCD/SEP como IP nem um sistema como se fosse uma pessoa jurídica de crédito.
+- Distinga Pix/arranjo de SPI/infraestrutura, contas PI de contas dos usuários,
+  SCR/informação de STR/SPI/liquidação e depósito de títulos de registro.
+  Não generalize LBTR a todo o SPB, nem diga que STR liquida literalmente toda
+  obrigação financeira do país. CCP não garante rentabilidade.
+- Crédito próprio da SCD, recursos vinculados de credores na SEP e saldos dos
+  usuários de IP não são intercambiáveis. A marca do grupo não muda a entidade.
+  Autorização de iniciação não permite gerir contas ou deter fundos nessa função.
+- O fluxo simplificado dos cartões não pode impor débito imediato ao comprador
+  de qualquer instrumento pós-pago; fatura e recebimento do lojista são distintos.
+- Os slides/transcrições contêm referências e simplificações cuja vigência não
+  foi confirmada, porque a consulta ao BCB foi bloqueada. R$15 mil da SEP e
+  R$20 bilhões/100 milhões de transações dos arranjos ficam identificados como
+  referências da fonte em tabelas específicas; não foram usados como gabaritos
+  numéricos de norma vigente. Não transformar a fala “por operação” em licença
+  para fracionar exposição, nem a fala com “ou” em dispensa por um só indicador.
+  Ao obter fontes oficiais, reveja a referência antes de acrescentar questões
+  que dependam de unidade, valor ou vigência. Não apresente a revisão de slides
+  como certificação normativa independente.
+
+A cobertura e as decisões estão em `docs/aula-8-cobertura.json` e
+`docs/aula-8-inovacao-pagamentos-credito-digital.md`.
+Além das verificações gerais, execute `python3 tests/test_aula8.py` ao alterar
+esta aula; confira a proporção, a associação entre fontes/questões e a separação
+entre referência de slide e gabarito numérico de norma vigente.
+
 ## Prática com várias aulas
 
 O usuário pode marcar e desmarcar aulas individualmente em Praticar. `cfg.as`

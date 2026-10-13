@@ -1602,25 +1602,133 @@ class PainelCPA(unittest.TestCase):
             self.assertTrue(self.page.locator(".sidebar").is_visible())
 
     def test_56_future_overview_uses_registered_columns_without_navigation_changes(self):
+        fixture_lesson = self.page.evaluate("AL.length+1")
         self.page.evaluate("""()=>{
-            AL.push({...AL[0],t:'Aula 8: Comparação de teste'});MAT[8]=MAT[1];
-            LESSON_OVERVIEWS[8]={...LESSON_OVERVIEWS[1],title:'Quadro de teste',
+            const n=AL.length+1;
+            AL.push({...AL[0],t:`Aula ${n}: Comparação de teste`});MAT[n]=MAT[1];
+            LESSON_OVERVIEWS[n]={...LESSON_OVERVIEWS[1],title:'Quadro de teste',
                 columns:[['operator','Participante'],['role','Função'],['notes','Observações']],
                 widths:[30,40,30],groups:[{id:1,t:'Grupo de teste',icon:'bank'}],
                 rows:[{...LESSON_OVERVIEWS[1].rows[0],id:'teste',name:'Participante de teste'}]};
-            view='t';tr=8;go();
+            view='t';tr=n;go();
         }""")
         self.click("Quadro comparativo")
-        self.assertEqual(self.page.evaluate("[mt.a,mt.c]"), [8,"geral"])
+        self.assertEqual(self.page.evaluate("[mt.a,mt.c]"), [fixture_lesson,"geral"])
         self.assertEqual(self.page.locator(".operator-overview-table thead th").all_text_contents(), ["Participante","Função","Observações"])
         self.assertEqual(self.page.locator(".operator-overview-table tbody td").count(), 2)
         self.page.locator('[data-overview-block="1"]').click()
         self.assertEqual(self.page.locator(".overview-operator-name").inner_text(), "Participante de teste")
         self.click("Aula 3")
         self.assertEqual(self.page.evaluate("mt.c"), "mapa")
-        self.click("Aula 8")
+        self.click(f"Aula {fixture_lesson}")
         self.click("Quadro geral")
         self.assertEqual(self.page.evaluate("overviewBlock()"), 1)
+
+    def test_57_lesson8_filters_keep_sections_open_and_show_complete_materials(self):
+        self.click("Trilha")
+        self.page.locator("button.tb").nth(7).click()
+        for selector in ["#lesson-summary","#lesson-tips","#lesson-traps"]:
+            self.page.locator(selector+" summary").click()
+        previous = self.page.evaluate("({history:H,practice:JSON.stringify(cfg)})")
+        for block, title in [(1,"1. Instituições de Pagamento"),(2,"2. Fintechs de Crédito"),(3,"3. SPB e Arranjos de Pagamento")]:
+            self.page.locator(f'.lesson-content-filter [data-lesson-block="{block}"]').click()
+            self.assertEqual(self.page.evaluate("lessonContent(8).t"), title)
+            for key, selector in [("r","#lesson-summary"),("d","#lesson-tips"),("p","#lesson-traps")]:
+                self.assertTrue(self.page.locator(selector).evaluate("node=>node.open"))
+                expected = self.page.evaluate("key=>lessonContent(8)[key].map(x=>x.replace(/\\{\\{(?:atencao|negacao)\\|([^{}]+)\\}\\}/g,'$1').replace(/\\*\\*/g,''))", key)
+                self.assertEqual(self.page.locator(selector+" .pt").all_text_contents(), expected)
+        self.assertEqual(self.page.evaluate("({history:H,practice:JSON.stringify(cfg)})"), previous)
+        self.page.locator(".hero").get_by_role("button", name="Material de apoio", exact=True).click()
+        for block in [1,2,3,0]:
+            self.page.locator(f'.lesson-blocks [data-lesson-block="{block}"]').click()
+            for kind in ["Mapa mental","Diagramas","Tabelas","Linha do tempo","Flashcards"]:
+                self.click(kind)
+                self.assert_material_content(kind)
+                if kind == "Flashcards":
+                    self.page.locator("#flashcard").click()
+                    self.assertTrue(self.page.locator("#flashcard").evaluate("n=>n.classList.contains('is-answer')"))
+                    face = self.page.locator(".flashcard-text").inner_text()
+                    self.page.locator("#theme-toggle").click()
+                    self.assertEqual(self.page.locator(".flashcard-text").inner_text(), face)
+        self.assertEqual(self.page.evaluate("({history:H,practice:JSON.stringify(cfg)})"), previous)
+
+    def test_58_lesson8_study_hardcore_and_simulation_preserve_specific_feedback(self):
+        for mode, ids in [("e",[701,731,782]),("h",[721,746,799]),("s",[701,731,782])]:
+            self.page.evaluate("args=>{qz=null;begin(args.ids,args.mode)}", {"ids":ids,"mode":mode})
+            for index in range(len(ids)):
+                question = self.page.evaluate("Q[qz.ids[qz.i]-1]")
+                self.answer(correct=index!=1)
+                self.assertEqual(self.page.locator(".fb-option").count(), 0 if mode=="s" else 4)
+                if mode!="s":
+                    for row in self.page.locator(".fb-option").all():
+                        option = int(row.get_attribute("data-option-index"))
+                        self.assertEqual(row.locator("p").inner_text(),question[11][option])
+                    self.click("Ver resultado" if index==len(ids)-1 else "Próxima")
+            self.assertEqual(self.page.locator("[data-result-score]").inner_text(), "2 de 3 (67%)")
+            self.assertIn("Inovação, Pagamentos e Crédito Digital", self.page.locator(".session-result").inner_text())
+        self.assertEqual(self.page.evaluate("H.length"),9)
+
+    def test_59_lesson8_blocks_and_multiple_lessons_keep_balanced_practice(self):
+        self.page.evaluate("H=[[1,1,1700000000000,0],[700,0,1700000000001,0]];save();view='q';qz=null;go()")
+        history = self.page.evaluate("H")
+        for mode in ["e","h","s"]:
+            for block, expected in [(1,25),(2,25),(3,50)]:
+                result = self.page.evaluate("args=>{cfg={a:8,as:[],n:-1,m:'all',c:50,md:args.mode,b:args.block};const ids=pool();return {ids,questions:ids.map(id=>Q[id-1])}}", {"mode":mode,"block":block})
+                self.assertEqual(len(result["ids"]), expected//5 if mode=="h" else expected*4//5)
+                self.assertTrue(all(q[0]==8 for q in result["questions"]))
+                self.assertTrue(all(q[1].startswith("IP:" if block==1 else "Fintechs:" if block==2 else "SPB:") for q in result["questions"]))
+            self.page.evaluate("mode=>{cfg={a:0,as:[7,8],n:-1,m:'all',c:20,md:mode,b:0};start()}", mode)
+            lessons = self.page.evaluate("qz.ids.map(id=>Q[id-1][0])")
+            self.assertEqual(lessons.count(7),10)
+            self.assertEqual(lessons.count(8),10)
+        self.assertEqual(self.page.evaluate("H"), history)
+        self.page.reload()
+        self.assertEqual(self.page.evaluate("H"), history)
+        self.assertEqual(self.page.evaluate("[Q[0][0],Q[699][0],Q[700][0],Q[799][0]]"),[1,7,8,8])
+
+    def test_60_lesson8_overview_filters_share_reading_without_changing_the_quiz(self):
+        self.page.evaluate("begin([701,799],'e')")
+        state = self.page.evaluate("({quiz:JSON.stringify(qz),history:H,practice:JSON.stringify(cfg)})")
+        self.page.evaluate("openOperatorOverview(8)")
+        self.assertEqual(self.page.locator(".operator-overview-table tbody tr").count(),13)
+        self.assertEqual(self.page.locator(".operator-overview-table thead th").all_text_contents(),[
+            "Participante / natureza","Função","O que movimenta","Conta / registro","Condições e limites","Aplicação","Observações"])
+        for block, ids in [(1,["emissor-eletronico","emissor-pos","credenciador","iniciador"]),
+                           (2,["scd","sep"]),
+                           (3,["str","spi","selic","b3","sitraf","siloc","compe"])]:
+            self.page.locator(f'[data-overview-block="{block}"]').click()
+            self.assertEqual(self.page.evaluate("selectedLessonBlocks[8]"),block)
+            self.assertEqual(self.page.locator(".operator-overview-table tbody tr").evaluate_all("rows=>rows.map(r=>r.dataset.operator)"),ids)
+            self.click("Mapa mental")
+            self.assert_material_content("Mapa mental")
+            self.click("Quadro geral")
+        self.assertIn("não é conta de varejo",self.page.locator('[data-operator="spi"] .overview-notes').inner_text())
+        self.page.get_by_role("button",name="Ampliar quadro comparativo",exact=True).click()
+        self.page.locator("#theme-toggle").click()
+        self.page.keyboard.press("Escape")
+        self.assertEqual(self.page.evaluate("({quiz:JSON.stringify(qz),history:H,practice:JSON.stringify(cfg)})"),state)
+        self.click("Praticar")
+        self.assertEqual(self.page.evaluate("qz.ids"),[701,799])
+
+    def test_61_lesson8_materials_fit_desktop_in_both_themes(self):
+        self.page.evaluate("mt.a=8;view='m';go()")
+        for width in [1024,1280,1440,1920]:
+            self.page.set_viewport_size({"width":width,"height":1000})
+            for theme in ["light","dark"]:
+                self.page.evaluate("theme=>document.documentElement.dataset.theme=theme",theme)
+                for key in ["mapa","diag","tab","tl","fc","geral"]:
+                    self.page.evaluate("key=>chooseMaterial('c',key)",key)
+                    self.assertTrue(self.page.evaluate("document.documentElement.scrollWidth<=innerWidth"),f"{width}/{theme}/{key}")
+                    self.assertTrue(self.page.locator("#theme-toggle").is_visible())
+                    if key=="geral":
+                        self.assertTrue(self.page.locator(".operator-overview-table th,.operator-overview-table td").evaluate_all(
+                            "nodes=>nodes.every(n=>n.getBoundingClientRect().width>90 && n.scrollWidth<=n.clientWidth+1)"))
+                    if width==1440 and key in ["mapa","diag","geral"]:
+                        self.page.screenshot(path=f"/tmp/cpa-aula8-{theme}-{key}.png",full_page=True)
+                self.page.get_by_role("button",name="Ampliar quadro comparativo",exact=True).click()
+                self.assertTrue(self.page.locator("#theme-toggle").is_visible())
+                self.assertTrue(self.page.evaluate("document.documentElement.scrollWidth<=innerWidth"))
+                self.page.keyboard.press("Escape")
 
 
 if __name__ == "__main__":
