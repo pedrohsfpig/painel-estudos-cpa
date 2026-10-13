@@ -79,8 +79,8 @@ Preserve as ações existentes ao modificar a apresentação; não reinicie uma
 sessão ao navegar ou trocar de tema. Os indicadores devem usar dados reais:
 tentativas incluem repetições; andamento da aula mede questões únicas praticadas
 (prova + Hardcore); pendências seguem a última resposta de cada questão. Não
-apresente cobertura como domínio. Filtros de estatísticas afetam tentativas,
-evolução e desempenho detalhado; trilha e pendências usam o histórico completo.
+apresente cobertura como domínio. Filtros de estatísticas afetam tentativas e
+desempenho detalhado; evolução, trilha e pendências usam o histórico completo.
 O acesso à última aula se baseia no histórico e abre seus materiais, sem alegar
 restauração de uma sessão. Trate histórico vazio e novas aulas sem números fixos.
 Confira os dois temas e os fluxos existentes antes de publicar mudanças no painel.
@@ -97,6 +97,59 @@ quando existente; não marque a questão apenas exibida como já respondida. O
 cronômetro continua usando `qz.t0`. Destaques de feedback devem manter a ordem
 e o índice original das alternativas e as quatro explicações integralmente
 visíveis após responder, sem feedback imediato nos simulados.
+
+## Estudo de hoje e evolução completa
+
+O estudo diário é um **checkpoint de 20 questões**: **5 fáceis, 10 médias e
+5 difíceis**, sem Hardcore. Cada dia oferece um novo conjunto, abrangendo todas
+as aulas disponíveis. Use `dailyPlan` com sorteio reproduzível pela data e os IDs
+estáveis do banco. A distribuição por aula difere no máximo em uma questão;
+vagas extras alternam pelos dias. Priorize o maior número possível de inéditas
+sem romper participação das aulas ou dificuldade. Quando forem necessárias
+repetições, prefira erros e respostas mais antigas. Os filtros da prática e das
+estatísticas não alteram o plano diário. Não repita IDs para preencher vagas nem
+inclua Hardcore; estoque insuficiente bloqueia a criação em vez de violar o plano.
+Se houver mais de 20 aulas, elas alternam em ciclos, pois não cabem todas no mesmo
+checkpoint de 20; a interface deve informar essa condição.
+
+- `cpaDaily` guarda um livro separado de `cpaH`: rascunho da sessão, um resultado
+  por data e detalhes do último resultado. Quando a API de conta estiver disponível,
+  `sync` preserva tanto `h` quanto `daily`; a leitura mescla datas concluídas locais
+  e da conta. Só envie após a leitura inicial da conta (`storeReady`).
+- Ao começar, reserve os IDs. Clicar novamente, pausar, navegar ou recarregar
+  retoma o mesmo checkpoint, com posição, alternativas, escolha, ajudas e feedback.
+  Não sorteie novamente um teste parcialmente respondido. Pausa não é conclusão.
+- Ao responder a vigésima questão, grave o resultado e bloqueie o início naquele
+  dia, mesmo sem clicar em Ver resultado. Exiba aproveitamento e acertos no cartão,
+  cadeado/Concluído hoje e consulta ao resultado. Refazer erros é prática normal
+  e não altera a nota original nem cria outro checkpoint.
+- Datas diárias e do gráfico usam `America/Sao_Paulo`. A conclusão pertence ao dia
+  da última resposta; iniciar antes da meia-noite e terminar depois conta no dia
+  de término. Não registre outra vez uma sessão concluída ao virar o calendário.
+  Atualize o cartão na virada de data, mantendo sessões em andamento.
+- Sequência conta somente dias consecutivos com checkpoint completo. Preservar
+  a sequência de ontem enquanto hoje está pendente não significa concluir hoje.
+  Mostre também o recorde. Não derive conclusões diárias de práticas antigas de
+  10 questões ou de qualquer tentativa em `H`.
+- Mantenha quatro feedbacks no checkpoint, como no Estudo. Salve o histórico da
+  resposta antes de notificar outras abas sobre o avanço diário. Abas compartilham
+  o mesmo rascunho e o bloqueio; recebê-lo não deve provocar ciclo de gravações.
+- Persistência local exige armazenamento do navegador. Sem ele, mantenha a página
+  utilizável e o bloqueio em memória; não alegue persistência após fechá-la. Não
+  introduza servidor só para essa funcionalidade nem alegue controle inviolável.
+
+**Evolução dos acertos:** `evolutionData` usa todas as respostas de `H`, incluindo
+repetições e todos os modos, sem corte de dias e independentemente dos filtros do
+painel. Cada dia salvo tem seu percentual, contagem e data completa. Use rolagem
+horizontal com Início do histórico/Mais recente, preservando a leitura no PC;
+não comprima meses ou anos até ocultar rótulos. Registros sem data permanecem em
+um resumo separado com contagem/aproveitamento; não invente sua posição temporal.
+O gráfico mostra agregados por dia, não notas individuais de sessões antigas,
+cuja separação não foi gravada no formato original. Não apague nenhum registro.
+
+Confira seleção, retomada, conclusão, repetição, meia-noite, sequência/recorde,
+abas, API de conta, armazenamento indisponível, histórico longo/sem data, temas e
+PC. Consulte `docs/estudo-diario-e-evolucao.md`.
 
 ## Alternância global de tema
 

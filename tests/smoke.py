@@ -1,6 +1,7 @@
 """Testes dos fluxos do HTML importado, usando um navegador real."""
 
 import os
+import json
 import re
 from pathlib import Path
 import shutil
@@ -330,10 +331,14 @@ class PainelCPA(unittest.TestCase):
 
     def test_09_daily_study(self):
         self.click("Começar")
-        self.assertEqual(self.page.evaluate("qz.ids.length"), 10)
-        self.assertEqual(len(set(self.page.evaluate("qz.ids"))), 10)
-        self.assertEqual(self.page.evaluate("[0, 1, 2].map(level => qz.ids.filter(id => Q[id - 1][2] === level).length)"), [3, 5, 2])
-        self.finish(count=10)
+        self.assertEqual(self.page.evaluate("qz.ids.length"), 20)
+        self.assertEqual(len(set(self.page.evaluate("qz.ids"))), 20)
+        self.assertEqual(self.page.evaluate("[0, 1, 2].map(level => qz.ids.filter(id => Q[id - 1][2] === level).length)"), [5, 10, 5])
+        self.assertEqual(self.page.evaluate("new Set(qz.ids.map(id=>Q[id-1][0])).size"),self.page.evaluate("AL.length"))
+        self.finish(count=20)
+        self.click("Ver painel")
+        self.assertEqual(self.page.locator("[data-daily-score]").inner_text(),"100%")
+        self.assertTrue(self.page.get_by_role("button",name="Concluído hoje",exact=True).is_disabled())
 
     def test_10_mobile_functional_flow(self):
         self.page.set_viewport_size({"width": 390, "height": 844})
@@ -605,7 +610,8 @@ class PainelCPA(unittest.TestCase):
         self.assertEqual(self.page.locator(".g4 .mv").all_text_contents(), ["3", "1", "2", "33%"])
         self.assertEqual(self.page.locator(".trail-count").nth(0).inner_text(), f"2 de {totals[0]} questões")
         self.assertEqual(self.page.get_by_role("button", name="Revisar 2 erros", exact=True).count(), 1)
-        self.assertIn("33%", self.page.get_by_role("img", name="Aproveitamento por dia").text_content())
+        self.assertEqual(self.page.locator("[data-evolution-day]").get_attribute("data-evolution-percent"),"50")
+        self.assertIn("50%", self.page.get_by_role("img", name="Aproveitamento por dia").text_content())
         self.click("Hardcore")
         self.assertEqual(self.page.locator(".g4 .mv").all_text_contents(), ["0", "0", "0", "0%"])
         self.assertIn("Nenhuma resposta com estes filtros.", self.page.locator(".metric-note").inner_text())
@@ -1729,6 +1735,247 @@ class PainelCPA(unittest.TestCase):
                 self.assertTrue(self.page.locator("#theme-toggle").is_visible())
                 self.assertTrue(self.page.evaluate("document.documentElement.scrollWidth<=innerWidth"))
                 self.page.keyboard.press("Escape")
+
+    def set_daily_clock(self, instant="2026-10-13T15:00:00Z"):
+        self.page.evaluate("instant=>{Date.now=()=>Date.parse(instant);go()}",instant)
+
+    def finish_daily(self, correct_count=15):
+        self.page.evaluate("hoje()")
+        ids=self.page.evaluate("qz.ids")
+        for index in range(20):
+            self.answer(correct=index<correct_count)
+            self.click("Próxima" if index<19 else "Ver resultado")
+        return ids
+
+    def test_62_daily_prioritizes_unseen_without_changing_lessons_levels_or_filters(self):
+        self.set_daily_clock()
+        data=self.page.evaluate("""()=>{
+            cfg={a:5,as:[],n:3,m:'err',c:5,md:'h',b:0};selectedLessonBlocks[8]=2;fl=3;fm=1;
+            const fresh=new Set(AL.flatMap((_,i)=>[0,1,2].map(level=>Q.findIndex(q=>q[0]===i+1&&q[2]===level)+1)));
+            H=Q.map((q,i)=>[i+1,1,1700000000000,0]).filter(r=>!fresh.has(r[0]));save();
+            const before={filters:JSON.stringify(cfg),reading:JSON.stringify(selectedLessonBlocks),history:JSON.stringify(H),stats:[fl,fm]};
+            const plan=dailyPlan();hoje();
+            return {before,after:{filters:JSON.stringify(cfg),reading:JSON.stringify(selectedLessonBlocks),history:JSON.stringify(H),stats:[fl,fm]},
+                fresh:plan.unseen,ids:qz.ids,levels:[0,1,2].map(level=>qz.ids.filter(id=>Q[id-1][2]===level).length),
+                counts:AL.map((_,i)=>qz.ids.filter(id=>Q[id-1][0]===i+1).length)};
+        }""")
+        self.assertEqual(data['before'],data['after'])
+        self.assertEqual(data['fresh'],18, 'Só há oito médias inéditas; duas médias precisam ser revisão')
+        self.assertEqual(data['levels'],[5,10,5])
+        self.assertEqual(len(set(data['ids'])),20)
+        self.assertEqual(sorted(data['counts']),[2,2,2,2,3,3,3,3])
+        self.assertEqual(self.page.evaluate("qz.md"),'e')
+        rotations=self.page.evaluate("""()=>Array.from({length:8},(_,i)=>{
+            const day=new Date(Date.parse('2026-10-13T12:00:00Z')+i*86400000).toISOString().slice(0,10);
+            return dailyPlan(day).groups.filter(g=>g.count===3).map(g=>g.lesson);
+        })""")
+        for lesson in range(1,9):
+            self.assertEqual(sum(lesson in day for day in rotations),4)
+
+    def test_63_daily_pause_reload_retains_ids_choices_feedback_and_partial_score(self):
+        self.page.add_init_script("Date.now=()=>Date.parse('2026-10-13T15:00:00Z')")
+        self.set_daily_clock()
+        self.click('Começar')
+        ids=self.page.evaluate('qz.ids')
+        self.click('Dica')
+        self.click('Eliminar 2 alternativas')
+        options=self.page.evaluate('qz.o')
+        eliminated=self.page.evaluate('qz.x')
+        self.click('Pausar')
+        self.assertEqual(self.page.locator('.hoje').get_attribute('data-daily-state'),'active')
+        self.assertEqual(self.page.locator('[data-daily-streak]').inner_text(),'0')
+        self.click('Retomar')
+        self.assertEqual(self.page.evaluate('qz.ids'),ids)
+        self.assertEqual(self.page.evaluate('qz.o'),options)
+        self.assertEqual(self.page.evaluate('qz.x'),eliminated)
+        wrong=self.page.evaluate('qz.o.findIndex((o,i)=>!o[1]&&!qz.x.includes(i))')
+        self.page.locator('button.o').nth(wrong).click()
+        feedback=self.page.locator('.fb-option p').all_text_contents()
+        history=self.page.evaluate('H')
+        self.page.reload()
+        self.click('Retomar')
+        self.assertEqual(self.page.evaluate('qz.ids'),ids)
+        self.assertEqual(self.page.locator('.fb-option p').all_text_contents(),feedback)
+        self.assertEqual(self.page.evaluate('qz.rev.length'),1)
+        self.assertEqual(self.page.evaluate('H'),history)
+        self.click('Próxima')
+        self.assertEqual(self.page.evaluate('qz.i'),1)
+        self.click('Painel')
+        self.click('Retomar')
+        self.assertEqual(self.page.evaluate('qz.i'),1)
+        self.assertEqual(self.page.evaluate('H'),history)
+
+    def test_64_daily_completion_locks_persists_and_keeps_original_score_after_retry(self):
+        self.page.add_init_script("Date.now=()=>Date.parse('2026-10-13T15:00:00Z')")
+        self.set_daily_clock()
+        ids=self.finish_daily(15)
+        self.assertEqual(self.page.locator('[data-result-score]').inner_text(),'15 de 20 (75%)')
+        self.click('Ver painel')
+        self.assertEqual(self.page.locator('[data-daily-score]').inner_text(),'75%')
+        self.assertTrue(self.page.get_by_role('button',name='Concluído hoje',exact=True).is_disabled())
+        self.assertEqual(self.page.locator('[data-daily-streak]').inner_text(),'1')
+        history=self.page.evaluate('H')
+        self.page.evaluate('hoje();hoje()')
+        self.assertEqual(self.page.evaluate('H'),history)
+        self.assertEqual(self.page.locator('.hoje').get_attribute('data-daily-state'),'complete')
+        self.page.reload()
+        self.assertEqual(self.page.locator('[data-daily-score]').inner_text(),'75%')
+        self.click('Ver resultado')
+        self.assertEqual(self.page.evaluate('qz.ids'),ids)
+        self.click('Refazer erros desta sessão')
+        self.assertTrue(self.page.evaluate('!qz.dailyId'))
+        self.finish(count=5)
+        self.click('Ver painel')
+        self.assertEqual(self.page.locator('[data-daily-score]').inner_text(),'75%')
+        self.assertEqual(self.page.evaluate("Object.keys(dailyBook.results)"),['2026-10-13'])
+
+    def test_65_daily_rollover_streak_and_midnight_completion_use_brasilia(self):
+        self.set_daily_clock('2026-10-13T02:59:59Z')
+        self.assertEqual(self.page.evaluate('dailyDate()'),'2026-10-12')
+        self.finish_daily(20)
+        # Keep the completed result open: it must not be recorded again tomorrow.
+        self.set_daily_clock('2026-10-13T03:00:00Z')
+        self.click('Painel')
+        self.assertEqual(self.page.locator('.hoje').get_attribute('data-daily-state'),'ready')
+        self.assertEqual(self.page.evaluate('Object.keys(dailyBook.results)'),['2026-10-12'])
+        self.finish_daily(18)
+        self.assertEqual(self.page.evaluate('dailyStreak()'),{'current':2,'best':2})
+        self.set_daily_clock('2026-10-15T15:00:00Z')
+        self.assertEqual(self.page.evaluate('dailyStreak()'),{'current':0,'best':2})
+        self.finish_daily(17)
+        self.assertEqual(self.page.evaluate('dailyStreak()'),{'current':1,'best':2})
+        self.set_daily_clock('2026-10-17T02:50:00Z')
+        self.page.evaluate('hoje()')
+        self.assertEqual(self.page.evaluate('qz.dailyStartDay'),'2026-10-16')
+        self.set_daily_clock('2026-10-17T03:10:00Z')
+        for i in range(20):
+            self.answer()
+            self.click('Próxima' if i<19 else 'Ver resultado')
+        self.assertNotIn('2026-10-16',self.page.evaluate('Object.keys(dailyBook.results)'))
+        self.assertIn('2026-10-17',self.page.evaluate('Object.keys(dailyBook.results)'))
+        self.assertEqual(self.page.evaluate('dailyStreak()'),{'current':1,'best':2})
+
+    def test_66_daily_consecutive_days_change_questions_and_refresh_the_open_panel(self):
+        self.set_daily_clock()
+        first=self.finish_daily(20)
+        self.click('Ver painel')
+        self.page.evaluate("Date.now=()=>Date.parse('2026-10-14T03:00:00Z');refreshDailyCalendar()")
+        self.assertEqual(self.page.locator('.hoje').get_attribute('data-daily-state'),'ready')
+        self.click('Começar')
+        second=self.page.evaluate('qz.ids')
+        self.assertTrue(set(first).isdisjoint(second))
+        self.page.evaluate('view="d";go();hoje()')
+        self.assertEqual(self.page.evaluate('qz.ids'),second)
+        self.assertEqual(self.page.evaluate('qz.i'),0)
+
+    def test_67_evolution_preserves_all_days_modes_and_undated_records(self):
+        history=self.page.evaluate("""()=>{
+            H=Array.from({length:400},(_,i)=>[1,i%2,Date.parse('2025-01-01T15:00:00Z')+i*86400000,i%3]);
+            H.push([1,1],[2,0,0,0],[3,1,'2024-12-31',0],[4,0,'2024-12-31T18:00:00Z',1],[5,1,1e99,0]);
+            save();go();return H;
+        }""")
+        points=self.page.locator('[data-evolution-day]')
+        self.assertEqual(points.count(),401)
+        self.assertEqual(points.first.get_attribute('data-evolution-day'),'2024-12-31')
+        self.assertEqual(points.first.get_attribute('data-evolution-percent'),'50')
+        self.assertTrue(points.evaluate_all("nodes=>nodes.every(n=>n.querySelector('text').textContent.endsWith('%'))"))
+        self.assertIn('3 respostas · 67%',self.page.locator('[data-evolution-undated]').inner_text())
+        self.assertTrue(self.page.locator('#evolution-scroll').evaluate('n=>n.scrollWidth>n.clientWidth'))
+        self.click('Início do histórico')
+        self.assertEqual(self.page.locator('#evolution-scroll').evaluate('n=>n.scrollLeft'),0)
+        self.click('Mais recente')
+        self.assertGreater(self.page.locator('#evolution-scroll').evaluate('n=>n.scrollLeft'),1000)
+        self.page.locator('.dashboard-filters > summary').click()
+        self.click('Hardcore')
+        self.click('Simulado')
+        self.assertEqual(self.page.locator('[data-evolution-day]').count(),401)
+        self.assertEqual(self.page.evaluate('H'),history)
+
+    def test_68_daily_and_long_evolution_fit_pc_and_theme_switch_keeps_state(self):
+        self.set_daily_clock()
+        self.finish_daily(14)
+        self.click('Ver painel')
+        self.page.evaluate("H.push(...Array.from({length:90},(_,i)=>[1,i%2,Date.parse('2026-01-01T15:00:00Z')+i*86400000,0]));save();go()")
+        state=self.page.evaluate('({history:H,daily:JSON.stringify(dailyBook)})')
+        for width in [1024,1280,1440,1920]:
+            self.page.set_viewport_size({'width':width,'height':1000})
+            for theme in ['light','dark']:
+                self.page.evaluate('theme=>document.documentElement.dataset.theme=theme',theme)
+                self.assertTrue(self.page.evaluate('document.documentElement.scrollWidth<=innerWidth'))
+                self.assertTrue(self.page.locator('.hoje').evaluate('n=>n.scrollWidth<=n.clientWidth+1'))
+                self.page.locator('#theme-toggle').click()
+                self.assertEqual(self.page.evaluate('({history:H,daily:JSON.stringify(dailyBook)})'),state)
+                if width==1440:
+                    self.page.evaluate('theme=>document.documentElement.dataset.theme=theme',theme)
+                    self.page.screenshot(path=f'/tmp/cpa-checkpoint-evolucao-{theme}.png',full_page=True)
+
+    def test_69_daily_shared_tabs_resume_instead_of_starting_a_second_test(self):
+        self.page.add_init_script("Date.now=()=>Date.parse('2026-10-13T15:00:00Z')")
+        self.set_daily_clock()
+        self.click('Começar')
+        ids=self.page.evaluate('qz.ids')
+        other=self.context.new_page()
+        other.add_init_script("Date.now=()=>Date.parse('2026-10-13T15:00:00Z')")
+        other.goto(self.url)
+        other.get_by_role('button',name='Retomar',exact=True).click()
+        self.assertEqual(other.evaluate('qz.ids'),ids)
+        self.answer()
+        other.wait_for_function('qz.rev.length===1')
+        self.assertEqual(other.locator('.fb-option').count(),4)
+        self.assertEqual(other.evaluate('H.length'),1)
+        self.page.locator('button.chip.on').filter(has_text='Próxima').click()
+        for i in range(1,20):
+            self.answer()
+            self.click('Próxima' if i<19 else 'Ver resultado')
+        other.wait_for_function("document.querySelector('.hoje')?.dataset.dailyState==='complete'")
+        self.assertTrue(other.get_by_role('button',name='Concluído hoje',exact=True).is_disabled())
+        self.assertEqual(other.evaluate('H.length'),20)
+        other.close()
+
+    def test_70_daily_storage_failures_and_malformed_book_keep_the_app_usable(self):
+        self.page.add_init_script("localStorage.setItem('cpaDaily','{malformed');localStorage.setItem('cpaH','[[1,1,1700000000000,0]]')")
+        self.page.reload()
+        self.assertEqual(self.page.evaluate('H'),[[1,1,1700000000000,0]])
+        self.assertEqual(self.page.locator('.hoje').get_attribute('data-daily-state'),'ready')
+        self.page.evaluate("()=>{Storage.prototype.setItem=()=>{throw Error('unavailable')};Storage.prototype.getItem=()=>{throw Error('unavailable')}}")
+        self.finish_daily(20)
+        self.click('Ver painel')
+        self.assertEqual(self.page.locator('[data-daily-score]').inner_text(),'100%')
+        self.assertTrue(self.page.get_by_role('button',name='Concluído hoje',exact=True).is_disabled())
+
+    def test_71_daily_cloud_progress_merges_completed_dates_without_losing_history(self):
+        self.set_daily_clock()
+        self.finish_daily(15)
+        remote=self.page.evaluate('({h:JSON.stringify(H),daily:JSON.stringify(dailyBook)})')
+        history=json.loads(remote['h'])
+        self.page.add_init_script("""
+            Date.now=()=>Date.parse('2026-10-13T15:00:00Z');
+            const mockData="""+json.dumps(remote)+""";
+            window.mockWrites=[];
+            window.claude={use:async kind=>kind==='user'?{id:async()=> 'test-user'}:{doc:()=>({
+                get:async()=>({exists:true,data:()=>mockData}),
+                set:async payload=>{window.mockWrites.push(payload)}
+            })}};
+        """)
+        self.page.evaluate("""()=>{
+            localStorage.setItem('cpaH','[]');
+            localStorage.setItem('cpaDaily',JSON.stringify({version:1,active:null,lastResult:null,results:{
+                '2026-10-12':{n:20,ok:17,end:Date.parse('2026-10-12T15:00:00Z'),dailyId:'old-checkpoint'}
+            }}));
+        }""")
+        self.page.reload()
+        self.page.get_by_text('Progresso salvo na sua conta.',exact=False).wait_for()
+        self.assertEqual(self.page.evaluate('H'),history)
+        self.assertEqual(self.page.evaluate("Object.keys(dailyBook.results).sort()"),['2026-10-12','2026-10-13'])
+        self.assertEqual(self.page.locator('[data-daily-score]').inner_text(),'75%')
+        self.assertEqual(self.page.locator('[data-daily-streak]').inner_text(),'2')
+        self.assertEqual(self.page.evaluate("JSON.parse(localStorage.getItem('cpaH'))"),history)
+        self.page.evaluate('sync()')
+        self.page.wait_for_function('window.mockWrites.length>0')
+        writes=self.page.evaluate('window.mockWrites')
+        for payload in writes:
+            self.assertEqual(json.loads(payload['h']),history)
+            self.assertEqual(sorted(json.loads(payload['daily'])['results']),['2026-10-12','2026-10-13'])
 
 
 if __name__ == "__main__":
