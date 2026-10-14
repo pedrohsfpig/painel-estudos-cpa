@@ -681,3 +681,21 @@ entidades em colunas. Não transponha o quadro geral nem altere as tabelas antig
   aparências, larguras de PC, filtros, atalhos, transição para outra aula e uma
   sessão de questões em andamento. Não substitua os materiais detalhados pelo
   quadro de síntese. Consulte `docs/aula-7-quadro-comparativo.md`.
+
+### Justificativa didática e contexto — regra reforçada em 14/10/2026
+
+- Feedback precisa ensinar a relação ou o mecanismo: afirmar “também pode” ou
+  repetir uma data/número correto não explica por que a opção atende ao pedido.
+  Nas permissões, explique a natureza da atividade e o alcance da exceção;
+  não invente a intenção da norma. Ex.: distribuição de fundos é serviço de
+  investimento em patrimônio separado, distinto de depósito/crédito cooperativo.
+- Nomeie a instituição e a perspectiva em classificações de operações. Para o
+  banco, conceder crédito gera direito; receber depósito gera obrigação. Não
+  deixe “da instituição” depender de cabeçalho da aula ou de inferência das opções.
+- Revise cada alternativa, incluindo a correta; preserve explicações que já
+  ensinam e acrescente só contexto relevante. Extensão não certifica qualidade.
+  Bate-pronto mantém conteúdo direto no enunciado, com ensino no feedback.
+- Preserve IDs, alternativas, dificuldades e histórico em revisões editoriais.
+  O manifesto `docs/revisao-justificativas-contexto.json` estende a cadeia das
+  revisões anteriores sem reescrever suas evidências. Execute também
+  `python3 tests/test_teaching_revision.py` e `python3 tests/test_bate_pronto.py`.

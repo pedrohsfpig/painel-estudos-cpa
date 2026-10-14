@@ -33,8 +33,12 @@ def _restore(current,filename):
         assert digest(restored[id-1])==row['hash_antes'],f'Proveniência anterior divergente: {id}'
     return restored
 
+def questions_before_teaching_revision(current):
+    return _restore(current,'revisao-justificativas-contexto.json')
+
 def questions_before_feedback_revision(current):
-    return _restore(current,'revisao-alinhamento-feedbacks.json')
+    latest=questions_before_teaching_revision(current)
+    return _restore(latest,'revisao-alinhamento-feedbacks.json')
 
 def questions_before_context_revision(current):
     # Cada revisão mantém seus hashes; não reescrever evidência histórica para
