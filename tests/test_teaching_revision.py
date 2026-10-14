@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 import unittest
 from validate_bank import load_questions
-from question_revision import digest,questions_before_teaching_revision
+from question_revision import digest,questions_before_teaching_revision,questions_before_grammar_revision,bate_pronto_before_grammar_revision
 import smoke as harness
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -14,16 +14,16 @@ def bp_bank():
 
 class TeachingRevision(unittest.TestCase):
     def test_actual_counts_and_historical_chain(self):
-        latest=load_questions();before=questions_before_teaching_revision(latest)
+        live=load_questions();latest=questions_before_grammar_revision(live);before=questions_before_teaching_revision(live)
         report=json.loads((ROOT/'docs/revisao-justificativas-contexto.json').read_text());counts=report['contagens']
         self.assertEqual(counts['questoes_revisadas'],len(latest))
         self.assertEqual(counts['questoes_alteradas'],sum(a!=b for a,b in zip(before,latest)))
         self.assertEqual(counts['enunciados_alterados'],sum(a[3]!=b[3] for a,b in zip(before,latest)))
         self.assertEqual(counts['feedbacks_alterados'],sum(x!=y for a,b in zip(before,latest) for x,y in zip(a[11],b[11])))
         self.assertEqual(counts['questoes_com_feedback_alterado'],sum(a[11]!=b[11] for a,b in zip(before,latest)))
-        corrupted=copy.deepcopy(latest);corrupted[582][11][1]='Só atende cooperados.'
+        corrupted=copy.deepcopy(live);corrupted[582][11][1]='Só atende cooperados.'
         with self.assertRaises(AssertionError):questions_before_teaching_revision(corrupted)
-        bp=bp_bank();previous=copy.deepcopy(bp)
+        bp=bate_pronto_before_grammar_revision(bp_bank());previous=copy.deepcopy(bp)
         for i,row in enumerate(report['bate_pronto']):
             self.assertEqual(row['id'],100001+i);self.assertEqual(row['hash_depois'],digest(bp[i]))
             for k,change in row['campos'].items():
@@ -39,7 +39,7 @@ class TeachingRevision(unittest.TestCase):
             for i in [0,1,2,4,5,6,7,9,10]:self.assertEqual(a[i],b[i])
         self.assertEqual(Counter((r[0],r[2],r[9]) for r in before),Counter((r[0],r[2],r[9]) for r in latest))
         report=json.loads((ROOT/'docs/revisao-justificativas-contexto.json').read_text())
-        for row,r in zip(report['bate_pronto'],bp_bank()):
+        for row,r in zip(report['bate_pronto'],bate_pronto_before_grammar_revision(bp_bank())):
             self.assertTrue(set(row['campos'])<=set(['2','5','6']))
             self.assertLessEqual(len(r[2].split()),12)
 

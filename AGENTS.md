@@ -713,3 +713,32 @@ estado desabilitado quando não há estoque e foco de teclado. A reorganização
 visual; não muda planejamento, filtros ou sorteio. Confira os dois temas e
 execute `python3 tests/test_practice_layout.py` e os testes dos fluxos afetados.
 Consulte `docs/praticar-layout-pc.md` para a comparação e as resoluções verificadas.
+
+## Concordância sem pistas de resposta
+
+Antes de publicar enunciados, confira o encaixe com CADA alternativa, incluindo
+as incorretas. Artigos, contrações, particípios e verbos não devem permitir
+eliminar opções apenas por gênero ou número. Isso vale para todos os modos e,
+principalmente, para frases curtas e lacunas do Bate-pronto.
+
+- Prefira “Quem colhe as assinaturas?” a “São colhidas pela:” quando as opções
+  incluem Secretaria-Executiva e Senado. Use perguntas neutras ou preposições
+  sem artigo quando necessário; não deturpe nomes oficiais para igualar gêneros.
+- Leia a frase completa com cada preenchimento: “precisam ser abatidos” pode
+  favorecer um sujeito masculino plural e excluir outro feminino plural.
+- Não confunda concordância do sujeito já nomeado com pista da alternativa:
+  “O BC é classificado como autarquia” tem concordância legítima com BC.
+- Gênero de siglas depende do nome: Comoc é comissão, Copom é comitê; não infira
+  gênero só pela última letra. A varredura lexical é apoio à leitura editorial.
+- O manifesto `docs/revisao-pistas-gramaticais.json` preserva a revisão atual e
+  a cadeia histórica. Execute `python3 tests/test_grammar_and_quick_visual.py`.
+
+## Identidade visual das questões Bate-pronto
+
+A apresentação fica sob `.quick-round`, sem mudar os outros modos. Preserve
+cartão de enunciado maior, duas escolhas igualmente destacadas antes da resposta,
+mesma altura/largura e gráficos genéricos que não revelem o conceito correto.
+Após responder, conserve o vínculo alternativa/feedback à direita, destaque da
+escolha e correção e avanço apenas por Próxima. Respeite movimento reduzido e
+os temas, mantendo Tab/Enter e o cronômetro existentes. Não acrescente leitura
+contextual ao banco conceitual para preencher o espaço visual.

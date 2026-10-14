@@ -33,8 +33,24 @@ def _restore(current,filename):
         assert digest(restored[id-1])==row['hash_antes'],f'Proveniência anterior divergente: {id}'
     return restored
 
+def questions_before_grammar_revision(current):
+    return _restore(current,'revisao-pistas-gramaticais.json')
+
+def bate_pronto_before_grammar_revision(current):
+    report=json.loads((ROOT/'docs/revisao-pistas-gramaticais.json').read_text())
+    restored=copy.deepcopy(current)
+    for row in report['bate_pronto']:
+        index=row['id']-100001
+        assert digest(current[index])==row['hash_depois'],f'Bate-pronto fora do manifesto: {row["id"]}'
+        for field,change in row['campos'].items():
+            assert current[index][int(field)]==change['depois']
+            restored[index][int(field)]=change['antes']
+        assert digest(restored[index])==row['hash_antes']
+    return restored
+
 def questions_before_teaching_revision(current):
-    return _restore(current,'revisao-justificativas-contexto.json')
+    previous=questions_before_grammar_revision(current)
+    return _restore(previous,'revisao-justificativas-contexto.json')
 
 def questions_before_feedback_revision(current):
     latest=questions_before_teaching_revision(current)
