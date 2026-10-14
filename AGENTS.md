@@ -699,3 +699,17 @@ entidades em colunas. Não transponha o quadro geral nem altere as tabelas antig
   O manifesto `docs/revisao-justificativas-contexto.json` estende a cadeia das
   revisões anteriores sem reescrever suas evidências. Execute também
   `python3 tests/test_teaching_revision.py` e `python3 tests/test_bate_pronto.py`.
+
+## Configuração de Praticar no computador
+
+A tela usa a largura disponível com modos no topo, aulas em grade à esquerda e
+nível/filtro/quantidade à direita. Preserve a barra de resumo e início acessível
+sem rolar até o final, inclusive em 1280×720 e com blocos, avisos ou várias aulas.
+Detalhamento de distribuição pode ser expandido e mantém a abertura entre
+seleções. Não aplique a largura de configuração às questões ou aos resultados.
+
+Mantenha seleção múltipla, proporções, quantidades personalizadas do Bate-pronto,
+estado desabilitado quando não há estoque e foco de teclado. A reorganização é
+visual; não muda planejamento, filtros ou sorteio. Confira os dois temas e
+execute `python3 tests/test_practice_layout.py` e os testes dos fluxos afetados.
+Consulte `docs/praticar-layout-pc.md` para a comparação e as resoluções verificadas.

@@ -158,6 +158,72 @@ button:focus-visible,summary:focus-visible{outline:3px solid var(--ac);outline-o
 .page-head p{margin:0;color:var(--mu);font-size:15px}
 .bank-pill{display:flex;align-items:center;gap:9px;white-space:nowrap;border:1px solid var(--bd);background:var(--cd);border-radius:24px;padding:9px 14px;font-size:12px;color:var(--mu)}
 .flow-content{max-width:780px;margin:0 auto}.flow-content.material-content{max-width:1040px}
+/* Configuração de prática: escolhas lado a lado e início acessível no PC. */
+.flow-content.practice-content{max-width:1240px}
+.practice-setup{padding-bottom:8px}
+.practice-setup .stp{margin:0;padding:17px 18px;min-width:0}
+.practice-setup .sth{gap:10px;margin-bottom:14px;align-items:flex-start}
+.practice-setup .sn{width:25px;height:25px;font-size:12px;margin-top:2px}
+.practice-setup .stt{font-size:16px;font-weight:650;margin:0;line-height:1.5}
+.practice-setup .sth .s{font-size:12px;line-height:1.5;margin-top:2px}
+.practice-mode-panel{margin-bottom:16px!important}
+.practice-modes{grid-template-columns:repeat(4,minmax(0,1fr))}
+.practice-modes .oc{padding:13px 29px 13px 13px;gap:8px}
+.practice-mode-name{display:flex;align-items:center;gap:8px}
+.practice-mode-name .ui-icon{width:19px;height:19px;color:var(--ac)}
+.practice-modes .hc .ui-icon{color:var(--hc)}
+.practice-modes .oc b{font-size:15px;font-weight:650}
+.practice-modes .oc>.s{font-size:12px;line-height:1.5}
+.practice-setup .oc::after{width:13px;height:13px;top:16px;right:11px}
+.practice-setup .oc.on{background:color-mix(in srgb,var(--ac) 7%,var(--bg))}
+.practice-setup .oc.hc.on{background:color-mix(in srgb,var(--hc) 7%,var(--bg))}
+.practice-layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(295px,1fr);gap:16px;align-items:start}
+.practice-lessons{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.practice-lessons .oc{padding:10px 29px 10px 12px;gap:3px;min-height:75px;justify-content:center}
+.practice-lessons .oc b{font-size:13px;font-weight:650}
+.practice-lessons .oc .s{font-size:12px;line-height:1.45}
+.practice-lessons .oc[data-practice-lesson="0"]{grid-column:1/-1;min-height:55px;flex-direction:row;justify-content:flex-start;align-items:center;gap:12px}
+.practice-lessons .oc::after{border-radius:4px}
+.practice-lessons .oc.on::after{content:"✓";display:grid;place-items:center;color:var(--bg);font-size:10px;line-height:1;box-shadow:none}
+.practice-options{display:grid;gap:12px;min-width:0}
+.practice-options .stp{padding:14px 16px}
+.practice-options .sth{margin-bottom:10px}
+.practice-options .og{gap:6px}
+.practice-options .og.sm{grid-template-columns:repeat(4,minmax(0,1fr))}
+.practice-options .practice-question-filter{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+.practice-options .og.qt{grid-template-columns:repeat(5,minmax(0,1fr))}
+.practice-options .og.qt.quick-quantities{grid-template-columns:repeat(6,minmax(0,1fr))}
+.practice-options .oc{padding:9px 5px;align-items:center;justify-content:center;text-align:center;min-height:42px}
+.practice-options .oc::after{display:none}
+.practice-options .oc b{font-size:12px;font-weight:550;line-height:1.4}
+.practice-options .lv0 b::before,.practice-options .lv1 b::before,.practice-options .lv2 b::before{width:6px;height:6px;margin-right:5px}
+.practice-options .quick-custom-count{margin:12px 0 4px;font-size:12px;gap:8px;justify-content:space-between}
+.practice-options .quick-custom-count input{width:88px;min-width:0}
+.practice-options .quick-count-note{margin:8px 0 0;font-size:11px;line-height:1.5}
+.practice-breakdown{border:1px solid var(--bd);border-radius:12px;background:var(--cd);font-size:12px}
+.practice-breakdown summary{cursor:pointer;padding:12px 16px;line-height:1.5;color:var(--ac);font-weight:600}
+.practice-breakdown .session-distribution{grid-template-columns:1fr;margin:0;padding:0 12px 12px;gap:6px}
+.practice-breakdown .session-distribution>div{padding:8px 10px;background:var(--bg)}
+.practice-breakdown .session-distribution small{font-size:11px;margin-top:2px}
+.practice-setup .practice-blocks{margin-top:16px;padding-top:12px}
+.practice-setup .practice-blocks .chip{font-size:12px;padding:8px 10px}
+.practice-launch{position:sticky;bottom:12px;z-index:10;margin-top:16px;padding:15px 18px;display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:12px 24px;background:var(--cd);box-shadow:0 8px 28px rgba(0,0,0,.16)}
+.practice-launch-copy{min-width:0}
+.practice-launch-label{display:flex;gap:7px;align-items:center;color:var(--ac);font-size:12px;font-weight:650}
+.practice-launch-label .ui-icon{width:16px;height:16px}
+.practice-launch .sumt{font-size:13px;font-weight:500;line-height:1.5;margin:4px 0 0;overflow-wrap:anywhere}
+.practice-launch-total{border-left:1px solid var(--bd);padding-left:22px;display:flex;align-items:baseline;gap:6px;white-space:nowrap}
+.practice-launch-total strong{font-size:28px;font-weight:650;line-height:1.2;color:var(--ac);font-variant-numeric:tabular-nums}
+.practice-launch-total span{font-size:12px;color:var(--mu)}
+.practice-launch .big{margin:0;padding:11px 17px;font-size:14px;font-weight:650;display:flex;align-items:center;justify-content:center;gap:10px;white-space:nowrap;min-height:46px}
+.practice-launch .big .ui-icon{width:18px;height:18px}
+.practice-launch-notes{grid-column:1/-1;font-size:12px;line-height:1.5;border-top:1px solid var(--bd);padding-top:10px}
+.practice-launch-notes p{margin:0}.practice-launch-notes p+p{margin-top:5px}
+.practice-launch-error{color:var(--hd)}
+.practice-timer-note{display:flex;align-items:center;justify-content:center;gap:7px;margin:12px 0 0;font-size:11px}.practice-timer-note .ui-icon{width:14px;height:14px}
+@media(min-width:1350px){.practice-lessons{grid-template-columns:repeat(3,minmax(0,1fr))}.practice-lessons .oc[data-practice-lesson="0"]{grid-column:1/-1}.practice-layout{grid-template-columns:minmax(0,1.8fr) minmax(320px,1fr)}}
+@media(max-width:1150px){.practice-layout{grid-template-columns:minmax(0,1.25fr) minmax(275px,1fr);gap:12px}.practice-setup .stp{padding:14px}.practice-modes{gap:7px}.practice-modes .oc{padding:11px 23px 11px 10px}.practice-mode-name{gap:6px}.practice-modes .oc b{font-size:13px}.practice-modes .oc>.s{font-size:11px}.practice-launch{gap:12px;padding:13px 14px}.practice-launch-total{padding-left:12px}}
+@media(max-width:760px){.practice-layout{grid-template-columns:1fr}.practice-modes{grid-template-columns:repeat(2,minmax(0,1fr))}.practice-launch{grid-template-columns:minmax(0,1fr) auto;bottom:8px}.practice-launch-copy{grid-column:1/-1}.practice-options .og.sm{grid-template-columns:repeat(4,minmax(0,1fr))}.practice-launch-total{border:0;padding:0}}
 .dashboard .pn{padding:18px;border-radius:14px;margin:0;min-width:0}
 .dashboard h2{font-size:20px;line-height:1.3;font-weight:650;margin:0}
 .dashboard p{margin:6px 0 0}
@@ -3443,15 +3509,17 @@ function allocateSessionLevels(groups,n,mode=cfg.md,fixedLevel=cfg.n,preferUnsee
 }
 function practiceLessonChoice(lesson,title,description){const selected=selectedPracticeLessons(),on=lesson?selected.includes(lesson):!selected.length;return `<button type="button" class="oc${on?" on":""}" data-practice-lesson="${lesson}" aria-pressed="${on}" onclick="selectPracticeLesson(${lesson})"><b>${title}</b><span class="s mu">${description}</span></button>`}
 function sessionDistribution(plan){if(cfg.md==="b"&&plan.n)return `<div class="session-distribution" aria-label="Distribuição de conceitos por aula">${plan.groups.map(g=>`<div><b>Aula ${g.lesson}</b> · ${g.count} ${g.count===1?"conceito":"conceitos"}</div>`).join("")}</div>`;if(plan.groups.length<2||!plan.n)return "";return `<div class="session-distribution" aria-label="Distribuição de questões por aula">${plan.groups.map(g=>`<div><b>Aula ${g.lesson}</b> · ${g.count} questões<small>${g.counts.map((count,level)=>count?`${count} ${(count===1?["fácil","média","difícil","Hardcore"]:["fáceis","médias","difíceis","Hardcore"])[level]}`:"").filter(Boolean).join(" · ")}</small></div>`).join("")}</div>`}
-function ocb(key,val,t,d,cls){return `<button class="oc${cfg[key]===val?" on":""} ${cls||""}" onclick="cfg['${key}']=${JSON.stringify(val).replace(/"/g,"'")};go()"><b>${t}</b>${d?`<span class="s mu">${d}</span>`:""}</button>`}
-function stp(n,t,h,b){return `<div class="stp"><div class="sth"><span class="sn">${n}</span><div><div class="stt">${t}</div><div class="s mu">${h}</div></div></div>${b}</div>`}
-function setup(){const b=cfg.md==="b",bank=b?BP_Q:Q,h=cfg.md==="h",MD=[["e","Estudo","Dica, Eliminar 2 alternativas e resposta na hora."],["s","Simulado","Como a prova: sem ajudas e sem resposta na hora. Resultado e revisão no final."],["h","Hardcore","Só as questões muito difíceis, sem ajudas e com resposta na hora."],["b","Bate-pronto","Conceitos diretos, 2 alternativas e feedback após cada resposta."]],inM=q=>b?true:h?q[2]===3:q[2]<3&&(cfg.md!=="s"||!q[9]),nv=[["Todos",-1],["Fácil",0],["Médio",1],["Difícil",2]],plan=sessionPlan(),n=plan.n,selected=selectedPracticeLessons(),qs={all:"todas as questões",new:"nunca respondidas",err:"as que errei"}[cfg.m];
-return stp(1,"Modo","Como você quer praticar?",`<div class="og">${MD.map(([v,t,d])=>ocb("md",v,t,d,v==="h"?"hc":"")).join("")}</div>`)
-+stp(2,"Aulas","Selecione uma ou mais aulas. Clique novamente para retirar uma seleção.",`<div class="og">${practiceLessonChoice(0,"Todas as aulas","Banco completo · "+bank.filter(inM).length+" questões")}${AL.map((a,i)=>practiceLessonChoice(i+1,"Aula "+(i+1),a.t.split(": ")[1]+" ("+bank.filter(q=>q[0]===i+1&&inM(q)).length+")")).join("")}</div>${selected.length===1?lessonBlockControls(selected[0],true):""}`)
-+(h||b?"":stp(3,"Nível","Qual dificuldade?",`<div class="og sm">${nv.map(([t,v])=>ocb("n",v,t,"",v>=0?"lv"+v:"")).join("")}</div>`))
-+stp(h||b?3:4,"Questões","Quais questões entram na sessão?",`<div class="og sm">${ocb("m","all","Todas","")}${ocb("m","new","Nunca respondidas","")}${ocb("m","err","As que errei","")}</div>`)
-+stp(h||b?4:5,"Quantidade","Quantas questões você quer responder?",`<div class="og qt">${(b?[5,10,20,30,40,50]:[5,10,20,30,40]).map(v=>ocb("c",v,String(v),"")).join("")}</div>${b?`<label class="quick-custom-count">Outra quantidade <input type="number" min="1" max="${BP.length}" value="${cfg.c}" onchange="setBateProntoCount(this.value)" aria-label="Quantidade de questões bate-pronto"></label><p class="s mu">${BP.length} conceitos · 50 por aula. Definições e associações curtas, sem casos de interpretação.</p>`:""}`)
-+`<div class="sum"><div class="s mu">Sua sessão</div><div class="sumt">${MD.find(x=>x[0]===cfg.md)[1]}, ${selected.length?(selected.length>1?"Aulas ":"Aula ")+selected.join(", "):"todas as aulas"}${selected.length===1&&lessonBlock(selected[0],cfg.b)?" · "+escapeText(lessonBlock(selected[0],cfg.b).t):""}, ${b?"conceitos diretos":h?"nível Hardcore":"nível "+nv.find(x=>x[1]===cfg.n)[0].toLowerCase()}, ${qs}</div><div>${n?`<b>${n}</b> ${n===1?"questão":"questões"}`:"Nenhuma sessão disponível com essa seleção"}</div>${selected.length>1?`<p class="s mu">Participação igual entre aulas${!b&&!h&&cfg.n<0?"; níveis com proporção de 25% fácil, 50% médio e 25% difícil, com arredondamento":""}.</p>`:""}${sessionDistribution(plan)}${plan.note?`<p class="s" role="status">${escapeText(plan.note)}</p>`:""}<div class="s mu">O cronômetro começa ao iniciar e para ao finalizar a última questão.</div><button class="chip on big" onclick="start()"${!n?" disabled":""}>Iniciar ${{e:"estudo",s:"simulado",h:"hardcore",b:"bate-pronto"}[cfg.md]}</button><p class="s" style="color:var(--hd)">${msg}</p></div>`}
+let practiceDistributionOpen=false;
+function ocb(key,val,t,d,cls,icon=""){return `<button type="button" class="oc${cfg[key]===val?" on":""} ${cls||""}" aria-pressed="${cfg[key]===val}" onclick="cfg['${key}']=${JSON.stringify(val).replace(/"/g,"'")};go()">${icon?`<span class="practice-mode-name">${uiIcon(icon)}<b>${t}</b></span>`:`<b>${t}</b>`}${d?`<span class="s mu">${d}</span>`:""}</button>`}
+function stp(n,t,h,b,cls=""){return `<section class="stp ${cls}" aria-labelledby="practice-step-${n}"><div class="sth"><span class="sn" aria-hidden="true">${n}</span><div><h2 class="stt" id="practice-step-${n}">${t}</h2><div class="s mu">${h}</div></div></div>${b}</section>`}
+function setup(){const b=cfg.md==="b",bank=b?BP_Q:Q,h=cfg.md==="h",MD=[["e","Estudo","Ajudas disponíveis e feedback a cada resposta.","book"],["s","Simulado","Sem ajudas. Resultado e revisão ao finalizar.","practice"],["h","Hardcore","Desafios muito difíceis, sem ajudas.","target"],["b","Bate-pronto","Conceitos rápidos, 2 alternativas e feedback.","links"]],inM=q=>b?true:h?q[2]===3:q[2]<3&&(cfg.md!=="s"||!q[9]),nv=[["Todos",-1],["Fácil",0],["Médio",1],["Difícil",2]],plan=sessionPlan(),n=plan.n,selected=selectedPracticeLessons(),qs={all:"todas as questões",new:"nunca respondidas",err:"as que errei"}[cfg.m],distribution=sessionDistribution(plan);
+return `<div class="practice-setup">`+stp(1,"Modo","Como você quer praticar?",`<div class="og practice-modes">${MD.map(([v,t,d,icon])=>ocb("md",v,t,d,v==="h"?"hc":"",icon)).join("")}</div>`,"practice-mode-panel")
++`<div class="practice-layout">`+stp(2,"Aulas","Selecione uma ou mais. Clique novamente para desmarcar.",`<div class="og practice-lessons">${practiceLessonChoice(0,"Todas as aulas","Banco completo · "+bank.filter(inM).length+" questões")}${AL.map((a,i)=>practiceLessonChoice(i+1,"Aula "+(i+1),a.t.split(": ")[1]+" ("+bank.filter(q=>q[0]===i+1&&inM(q)).length+")")).join("")}</div>${selected.length===1?lessonBlockControls(selected[0],true):""}`,"practice-lesson-panel")
++`<div class="practice-options">`+(h||b?"":stp(3,"Nível","Qual dificuldade?",`<div class="og sm">${nv.map(([t,v])=>ocb("n",v,t,"",v>=0?"lv"+v:"")).join("")}</div>`))
++stp(h||b?3:4,"Questões","Quais questões entram na sessão?",`<div class="og sm practice-question-filter">${ocb("m","all","Todas","")}${ocb("m","new","Nunca respondidas","")}${ocb("m","err","As que errei","")}</div>`)
++stp(h||b?4:5,"Quantidade","Quantas questões você quer responder?",`<div class="og qt${b?" quick-quantities":""}">${(b?[5,10,20,30,40,50]:[5,10,20,30,40]).map(v=>ocb("c",v,String(v),"")).join("")}</div>${b?`<label class="quick-custom-count">Outra quantidade <input type="number" min="1" max="${BP.length}" value="${cfg.c}" onchange="setBateProntoCount(this.value)" aria-label="Quantidade de questões bate-pronto"></label><p class="s mu quick-count-note">${BP.length} conceitos · 50 por aula. Definições e associações curtas, sem casos de interpretação.</p>`:""}`)
++(distribution?`<details class="practice-breakdown"${practiceDistributionOpen?" open":""} ontoggle="practiceDistributionOpen=this.open"><summary>Distribuição por aula</summary>${selected.length>1?`<p class="s mu" style="padding:0 16px;margin:0 0 10px">Participação igual entre aulas${!b&&!h&&cfg.n<0?"; níveis com proporção de 25% fácil, 50% médio e 25% difícil, com arredondamento":""}.</p>`:""}${distribution}</details>`:"")+`</div></div>`
++`<div class="sum practice-launch"><div class="practice-launch-copy"><div class="practice-launch-label">${uiIcon("check")}Sua sessão</div><div class="sumt">${MD.find(x=>x[0]===cfg.md)[1]} · ${selected.length?(selected.length>1?"Aulas ":"Aula ")+selected.join(", "):"Todas as aulas"}${selected.length===1&&lessonBlock(selected[0],cfg.b)?" · "+escapeText(lessonBlock(selected[0],cfg.b).t):""} · ${b?"Conceitos diretos":h?"Nível Hardcore":"Nível "+nv.find(x=>x[1]===cfg.n)[0].toLowerCase()} · ${qs}</div></div><div class="practice-launch-total" aria-label="${n} questões na sessão"><strong>${n}</strong><span>${n===1?"questão":"questões"}</span></div><button type="button" class="chip on big" onclick="start()"${!n?" disabled":""}>Iniciar ${{e:"estudo",s:"simulado",h:"hardcore",b:"bate-pronto"}[cfg.md]}${uiIcon("arrow")}</button>${plan.note||msg||!n?`<div class="practice-launch-notes">${!n?`<p>Nenhuma sessão disponível com essa seleção</p>`:""}${plan.note?`<p role="status">${escapeText(plan.note)}</p>`:""}${msg?`<p class="practice-launch-error" role="status">${escapeText(msg)}</p>`:""}</div>`:""}</div><p class="s mu practice-timer-note">${uiIcon("clock")}O cronômetro começa ao iniciar e para ao finalizar a última questão.</p></div>`}
 function mix(plan=sessionPlan()){const ids=[];plan.groups.forEach(g=>g.counts.forEach((count,level)=>ids.push(...shuffle(g.levels[level]).slice(0,count))));return shuffle(ids)}
 function start(){const plan=sessionPlan(),p=mix(plan);if(!p.length){msg=plan.note||"Nenhuma questão com esses filtros.";return go()}msg="";begin(p,cfg.md);practiceRound++}
 function questionOptionHtml(o,i,feedbackId=""){return `<button class="o${qz.a!=null?(o[1]?" ok":qz.a===i?" no":""):""}"${qz.a!=null||(qz.x&&qz.x.includes(i))?" disabled":""}${qz.x&&qz.x.includes(i)?' style="opacity:.35;text-decoration:line-through"':""}${feedbackId?` aria-describedby="${feedbackId}"`:""} onclick="pick(${i})"><span class="answer-text">${"ABCD"[i]}) ${escapeText(o[0])}</span></button>`}
@@ -14601,6 +14669,6 @@ function quadro(){return `<p class="mu s">Quadro do SFN: quem normatiza, quem su
 <div class="qv" style="background:#19a7d6">Operadores</div><div class="qc qw1"><div class="qops">${[["bk","Bancos e caixas econômicas"],["ch","Administradoras de consórcios"],["bv","Bolsa de Valores"],["co","Cooperativas de crédito"],["cr","Corretoras e distribuidoras*"],["bm","Bolsa de mercadorias e futuros"],["ip","Instituições de pagamento**"],["dn","Demais instituições não bancárias"]].map(x=>qo(...x)).join("")}</div></div><div class="qc qg1 qcol">${qo("sg","Seguradoras e Resseguradoras")}${qo("ea","Entidades abertas de previdência")}${qo("sc","Sociedades de capitalização")}</div><div class="qc qg1 qtop">${qo("fp","Entidades fechadas de previdência complementar (fundos de pensão)")}</div></div></div>`}
 function go(){rememberEvolutionViewport();rememberOverviewViewport();rememberLessonSections();const enteringResult=view==="q"&&qz&&qz.i>=qz.ids.length&&!qz.resultShown;const pending=errs().length,pages={d:["Seu painel de estudos","Uma visão clara do que revisar e do próximo passo."],t:["Trilha de aulas","Conceitos essenciais, dicas e pontos de atenção."],q:["Praticar","Estude, simule a prova e consolide seus conhecimentos."],e:["Revisar erros","Retome as questões que ainda precisam de revisão."],m:["Material de apoio","Mapas, tabelas e cartões para fortalecer a memória."],x:["Quadro do SFN","Quem normatiza, quem supervisiona e quem opera."]};
 $("#app").innerHTML=`<aside class="sidebar"><div class="brand"><b>CPA</b> · Estudos<small>Seu espaço de aprendizagem</small></div><nav class="nav" aria-label="Navegação principal">${[["d","Painel","home"],["t","Trilha","book"],["q","Praticar","practice"],["e","Erros","warning"],["m","Material de apoio","file"],["x","Quadro do SFN","bank"]].map(([v,t,icon])=>`<button class="nav-item${view===v?" on":""}"${view===v?' aria-current="page"':""} onclick="view='${v}';${v==="d"?"sync();":""}go()">${uiIcon(icon)}<span>${t}</span>${v==="e"?`<span class="nav-count">(${pending})</span>`:""}</button>`).join("")}</nav><div class="sidebar-footer">${uiIcon("save")}<span>${store&&storeReady?"Progresso salvo na sua conta.":"Progresso salvo neste navegador."}</span></div></aside>
-<main class="workspace-main"><div class="main-inner"><header class="page-head"><div><h1>${pages[view][0]}</h1><p>${pages[view][1]}</p></div><div class="bank-pill">${uiIcon("book")}<span>${Q.length} questões · ${AL.length} aulas${view==="q"&&cfg.md==="b"?` · ${BP.length} bate-pronto`:""}</span></div></header>${view==="d"?dash():view==="x"?quadro():view==="t"?trilhaV():`<div class="flow-content${view==="m"?" material-content":view==="e"?" review-content":qz&&qz.i>=qz.ids.length?" result-content":qz&&qz.i<qz.ids.length&&qz.md!=="s"?" question-content":""}">${view==="m"?mat():view==="e"?revisao():qz?(qz.i>=qz.ids.length?fin():ques()):setup()}</div>`}</div></main>`;restoreOverviewViewport();restoreEvolutionViewport();rememberDailySession();if(enteringResult){qz.resultShown=true;window.scrollTo(0,0)}}
+<main class="workspace-main"><div class="main-inner"><header class="page-head"><div><h1>${pages[view][0]}</h1><p>${pages[view][1]}</p></div><div class="bank-pill">${uiIcon("book")}<span>${Q.length} questões · ${AL.length} aulas${view==="q"&&cfg.md==="b"?` · ${BP.length} bate-pronto`:""}</span></div></header>${view==="d"?dash():view==="x"?quadro():view==="t"?trilhaV():`<div class="flow-content${view==="m"?" material-content":view==="e"?" review-content":view==="q"&&!qz?" practice-content":qz&&qz.i>=qz.ids.length?" result-content":qz&&qz.i<qz.ids.length&&qz.md!=="s"?" question-content":""}">${view==="m"?mat():view==="e"?revisao():qz?(qz.i>=qz.ids.length?fin():ques()):setup()}</div>`}</div></main>`;restoreOverviewViewport();restoreEvolutionViewport();rememberDailySession();if(enteringResult){qz.resultShown=true;window.scrollTo(0,0)}}
 try{validateQuestionBank();validateBatePronto();go();init()}catch(e){err(e);$("#app").innerHTML='<div class="card">Não foi possível carregar as questões. O conteúdo precisa ser corrigido antes de iniciar os estudos.</div>'}
 </script></body></html>
