@@ -444,6 +444,42 @@ do checkpoint para a quantidade real de aulas, preservando 20 questões e 5/10/5
 
 ## Prática com várias aulas
 
+### Bate-pronto — banco conceitual próprio
+
+O usuário pediu **conteúdo bruto e direto**, sem contextualização, cenários,
+interpretação ou contas para resolver. Cada aula recebe **50 itens** adicionais:
+enunciado breve, exatamente duas alternativas (uma correta) e dois feedbacks
+específicos após acertar ou errar. Misture perguntas diretas e algumas lacunas;
+a lacuna deve ser preenchida pela alternativa, com frase gramaticalmente coerente.
+Não transforme todas em lacunas ou tudo em Sim/Não. Figuras devem ajudar a
+associação sem revelar a resposta ou acrescentar informação irrelevante.
+
+- `BP` é o banco próprio, com aula, tema, enunciado, correta, incorreta, duas
+  explicações e referência ao conteúdo existente. `BP_Q` adapta o esquema para
+  sessão/revisão. O nível `-1` é conceito, sem inventar dificuldade de prova.
+- Os IDs começam em `100001`. Use `questionById` nos fluxos compartilhados;
+  preserve a posição dos IDs existentes e acrescente novos itens ao fim de `BP`.
+  Não coloque esses itens em `Q`, Simulado, Hardcore ou checkpoint diário.
+- O modo `b` grava origem `3` no histórico existente. Todos os registros antigos
+  ficam intactos. Tentativas, evolução por dia, prioridades e revisão de erros
+  incluem Bate-pronto; andamento da trilha continua medindo os itens do banco
+  principal. Não confunda reconhecer um conceito em duas opções com domínio de
+  questão contextualizada de prova.
+- Escolha aulas e quantidade como na prática, incluindo valor personalizado.
+  `bateProntoPlan` distribui igualmente as aulas explicitamente selecionadas,
+  com diferença máxima de uma e alternância dos restos. Nunca omita uma aula
+  explicitamente escolhida por estoque insuficiente. No filtro Todas, sessões
+  menores que a quantidade de aulas alternam grupos, informando a prévia.
+- Filtros Todas/Nunca respondidas/As que errei usam a última resposta daquele
+  ID. Refazer erros do Bate-pronto conserva duas opções e o modo `b`.
+- Embaralhe as duas opções com índice original e mostre cada feedback ao lado
+  de sua opção. O próximo item só aparece após Próxima, permitindo ler o feedback.
+  Resultado usa a sessão, com acertos, erros, aulas e conceitos; sem referência
+  de aprovação ou ritmo de prova oficial.
+
+Consulte `docs/bate-pronto.md` e `docs/bate-pronto-banco.json`. Ao alterar esse
+modo, execute `python3 tests/test_bate_pronto.py`, além das verificações gerais.
+
 O usuário pode marcar e desmarcar aulas individualmente em Praticar. `cfg.as`
 guarda a seleção múltipla; `cfg.a` continua identificando uma aula única, para
 preservar os atalhos existentes. Use `selectedPracticeLessons` em vez de testar

@@ -1,0 +1,3155 @@
+{
+  "questoes": [
+    {
+      "id": 100001,
+      "aula": 1,
+      "tema": "Agentes",
+      "fonte_Q": 161,
+      "modelo": "direto"
+    },
+    {
+      "id": 100002,
+      "aula": 1,
+      "tema": "Agentes",
+      "fonte_Q": 162,
+      "modelo": "direto"
+    },
+    {
+      "id": 100003,
+      "aula": 1,
+      "tema": "Agentes e intermediação",
+      "fonte_Q": 1,
+      "modelo": "direto"
+    },
+    {
+      "id": 100004,
+      "aula": 1,
+      "tema": "Spread",
+      "fonte_Q": 163,
+      "modelo": "direto"
+    },
+    {
+      "id": 100005,
+      "aula": 1,
+      "tema": "Spread",
+      "fonte_Q": 174,
+      "modelo": "direto"
+    },
+    {
+      "id": 100006,
+      "aula": 1,
+      "tema": "Agentes e intermediação",
+      "fonte_Q": 14,
+      "modelo": "direto"
+    },
+    {
+      "id": 100007,
+      "aula": 1,
+      "tema": "Mercados",
+      "fonte_Q": 164,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100008,
+      "aula": 1,
+      "tema": "Mercados",
+      "fonte_Q": 165,
+      "modelo": "direto"
+    },
+    {
+      "id": 100009,
+      "aula": 1,
+      "tema": "Mercados",
+      "fonte_Q": 188,
+      "modelo": "direto"
+    },
+    {
+      "id": 100010,
+      "aula": 1,
+      "tema": "Mercados",
+      "fonte_Q": 82,
+      "modelo": "direto"
+    },
+    {
+      "id": 100011,
+      "aula": 1,
+      "tema": "Mercados",
+      "fonte_Q": 76,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100012,
+      "aula": 1,
+      "tema": "Quadro do SFN",
+      "fonte_Q": 182,
+      "modelo": "direto"
+    },
+    {
+      "id": 100013,
+      "aula": 1,
+      "tema": "Mercados",
+      "fonte_Q": 190,
+      "modelo": "direto"
+    },
+    {
+      "id": 100014,
+      "aula": 1,
+      "tema": "Estrutura",
+      "fonte_Q": 166,
+      "modelo": "direto"
+    },
+    {
+      "id": 100015,
+      "aula": 1,
+      "tema": "Estrutura",
+      "fonte_Q": 177,
+      "modelo": "direto"
+    },
+    {
+      "id": 100016,
+      "aula": 1,
+      "tema": "Estrutura",
+      "fonte_Q": 178,
+      "modelo": "direto"
+    },
+    {
+      "id": 100017,
+      "aula": 1,
+      "tema": "Estrutura do SFN",
+      "fonte_Q": 12,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100018,
+      "aula": 1,
+      "tema": "Estrutura",
+      "fonte_Q": 167,
+      "modelo": "direto"
+    },
+    {
+      "id": 100019,
+      "aula": 1,
+      "tema": "Estrutura do SFN",
+      "fonte_Q": 83,
+      "modelo": "direto"
+    },
+    {
+      "id": 100020,
+      "aula": 1,
+      "tema": "Regulação",
+      "fonte_Q": 168,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100021,
+      "aula": 1,
+      "tema": "Regulação",
+      "fonte_Q": 179,
+      "modelo": "direto"
+    },
+    {
+      "id": 100022,
+      "aula": 1,
+      "tema": "Quadro do SFN",
+      "fonte_Q": 169,
+      "modelo": "direto"
+    },
+    {
+      "id": 100023,
+      "aula": 1,
+      "tema": "Quadro do SFN",
+      "fonte_Q": 184,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100024,
+      "aula": 1,
+      "tema": "Quadro do SFN",
+      "fonte_Q": 180,
+      "modelo": "direto"
+    },
+    {
+      "id": 100025,
+      "aula": 1,
+      "tema": "Quadro do SFN",
+      "fonte_Q": 170,
+      "modelo": "direto"
+    },
+    {
+      "id": 100026,
+      "aula": 1,
+      "tema": "Quadro do SFN",
+      "fonte_Q": 181,
+      "modelo": "direto"
+    },
+    {
+      "id": 100027,
+      "aula": 1,
+      "tema": "Serviços",
+      "fonte_Q": 171,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100028,
+      "aula": 1,
+      "tema": "Serviços",
+      "fonte_Q": 8,
+      "modelo": "direto"
+    },
+    {
+      "id": 100029,
+      "aula": 1,
+      "tema": "Serviços",
+      "fonte_Q": 26,
+      "modelo": "direto"
+    },
+    {
+      "id": 100030,
+      "aula": 1,
+      "tema": "Serviços",
+      "fonte_Q": 77,
+      "modelo": "direto"
+    },
+    {
+      "id": 100031,
+      "aula": 1,
+      "tema": "Serviços",
+      "fonte_Q": 187,
+      "modelo": "direto"
+    },
+    {
+      "id": 100032,
+      "aula": 1,
+      "tema": "Serviços",
+      "fonte_Q": 187,
+      "modelo": "direto"
+    },
+    {
+      "id": 100033,
+      "aula": 1,
+      "tema": "Quadro do SFN",
+      "fonte_Q": 183,
+      "modelo": "direto"
+    },
+    {
+      "id": 100034,
+      "aula": 1,
+      "tema": "Mercados",
+      "fonte_Q": 172,
+      "modelo": "direto"
+    },
+    {
+      "id": 100035,
+      "aula": 1,
+      "tema": "Mercados",
+      "fonte_Q": 165,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100036,
+      "aula": 1,
+      "tema": "Mercados",
+      "fonte_Q": 165,
+      "modelo": "direto"
+    },
+    {
+      "id": 100037,
+      "aula": 1,
+      "tema": "Agentes e intermediação",
+      "fonte_Q": 30,
+      "modelo": "direto"
+    },
+    {
+      "id": 100038,
+      "aula": 1,
+      "tema": "Spread",
+      "fonte_Q": 7,
+      "modelo": "direto"
+    },
+    {
+      "id": 100039,
+      "aula": 1,
+      "tema": "Spread",
+      "fonte_Q": 80,
+      "modelo": "direto"
+    },
+    {
+      "id": 100040,
+      "aula": 1,
+      "tema": "Spread",
+      "fonte_Q": 192,
+      "modelo": "direto"
+    },
+    {
+      "id": 100041,
+      "aula": 1,
+      "tema": "Spread",
+      "fonte_Q": 174,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100042,
+      "aula": 1,
+      "tema": "Vantagens",
+      "fonte_Q": 175,
+      "modelo": "direto"
+    },
+    {
+      "id": 100043,
+      "aula": 1,
+      "tema": "Vantagens",
+      "fonte_Q": 194,
+      "modelo": "direto"
+    },
+    {
+      "id": 100044,
+      "aula": 1,
+      "tema": "Mercados",
+      "fonte_Q": 196,
+      "modelo": "direto"
+    },
+    {
+      "id": 100045,
+      "aula": 1,
+      "tema": "Mercados",
+      "fonte_Q": 79,
+      "modelo": "direto"
+    },
+    {
+      "id": 100046,
+      "aula": 1,
+      "tema": "Agentes e intermediação",
+      "fonte_Q": 13,
+      "modelo": "direto"
+    },
+    {
+      "id": 100047,
+      "aula": 1,
+      "tema": "Spread",
+      "fonte_Q": 84,
+      "modelo": "direto"
+    },
+    {
+      "id": 100048,
+      "aula": 1,
+      "tema": "Agentes e intermediação",
+      "fonte_Q": 78,
+      "modelo": "direto"
+    },
+    {
+      "id": 100049,
+      "aula": 1,
+      "tema": "Agentes",
+      "fonte_Q": 161,
+      "modelo": "direto"
+    },
+    {
+      "id": 100050,
+      "aula": 1,
+      "tema": "Estrutura",
+      "fonte_Q": 166,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100051,
+      "aula": 2,
+      "tema": "Natureza",
+      "fonte_Q": 221,
+      "modelo": "direto"
+    },
+    {
+      "id": 100052,
+      "aula": 2,
+      "tema": "CMN: papel e composição",
+      "fonte_Q": 31,
+      "modelo": "direto"
+    },
+    {
+      "id": 100053,
+      "aula": 2,
+      "tema": "CMN: papel e composição",
+      "fonte_Q": 19,
+      "modelo": "direto"
+    },
+    {
+      "id": 100054,
+      "aula": 2,
+      "tema": "CMN: papel e composição",
+      "fonte_Q": 19,
+      "modelo": "direto"
+    },
+    {
+      "id": 100055,
+      "aula": 2,
+      "tema": "Composição",
+      "fonte_Q": 222,
+      "modelo": "direto"
+    },
+    {
+      "id": 100056,
+      "aula": 2,
+      "tema": "Composição",
+      "fonte_Q": 223,
+      "modelo": "direto"
+    },
+    {
+      "id": 100057,
+      "aula": 2,
+      "tema": "Meta de inflação",
+      "fonte_Q": 225,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100058,
+      "aula": 2,
+      "tema": "Meta de inflação",
+      "fonte_Q": 226,
+      "modelo": "direto"
+    },
+    {
+      "id": 100059,
+      "aula": 2,
+      "tema": "Meta de inflação",
+      "fonte_Q": 268,
+      "modelo": "direto"
+    },
+    {
+      "id": 100060,
+      "aula": 2,
+      "tema": "Meta de inflação",
+      "fonte_Q": 18,
+      "modelo": "direto"
+    },
+    {
+      "id": 100061,
+      "aula": 2,
+      "tema": "Meta de inflação",
+      "fonte_Q": 18,
+      "modelo": "direto"
+    },
+    {
+      "id": 100062,
+      "aula": 2,
+      "tema": "Meta de inflação",
+      "fonte_Q": 17,
+      "modelo": "direto"
+    },
+    {
+      "id": 100063,
+      "aula": 2,
+      "tema": "Meta de inflação",
+      "fonte_Q": 244,
+      "modelo": "direto"
+    },
+    {
+      "id": 100064,
+      "aula": 2,
+      "tema": "Meta de inflação",
+      "fonte_Q": 243,
+      "modelo": "direto"
+    },
+    {
+      "id": 100065,
+      "aula": 2,
+      "tema": "Meta de inflação",
+      "fonte_Q": 232,
+      "modelo": "direto"
+    },
+    {
+      "id": 100066,
+      "aula": 2,
+      "tema": "Meta de inflação",
+      "fonte_Q": 240,
+      "modelo": "direto"
+    },
+    {
+      "id": 100067,
+      "aula": 2,
+      "tema": "Meta de inflação",
+      "fonte_Q": 35,
+      "modelo": "direto"
+    },
+    {
+      "id": 100068,
+      "aula": 2,
+      "tema": "Meta de inflação",
+      "fonte_Q": 242,
+      "modelo": "direto"
+    },
+    {
+      "id": 100069,
+      "aula": 2,
+      "tema": "CMN: papel e composição",
+      "fonte_Q": 34,
+      "modelo": "direto"
+    },
+    {
+      "id": 100070,
+      "aula": 2,
+      "tema": "Objetivos",
+      "fonte_Q": 239,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100071,
+      "aula": 2,
+      "tema": "Objetivos",
+      "fonte_Q": 238,
+      "modelo": "direto"
+    },
+    {
+      "id": 100072,
+      "aula": 2,
+      "tema": "Competências",
+      "fonte_Q": 233,
+      "modelo": "direto"
+    },
+    {
+      "id": 100073,
+      "aula": 2,
+      "tema": "CMN: papel e composição",
+      "fonte_Q": 92,
+      "modelo": "direto"
+    },
+    {
+      "id": 100074,
+      "aula": 2,
+      "tema": "CMN x Banco Central",
+      "fonte_Q": 94,
+      "modelo": "direto"
+    },
+    {
+      "id": 100075,
+      "aula": 2,
+      "tema": "Competências",
+      "fonte_Q": 234,
+      "modelo": "direto"
+    },
+    {
+      "id": 100076,
+      "aula": 2,
+      "tema": "Competências",
+      "fonte_Q": 235,
+      "modelo": "direto"
+    },
+    {
+      "id": 100077,
+      "aula": 2,
+      "tema": "CMN x Banco Central",
+      "fonte_Q": 36,
+      "modelo": "direto"
+    },
+    {
+      "id": 100078,
+      "aula": 2,
+      "tema": "Competências",
+      "fonte_Q": 237,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100079,
+      "aula": 2,
+      "tema": "Quem faz",
+      "fonte_Q": 264,
+      "modelo": "direto"
+    },
+    {
+      "id": 100080,
+      "aula": 2,
+      "tema": "CMN: papel e composição",
+      "fonte_Q": 39,
+      "modelo": "direto"
+    },
+    {
+      "id": 100081,
+      "aula": 2,
+      "tema": "Reuniões e normas",
+      "fonte_Q": 33,
+      "modelo": "direto"
+    },
+    {
+      "id": 100082,
+      "aula": 2,
+      "tema": "Reuniões",
+      "fonte_Q": 230,
+      "modelo": "direto"
+    },
+    {
+      "id": 100083,
+      "aula": 2,
+      "tema": "Decisões",
+      "fonte_Q": 231,
+      "modelo": "direto"
+    },
+    {
+      "id": 100084,
+      "aula": 2,
+      "tema": "Reuniões",
+      "fonte_Q": 245,
+      "modelo": "direto"
+    },
+    {
+      "id": 100085,
+      "aula": 2,
+      "tema": "Reuniões",
+      "fonte_Q": 246,
+      "modelo": "direto"
+    },
+    {
+      "id": 100086,
+      "aula": 2,
+      "tema": "Normas",
+      "fonte_Q": 224,
+      "modelo": "direto"
+    },
+    {
+      "id": 100087,
+      "aula": 2,
+      "tema": "Reuniões e normas",
+      "fonte_Q": 25,
+      "modelo": "direto"
+    },
+    {
+      "id": 100088,
+      "aula": 2,
+      "tema": "Comoc e Secretaria",
+      "fonte_Q": 93,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100089,
+      "aula": 2,
+      "tema": "Comoc",
+      "fonte_Q": 227,
+      "modelo": "direto"
+    },
+    {
+      "id": 100090,
+      "aula": 2,
+      "tema": "Secretaria",
+      "fonte_Q": 228,
+      "modelo": "direto"
+    },
+    {
+      "id": 100091,
+      "aula": 2,
+      "tema": "Comoc e Secretaria",
+      "fonte_Q": 23,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100092,
+      "aula": 2,
+      "tema": "Secretaria",
+      "fonte_Q": 251,
+      "modelo": "direto"
+    },
+    {
+      "id": 100093,
+      "aula": 2,
+      "tema": "Secretaria",
+      "fonte_Q": 252,
+      "modelo": "direto"
+    },
+    {
+      "id": 100094,
+      "aula": 2,
+      "tema": "Secretaria",
+      "fonte_Q": 253,
+      "modelo": "direto"
+    },
+    {
+      "id": 100095,
+      "aula": 2,
+      "tema": "Secretaria",
+      "fonte_Q": 254,
+      "modelo": "direto"
+    },
+    {
+      "id": 100096,
+      "aula": 2,
+      "tema": "Comoc",
+      "fonte_Q": 247,
+      "modelo": "direto"
+    },
+    {
+      "id": 100097,
+      "aula": 2,
+      "tema": "Comoc e Secretaria",
+      "fonte_Q": 38,
+      "modelo": "direto"
+    },
+    {
+      "id": 100098,
+      "aula": 2,
+      "tema": "Comoc",
+      "fonte_Q": 248,
+      "modelo": "direto"
+    },
+    {
+      "id": 100099,
+      "aula": 2,
+      "tema": "Comoc e Secretaria",
+      "fonte_Q": 98,
+      "modelo": "direto"
+    },
+    {
+      "id": 100100,
+      "aula": 2,
+      "tema": "Comoc e Secretaria",
+      "fonte_Q": 97,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100101,
+      "aula": 3,
+      "tema": "Natureza e funções",
+      "fonte_Q": 51,
+      "modelo": "direto"
+    },
+    {
+      "id": 100102,
+      "aula": 3,
+      "tema": "Natureza e funções",
+      "fonte_Q": 52,
+      "modelo": "direto"
+    },
+    {
+      "id": 100103,
+      "aula": 3,
+      "tema": "Natureza e funções",
+      "fonte_Q": 106,
+      "modelo": "direto"
+    },
+    {
+      "id": 100104,
+      "aula": 3,
+      "tema": "Natureza",
+      "fonte_Q": 288,
+      "modelo": "direto"
+    },
+    {
+      "id": 100105,
+      "aula": 3,
+      "tema": "Natureza",
+      "fonte_Q": 289,
+      "modelo": "direto"
+    },
+    {
+      "id": 100106,
+      "aula": 3,
+      "tema": "Natureza e funções",
+      "fonte_Q": 112,
+      "modelo": "direto"
+    },
+    {
+      "id": 100107,
+      "aula": 3,
+      "tema": "Diretoria e mandato",
+      "fonte_Q": 53,
+      "modelo": "direto"
+    },
+    {
+      "id": 100108,
+      "aula": 3,
+      "tema": "Diretoria",
+      "fonte_Q": 283,
+      "modelo": "direto"
+    },
+    {
+      "id": 100109,
+      "aula": 3,
+      "tema": "Mandato",
+      "fonte_Q": 284,
+      "modelo": "direto"
+    },
+    {
+      "id": 100110,
+      "aula": 3,
+      "tema": "Diretoria e mandato",
+      "fonte_Q": 54,
+      "modelo": "direto"
+    },
+    {
+      "id": 100111,
+      "aula": 3,
+      "tema": "Diretoria e mandato",
+      "fonte_Q": 56,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100112,
+      "aula": 3,
+      "tema": "Diretoria e mandato",
+      "fonte_Q": 56,
+      "modelo": "direto"
+    },
+    {
+      "id": 100113,
+      "aula": 3,
+      "tema": "Mandato",
+      "fonte_Q": 300,
+      "modelo": "direto"
+    },
+    {
+      "id": 100114,
+      "aula": 3,
+      "tema": "Diretoria e mandato",
+      "fonte_Q": 62,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100115,
+      "aula": 3,
+      "tema": "Diretoria e mandato",
+      "fonte_Q": 66,
+      "modelo": "direto"
+    },
+    {
+      "id": 100116,
+      "aula": 3,
+      "tema": "Diretoria e mandato",
+      "fonte_Q": 115,
+      "modelo": "direto"
+    },
+    {
+      "id": 100117,
+      "aula": 3,
+      "tema": "Mandato",
+      "fonte_Q": 301,
+      "modelo": "direto"
+    },
+    {
+      "id": 100118,
+      "aula": 3,
+      "tema": "Exoneração",
+      "fonte_Q": 302,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100119,
+      "aula": 3,
+      "tema": "Exoneração",
+      "fonte_Q": 327,
+      "modelo": "direto"
+    },
+    {
+      "id": 100120,
+      "aula": 3,
+      "tema": "Exoneração",
+      "fonte_Q": 327,
+      "modelo": "direto"
+    },
+    {
+      "id": 100121,
+      "aula": 3,
+      "tema": "Diretoria e mandato",
+      "fonte_Q": 67,
+      "modelo": "direto"
+    },
+    {
+      "id": 100122,
+      "aula": 3,
+      "tema": "Exoneração",
+      "fonte_Q": 319,
+      "modelo": "direto"
+    },
+    {
+      "id": 100123,
+      "aula": 3,
+      "tema": "Diretoria e mandato",
+      "fonte_Q": 110,
+      "modelo": "direto"
+    },
+    {
+      "id": 100124,
+      "aula": 3,
+      "tema": "Funções",
+      "fonte_Q": 286,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100125,
+      "aula": 3,
+      "tema": "Natureza e funções",
+      "fonte_Q": 55,
+      "modelo": "direto"
+    },
+    {
+      "id": 100126,
+      "aula": 3,
+      "tema": "Natureza e funções",
+      "fonte_Q": 107,
+      "modelo": "direto"
+    },
+    {
+      "id": 100127,
+      "aula": 3,
+      "tema": "Autorização e supervisão",
+      "fonte_Q": 108,
+      "modelo": "direto"
+    },
+    {
+      "id": 100128,
+      "aula": 3,
+      "tema": "Moeda",
+      "fonte_Q": 287,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100129,
+      "aula": 3,
+      "tema": "Moeda",
+      "fonte_Q": 290,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100130,
+      "aula": 3,
+      "tema": "Competências",
+      "fonte_Q": 304,
+      "modelo": "direto"
+    },
+    {
+      "id": 100131,
+      "aula": 3,
+      "tema": "Competências",
+      "fonte_Q": 59,
+      "modelo": "direto"
+    },
+    {
+      "id": 100132,
+      "aula": 3,
+      "tema": "Competências",
+      "fonte_Q": 113,
+      "modelo": "direto"
+    },
+    {
+      "id": 100133,
+      "aula": 3,
+      "tema": "Compulsórios",
+      "fonte_Q": 322,
+      "modelo": "direto"
+    },
+    {
+      "id": 100134,
+      "aula": 3,
+      "tema": "Competências",
+      "fonte_Q": 113,
+      "modelo": "direto"
+    },
+    {
+      "id": 100135,
+      "aula": 3,
+      "tema": "Competências",
+      "fonte_Q": 307,
+      "modelo": "direto"
+    },
+    {
+      "id": 100136,
+      "aula": 3,
+      "tema": "Competências",
+      "fonte_Q": 307,
+      "modelo": "direto"
+    },
+    {
+      "id": 100137,
+      "aula": 3,
+      "tema": "Competências",
+      "fonte_Q": 64,
+      "modelo": "direto"
+    },
+    {
+      "id": 100138,
+      "aula": 3,
+      "tema": "Competências",
+      "fonte_Q": 119,
+      "modelo": "direto"
+    },
+    {
+      "id": 100139,
+      "aula": 3,
+      "tema": "Câmbio",
+      "fonte_Q": 292,
+      "modelo": "direto"
+    },
+    {
+      "id": 100140,
+      "aula": 3,
+      "tema": "Competências",
+      "fonte_Q": 306,
+      "modelo": "direto"
+    },
+    {
+      "id": 100141,
+      "aula": 3,
+      "tema": "Competências",
+      "fonte_Q": 308,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100142,
+      "aula": 3,
+      "tema": "Competências",
+      "fonte_Q": 309,
+      "modelo": "direto"
+    },
+    {
+      "id": 100143,
+      "aula": 3,
+      "tema": "Autorização",
+      "fonte_Q": 310,
+      "modelo": "direto"
+    },
+    {
+      "id": 100144,
+      "aula": 3,
+      "tema": "Autorização",
+      "fonte_Q": 311,
+      "modelo": "direto"
+    },
+    {
+      "id": 100145,
+      "aula": 3,
+      "tema": "Autorização e supervisão",
+      "fonte_Q": 109,
+      "modelo": "direto"
+    },
+    {
+      "id": 100146,
+      "aula": 3,
+      "tema": "Política monetária",
+      "fonte_Q": 57,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100147,
+      "aula": 3,
+      "tema": "Descumprimento",
+      "fonte_Q": 297,
+      "modelo": "direto"
+    },
+    {
+      "id": 100148,
+      "aula": 3,
+      "tema": "Descumprimento",
+      "fonte_Q": 296,
+      "modelo": "direto"
+    },
+    {
+      "id": 100149,
+      "aula": 3,
+      "tema": "Objetivos",
+      "fonte_Q": 293,
+      "modelo": "direto"
+    },
+    {
+      "id": 100150,
+      "aula": 3,
+      "tema": "Objetivos",
+      "fonte_Q": 294,
+      "modelo": "direto"
+    },
+    {
+      "id": 100151,
+      "aula": 4,
+      "tema": "Natureza e vinculação",
+      "fonte_Q": 121,
+      "modelo": "direto"
+    },
+    {
+      "id": 100152,
+      "aula": 4,
+      "tema": "Natureza",
+      "fonte_Q": 389,
+      "modelo": "direto"
+    },
+    {
+      "id": 100153,
+      "aula": 4,
+      "tema": "Natureza",
+      "fonte_Q": 342,
+      "modelo": "direto"
+    },
+    {
+      "id": 100154,
+      "aula": 4,
+      "tema": "Natureza e vinculação",
+      "fonte_Q": 122,
+      "modelo": "direto"
+    },
+    {
+      "id": 100155,
+      "aula": 4,
+      "tema": "Vinculação",
+      "fonte_Q": 345,
+      "modelo": "direto"
+    },
+    {
+      "id": 100156,
+      "aula": 4,
+      "tema": "Natureza e vinculação",
+      "fonte_Q": 128,
+      "modelo": "direto"
+    },
+    {
+      "id": 100157,
+      "aula": 4,
+      "tema": "Diretoria e mandato",
+      "fonte_Q": 123,
+      "modelo": "direto"
+    },
+    {
+      "id": 100158,
+      "aula": 4,
+      "tema": "Diretoria",
+      "fonte_Q": 343,
+      "modelo": "direto"
+    },
+    {
+      "id": 100159,
+      "aula": 4,
+      "tema": "Diretoria e mandato",
+      "fonte_Q": 124,
+      "modelo": "direto"
+    },
+    {
+      "id": 100160,
+      "aula": 4,
+      "tema": "Mandato",
+      "fonte_Q": 344,
+      "modelo": "direto"
+    },
+    {
+      "id": 100161,
+      "aula": 4,
+      "tema": "Mandato",
+      "fonte_Q": 400,
+      "modelo": "direto"
+    },
+    {
+      "id": 100162,
+      "aula": 4,
+      "tema": "Mandato",
+      "fonte_Q": 400,
+      "modelo": "direto"
+    },
+    {
+      "id": 100163,
+      "aula": 4,
+      "tema": "Mandato",
+      "fonte_Q": 400,
+      "modelo": "direto"
+    },
+    {
+      "id": 100164,
+      "aula": 4,
+      "tema": "Diretoria e mandato",
+      "fonte_Q": 129,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100165,
+      "aula": 4,
+      "tema": "Diretoria e mandato",
+      "fonte_Q": 129,
+      "modelo": "direto"
+    },
+    {
+      "id": 100166,
+      "aula": 4,
+      "tema": "Requisitos",
+      "fonte_Q": 353,
+      "modelo": "direto"
+    },
+    {
+      "id": 100167,
+      "aula": 4,
+      "tema": "Requisitos",
+      "fonte_Q": 354,
+      "modelo": "direto"
+    },
+    {
+      "id": 100168,
+      "aula": 4,
+      "tema": "Exoneração",
+      "fonte_Q": 356,
+      "modelo": "direto"
+    },
+    {
+      "id": 100169,
+      "aula": 4,
+      "tema": "Exoneração",
+      "fonte_Q": 355,
+      "modelo": "direto"
+    },
+    {
+      "id": 100170,
+      "aula": 4,
+      "tema": "Diretoria e mandato",
+      "fonte_Q": 130,
+      "modelo": "direto"
+    },
+    {
+      "id": 100171,
+      "aula": 4,
+      "tema": "Poderes e penalidades",
+      "fonte_Q": 126,
+      "modelo": "direto"
+    },
+    {
+      "id": 100172,
+      "aula": 4,
+      "tema": "Poderes",
+      "fonte_Q": 386,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100173,
+      "aula": 4,
+      "tema": "Poderes e penalidades",
+      "fonte_Q": 127,
+      "modelo": "direto"
+    },
+    {
+      "id": 100174,
+      "aula": 4,
+      "tema": "Penalidades",
+      "fonte_Q": 350,
+      "modelo": "direto"
+    },
+    {
+      "id": 100175,
+      "aula": 4,
+      "tema": "Poderes e penalidades",
+      "fonte_Q": 147,
+      "modelo": "direto"
+    },
+    {
+      "id": 100176,
+      "aula": 4,
+      "tema": "Poderes e penalidades",
+      "fonte_Q": 140,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100177,
+      "aula": 4,
+      "tema": "Poderes e penalidades",
+      "fonte_Q": 140,
+      "modelo": "direto"
+    },
+    {
+      "id": 100178,
+      "aula": 4,
+      "tema": "Poderes e penalidades",
+      "fonte_Q": 137,
+      "modelo": "direto"
+    },
+    {
+      "id": 100179,
+      "aula": 4,
+      "tema": "Poderes e penalidades",
+      "fonte_Q": 138,
+      "modelo": "direto"
+    },
+    {
+      "id": 100180,
+      "aula": 4,
+      "tema": "Penalidades",
+      "fonte_Q": 371,
+      "modelo": "direto"
+    },
+    {
+      "id": 100181,
+      "aula": 4,
+      "tema": "Poderes e penalidades",
+      "fonte_Q": 139,
+      "modelo": "direto"
+    },
+    {
+      "id": 100182,
+      "aula": 4,
+      "tema": "Poderes",
+      "fonte_Q": 367,
+      "modelo": "direto"
+    },
+    {
+      "id": 100183,
+      "aula": 4,
+      "tema": "Poderes",
+      "fonte_Q": 368,
+      "modelo": "direto"
+    },
+    {
+      "id": 100184,
+      "aula": 4,
+      "tema": "Valores mobiliários",
+      "fonte_Q": 125,
+      "modelo": "direto"
+    },
+    {
+      "id": 100185,
+      "aula": 4,
+      "tema": "Valores mobiliários",
+      "fonte_Q": 144,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100186,
+      "aula": 4,
+      "tema": "Valores mobiliários",
+      "fonte_Q": 347,
+      "modelo": "direto"
+    },
+    {
+      "id": 100187,
+      "aula": 4,
+      "tema": "Valores mobiliários",
+      "fonte_Q": 348,
+      "modelo": "direto"
+    },
+    {
+      "id": 100188,
+      "aula": 4,
+      "tema": "Valores mobiliários",
+      "fonte_Q": 399,
+      "modelo": "direto"
+    },
+    {
+      "id": 100189,
+      "aula": 4,
+      "tema": "Valores mobiliários",
+      "fonte_Q": 358,
+      "modelo": "direto"
+    },
+    {
+      "id": 100190,
+      "aula": 4,
+      "tema": "Valores mobiliários",
+      "fonte_Q": 132,
+      "modelo": "direto"
+    },
+    {
+      "id": 100191,
+      "aula": 4,
+      "tema": "Valores mobiliários",
+      "fonte_Q": 360,
+      "modelo": "direto"
+    },
+    {
+      "id": 100192,
+      "aula": 4,
+      "tema": "Valores mobiliários",
+      "fonte_Q": 133,
+      "modelo": "direto"
+    },
+    {
+      "id": 100193,
+      "aula": 4,
+      "tema": "Valores mobiliários",
+      "fonte_Q": 388,
+      "modelo": "direto"
+    },
+    {
+      "id": 100194,
+      "aula": 4,
+      "tema": "Valores mobiliários",
+      "fonte_Q": 359,
+      "modelo": "direto"
+    },
+    {
+      "id": 100195,
+      "aula": 4,
+      "tema": "Atribuições",
+      "fonte_Q": 361,
+      "modelo": "direto"
+    },
+    {
+      "id": 100196,
+      "aula": 4,
+      "tema": "Atribuições",
+      "fonte_Q": 362,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100197,
+      "aula": 4,
+      "tema": "Atribuições",
+      "fonte_Q": 363,
+      "modelo": "direto"
+    },
+    {
+      "id": 100198,
+      "aula": 4,
+      "tema": "Atribuições",
+      "fonte_Q": 136,
+      "modelo": "direto"
+    },
+    {
+      "id": 100199,
+      "aula": 4,
+      "tema": "Regulação e autorregulação",
+      "fonte_Q": 141,
+      "modelo": "direto"
+    },
+    {
+      "id": 100200,
+      "aula": 4,
+      "tema": "Tabela",
+      "fonte_Q": 377,
+      "modelo": "direto"
+    },
+    {
+      "id": 100201,
+      "aula": 5,
+      "tema": "Quadro",
+      "fonte_Q": 401,
+      "modelo": "direto"
+    },
+    {
+      "id": 100202,
+      "aula": 5,
+      "tema": "Quadro",
+      "fonte_Q": 402,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100203,
+      "aula": 5,
+      "tema": "Quadro",
+      "fonte_Q": 403,
+      "modelo": "direto"
+    },
+    {
+      "id": 100204,
+      "aula": 5,
+      "tema": "Quadro",
+      "fonte_Q": 404,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100205,
+      "aula": 5,
+      "tema": "Vinculação",
+      "fonte_Q": 405,
+      "modelo": "direto"
+    },
+    {
+      "id": 100206,
+      "aula": 5,
+      "tema": "Vinculação",
+      "fonte_Q": 406,
+      "modelo": "direto"
+    },
+    {
+      "id": 100207,
+      "aula": 5,
+      "tema": "Susep",
+      "fonte_Q": 407,
+      "modelo": "direto"
+    },
+    {
+      "id": 100208,
+      "aula": 5,
+      "tema": "Previc",
+      "fonte_Q": 408,
+      "modelo": "direto"
+    },
+    {
+      "id": 100209,
+      "aula": 5,
+      "tema": "Natureza",
+      "fonte_Q": 445,
+      "modelo": "direto"
+    },
+    {
+      "id": 100210,
+      "aula": 5,
+      "tema": "Natureza",
+      "fonte_Q": 446,
+      "modelo": "direto"
+    },
+    {
+      "id": 100211,
+      "aula": 5,
+      "tema": "Níveis",
+      "fonte_Q": 441,
+      "modelo": "direto"
+    },
+    {
+      "id": 100212,
+      "aula": 5,
+      "tema": "Níveis",
+      "fonte_Q": 442,
+      "modelo": "direto"
+    },
+    {
+      "id": 100213,
+      "aula": 5,
+      "tema": "Níveis",
+      "fonte_Q": 443,
+      "modelo": "direto"
+    },
+    {
+      "id": 100214,
+      "aula": 5,
+      "tema": "Níveis",
+      "fonte_Q": 444,
+      "modelo": "direto"
+    },
+    {
+      "id": 100215,
+      "aula": 5,
+      "tema": "CNSP",
+      "fonte_Q": 412,
+      "modelo": "direto"
+    },
+    {
+      "id": 100216,
+      "aula": 5,
+      "tema": "CNPC",
+      "fonte_Q": 418,
+      "modelo": "direto"
+    },
+    {
+      "id": 100217,
+      "aula": 5,
+      "tema": "CNSP",
+      "fonte_Q": 484,
+      "modelo": "direto"
+    },
+    {
+      "id": 100218,
+      "aula": 5,
+      "tema": "CNSP",
+      "fonte_Q": 437,
+      "modelo": "direto"
+    },
+    {
+      "id": 100219,
+      "aula": 5,
+      "tema": "CNSP",
+      "fonte_Q": 414,
+      "modelo": "direto"
+    },
+    {
+      "id": 100220,
+      "aula": 5,
+      "tema": "CNSP",
+      "fonte_Q": 425,
+      "modelo": "direto"
+    },
+    {
+      "id": 100221,
+      "aula": 5,
+      "tema": "CNSP",
+      "fonte_Q": 425,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100222,
+      "aula": 5,
+      "tema": "Susep",
+      "fonte_Q": 415,
+      "modelo": "direto"
+    },
+    {
+      "id": 100223,
+      "aula": 5,
+      "tema": "Susep",
+      "fonte_Q": 415,
+      "modelo": "direto"
+    },
+    {
+      "id": 100224,
+      "aula": 5,
+      "tema": "Susep",
+      "fonte_Q": 416,
+      "modelo": "direto"
+    },
+    {
+      "id": 100225,
+      "aula": 5,
+      "tema": "Susep",
+      "fonte_Q": 426,
+      "modelo": "direto"
+    },
+    {
+      "id": 100226,
+      "aula": 5,
+      "tema": "Susep",
+      "fonte_Q": 417,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100227,
+      "aula": 5,
+      "tema": "Susep",
+      "fonte_Q": 417,
+      "modelo": "direto"
+    },
+    {
+      "id": 100228,
+      "aula": 5,
+      "tema": "CNPC",
+      "fonte_Q": 419,
+      "modelo": "direto"
+    },
+    {
+      "id": 100229,
+      "aula": 5,
+      "tema": "CNPC",
+      "fonte_Q": 420,
+      "modelo": "direto"
+    },
+    {
+      "id": 100230,
+      "aula": 5,
+      "tema": "CNPC",
+      "fonte_Q": 420,
+      "modelo": "direto"
+    },
+    {
+      "id": 100231,
+      "aula": 5,
+      "tema": "CNPC",
+      "fonte_Q": 472,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100232,
+      "aula": 5,
+      "tema": "CNPC",
+      "fonte_Q": 470,
+      "modelo": "direto"
+    },
+    {
+      "id": 100233,
+      "aula": 5,
+      "tema": "CNPC",
+      "fonte_Q": 471,
+      "modelo": "direto"
+    },
+    {
+      "id": 100234,
+      "aula": 5,
+      "tema": "CNPC",
+      "fonte_Q": 427,
+      "modelo": "direto"
+    },
+    {
+      "id": 100235,
+      "aula": 5,
+      "tema": "CNPC",
+      "fonte_Q": 427,
+      "modelo": "direto"
+    },
+    {
+      "id": 100236,
+      "aula": 5,
+      "tema": "Previc",
+      "fonte_Q": 421,
+      "modelo": "direto"
+    },
+    {
+      "id": 100237,
+      "aula": 5,
+      "tema": "Previc",
+      "fonte_Q": 422,
+      "modelo": "direto"
+    },
+    {
+      "id": 100238,
+      "aula": 5,
+      "tema": "Previc",
+      "fonte_Q": 422,
+      "modelo": "direto"
+    },
+    {
+      "id": 100239,
+      "aula": 5,
+      "tema": "Previc",
+      "fonte_Q": 428,
+      "modelo": "direto"
+    },
+    {
+      "id": 100240,
+      "aula": 5,
+      "tema": "Previc",
+      "fonte_Q": 428,
+      "modelo": "direto"
+    },
+    {
+      "id": 100241,
+      "aula": 5,
+      "tema": "Previdência",
+      "fonte_Q": 423,
+      "modelo": "direto"
+    },
+    {
+      "id": 100242,
+      "aula": 5,
+      "tema": "Mercados",
+      "fonte_Q": 447,
+      "modelo": "direto"
+    },
+    {
+      "id": 100243,
+      "aula": 5,
+      "tema": "Mercados",
+      "fonte_Q": 451,
+      "modelo": "direto"
+    },
+    {
+      "id": 100244,
+      "aula": 5,
+      "tema": "CNSP",
+      "fonte_Q": 455,
+      "modelo": "direto"
+    },
+    {
+      "id": 100245,
+      "aula": 5,
+      "tema": "Susep",
+      "fonte_Q": 463,
+      "modelo": "direto"
+    },
+    {
+      "id": 100246,
+      "aula": 5,
+      "tema": "Susep",
+      "fonte_Q": 465,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100247,
+      "aula": 5,
+      "tema": "Susep",
+      "fonte_Q": 466,
+      "modelo": "direto"
+    },
+    {
+      "id": 100248,
+      "aula": 5,
+      "tema": "Previc",
+      "fonte_Q": 474,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100249,
+      "aula": 5,
+      "tema": "CNPC",
+      "fonte_Q": 477,
+      "modelo": "direto"
+    },
+    {
+      "id": 100250,
+      "aula": 5,
+      "tema": "Previc",
+      "fonte_Q": 476,
+      "modelo": "direto"
+    },
+    {
+      "id": 100251,
+      "aula": 6,
+      "tema": "Operações",
+      "fonte_Q": 501,
+      "modelo": "direto"
+    },
+    {
+      "id": 100252,
+      "aula": 6,
+      "tema": "Operações",
+      "fonte_Q": 502,
+      "modelo": "direto"
+    },
+    {
+      "id": 100253,
+      "aula": 6,
+      "tema": "Operações",
+      "fonte_Q": 503,
+      "modelo": "direto"
+    },
+    {
+      "id": 100254,
+      "aula": 6,
+      "tema": "Operações",
+      "fonte_Q": 504,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100255,
+      "aula": 6,
+      "tema": "Operações",
+      "fonte_Q": 505,
+      "modelo": "direto"
+    },
+    {
+      "id": 100256,
+      "aula": 6,
+      "tema": "Operações",
+      "fonte_Q": 506,
+      "modelo": "direto"
+    },
+    {
+      "id": 100257,
+      "aula": 6,
+      "tema": "Operações",
+      "fonte_Q": 514,
+      "modelo": "direto"
+    },
+    {
+      "id": 100258,
+      "aula": 6,
+      "tema": "Operações",
+      "fonte_Q": 541,
+      "modelo": "direto"
+    },
+    {
+      "id": 100259,
+      "aula": 6,
+      "tema": "Operações",
+      "fonte_Q": 544,
+      "modelo": "direto"
+    },
+    {
+      "id": 100260,
+      "aula": 6,
+      "tema": "Operações",
+      "fonte_Q": 555,
+      "modelo": "direto"
+    },
+    {
+      "id": 100261,
+      "aula": 6,
+      "tema": "Operações",
+      "fonte_Q": 509,
+      "modelo": "direto"
+    },
+    {
+      "id": 100262,
+      "aula": 6,
+      "tema": "Operações",
+      "fonte_Q": 510,
+      "modelo": "direto"
+    },
+    {
+      "id": 100263,
+      "aula": 6,
+      "tema": "Operações",
+      "fonte_Q": 511,
+      "modelo": "direto"
+    },
+    {
+      "id": 100264,
+      "aula": 6,
+      "tema": "Operações",
+      "fonte_Q": 512,
+      "modelo": "direto"
+    },
+    {
+      "id": 100265,
+      "aula": 6,
+      "tema": "Operações",
+      "fonte_Q": 513,
+      "modelo": "direto"
+    },
+    {
+      "id": 100266,
+      "aula": 6,
+      "tema": "Operações",
+      "fonte_Q": 556,
+      "modelo": "direto"
+    },
+    {
+      "id": 100267,
+      "aula": 6,
+      "tema": "Operações",
+      "fonte_Q": 529,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100268,
+      "aula": 6,
+      "tema": "Operações",
+      "fonte_Q": 530,
+      "modelo": "direto"
+    },
+    {
+      "id": 100269,
+      "aula": 6,
+      "tema": "Operações",
+      "fonte_Q": 559,
+      "modelo": "direto"
+    },
+    {
+      "id": 100270,
+      "aula": 6,
+      "tema": "Operações",
+      "fonte_Q": 560,
+      "modelo": "direto"
+    },
+    {
+      "id": 100271,
+      "aula": 6,
+      "tema": "Classificação",
+      "fonte_Q": 507,
+      "modelo": "direto"
+    },
+    {
+      "id": 100272,
+      "aula": 6,
+      "tema": "Classificação",
+      "fonte_Q": 563,
+      "modelo": "direto"
+    },
+    {
+      "id": 100273,
+      "aula": 6,
+      "tema": "Classificação",
+      "fonte_Q": 564,
+      "modelo": "direto"
+    },
+    {
+      "id": 100274,
+      "aula": 6,
+      "tema": "Classificação",
+      "fonte_Q": 565,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100275,
+      "aula": 6,
+      "tema": "Classificação",
+      "fonte_Q": 566,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100276,
+      "aula": 6,
+      "tema": "Bancos comerciais",
+      "fonte_Q": 508,
+      "modelo": "direto"
+    },
+    {
+      "id": 100277,
+      "aula": 6,
+      "tema": "Bancos comerciais",
+      "fonte_Q": 515,
+      "modelo": "direto"
+    },
+    {
+      "id": 100278,
+      "aula": 6,
+      "tema": "Bancos comerciais",
+      "fonte_Q": 516,
+      "modelo": "direto"
+    },
+    {
+      "id": 100279,
+      "aula": 6,
+      "tema": "Bancos múltiplos",
+      "fonte_Q": 518,
+      "modelo": "direto"
+    },
+    {
+      "id": 100280,
+      "aula": 6,
+      "tema": "Bancos múltiplos",
+      "fonte_Q": 518,
+      "modelo": "direto"
+    },
+    {
+      "id": 100281,
+      "aula": 6,
+      "tema": "Bancos múltiplos",
+      "fonte_Q": 519,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100282,
+      "aula": 6,
+      "tema": "Bancos múltiplos",
+      "fonte_Q": 573,
+      "modelo": "direto"
+    },
+    {
+      "id": 100283,
+      "aula": 6,
+      "tema": "Bancos múltiplos",
+      "fonte_Q": 528,
+      "modelo": "direto"
+    },
+    {
+      "id": 100284,
+      "aula": 6,
+      "tema": "Bancos múltiplos",
+      "fonte_Q": 528,
+      "modelo": "direto"
+    },
+    {
+      "id": 100285,
+      "aula": 6,
+      "tema": "Cooperativas",
+      "fonte_Q": 520,
+      "modelo": "direto"
+    },
+    {
+      "id": 100286,
+      "aula": 6,
+      "tema": "Cooperativas",
+      "fonte_Q": 551,
+      "modelo": "direto"
+    },
+    {
+      "id": 100287,
+      "aula": 6,
+      "tema": "Cooperativas",
+      "fonte_Q": 521,
+      "modelo": "direto"
+    },
+    {
+      "id": 100288,
+      "aula": 6,
+      "tema": "Cooperativas",
+      "fonte_Q": 522,
+      "modelo": "direto"
+    },
+    {
+      "id": 100289,
+      "aula": 6,
+      "tema": "Cooperativas",
+      "fonte_Q": 523,
+      "modelo": "direto"
+    },
+    {
+      "id": 100290,
+      "aula": 6,
+      "tema": "Cooperativas",
+      "fonte_Q": 575,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100291,
+      "aula": 6,
+      "tema": "Cooperativas",
+      "fonte_Q": 576,
+      "modelo": "direto"
+    },
+    {
+      "id": 100292,
+      "aula": 6,
+      "tema": "Cooperativas",
+      "fonte_Q": 580,
+      "modelo": "direto"
+    },
+    {
+      "id": 100293,
+      "aula": 6,
+      "tema": "Cooperativas",
+      "fonte_Q": 587,
+      "modelo": "direto"
+    },
+    {
+      "id": 100294,
+      "aula": 6,
+      "tema": "Cooperativas",
+      "fonte_Q": 588,
+      "modelo": "direto"
+    },
+    {
+      "id": 100295,
+      "aula": 6,
+      "tema": "Cooperativas",
+      "fonte_Q": 589,
+      "modelo": "direto"
+    },
+    {
+      "id": 100296,
+      "aula": 6,
+      "tema": "Cooperativas",
+      "fonte_Q": 590,
+      "modelo": "direto"
+    },
+    {
+      "id": 100297,
+      "aula": 6,
+      "tema": "Banco cooperativo",
+      "fonte_Q": 525,
+      "modelo": "direto"
+    },
+    {
+      "id": 100298,
+      "aula": 6,
+      "tema": "Banco cooperativo",
+      "fonte_Q": 524,
+      "modelo": "direto"
+    },
+    {
+      "id": 100299,
+      "aula": 6,
+      "tema": "Banco cooperativo",
+      "fonte_Q": 526,
+      "modelo": "direto"
+    },
+    {
+      "id": 100300,
+      "aula": 6,
+      "tema": "Caixas econômicas",
+      "fonte_Q": 527,
+      "modelo": "direto"
+    },
+    {
+      "id": 100301,
+      "aula": 7,
+      "tema": "Bancos de investimento",
+      "fonte_Q": 601,
+      "modelo": "direto"
+    },
+    {
+      "id": 100302,
+      "aula": 7,
+      "tema": "Bancos de investimento",
+      "fonte_Q": 601,
+      "modelo": "direto"
+    },
+    {
+      "id": 100303,
+      "aula": 7,
+      "tema": "Bancos de investimento",
+      "fonte_Q": 602,
+      "modelo": "direto"
+    },
+    {
+      "id": 100304,
+      "aula": 7,
+      "tema": "Bancos de investimento",
+      "fonte_Q": 603,
+      "modelo": "direto"
+    },
+    {
+      "id": 100305,
+      "aula": 7,
+      "tema": "Bancos de investimento",
+      "fonte_Q": 605,
+      "modelo": "direto"
+    },
+    {
+      "id": 100306,
+      "aula": 7,
+      "tema": "Bancos de investimento",
+      "fonte_Q": 606,
+      "modelo": "direto"
+    },
+    {
+      "id": 100307,
+      "aula": 7,
+      "tema": "Bancos de desenvolvimento",
+      "fonte_Q": 609,
+      "modelo": "direto"
+    },
+    {
+      "id": 100308,
+      "aula": 7,
+      "tema": "Bancos de desenvolvimento",
+      "fonte_Q": 610,
+      "modelo": "direto"
+    },
+    {
+      "id": 100309,
+      "aula": 7,
+      "tema": "Bancos de desenvolvimento",
+      "fonte_Q": 609,
+      "modelo": "direto"
+    },
+    {
+      "id": 100310,
+      "aula": 7,
+      "tema": "Bancos de câmbio",
+      "fonte_Q": 617,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100311,
+      "aula": 7,
+      "tema": "Bancos de câmbio",
+      "fonte_Q": 618,
+      "modelo": "direto"
+    },
+    {
+      "id": 100312,
+      "aula": 7,
+      "tema": "Agências de fomento",
+      "fonte_Q": 612,
+      "modelo": "direto"
+    },
+    {
+      "id": 100313,
+      "aula": 7,
+      "tema": "Agências de fomento",
+      "fonte_Q": 613,
+      "modelo": "direto"
+    },
+    {
+      "id": 100314,
+      "aula": 7,
+      "tema": "Agências de fomento",
+      "fonte_Q": 614,
+      "modelo": "direto"
+    },
+    {
+      "id": 100315,
+      "aula": 7,
+      "tema": "Agências de fomento",
+      "fonte_Q": 615,
+      "modelo": "direto"
+    },
+    {
+      "id": 100316,
+      "aula": 7,
+      "tema": "SCI",
+      "fonte_Q": 626,
+      "modelo": "direto"
+    },
+    {
+      "id": 100317,
+      "aula": 7,
+      "tema": "SCI",
+      "fonte_Q": 627,
+      "modelo": "direto"
+    },
+    {
+      "id": 100318,
+      "aula": 7,
+      "tema": "Companhias hipotecárias",
+      "fonte_Q": 629,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100319,
+      "aula": 7,
+      "tema": "Companhias hipotecárias",
+      "fonte_Q": 630,
+      "modelo": "direto"
+    },
+    {
+      "id": 100320,
+      "aula": 7,
+      "tema": "Companhias hipotecárias",
+      "fonte_Q": 631,
+      "modelo": "direto"
+    },
+    {
+      "id": 100321,
+      "aula": 7,
+      "tema": "Financeiras (SCFI)",
+      "fonte_Q": 632,
+      "modelo": "direto"
+    },
+    {
+      "id": 100322,
+      "aula": 7,
+      "tema": "Financeiras (SCFI)",
+      "fonte_Q": 633,
+      "modelo": "direto"
+    },
+    {
+      "id": 100323,
+      "aula": 7,
+      "tema": "Financeiras (SCFI)",
+      "fonte_Q": 634,
+      "modelo": "direto"
+    },
+    {
+      "id": 100324,
+      "aula": 7,
+      "tema": "SCMEPP",
+      "fonte_Q": 637,
+      "modelo": "direto"
+    },
+    {
+      "id": 100325,
+      "aula": 7,
+      "tema": "SCMEPP",
+      "fonte_Q": 638,
+      "modelo": "direto"
+    },
+    {
+      "id": 100326,
+      "aula": 7,
+      "tema": "Consórcios",
+      "fonte_Q": 643,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100327,
+      "aula": 7,
+      "tema": "Consórcios",
+      "fonte_Q": 644,
+      "modelo": "direto"
+    },
+    {
+      "id": 100328,
+      "aula": 7,
+      "tema": "Consórcios",
+      "fonte_Q": 645,
+      "modelo": "direto"
+    },
+    {
+      "id": 100329,
+      "aula": 7,
+      "tema": "Consórcios",
+      "fonte_Q": 646,
+      "modelo": "direto"
+    },
+    {
+      "id": 100330,
+      "aula": 7,
+      "tema": "Bolsa e B3",
+      "fonte_Q": 650,
+      "modelo": "direto"
+    },
+    {
+      "id": 100331,
+      "aula": 7,
+      "tema": "Bolsa e B3",
+      "fonte_Q": 651,
+      "modelo": "direto"
+    },
+    {
+      "id": 100332,
+      "aula": 7,
+      "tema": "Bolsa e B3",
+      "fonte_Q": 652,
+      "modelo": "direto"
+    },
+    {
+      "id": 100333,
+      "aula": 7,
+      "tema": "Bolsa e B3",
+      "fonte_Q": 653,
+      "modelo": "direto"
+    },
+    {
+      "id": 100334,
+      "aula": 7,
+      "tema": "Bolsa e B3",
+      "fonte_Q": 654,
+      "modelo": "direto"
+    },
+    {
+      "id": 100335,
+      "aula": 7,
+      "tema": "Bolsa e B3",
+      "fonte_Q": 655,
+      "modelo": "direto"
+    },
+    {
+      "id": 100336,
+      "aula": 7,
+      "tema": "CTVM e DTVM",
+      "fonte_Q": 660,
+      "modelo": "direto"
+    },
+    {
+      "id": 100337,
+      "aula": 7,
+      "tema": "CTVM e DTVM",
+      "fonte_Q": 661,
+      "modelo": "direto"
+    },
+    {
+      "id": 100338,
+      "aula": 7,
+      "tema": "CTVM e DTVM",
+      "fonte_Q": 666,
+      "modelo": "direto"
+    },
+    {
+      "id": 100339,
+      "aula": 7,
+      "tema": "CTVM e DTVM",
+      "fonte_Q": 667,
+      "modelo": "direto"
+    },
+    {
+      "id": 100340,
+      "aula": 7,
+      "tema": "CTVM e DTVM",
+      "fonte_Q": 663,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100341,
+      "aula": 7,
+      "tema": "CTVM e DTVM",
+      "fonte_Q": 665,
+      "modelo": "direto"
+    },
+    {
+      "id": 100342,
+      "aula": 7,
+      "tema": "Capitalização",
+      "fonte_Q": 679,
+      "modelo": "direto"
+    },
+    {
+      "id": 100343,
+      "aula": 7,
+      "tema": "Capitalização",
+      "fonte_Q": 681,
+      "modelo": "direto"
+    },
+    {
+      "id": 100344,
+      "aula": 7,
+      "tema": "Previdência aberta",
+      "fonte_Q": 682,
+      "modelo": "direto"
+    },
+    {
+      "id": 100345,
+      "aula": 7,
+      "tema": "Previdência aberta",
+      "fonte_Q": 683,
+      "modelo": "direto"
+    },
+    {
+      "id": 100346,
+      "aula": 7,
+      "tema": "Previdência fechada",
+      "fonte_Q": 686,
+      "modelo": "direto"
+    },
+    {
+      "id": 100347,
+      "aula": 7,
+      "tema": "Seguradoras",
+      "fonte_Q": 689,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100348,
+      "aula": 7,
+      "tema": "Resseguro e retrocessão",
+      "fonte_Q": 691,
+      "modelo": "direto"
+    },
+    {
+      "id": 100349,
+      "aula": 7,
+      "tema": "Resseguro e retrocessão",
+      "fonte_Q": 692,
+      "modelo": "direto"
+    },
+    {
+      "id": 100350,
+      "aula": 7,
+      "tema": "Corretores de seguros",
+      "fonte_Q": 694,
+      "modelo": "direto"
+    },
+    {
+      "id": 100351,
+      "aula": 8,
+      "tema": "IP: natureza e serviços",
+      "fonte_Q": 701,
+      "modelo": "direto"
+    },
+    {
+      "id": 100352,
+      "aula": 8,
+      "tema": "IP: contas e limites",
+      "fonte_Q": 704,
+      "modelo": "direto"
+    },
+    {
+      "id": 100353,
+      "aula": 8,
+      "tema": "IP: modalidades",
+      "fonte_Q": 702,
+      "modelo": "direto"
+    },
+    {
+      "id": 100354,
+      "aula": 8,
+      "tema": "IP: modalidades",
+      "fonte_Q": 707,
+      "modelo": "direto"
+    },
+    {
+      "id": 100355,
+      "aula": 8,
+      "tema": "IP: modalidades",
+      "fonte_Q": 703,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100356,
+      "aula": 8,
+      "tema": "IP: modalidades",
+      "fonte_Q": 705,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100357,
+      "aula": 8,
+      "tema": "IP: modalidades",
+      "fonte_Q": 705,
+      "modelo": "direto"
+    },
+    {
+      "id": 100358,
+      "aula": 8,
+      "tema": "IP: modalidades",
+      "fonte_Q": 708,
+      "modelo": "direto"
+    },
+    {
+      "id": 100359,
+      "aula": 8,
+      "tema": "IP: contas e limites",
+      "fonte_Q": 709,
+      "modelo": "direto"
+    },
+    {
+      "id": 100360,
+      "aula": 8,
+      "tema": "IP: natureza e serviços",
+      "fonte_Q": 710,
+      "modelo": "direto"
+    },
+    {
+      "id": 100361,
+      "aula": 8,
+      "tema": "IP: modalidades",
+      "fonte_Q": 714,
+      "modelo": "direto"
+    },
+    {
+      "id": 100362,
+      "aula": 8,
+      "tema": "IP: natureza e serviços",
+      "fonte_Q": 711,
+      "modelo": "direto"
+    },
+    {
+      "id": 100363,
+      "aula": 8,
+      "tema": "Fintechs: modelos de crédito",
+      "fonte_Q": 726,
+      "modelo": "direto"
+    },
+    {
+      "id": 100364,
+      "aula": 8,
+      "tema": "Fintechs: SCD",
+      "fonte_Q": 727,
+      "modelo": "direto"
+    },
+    {
+      "id": 100365,
+      "aula": 8,
+      "tema": "Fintechs: SCD",
+      "fonte_Q": 732,
+      "modelo": "direto"
+    },
+    {
+      "id": 100366,
+      "aula": 8,
+      "tema": "Fintechs: SEP",
+      "fonte_Q": 728,
+      "modelo": "direto"
+    },
+    {
+      "id": 100367,
+      "aula": 8,
+      "tema": "Fintechs: SEP",
+      "fonte_Q": 734,
+      "modelo": "direto"
+    },
+    {
+      "id": 100368,
+      "aula": 8,
+      "tema": "Fintechs: autorização e SCR",
+      "fonte_Q": 729,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100369,
+      "aula": 8,
+      "tema": "Fintechs: autorização e SCR",
+      "fonte_Q": 730,
+      "modelo": "direto"
+    },
+    {
+      "id": 100370,
+      "aula": 8,
+      "tema": "Fintechs: SCD",
+      "fonte_Q": 731,
+      "modelo": "direto"
+    },
+    {
+      "id": 100371,
+      "aula": 8,
+      "tema": "Fintechs: modelos de crédito",
+      "fonte_Q": 738,
+      "modelo": "direto"
+    },
+    {
+      "id": 100372,
+      "aula": 8,
+      "tema": "Fintechs: modelos de crédito",
+      "fonte_Q": 738,
+      "modelo": "direto"
+    },
+    {
+      "id": 100373,
+      "aula": 8,
+      "tema": "Fintechs: serviços adicionais",
+      "fonte_Q": 736,
+      "modelo": "direto"
+    },
+    {
+      "id": 100374,
+      "aula": 8,
+      "tema": "Fintechs: autorização e SCR",
+      "fonte_Q": 737,
+      "modelo": "direto"
+    },
+    {
+      "id": 100375,
+      "aula": 8,
+      "tema": "Fintechs: modelos de crédito",
+      "fonte_Q": 740,
+      "modelo": "direto"
+    },
+    {
+      "id": 100376,
+      "aula": 8,
+      "tema": "SPB: visão e riscos",
+      "fonte_Q": 751,
+      "modelo": "direto"
+    },
+    {
+      "id": 100377,
+      "aula": 8,
+      "tema": "SPB: visão e riscos",
+      "fonte_Q": 752,
+      "modelo": "direto"
+    },
+    {
+      "id": 100378,
+      "aula": 8,
+      "tema": "SPB: visão e riscos",
+      "fonte_Q": 761,
+      "modelo": "direto"
+    },
+    {
+      "id": 100379,
+      "aula": 8,
+      "tema": "SPB: STR e reservas",
+      "fonte_Q": 753,
+      "modelo": "direto"
+    },
+    {
+      "id": 100380,
+      "aula": 8,
+      "tema": "SPB: STR e reservas",
+      "fonte_Q": 765,
+      "modelo": "direto"
+    },
+    {
+      "id": 100381,
+      "aula": 8,
+      "tema": "SPB: STR e reservas",
+      "fonte_Q": 765,
+      "modelo": "direto"
+    },
+    {
+      "id": 100382,
+      "aula": 8,
+      "tema": "SPB: STR e reservas",
+      "fonte_Q": 766,
+      "modelo": "direto"
+    },
+    {
+      "id": 100383,
+      "aula": 8,
+      "tema": "SPB: STR e reservas",
+      "fonte_Q": 767,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100384,
+      "aula": 8,
+      "tema": "SPB: SPI e conta PI",
+      "fonte_Q": 754,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100385,
+      "aula": 8,
+      "tema": "SPB: arranjos e papéis",
+      "fonte_Q": 764,
+      "modelo": "direto"
+    },
+    {
+      "id": 100386,
+      "aula": 8,
+      "tema": "SPB: SPI e conta PI",
+      "fonte_Q": 759,
+      "modelo": "direto"
+    },
+    {
+      "id": 100387,
+      "aula": 8,
+      "tema": "SPB: SPI e conta PI",
+      "fonte_Q": 763,
+      "modelo": "direto"
+    },
+    {
+      "id": 100388,
+      "aula": 8,
+      "tema": "SPB: SPI e conta PI",
+      "fonte_Q": 762,
+      "modelo": "direto"
+    },
+    {
+      "id": 100389,
+      "aula": 8,
+      "tema": "SPB: SPI e conta PI",
+      "fonte_Q": 783,
+      "modelo": "direto"
+    },
+    {
+      "id": 100390,
+      "aula": 8,
+      "tema": "SPB: sistemas e títulos",
+      "fonte_Q": 755,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100391,
+      "aula": 8,
+      "tema": "SPB: sistemas e títulos",
+      "fonte_Q": 760,
+      "modelo": "direto"
+    },
+    {
+      "id": 100392,
+      "aula": 8,
+      "tema": "SPB: sistemas e títulos",
+      "fonte_Q": 771,
+      "modelo": "direto"
+    },
+    {
+      "id": 100393,
+      "aula": 8,
+      "tema": "SPB: sistemas e títulos",
+      "fonte_Q": 772,
+      "modelo": "direto"
+    },
+    {
+      "id": 100394,
+      "aula": 8,
+      "tema": "SPB: infraestruturas",
+      "fonte_Q": 756,
+      "modelo": "direto"
+    },
+    {
+      "id": 100395,
+      "aula": 8,
+      "tema": "SPB: infraestruturas",
+      "fonte_Q": 768,
+      "modelo": "direto"
+    },
+    {
+      "id": 100396,
+      "aula": 8,
+      "tema": "SPB: infraestruturas",
+      "fonte_Q": 769,
+      "modelo": "direto"
+    },
+    {
+      "id": 100397,
+      "aula": 8,
+      "tema": "SPB: arranjos e papéis",
+      "fonte_Q": 757,
+      "modelo": "direto"
+    },
+    {
+      "id": 100398,
+      "aula": 8,
+      "tema": "SPB: arranjos e papéis",
+      "fonte_Q": 758,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100399,
+      "aula": 8,
+      "tema": "SPB: arranjos e papéis",
+      "fonte_Q": 773,
+      "modelo": "direto"
+    },
+    {
+      "id": 100400,
+      "aula": 8,
+      "tema": "SPB: arranjos e papéis",
+      "fonte_Q": 774,
+      "modelo": "direto"
+    },
+    {
+      "id": 100401,
+      "aula": 9,
+      "tema": "ANBIMA: natureza e missão",
+      "fonte_Q": 801,
+      "modelo": "direto"
+    },
+    {
+      "id": 100402,
+      "aula": 9,
+      "tema": "ANBIMA: natureza e missão",
+      "fonte_Q": 818,
+      "modelo": "direto"
+    },
+    {
+      "id": 100403,
+      "aula": 9,
+      "tema": "ANBIMA: compromissos",
+      "fonte_Q": 803,
+      "modelo": "direto"
+    },
+    {
+      "id": 100404,
+      "aula": 9,
+      "tema": "ANBIMA: compromissos",
+      "fonte_Q": 804,
+      "modelo": "direto"
+    },
+    {
+      "id": 100405,
+      "aula": 9,
+      "tema": "ANBIMA: compromissos",
+      "fonte_Q": 805,
+      "modelo": "direto"
+    },
+    {
+      "id": 100406,
+      "aula": 9,
+      "tema": "ANBIMA: códigos e supervisão",
+      "fonte_Q": 822,
+      "modelo": "direto"
+    },
+    {
+      "id": 100407,
+      "aula": 9,
+      "tema": "ANBIMA: hierarquia regulatória",
+      "fonte_Q": 802,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100408,
+      "aula": 9,
+      "tema": "ANBIMA: hierarquia regulatória",
+      "fonte_Q": 811,
+      "modelo": "direto"
+    },
+    {
+      "id": 100409,
+      "aula": 9,
+      "tema": "ANBIMA: códigos e supervisão",
+      "fonte_Q": 806,
+      "modelo": "direto"
+    },
+    {
+      "id": 100410,
+      "aula": 9,
+      "tema": "ANBIMA: adesão e participantes",
+      "fonte_Q": 807,
+      "modelo": "direto"
+    },
+    {
+      "id": 100411,
+      "aula": 9,
+      "tema": "ANBIMA: adesão e participantes",
+      "fonte_Q": 838,
+      "modelo": "direto"
+    },
+    {
+      "id": 100412,
+      "aula": 9,
+      "tema": "ANBIMA: adesão e participantes",
+      "fonte_Q": 848,
+      "modelo": "direto"
+    },
+    {
+      "id": 100413,
+      "aula": 9,
+      "tema": "ANBIMA: fontes de autorregulação",
+      "fonte_Q": 808,
+      "modelo": "direto"
+    },
+    {
+      "id": 100414,
+      "aula": 9,
+      "tema": "ANBIMA: fontes de autorregulação",
+      "fonte_Q": 809,
+      "modelo": "direto"
+    },
+    {
+      "id": 100415,
+      "aula": 9,
+      "tema": "ANBIMA: fontes de autorregulação",
+      "fonte_Q": 821,
+      "modelo": "direto"
+    },
+    {
+      "id": 100416,
+      "aula": 9,
+      "tema": "ANBIMA: códigos e supervisão",
+      "fonte_Q": 815,
+      "modelo": "direto"
+    },
+    {
+      "id": 100417,
+      "aula": 9,
+      "tema": "ANBIMA: códigos e supervisão",
+      "fonte_Q": 816,
+      "modelo": "direto"
+    },
+    {
+      "id": 100418,
+      "aula": 9,
+      "tema": "ANBIMA: códigos e supervisão",
+      "fonte_Q": 810,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100419,
+      "aula": 9,
+      "tema": "ANBIMA: códigos e supervisão",
+      "fonte_Q": 828,
+      "modelo": "direto"
+    },
+    {
+      "id": 100420,
+      "aula": 9,
+      "tema": "ANBIMA: natureza e missão",
+      "fonte_Q": 839,
+      "modelo": "direto"
+    },
+    {
+      "id": 100421,
+      "aula": 9,
+      "tema": "ANBIMA: comparações institucionais",
+      "fonte_Q": 825,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100422,
+      "aula": 9,
+      "tema": "ANBIMA: comparações institucionais",
+      "fonte_Q": 826,
+      "modelo": "direto"
+    },
+    {
+      "id": 100423,
+      "aula": 9,
+      "tema": "ANBIMA: comparações institucionais",
+      "fonte_Q": 827,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100424,
+      "aula": 9,
+      "tema": "ANBIMA: comparações institucionais",
+      "fonte_Q": 850,
+      "modelo": "direto"
+    },
+    {
+      "id": 100425,
+      "aula": 9,
+      "tema": "ANBIMA: comparações institucionais",
+      "fonte_Q": 836,
+      "modelo": "direto"
+    },
+    {
+      "id": 100426,
+      "aula": 9,
+      "tema": "Garantias: natureza e finalidade",
+      "fonte_Q": 851,
+      "modelo": "direto"
+    },
+    {
+      "id": 100427,
+      "aula": 9,
+      "tema": "Garantias: natureza e finalidade",
+      "fonte_Q": 869,
+      "modelo": "direto"
+    },
+    {
+      "id": 100428,
+      "aula": 9,
+      "tema": "Garantias: limites ordinários",
+      "fonte_Q": 852,
+      "modelo": "direto"
+    },
+    {
+      "id": 100429,
+      "aula": 9,
+      "tema": "Garantias: limites ordinários",
+      "fonte_Q": 853,
+      "modelo": "direto"
+    },
+    {
+      "id": 100430,
+      "aula": 9,
+      "tema": "Garantias: limites ordinários",
+      "fonte_Q": 873,
+      "modelo": "direto"
+    },
+    {
+      "id": 100431,
+      "aula": 9,
+      "tema": "Garantias: limites ordinários",
+      "fonte_Q": 859,
+      "modelo": "direto"
+    },
+    {
+      "id": 100432,
+      "aula": 9,
+      "tema": "Garantias: contas conjuntas",
+      "fonte_Q": 861,
+      "modelo": "direto"
+    },
+    {
+      "id": 100433,
+      "aula": 9,
+      "tema": "Garantias: produtos cobertos e exclusões",
+      "fonte_Q": 863,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100434,
+      "aula": 9,
+      "tema": "Garantias: produtos cobertos e exclusões",
+      "fonte_Q": 854,
+      "modelo": "direto"
+    },
+    {
+      "id": 100435,
+      "aula": 9,
+      "tema": "Garantias: produtos cobertos e exclusões",
+      "fonte_Q": 854,
+      "modelo": "direto"
+    },
+    {
+      "id": 100436,
+      "aula": 9,
+      "tema": "Garantias: produtos cobertos e exclusões",
+      "fonte_Q": 855,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100437,
+      "aula": 9,
+      "tema": "Garantias: DPGE e garantia especial",
+      "fonte_Q": 856,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100438,
+      "aula": 9,
+      "tema": "Garantias: DPGE e garantia especial",
+      "fonte_Q": 888,
+      "modelo": "direto"
+    },
+    {
+      "id": 100439,
+      "aula": 9,
+      "tema": "Garantias: produtos cobertos e exclusões",
+      "fonte_Q": 872,
+      "modelo": "direto"
+    },
+    {
+      "id": 100440,
+      "aula": 9,
+      "tema": "Garantias: natureza e finalidade",
+      "fonte_Q": 870,
+      "modelo": "direto"
+    },
+    {
+      "id": 100441,
+      "aula": 9,
+      "tema": "Garantias: natureza e finalidade",
+      "fonte_Q": 858,
+      "modelo": "direto"
+    },
+    {
+      "id": 100442,
+      "aula": 9,
+      "tema": "Garantias: natureza e finalidade",
+      "fonte_Q": 882,
+      "modelo": "direto"
+    },
+    {
+      "id": 100443,
+      "aula": 9,
+      "tema": "Garantias: FGCoop",
+      "fonte_Q": 857,
+      "modelo": "direto"
+    },
+    {
+      "id": 100444,
+      "aula": 9,
+      "tema": "Garantias: FGCoop",
+      "fonte_Q": 874,
+      "modelo": "direto"
+    },
+    {
+      "id": 100445,
+      "aula": 9,
+      "tema": "Garantias: FGCoop",
+      "fonte_Q": 871,
+      "modelo": "direto"
+    },
+    {
+      "id": 100446,
+      "aula": 9,
+      "tema": "Liberdade: objetivos e fundamentos",
+      "fonte_Q": 891,
+      "modelo": "direto"
+    },
+    {
+      "id": 100447,
+      "aula": 9,
+      "tema": "Liberdade: objetivos e fundamentos",
+      "fonte_Q": 892,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100448,
+      "aula": 9,
+      "tema": "Liberdade: baixo risco e limites",
+      "fonte_Q": 893,
+      "modelo": "direto"
+    },
+    {
+      "id": 100449,
+      "aula": 9,
+      "tema": "Liberdade: segurança jurídica e contratos",
+      "fonte_Q": 895,
+      "modelo": "direto"
+    },
+    {
+      "id": 100450,
+      "aula": 9,
+      "tema": "Liberdade: documentos digitais",
+      "fonte_Q": 896,
+      "modelo": "direto"
+    }
+  ],
+  "escopo": "450 itens conceituais, 50 por aula, baseados no conteúdo já revisado de Q e nos materiais existentes. Sem certificação normativa independente."
+}
