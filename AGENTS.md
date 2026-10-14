@@ -14,6 +14,16 @@ estudo diário, prática por aula, revisão de erros e futuras aulas ou conteúd
   original das alternativas `q[4]`, `q[5]`, `q[6]`, `q[7]`.
 - A primeira justifica a resposta correta. Cada outra explica o erro específico
   daquela opção; não substitua por quatro cópias da justificativa geral.
+- Confira a relação pergunta–resposta: se o enunciado pede causa, classificação,
+  sequência ou efeito, as quatro opções devem responder a esse mesmo pedido.
+  Não aceite dois distratores que também descrevam corretamente o caso.
+- Feedback deve ensinar o motivo: indique o papel real do órgão citado, a regra,
+  o mecanismo ou a diferença confundida. Negar a opção, repetir o gabarito ou
+  dizer que um valor “não corresponde” não basta. Explique também a correta.
+- Em números, diferencie teto de alíquota, total de membros de diretores, prazo
+  inicial de recondução e mínimo de valor/data posterior também permitido.
+  Em combinações, justifique cada item falso incluído e verdadeiro omitido;
+  na correta, apresente a razão de todas as afirmações.
 - Em perguntas que pedem INCORRETA, NÃO, exceções ou combinações de afirmações,
   explique por que a opção atende ou não ao enunciado. Não chame uma afirmação
   verdadeira de falsa só porque ela não é a resposta pedida.
@@ -40,6 +50,7 @@ python3 tests/validate_bank.py
 python3 tests/audit_alternatives.py --check
 python3 tests/test_alternative_quality.py
 python3 tests/test_question_design.py
+python3 tests/test_question_feedback.py
 python3 tests/smoke.py
 ```
 

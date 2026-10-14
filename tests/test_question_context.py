@@ -5,20 +5,21 @@ import re
 from pathlib import Path
 import unittest
 from validate_bank import load_questions
-from question_revision import FIELD_INDEX,digest,questions_before_context_revision
+from question_revision import FIELD_INDEX,digest,questions_before_context_revision,questions_before_feedback_revision
 
 ROOT=Path(__file__).resolve().parents[1]
 EXTERNAL=re.compile(r'\baula\b|\bslides?\b|\btranscri[çc][ãa]o\b|professor (?:disse|recomenda|ensinou)|(?:no|do|conforme o|segundo o) material\b|conteúdo enviado|quadro da aula|regra[s]? estudad[ao]s?',re.I)
 
 class QuestionContextTests(unittest.TestCase):
     def setUp(self):
-        self.current=load_questions()
-        self.before=questions_before_context_revision(self.current)
+        self.latest=load_questions()
+        self.current=questions_before_feedback_revision(self.latest)
+        self.before=questions_before_context_revision(self.latest)
         self.report=json.loads((ROOT/'docs/revisao-enunciados-autossuficientes.json').read_text())
         self.ledger=self.report['questoes']
 
     def test_all_modes_have_independent_stems_options_hints_and_explanations(self):
-        for id,q in enumerate(self.current,1):
+        for id,q in enumerate(self.latest,1):
             for text in q[3:9]+[q[10]]+q[11]:
                 self.assertNotRegex(text,EXTERNAL,f'Questão {id}')
         # Materiais de escritório são uma situação concreta, não remissão ao curso.

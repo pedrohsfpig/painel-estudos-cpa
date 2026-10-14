@@ -12,13 +12,13 @@ FIELD_INDEX={'enunciado':3,'alternativa correta':4,'alternativa incorreta 1':5,
 def digest(value):
     return hashlib.sha256(json.dumps(value,ensure_ascii=False,separators=(',',':')).encode()).hexdigest()
 
-def questions_before_context_revision(current):
-    """Validar o banco atual e reconstruir a versão anterior pelos campos editados.
+def _restore(current,filename):
+    """Validar uma revisão e reconstruir a versão anterior pelos campos editados.
 
     Não atualiza relatórios históricos nem aceita conteúdo diferente do manifesto.
     Novas questões após os IDs cobertos pelo manifesto continuam disponíveis.
     """
-    report=json.loads((ROOT/'docs/revisao-enunciados-autossuficientes.json').read_text())
+    report=json.loads((ROOT/'docs'/filename).read_text())
     restored=copy.deepcopy(current)
     rows=report['questoes']
     assert [r['id'] for r in rows]==list(range(1,len(rows)+1))
@@ -32,3 +32,12 @@ def questions_before_context_revision(current):
             restored[id-1][index]=change['antes']
         assert digest(restored[id-1])==row['hash_antes'],f'Proveniência anterior divergente: {id}'
     return restored
+
+def questions_before_feedback_revision(current):
+    return _restore(current,'revisao-alinhamento-feedbacks.json')
+
+def questions_before_context_revision(current):
+    # Cada revisão mantém seus hashes; não reescrever evidência histórica para
+    # aceitar alterações posteriores. Primeiro desfazer a revisão mais recente.
+    context=questions_before_feedback_revision(current)
+    return _restore(context,'revisao-enunciados-autossuficientes.json')

@@ -2092,5 +2092,32 @@ class PainelCPA(unittest.TestCase):
         self.assertEqual(self.page.evaluate('H.slice(0,2)'),history)
 
 
+    def test_76_feedback_explains_selected_original_option_after_shuffle(self):
+        self.page.evaluate("H=[[1,1,1700000000000,0],[836,0,1700000000001,1]];save()")
+        history=self.page.evaluate('H')
+        for theme in ['light','dark']:
+            self.page.evaluate('theme=>document.documentElement.dataset.theme=theme',theme)
+            self.page.evaluate("begin([828,836,829,742,261],'e')")
+            for index,id in enumerate([828,836,829,742,261]):
+                question=self.page.evaluate('id=>Q[id-1]',id)
+                expected=question[5] if id==836 else question[4]
+                self.page.locator('button.o').filter(has_text=expected).click()
+                for row in self.page.locator('.fb-option').all():
+                    original=int(row.get_attribute('data-option-index'))
+                    self.assertEqual(row.locator('p').inner_text(),question[11][original])
+                if id==836:
+                    row=self.page.locator('.fb-option[data-option-index="1"]')
+                    self.assertIn('Sua resposta',row.inner_text())
+                    self.assertIn('APIMEC',row.inner_text())
+                    self.assertIn('avaliação técnica',row.inner_text())
+                    self.page.screenshot(path=f'/tmp/cpa-feedback836-{theme}.png',full_page=True)
+                self.assertTrue(self.page.evaluate('document.documentElement.scrollWidth<=innerWidth'))
+                self.click('Próxima' if index<4 else 'Ver resultado')
+            self.assertEqual(self.page.locator('.session-result').count(),1)
+            self.page.evaluate("begin([836],'s')")
+            self.answer()
+            self.assertEqual(self.page.locator('.feedback').count(),0)
+        self.assertEqual(self.page.evaluate('H.slice(0,2)'),history)
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
