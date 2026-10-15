@@ -33,36 +33,38 @@ def _restore(current,filename):
         assert digest(restored[id-1])==row['hash_antes'],f'Proveniência anterior divergente: {id}'
     return restored
 
-def questions_before_numeric_revision(current):
-    return _restore(current,'revisao-feedbacks-numericos.json')
-
-def bate_pronto_before_numeric_revision(current):
-    report=json.loads((ROOT/'docs/revisao-feedbacks-numericos.json').read_text())
+def _restore_bp(current,filename):
+    report=json.loads((ROOT/'docs'/filename).read_text())
     restored=copy.deepcopy(current)
-    for row in report['bate_pronto']:
+    rows=report['bate_pronto']
+    assert [r['id'] for r in rows]==list(range(100001,100001+len(rows)))
+    assert len(current)>=len(rows)
+    for row in rows:
         index=row['id']-100001
-        assert digest(current[index])==row['hash_depois'],f'Bate-pronto fora do manifesto numérico: {row["id"]}'
+        assert digest(current[index])==row['hash_depois'],f'Bate-pronto fora de {filename}: {row["id"]}'
         for field,change in row['campos'].items():
             assert current[index][int(field)]==change['depois']
             restored[index][int(field)]=change['antes']
         assert digest(restored[index])==row['hash_antes']
     return restored
+
+def questions_before_clue_revision(current):
+    return _restore(current,'revisao-pistas-siglas.json')
+
+def bate_pronto_before_clue_revision(current):
+    return _restore_bp(current,'revisao-pistas-siglas.json')
+
+def questions_before_numeric_revision(current):
+    return _restore(questions_before_clue_revision(current),'revisao-feedbacks-numericos.json')
+
+def bate_pronto_before_numeric_revision(current):
+    return _restore_bp(bate_pronto_before_clue_revision(current),'revisao-feedbacks-numericos.json')
 
 def questions_before_grammar_revision(current):
     return _restore(questions_before_numeric_revision(current),'revisao-pistas-gramaticais.json')
 
 def bate_pronto_before_grammar_revision(current):
-    current=bate_pronto_before_numeric_revision(current)
-    report=json.loads((ROOT/'docs/revisao-pistas-gramaticais.json').read_text())
-    restored=copy.deepcopy(current)
-    for row in report['bate_pronto']:
-        index=row['id']-100001
-        assert digest(current[index])==row['hash_depois'],f'Bate-pronto fora do manifesto: {row["id"]}'
-        for field,change in row['campos'].items():
-            assert current[index][int(field)]==change['depois']
-            restored[index][int(field)]=change['antes']
-        assert digest(restored[index])==row['hash_antes']
-    return restored
+    return _restore_bp(bate_pronto_before_numeric_revision(current),'revisao-pistas-gramaticais.json')
 
 def questions_before_teaching_revision(current):
     previous=questions_before_grammar_revision(current)

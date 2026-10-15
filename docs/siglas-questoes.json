@@ -1,5 +1,5 @@
 {
-  "regra": "Primeira ocorrência no enunciado; alternativas só quando o conceito não apareceu no enunciado. Significados cobrados diretamente são explicados após responder.",
+  "regra": "Primeira ocorrência no enunciado; alternativas só quando o conceito não apareceu no enunciado. Se o nome por extenso revelar a informação cobrada, mostrar as expansões somente após responder.",
   "nao_sao_siglas": [
     "Pix",
     "I",

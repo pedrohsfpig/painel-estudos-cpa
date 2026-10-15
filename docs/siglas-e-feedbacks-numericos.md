@@ -11,7 +11,8 @@ Bate-pronto e revisões. `questionDisplay` formata os textos para exibição:
   Definições já existentes são reconhecidas, inclusive no formato Nome (SIGLA).
 - Perguntas que cobram o significado da sigla, ou a associação inversa, mostram
   as expansões somente depois da resposta. Preferência confirmada pelo usuário.
-  Há dois casos atuais: Q753 e BP100379. No simulado, a consulta fica na revisão
+  A primeira entrega incluía Q753 e BP100379; essas perguntas foram depois
+  reformuladas em `docs/revisao-pistas-siglas.md`. No simulado, a consulta fica na revisão
   após finalizar; nenhum feedback imediato foi acrescentado.
 - Pix é marca, não sigla; romanos, valores e letras de alternativas não recebem
   definições. TR tem significado conforme o contexto da aula, sem substituir
@@ -21,7 +22,7 @@ Bate-pronto e revisões. `questionDisplay` formata os textos para exibição:
   novas siglas devem ser cadastradas no glossário, nunca expandidas por adivinhação.
 
 O glossário está em `docs/siglas-questoes.json`, espelhado em
-`QUESTION_ACRONYMS`. A apresentação mudou em 856 questões dos dois bancos;
+`QUESTION_ACRONYMS`. Na primeira entrega, a apresentação mudou em 856 questões dos dois bancos;
 1.350 registros passaram pela verificação de renderização. Nomes por extenso
 podem tornar algumas alternativas mais longas; não se alteram nomes oficiais
 nem se preenchem opções artificialmente para compensar esse efeito.

@@ -765,3 +765,22 @@ repetir um valor por extenso não substituem explicar a garantia, o objeto, a ba
 o teto ou o regime. Não acrescente parágrafo de outro assunto para dar tamanho.
 O manifesto `docs/revisao-feedbacks-numericos.json` estende a cadeia editorial;
 execute também `python3 tests/test_acronyms_and_numeric_feedback.py`.
+
+## Não testar apenas o encaixe das iniciais
+
+Não crie perguntas cujo acerto dependa apenas de escolher o nome por extenso cujas
+iniciais combinam com a sigla do enunciado. Exemplo proibido: “RDC é:” com opções
+“Recibo de Depósito Cooperativo” e “Cota de fundo de previdência”. Reescreva para
+avaliar característica, limite, funcionamento ou distinção do conteúdo, preservando
+a objetividade do Bate-pronto. Adiar a expansão não conserta uma autoria assim.
+
+Confira a pergunta renderizada COM as expansões: o nome oficial pode conter a
+função, o segmento ou o regime solicitado. Nesses casos, registre o ID em
+`QUESTION_ACRONYM_CLUES` e no relatório editorial e mostre os nomes somente após
+responder. Trate todas as siglas daquela questão igualmente. Preserve nomes antes
+da resposta quando eles não resolvem o que se pergunta. Não use similaridade de
+palavras isoladas como certificação de qualidade ou para reescrever itens bons.
+
+A regra se aplica a todos os modos e futuras aulas. Execute
+`python3 tests/test_acronym_clues.py` e as regressões gerais. O manifesto
+`docs/revisao-pistas-siglas.json` estende a cadeia anterior, sem alterar seus hashes.

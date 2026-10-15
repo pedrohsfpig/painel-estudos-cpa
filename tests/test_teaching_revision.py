@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 import unittest
 from validate_bank import load_questions
-from question_revision import digest,questions_before_teaching_revision,questions_before_grammar_revision,bate_pronto_before_grammar_revision
+from question_revision import digest,questions_before_teaching_revision,questions_before_grammar_revision,bate_pronto_before_grammar_revision,questions_before_clue_revision
 import smoke as harness
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -34,7 +34,7 @@ class TeachingRevision(unittest.TestCase):
         self.assertEqual(counts['bate_pronto_feedbacks_alterados'],sum(a[j]!=b[j] for a,b in zip(previous,bp) for j in [5,6]))
 
     def test_editorial_changes_preserve_pools_answers_and_ids(self):
-        latest=load_questions();before=questions_before_teaching_revision(latest)
+        live=load_questions();latest=questions_before_clue_revision(live);before=questions_before_teaching_revision(live)
         for a,b in zip(before,latest):
             for i in [0,1,2,4,5,6,7,9,10]:self.assertEqual(a[i],b[i])
         self.assertEqual(Counter((r[0],r[2],r[9]) for r in before),Counter((r[0],r[2],r[9]) for r in latest))

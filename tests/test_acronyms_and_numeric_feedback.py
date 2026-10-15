@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 import unittest
 from validate_bank import load_questions
-from question_revision import digest,questions_before_numeric_revision,bate_pronto_before_numeric_revision
+from question_revision import digest,questions_before_numeric_revision,bate_pronto_before_numeric_revision,questions_before_clue_revision,bate_pronto_before_clue_revision
 import smoke as harness
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -12,8 +12,8 @@ def bp_bank():return json.JSONDecoder().raw_decode((ROOT/'index.html').read_text
 
 class NumericFeedback(unittest.TestCase):
     def test_manifest_preserves_answers_and_prior_revision(self):
-        q=load_questions();before=questions_before_numeric_revision(q)
-        bp=bp_bank();previous=bate_pronto_before_numeric_revision(bp)
+        live=load_questions();q=questions_before_clue_revision(live);before=questions_before_numeric_revision(live)
+        live_bp=bp_bank();bp=bate_pronto_before_clue_revision(live_bp);previous=bate_pronto_before_numeric_revision(live_bp)
         c=json.loads((ROOT/'docs/revisao-feedbacks-numericos.json').read_text())['contagens']
         self.assertEqual(c['questoes_alteradas'],sum(a!=b for a,b in zip(q,before)))
         self.assertEqual(c['feedbacks_principais_alterados'],sum(x!=y for a,b in zip(q,before) for x,y in zip(a[11],b[11])))
@@ -21,7 +21,7 @@ class NumericFeedback(unittest.TestCase):
         self.assertEqual(c['feedbacks_bate_pronto_alterados'],sum(a[i]!=b[i] for a,b in zip(bp,previous) for i in [5,6]))
         for a,b in zip(q,before):self.assertEqual(a[:8]+a[9:11],b[:8]+b[9:11])
         for a,b in zip(bp,previous):self.assertEqual(a[:5]+a[7:],b[:5]+b[7:])
-        bad=copy.deepcopy(q);bad[887][11][0]='Só um número.'
+        bad=copy.deepcopy(live);bad[887][11][0]='Só um número.'
         with self.assertRaises(AssertionError):questions_before_numeric_revision(bad)
 
     def test_dpge_teaches_guarantee_and_no_longer_compares_units(self):
@@ -73,11 +73,12 @@ class AcronymPresentation(unittest.TestCase):
         self.assertEqual(d['options'][3],'CVM (Comissão de Valores Mobiliários) (poder executivo)')
 
     def test_meaning_questions_defer_only_until_answer_and_future_inverse(self):
-        for id in [753,100379]:
-            before=self.page.evaluate('id=>questionDisplay(questionById(id))',id)
-            after=self.page.evaluate('id=>questionDisplay(questionById(id),true)',id)
-            self.assertNotIn('(Sistema de Transferência de Reservas)',before['stem'])
-            self.assertIn('STR (Sistema de Transferência de Reservas)',after['stem'])
+        for stem in ['Qual sistema é identificado pela sigla STR?', 'STR significa:', 'RDC é:']:
+            correct='Recibo de Depósito Cooperativo' if 'RDC' in stem else 'Sistema de Transferência de Reservas'
+            before=self.display(stem,[correct,'Outra definição','Opção 3','Opção 4'])
+            after=self.display(stem,[correct,'Outra definição','Opção 3','Opção 4'],True)
+            self.assertNotIn('('+correct+')',before['stem'])
+            self.assertIn('('+correct+')',after['stem'])
         d=self.display('Qual sigla identifica o Sistema de Transferência de Reservas?',['STR','SPI','SCR','SPB'])
         self.assertEqual(d['options'],['STR','SPI','SCR','SPB'])
         d=self.display('Qual sigla identifica o Sistema de Transferência de Reservas?',['STR','SPI','SCR','SPB'],True)
@@ -108,10 +109,10 @@ class AcronymPresentation(unittest.TestCase):
           return {total:bank.length,changed,deferred,preserved:before===JSON.stringify([Q,BP])};
         }''')
         self.assertEqual(result['total'],1350);self.assertGreater(result['changed'],500)
-        self.assertEqual(result['deferred'],[753,100379]);self.assertTrue(result['preserved'])
+        self.assertEqual(result['deferred'],self.page.evaluate('QUESTION_ACRONYM_CLUES'));self.assertTrue(result['preserved'])
 
     def test_every_mode_history_and_review_use_original_option_identity(self):
-        for mode,id in [('e',701),('h',888),('b',100438),('s',753)]:
+        for mode,id in [('e',701),('h',888),('b',100438),('s',754)]:
             self.page.evaluate('x=>begin([x.id],x.mode)',dict(id=id,mode=mode))
             if mode=='s':self.assertNotIn('(Sistema de Transferência de Reservas)',self.page.locator('.en').inner_text())
             else:self.assertTrue(self.page.locator('.en .acronym-expansion').count()>0)
@@ -123,7 +124,9 @@ class AcronymPresentation(unittest.TestCase):
                     index=int(row.get_attribute('data-option-index'))
                     self.assertEqual(row.locator('p').inner_text(),self.page.evaluate('x=>questionById(x.id)[11][x.index]',dict(id=id,index=index)))
                 self.click('Ver resultado')
-            if mode=='s':self.assertIn('(Sistema de Transferência de Reservas)',self.page.locator('#app').inner_text())
+            if mode=='s':
+                self.page.locator('details.rv').evaluate('(el)=>el.open=true')
+                self.assertIn('(Sistema de Pagamentos Instantâneos)',self.page.locator('#app').inner_text())
             self.assertEqual(self.page.evaluate('qz.rev[0][2]'),original)
             self.assertEqual(self.page.evaluate('H.at(-1)[0]'),id)
 
