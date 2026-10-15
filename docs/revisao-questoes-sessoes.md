@@ -95,9 +95,12 @@ O resultado agora mostra:
 8. Revisão com a escolha e a resposta correta. Nos simulados, somente a
    explicação geral; nos outros modos, os quatro feedbacks correspondentes.
 
-`sessionAnalysis` usa `qz.rev`, sem contaminar a análise com `H`. Consultar uma
-aula mantém o resultado acessível por Praticar. Uma nova prática não apaga o
-histórico. O cronômetro para ao registrar a última resposta, antes da leitura
+`sessionAnalysis` usa `qz.rev`, sem contaminar a análise com `H`. Ao sair do
+resultado para outra aba, inclusive pelo atalho de conteúdo, a sessão concluída
+é dispensada: voltar a Praticar abre sua configuração inicial. Histórico,
+preferências e resultados diários salvos são preservados. Sessões em andamento
+continuam disponíveis ao navegar. Uma nova prática não apaga o histórico.
+O cronômetro para ao registrar a última resposta, antes da leitura
 de seu feedback. Ao chegar ao resultado pela primeira vez, a página volta ao topo.
 
 O painel indica limite de amostra; tudo certo não gera áreas fracas fictícias.

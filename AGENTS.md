@@ -602,8 +602,10 @@ nem avaliar como erros as questões que não foram respondidas.
   quatro feedbacks. Simulado mantém só a explicação geral após finalizar, sem
   feedback imediato nem bloco de quatro alternativas no resultado.
 - Refazer erros considera somente esta sessão e começa em Estudo ou Hardcore,
-  com feedback após responder; consultar a aula mantém o resultado acessível
-  em Praticar. Preserve o histórico, a escolha de tema e os filtros anteriores.
+  com feedback após responder. Ao sair da tela de resultado para qualquer outra
+  aba, descarte somente a sessão concluída de `qz`; voltar a Praticar deve abrir
+  a configuração inicial. Isso inclui o atalho de revisão de conteúdo. Preserve
+  histórico, resultado diário salvo, tema, filtros e sessões ainda em andamento.
 - Verifique todos os modos, valores percentuais, histórico anterior distinto,
   recomendações/atalhos, romanos, estados extremos e os dois temas no PC.
 
@@ -784,3 +786,22 @@ palavras isoladas como certificação de qualidade ou para reescrever itens bons
 A regra se aplica a todos os modos e futuras aulas. Execute
 `python3 tests/test_acronym_clues.py` e as regressões gerais. O manifesto
 `docs/revisao-pistas-siglas.json` estende a cadeia anterior, sem alterar seus hashes.
+
+## Página Erros: consulta e prática separadas
+
+A entrada deve mostrar cartões de Fácil, Médio, Difícil, Hardcore e Bate-pronto,
+com ícones, cores de nível e contagens por ID cuja última resposta foi errada.
+Não abra lista ou modo automaticamente. Selecionar um cartão revela só seu grupo;
+selecionar novamente recolhe. Ao sair da aba, limpe somente `reviewGroup`.
+
+Botões de refazer abrem `configureErrorPractice` na configuração normal de
+Praticar, com `cfg.m="err"`, modo correto, todas as aulas e sem bloco herdado.
+Um cartão regular selecionado conserva seu nível; Bate-pronto e Hardcore usam
+seus próprios bancos. Iniciar questões é uma ação posterior explícita. Não misture
+Bate-pronto, Hardcore e Estudo para preencher estoque; não apague `H` para limpar
+pendências. A última resposta vale também em registros antigos booleanos.
+
+Mantenha consulta expansível de respostas/feedbacks e cartões vazios sem ação.
+Execute `python3 tests/test_error_review.py`,
+`python3 tests/test_practice_navigation.py` e as
+regressões de prática/histórico. Consulte `docs/revisao-erros-e-retorno-pratica.md`.
