@@ -58,8 +58,8 @@ class QuestionFeedbackTests(unittest.TestCase):
         self.assertEqual(dates[4],'Junho de 2029')
         self.assertIn('respeita a antecedência',dates[11][3])
         self.assertIn('primeira data',dates[11][3])
-        self.assertIn('doze meses',dates[11][1])
-        self.assertIn('trinta meses',dates[11][2])
+        self.assertIn('12 meses',dates[11][1]);self.assertIn('36 meses',dates[11][1])
+        self.assertIn('30 meses',dates[11][2]);self.assertIn('36 meses',dates[11][2])
         self.assertIn('outros títulos contábeis',self.latest[112][11][1])
         self.assertIn('alíquota',self.latest[112][11][0])
 

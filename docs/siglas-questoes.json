@@ -1,0 +1,645 @@
+{
+  "regra": "Primeira ocorrência no enunciado; alternativas só quando o conceito não apareceu no enunciado. Significados cobrados diretamente são explicados após responder.",
+  "nao_sao_siglas": [
+    "Pix",
+    "I",
+    "II",
+    "III",
+    "IV",
+    "V",
+    "VI",
+    "VII",
+    "VIII",
+    "IX",
+    "X",
+    "R$",
+    "A",
+    "B",
+    "C"
+  ],
+  "entradas": [
+    {
+      "id": "bc",
+      "name": "Banco Central do Brasil",
+      "aliases": [
+        "BC",
+        "BCB",
+        "BACEN"
+      ],
+      "variants": [
+        "Banco Central"
+      ]
+    },
+    {
+      "id": "cmn",
+      "name": "Conselho Monetário Nacional",
+      "aliases": [
+        "CMN"
+      ],
+      "variants": []
+    },
+    {
+      "id": "cvm",
+      "name": "Comissão de Valores Mobiliários",
+      "aliases": [
+        "CVM"
+      ],
+      "variants": []
+    },
+    {
+      "id": "comoc",
+      "name": "Comissão Técnica da Moeda e do Crédito",
+      "aliases": [
+        "Comoc"
+      ],
+      "variants": []
+    },
+    {
+      "id": "copom",
+      "name": "Comitê de Política Monetária",
+      "aliases": [
+        "Copom"
+      ],
+      "variants": []
+    },
+    {
+      "id": "cnsp",
+      "name": "Conselho Nacional de Seguros Privados",
+      "aliases": [
+        "CNSP"
+      ],
+      "variants": []
+    },
+    {
+      "id": "cnpc",
+      "name": "Conselho Nacional de Previdência Complementar",
+      "aliases": [
+        "CNPC"
+      ],
+      "variants": []
+    },
+    {
+      "id": "susep",
+      "name": "Superintendência de Seguros Privados",
+      "aliases": [
+        "Susep"
+      ],
+      "variants": []
+    },
+    {
+      "id": "previc",
+      "name": "Superintendência Nacional de Previdência Complementar",
+      "aliases": [
+        "Previc"
+      ],
+      "variants": []
+    },
+    {
+      "id": "sfn",
+      "name": "Sistema Financeiro Nacional",
+      "aliases": [
+        "SFN"
+      ],
+      "variants": []
+    },
+    {
+      "id": "sfh",
+      "name": "Sistema Financeiro da Habitação",
+      "aliases": [
+        "SFH"
+      ],
+      "variants": []
+    },
+    {
+      "id": "cef",
+      "name": "Caixa Econômica Federal",
+      "aliases": [
+        "CEF"
+      ],
+      "variants": []
+    },
+    {
+      "id": "spb",
+      "name": "Sistema de Pagamentos Brasileiro",
+      "aliases": [
+        "SPB"
+      ],
+      "variants": []
+    },
+    {
+      "id": "str",
+      "name": "Sistema de Transferência de Reservas",
+      "aliases": [
+        "STR"
+      ],
+      "variants": []
+    },
+    {
+      "id": "spi",
+      "name": "Sistema de Pagamentos Instantâneos",
+      "aliases": [
+        "SPI"
+      ],
+      "variants": []
+    },
+    {
+      "id": "ip",
+      "name": "Instituição de Pagamento",
+      "aliases": [
+        "IP"
+      ],
+      "variants": []
+    },
+    {
+      "id": "ip",
+      "name": "Instituições de Pagamento",
+      "aliases": [
+        "IPs"
+      ],
+      "variants": []
+    },
+    {
+      "id": "pi",
+      "name": "Pagamentos Instantâneos",
+      "aliases": [
+        "PI"
+      ],
+      "variants": []
+    },
+    {
+      "id": "scr",
+      "name": "Sistema de Informações de Créditos",
+      "aliases": [
+        "SCR"
+      ],
+      "variants": [
+        "Sistema de Informações de Crédito"
+      ]
+    },
+    {
+      "id": "selic",
+      "name": "Sistema Especial de Liquidação e de Custódia",
+      "aliases": [
+        "Selic"
+      ],
+      "variants": [
+        "Sistema Especial de Liquidação e Custódia"
+      ]
+    },
+    {
+      "id": "sitraf",
+      "name": "Sistema de Transferência de Fundos",
+      "aliases": [
+        "Sitraf"
+      ],
+      "variants": []
+    },
+    {
+      "id": "siloc",
+      "name": "Sistema de Liquidação Diferida das Transferências Interbancárias de Ordens de Crédito",
+      "aliases": [
+        "SILOC"
+      ],
+      "variants": []
+    },
+    {
+      "id": "compe",
+      "name": "Centralizadora da Compensação de Cheques",
+      "aliases": [
+        "Compe"
+      ],
+      "variants": []
+    },
+    {
+      "id": "lbtr",
+      "name": "Liquidação Bruta em Tempo Real",
+      "aliases": [
+        "LBTR"
+      ],
+      "variants": []
+    },
+    {
+      "id": "imf",
+      "name": "Infraestrutura do Mercado Financeiro",
+      "aliases": [
+        "IMF"
+      ],
+      "variants": []
+    },
+    {
+      "id": "ccp",
+      "name": "Central Counterparty — contraparte central",
+      "aliases": [
+        "CCP"
+      ],
+      "variants": [
+        "Contraparte central"
+      ]
+    },
+    {
+      "id": "csd",
+      "name": "Central Securities Depository — depositária central",
+      "aliases": [
+        "CSD"
+      ],
+      "variants": [
+        "Central depositária",
+        "Depositária central"
+      ]
+    },
+    {
+      "id": "tr",
+      "name": "Trade Repository — entidade registradora",
+      "aliases": [
+        "TR"
+      ],
+      "variants": [
+        "Entidade registradora"
+      ]
+    },
+    {
+      "id": "stn",
+      "name": "Secretaria do Tesouro Nacional",
+      "aliases": [
+        "STN"
+      ],
+      "variants": []
+    },
+    {
+      "id": "scd",
+      "name": "Sociedade de Crédito Direto",
+      "aliases": [
+        "SCD"
+      ],
+      "variants": []
+    },
+    {
+      "id": "sep",
+      "name": "Sociedade de Empréstimo entre Pessoas",
+      "aliases": [
+        "SEP"
+      ],
+      "variants": []
+    },
+    {
+      "id": "ctvm",
+      "name": "Corretora de Títulos e Valores Mobiliários",
+      "aliases": [
+        "CTVM"
+      ],
+      "variants": [
+        "Sociedade Corretora de Títulos e Valores Mobiliários"
+      ]
+    },
+    {
+      "id": "dtvm",
+      "name": "Distribuidora de Títulos e Valores Mobiliários",
+      "aliases": [
+        "DTVM"
+      ],
+      "variants": [
+        "Sociedade Distribuidora de Títulos e Valores Mobiliários"
+      ]
+    },
+    {
+      "id": "scfi",
+      "name": "Sociedade de Crédito, Financiamento e Investimento",
+      "aliases": [
+        "SCFI"
+      ],
+      "variants": [
+        "Sociedades de Crédito, Financiamento e Investimento"
+      ]
+    },
+    {
+      "id": "sci",
+      "name": "Sociedade de Crédito Imobiliário",
+      "aliases": [
+        "SCI"
+      ],
+      "variants": []
+    },
+    {
+      "id": "scmepp",
+      "name": "Sociedade de Crédito ao Microempreendedor e à Empresa de Pequeno Porte",
+      "aliases": [
+        "SCMEPP"
+      ],
+      "variants": []
+    },
+    {
+      "id": "ch",
+      "name": "Companhia Hipotecária",
+      "aliases": [
+        "CH"
+      ],
+      "variants": []
+    },
+    {
+      "id": "eapc",
+      "name": "Entidade Aberta de Previdência Complementar",
+      "aliases": [
+        "EAPC"
+      ],
+      "variants": []
+    },
+    {
+      "id": "efpc",
+      "name": "Entidade Fechada de Previdência Complementar",
+      "aliases": [
+        "EFPC"
+      ],
+      "variants": []
+    },
+    {
+      "id": "cdb",
+      "name": "Certificado de Depósito Bancário",
+      "aliases": [
+        "CDB"
+      ],
+      "variants": []
+    },
+    {
+      "id": "cdb",
+      "name": "Certificados de Depósito Bancário",
+      "aliases": [
+        "CDBs"
+      ],
+      "variants": []
+    },
+    {
+      "id": "cd",
+      "name": "Certificados de Depósito",
+      "aliases": [
+        "CDs"
+      ],
+      "variants": []
+    },
+    {
+      "id": "rdb",
+      "name": "Recibo de Depósito Bancário",
+      "aliases": [
+        "RDB"
+      ],
+      "variants": []
+    },
+    {
+      "id": "rdc",
+      "name": "Recibo de Depósito Cooperativo",
+      "aliases": [
+        "RDC"
+      ],
+      "variants": []
+    },
+    {
+      "id": "lc",
+      "name": "Letra de Câmbio",
+      "aliases": [
+        "LC"
+      ],
+      "variants": []
+    },
+    {
+      "id": "lci",
+      "name": "Letra de Crédito Imobiliário",
+      "aliases": [
+        "LCI"
+      ],
+      "variants": []
+    },
+    {
+      "id": "lca",
+      "name": "Letra de Crédito do Agronegócio",
+      "aliases": [
+        "LCA"
+      ],
+      "variants": []
+    },
+    {
+      "id": "lh",
+      "name": "Letra Hipotecária",
+      "aliases": [
+        "LH"
+      ],
+      "variants": []
+    },
+    {
+      "id": "li",
+      "name": "Letra Imobiliária",
+      "aliases": [
+        "LI"
+      ],
+      "variants": []
+    },
+    {
+      "id": "lig",
+      "name": "Letra Imobiliária Garantida",
+      "aliases": [
+        "LIG"
+      ],
+      "variants": []
+    },
+    {
+      "id": "fii",
+      "name": "Fundo de Investimento Imobiliário",
+      "aliases": [
+        "FII"
+      ],
+      "variants": []
+    },
+    {
+      "id": "acc",
+      "name": "Adiantamento sobre Contrato de Câmbio",
+      "aliases": [
+        "ACC"
+      ],
+      "variants": []
+    },
+    {
+      "id": "dim",
+      "name": "Depósito Interfinanceiro Vinculado a Operações de Microfinanças",
+      "aliases": [
+        "DIM"
+      ],
+      "variants": []
+    },
+    {
+      "id": "bndes",
+      "name": "Banco Nacional de Desenvolvimento Econômico e Social",
+      "aliases": [
+        "BNDES"
+      ],
+      "variants": []
+    },
+    {
+      "id": "b3",
+      "name": "Brasil, Bolsa, Balcão",
+      "aliases": [
+        "B3"
+      ],
+      "variants": []
+    },
+    {
+      "id": "bovespa",
+      "name": "Bolsa de Valores de São Paulo",
+      "aliases": [
+        "Bovespa"
+      ],
+      "variants": []
+    },
+    {
+      "id": "bmfbovespa",
+      "name": "Bolsa de Valores, Mercadorias e Futuros",
+      "aliases": [
+        "BM&FBovespa"
+      ],
+      "variants": []
+    },
+    {
+      "id": "cetip",
+      "name": "Central de Custódia e de Liquidação Financeira de Títulos",
+      "aliases": [
+        "Cetip"
+      ],
+      "variants": []
+    },
+    {
+      "id": "anbima",
+      "name": "Associação Brasileira das Entidades dos Mercados Financeiro e de Capitais",
+      "aliases": [
+        "ANBIMA"
+      ],
+      "variants": []
+    },
+    {
+      "id": "apimec",
+      "name": "Associação dos Analistas e Profissionais de Investimento do Mercado de Capitais do Brasil",
+      "aliases": [
+        "APIMEC"
+      ],
+      "variants": []
+    },
+    {
+      "id": "ancord",
+      "name": "Associação Nacional das Corretoras e Distribuidoras de Títulos e Valores Mobiliários, Câmbio e Mercadorias",
+      "aliases": [
+        "ANCORD"
+      ],
+      "variants": [
+        "Associação Nacional das Corretoras de Valores, Câmbio e Mercadorias"
+      ]
+    },
+    {
+      "id": "cnpi",
+      "name": "Certificado Nacional do Profissional de Investimento",
+      "aliases": [
+        "CNPI"
+      ],
+      "variants": []
+    },
+    {
+      "id": "cfp",
+      "name": "Certified Financial Planner — planejador financeiro certificado",
+      "aliases": [
+        "CFP"
+      ],
+      "variants": []
+    },
+    {
+      "id": "fgc",
+      "name": "Fundo Garantidor de Créditos",
+      "aliases": [
+        "FGC"
+      ],
+      "variants": []
+    },
+    {
+      "id": "fgcoop",
+      "name": "Fundo Garantidor do Cooperativismo de Crédito",
+      "aliases": [
+        "FGCoop"
+      ],
+      "variants": []
+    },
+    {
+      "id": "dpge",
+      "name": "Depósito a Prazo com Garantia Especial",
+      "aliases": [
+        "DPGE"
+      ],
+      "variants": []
+    },
+    {
+      "id": "cpf",
+      "name": "Cadastro de Pessoas Físicas",
+      "aliases": [
+        "CPF"
+      ],
+      "variants": []
+    },
+    {
+      "id": "cnpj",
+      "name": "Cadastro Nacional da Pessoa Jurídica",
+      "aliases": [
+        "CNPJ"
+      ],
+      "variants": []
+    },
+    {
+      "id": "pgbl",
+      "name": "Plano Gerador de Benefício Livre",
+      "aliases": [
+        "PGBL"
+      ],
+      "variants": []
+    },
+    {
+      "id": "ir",
+      "name": "Imposto de Renda",
+      "aliases": [
+        "IR"
+      ],
+      "variants": []
+    },
+    {
+      "id": "ipca",
+      "name": "Índice Nacional de Preços ao Consumidor Amplo",
+      "aliases": [
+        "IPCA"
+      ],
+      "variants": []
+    },
+    {
+      "id": "df",
+      "name": "Distrito Federal",
+      "aliases": [
+        "DF"
+      ],
+      "variants": []
+    },
+    {
+      "id": "mp",
+      "name": "Ministério Público",
+      "aliases": [
+        "MP"
+      ],
+      "variants": []
+    },
+    {
+      "id": "sa",
+      "name": "Sociedade Anônima",
+      "aliases": [
+        "S.A."
+      ],
+      "variants": []
+    },
+    {
+      "id": "ltda",
+      "name": "Sociedade Limitada",
+      "aliases": [
+        "Ltda."
+      ],
+      "variants": []
+    }
+  ]
+}

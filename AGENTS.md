@@ -742,3 +742,26 @@ Após responder, conserve o vínculo alternativa/feedback à direita, destaque d
 escolha e correção e avanço apenas por Próxima. Respeite movimento reduzido e
 os temas, mantendo Tab/Enter e o cronômetro existentes. Não acrescente leitura
 contextual ao banco conceitual para preencher o espaço visual.
+
+## Siglas em enunciados e alternativas
+
+Use `questionDisplay`, `questionTextHtml` e `questionAnswerHtml` em todos os modos
+para mostrar a sigla e seu nome entre parênteses, preferencialmente na primeira
+ocorrência do enunciado. Se o conceito não apareceu no enunciado, expanda-o nas
+alternativas, com tratamento igual para cada opção. Não duplique definições já
+presentes; BC/BCB/BACEN e plurais compartilham o conceito. Preserve textos brutos
+no banco e no histórico, o índice original e o gabarito.
+
+O usuário confirmou: quando a pergunta cobra o significado da sigla ou a sigla
+correspondente a um nome, mostre a expansão **somente após responder**. Não entregue
+o gabarito para cumprir a regra visual. Cadastre novas siglas em
+`QUESTION_ACRONYMS` e `docs/siglas-questoes.json`; não invente a expansão. Considere
+o contexto de siglas ambíguas. Pix, romanos e letras de opções não são siglas.
+Confira Estudo, Simulado, Hardcore, diário, Bate-pronto e revisões, nos dois temas.
+
+Feedback de número/prazo deve explicar a regra e a distinção relevante, além da
+conta quando houver aplicação financeira. Conversões como “mil vezes menor” ou
+repetir um valor por extenso não substituem explicar a garantia, o objeto, a base,
+o teto ou o regime. Não acrescente parágrafo de outro assunto para dar tamanho.
+O manifesto `docs/revisao-feedbacks-numericos.json` estende a cadeia editorial;
+execute também `python3 tests/test_acronyms_and_numeric_feedback.py`.

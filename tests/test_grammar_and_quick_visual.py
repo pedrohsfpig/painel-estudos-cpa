@@ -8,7 +8,7 @@ from pathlib import Path
 import re
 import unittest
 from validate_bank import load_questions
-from question_revision import questions_before_grammar_revision,bate_pronto_before_grammar_revision,digest
+from question_revision import questions_before_grammar_revision,bate_pronto_before_grammar_revision,questions_before_numeric_revision,bate_pronto_before_numeric_revision,digest
 import smoke as harness
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -39,8 +39,8 @@ class GrammarTests(unittest.TestCase):
         for i,b in enumerate(bank(),100001):self.assertFalse(forced_gender_hint(b[2],b[3:5]),i)
 
     def test_review_counts_stable_ids_and_all_non_stem_fields_are_preserved(self):
-        q=load_questions();before=questions_before_grammar_revision(q)
-        bp=bank();previous=bate_pronto_before_grammar_revision(bp)
+        live=load_questions();q=questions_before_numeric_revision(live);before=questions_before_grammar_revision(live)
+        bp=bate_pronto_before_numeric_revision(bank());previous=bate_pronto_before_grammar_revision(bank())
         report=json.loads((ROOT/'docs/revisao-pistas-gramaticais.json').read_text());c=report['contagens']
         self.assertEqual(c['enunciados_principais_alterados'],sum(a!=b for a,b in zip(before,q)))
         self.assertEqual(c['enunciados_bate_pronto_alterados'],sum(a!=b for a,b in zip(previous,bp)))

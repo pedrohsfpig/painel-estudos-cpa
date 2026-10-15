@@ -384,7 +384,7 @@ class PainelCPA(unittest.TestCase):
                         const option = qz.o[displayIndex];
                         if (card.dataset.optionIndex !== String(option[2])) throw Error('Índice trocado: ' + id);
                         const button = card.parentElement.querySelector('button.o');
-                        if (button.querySelector('.answer-text').textContent !== 'ABCD'[displayIndex] + ') ' + option[0]) throw Error('Alternativa trocada: ' + id);
+                        if (button.querySelector('.answer-text').textContent !== 'ABCD'[displayIndex] + ') ' + questionDisplay(Q[id-1],true).options[option[2]]) throw Error('Alternativa trocada: ' + id);
                         if (button.getAttribute('aria-describedby') !== card.querySelector('p').id) throw Error('Feedback associado à alternativa errada: ' + id);
                         if (card.querySelector('p').textContent !== Q[id - 1][11][option[2]]) throw Error('Explicação trocada: ' + id);
                         if (card.classList.contains('fb-correct') !== Boolean(option[1])) throw Error('Correção trocada: ' + id);
@@ -2069,7 +2069,7 @@ class PainelCPA(unittest.TestCase):
             for mode,ids in [('e',[808,732,880]),('h',[747,888]),('s',[808,732,788,880])]:
                 self.page.evaluate('args=>begin(args[1],args[0])',[mode,ids])
                 for index,id in enumerate(ids):
-                    expected=self.page.evaluate('id=>Q[id-1][3]',id)
+                    expected=self.page.evaluate('id=>questionDisplay(Q[id-1]).stem',id)
                     actual=self.page.locator('.en').inner_text()
                     self.assertEqual(re.sub(r'\s+',' ',actual).strip(),re.sub(r'\s+',' ',expected).strip())
                     self.assertNotRegex(actual,r'(?i)\baula\b|\bslide\b|conteúdo enviado')
@@ -2100,7 +2100,7 @@ class PainelCPA(unittest.TestCase):
             self.page.evaluate("begin([828,836,829,742,261],'e')")
             for index,id in enumerate([828,836,829,742,261]):
                 question=self.page.evaluate('id=>Q[id-1]',id)
-                expected=question[5] if id==836 else question[4]
+                expected=self.page.evaluate('id=>questionDisplay(Q[id-1]).options[id===836?1:0]',id)
                 self.page.locator('button.o').filter(has_text=expected).click()
                 for row in self.page.locator('.fb-option').all():
                     original=int(row.get_attribute('data-option-index'))
