@@ -805,3 +805,28 @@ Mantenha consulta expansível de respostas/feedbacks e cartões vazios sem açã
 Execute `python3 tests/test_error_review.py`,
 `python3 tests/test_practice_navigation.py` e as
 regressões de prática/histórico. Consulte `docs/revisao-erros-e-retorno-pratica.md`.
+
+### Aula 10 — Mercados Financeiros, Clearing e Estabilidade
+
+- Três transcrições e 13 slides, em três blocos: mercados; clearing;
+  estabilidade/liquidez. Mantém 100 questões (20/40/20/20) e 50 Bate-pronto.
+- **O sistema Selic não atua como contraparte central.** O usuário reiterou
+  expressamente essa distinção. DVP não equivale a CCP; registro não assume
+  obrigações do emissor. Não confunda Câmara B3 com todo serviço Cetip/B3.
+- Crédito/capitais não se classificam só por prazo; primário de capitais
+  corresponde a nova emissão, mesmo em companhia já listada. Câmbio tem critério
+  próprio de primário/secundário (cliente/instituição versus interbancário).
+- ACCP é capital contracíclico, não dinheiro de compulsório. O exemplo de 10%
+  é hipotético; não sustenta crédito ilimitado na prática. LLI/LLT exigem classe,
+  prazo, cesta e limite; automação não dispensa essas condições.
+- IDs 901–1000 e 100451–100500 são append-only. Relatório e escopo de conferência
+  em `docs/aula-10-cobertura.json` e `docs/aula-10.md`. Não altere hashes de
+  revisões históricas ao adicionar aulas; testes históricos devem manter seu
+  escopo original, com validação separada de cada nova autoria.
+- Cada bloco de `MAT[n].b` precisa de `id` correspondente ao bloco de `AL`.
+  Teste que `currentMaterial()` retorna o bloco escolhido, além de conferir
+  seu texto renderizado. Comparar somente a tela com o mesmo helper pode deixar
+  passar um filtro que continua retornando toda a aula.
+- Execute `python3 tests/test_aula10.py`, além das regressões gerais, ao alterar
+  esse conteúdo. Os testes não substituem a releitura pedagógica das alternativas
+  e feedbacks. A conferência desta autoria não certificou vigência normativa.

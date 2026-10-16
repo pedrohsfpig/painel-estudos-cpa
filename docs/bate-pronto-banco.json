@@ -3149,6 +3149,356 @@
       "tema": "Liberdade: documentos digitais",
       "fonte_Q": 896,
       "modelo": "direto"
+    },
+    {
+      "id": 100451,
+      "aula": 10,
+      "tema": "Mercados: funções e segmentos",
+      "fonte_Q": 901,
+      "modelo": "direto"
+    },
+    {
+      "id": 100452,
+      "aula": 10,
+      "tema": "Mercados: crédito e capitais",
+      "fonte_Q": 902,
+      "modelo": "direto"
+    },
+    {
+      "id": 100453,
+      "aula": 10,
+      "tema": "Mercados: crédito e capitais",
+      "fonte_Q": 903,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100454,
+      "aula": 10,
+      "tema": "Mercados: primário e secundário",
+      "fonte_Q": 904,
+      "modelo": "direto"
+    },
+    {
+      "id": 100455,
+      "aula": 10,
+      "tema": "Mercados: câmbio",
+      "fonte_Q": 905,
+      "modelo": "direto"
+    },
+    {
+      "id": 100456,
+      "aula": 10,
+      "tema": "Mercados: funções e segmentos",
+      "fonte_Q": 906,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100457,
+      "aula": 10,
+      "tema": "Mercados: crédito e capitais",
+      "fonte_Q": 907,
+      "modelo": "direto"
+    },
+    {
+      "id": 100458,
+      "aula": 10,
+      "tema": "Mercados: primário e secundário",
+      "fonte_Q": 908,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100459,
+      "aula": 10,
+      "tema": "Mercados: primário e secundário",
+      "fonte_Q": 909,
+      "modelo": "direto"
+    },
+    {
+      "id": 100460,
+      "aula": 10,
+      "tema": "Mercados: funções e segmentos",
+      "fonte_Q": 910,
+      "modelo": "direto"
+    },
+    {
+      "id": 100461,
+      "aula": 10,
+      "tema": "Mercados: câmbio",
+      "fonte_Q": 911,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100462,
+      "aula": 10,
+      "tema": "Mercados: crédito e capitais",
+      "fonte_Q": 912,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100463,
+      "aula": 10,
+      "tema": "Mercados: crédito e capitais",
+      "fonte_Q": 917,
+      "modelo": "direto"
+    },
+    {
+      "id": 100464,
+      "aula": 10,
+      "tema": "Mercados: crédito e capitais",
+      "fonte_Q": 921,
+      "modelo": "direto"
+    },
+    {
+      "id": 100465,
+      "aula": 10,
+      "tema": "Mercados: crédito e capitais",
+      "fonte_Q": 924,
+      "modelo": "direto"
+    },
+    {
+      "id": 100466,
+      "aula": 10,
+      "tema": "Clearing: etapas e risco",
+      "fonte_Q": 931,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100467,
+      "aula": 10,
+      "tema": "Clearing: etapas e risco",
+      "fonte_Q": 932,
+      "modelo": "direto"
+    },
+    {
+      "id": 100468,
+      "aula": 10,
+      "tema": "Clearing: Selic",
+      "fonte_Q": 933,
+      "modelo": "direto"
+    },
+    {
+      "id": 100469,
+      "aula": 10,
+      "tema": "Clearing: Selic",
+      "fonte_Q": 934,
+      "modelo": "direto"
+    },
+    {
+      "id": 100470,
+      "aula": 10,
+      "tema": "Clearing: Cetip e Câmara B3",
+      "fonte_Q": 935,
+      "modelo": "direto"
+    },
+    {
+      "id": 100471,
+      "aula": 10,
+      "tema": "Clearing: etapas e risco",
+      "fonte_Q": 936,
+      "modelo": "direto"
+    },
+    {
+      "id": 100472,
+      "aula": 10,
+      "tema": "Clearing: Selic",
+      "fonte_Q": 937,
+      "modelo": "direto"
+    },
+    {
+      "id": 100473,
+      "aula": 10,
+      "tema": "Clearing: Selic",
+      "fonte_Q": 939,
+      "modelo": "direto"
+    },
+    {
+      "id": 100474,
+      "aula": 10,
+      "tema": "Clearing: Cetip e Câmara B3",
+      "fonte_Q": 942,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100475,
+      "aula": 10,
+      "tema": "Clearing: etapas e risco",
+      "fonte_Q": 943,
+      "modelo": "direto"
+    },
+    {
+      "id": 100476,
+      "aula": 10,
+      "tema": "Clearing: Selic",
+      "fonte_Q": 944,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100477,
+      "aula": 10,
+      "tema": "Clearing: Cetip e Câmara B3",
+      "fonte_Q": 945,
+      "modelo": "direto"
+    },
+    {
+      "id": 100478,
+      "aula": 10,
+      "tema": "Clearing: etapas e risco",
+      "fonte_Q": 946,
+      "modelo": "direto"
+    },
+    {
+      "id": 100479,
+      "aula": 10,
+      "tema": "Clearing: Selic",
+      "fonte_Q": 948,
+      "modelo": "direto"
+    },
+    {
+      "id": 100480,
+      "aula": 10,
+      "tema": "Clearing: Selic",
+      "fonte_Q": 949,
+      "modelo": "direto"
+    },
+    {
+      "id": 100481,
+      "aula": 10,
+      "tema": "Clearing: Cetip e Câmara B3",
+      "fonte_Q": 951,
+      "modelo": "direto"
+    },
+    {
+      "id": 100482,
+      "aula": 10,
+      "tema": "Estabilidade: Comef",
+      "fonte_Q": 961,
+      "modelo": "direto"
+    },
+    {
+      "id": 100483,
+      "aula": 10,
+      "tema": "Estabilidade: Comef",
+      "fonte_Q": 962,
+      "modelo": "direto"
+    },
+    {
+      "id": 100484,
+      "aula": 10,
+      "tema": "Estabilidade: Comef",
+      "fonte_Q": 969,
+      "modelo": "direto"
+    },
+    {
+      "id": 100485,
+      "aula": 10,
+      "tema": "Estabilidade: Comef",
+      "fonte_Q": 970,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100486,
+      "aula": 10,
+      "tema": "Estabilidade: ACCP e comunicação",
+      "fonte_Q": 971,
+      "modelo": "direto"
+    },
+    {
+      "id": 100487,
+      "aula": 10,
+      "tema": "Estabilidade: ACCP e comunicação",
+      "fonte_Q": 972,
+      "modelo": "direto"
+    },
+    {
+      "id": 100488,
+      "aula": 10,
+      "tema": "Liquidez: compulsórios",
+      "fonte_Q": 965,
+      "modelo": "direto"
+    },
+    {
+      "id": 100489,
+      "aula": 10,
+      "tema": "Liquidez: compulsórios",
+      "fonte_Q": 966,
+      "modelo": "direto"
+    },
+    {
+      "id": 100490,
+      "aula": 10,
+      "tema": "Liquidez: compulsórios",
+      "fonte_Q": 973,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100491,
+      "aula": 10,
+      "tema": "Liquidez: compulsórios",
+      "fonte_Q": 974,
+      "modelo": "direto"
+    },
+    {
+      "id": 100492,
+      "aula": 10,
+      "tema": "Liquidez: compulsórios",
+      "fonte_Q": 975,
+      "modelo": "direto"
+    },
+    {
+      "id": 100493,
+      "aula": 10,
+      "tema": "Liquidez: compulsórios",
+      "fonte_Q": 976,
+      "modelo": "direto"
+    },
+    {
+      "id": 100494,
+      "aula": 10,
+      "tema": "Liquidez: LFL e garantias",
+      "fonte_Q": 977,
+      "modelo": "direto"
+    },
+    {
+      "id": 100495,
+      "aula": 10,
+      "tema": "Liquidez: LFL e garantias",
+      "fonte_Q": 978,
+      "modelo": "direto"
+    },
+    {
+      "id": 100496,
+      "aula": 10,
+      "tema": "Liquidez: LFL e garantias",
+      "fonte_Q": 980,
+      "modelo": "direto"
+    },
+    {
+      "id": 100497,
+      "aula": 10,
+      "tema": "Liquidez: LFL e garantias",
+      "fonte_Q": 981,
+      "modelo": "direto"
+    },
+    {
+      "id": 100498,
+      "aula": 10,
+      "tema": "Liquidez: LFL e garantias",
+      "fonte_Q": 982,
+      "modelo": "direto"
+    },
+    {
+      "id": 100499,
+      "aula": 10,
+      "tema": "Liquidez: LFL e garantias",
+      "fonte_Q": 984,
+      "modelo": "direto"
+    },
+    {
+      "id": 100500,
+      "aula": 10,
+      "tema": "Estabilidade: Comef",
+      "fonte_Q": 961,
+      "modelo": "direto"
     }
   ],
   "escopo": "450 itens conceituais, 50 por aula, baseados no conteúdo já revisado de Q e nos materiais existentes. Sem certificação normativa independente."

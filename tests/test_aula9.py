@@ -50,17 +50,17 @@ class Aula9Tests(unittest.TestCase):
         html=(ROOT/'index.html').read_text()
         lessons=json.JSONDecoder().raw_decode(html.split('const AL=',1)[1])[0]
         material=json.JSONDecoder().raw_decode(html[html.index('\n9:',html.index('const MAT='))+3:])[0]
-        self.assertEqual(len(lessons),9)
-        self.assertEqual(len(lessons[-1]['b']),3)
+        self.assertGreaterEqual(len(lessons),9)
+        self.assertEqual(len(lessons[8]['b']),3)
         self.assertEqual(len(material['b']),3)
         self.assertEqual(len(material['fc']),54)
         for key in ['r','d','p','n']:
-            self.assertEqual(lessons[-1][key],[item for b in lessons[-1]['b'] for item in b[key]])
+            self.assertEqual(lessons[8][key],[item for b in lessons[8]['b'] for item in b[key]])
         for key in ['dg','tb','tl','fc']:
             self.assertEqual(material[key],[item for b in material['b'] for item in b[key]])
         for entity in ['ANBIMA','APIMEC','Planejar','ANCORD','FGC','FGCoop']:
             self.assertIn(entity,json.dumps(material,ensure_ascii=False))
-        topics=[t for b in lessons[-1]['b'] for t in b['topics']]
+        topics=[t for b in lessons[8]['b'] for t in b['topics']]
         self.assertEqual(set(topics),{q[1] for q in self.rows})
         self.assertEqual(len(topics),len(set(topics)))
 

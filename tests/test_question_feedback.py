@@ -41,14 +41,14 @@ class QuestionFeedbackTests(unittest.TestCase):
         tampered=copy.deepcopy(self.latest);tampered[835][11][1]='A adesão concede CNPI.'
         with self.assertRaises(AssertionError):questions_before_feedback_revision(tampered)
         original=questions_before_context_revision(self.latest)
-        self.assertEqual(len(original),900)
+        self.assertEqual(len(original),len(self.latest))
 
     def test_ids_lessons_difficulties_and_simulation_eligibility_are_preserved(self):
         self.assertTrue(validate_questions(self.latest))
         for a,b in zip(self.before,self.latest):
             self.assertEqual([a[i] for i in (0,1,2,9)],[b[i] for i in (0,1,2,9)])
-        self.assertEqual(Counter(r[0] for r in self.latest),{n:100 for n in range(1,10)})
-        for lesson in range(1,10):
+        self.assertEqual(Counter(r[0] for r in self.latest),{n:100 for n in {q[0] for q in self.latest}})
+        for lesson in sorted({q[0] for q in self.latest}):
             self.assertEqual(Counter(r[2] for r in self.latest if r[0]==lesson),{0:20,1:40,2:20,3:20})
 
     def test_numeric_explanations_distinguish_possible_value_from_requested_minimum(self):

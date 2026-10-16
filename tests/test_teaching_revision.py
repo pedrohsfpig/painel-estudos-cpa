@@ -16,7 +16,8 @@ class TeachingRevision(unittest.TestCase):
     def test_actual_counts_and_historical_chain(self):
         live=load_questions();latest=questions_before_grammar_revision(live);before=questions_before_teaching_revision(live)
         report=json.loads((ROOT/'docs/revisao-justificativas-contexto.json').read_text());counts=report['contagens']
-        self.assertEqual(counts['questoes_revisadas'],len(latest))
+        self.assertEqual(counts['questoes_revisadas'],len(report['questoes']))
+        self.assertGreaterEqual(len(latest),len(report['questoes']))
         self.assertEqual(counts['questoes_alteradas'],sum(a!=b for a,b in zip(before,latest)))
         self.assertEqual(counts['enunciados_alterados'],sum(a[3]!=b[3] for a,b in zip(before,latest)))
         self.assertEqual(counts['feedbacks_alterados'],sum(x!=y for a,b in zip(before,latest) for x,y in zip(a[11],b[11])))
@@ -29,7 +30,8 @@ class TeachingRevision(unittest.TestCase):
             for k,change in row['campos'].items():
                 self.assertEqual(bp[i][int(k)],change['depois']);previous[i][int(k)]=change['antes']
             self.assertEqual(row['hash_antes'],digest(previous[i]))
-        self.assertEqual(counts['bate_pronto_revisados'],len(bp))
+        self.assertEqual(counts['bate_pronto_revisados'],len(report['bate_pronto']))
+        self.assertGreaterEqual(len(bp),len(report['bate_pronto']))
         self.assertEqual(counts['bate_pronto_alterados'],sum(a!=b for a,b in zip(previous,bp)))
         self.assertEqual(counts['bate_pronto_feedbacks_alterados'],sum(a[j]!=b[j] for a,b in zip(previous,bp) for j in [5,6]))
 

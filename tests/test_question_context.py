@@ -40,7 +40,8 @@ class QuestionContextTests(unittest.TestCase):
         self.assertEqual(len(self.current),len(self.before))
         for id,(a,b) in enumerate(zip(self.before,self.current),1):
             for index in [0,1,2,9]:self.assertEqual(a[index],b[index],f'Questão {id}, campo {index}')
-            self.assertEqual(self.ledger[id-1]['usada_em_simulados'],b[2]<3 and not b[9])
+            if id<=len(self.ledger):
+                self.assertEqual(self.ledger[id-1]['usada_em_simulados'],b[2]<3 and not b[9])
         self.assertEqual(Counter(q[0] for q in self.current),Counter(q[0] for q in self.before))
         self.assertEqual(Counter((q[0],q[2]) for q in self.current),Counter((q[0],q[2]) for q in self.before))
         # As únicas opções reescritas são as da SCD e o texto correto do STR;

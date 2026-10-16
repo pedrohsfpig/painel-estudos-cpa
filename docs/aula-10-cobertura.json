@@ -1,0 +1,1620 @@
+{
+  "aula": 10,
+  "titulo": "Aula 10: Mercados Financeiros, Clearing e Estabilidade",
+  "data": "2026-10-16",
+  "questoes": [
+    {
+      "id": 901,
+      "tema": "Mercados: funções e segmentos",
+      "nivel": 0,
+      "slides": [
+        1,
+        2,
+        3
+      ],
+      "transcricao": 1,
+      "hash": "6769d547c59976c52b8ee3891d5e44c40795e52846ef0bb343c5b119d012a45f"
+    },
+    {
+      "id": 902,
+      "tema": "Mercados: crédito e capitais",
+      "nivel": 0,
+      "slides": [
+        1,
+        2,
+        3
+      ],
+      "transcricao": 1,
+      "hash": "78027827713b26a26b9b67aa424b9fe6180aa025eb7e7d94aed19be22b9dd8f8"
+    },
+    {
+      "id": 903,
+      "tema": "Mercados: crédito e capitais",
+      "nivel": 0,
+      "slides": [
+        1,
+        2,
+        3
+      ],
+      "transcricao": 1,
+      "hash": "5fd8563620ce25c5440dc968dc109e9ba7b5f78fa9bbb72b731c50334c1f8ffe"
+    },
+    {
+      "id": 904,
+      "tema": "Mercados: primário e secundário",
+      "nivel": 0,
+      "slides": [
+        2
+      ],
+      "transcricao": 1,
+      "hash": "a5952671c3488ac1db77c5e7dd031fade7aac651da03d99ea6e404b1889d70b7"
+    },
+    {
+      "id": 905,
+      "tema": "Mercados: câmbio",
+      "nivel": 0,
+      "slides": [
+        2,
+        3
+      ],
+      "transcricao": 1,
+      "hash": "d94602275c53263beee9dcbf1798c580a9549f6a81c4ec68793b47dc78825ad1"
+    },
+    {
+      "id": 906,
+      "tema": "Mercados: funções e segmentos",
+      "nivel": 0,
+      "slides": [
+        1,
+        2,
+        3
+      ],
+      "transcricao": 1,
+      "hash": "3b09e7ac5bd386629665aa75a2010d6f4530f77af456c80be08aafc6ea208dc0"
+    },
+    {
+      "id": 907,
+      "tema": "Mercados: crédito e capitais",
+      "nivel": 1,
+      "slides": [
+        1,
+        2,
+        3
+      ],
+      "transcricao": 1,
+      "hash": "488d6136a3793a6f6d4082dec87e19fbf5a532028c855cb50933915152a35ffb"
+    },
+    {
+      "id": 908,
+      "tema": "Mercados: primário e secundário",
+      "nivel": 1,
+      "slides": [
+        2
+      ],
+      "transcricao": 1,
+      "hash": "63f2166a74c50877f4c5fcf431e2d6e55458550cb002e86763673ad683082c1c"
+    },
+    {
+      "id": 909,
+      "tema": "Mercados: primário e secundário",
+      "nivel": 1,
+      "slides": [
+        2
+      ],
+      "transcricao": 1,
+      "hash": "00086c518f3a7c961a959d28e579c8851719895ac19a72c759d9a0d0105dd9a7"
+    },
+    {
+      "id": 910,
+      "tema": "Mercados: funções e segmentos",
+      "nivel": 1,
+      "slides": [
+        1,
+        2,
+        3
+      ],
+      "transcricao": 1,
+      "hash": "5db79f125f78e6f7ef970ce0925824b0b3563685bd7789baa9e6252946254434"
+    },
+    {
+      "id": 911,
+      "tema": "Mercados: câmbio",
+      "nivel": 1,
+      "slides": [
+        2,
+        3
+      ],
+      "transcricao": 1,
+      "hash": "fa6d3a05f4c48f5f7cc6ad54bf3b9c40426ef5f29965300c1826624bdbba6958"
+    },
+    {
+      "id": 912,
+      "tema": "Mercados: crédito e capitais",
+      "nivel": 1,
+      "slides": [
+        1,
+        2,
+        3
+      ],
+      "transcricao": 1,
+      "hash": "7914f68fc760dedd2659af640894f9a8d20b90129e7a3c467fa8a13ec282097b"
+    },
+    {
+      "id": 913,
+      "tema": "Mercados: funções e segmentos",
+      "nivel": 1,
+      "slides": [
+        1,
+        2,
+        3
+      ],
+      "transcricao": 1,
+      "hash": "13ad4fb97425f733a35f4d2c84534b27b641805e923190ca339bac699f92230f"
+    },
+    {
+      "id": 914,
+      "tema": "Mercados: crédito e capitais",
+      "nivel": 1,
+      "slides": [
+        1,
+        2,
+        3
+      ],
+      "transcricao": 1,
+      "hash": "e31859e7c27e38a33f7d67651d8d47ad0530dcbb2d8d4e52dbbadcccdab559e6"
+    },
+    {
+      "id": 915,
+      "tema": "Mercados: primário e secundário",
+      "nivel": 1,
+      "slides": [
+        2
+      ],
+      "transcricao": 1,
+      "hash": "7fc92c953152d85a1140879cfe9185bae731a599d4a76ea1c763f5940f3b097c"
+    },
+    {
+      "id": 916,
+      "tema": "Mercados: câmbio",
+      "nivel": 1,
+      "slides": [
+        2,
+        3
+      ],
+      "transcricao": 1,
+      "hash": "d091bbde9d7dd1183e2b12743b9f3acf9b900a81176bbc406a9dcfbdf61ac96b"
+    },
+    {
+      "id": 917,
+      "tema": "Mercados: crédito e capitais",
+      "nivel": 1,
+      "slides": [
+        1,
+        2,
+        3
+      ],
+      "transcricao": 1,
+      "hash": "58fcf45981f9ef0440ae29b5c2510326552095e9a8ea07e00c4e393c45f75a6b"
+    },
+    {
+      "id": 918,
+      "tema": "Mercados: primário e secundário",
+      "nivel": 1,
+      "slides": [
+        2
+      ],
+      "transcricao": 1,
+      "hash": "e9b0b622783081e9b19d02634cdd1e13b166eb8299cbc889e93510294b7c397f"
+    },
+    {
+      "id": 919,
+      "tema": "Mercados: primário e secundário",
+      "nivel": 2,
+      "slides": [
+        2
+      ],
+      "transcricao": 1,
+      "hash": "62ef17c6c898ebe98b31f4763f1a1ed2c1bec1d26f8900ccea746d4c174fe196"
+    },
+    {
+      "id": 920,
+      "tema": "Mercados: funções e segmentos",
+      "nivel": 2,
+      "slides": [
+        1,
+        2,
+        3
+      ],
+      "transcricao": 1,
+      "hash": "550dfaf667dc12c02c251162f661858c5339cdbf9edbafe122ed297a7628607a"
+    },
+    {
+      "id": 921,
+      "tema": "Mercados: crédito e capitais",
+      "nivel": 2,
+      "slides": [
+        1,
+        2,
+        3
+      ],
+      "transcricao": 1,
+      "hash": "40c6faabd9a9ff0fa2e9209ce0a2c1b2585b88578f25b6b0aaf3b64e0f5a5702"
+    },
+    {
+      "id": 922,
+      "tema": "Mercados: primário e secundário",
+      "nivel": 2,
+      "slides": [
+        2
+      ],
+      "transcricao": 1,
+      "hash": "07549ec3a87118706f1ec4aff8a24e8522a27476d3b185bf9f25e75bde5bb49f"
+    },
+    {
+      "id": 923,
+      "tema": "Mercados: câmbio",
+      "nivel": 2,
+      "slides": [
+        2,
+        3
+      ],
+      "transcricao": 1,
+      "hash": "3a270a32979f7aa65f83f94c197d9b63f4c72756cb3477d9c71db5414451c444"
+    },
+    {
+      "id": 924,
+      "tema": "Mercados: crédito e capitais",
+      "nivel": 2,
+      "slides": [
+        1,
+        2,
+        3
+      ],
+      "transcricao": 1,
+      "hash": "aef23bd91694cb3d1cf7e261e486d384629dccb25420f881658ed62fcd425e60"
+    },
+    {
+      "id": 925,
+      "tema": "Mercados: primário e secundário",
+      "nivel": 3,
+      "slides": [
+        2
+      ],
+      "transcricao": 1,
+      "hash": "adaea8517a7e7b2fc4fc4897ddfd9435d62ac00a5f712a0009267e4760e68a8f"
+    },
+    {
+      "id": 926,
+      "tema": "Mercados: funções e segmentos",
+      "nivel": 3,
+      "slides": [
+        1,
+        2,
+        3
+      ],
+      "transcricao": 1,
+      "hash": "cebc1ebcec5f4c177517129106f60e572f6b5dcce11d3468c862508e8c3fcfb5"
+    },
+    {
+      "id": 927,
+      "tema": "Mercados: crédito e capitais",
+      "nivel": 3,
+      "slides": [
+        1,
+        2,
+        3
+      ],
+      "transcricao": 1,
+      "hash": "f7edd039f77893e11898d3c26d64c1d4a99f995e8335fd28451beed0355b5fb1"
+    },
+    {
+      "id": 928,
+      "tema": "Mercados: câmbio",
+      "nivel": 3,
+      "slides": [
+        2,
+        3
+      ],
+      "transcricao": 1,
+      "hash": "742a2c2c63142144968f133c2b6f43c96fcc058bf07bc939f9f0439f484a3603"
+    },
+    {
+      "id": 929,
+      "tema": "Mercados: primário e secundário",
+      "nivel": 3,
+      "slides": [
+        2
+      ],
+      "transcricao": 1,
+      "hash": "bf56ed5cf7e4a41873bda1e3f0434bde20cf6a238706d740dd56dc88f8db8f2e"
+    },
+    {
+      "id": 930,
+      "tema": "Mercados: funções e segmentos",
+      "nivel": 3,
+      "slides": [
+        1,
+        2,
+        3
+      ],
+      "transcricao": 1,
+      "hash": "3f736adff246b32e700839c973a8d87e57d89d5a6f5c6fd97f3d3c66dedf677c"
+    },
+    {
+      "id": 931,
+      "tema": "Clearing: etapas e risco",
+      "nivel": 0,
+      "slides": [
+        4
+      ],
+      "transcricao": 2,
+      "hash": "9d2d220cf4baaa335381e9efcc2584e4e9218358437cf78c9007ef8801a85282"
+    },
+    {
+      "id": 932,
+      "tema": "Clearing: etapas e risco",
+      "nivel": 0,
+      "slides": [
+        4
+      ],
+      "transcricao": 2,
+      "hash": "e35d3322abef2723953504dcf0db414e3ccac90abcef0d4126264ffe3a2758bc"
+    },
+    {
+      "id": 933,
+      "tema": "Clearing: Selic",
+      "nivel": 0,
+      "slides": [
+        5,
+        6
+      ],
+      "transcricao": 2,
+      "hash": "fea289e7a607d7cb4dcb9a98df710ee79bbc40b57cd5893c54d61bfbf222d21a"
+    },
+    {
+      "id": 934,
+      "tema": "Clearing: Selic",
+      "nivel": 0,
+      "slides": [
+        5,
+        6
+      ],
+      "transcricao": 2,
+      "hash": "e946d3300fe8a1087d49e3c73f05dcb6a39d46c5474cd0aa7131260178236ce5"
+    },
+    {
+      "id": 935,
+      "tema": "Clearing: Cetip e Câmara B3",
+      "nivel": 0,
+      "slides": [
+        6,
+        7,
+        8
+      ],
+      "transcricao": 2,
+      "hash": "2719ee65577b4abaac96d40e1843f4e9bb699a631774a7d4260192541c6ec540"
+    },
+    {
+      "id": 936,
+      "tema": "Clearing: etapas e risco",
+      "nivel": 0,
+      "slides": [
+        4
+      ],
+      "transcricao": 2,
+      "hash": "f622255ee915a4ba728a6cb99b2e49c581683d424bfd3ba162d4f9a608b9b045"
+    },
+    {
+      "id": 937,
+      "tema": "Clearing: Selic",
+      "nivel": 1,
+      "slides": [
+        5,
+        6
+      ],
+      "transcricao": 2,
+      "hash": "ca94bd4fb2d30ba48db181681a8bf5638feba5b024cb07a379bc5a6171a46dbf"
+    },
+    {
+      "id": 938,
+      "tema": "Clearing: etapas e risco",
+      "nivel": 1,
+      "slides": [
+        4
+      ],
+      "transcricao": 2,
+      "hash": "48bd920af5ffeedf40c632b82de56bbd3a183817384117de82e1ff5bda2a61cc"
+    },
+    {
+      "id": 939,
+      "tema": "Clearing: Selic",
+      "nivel": 1,
+      "slides": [
+        5,
+        6
+      ],
+      "transcricao": 2,
+      "hash": "95e27f666f0c84673e7434c1e53421b21701bccc9df1d102dd282b7b4aa388ef"
+    },
+    {
+      "id": 940,
+      "tema": "Clearing: Cetip e Câmara B3",
+      "nivel": 1,
+      "slides": [
+        6,
+        7,
+        8
+      ],
+      "transcricao": 2,
+      "hash": "7c7e388fd9c67865db2d63bf3ba0f04a5d1f439d61638422354163b3c6c10771"
+    },
+    {
+      "id": 941,
+      "tema": "Clearing: etapas e risco",
+      "nivel": 1,
+      "slides": [
+        4
+      ],
+      "transcricao": 2,
+      "hash": "e836ff169e056b04ff889c2a9a661d7f9d19b85adaf0f050ee00ec38830d656b"
+    },
+    {
+      "id": 942,
+      "tema": "Clearing: Cetip e Câmara B3",
+      "nivel": 1,
+      "slides": [
+        6,
+        7,
+        8
+      ],
+      "transcricao": 2,
+      "hash": "b262e82928be0c992998745422664d7494d0bc1e116c917f3ad66d93a30c64d6"
+    },
+    {
+      "id": 943,
+      "tema": "Clearing: etapas e risco",
+      "nivel": 1,
+      "slides": [
+        4
+      ],
+      "transcricao": 2,
+      "hash": "81e722448bf3cec1b9ffdc8acdeecd3bb3a5a6675bcf900044b714b319d99db3"
+    },
+    {
+      "id": 944,
+      "tema": "Clearing: Selic",
+      "nivel": 1,
+      "slides": [
+        5,
+        6
+      ],
+      "transcricao": 2,
+      "hash": "11242795c2fea78e565b7b8c92122ceb187597b9685f1abc0b297188bf07181c"
+    },
+    {
+      "id": 945,
+      "tema": "Clearing: Cetip e Câmara B3",
+      "nivel": 1,
+      "slides": [
+        6,
+        7,
+        8
+      ],
+      "transcricao": 2,
+      "hash": "7d6b4c65f361cdb345da1c833707a210f64ef9419bd4660a77a3e6b9bd6e1336"
+    },
+    {
+      "id": 946,
+      "tema": "Clearing: etapas e risco",
+      "nivel": 1,
+      "slides": [
+        4
+      ],
+      "transcricao": 2,
+      "hash": "64104d15396fd8dc2fef6a23eadd7757c4cb84bc1914071e0ba7039fdab1ca55"
+    },
+    {
+      "id": 947,
+      "tema": "Clearing: Cetip e Câmara B3",
+      "nivel": 1,
+      "slides": [
+        6,
+        7,
+        8
+      ],
+      "transcricao": 2,
+      "hash": "3eaa3e9faf93bafac53da44118123ac687e7c08684caad9ee7ffe5c1190a37c8"
+    },
+    {
+      "id": 948,
+      "tema": "Clearing: Selic",
+      "nivel": 1,
+      "slides": [
+        5,
+        6
+      ],
+      "transcricao": 2,
+      "hash": "6ef4b11564b4684f1048e83665a878af4a56d2b97a8def08441fbc176791c79b"
+    },
+    {
+      "id": 949,
+      "tema": "Clearing: Selic",
+      "nivel": 2,
+      "slides": [
+        5,
+        6
+      ],
+      "transcricao": 2,
+      "hash": "61a83384a698a1eefb4ab7a3855206a3130cfc3a55ba2ae9815fe7928f023a68"
+    },
+    {
+      "id": 950,
+      "tema": "Clearing: etapas e risco",
+      "nivel": 2,
+      "slides": [
+        4
+      ],
+      "transcricao": 2,
+      "hash": "bb6a73c4d5a8c0a023dbcfdd2903d5a20ee414dded279d79501f20f2832ebd1b"
+    },
+    {
+      "id": 951,
+      "tema": "Clearing: Cetip e Câmara B3",
+      "nivel": 2,
+      "slides": [
+        6,
+        7,
+        8
+      ],
+      "transcricao": 2,
+      "hash": "d09fd04c267092c75c74695d14174338dbd0b0fefcce48ca6620e7b98e156d16"
+    },
+    {
+      "id": 952,
+      "tema": "Clearing: etapas e risco",
+      "nivel": 2,
+      "slides": [
+        4
+      ],
+      "transcricao": 2,
+      "hash": "83e1e77df18fc5cf547c886de81f6ff62c6e831be2e638e6cc133e4e4dcb125c"
+    },
+    {
+      "id": 953,
+      "tema": "Clearing: Selic",
+      "nivel": 2,
+      "slides": [
+        5,
+        6
+      ],
+      "transcricao": 2,
+      "hash": "6badb35105ca8498778288048808344eadc442d731c7d0b46d9da562736454a1"
+    },
+    {
+      "id": 954,
+      "tema": "Clearing: Cetip e Câmara B3",
+      "nivel": 2,
+      "slides": [
+        6,
+        7,
+        8
+      ],
+      "transcricao": 2,
+      "hash": "509b8c1301474c1a50b1a1d2e1a8354953a3f10c993e64b76a148212f6b7f076"
+    },
+    {
+      "id": 955,
+      "tema": "Clearing: Cetip e Câmara B3",
+      "nivel": 3,
+      "slides": [
+        6,
+        7,
+        8
+      ],
+      "transcricao": 2,
+      "hash": "f09939a2ebb22288a12b7c48f9c335ca30b8eb27724c964aa5bca465605dec7f"
+    },
+    {
+      "id": 956,
+      "tema": "Clearing: etapas e risco",
+      "nivel": 3,
+      "slides": [
+        4
+      ],
+      "transcricao": 2,
+      "hash": "45ec2514343c9d5d5e687684a07dda144b0531db03239c257228e7162f1dd6c9"
+    },
+    {
+      "id": 957,
+      "tema": "Clearing: Selic",
+      "nivel": 3,
+      "slides": [
+        5,
+        6
+      ],
+      "transcricao": 2,
+      "hash": "5cadc6f61ee3c53afa5aab62a61354f203e8b7398f8f18a837792fce15fdbb89"
+    },
+    {
+      "id": 958,
+      "tema": "Clearing: Cetip e Câmara B3",
+      "nivel": 3,
+      "slides": [
+        6,
+        7,
+        8
+      ],
+      "transcricao": 2,
+      "hash": "9f8eba4066ae368ce49bf8b4260ef252229c4459c045df7a105f69f8b4fedb9e"
+    },
+    {
+      "id": 959,
+      "tema": "Clearing: etapas e risco",
+      "nivel": 3,
+      "slides": [
+        4
+      ],
+      "transcricao": 2,
+      "hash": "1855560bd32ec3c2ea47ce24d4406a4db4172f65e98d277d7b64930939c43ff9"
+    },
+    {
+      "id": 960,
+      "tema": "Clearing: Selic",
+      "nivel": 3,
+      "slides": [
+        5,
+        6
+      ],
+      "transcricao": 2,
+      "hash": "cfa48503726abe5c44bdf8406f10ec02a007c190942cf68987bb8587ba6af8bc"
+    },
+    {
+      "id": 961,
+      "tema": "Estabilidade: Comef",
+      "nivel": 0,
+      "slides": [
+        9,
+        10
+      ],
+      "transcricao": 3,
+      "hash": "a0289d0a1332f3d5c51eab59456950b5e92b0ee323decbdd9ece04f0c8c6607d"
+    },
+    {
+      "id": 962,
+      "tema": "Estabilidade: Comef",
+      "nivel": 0,
+      "slides": [
+        9,
+        10
+      ],
+      "transcricao": 3,
+      "hash": "f892a057c61bf17fac8283ca68a3f5de3bb0b960d70f74f55a00984f3db1264c"
+    },
+    {
+      "id": 963,
+      "tema": "Estabilidade: ACCP e comunicação",
+      "nivel": 0,
+      "slides": [
+        9,
+        10
+      ],
+      "transcricao": 3,
+      "hash": "a2845f74c14e71a25a8ddfac18ee79df9146e251e5b4f7f27406f54e18c70aa2"
+    },
+    {
+      "id": 964,
+      "tema": "Estabilidade: ACCP e comunicação",
+      "nivel": 0,
+      "slides": [
+        9,
+        10
+      ],
+      "transcricao": 3,
+      "hash": "90a6f32f3a0c6535a09d051dacfe93cdc6521fe27a696a07bbeb060b062ada1c"
+    },
+    {
+      "id": 965,
+      "tema": "Liquidez: compulsórios",
+      "nivel": 0,
+      "slides": [
+        11
+      ],
+      "transcricao": 3,
+      "hash": "ed69d7e384f0c21da4b1f33cb38428c106d7b890630fef5a1b69aa04c144eafd"
+    },
+    {
+      "id": 966,
+      "tema": "Liquidez: compulsórios",
+      "nivel": 0,
+      "slides": [
+        11
+      ],
+      "transcricao": 3,
+      "hash": "68077e31bc8c99dd62eab0782f1d1a92cbc9af88cf40656c43faf337fe553b0e"
+    },
+    {
+      "id": 967,
+      "tema": "Liquidez: LFL e garantias",
+      "nivel": 0,
+      "slides": [
+        12,
+        13
+      ],
+      "transcricao": 3,
+      "hash": "9e433dd16faff96408aa853c84e1a89205f28fd85e21338d26ec044eb1b8fc3e"
+    },
+    {
+      "id": 968,
+      "tema": "Liquidez: LFL e garantias",
+      "nivel": 0,
+      "slides": [
+        12,
+        13
+      ],
+      "transcricao": 3,
+      "hash": "ccd7ea69bd10ba960f7dccecc71bf395b2be6f3aed67ad10110f9d8175ad3072"
+    },
+    {
+      "id": 969,
+      "tema": "Estabilidade: Comef",
+      "nivel": 1,
+      "slides": [
+        9,
+        10
+      ],
+      "transcricao": 3,
+      "hash": "fd3947e90c6090abe6719eae86f41840883155d69f96a2855f0d73d265e9ebc6"
+    },
+    {
+      "id": 970,
+      "tema": "Estabilidade: Comef",
+      "nivel": 1,
+      "slides": [
+        9,
+        10
+      ],
+      "transcricao": 3,
+      "hash": "4562927fb98dfcbaf659e315a6db52d4dd1d4c19e4a4743af7f4f8f699d1604a"
+    },
+    {
+      "id": 971,
+      "tema": "Estabilidade: ACCP e comunicação",
+      "nivel": 1,
+      "slides": [
+        9,
+        10
+      ],
+      "transcricao": 3,
+      "hash": "2fb612d2e35e29862414e44876890880080578ad0f504b7db6c79b595b69af98"
+    },
+    {
+      "id": 972,
+      "tema": "Estabilidade: ACCP e comunicação",
+      "nivel": 1,
+      "slides": [
+        9,
+        10
+      ],
+      "transcricao": 3,
+      "hash": "b82b2ebe4fb34d87f82e9ba767fa76530c2e508087a469de520a5b8864b51f97"
+    },
+    {
+      "id": 973,
+      "tema": "Liquidez: compulsórios",
+      "nivel": 1,
+      "slides": [
+        11
+      ],
+      "transcricao": 3,
+      "hash": "d568ab82feefe982367db11d6b69deedeb4f91f696dd25fdaf0793e6017463e8"
+    },
+    {
+      "id": 974,
+      "tema": "Liquidez: compulsórios",
+      "nivel": 1,
+      "slides": [
+        11
+      ],
+      "transcricao": 3,
+      "hash": "a76064a473e4f938cfaebd487c8a8aa55ff1ac77b3fccf7ee16ebae8931331dc"
+    },
+    {
+      "id": 975,
+      "tema": "Liquidez: compulsórios",
+      "nivel": 1,
+      "slides": [
+        11
+      ],
+      "transcricao": 3,
+      "hash": "5c3757ede1fb5cc04631bad77c09afa42e6823538bbc7db244837d0dbe7ed6f1"
+    },
+    {
+      "id": 976,
+      "tema": "Liquidez: compulsórios",
+      "nivel": 1,
+      "slides": [
+        11
+      ],
+      "transcricao": 3,
+      "hash": "d6d865d947324f55da2f6222cf6dc3c5e53fdc2f3efb7cc36abe047c273a2e16"
+    },
+    {
+      "id": 977,
+      "tema": "Liquidez: LFL e garantias",
+      "nivel": 1,
+      "slides": [
+        12,
+        13
+      ],
+      "transcricao": 3,
+      "hash": "d8ba50d1f58bb91cc8561805f048785fb27df3e613f54aa84d095c9a3765aaeb"
+    },
+    {
+      "id": 978,
+      "tema": "Liquidez: LFL e garantias",
+      "nivel": 1,
+      "slides": [
+        12,
+        13
+      ],
+      "transcricao": 3,
+      "hash": "279c49d667a9b7ce0e12bb9956e4d66bce0053e859e20bb2f334a25cea1a5aec"
+    },
+    {
+      "id": 979,
+      "tema": "Liquidez: LFL e garantias",
+      "nivel": 1,
+      "slides": [
+        12,
+        13
+      ],
+      "transcricao": 3,
+      "hash": "f52ecb19a760a62b743cd43f26d2e0674c374a1688d8182c51dc5b496835c5d9"
+    },
+    {
+      "id": 980,
+      "tema": "Liquidez: LFL e garantias",
+      "nivel": 1,
+      "slides": [
+        12,
+        13
+      ],
+      "transcricao": 3,
+      "hash": "c1870d32f91e9e1c07116a2fd5eddaa0e3bd0da6b80245054043c92fc5780eed"
+    },
+    {
+      "id": 981,
+      "tema": "Liquidez: LFL e garantias",
+      "nivel": 1,
+      "slides": [
+        12,
+        13
+      ],
+      "transcricao": 3,
+      "hash": "f49abb3a97888cc85bd1de50227e33edc8bd0b35687c2e0a67791443aa133068"
+    },
+    {
+      "id": 982,
+      "tema": "Liquidez: LFL e garantias",
+      "nivel": 1,
+      "slides": [
+        12,
+        13
+      ],
+      "transcricao": 3,
+      "hash": "71ffdd8422e70fc873b112d973477679d50545580b241158c627fccfe6b8637b"
+    },
+    {
+      "id": 983,
+      "tema": "Liquidez: LFL e garantias",
+      "nivel": 1,
+      "slides": [
+        12,
+        13
+      ],
+      "transcricao": 3,
+      "hash": "74e075c6fdc041f268c33a6834da4f52649f502da210d6b85483f71e03e363dd"
+    },
+    {
+      "id": 984,
+      "tema": "Liquidez: LFL e garantias",
+      "nivel": 1,
+      "slides": [
+        12,
+        13
+      ],
+      "transcricao": 3,
+      "hash": "18e5ccb2aa6d9875184d1e2562ad0ede75e31308ae06fb190433224b63b53fa7"
+    },
+    {
+      "id": 985,
+      "tema": "Estabilidade: Comef",
+      "nivel": 2,
+      "slides": [
+        9,
+        10
+      ],
+      "transcricao": 3,
+      "hash": "26cd52b38a6d41ba656d82343f2bab4308141a0f997197d043570d3b7f06dcba"
+    },
+    {
+      "id": 986,
+      "tema": "Estabilidade: ACCP e comunicação",
+      "nivel": 2,
+      "slides": [
+        9,
+        10
+      ],
+      "transcricao": 3,
+      "hash": "0e3e2bd32dbbe18a507351cfb435613337fe464bfaeb1fa09a00643cc9177086"
+    },
+    {
+      "id": 987,
+      "tema": "Liquidez: compulsórios",
+      "nivel": 2,
+      "slides": [
+        11
+      ],
+      "transcricao": 3,
+      "hash": "67485383c434a5110d2d8c5f8016e4b0ec4b8d27e01821cfd100a851405507a7"
+    },
+    {
+      "id": 988,
+      "tema": "Liquidez: LFL e garantias",
+      "nivel": 2,
+      "slides": [
+        12,
+        13
+      ],
+      "transcricao": 3,
+      "hash": "ecc48f7b2141916404f0d0de7063d683d2c7af9d66d622d2394233f142a98267"
+    },
+    {
+      "id": 989,
+      "tema": "Liquidez: LFL e garantias",
+      "nivel": 2,
+      "slides": [
+        12,
+        13
+      ],
+      "transcricao": 3,
+      "hash": "3c20d10ef5bbbcc0440b4b76215903f14a40e1581b30e909ac1151e2521f9034"
+    },
+    {
+      "id": 990,
+      "tema": "Estabilidade: ACCP e comunicação",
+      "nivel": 2,
+      "slides": [
+        9,
+        10
+      ],
+      "transcricao": 3,
+      "hash": "decd9121a8506321438094304ed05bafd67861894bc281b460544e62b091c459"
+    },
+    {
+      "id": 991,
+      "tema": "Estabilidade: Comef",
+      "nivel": 2,
+      "slides": [
+        9,
+        10
+      ],
+      "transcricao": 3,
+      "hash": "14d14ae8c41dafcac9ae7c8758ff21d669b5f5e59c0a3311904ef484b6e3e31d"
+    },
+    {
+      "id": 992,
+      "tema": "Liquidez: LFL e garantias",
+      "nivel": 2,
+      "slides": [
+        12,
+        13
+      ],
+      "transcricao": 3,
+      "hash": "952dabdf79afc7b0a929abab548d790d54ae8b7f02da349af8f4bbf753780f0b"
+    },
+    {
+      "id": 993,
+      "tema": "Liquidez: LFL e garantias",
+      "nivel": 3,
+      "slides": [
+        12,
+        13
+      ],
+      "transcricao": 3,
+      "hash": "a416ec8538949221820994e40ecebdc71dff16513ef9b161ef03ecee53c141e4"
+    },
+    {
+      "id": 994,
+      "tema": "Estabilidade: ACCP e comunicação",
+      "nivel": 3,
+      "slides": [
+        9,
+        10
+      ],
+      "transcricao": 3,
+      "hash": "be4e6915fac2bcc21580483db863e85f1ee039fdc37489731a772a61f191a253"
+    },
+    {
+      "id": 995,
+      "tema": "Estabilidade: Comef",
+      "nivel": 3,
+      "slides": [
+        9,
+        10
+      ],
+      "transcricao": 3,
+      "hash": "37fd7f2d3449dd6034de15ef97112c6f1c37a00343e31a3fca4f9986c18e3e42"
+    },
+    {
+      "id": 996,
+      "tema": "Liquidez: compulsórios",
+      "nivel": 3,
+      "slides": [
+        11
+      ],
+      "transcricao": 3,
+      "hash": "faf3a21db399d58cae689d4210674925ac56dcb8d19fbd88c8f85caf3e61780b"
+    },
+    {
+      "id": 997,
+      "tema": "Liquidez: LFL e garantias",
+      "nivel": 3,
+      "slides": [
+        12,
+        13
+      ],
+      "transcricao": 3,
+      "hash": "5c244d2b4cbe8f45e0a73be8755edeae24c7f3131d91cc4d9f32754f2fd10117"
+    },
+    {
+      "id": 998,
+      "tema": "Estabilidade: ACCP e comunicação",
+      "nivel": 3,
+      "slides": [
+        9,
+        10
+      ],
+      "transcricao": 3,
+      "hash": "522c58ba598e78c5b7964ce09c9b1394beebfca8f8e8dd9a82ffaa6a64501d5d"
+    },
+    {
+      "id": 999,
+      "tema": "Liquidez: LFL e garantias",
+      "nivel": 3,
+      "slides": [
+        12,
+        13
+      ],
+      "transcricao": 3,
+      "hash": "2e075375cde70a36065d3cb6f0f680862bd68c5333e2874fc3843437b6af9147"
+    },
+    {
+      "id": 1000,
+      "tema": "Estabilidade: Comef",
+      "nivel": 3,
+      "slides": [
+        9,
+        10
+      ],
+      "transcricao": 3,
+      "hash": "b189ab34da15d85b2fe69d0e3619e04927c77b37397bcf0d3ebab1c1b3db910e"
+    }
+  ],
+  "bate_pronto": [
+    {
+      "id": 100451,
+      "fonte_Q": 901,
+      "hash": "9b780b3f1534965555e02ff390c9c7e3801d886edb5a99e127a5e9c7fc156186"
+    },
+    {
+      "id": 100452,
+      "fonte_Q": 902,
+      "hash": "b5d0606945b8e1239069c68307d02c86fb0b7f73972327b9d8ad1e1c97589a17"
+    },
+    {
+      "id": 100453,
+      "fonte_Q": 903,
+      "hash": "0b83b2a7afc944d307b8af63e120c132ea324498cde29afe89e8b9d582a6ce8b"
+    },
+    {
+      "id": 100454,
+      "fonte_Q": 904,
+      "hash": "a012cc9fc063ee4ca277af37c707a96d66b128c360b5aaa8a8d9e0cc6167a14f"
+    },
+    {
+      "id": 100455,
+      "fonte_Q": 905,
+      "hash": "ebe4094dca07cfab2252071eb4ec48161e51d0236fa544e58f54ed1cbd700704"
+    },
+    {
+      "id": 100456,
+      "fonte_Q": 906,
+      "hash": "70553a11aa953172ff382da8fba4fc1aaa902ea8b4dc4769d318ef81b281f0fc"
+    },
+    {
+      "id": 100457,
+      "fonte_Q": 907,
+      "hash": "469c84dc08b3cbea405a4f15a2bf69536f1c89bb00da9321860b7a9501a96f00"
+    },
+    {
+      "id": 100458,
+      "fonte_Q": 908,
+      "hash": "6330e293f09d91364f87159436d087bfd8799026d9d9cb090a72a8bb6808bcbe"
+    },
+    {
+      "id": 100459,
+      "fonte_Q": 909,
+      "hash": "b2ada58c875f0ba2c826eaaa845c16364d3aa00375ec7e011f00cc953ffe478c"
+    },
+    {
+      "id": 100460,
+      "fonte_Q": 910,
+      "hash": "77e5f10105036391edc6f6bd1e6acd7a045702f9e86b87b83f5573db771831af"
+    },
+    {
+      "id": 100461,
+      "fonte_Q": 911,
+      "hash": "c45ec7702138d00366b04f94a8cd52f19abea13c80429a5fe0119b8275a1e3dd"
+    },
+    {
+      "id": 100462,
+      "fonte_Q": 912,
+      "hash": "62bc052774d65b6bf94d09342cbc86da3cae8468e9e2ed996a7caabd745ccfea"
+    },
+    {
+      "id": 100463,
+      "fonte_Q": 917,
+      "hash": "780b4c647f577dcd68e2db1a1442a170210be52fb90ebc9650fcaf7ed3e0c3d4"
+    },
+    {
+      "id": 100464,
+      "fonte_Q": 921,
+      "hash": "9f77a8e79047a1fc8529a58d936963bb599dd9fa00861ad48a66c4fd17d9ac76"
+    },
+    {
+      "id": 100465,
+      "fonte_Q": 924,
+      "hash": "2e5ff94c871a79bc56b10abcc7b00ccca58365eff084cbd1077322079b3e13b3"
+    },
+    {
+      "id": 100466,
+      "fonte_Q": 931,
+      "hash": "17a6a86e03edaab6007ca50e57aee6da553539956c4d5e9473f28434425691c5"
+    },
+    {
+      "id": 100467,
+      "fonte_Q": 932,
+      "hash": "74e352fc54d0dc942072b2e546c137adba52e675f920342e8f560cf443b1d5b0"
+    },
+    {
+      "id": 100468,
+      "fonte_Q": 933,
+      "hash": "8ded6886e4cb31e2bc7b53426a244cdf363c03ac17dcce94cee16f61f015bf20"
+    },
+    {
+      "id": 100469,
+      "fonte_Q": 934,
+      "hash": "a5f1d07b4c64e3d976226298579d02cb1ca22e2173e094086a6566b44e6cc343"
+    },
+    {
+      "id": 100470,
+      "fonte_Q": 935,
+      "hash": "8d861a25bb2b180dad9053196e94f64b98f38c9b3ac508a31f8c4569432e916e"
+    },
+    {
+      "id": 100471,
+      "fonte_Q": 936,
+      "hash": "ebc97b2ea9cfd66dc45010b63f6d6aed59fe9b1ab016511f7fa949146cc808ab"
+    },
+    {
+      "id": 100472,
+      "fonte_Q": 937,
+      "hash": "8b79fa9ce45528b6417dac167b01cc80a36c9827156443f7fca6c97d6d9b086e"
+    },
+    {
+      "id": 100473,
+      "fonte_Q": 939,
+      "hash": "6db3f8ff2723d46b2c4a723ee5badec41ed294ed48d0d5dd15439258cbed36d4"
+    },
+    {
+      "id": 100474,
+      "fonte_Q": 942,
+      "hash": "9e1340a2a061c38db92ce22a79d103dcf62efad87e1489660a9d3b2ae808c4ed"
+    },
+    {
+      "id": 100475,
+      "fonte_Q": 943,
+      "hash": "93f4032fdc010e2ddabcace5f682682a8c2b59595af7a47cc0b74c2651ad116a"
+    },
+    {
+      "id": 100476,
+      "fonte_Q": 944,
+      "hash": "93a79cbdad29bbf48d6d326a377e1118bd3b1674b6b182c36ed414f20dc53d0e"
+    },
+    {
+      "id": 100477,
+      "fonte_Q": 945,
+      "hash": "34d4a235b52ca503d65ad3f82d4a37cde78d1f61b11b5d7b2971b8ee5d860423"
+    },
+    {
+      "id": 100478,
+      "fonte_Q": 946,
+      "hash": "9cff4b102aeb362f44885365dd2dcd0a050be7f0d11d3e07613897e2b2aaf89b"
+    },
+    {
+      "id": 100479,
+      "fonte_Q": 948,
+      "hash": "bc4c515f22d6dc7fdaaae03e92406e7ba800c45b0b6661d0b43ca15426e2df84"
+    },
+    {
+      "id": 100480,
+      "fonte_Q": 949,
+      "hash": "20c99e2cf114e352084602e911ce49cb17cc5b14048c8b7a8c77b1f848e75a89"
+    },
+    {
+      "id": 100481,
+      "fonte_Q": 951,
+      "hash": "b5838479c28168db9c87a238f315e44cba660d53026bb05bb73ccd12394845ed"
+    },
+    {
+      "id": 100482,
+      "fonte_Q": 961,
+      "hash": "9f0c695e37730ee4028e22d8b21449e5f6f5abb501be748e198f18ac5d875450"
+    },
+    {
+      "id": 100483,
+      "fonte_Q": 962,
+      "hash": "d61c45524166e06712301e1dacebe3c45d2ea22238c54b2a3baf8435358abe77"
+    },
+    {
+      "id": 100484,
+      "fonte_Q": 969,
+      "hash": "30c48feccc8711b1b580e5147a2e7cee3a95371679ae540862cc703fbf77a3c6"
+    },
+    {
+      "id": 100485,
+      "fonte_Q": 970,
+      "hash": "b70ca9e8a20958c2f2f3faaf890e5481a880d288fbd7b1b10be6bb672d0077bf"
+    },
+    {
+      "id": 100486,
+      "fonte_Q": 971,
+      "hash": "c590e4d1f1d05576c06415b1596db8a8dbe2c2c1a7c0833df99c50cbbbbbde54"
+    },
+    {
+      "id": 100487,
+      "fonte_Q": 972,
+      "hash": "cac61a4a10819b40751e6ec68368e966ffe7219016580ec796250c90d1bee227"
+    },
+    {
+      "id": 100488,
+      "fonte_Q": 965,
+      "hash": "7480d3e480288878ad8e83d6b9dc727481908b74a8ccad3e2b8c735230277d79"
+    },
+    {
+      "id": 100489,
+      "fonte_Q": 966,
+      "hash": "f269228f0612a5dd8225b6651f0bcf95beebb2563a03acf4ee86d966df5287e1"
+    },
+    {
+      "id": 100490,
+      "fonte_Q": 973,
+      "hash": "f55b80a154c89ebab863c7209b52dac0313002ec7a203617444bea60248ce69c"
+    },
+    {
+      "id": 100491,
+      "fonte_Q": 974,
+      "hash": "94cca7c2fd06bb70fc6fc8f6c52c5a75a34ead2e1b679726c6f6e61d9aa73d25"
+    },
+    {
+      "id": 100492,
+      "fonte_Q": 975,
+      "hash": "2bdf8f630c1147e8faae742f1596ea1f839f442be315133faee54c6bb8f7c6e6"
+    },
+    {
+      "id": 100493,
+      "fonte_Q": 976,
+      "hash": "4b14cf9e8dfda6018970feb8d6fc64b5243d7318f7a5a0491acce9ac44e1cb7f"
+    },
+    {
+      "id": 100494,
+      "fonte_Q": 977,
+      "hash": "973334f1727adcfd523ee692551dc7beb0816933fbaec3563f12bea5d47f5a1c"
+    },
+    {
+      "id": 100495,
+      "fonte_Q": 978,
+      "hash": "e56b71154f46697d83910e14540d5ba0794f84b716fa81ac2a777183817a312a"
+    },
+    {
+      "id": 100496,
+      "fonte_Q": 980,
+      "hash": "be108ad1b9142cd9077cad4c9d678833731cfb6e04721cf17dca37a6c1516a1c"
+    },
+    {
+      "id": 100497,
+      "fonte_Q": 981,
+      "hash": "bd25a0e9b8d90c6a992279cfe2602f3dde1ff1c1f9e316faa945e84335002d62"
+    },
+    {
+      "id": 100498,
+      "fonte_Q": 982,
+      "hash": "ff8f5be0020d7b1ef2b5f7e66c7cb7f686a5fb455f2e62647b1bb45cfcf3b018"
+    },
+    {
+      "id": 100499,
+      "fonte_Q": 984,
+      "hash": "0444252ed691147d508420cbbbe80f22cc5248f8e8ca3fc87f00d943386b2812"
+    },
+    {
+      "id": 100500,
+      "fonte_Q": 961,
+      "hash": "97061ccba9e8bcf4192dcee907276ac09c829c6f2e5117a22da204d60516e87d"
+    }
+  ],
+  "cobertura": [
+    {
+      "conteudo": "Funções, quatro mercados, exemplos e primário/secundário",
+      "slides": [
+        1,
+        2,
+        3
+      ],
+      "transcricao": 1
+    },
+    {
+      "conteudo": "Registro, compensação, liquidação, risco e CCP",
+      "slides": [
+        4
+      ],
+      "transcricao": 2
+    },
+    {
+      "conteudo": "Selic e comparação com ações",
+      "slides": [
+        5,
+        6
+      ],
+      "transcricao": 2
+    },
+    {
+      "conteudo": "Cetip UTVM e Câmara B3",
+      "slides": [
+        7,
+        8
+      ],
+      "transcricao": 2
+    },
+    {
+      "conteudo": "Comef, ACCP, composição, reuniões e comunicação",
+      "slides": [
+        9,
+        10
+      ],
+      "transcricao": 3
+    },
+    {
+      "conteudo": "Compulsórios, expansão escritural e limites do modelo",
+      "slides": [
+        11
+      ],
+      "transcricao": 3
+    },
+    {
+      "conteudo": "Linhas, prazos, acesso, classes e cestas",
+      "slides": [
+        12,
+        13
+      ],
+      "transcricao": 3
+    }
+  ],
+  "distribuicao": {
+    "total": 100,
+    "facil": 20,
+    "medio": 40,
+    "dificil": 20,
+    "hardcore": 20,
+    "bate_pronto": 50,
+    "blocos": [
+      {
+        "id": 1,
+        "questoes": 30,
+        "bate_pronto": 15
+      },
+      {
+        "id": 2,
+        "questoes": 30,
+        "bate_pronto": 15
+      },
+      {
+        "id": 3,
+        "questoes": 40,
+        "bate_pronto": 20
+      }
+    ],
+    "criterio": "Cobertura pedagógica das fontes, não previsão de incidência oficial na prova."
+  },
+  "preservacao": {
+    "hash_primeiras_900": "2b929c8ae2db4582fdee5db933bfaf2d0f91f87b8ed35992bac6da8f31180f99",
+    "hash_primeiros_450_bp": "19a5bacd74babe5f68b6897dcaf2ff5332e3bdc2a585abd6980e886c181f8029",
+    "hash_aulas_1_a_9": "e74396d768329b0574828410b7ffb7e373d05d0e2efba02eadf0ad0a15040b29"
+  },
+  "siglas_adiadas": [
+    934,
+    935,
+    937,
+    939,
+    942,
+    943,
+    944,
+    948,
+    949,
+    953,
+    961,
+    963,
+    964,
+    967,
+    971,
+    977,
+    978,
+    980,
+    981,
+    982,
+    986,
+    988,
+    989,
+    990,
+    993,
+    994,
+    997,
+    999,
+    100468,
+    100469,
+    100470,
+    100472,
+    100473,
+    100474,
+    100475,
+    100476,
+    100479,
+    100480,
+    100481,
+    100482,
+    100486,
+    100494,
+    100495,
+    100496,
+    100497,
+    100498,
+    100499,
+    100500
+  ],
+  "decisoes": [
+    "Selic não atua como CCP: slide 5 e explicação posterior resolvem frase contraditória da transcrição.",
+    "Liquidez é facilidade de conversão sem perda significativa, não apenas dinheiro físico.",
+    "Crédito e capitais não são definidos exclusivamente pelo prazo; capitalização direta não elimina custos de distribuição.",
+    "Primário de capitais inclui novas emissões de companhia já listada; câmbio usa critério próprio de partes.",
+    "DVP e CCP são mecanismos distintos; registro não elimina risco do emissor.",
+    "D+2 foi mantido como referência de ações descritas, não regra universal; não se generaliza LBTR a todo serviço B3.",
+    "ACCP normalizado como Adicional Contracíclico de Capital Principal; distinto de compulsório.",
+    "10% é hipótese didática; sem compulsório não se conclui criação ilimitada de crédito real.",
+    "Somente duas linhas descritas (LLI/LLT), corrigindo menção transcrita a três; cestas A/B, não sexta.",
+    "Composição do Comef identifica presidente e diretores do BACEN, sem inventar cargos de uma instituição externa.",
+    "Não foram criadas perguntas que pedem somente o nome por extenso de uma sigla; expansões potencialmente reveladoras adiadas por ID.",
+    "100 enunciados e 400 feedbacks regulares, 50 enunciados e 100 feedbacks Bate-pronto revisados individualmente contra os conteúdos das fontes.",
+    "Releitura editorial substituiu distratores alheios ao tema e enunciados que apenas descreviam a própria alternativa. Casos cambiais passam a cobrar classificação; questões integradas usam trocas plausíveis de regras e competências."
+  ],
+  "consulta_normativa": {
+    "certificacao_de_vigencia": false,
+    "escopo": "Conferência cruzada dos documentos fornecidos; consulta independente às páginas oficiais do BC indisponível por HTTP 403 do proxy.",
+    "urls_tentadas": [
+      "https://www.bcb.gov.br/estabilidadefinanceira/comef",
+      "https://www.bcb.gov.br/estabilidadefinanceira/linhasfinanceirasliquidez"
+    ]
+  },
+  "fontes": [
+    {
+      "arquivo": "Screenshot_1 (3).pdf",
+      "sha256": "b1b2daddcf2ff125fd017891675b840dbaf2052793aab787f0adca546468f9c4"
+    },
+    {
+      "arquivo": "Texto colado.txt",
+      "sha256": "ffd09012bced0f74e43950ba17fc6b40a1be63f892124430fbeb0727a67fb8e6"
+    }
+  ],
+  "auditoria_de_tamanho": {
+    "normal": {
+      "questions": 80,
+      "characters": {
+        "correct_strictly_longest": 25,
+        "correct_strictly_shortest": 20,
+        "correct_tied_for_longest": 3,
+        "rank_strategy_rates": [
+          0.28541666666666665,
+          0.17916666666666664,
+          0.20416666666666666,
+          0.33125
+        ]
+      },
+      "words": {
+        "correct_strictly_longest": 6,
+        "correct_strictly_shortest": 17,
+        "correct_tied_for_longest": 22,
+        "rank_strategy_rates": [
+          0.3427083333333333,
+          0.23437500000000006,
+          0.246875,
+          0.1760416666666667
+        ]
+      },
+      "correct_over_50_percent_longer_than_all_distractors": 0
+    },
+    "hardcore": {
+      "questions": 20,
+      "characters": {
+        "correct_strictly_longest": 7,
+        "correct_strictly_shortest": 3,
+        "correct_tied_for_longest": 2,
+        "rank_strategy_rates": [
+          0.225,
+          0.125,
+          0.25,
+          0.4
+        ]
+      },
+      "words": {
+        "correct_strictly_longest": 4,
+        "correct_strictly_shortest": 2,
+        "correct_tied_for_longest": 9,
+        "rank_strategy_rates": [
+          0.19583333333333336,
+          0.22083333333333335,
+          0.2208333333333333,
+          0.3625
+        ]
+      },
+      "correct_over_50_percent_longer_than_all_distractors": 0
+    },
+    "normal_by_lesson": {
+      "10": {
+        "questions": 80,
+        "characters": {
+          "correct_strictly_longest": 25,
+          "correct_strictly_shortest": 20,
+          "correct_tied_for_longest": 3,
+          "rank_strategy_rates": [
+            0.28541666666666665,
+            0.17916666666666664,
+            0.20416666666666666,
+            0.33125
+          ]
+        },
+        "words": {
+          "correct_strictly_longest": 6,
+          "correct_strictly_shortest": 17,
+          "correct_tied_for_longest": 22,
+          "rank_strategy_rates": [
+            0.3427083333333333,
+            0.23437500000000006,
+            0.246875,
+            0.1760416666666667
+          ]
+        },
+        "correct_over_50_percent_longer_than_all_distractors": 0
+      }
+    },
+    "limite": "Heurística editorial; não demonstra ausência de pistas nem certifica dificuldade."
+  },
+  "validacao": {
+    "estrutura_banco": "6 testes aprovados; 1000 registros regulares válidos.",
+    "auditoria_alternativas": "Auditoria de tamanho e 5 testes de regressão aprovados.",
+    "regressoes": "92 testes de conteúdo e navegador aprovados na execução final.",
+    "fluxos_completos": "76 fluxos exercitados: 75 passaram na execução integral; o teste de organogramas foi atualizado para incluir o Comef e reexecutado com sucesso.",
+    "aula_10": "9 testes específicos aprovados; filtros reais de material, quadro, organograma, proporções, feedbacks e preservação.",
+    "desktop": "1024, 1280 e 1920 px; temas claro e escuro; inspeção visual dos mapas e quadro.",
+    "preservacao": "Comparação direta com HTML anterior: Q 1–900, BP 100001–100450, AL 1–9 e MAT 7–9 intactos.",
+    "limite": "Automação valida contratos e comportamento; revisão editorial das fontes não é garantia absoluta de ausência de erros ou certificação normativa."
+  }
+}

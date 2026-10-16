@@ -55,7 +55,9 @@ class ClueBrowser(unittest.TestCase):
 
     def test_all_editorial_guards_show_definitions_only_after_answer(self):
         ids=self.page.evaluate('QUESTION_ACRONYM_CLUES')
-        self.assertEqual(ids,json.loads((ROOT/'docs/revisao-pistas-siglas.json').read_text())['expansao_adiada'])
+        historical=json.loads((ROOT/'docs/revisao-pistas-siglas.json').read_text())['expansao_adiada']
+        authored=json.loads((ROOT/'docs/aula-10-cobertura.json').read_text())['siglas_adiadas']
+        self.assertEqual(ids,sorted(set(historical+authored)))
         result=self.page.evaluate('''()=>{
           const seen=[];
           for(const id of QUESTION_ACRONYM_CLUES){

@@ -1,7 +1,7 @@
 # Painel de estudos CPA
 
 Painel de estudos e simulados em português, importado do arquivo
-`Painel de estudos CPA.html`. O banco contém 700 perguntas; as 600 anteriores
+`Painel de estudos CPA.html`. O banco contém 1.000 perguntas e 500 Bate-pronto; as 900 perguntas anteriores
 mantêm seus IDs, temas e dificuldades. A versão atual contém feedback específico
 para cada alternativa e uma revisão de redação para reduzir pistas de tamanho e melhorar
 a plausibilidade das opções. As correções estão em
@@ -51,13 +51,16 @@ local permanece porque a origem do site não muda.
   revisão e última aula empilhadas na lateral, com textos e controles legíveis.
 - Botão de lâmpada fixo para alternar claro/escuro em qualquer tela, com escolha
   salva neste navegador. Sem escolha salva, acompanha o tema do dispositivo.
-- 700 questões: 100 em cada uma das 7 aulas, sendo 80 de estudo e 20 Hardcore.
+- 1.000 questões: 100 em cada uma das 10 aulas, sendo 80 de estudo e 20 Hardcore.
+- 500 Bate-pronto: 50 conceitos diretos com duas alternativas por aula.
+- [Aula 10](docs/aula-10.md): mercados financeiros, clearing houses e estabilidade/liquidez,
+  com três blocos, materiais visuais e quadro geral comparativo.
 - Aula 6 identificada como **Operadores Monetários**, mantendo os conteúdos e IDs.
 - Aula 7: **Operadores Não Monetários**, com 18 participantes em quatro blocos.
   A leitura, os materiais e a prática podem abranger toda a aula ou um bloco.
   Na trilha, o filtro fica acima dos números, resumo, dicas e pegadinhas; trocar
   de bloco mantém abertas as seções em consulta.
-- 140 fáceis, 280 médias, 140 difíceis e 140 Hardcore.
+- 200 fáceis, 400 médias, 200 difíceis e 200 Hardcore.
 - Estudo com dicas, eliminação de alternativas e correção imediata.
 - Feedback da resposta correta e das três alternativas incorretas após responder,
   tanto em Estudo quanto em Hardcore, incluindo prática diária e por aula.
@@ -166,7 +169,7 @@ O teste inicia e encerra seu próprio servidor local e usa um histórico isolado
 por caso. Ele detecta Chromium no sistema; para informar outro executável,
 use a variável `CHROMIUM_PATH`.
 
-Os casos verificam o banco de questões, os materiais das sete aulas, os três
+Os casos verificam o banco de questões, os materiais das dez aulas, os três
 modos de prática, ajudas, revisão de erros, filtros, estudo diário, persistência,
 limpeza do histórico e um fluxo em tela móvel. Também exercitam as quatro escolhas
 de todas as questões para conferir a associação entre alternativa embaralhada e

@@ -816,7 +816,7 @@ class PainelCPA(unittest.TestCase):
 
     def test_26_map_structure_has_blue_titles_and_identified_leaders(self):
         expected_orgs = {2: ["CMN", "Comoc"], 3: ["BACEN"], 4: ["CVM"],
-                         5: ["CNSP", "Susep", "CNPC", "Previc"]}
+                         5: ["CNSP", "Susep", "CNPC", "Previc"], 10: ["Comef"]}
         for theme in ["light", "dark"]:
             self.page.evaluate("theme=>document.documentElement.dataset.theme=theme", theme)
             for lesson in self.lesson_numbers():
@@ -837,7 +837,8 @@ class PainelCPA(unittest.TestCase):
                     "CNSP": "Representante do Ministério da Fazenda — presidente do CNSP",
                     "Susep": "Superintendente da Susep",
                     "CNPC": "Ministro da Previdência Social — presidente do CNPC",
-                    "Previc": "Superintendente da Previc"}
+                    "Previc": "Superintendente da Previc",
+                    "Comef": "Presidente do BACEN — presidente do Comef"}
                 self.assertEqual(charts.locator(".collegiate-leader span").all_text_contents(),
                                  [leader_labels[organ] for organ in expected_orgs.get(lesson, [])])
                 for chart in charts.all():

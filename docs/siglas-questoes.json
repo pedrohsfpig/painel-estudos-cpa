@@ -640,6 +640,167 @@
         "Ltda."
       ],
       "variants": []
+    },
+    {
+      "id": "comef",
+      "name": "Comitê de Estabilidade Financeira",
+      "aliases": [
+        "Comef"
+      ],
+      "variants": []
+    },
+    {
+      "id": "accp",
+      "name": "Adicional Contracíclico de Capital Principal",
+      "aliases": [
+        "ACCP Brasil",
+        "ACCP"
+      ],
+      "variants": []
+    },
+    {
+      "id": "ref",
+      "name": "Relatório de Estabilidade Financeira",
+      "aliases": [
+        "REF"
+      ],
+      "variants": []
+    },
+    {
+      "id": "lfl",
+      "name": "Linhas Financeiras de Liquidez",
+      "aliases": [
+        "LFL"
+      ],
+      "variants": []
+    },
+    {
+      "id": "lli",
+      "name": "Linha de Liquidez Imediata",
+      "aliases": [
+        "LLI"
+      ],
+      "variants": []
+    },
+    {
+      "id": "llt",
+      "name": "Linha de Liquidez a Termo",
+      "aliases": [
+        "LLT"
+      ],
+      "variants": []
+    },
+    {
+      "id": "dvp",
+      "name": "Delivery versus Payment — entrega contra pagamento",
+      "aliases": [
+        "DVP"
+      ],
+      "variants": []
+    },
+    {
+      "id": "otc",
+      "name": "Over the Counter — mercado de balcão",
+      "aliases": [
+        "OTC"
+      ],
+      "variants": []
+    },
+    {
+      "id": "cdi",
+      "name": "Certificado de Depósito Interbancário",
+      "aliases": [
+        "CDI"
+      ],
+      "variants": []
+    },
+    {
+      "id": "di",
+      "name": "Depósito Interfinanceiro",
+      "aliases": [
+        "DI"
+      ],
+      "variants": []
+    },
+    {
+      "id": "tpf",
+      "name": "Título Público Federal",
+      "aliases": [
+        "TPF"
+      ],
+      "variants": []
+    },
+    {
+      "id": "lf",
+      "name": "Letra Financeira",
+      "aliases": [
+        "LF"
+      ],
+      "variants": []
+    },
+    {
+      "id": "cri",
+      "name": "Certificado de Recebíveis Imobiliários",
+      "aliases": [
+        "CRI"
+      ],
+      "variants": []
+    },
+    {
+      "id": "cra",
+      "name": "Certificado de Recebíveis do Agronegócio",
+      "aliases": [
+        "CRA"
+      ],
+      "variants": []
+    },
+    {
+      "id": "ccb",
+      "name": "Cédula de Crédito Bancário",
+      "aliases": [
+        "CCB"
+      ],
+      "variants": []
+    },
+    {
+      "id": "ltn",
+      "name": "Letra do Tesouro Nacional",
+      "aliases": [
+        "LTN"
+      ],
+      "variants": []
+    },
+    {
+      "id": "lft",
+      "name": "Letra Financeira do Tesouro",
+      "aliases": [
+        "LFT"
+      ],
+      "variants": []
+    },
+    {
+      "id": "bdr",
+      "name": "Brazilian Depositary Receipt — certificado de depósito de valores mobiliários",
+      "aliases": [
+        "BDR"
+      ],
+      "variants": []
+    },
+    {
+      "id": "etf",
+      "name": "Exchange Traded Fund — fundo de índice",
+      "aliases": [
+        "ETF"
+      ],
+      "variants": []
+    },
+    {
+      "id": "utvm",
+      "name": "Unidade de Títulos e Valores Mobiliários",
+      "aliases": [
+        "UTVM"
+      ],
+      "variants": []
     }
   ]
 }

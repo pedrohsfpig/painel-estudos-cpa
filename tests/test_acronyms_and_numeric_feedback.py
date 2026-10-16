@@ -108,7 +108,7 @@ class AcronymPresentation(unittest.TestCase):
           });
           return {total:bank.length,changed,deferred,preserved:before===JSON.stringify([Q,BP])};
         }''')
-        self.assertEqual(result['total'],1350);self.assertGreater(result['changed'],500)
+        self.assertEqual(result['total'],self.page.evaluate('Q.length+BP_Q.length'));self.assertGreater(result['changed'],500)
         self.assertEqual(result['deferred'],self.page.evaluate('QUESTION_ACRONYM_CLUES'));self.assertTrue(result['preserved'])
 
     def test_every_mode_history_and_review_use_original_option_identity(self):
