@@ -863,8 +863,8 @@ em Estudo e Hardcore. Simulado e Bate-pronto continuam sem o quadro.
   navegação. Execute `python3 tests/test_question_navigation.py`, as regressões de
   prática/diário/Bate-pronto e `python3 tests/smoke.py` antes de publicar.
 
-- Em PCs largos, aproveite a margem livre da área de estudo: o quadro numerado
-  ocupa a largura disponível à esquerda, até 400 px, com células e números
-  proporcionais. Não mantenha a grade estreita centralizada deixando uma grande
-  faixa vazia à esquerda. A expansão é específica de sessões com o quadro;
-  preserve a área de leitura e a navegação principal do sistema.
+- Preferência visual corrigida pelo usuário: quadro compacto no canto esquerdo,
+  apenas um pouco maior que a primeira versão (coluna de 184 px, números de 15 px;
+  coluna menor nas janelas estreitas). Não volte às células grandes da versão de
+  400 px. Em telas largas, centralize a área da questão com espaço simétrico à
+  direita, sem deixar o quadro empurrar a leitura para o centro-direita.

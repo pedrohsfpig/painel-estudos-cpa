@@ -58,20 +58,22 @@ classificação de dificuldade ou o funcionamento de Simulado e Bate-pronto.
 As regressões gerais verificam os fluxos anteriores, incluindo resultado, revisão,
 feedbacks, diário, simulados, Bate-pronto e materiais.
 
-Validação desta entrega: nove testes específicos aprovados, incluídos na bateria
+Validação inicial da navegação: nove testes específicos aprovados, incluídos na bateria
 completa de 101 regressões aprovadas; os 76 fluxos gerais de navegador também
 passaram. Os temas claro/escuro foram inspecionados visualmente. Comparação direta
 com a versão anterior confirmou Q, BP, AL, MAT, glossário e registro de proteção
 de siglas intactos.
 
 
-Ajuste de espaço no computador: a área de questões usa toda a largura disponível
-do espaço de trabalho, e a grade expande para a margem livre à esquerda, até
-400 px. Os botões crescem com a coluna e os números chegam a 20 px. Em janelas
-menores, a coluna continua compacta para preservar a leitura da questão. O ajuste
-não altera o JavaScript nem o estado da sessão.
+Preferência visual atual: quadro compacto e alinhado ao canto esquerdo do espaço
+de trabalho. A coluna usa 184 px (136 px em janelas mais estreitas), com células
+apenas um pouco maiores que na primeira versão e números de 15 px. Em telas de
+1500 px ou mais, uma coluna vazia simétrica à direita centraliza a área de leitura,
+limitada a 960 px. O quadro permanece clicável, com as cores e a rolagem anteriores.
+A versão de células grandes e coluna de até 400 px foi substituída a pedido do
+usuário. O ajuste é somente de CSS; JavaScript, questões e estado permanecem iguais.
 
-A ampliação foi conferida visualmente com dez posições em uma tela de 1920 px,
-nos dois temas. Nove testes de navegação e os 76 fluxos gerais passaram após o
-ajuste. A verificação de espaço exige alinhamento com a borda do conteúdo e
-células maiores em telas largas, preservando a leitura nas larguras menores.
+O ajuste compacto passou nos nove testes de navegação e nos 76 fluxos gerais.
+A inspeção visual e as medições confirmaram o quadro no canto esquerdo, células
+pequenas e a questão centralizada nas larguras de 1585 e 1920 px, nos dois temas.
+Os scripts foram comparados com a versão anterior e permaneceram idênticos.

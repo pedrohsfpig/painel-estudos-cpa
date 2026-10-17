@@ -146,18 +146,20 @@ class QuestionNavigation(unittest.TestCase):
    self.assertEqual(self.page.evaluate('H'),history)
  def test_desktop_layout_colors_keyboard_and_long_grid_scroll(self):
   for theme in ['light','dark']:
-   for width,height in [(1024,768),(1280,900),(1440,900),(1920,1080)]:
+   for width,height in [(1024,768),(1280,900),(1440,900),(1585,900),(1920,1080)]:
     self.page.set_viewport_size(dict(width=width,height=height))
     self.page.evaluate('theme=>{document.documentElement.dataset.theme=theme;begin(Q.flatMap((q,i)=>q[2]<3?[i+1]:[]).slice(0,40),"e")}',theme)
     self.jump(3);self.answer(True);self.jump(1);self.answer(False)
     nav=self.page.locator('.question-navigator').bounding_box();stage=self.page.locator('.question-stage').bounding_box()
     self.assertLess(nav['x']+nav['width'],stage['x'])
-    if width==1920:
+    if width>=1500:
      inner=self.page.locator('.main-inner').bounding_box()
      self.assertAlmostEqual(nav['x'],inner['x'],delta=1)
-     self.assertGreaterEqual(nav['width'],380)
-     self.assertGreaterEqual(self.cell(0).bounding_box()['width'],80)
-     self.assertEqual(self.cell(0).evaluate('e=>parseFloat(getComputedStyle(e).fontSize)'),20)
+     self.assertAlmostEqual(nav['width'],184,delta=1)
+     self.assertGreaterEqual(self.cell(0).bounding_box()['width'],34)
+     self.assertLessEqual(self.cell(0).bounding_box()['width'],38)
+     self.assertEqual(self.cell(0).evaluate('e=>parseFloat(getComputedStyle(e).fontSize)'),15)
+     self.assertAlmostEqual(stage['x']+stage['width']/2,inner['x']+inner['width']/2,delta=1)
     self.assertTrue(self.page.evaluate('document.documentElement.scrollWidth<=innerWidth+1'))
     colors=[self.cell(i).evaluate('e=>getComputedStyle(e).backgroundColor') for i in [0,1,3,4]]
     self.assertEqual(len(set(colors)),4)
