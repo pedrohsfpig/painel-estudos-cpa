@@ -152,6 +152,12 @@ class QuestionNavigation(unittest.TestCase):
     self.jump(3);self.answer(True);self.jump(1);self.answer(False)
     nav=self.page.locator('.question-navigator').bounding_box();stage=self.page.locator('.question-stage').bounding_box()
     self.assertLess(nav['x']+nav['width'],stage['x'])
+    if width==1920:
+     inner=self.page.locator('.main-inner').bounding_box()
+     self.assertAlmostEqual(nav['x'],inner['x'],delta=1)
+     self.assertGreaterEqual(nav['width'],380)
+     self.assertGreaterEqual(self.cell(0).bounding_box()['width'],80)
+     self.assertEqual(self.cell(0).evaluate('e=>parseFloat(getComputedStyle(e).fontSize)'),20)
     self.assertTrue(self.page.evaluate('document.documentElement.scrollWidth<=innerWidth+1'))
     colors=[self.cell(i).evaluate('e=>getComputedStyle(e).backgroundColor') for i in [0,1,3,4]]
     self.assertEqual(len(set(colors)),4)

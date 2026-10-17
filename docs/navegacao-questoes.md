@@ -63,3 +63,15 @@ completa de 101 regressões aprovadas; os 76 fluxos gerais de navegador também
 passaram. Os temas claro/escuro foram inspecionados visualmente. Comparação direta
 com a versão anterior confirmou Q, BP, AL, MAT, glossário e registro de proteção
 de siglas intactos.
+
+
+Ajuste de espaço no computador: a área de questões usa toda a largura disponível
+do espaço de trabalho, e a grade expande para a margem livre à esquerda, até
+400 px. Os botões crescem com a coluna e os números chegam a 20 px. Em janelas
+menores, a coluna continua compacta para preservar a leitura da questão. O ajuste
+não altera o JavaScript nem o estado da sessão.
+
+A ampliação foi conferida visualmente com dez posições em uma tela de 1920 px,
+nos dois temas. Nove testes de navegação e os 76 fluxos gerais passaram após o
+ajuste. A verificação de espaço exige alinhamento com a borda do conteúdo e
+células maiores em telas largas, preservando a leitura nas larguras menores.

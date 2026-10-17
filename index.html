@@ -361,11 +361,14 @@ button{border-radius:10px;transition:background-color .15s ease,border-color .15
 @media(max-width:650px){.answer-row,.feedback-columns{grid-template-columns:minmax(0,1fr)}.feedback-columns{display:none}.answer-row{gap:8px;margin:16px 0}}
 
 /* Navegación de Estudio y Hardcore: posiciones independientes de las respuestas. */
-.question-layout{display:grid;grid-template-columns:176px minmax(0,1fr);gap:24px;align-items:start}
+/* Aproveitar a margem livre à esquerda, preservando a área de leitura. */
+.workspace-main:has(.question-layout) .main-inner{max-width:none}
+.flow-content.question-content:has(.question-layout){max-width:none}
+.question-layout{display:grid;grid-template-columns:clamp(176px,calc((100% - 1180px)/2 + 176px),400px) minmax(0,1fr);gap:24px;align-items:start}
 .question-stage{min-width:0}.question-stage>p:first-child{margin-top:14px}
-.question-navigator{position:sticky;top:24px;margin-top:14px;max-height:calc(100dvh - 62px);overflow:auto;scrollbar-width:thin;padding:12px;background:var(--cd);border:1px solid var(--bd);border-radius:12px;box-sizing:border-box}
+.question-navigator{container-type:inline-size;position:sticky;top:24px;margin-top:14px;max-height:calc(100dvh - 62px);overflow:auto;scrollbar-width:thin;padding:12px;background:var(--cd);border:1px solid var(--bd);border-radius:12px;box-sizing:border-box}
 .question-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}
-.question-number{display:grid;place-items:center;aspect-ratio:1;min-height:32px;padding:0;border-radius:7px;font-size:14px;font-weight:650;line-height:1;font-variant-numeric:tabular-nums;background:var(--bg);border:1px solid var(--bd)}
+.question-number{display:grid;place-items:center;aspect-ratio:1;min-height:32px;padding:0;border-radius:7px;font-size:clamp(14px,6cqw,20px);font-weight:650;line-height:1;font-variant-numeric:tabular-nums;background:var(--bg);border:1px solid var(--bd)}
 .question-number.is-skipped{background:var(--mdb);color:var(--md);border-color:var(--md)}
 .question-number.is-correct{background:var(--okb);color:var(--ok);border-color:var(--ok)}
 .question-number.is-incorrect{background:var(--hdb);color:var(--hd);border-color:var(--hd)}
