@@ -103,8 +103,8 @@ preferência por movimento reduzido. Ao renomear uma aula, mantenha consistênci
 entre `AL.t`, `AU` e o título do mapa em `MAT`, preservando IDs e conteúdos.
 O sumário da aula abre e foca a seção escolhida sem renderizar novamente o app,
 alterar o histórico ou reiniciar sessões. Preserve ícones e cores das seções.
-A barra da sessão conta respostas concluídas: `qz.i` mais a resposta atual,
-quando existente; não marque a questão apenas exibida como já respondida. O
+A barra da sessão conta respostas concluídas por `qz.rev.length`. `qz.i` é
+somente a posição exibida; pular ou revisitar não aumenta o progresso. O
 cronômetro continua usando `qz.t0`. Destaques de feedback devem manter a ordem
 e o índice original das alternativas e as quatro explicações integralmente
 visíveis após responder, sem feedback imediato nos simulados.
@@ -830,3 +830,35 @@ regressões de prática/histórico. Consulte `docs/revisao-erros-e-retorno-prati
 - Execute `python3 tests/test_aula10.py`, além das regressões gerais, ao alterar
   esse conteúdo. Os testes não substituem a releitura pedagógica das alternativas
   e feedbacks. A conferência desta autoria não certificou vigência normativa.
+
+
+## Navegação entre questões — Estudo e Hardcore
+
+O usuário pediu um quadro à esquerda, com apenas os números das questões da
+sessão. Aplica-se a Estudo, estudo diário, prática por aula/bloco, revisão de erros
+em Estudo e Hardcore. Simulado e Bate-pronto continuam sem o quadro.
+
+- `qz.items` guarda alternativas embaralhadas, escolha, dica, eliminações e estado
+  de saída sem resposta, separados por posição. Voltar restaura essa informação.
+- Células neutras indicam questões ainda não deixadas; sair sem responder marca
+  amarelo. Resposta certa fica verde e errada fica vermelha. A posição atual tem
+  contorno azul; rótulos acessíveis e tooltips explicam os estados sem depender só
+  da cor. No quadro visível ficam somente os números.
+- `jumpQuestion` permite ir e voltar sem registrar tentativas. Uma resposta já
+  confirmada é somente leitura, com os mesmos feedbacks e sem alterar o histórico.
+- `nextQuestion` procura a próxima pendente em ordem circular. Não finalize pela
+  posição da questão: resultado exige todas as respostas, mesmo fora de ordem.
+- `qz.rev` permanece lista compacta das respostas, na ordem em que foram dadas.
+  `H` recebe uma única tentativa por posição respondida. Progresso e nota usam
+  respostas reais, não o maior número de questão visitado. O relógio para na
+  última resposta, mesmo que ela esteja na primeira posição.
+- O diário persiste também os estados individuais e a rolagem do quadro. A
+  validação aceita respostas fora de ordem, rejeita IDs repetidos/externos à
+  sessão e mantém compatibilidade com rascunhos lineares anteriores. Preserve
+  bloqueio diário, retomada, comunicação entre abas e escolha das 20 questões.
+- Preserve a leitura dos feedbacks ao lado das alternativas no PC, foco por
+  teclado e acesso ao botão de tema. Sessões longas usam rolagem interna no quadro
+  e mantêm a célula atual visível.
+- Não altere questões, dificuldades, bancos, materiais ou IDs para acrescentar
+  navegação. Execute `python3 tests/test_question_navigation.py`, as regressões de
+  prática/diário/Bate-pronto e `python3 tests/smoke.py` antes de publicar.

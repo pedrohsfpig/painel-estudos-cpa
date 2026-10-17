@@ -64,6 +64,9 @@ local permanece porque a origem do site não muda.
 - Estudo com dicas, eliminação de alternativas e correção imediata.
 - Feedback da resposta correta e das três alternativas incorretas após responder,
   tanto em Estudo quanto em Hardcore, incluindo prática diária e por aula.
+- [Quadro numerado de questões](docs/navegacao-questoes.md) no Estudo e Hardcore,
+  incluindo o checkpoint diário: navegação livre, amarelo para pendentes deixadas,
+  verde para acertos e vermelho para erros, preservando escolhas e ajudas.
 - Simulados com resultado e revisão dos erros ao final.
 - Filtros de aula, dificuldade, questões inéditas e erros pendentes.
   É possível selecionar várias aulas, com participação igual e distribuição

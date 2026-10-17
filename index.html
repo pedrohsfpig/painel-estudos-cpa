@@ -359,6 +359,21 @@ button{border-radius:10px;transition:background-color .15s ease,border-color .15
 .feedback-paired .fb-heading{margin-bottom:8px}
 .feedback-paired .ok .answer-text,.feedback-paired .no .answer-text{font-weight:600}
 @media(max-width:650px){.answer-row,.feedback-columns{grid-template-columns:minmax(0,1fr)}.feedback-columns{display:none}.answer-row{gap:8px;margin:16px 0}}
+
+/* Navegación de Estudio y Hardcore: posiciones independientes de las respuestas. */
+.question-layout{display:grid;grid-template-columns:176px minmax(0,1fr);gap:24px;align-items:start}
+.question-stage{min-width:0}.question-stage>p:first-child{margin-top:14px}
+.question-navigator{position:sticky;top:24px;margin-top:14px;max-height:calc(100dvh - 62px);overflow:auto;scrollbar-width:thin;padding:12px;background:var(--cd);border:1px solid var(--bd);border-radius:12px;box-sizing:border-box}
+.question-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}
+.question-number{display:grid;place-items:center;aspect-ratio:1;min-height:32px;padding:0;border-radius:7px;font-size:14px;font-weight:650;line-height:1;font-variant-numeric:tabular-nums;background:var(--bg);border:1px solid var(--bd)}
+.question-number.is-skipped{background:var(--mdb);color:var(--md);border-color:var(--md)}
+.question-number.is-correct{background:var(--okb);color:var(--ok);border-color:var(--ok)}
+.question-number.is-incorrect{background:var(--hdb);color:var(--hd);border-color:var(--hd)}
+.question-number.is-current{outline:2px solid var(--ac);outline-offset:2px}
+.question-number:hover{box-shadow:inset 0 0 0 1px currentColor}
+.question-number:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+@media(min-width:761px) and (max-width:1100px){.question-layout{grid-template-columns:132px minmax(0,1fr);gap:16px}.question-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.question-navigator{padding:10px}}
+@media(max-width:760px){.question-layout{grid-template-columns:minmax(0,1fr);gap:4px}.question-navigator{position:static;max-height:156px}.question-grid{grid-template-columns:repeat(auto-fill,minmax(36px,1fr))}.question-number{aspect-ratio:auto;min-height:36px}}
 /* Materiais: a apresentação deriva dos dados originais, sem abreviar informações. */
 .flow-content.material-content{max-width:1180px}
 .material-context{border:1px solid var(--bd);border-radius:16px;background:var(--cd);padding:18px 22px;margin-bottom:16px}
@@ -3918,6 +3933,41 @@ function revisao(){
 }
 
 
+// A posição exibida é independente das respostas já registradas.
+function hasQuestionNavigation(session=qz){return Boolean(session&&(session.md==="e"||session.md==="h"))}
+function ensureQuestionStates(session=qz){
+ if(!hasQuestionNavigation(session))return;
+ if(Array.isArray(session.items)&&session.items.length===session.ids.length)return;
+ session.items=session.ids.map(id=>{const record=session.rev.find(row=>row[0]===id);if(!record)return {o:null,a:null,h:0,x:null,skipped:false};const o=questionOptions(questionById(id));let a=o.findIndex(option=>option[0]===record[2]&&option[1]===record[1]);if(a<0)a=o.findIndex(option=>option[1]===record[1]);return {o,a,h:0,x:null,skipped:false}});
+ if(session.i<session.ids.length){const item=session.items[session.i];if(session.o)item.o=session.o;if(session.a!=null)item.a=session.a;item.h=session.h?1:0;item.x=session.x||null;}
+}
+function saveCurrentQuestion(left=false){
+ if(!hasQuestionNavigation()||qz.i>=qz.ids.length)return;
+ ensureQuestionStates();const item=qz.items[qz.i];item.o=qz.o;item.a=qz.a;item.h=qz.h?1:0;item.x=qz.x? qz.x.slice():null;if(left&&qz.a==null)item.skipped=true;
+}
+function jumpQuestion(index){
+ if(!hasQuestionNavigation()||qz.i>=qz.ids.length||!Number.isInteger(index)||index<0||index>=qz.ids.length||index===qz.i)return;
+ if(qz.dailyId&&qz.rev.length<qz.ids.length&&!dailyPickAllowed())return;
+ saveCurrentQuestion(true);const item=qz.items[index];qz.i=index;qz.o=item.o;qz.a=item.a;qz.h=item.h;qz.x=item.x?item.x.slice():null;go();
+ document.querySelector(`[data-question-index="${index}"]`)?.focus({preventScroll:true});
+}
+function nextQuestion(){
+ if(!qz||qz.a==null)return;
+ if(hasQuestionNavigation()){
+  saveCurrentQuestion();if(qz.rev.length<qz.ids.length){for(let offset=1;offset<=qz.ids.length;offset++){const index=(qz.i+offset)%qz.ids.length;if(qz.items[index].a==null){jumpQuestion(index);return}}return;}
+  qz.i=qz.ids.length;
+ }else qz.i++;
+ qz.a=null;qz.o=null;qz.h=0;qz.x=null;go();
+}
+let renderedQuestionSession=null;
+function rememberQuestionNavigator(){const nav=document.querySelector(".question-navigator");if(nav&&qz===renderedQuestionSession)qz.navigatorScrollTop=nav.scrollTop}
+function restoreQuestionNavigator(){
+ const nav=document.querySelector(".question-navigator");renderedQuestionSession=nav?qz:null;if(!nav)return;
+ nav.scrollTop=qz.navigatorScrollTop||0;const current=nav.querySelector('[aria-current="step"]');if(current){const frame=nav.getBoundingClientRect(),cell=current.getBoundingClientRect();if(cell.top<frame.top+8)nav.scrollTop-=frame.top+8-cell.top;else if(cell.bottom>frame.bottom-8)nav.scrollTop+=cell.bottom-frame.bottom+8;}qz.navigatorScrollTop=nav.scrollTop;
+}
+function questionNavigatorHtml(){
+ ensureQuestionStates();return `<nav class="question-navigator" aria-label="Navegar entre as questões"><div class="question-grid">${qz.ids.map((id,index)=>{const item=qz.items[index],record=qz.rev.find(row=>row[0]===id),state=record?(record[1]?"correct":"incorrect"):item.skipped?"skipped":"unanswered",label={correct:"respondida corretamente",incorrect:"respondida incorretamente",skipped:"deixada sem resposta",unanswered:"ainda não respondida"}[state],current=index===qz.i;return `<button type="button" class="question-number is-${state}${current?" is-current":""}" data-question-index="${index}" data-question-state="${state}"${current?' aria-current="step"':""} aria-label="Questão ${index+1}: ${label}${current?", atual":""}" title="Questão ${index+1}: ${label}" onclick="jumpQuestion(${index})">${index+1}</button>`}).join("")}</div></nav>`;
+}
 function begin(ids,md,metadata={}){rememberDailySession();qz={ids,i:0,ok:0,a:null,o:null,t0:Date.now(),end:0,md,rev:[],...metadata};view="q";go()}
 const DAILY_COUNT=20,DAILY_TIME_ZONE="America/Sao_Paulo";
 const dailyCalendar=new Intl.DateTimeFormat("sv-SE",{timeZone:DAILY_TIME_ZONE,year:"numeric",month:"2-digit",day:"2-digit"});
@@ -3928,13 +3978,25 @@ function emptyDailyBook(){return {version:1,results:{},active:null,lastResult:nu
 function dailySessionSnapshot(session){if(!session?.dailyId)return null;return {...JSON.parse(JSON.stringify(session)),elapsed:Math.max(0,(session.end||Date.now())-session.t0),updatedAt:Date.now()}}
 function validDailySession(raw){
  if(!raw||typeof raw.dailyId!=="string"||!validDailyDate(raw.dailyStartDay)||raw.md!=="e"||!Array.isArray(raw.ids)||raw.ids.length!==DAILY_COUNT||new Set(raw.ids).size!==DAILY_COUNT||raw.ids.some(id=>!Number.isInteger(id)||!Q[id-1]||Q[id-1][2]>=3))return null;
- if(!Number.isInteger(raw.i)||raw.i<0||raw.i>DAILY_COUNT||!Number.isFinite(raw.t0)||!Number.isFinite(raw.end)||!Array.isArray(raw.rev)||raw.rev.length>DAILY_COUNT||raw.rev.some((r,i)=>!Array.isArray(r)||r[0]!==raw.ids[i]||![0,1].includes(r[1])||typeof r[2]!=="string"))return null;
+ if(!Number.isInteger(raw.i)||raw.i<0||raw.i>DAILY_COUNT||!Number.isFinite(raw.t0)||!Number.isFinite(raw.end)||!Array.isArray(raw.rev)||raw.rev.length>DAILY_COUNT||new Set(raw.rev.map(r=>r?.[0])).size!==raw.rev.length||raw.rev.some(r=>!Array.isArray(r)||!raw.ids.includes(r[0])||![0,1].includes(r[1])||typeof r[2]!=="string"))return null;
  const answer=raw.a==null?null:raw.a;if(answer!==null&&(!Number.isInteger(answer)||answer<0||answer>3))return null;
- if(raw.rev.length!==raw.i+(answer!==null?1:0)||raw.ok!==raw.rev.reduce((sum,r)=>sum+r[1],0))return null;
+ if(raw.ok!==raw.rev.reduce((sum,r)=>sum+r[1],0)||raw.i===DAILY_COUNT&&(raw.rev.length!==DAILY_COUNT||answer!==null)||raw.i<DAILY_COUNT&&raw.rev.some(r=>r[0]===raw.ids[raw.i])!==(answer!==null))return null;
  let options=null;
  if(raw.o!=null){if(raw.i===DAILY_COUNT||!Array.isArray(raw.o)||raw.o.length!==4||raw.o.some(o=>!Array.isArray(o)||!Number.isInteger(o[2])||o[2]<0||o[2]>3)||new Set(raw.o.map(o=>o[2])).size!==4)return null;options=raw.o.map(o=>questionOptions(Q[raw.ids[raw.i]-1])[o[2]])}
  if(answer!==null&&!options)return null;
- return {ids:raw.ids.slice(),i:raw.i,ok:raw.ok,a:answer,o:options,t0:raw.t0,end:raw.end,md:"e",rev:raw.rev.map(r=>r.slice()),dailyId:raw.dailyId,dailyStartDay:raw.dailyStartDay,h:raw.h?1:0,x:Array.isArray(raw.x)&&options?raw.x.filter(i=>Number.isInteger(i)&&i>=0&&i<4&&!options[i][1]):null,elapsed:Number.isFinite(raw.elapsed)&&raw.elapsed>=0?raw.elapsed:Math.max(0,(raw.end||raw.t0)-raw.t0),updatedAt:Number.isFinite(raw.updatedAt)?raw.updatedAt:raw.t0};
+ const session={ids:raw.ids.slice(),i:raw.i,ok:raw.ok,a:answer,o:options,t0:raw.t0,end:raw.end,md:"e",rev:raw.rev.map(r=>r.slice()),dailyId:raw.dailyId,dailyStartDay:raw.dailyStartDay,h:raw.h?1:0,x:Array.isArray(raw.x)&&options?raw.x.filter(i=>Number.isInteger(i)&&i>=0&&i<4&&!options[i][1]):null,elapsed:Number.isFinite(raw.elapsed)&&raw.elapsed>=0?raw.elapsed:Math.max(0,(raw.end||raw.t0)-raw.t0),updatedAt:Number.isFinite(raw.updatedAt)?raw.updatedAt:raw.t0};
+ ensureQuestionStates(session);
+ if(raw.items!=null){
+  if(!Array.isArray(raw.items)||raw.items.length!==DAILY_COUNT)return null;
+  for(let index=0;index<DAILY_COUNT;index++){
+   const saved=raw.items[index];if(!saved||typeof saved!=="object")return null;const item=session.items[index];
+   if(saved.o!=null){if(!Array.isArray(saved.o)||saved.o.length!==4||saved.o.some(o=>!Array.isArray(o)||!Number.isInteger(o[2])||o[2]<0||o[2]>3)||new Set(saved.o.map(o=>o[2])).size!==4)return null;item.o=saved.o.map(o=>questionOptions(Q[raw.ids[index]-1])[o[2]]);const record=raw.rev.find(r=>r[0]===raw.ids[index]);if(record){if(!Number.isInteger(saved.a)||saved.a<0||saved.a>3||item.o[saved.a][1]!==record[1])return null;item.a=saved.a}else if(saved.a!=null)return null;}
+   item.h=saved.h?1:0;item.x=Array.isArray(saved.x)&&item.o?[...new Set(saved.x.filter(i=>Number.isInteger(i)&&i>=0&&i<4&&!item.o[i][1]))]:null;item.skipped=Boolean(saved.skipped);
+  }
+  if(raw.i<DAILY_COUNT){const item=session.items[raw.i];if(JSON.stringify(item.o)!==JSON.stringify(options)||item.a!==answer)return null;session.h=item.h;session.x=item.x;}
+ }
+ session.navigatorScrollTop=Number.isFinite(raw.navigatorScrollTop)&&raw.navigatorScrollTop>=0?raw.navigatorScrollTop:0;
+ return session;
 }
 function readDailyValue(value){
  try{const raw=typeof value==="string"?JSON.parse(value):value,book=emptyDailyBook();if(!raw||raw.version!==1)return book;
@@ -3947,7 +4009,7 @@ function readDailyBook(){try{return readDailyValue(localStorage.getItem("cpaDail
 function mergeDailyBooks(first,second){
  const book=emptyDailyBook();[first,second].forEach(b=>Object.entries(b.results).forEach(([day,r])=>{if(!book.results[day]||r.end<book.results[day].end)book.results[day]=r}));
  const last=[first.lastResult,second.lastResult].filter(r=>r&&book.results[r.day]?.dailyId===r.session.dailyId).sort((a,b)=>b.day.localeCompare(a.day))[0];book.lastResult=last||null;
- const active=[first.active,second.active].filter(Boolean).reverse().sort((a,b)=>a.dailyId===b.dailyId?b.rev.length-a.rev.length||b.updatedAt-a.updatedAt||b.i-a.i:b.updatedAt-a.updatedAt)[0];
+ const active=[first.active,second.active].filter(Boolean).reverse().sort((a,b)=>a.dailyId===b.dailyId?b.rev.length-a.rev.length||b.updatedAt-a.updatedAt:b.updatedAt-a.updatedAt)[0];
  if(active&&!book.results[dailyDate()]&&!Object.values(book.results).some(r=>r.dailyId===active.dailyId))book.active=active;
  return book;
 }
@@ -4150,16 +4212,16 @@ function mix(plan=sessionPlan()){const ids=[];plan.groups.forEach(g=>g.counts.fo
 function start(){const plan=sessionPlan(),p=mix(plan);if(!p.length){msg=plan.note||"Nenhuma questão com esses filtros.";return go()}msg="";begin(p,cfg.md);practiceRound++}
 function questionOptionHtml(o,i,feedbackId=""){return `<button class="o${qz.a!=null?(o[1]?" ok":qz.a===i?" no":""):""}"${qz.a!=null||(qz.x&&qz.x.includes(i))?" disabled":""}${qz.x&&qz.x.includes(i)?' style="opacity:.35;text-decoration:line-through"':""}${feedbackId?` aria-describedby="${feedbackId}"`:""} onclick="pick(${i})"><span class="answer-text">${"ABCD"[i]}) ${questionAnswerHtml(questionById(qz.ids[qz.i]),o[0],qz.a!=null)}</span></button>`}
 function quickOptionHtml(o,i,feedbackId=""){return `<button type="button" class="o quick-answer${qz.a!=null?(o[1]?" ok":qz.a===i?" no":""):""}"${qz.a!=null?" disabled":""}${feedbackId?` aria-describedby="${feedbackId}"`:""} onclick="pick(${i})"><span class="quick-key" aria-hidden="true">${"AB"[i]}</span><span class="answer-text">${questionAnswerHtml(questionById(qz.ids[qz.i]),o[0],qz.a!=null)}</span>${qz.a==null?`<span class="quick-answer-arrow" aria-hidden="true">${uiIcon("arrow")}</span>`:""}</button>`}
-function ques(){const id=qz.ids[qz.i],q=questionById(id),completed=qz.i+(qz.a!=null?1:0),showFeedback=qz.a!=null&&qz.md!=="s";const quick=qz.md==="b",renderOption=quick?quickOptionHtml:questionOptionHtml;if(!qz.o)qz.o=shuffle(questionOptions(q));
-return `${quick?`<section class="quick-round${showFeedback?" is-answered":""}" aria-label="Questão Bate-pronto">`:""}<div class="tb2 quiz-header"><div class="quiz-header-row"><div class="quiz-heading"><span class="quiz-mode"${qz.md==="h"?' style="color:var(--hc)"':""}>${quick?uiIcon("links"):""}${qz.dailyId?"Estudo de hoje":{e:"Estudo",s:"Simulado",h:"Hardcore",b:"Bate-pronto"}[qz.md]}</span><span class="quiz-position">Questão ${qz.i+1} de ${qz.ids.length}</span></div><div class="quiz-tools"><span class="quiz-time">${uiIcon("clock")}<span class="tm" id="tm" role="timer" aria-label="Tempo da sessão">${fmt(Date.now()-qz.t0)}</span></span>${qz.dailyId?'<button onclick="pauseDailyStudy()">Pausar</button>':'<button onclick="qz=null;go()">Encerrar</button>'}</div></div><div class="quiz-progress" role="progressbar" aria-label="Andamento da sessão" aria-valuemin="0" aria-valuemax="${qz.ids.length}" aria-valuenow="${completed}" aria-valuetext="${completed} de ${qz.ids.length} respondidas"><span style="width:${completed*100/qz.ids.length}%"></span></div></div>${qz.md==="s"?"":`<p${quick?' class="quick-context"':""}>${badge(q[2])}<span class="mu s">${AU[q[0]]}, ${q[1]}</span></p>`}<div class="en${qz.md==="b"?" quick-stem":""}">${qz.md==="b"?`<div class="quick-prompt-label"><span class="quick-symbol" aria-hidden="true">${uiIcon("links")}</span><span>${q[3].includes("____")?"Complete a lacuna":"Associação rápida"}</span></div>`:""}${questionStemHtml(questionDisplay(q,showFeedback).stem)}</div>
+function ques(){const id=qz.ids[qz.i],q=questionById(id),completed=qz.rev.length,showFeedback=qz.a!=null&&qz.md!=="s";const quick=qz.md==="b",navigation=hasQuestionNavigation(),renderOption=quick?quickOptionHtml:questionOptionHtml;ensureQuestionStates();if(!qz.o)qz.o=shuffle(questionOptions(q));saveCurrentQuestion();
+return `${quick?`<section class="quick-round${showFeedback?" is-answered":""}" aria-label="Questão Bate-pronto">`:""}<div class="tb2 quiz-header"><div class="quiz-header-row"><div class="quiz-heading"><span class="quiz-mode"${qz.md==="h"?' style="color:var(--hc)"':""}>${quick?uiIcon("links"):""}${qz.dailyId?"Estudo de hoje":{e:"Estudo",s:"Simulado",h:"Hardcore",b:"Bate-pronto"}[qz.md]}</span><span class="quiz-position">Questão ${qz.i+1} de ${qz.ids.length}</span></div><div class="quiz-tools"><span class="quiz-time">${uiIcon("clock")}<span class="tm" id="tm" role="timer" aria-label="Tempo da sessão">${fmt((qz.end||Date.now())-qz.t0)}</span></span>${qz.dailyId?'<button onclick="pauseDailyStudy()">Pausar</button>':'<button onclick="qz=null;go()">Encerrar</button>'}</div></div><div class="quiz-progress" role="progressbar" aria-label="Andamento da sessão" aria-valuemin="0" aria-valuemax="${qz.ids.length}" aria-valuenow="${completed}" aria-valuetext="${completed} de ${qz.ids.length} respondidas"><span style="width:${completed*100/qz.ids.length}%"></span></div></div>${navigation?`<div class="question-layout">${questionNavigatorHtml()}<section class="question-stage" aria-label="Questão ${qz.i+1}">`:""}${qz.md==="s"?"":`<p${quick?' class="quick-context"':""}>${badge(q[2])}<span class="mu s">${AU[q[0]]}, ${q[1]}</span></p>`}<div class="en${qz.md==="b"?" quick-stem":""}">${qz.md==="b"?`<div class="quick-prompt-label"><span class="quick-symbol" aria-hidden="true">${uiIcon("links")}</span><span>${q[3].includes("____")?"Complete a lacuna":"Associação rápida"}</span></div>`:""}${questionStemHtml(questionDisplay(q,showFeedback).stem)}</div>
 ${showFeedback?`<div class="answer-result card ${qz.o[qz.a][1]?"result-correct":"result-incorrect"}" role="status">${uiIcon(qz.o[qz.a][1]?"check":"cross")}<strong>${qz.o[qz.a][1]?"Sua resposta está correta.":"Sua resposta está incorreta."}</strong></div>${feedbackHtml(q,qz.o,qz.a,renderOption,"question-"+id)}`:`<div class="answer-list">${qz.o.map((o,i)=>`<div class="answer-row">${renderOption(o,i)}</div>`).join("")}</div>`}
 ${quick&&!showFeedback?`<p class="quick-hint">${uiIcon("check")}Escolha uma alternativa e confira a explicação.</p>`:""}${qz.a==null&&qz.md==="e"?aids():""}
-${showFeedback?`<button class="chip on${quick?" quick-next":""}" onclick="qz.i++;qz.a=null;qz.o=null;qz.h=0;qz.x=null;go()">${qz.i+1<qz.ids.length?"Próxima":"Ver resultado"}${quick?uiIcon("arrow"):""}</button>`:""}${quick?"</section>":""}`}
+${showFeedback?`<button class="chip on${quick?" quick-next":""}" onclick="nextQuestion()">${qz.rev.length<qz.ids.length?"Próxima":"Ver resultado"}${quick?uiIcon("arrow"):""}</button>`:""}${navigation?"</section></div>":""}${quick?"</section>":""}`}
 const fmt=ms=>{const t=Math.round(ms/1000),h=Math.floor(t/3600),m=Math.floor(t%3600/60),z=n=>String(n).padStart(2,"0");return(h?h+":":"")+z(m)+":"+z(t%60)};
 setInterval(()=>{const e=document.getElementById("tm");if(e&&qz&&qz.t0&&!qz.end)e.textContent=fmt(Date.now()-qz.t0)},1000);
 function aids(){return `<div class="aj"><div class="s mu">Ajudas opcionais: não são alternativas, use se precisar.</div><div class="chips"><button class="hb" onclick="qz.h=1;go()">Dica</button><button class="hb" onclick="cut()"${qz.x?" disabled":""}>Eliminar 2 alternativas</button></div>${qz.h?`<div class="card">Dica: ${Q[qz.ids[qz.i]-1][10]||T[qz.ids[qz.i]-1]||""}</div>`:""}</div>`}
 function cut(){if(qz.x||qz.a!=null)return;qz.x=shuffle(qz.o.map((o,i)=>i).filter(i=>!qz.o[i][1])).slice(0,2);go()}
-function pick(i){if(!qz||qz.i>=qz.ids.length||qz.a!=null||!dailyPickAllowed())return;try{qz.a=i;const c=qz.o[i][1];qz.ok+=c;H=[...(Array.isArray(H)?H:[]),[qz.ids[qz.i],c,Date.now(),({e:0,s:1,h:2,b:3})[qz.md]]];qz.rev.push([qz.ids[qz.i],c,qz.o[i][0]]);if(qz.rev.length===qz.ids.length)qz.end=Date.now();save();rememberDailySession();sync()}catch(e){err(e)}if(qz.md==="s"){qz.i++;qz.a=null;qz.o=null;qz.h=0;qz.x=null}go()}
+function pick(i){if(!qz||qz.i>=qz.ids.length||qz.a!=null||!dailyPickAllowed())return;try{qz.a=i;const c=qz.o[i][1];qz.ok+=c;H=[...(Array.isArray(H)?H:[]),[qz.ids[qz.i],c,Date.now(),({e:0,s:1,h:2,b:3})[qz.md]]];qz.rev.push([qz.ids[qz.i],c,qz.o[i][0]]);saveCurrentQuestion();if(qz.rev.length===qz.ids.length)qz.end=Date.now();save();rememberDailySession();sync()}catch(e){err(e)}if(qz.md==="s"){qz.i++;qz.a=null;qz.o=null;qz.h=0;qz.x=null}go()}
 // Agrupamentos editoriais por assunto, sem inferir a causa de um erro.
 function sessionTheme(q){const t=q[1].toLocaleLowerCase("pt-BR");
 if(/^(cnpc|cnsp|susep|previc|quadro|competências|macetes|mnemônico)$/.test(t)){const stem=q[3].toLocaleLowerCase("pt-BR");if(/mandato|recondução|designa|indica|nomea|presidência|preside/.test(stem))return "Composição, mandatos e dirigentes";if(/quórum|votos|ordinári|extraordinári|reunião/.test(stem))return "Procedimentos e deliberações"}
@@ -17993,8 +18055,8 @@ function quadro(){return `<p class="mu s">Quadro do SFN: quem normatiza, quem su
 <div class="qv" style="background:#0a2463">Órgãos normativos</div><div class="qc qw1">${qbx("CMN","Conselho Monetário Nacional")}</div><div class="qc qg1">${qbx("CNSP","Conselho Nacional de Seguros Privados")}</div><div class="qc qg1">${qbx("CNPC","Conselho Nacional de Previdência Complementar")}</div>
 <div class="qv" style="background:#3f8cff">Supervisores</div><div class="qc qw1">${qbx("BCB","Banco Central do Brasil")}${qbx("CVM","Comissão de Valores Mobiliários")}</div><div class="qc qg1">${qbx("Susep","Superintendência de Seguros Privados")}</div><div class="qc qg1">${qbx("Previc","Superintendência Nacional de Previdência Complementar")}</div>
 <div class="qv" style="background:#19a7d6">Operadores</div><div class="qc qw1"><div class="qops">${[["bk","Bancos e caixas econômicas"],["ch","Administradoras de consórcios"],["bv","Bolsa de Valores"],["co","Cooperativas de crédito"],["cr","Corretoras e distribuidoras*"],["bm","Bolsa de mercadorias e futuros"],["ip","Instituições de pagamento**"],["dn","Demais instituições não bancárias"]].map(x=>qo(...x)).join("")}</div></div><div class="qc qg1 qcol">${qo("sg","Seguradoras e Resseguradoras")}${qo("ea","Entidades abertas de previdência")}${qo("sc","Sociedades de capitalização")}</div><div class="qc qg1 qtop">${qo("fp","Entidades fechadas de previdência complementar (fundos de pensão)")}</div></div></div>`}
-function go(){if(view!=="e")reviewGroup=null;if(view!=="q"&&qz&&qz.i>=qz.ids.length)qz=null;rememberEvolutionViewport();rememberOverviewViewport();rememberLessonSections();const enteringResult=view==="q"&&qz&&qz.i>=qz.ids.length&&!qz.resultShown;const pending=errs().length,pages={d:["Seu painel de estudos","Uma visão clara do que revisar e do próximo passo."],t:["Trilha de aulas","Conceitos essenciais, dicas e pontos de atenção."],q:["Praticar","Estude, simule a prova e consolide seus conhecimentos."],e:["Revisar erros","Retome as questões que ainda precisam de revisão."],m:["Material de apoio","Mapas, tabelas e cartões para fortalecer a memória."],x:["Quadro do SFN","Quem normatiza, quem supervisiona e quem opera."]};
+function go(){rememberQuestionNavigator();if(view!=="e")reviewGroup=null;if(view!=="q"&&qz&&qz.i>=qz.ids.length)qz=null;rememberEvolutionViewport();rememberOverviewViewport();rememberLessonSections();const enteringResult=view==="q"&&qz&&qz.i>=qz.ids.length&&!qz.resultShown;const pending=errs().length,pages={d:["Seu painel de estudos","Uma visão clara do que revisar e do próximo passo."],t:["Trilha de aulas","Conceitos essenciais, dicas e pontos de atenção."],q:["Praticar","Estude, simule a prova e consolide seus conhecimentos."],e:["Revisar erros","Retome as questões que ainda precisam de revisão."],m:["Material de apoio","Mapas, tabelas e cartões para fortalecer a memória."],x:["Quadro do SFN","Quem normatiza, quem supervisiona e quem opera."]};
 $("#app").innerHTML=`<aside class="sidebar"><div class="brand"><b>CPA</b> · Estudos<small>Seu espaço de aprendizagem</small></div><nav class="nav" aria-label="Navegação principal">${[["d","Painel","home"],["t","Trilha","book"],["q","Praticar","practice"],["e","Erros","warning"],["m","Material de apoio","file"],["x","Quadro do SFN","bank"]].map(([v,t,icon])=>`<button class="nav-item${view===v?" on":""}"${view===v?' aria-current="page"':""} onclick="view='${v}';${v==="d"?"sync();":""}go()">${uiIcon(icon)}<span>${t}</span>${v==="e"?`<span class="nav-count">(${pending})</span>`:""}</button>`).join("")}</nav><div class="sidebar-footer">${uiIcon("save")}<span>${store&&storeReady?"Progresso salvo na sua conta.":"Progresso salvo neste navegador."}</span></div></aside>
-<main class="workspace-main"><div class="main-inner"><header class="page-head"><div><h1>${pages[view][0]}</h1><p>${pages[view][1]}</p></div><div class="bank-pill">${uiIcon("book")}<span>${Q.length} questões · ${AL.length} aulas${view==="q"&&cfg.md==="b"?` · ${BP.length} bate-pronto`:""}</span></div></header>${view==="d"?dash():view==="x"?quadro():view==="t"?trilhaV():`<div class="flow-content${view==="m"?" material-content":view==="e"?" review-content":view==="q"&&!qz?" practice-content":qz&&qz.i>=qz.ids.length?" result-content":qz&&qz.i<qz.ids.length&&qz.md!=="s"?" question-content":""}">${view==="m"?mat():view==="e"?revisao():qz?(qz.i>=qz.ids.length?fin():ques()):setup()}</div>`}</div></main>`;restoreOverviewViewport();restoreEvolutionViewport();rememberDailySession();if(enteringResult){qz.resultShown=true;window.scrollTo(0,0)}}
+<main class="workspace-main"><div class="main-inner"><header class="page-head"><div><h1>${pages[view][0]}</h1><p>${pages[view][1]}</p></div><div class="bank-pill">${uiIcon("book")}<span>${Q.length} questões · ${AL.length} aulas${view==="q"&&cfg.md==="b"?` · ${BP.length} bate-pronto`:""}</span></div></header>${view==="d"?dash():view==="x"?quadro():view==="t"?trilhaV():`<div class="flow-content${view==="m"?" material-content":view==="e"?" review-content":view==="q"&&!qz?" practice-content":qz&&qz.i>=qz.ids.length?" result-content":qz&&qz.i<qz.ids.length&&qz.md!=="s"?" question-content":""}">${view==="m"?mat():view==="e"?revisao():qz?(qz.i>=qz.ids.length?fin():ques()):setup()}</div>`}</div></main>`;restoreOverviewViewport();restoreEvolutionViewport();restoreQuestionNavigator();rememberDailySession();if(enteringResult){qz.resultShown=true;window.scrollTo(0,0)}}
 try{validateQuestionBank();validateBatePronto();go();init()}catch(e){err(e);$("#app").innerHTML='<div class="card">Não foi possível carregar as questões. O conteúdo precisa ser corrigido antes de iniciar os estudos.</div>'}
 </script></body></html>
