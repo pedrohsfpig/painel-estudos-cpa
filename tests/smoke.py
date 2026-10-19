@@ -1311,8 +1311,12 @@ class PainelCPA(unittest.TestCase):
             self.assertIn(percent, self.page.locator("[data-result-score]").inner_text())
             self.assertEqual(self.page.locator(".result-priority").count(), 0 if correct else 2)
             self.assertEqual(self.page.locator(".result-success").count(), 1 if correct else 0)
-            self.assertTrue(self.page.locator(".result-bar span").evaluate_all(
-                "nodes=>nodes.every(n=>Number.isFinite(parseFloat(n.style.width)))"))
+            cards=self.page.locator(".result-performance-card")
+            self.assertGreater(cards.count(),0)
+            self.assertTrue(cards.evaluate_all("""nodes=>nodes.every(n=>
+                n.querySelectorAll('.result-answer-mark').length===Number(n.dataset.resultTotal)&&
+                n.querySelectorAll('.result-answer-mark.is-error').length===Number(n.dataset.resultWrong)&&
+                Number.isFinite(Number(n.dataset.resultCorrect)/Number(n.dataset.resultTotal)))"""))
 
     def test_46_final_response_stops_timer_before_feedback_reading(self):
         self.page.evaluate("begin([1], 'e');qz.t0=Date.now()-60000")

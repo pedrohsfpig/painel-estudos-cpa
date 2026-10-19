@@ -587,7 +587,7 @@ Estudo, Hardcore, Simulado e seus atalhos usam o mesmo resultado em `fin`.
 nem avaliar como erros as questões que não foram respondidas.
 
 - Mostre acertos/erros com números, proporções e gráficos por aula e nível.
-  Cada barra usa como denominador as respostas daquele grupo, não as do banco.
+  Cada proporção usa como denominador as respostas daquele grupo, não as do banco.
 - Prioridades são assuntos com erros reais, separados por aula. Recomendações
   orientam revisão e comparação de regras; não afirmam a causa do erro.
 - Repetição de erros é agrupamento explícito por assunto (`sessionTheme`), com
@@ -607,7 +607,13 @@ nem avaliar como erros as questões que não foram respondidas.
   a configuração inicial. Isso inclui o atalho de revisão de conteúdo. Preserve
   histórico, resultado diário salvo, tema, filtros e sessões ainda em andamento.
 - Preserve o resultado compacto: nota e indicadores juntos, cartões por aula e
-  gráficos circulares por dificuldade. Em telas largas, use a lateral dos
+  indicadores discretos por dificuldade. Use percentuais neutros e pontos por
+  resposta (preenchido para acerto, contorno para erro), com legenda. Não retome
+  barras extensas, percentuais azuis ou gráficos divididos em verde/vermelho.
+  Se limitar pontos, informe o limite e as demais respostas; totais sempre
+  incluem o grupo inteiro. Ordenar por Mais erros só reorganiza os cartões;
+  não modifica sessão, histórico, revisão aberta nem cálculos.
+  Em telas largas, use a lateral dos
   gráficos para padrões de erro e mantenha as ações logo abaixo da nota.
   Não corte aulas, assuntos, explicações ou valores para encurtar a página.
   A revisão em duas colunas deve abrir a questão na largura completa; listas
@@ -615,7 +621,8 @@ nem avaliar como erros as questões que não foram respondidas.
 - Verifique todos os modos, valores percentuais, histórico anterior distinto,
   recomendações/atalhos, romanos, estados extremos e os dois temas no PC.
   Execute também `python3 tests/test_compact_results.py` e
-  `python3 tests/test_acronym_visibility_review.py`.
+  `python3 tests/test_acronym_visibility_review.py`. Para indicadores e ordenação,
+  execute `python3 tests/test_result_scorecards.py`.
 
 O registro desta revisão está em `docs/revisao-questoes-sessoes.json`, e o
 relatório pedagógico e funcional em `docs/revisao-questoes-sessoes.md`.
