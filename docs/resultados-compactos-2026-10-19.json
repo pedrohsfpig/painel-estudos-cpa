@@ -1,0 +1,54 @@
+{
+  "cenario": "30 respostas, 10 aulas, 10 erros; mesma sessão antes/depois. Janela com 1000px de altura. Medidas em pixels CSS, capturadas no Chromium.",
+  "medidas": {
+    "before1024": {
+      "height": 3390.453125,
+      "graphs": 1188.703125,
+      "actions": 2381.3125,
+      "overflow": false
+    },
+    "before1280": {
+      "height": 2907.265625,
+      "graphs": 867.375,
+      "actions": 2009.5,
+      "overflow": false
+    },
+    "before1440": {
+      "height": 2887.765625,
+      "graphs": 867.375,
+      "actions": 1990,
+      "overflow": false
+    },
+    "before1920": {
+      "height": 2887.765625,
+      "graphs": 867.375,
+      "actions": 1994,
+      "overflow": false
+    },
+    "after1024": {
+      "height": 1899.71875,
+      "graphs": 570.046875,
+      "actions": 432.859375,
+      "overflow": false
+    },
+    "after1280": {
+      "height": 1753.90625,
+      "graphs": 525.25,
+      "actions": 379.640625,
+      "overflow": false
+    },
+    "after1440": {
+      "height": 1677.53125,
+      "graphs": 525.25,
+      "actions": 344.859375,
+      "overflow": false
+    },
+    "after1920": {
+      "height": 1627.53125,
+      "graphs": 514.046875,
+      "actions": 348.859375,
+      "overflow": false
+    }
+  },
+  "observacao": "A altura depende da quantidade e do conteúdo das questões; estes números não representam todas as sessões."
+}

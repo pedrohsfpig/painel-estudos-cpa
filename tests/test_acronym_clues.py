@@ -57,7 +57,9 @@ class ClueBrowser(unittest.TestCase):
         ids=self.page.evaluate('QUESTION_ACRONYM_CLUES')
         historical=json.loads((ROOT/'docs/revisao-pistas-siglas.json').read_text())['expansao_adiada']
         authored=json.loads((ROOT/'docs/aula-10-cobertura.json').read_text())['siglas_adiadas']
-        self.assertEqual(ids,sorted(set(historical+authored)))
+        correction=json.loads((ROOT/'docs/revisao-exibicao-siglas-2026-10-19.json').read_text())
+        removed={r['id'] for r in correction['adiamentos_removidos']}
+        self.assertEqual(ids,sorted(set(historical+authored)-removed))
         result=self.page.evaluate('''()=>{
           const seen=[];
           for(const id of QUESTION_ACRONYM_CLUES){

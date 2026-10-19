@@ -606,8 +606,16 @@ nem avaliar como erros as questões que não foram respondidas.
   aba, descarte somente a sessão concluída de `qz`; voltar a Praticar deve abrir
   a configuração inicial. Isso inclui o atalho de revisão de conteúdo. Preserve
   histórico, resultado diário salvo, tema, filtros e sessões ainda em andamento.
+- Preserve o resultado compacto: nota e indicadores juntos, cartões por aula e
+  gráficos circulares por dificuldade. Em telas largas, use a lateral dos
+  gráficos para padrões de erro e mantenha as ações logo abaixo da nota.
+  Não corte aulas, assuntos, explicações ou valores para encurtar a página.
+  A revisão em duas colunas deve abrir a questão na largura completa; listas
+  extensas de conceitos do Bate-pronto devem continuar acessíveis por teclado.
 - Verifique todos os modos, valores percentuais, histórico anterior distinto,
   recomendações/atalhos, romanos, estados extremos e os dois temas no PC.
+  Execute também `python3 tests/test_compact_results.py` e
+  `python3 tests/test_acronym_visibility_review.py`.
 
 O registro desta revisão está em `docs/revisao-questoes-sessoes.json`, e o
 relatório pedagógico e funcional em `docs/revisao-questoes-sessoes.md`.
@@ -782,6 +790,11 @@ função, o segmento ou o regime solicitado. Nesses casos, registre o ID em
 responder. Trate todas as siglas daquela questão igualmente. Preserve nomes antes
 da resposta quando eles não resolvem o que se pergunta. Não use similaridade de
 palavras isoladas como certificação de qualidade ou para reescrever itens bons.
+Julgue a exceção pelo fato específico pedido: LFL por extenso não revela as
+garantias exigidas; LLI/LLT por extenso não revelam os tetos de dias, as cestas
+elegíveis ou a necessidade de aprovação. Nesses casos, expanda antes da resposta.
+A revisão de exibição de 2026-10-19 está em
+`docs/revisao-exibicao-siglas-2026-10-19.json`; preserve os manifestos anteriores.
 
 A regra se aplica a todos os modos e futuras aulas. Execute
 `python3 tests/test_acronym_clues.py` e as regressões gerais. O manifesto

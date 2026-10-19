@@ -1,0 +1,370 @@
+{
+  "data": "2026-10-19",
+  "escopo": "Exibição de siglas, sem reescrita do conteúdo ou alteração de IDs, gabaritos, feedbacks e histórico.",
+  "contagens": {
+    "itens_auditados": 1500,
+    "questoes_regulares": 1000,
+    "bate_pronto": 500,
+    "itens_com_siglas": 940,
+    "exibicoes_corrigidas": 32,
+    "regulares_corrigidas": 17,
+    "bate_pronto_corrigidos": 15,
+    "excecoes_antes": 104,
+    "excecoes_depois": 72,
+    "siglas_ausentes_do_glossario": 0
+  },
+  "causa": "Exceções da aula 10 adiavam o nome por extenso mesmo quando ele não fornecia a característica pedida.",
+  "excecoes_antes": [
+    134,
+    169,
+    170,
+    184,
+    185,
+    401,
+    402,
+    403,
+    404,
+    406,
+    409,
+    410,
+    462,
+    464,
+    467,
+    468,
+    473,
+    474,
+    475,
+    476,
+    477,
+    639,
+    754,
+    755,
+    759,
+    760,
+    772,
+    881,
+    934,
+    935,
+    937,
+    939,
+    942,
+    943,
+    944,
+    948,
+    949,
+    953,
+    961,
+    963,
+    964,
+    967,
+    971,
+    977,
+    978,
+    980,
+    981,
+    982,
+    986,
+    988,
+    989,
+    990,
+    993,
+    994,
+    997,
+    999,
+    100017,
+    100022,
+    100023,
+    100024,
+    100025,
+    100151,
+    100171,
+    100201,
+    100202,
+    100203,
+    100204,
+    100206,
+    100231,
+    100237,
+    100241,
+    100316,
+    100363,
+    100366,
+    100383,
+    100384,
+    100388,
+    100391,
+    100392,
+    100393,
+    100395,
+    100396,
+    100421,
+    100437,
+    100468,
+    100469,
+    100470,
+    100472,
+    100473,
+    100474,
+    100475,
+    100476,
+    100479,
+    100480,
+    100481,
+    100482,
+    100486,
+    100494,
+    100495,
+    100496,
+    100497,
+    100498,
+    100499,
+    100500
+  ],
+  "excecoes_depois": [
+    134,
+    169,
+    170,
+    184,
+    185,
+    401,
+    402,
+    403,
+    404,
+    406,
+    409,
+    410,
+    462,
+    464,
+    467,
+    468,
+    473,
+    474,
+    475,
+    476,
+    477,
+    639,
+    754,
+    755,
+    759,
+    760,
+    772,
+    881,
+    934,
+    944,
+    949,
+    961,
+    963,
+    964,
+    971,
+    986,
+    989,
+    993,
+    994,
+    100017,
+    100022,
+    100023,
+    100024,
+    100025,
+    100151,
+    100171,
+    100201,
+    100202,
+    100203,
+    100204,
+    100206,
+    100231,
+    100237,
+    100241,
+    100316,
+    100363,
+    100366,
+    100383,
+    100384,
+    100388,
+    100391,
+    100392,
+    100393,
+    100395,
+    100396,
+    100421,
+    100437,
+    100469,
+    100472,
+    100476,
+    100482,
+    100486
+  ],
+  "adiamentos_removidos": [
+    {
+      "id": 935,
+      "motivo": "Identificar o segmento de títulos privados de balcão da B3 exige conhecer seu escopo; o nome da Cetip não informa o vínculo nem a distinção público/privado."
+    },
+    {
+      "id": 937,
+      "motivo": "O nome do sistema Selic não determina quem é devedor emissor dos títulos nem transforma processamento de eventos em emissão de dívida."
+    },
+    {
+      "id": 939,
+      "motivo": "O nome do Selic não fornece a condição de disponibilidade conjunta de título e fundos no DVP."
+    },
+    {
+      "id": 942,
+      "motivo": "Contraparte central é o nome do conceito; não fornece a posição específica de compradora de vendedor e vendedora de comprador pedida no item."
+    },
+    {
+      "id": 943,
+      "motivo": "Nomes de contraparte central ou de fundo garantidor não explicam a finalidade das margens nem garantem preços; as alternativas exigem distinguir os riscos."
+    },
+    {
+      "id": 948,
+      "motivo": "Os nomes dos sistemas e de CCP não informam a independência entre DVP e CCP, a ausência de CCP no Selic ou o modelo de proteção de um registro B3."
+    },
+    {
+      "id": 953,
+      "motivo": "Os nomes dos sistemas e de CCP não informam a independência entre DVP e CCP, a ausência de CCP no Selic ou o modelo de proteção de um registro B3."
+    },
+    {
+      "id": 967,
+      "motivo": "LFL significa Linhas Financeiras de Liquidez; o nome não informa a exigência de garantias elegíveis pedida no enunciado."
+    },
+    {
+      "id": 977,
+      "motivo": "Os nomes de LLI e LLT não especificam os tetos de prazo, a contagem de dias úteis ou os procedimentos de contratação."
+    },
+    {
+      "id": 978,
+      "motivo": "Os nomes de LLI e LLT não especificam os tetos de prazo, a contagem de dias úteis ou os procedimentos de contratação."
+    },
+    {
+      "id": 980,
+      "motivo": "Os nomes das linhas e dos títulos não informam quais cestas são admitidas; exige conhecimento de colateral e elegibilidade."
+    },
+    {
+      "id": 981,
+      "motivo": "Os nomes das linhas e dos títulos não informam quais cestas são admitidas; exige conhecimento de colateral e elegibilidade."
+    },
+    {
+      "id": 982,
+      "motivo": "Os nomes de LLI e LLT não informam quais classes de instituição são elegíveis a cada linha."
+    },
+    {
+      "id": 988,
+      "motivo": "Os nomes das linhas e dos títulos não informam quais cestas são admitidas; exige conhecimento de colateral e elegibilidade."
+    },
+    {
+      "id": 990,
+      "motivo": "Os nomes de Comef, ACCP e REF não determinam o momento da divulgação da decisão nem o papel complementar do relatório."
+    },
+    {
+      "id": 997,
+      "motivo": "Os nomes das linhas e dos títulos não informam quais cestas são admitidas; exige conhecimento de colateral e elegibilidade."
+    },
+    {
+      "id": 999,
+      "motivo": "O nome da LLT não fornece a necessidade de aprovação do aumento individual de limite nem elimina risco dos ativos."
+    },
+    {
+      "id": 100468,
+      "motivo": "O nome do sistema Selic não determina quem é devedor emissor dos títulos nem transforma processamento de eventos em emissão de dívida."
+    },
+    {
+      "id": 100470,
+      "motivo": "Identificar o segmento de títulos privados de balcão da B3 exige conhecer seu escopo; o nome da Cetip não informa o vínculo nem a distinção público/privado."
+    },
+    {
+      "id": 100473,
+      "motivo": "O nome do Selic não fornece a condição de disponibilidade conjunta de título e fundos no DVP."
+    },
+    {
+      "id": 100474,
+      "motivo": "Contraparte central é o nome do conceito; não fornece a posição específica de compradora de vendedor e vendedora de comprador pedida no item."
+    },
+    {
+      "id": 100475,
+      "motivo": "Nomes de contraparte central ou de fundo garantidor não explicam a finalidade das margens nem garantem preços; as alternativas exigem distinguir os riscos."
+    },
+    {
+      "id": 100479,
+      "motivo": "Os nomes dos sistemas e de CCP não informam a independência entre DVP e CCP, a ausência de CCP no Selic ou o modelo de proteção de um registro B3."
+    },
+    {
+      "id": 100480,
+      "motivo": "Os nomes dos sistemas e de CCP não informam a independência entre DVP e CCP, a ausência de CCP no Selic ou o modelo de proteção de um registro B3."
+    },
+    {
+      "id": 100481,
+      "motivo": "Os nomes dos sistemas e de CCP não informam a independência entre DVP e CCP, a ausência de CCP no Selic ou o modelo de proteção de um registro B3."
+    },
+    {
+      "id": 100494,
+      "motivo": "Os nomes de LLI e LLT não especificam os tetos de prazo, a contagem de dias úteis ou os procedimentos de contratação."
+    },
+    {
+      "id": 100495,
+      "motivo": "Os nomes de LLI e LLT não especificam os tetos de prazo, a contagem de dias úteis ou os procedimentos de contratação."
+    },
+    {
+      "id": 100496,
+      "motivo": "Os nomes das linhas e dos títulos não informam quais cestas são admitidas; exige conhecimento de colateral e elegibilidade."
+    },
+    {
+      "id": 100497,
+      "motivo": "Os nomes das linhas e dos títulos não informam quais cestas são admitidas; exige conhecimento de colateral e elegibilidade."
+    },
+    {
+      "id": 100498,
+      "motivo": "Os nomes de LLI e LLT não informam quais classes de instituição são elegíveis a cada linha."
+    },
+    {
+      "id": 100499,
+      "motivo": "O nome da LLT não fornece a necessidade de aprovação do aumento individual de limite nem elimina risco dos ativos."
+    },
+    {
+      "id": 100500,
+      "motivo": "O nome do Comef não informa a periodicidade de suas reuniões ordinárias."
+    }
+  ],
+  "integridade": {
+    "Q_sha256": "76b2a55055a121139050c81904f8c85f0f09452706e493b0f1976096317f8d22",
+    "BP_sha256": "0c2c3a9481cc1163e0304dc127db88a69752d0e8dc472aca391c504f215831ce"
+  },
+  "verificacao_renderizada": {
+    "ids_alterados": [
+      935,
+      937,
+      939,
+      942,
+      943,
+      948,
+      953,
+      967,
+      977,
+      978,
+      980,
+      981,
+      982,
+      988,
+      990,
+      997,
+      999,
+      100468,
+      100470,
+      100473,
+      100474,
+      100475,
+      100479,
+      100480,
+      100481,
+      100494,
+      100495,
+      100496,
+      100497,
+      100498,
+      100499,
+      100500
+    ],
+    "demais_itens_com_exibicao_identica": 1468,
+    "definicoes_nao_adiadas_ausentes": 0,
+    "bancos_e_feedbacks_inalterados": true
+  }
+}
