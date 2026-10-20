@@ -246,3 +246,20 @@ as antigas. Leia `AGENTS.md` antes de implementar novas aulas ou conteúdos.
 
 O visual prioriza o computador. Em janelas pequenas, o menu passa para o topo
 para manter os controles acessíveis.
+
+## Busca por assunto e painel orientado à próxima ação
+
+A busca de **Trilha**, **Material de apoio** e **Praticar** consulta títulos e
+conteúdos de todas as aulas. “Bacen”, “BCB” e “Banco Central” são equivalentes;
+“compulsório” encontra as aulas pertinentes, mesmo sem o termo em seus títulos.
+Os resultados indicam a aula, o material e um trecho, com atalho para a origem,
+filtros por tipo e acesso a todos os resultados por **Mostrar mais**.
+
+Na prática, pesquisar apenas filtra as aulas visíveis: seleções anteriores são
+mantidas e continuam identificadas. A busca não altera os filtros das questões
+nem reinicia sessões. Limpar a busca restaura a lista completa.
+
+O painel mantém o estudo diário em destaque, seguido do próximo passo sugerido,
+indicadores, evolução completa e trilha. Todas as aulas ficam acessíveis em uma
+lista com rolagem própria; prioridades e última aula permanecem na lateral.
+Detalhes e testes em [docs/busca-e-hierarquia-painel.md](docs/busca-e-hierarquia-painel.md).

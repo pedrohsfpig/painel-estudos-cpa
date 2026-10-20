@@ -919,3 +919,36 @@ da comparação das fontes. Veja `docs/aula-11.md` e `docs/aula-11-cobertura.jso
 Execute `python3 tests/test_aula11.py` e as regressões gerais. Preserve relatórios
 históricos usando seus recortes de IDs; novas siglas/exceções podem ser acrescentadas
 com motivos por item sem reescrever decisões e hashes anteriores.
+
+## Busca de conteúdo e hierarquia — padrão aprovado em 20/10/2026
+
+O usuário aprovou hierarquia do painel, busca por termos e hierarquia visual;
+não autorizou nessa entrega agrupamentos temáticos novos ou outras modalidades.
+
+- Mantenha Estudo de hoje como atividade principal. `nextStudyAction` sugere a
+  sessão em andamento, assunto com mais pendências, última aula ou primeira aula,
+  nessa ordem. Mostre indicadores em Seu acompanhamento; evolução antes da lista
+  de todas as aulas na coluna principal; prioridades/última aula na lateral.
+  A trilha pode rolar internamente, com todos os itens acessíveis por teclado.
+  Preserve todas as datas, filtros e a distinção entre tentativas e cobertura.
+- `contentSearchIndex` deriva o índice de AL, MAT, quadros e nomes de assuntos;
+  não mantenha uma lista paralela de textos. Novas aulas entram automaticamente.
+  `QUESTION_ACRONYMS` fornece equivalências, incluindo BC/BCB/BACEN. Busca ignora
+  acentos e maiúsculas e combina termos no mesmo resultado/contexto da aula.
+- Compartilhe consulta em Trilha, Materiais e seleção de aulas em Praticar.
+  Mostre aula, material, trecho e atalho para a origem. Todos os resultados devem
+  permanecer acessíveis por Mostrar mais, com tipos e contagens reais.
+- Consultar não altera H, cfg, Q/BP, proporções ou sessão em andamento. Em Praticar,
+  a busca filtra aulas visíveis, mantendo as já selecionadas explicitamente
+  acessíveis; não filtre silenciosamente o conjunto de questões pelo termo.
+- Abrir resultado pode trocar aula/bloco/material e expandir a seção de destino;
+  preserve conteúdo integral. Flashcard abre na pergunta. Não use índices de uma
+  visão agregada para destacar outro bloco/cartão após uma mudança de seleção.
+- Não renderize o app inteiro a cada tecla: atualize resultados/listas mantendo
+  foco na entrada. Escape textos/consultas e ofereça limpeza, ausência de resultados,
+  filtros por tipo, teclado e os dois temas. Não acrescente cores só para hierarquia.
+- Execute `python3 tests/test_content_search.py`,
+  `python3 tests/test_dashboard_hierarchy.py`, `python3 tests/test_practice_layout.py`,
+  `python3 tests/test_practice_navigation.py`, `python3 tests/test_question_navigation.py`
+  e `python3 tests/smoke.py` ao alterar esses fluxos. Registre a validação em
+  `docs/busca-e-hierarquia-painel.md`.
