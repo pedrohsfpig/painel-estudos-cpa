@@ -984,3 +984,13 @@ com rolagem interna. A implementação contextual substitui o padrão anterior.
   dicas e macetes: mantenha os controles e conteúdos dessa parte como estão.
 - Execute também `python3 tests/test_search_refinements.py` e atualize o relatório
   `docs/busca-contextual.md` ao alterar esses refinamentos.
+
+### Apresentação dos seletores da busca
+
+- Modo, Meu histórico e Aula usam o mesmo componente de menu visual, inclusive
+  no estado aberto: paleta do sistema, ícones discretos, espaçamento, seleção
+  marcada e opções legíveis. Não reintroduza o popup nativo nesses filtros.
+- Preserve as opções e os setters de busca. Menus devem funcionar por clique,
+  setas, Home/End, digitação, Enter/Espaço, Escape e Tab; fechar ao clicar fora,
+  manter foco após selecionar e caber no espaço visível nos dois temas.
+- Ao alterar esse componente, execute também `tests/test_search_filter_menus.py`.

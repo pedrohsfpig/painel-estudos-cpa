@@ -82,3 +82,27 @@ Conferidos os temas claro/escuro e larguras de 390 a 1920 px. Q, BP, AL, MAT,
 quadros comparativos e a seleção de questões permanecem idênticos. A inspeção
 visual incluiu a grade de aulas, a aula selecionada e os filtros de questões e
 materiais. Trechos de contexto respeitam limites de palavras ao abreviar.
+
+## Apresentação dos menus de filtro
+
+Modo, Meu histórico e Aula mantêm todas as opções e combinações, com um menu
+visual compartilhado: paleta dos dois temas, ícones discretos, cantos e espaços
+consistentes, marca de seleção e foco visível. A lista de aulas mostra número,
+nome e contagem, em ordem. O mesmo seletor de aula é usado em Materiais.
+
+Os menus abrem sobre o conteúdo e ajustam posição/altura ao espaço disponível,
+sem serem cortados pelos cartões. Fecham com novo clique, Escape, Tab ou clique
+fora. Setas, Home/End, digitação e Enter/Espaço permitem selecionar pelo teclado;
+foco volta ao filtro após a escolha. A seleção só é aplicada ao confirmar.
+
+`tests/test_search_filter_menus.py` cobre mouse, teclado, foco, fechamento,
+seleção de aula e limites de tela em 390, 1280 e 1920 px nos dois temas. Os testes
+de refinamento passam a usar os menus visíveis, sem chamar setters diretamente.
+Conferidos visualmente os menus abertos no computador e celular. Q, BP, AL, MAT,
+quadros comparativos e distribuição de questões foram comparados com a versão
+anterior e permanecem idênticos.
+
+Validação desta atualização: **117 testes aprovados** — 4 dos menus visuais,
+6 dos refinamentos, 11 de busca contextual, 4 de painel, 4 de layout da prática,
+3 de navegação/retorno, 9 de navegação entre questões e 76 de fluxos completos.
+Os testes usam contextos isolados, sem modificar o histórico real do usuário.

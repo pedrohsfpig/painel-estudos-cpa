@@ -269,3 +269,6 @@ com a quantidade de informações encontradas. Nos resultados, número, ícone e
 identificam sempre a mesma aula. O filtro Questões do painel oferece dificuldade,
 modo, histórico e aula; Materiais oferece cartões por tipo com contagens e filtro
 de aula. Esses refinamentos não mudam a configuração da sessão nem o histórico.
+
+Os seletores de modo, histórico e aula usam menus no padrão visual do painel,
+com seleção marcada, navegação por teclado e adaptação ao espaço da tela.

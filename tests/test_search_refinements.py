@@ -8,6 +8,10 @@ class SearchRefinements(unittest.TestCase):
     setUp=harness.PainelCPA.setUp
     tearDown=harness.PainelCPA.tearDown
 
+    def choose_filter(self,name,value):
+        self.page.get_by_role('combobox',name=name,exact=True).click()
+        self.page.get_by_role('listbox').locator(f'[data-search-value="{value}"]').click()
+
     def search(self,area='all',query='Bacen'):
         self.page.locator('#content-search-input').fill(query)
         self.page.locator(f'[data-search-area="{area}"]').click()
@@ -46,32 +50,32 @@ class SearchRefinements(unittest.TestCase):
             rows=self.page.evaluate('filteredSearchResults().map(d=>questionById(d.target.questionId)[2])')
             self.assertTrue(rows)
             self.assertEqual(set(rows),{int(level)})
-        self.page.get_by_role('combobox',name='Modo das questões encontradas').select_option('e')
+        self.choose_filter('Modo das questões encontradas','e')
         self.assertEqual(self.page.evaluate('currentSearch().qLevel'),'all')
         self.assertTrue(self.page.evaluate('filteredSearchResults().every(d=>d.type==="questao"&&questionById(d.target.questionId)[2]<3)'))
         self.page.locator('[data-search-level="0"]').click()
-        self.page.get_by_role('combobox',name='Histórico das questões encontradas').select_option('answered')
+        self.choose_filter('Histórico das questões encontradas','answered')
         self.assertEqual(set(self.page.evaluate('filteredSearchResults().map(d=>d.target.questionId)')),set(ids[:2]))
-        self.page.get_by_role('combobox',name='Histórico das questões encontradas').select_option('err')
+        self.choose_filter('Histórico das questões encontradas','err')
         self.assertEqual(self.page.evaluate('filteredSearchResults().map(d=>d.target.questionId)'),[ids[0]])
         self.assertIn('última resposta',self.page.locator('.search-filter-note').inner_text())
-        self.page.get_by_role('combobox',name='Histórico das questões encontradas').select_option('new')
+        self.choose_filter('Histórico das questões encontradas','new')
         self.assertTrue(self.page.evaluate('filteredSearchResults().every(d=>!H.some(r=>r[0]===d.target.questionId))'))
         self.assertEqual(self.page.evaluate('JSON.stringify([H,cfg,Q,BP,AL,MAT])'),initial)
 
     def test_global_simulation_and_quick_mode_and_lesson_filter_match_their_banks(self):
         self.search('questoes')
-        self.page.get_by_role('combobox',name='Modo das questões encontradas').select_option('s')
+        self.choose_filter('Modo das questões encontradas','s')
         self.assertTrue(self.page.evaluate('filteredSearchResults().every(d=>d.type==="questao"&&questionById(d.target.questionId)[2]<3&&!questionById(d.target.questionId)[9])'))
-        self.page.get_by_role('combobox',name='Filtrar resultados por aula').select_option('3')
+        self.choose_filter('Filtrar resultados por aula','3')
         self.assertTrue(self.page.evaluate('filteredSearchResults().every(d=>d.lesson===3)'))
         expected=self.page.evaluate('filteredSearchResults()[0].target.questionId')
         self.page.locator('[data-search-result]').first.click()
         self.assertEqual(self.page.evaluate('[qz.md,qz.ids]'),['s',[expected]])
         self.page.evaluate("qz=null;view='d';go()")
-        self.page.get_by_role('combobox',name='Modo das questões encontradas').select_option('b')
+        self.choose_filter('Modo das questões encontradas','b')
         self.assertTrue(self.page.evaluate('filteredSearchResults().every(d=>d.type==="bate")'))
-        self.page.get_by_role('combobox',name='Filtrar resultados por aula').select_option('0')
+        self.choose_filter('Filtrar resultados por aula','0')
         self.assertGreater(self.page.evaluate('filteredSearchResults().length'),0)
 
     def test_material_tiles_show_counts_icons_and_filter_the_actual_kind(self):
@@ -83,7 +87,7 @@ class SearchRefinements(unittest.TestCase):
             self.assertTrue(self.page.evaluate('type=>filteredSearchResults().every(d=>d.type===type)',kind))
             self.assertGreater(self.page.evaluate('filteredSearchResults().length'),0,kind)
         self.page.locator('[data-search-material="all"]').click()
-        self.page.get_by_role('combobox',name='Filtrar resultados por aula').select_option('3')
+        self.choose_filter('Filtrar resultados por aula','3')
         self.assertTrue(self.page.evaluate('filteredSearchResults().every(d=>d.lesson===3)'))
         self.page.locator('[data-search-area="trilha"]').click()
         self.assertEqual(self.page.evaluate('currentSearch().lesson'),0)
@@ -112,10 +116,10 @@ class SearchRefinements(unittest.TestCase):
         self.assertEqual(self.page.evaluate('currentSearch().lesson'),3)
         self.page.get_by_role('button',name='Trocar aula',exact=True).click()
         self.page.locator('[data-search-area="questoes"]').click()
-        self.page.get_by_role('combobox',name='Histórico das questões encontradas').select_option('err')
+        self.choose_filter('Histórico das questões encontradas','err')
         self.assertEqual(self.page.evaluate('filteredSearchResults().length'),0)
         self.assertIn('Nenhum resultado',self.page.locator('.search-empty').inner_text())
-        self.page.get_by_role('combobox',name='Histórico das questões encontradas').select_option('all')
+        self.choose_filter('Histórico das questões encontradas','all')
         for width in [390,1024,1280,1440,1920]:
             self.page.set_viewport_size(dict(width=width,height=950))
             for theme in ['light','dark']:
