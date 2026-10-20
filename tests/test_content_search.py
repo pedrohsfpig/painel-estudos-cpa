@@ -57,8 +57,12 @@ class ContentSearch(unittest.TestCase):
         for area,allowed in [('trilha',{'aula','trilha'}),('questoes',{'questao','bate'}),('materiais',{'mapa','diag','tab','tl','fc','geral','sfn'})]:
             self.page.locator(f'[data-search-area="{area}"]').click()
             self.assertTrue(set(self.sources()).issubset(allowed))
+            if area=='trilha':
+                self.assertGreater(self.page.locator('[data-search-lesson]').count(),0)
+                self.assertEqual(self.page.locator('[data-search-result]').count(),0)
+                self.page.locator('[data-search-lesson]').first.click()
             self.assertTrue(self.sources())
-        self.page.get_by_role('combobox',name='Tipo de material da busca geral').select_option('tab')
+        self.page.locator('[data-search-material="tab"]').click()
         self.assertEqual(set(self.sources()),{'tab'})
         self.page.locator('[data-search-area="all"]').click()
         self.assertGreater(self.page.evaluate('filteredSearchResults().length'),self.page.evaluate("searchContent('inflação','tab').length"))

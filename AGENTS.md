@@ -929,8 +929,8 @@ com rolagem interna. A implementação contextual substitui o padrão anterior.
   antes de `nextStudyAction`, indicadores e evolução. Mantenha todas as aulas,
   datas, filtros, histórico e regras do checkpoint.
 - Apenas no painel a busca reúne todo o conteúdo e oferece filtros Tudo/Trilha/
-  Questões/Materiais. Em Materiais há um seletor adicional de tipo, incluindo
-  tabelas. O índice inclui aulas, AL/MAT, quadros, enunciados de Q/BP e o quadro SFN.
+  Questões/Materiais. Em Materiais há cartões visuais por tipo, incluindo
+  tabelas, quadros comparativos e flashcards. O índice inclui aulas, AL/MAT, quadros, enunciados de Q/BP e o quadro SFN.
   Nunca inclua alternativas, gabaritos ou feedbacks nos resultados de questões.
 - Trilha retorna somente aulas e conteúdo da trilha. Materiais retorna somente
   o tipo atualmente aberto (tabelas, mapas, diagramas, prazos, flashcards ou
@@ -963,3 +963,24 @@ com rolagem interna. A implementação contextual substitui o padrão anterior.
   `tests/test_practice_layout.py`, `tests/test_practice_navigation.py`,
   `tests/test_question_navigation.py` e `tests/smoke.py` antes de publicar.
   Registre a entrega em `docs/busca-contextual.md`.
+
+### Refinamentos e identidade das aulas na busca
+
+- Em Trilha (filtro do painel e tela local), mostre primeiro as aulas encontradas,
+  em ordem numérica, com quantidade real de informações. Só abra os resultados
+  após escolher uma aula; Trocar aula retorna à seleção. Preserve todos os itens.
+- Todos os cartões da busca usam a mesma identidade de aula: número em selo,
+  título completo, ícone e cor constantes. Restrinja essas cores à pesquisa; não
+  altere a estrutura azul dos mapas ou as cores semânticas de acerto/erro.
+- No filtro Questões do painel, ofereça dificuldade, modo (Estudo, Simulado,
+  Hardcore, Bate-pronto), histórico (todas, inéditas, respondidas, erros pendentes)
+  e aula. Interseccione os filtros sem alterar cfg ou H. Erros pendentes seguem a
+  última resposta; Simulado exclui somenteEstudo e inicia resultados nesse modo
+  quando selecionado na busca geral. Trocar modo reinicia apenas o
+  filtro de dificuldade da busca, evitando herdar uma combinação incompatível.
+- Em Materiais, use cartões com ícone, cor, tipo e contagem, além do filtro de
+  aula. Zeros continuam identificados; não invente resultados para completar tipos.
+- O usuário retirou explicitamente o pedido de mudar filtros internos de resumo,
+  dicas e macetes: mantenha os controles e conteúdos dessa parte como estão.
+- Execute também `python3 tests/test_search_refinements.py` e atualize o relatório
+  `docs/busca-contextual.md` ao alterar esses refinamentos.

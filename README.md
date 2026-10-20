@@ -263,3 +263,9 @@ resultado exige clique explícito. Uma sessão em andamento é preservada e pode
 retomada. A busca não altera a seleção de aulas nem a distribuição da sessão.
 
 Detalhes em [docs/busca-contextual.md](docs/busca-contextual.md).
+
+Na busca da Trilha, escolha primeiro uma aula nos cartões numerados, em ordem,
+com a quantidade de informações encontradas. Nos resultados, número, ícone e cor
+identificam sempre a mesma aula. O filtro Questões do painel oferece dificuldade,
+modo, histórico e aula; Materiais oferece cartões por tipo com contagens e filtro
+de aula. Esses refinamentos não mudam a configuração da sessão nem o histórico.

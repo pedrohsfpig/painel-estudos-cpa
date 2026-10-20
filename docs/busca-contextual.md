@@ -49,3 +49,36 @@ hierarquia do painel, 4 de layout da prática, 3 de navegação/retorno da prát
 claro/escuro em painel, prática e tabelas, além da tela estreita. A comparação com
 a versão anterior confirmou Q, BP, AL, MAT, quadros e `pool` idênticos. Os testes
 usam armazenamento isolado; nenhum histórico real do usuário foi manipulado.
+
+## Refinamento por aula, questões e tipo de material
+
+A Trilha passa a mostrar primeiro cartões de aulas em ordem numérica, com a
+quantidade de informações encontradas. Escolher a aula abre só seus resultados;
+Trocar aula retorna ao conjunto. Essa etapa existe no filtro Trilha do painel e
+na busca local da Trilha. Os filtros internos de resumo/dicas/pegadinhas não mudam.
+
+Os cartões da pesquisa têm identidade consistente: selo numérico, título da aula,
+ícone e cor. O mesmo número/cor acompanha a aula em seleção, conteúdo, questões
+e materiais, sem atribuir logos oficiais inventados nem alterar cores dos mapas.
+
+Questões no painel oferece dificuldade, modo, histórico e aula. Contagens são
+reais e os filtros se combinam; pendências seguem a última resposta. O modo
+Simulado exclui itens somenteEstudo e inicia o resultado no modo correspondente.
+Os controles da busca não alteram a sessão configurada nem registram respostas.
+
+Materiais usa cartões visuais por tipo, com ícones, contagens, seleção indicada e
+cores consistentes com a paleta existente. Há também seleção de aula. Tipos sem
+resultados mostram zero. Corrigida a indexação do quadro SFN: rótulos e nomes
+são separados, permitindo encontrar BCB/BACEN também nesse quadro.
+
+Testes específicos em `tests/test_search_refinements.py` cobrem contagens, ordem
+numérica, dificuldade/modo/histórico, seleção de aula, materiais, cores estáveis,
+teclado, zero resultados e larguras de PC/celular nos dois temas.
+
+Validação dos refinamentos: **113 testes aprovados** — 6 específicos dos novos
+filtros/identidades, 11 de busca contextual, 4 de painel, 4 de layout da prática,
+3 de navegação/retorno, 9 de navegação entre questões e 76 de fluxos completos.
+Conferidos os temas claro/escuro e larguras de 390 a 1920 px. Q, BP, AL, MAT,
+quadros comparativos e a seleção de questões permanecem idênticos. A inspeção
+visual incluiu a grade de aulas, a aula selecionada e os filtros de questões e
+materiais. Trechos de contexto respeitam limites de palavras ao abreviar.
