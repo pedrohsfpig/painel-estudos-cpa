@@ -84,7 +84,7 @@ class CompactResults(unittest.TestCase):
         self.assertTrue(self.page.locator('#lesson-summary').evaluate('n=>n.open'))
 
     def test_small_screens_and_many_bate_pronto_topics_keep_every_item_accessible(self):
-        self.page.evaluate('''()=>{const ids=BP_Q.map((_,i)=>100001+i).slice(450);begin(ids,'b');qz.rev=ids.map((id,i)=>[id,i%2,questionById(id)[i%2?4:5]]);qz.i=ids.length;go()}''')
+        self.page.evaluate('''()=>{const ids=BP_Q.map((_,i)=>100001+i).slice(450,500);begin(ids,'b');qz.rev=ids.map((id,i)=>[id,i%2,questionById(id)[i%2?4:5]]);qz.i=ids.length;go()}''')
         topics=self.page.evaluate('sessionAnalysis().topics.length')
         self.assertEqual(self.page.locator('.result-groups-topics [data-result-topic]').count(),topics)
         self.assertEqual(self.page.locator('.result-groups-topics').get_attribute('tabindex'),'0')

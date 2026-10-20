@@ -3499,6 +3499,306 @@
       "tema": "Estabilidade: Comef",
       "fonte_Q": 961,
       "modelo": "direto"
+    },
+    {
+      "id": 100501,
+      "aula": 11,
+      "tema": "Fluxo: agentes e circuitos",
+      "fonte_Q": 1001
+    },
+    {
+      "id": 100502,
+      "aula": 11,
+      "tema": "Fluxo: agentes e circuitos",
+      "fonte_Q": 1007
+    },
+    {
+      "id": 100503,
+      "aula": 11,
+      "tema": "Fluxo: agentes e circuitos",
+      "fonte_Q": 1007
+    },
+    {
+      "id": 100504,
+      "aula": 11,
+      "tema": "Fluxo: decisões e repercussões",
+      "fonte_Q": 1002
+    },
+    {
+      "id": 100505,
+      "aula": 11,
+      "tema": "Fluxo: decisões e repercussões",
+      "fonte_Q": 1006
+    },
+    {
+      "id": 100506,
+      "aula": 11,
+      "tema": "Fiscal: objetivos e instrumentos",
+      "fonte_Q": 1011
+    },
+    {
+      "id": 100507,
+      "aula": 11,
+      "tema": "Fiscal: objetivos e instrumentos",
+      "fonte_Q": 1012
+    },
+    {
+      "id": 100508,
+      "aula": 11,
+      "tema": "Fiscal: objetivos e instrumentos",
+      "fonte_Q": 1019
+    },
+    {
+      "id": 100509,
+      "aula": 11,
+      "tema": "Fiscal: objetivos e instrumentos",
+      "fonte_Q": 1018
+    },
+    {
+      "id": 100510,
+      "aula": 11,
+      "tema": "Fiscal: objetivos e instrumentos",
+      "fonte_Q": 1020
+    },
+    {
+      "id": 100511,
+      "aula": 11,
+      "tema": "Fiscal: orientação e transmissão",
+      "fonte_Q": 1013
+    },
+    {
+      "id": 100512,
+      "aula": 11,
+      "tema": "Fiscal: orientação e transmissão",
+      "fonte_Q": 1014
+    },
+    {
+      "id": 100513,
+      "aula": 11,
+      "tema": "Fiscal: orientação e transmissão",
+      "fonte_Q": 1021
+    },
+    {
+      "id": 100514,
+      "aula": 11,
+      "tema": "Fiscal: orientação e transmissão",
+      "fonte_Q": 1024
+    },
+    {
+      "id": 100515,
+      "aula": 11,
+      "tema": "Fiscal: orientação e transmissão",
+      "fonte_Q": 1032
+    },
+    {
+      "id": 100516,
+      "aula": 11,
+      "tema": "Fiscal: financiamento e responsabilidade",
+      "fonte_Q": 1015
+    },
+    {
+      "id": 100517,
+      "aula": 11,
+      "tema": "Fiscal: financiamento e responsabilidade",
+      "fonte_Q": 1015
+    },
+    {
+      "id": 100518,
+      "aula": 11,
+      "tema": "Fiscal: financiamento e responsabilidade",
+      "fonte_Q": 1016
+    },
+    {
+      "id": 100519,
+      "aula": 11,
+      "tema": "Fiscal: financiamento e responsabilidade",
+      "fonte_Q": 1027
+    },
+    {
+      "id": 100520,
+      "aula": 11,
+      "tema": "Fiscal: financiamento e responsabilidade",
+      "fonte_Q": 1025
+    },
+    {
+      "id": 100521,
+      "aula": 11,
+      "tema": "Indicadores: PIB e óticas",
+      "fonte_Q": 1041
+    },
+    {
+      "id": 100522,
+      "aula": 11,
+      "tema": "Indicadores: PIB e óticas",
+      "fonte_Q": 1046
+    },
+    {
+      "id": 100523,
+      "aula": 11,
+      "tema": "Indicadores: PIB e óticas",
+      "fonte_Q": 1042
+    },
+    {
+      "id": 100524,
+      "aula": 11,
+      "tema": "Indicadores: PIB e óticas",
+      "fonte_Q": 1045
+    },
+    {
+      "id": 100525,
+      "aula": 11,
+      "tema": "Indicadores: PIB e óticas",
+      "fonte_Q": 1043
+    },
+    {
+      "id": 100526,
+      "aula": 11,
+      "tema": "Indicadores: PIB e óticas",
+      "fonte_Q": 1047
+    },
+    {
+      "id": 100527,
+      "aula": 11,
+      "tema": "Indicadores: PIB e óticas",
+      "fonte_Q": 1051
+    },
+    {
+      "id": 100528,
+      "aula": 11,
+      "tema": "Indicadores: PIB e óticas",
+      "fonte_Q": 1050
+    },
+    {
+      "id": 100529,
+      "aula": 11,
+      "tema": "Indicadores: PIB e óticas",
+      "fonte_Q": 1048
+    },
+    {
+      "id": 100530,
+      "aula": 11,
+      "tema": "Indicadores: PIB e óticas",
+      "fonte_Q": 1049
+    },
+    {
+      "id": 100531,
+      "aula": 11,
+      "tema": "Indicadores: PIB e óticas",
+      "fonte_Q": 1044
+    },
+    {
+      "id": 100532,
+      "aula": 11,
+      "tema": "Indicadores: PIB e óticas",
+      "fonte_Q": 1053
+    },
+    {
+      "id": 100533,
+      "aula": 11,
+      "tema": "Indicadores: inflação e índices",
+      "fonte_Q": 1066
+    },
+    {
+      "id": 100534,
+      "aula": 11,
+      "tema": "Indicadores: inflação e índices",
+      "fonte_Q": 1068
+    },
+    {
+      "id": 100535,
+      "aula": 11,
+      "tema": "Indicadores: inflação e índices",
+      "fonte_Q": 1068
+    },
+    {
+      "id": 100536,
+      "aula": 11,
+      "tema": "Indicadores: inflação e índices",
+      "fonte_Q": 1067
+    },
+    {
+      "id": 100537,
+      "aula": 11,
+      "tema": "Indicadores: inflação e índices",
+      "fonte_Q": 1067
+    },
+    {
+      "id": 100538,
+      "aula": 11,
+      "tema": "Indicadores: inflação e índices",
+      "fonte_Q": 1069
+    },
+    {
+      "id": 100539,
+      "aula": 11,
+      "tema": "Indicadores: inflação e índices",
+      "fonte_Q": 1070
+    },
+    {
+      "id": 100540,
+      "aula": 11,
+      "tema": "Indicadores: inflação e índices",
+      "fonte_Q": 1075
+    },
+    {
+      "id": 100541,
+      "aula": 11,
+      "tema": "Indicadores: Selic e DI",
+      "fonte_Q": 1081
+    },
+    {
+      "id": 100542,
+      "aula": 11,
+      "tema": "Indicadores: Selic e DI",
+      "fonte_Q": 1083
+    },
+    {
+      "id": 100543,
+      "aula": 11,
+      "tema": "Indicadores: Selic e DI",
+      "fonte_Q": 1082
+    },
+    {
+      "id": 100544,
+      "aula": 11,
+      "tema": "Indicadores: Selic e DI",
+      "fonte_Q": 1086
+    },
+    {
+      "id": 100545,
+      "aula": 11,
+      "tema": "Indicadores: Selic e DI",
+      "fonte_Q": 1089
+    },
+    {
+      "id": 100546,
+      "aula": 11,
+      "tema": "Indicadores: TR e TLP",
+      "fonte_Q": 1091
+    },
+    {
+      "id": 100547,
+      "aula": 11,
+      "tema": "Indicadores: TR e TLP",
+      "fonte_Q": 1093
+    },
+    {
+      "id": 100548,
+      "aula": 11,
+      "tema": "Indicadores: TR e TLP",
+      "fonte_Q": 1092
+    },
+    {
+      "id": 100549,
+      "aula": 11,
+      "tema": "Indicadores: TR e TLP",
+      "fonte_Q": 1097
+    },
+    {
+      "id": 100550,
+      "aula": 11,
+      "tema": "Indicadores: TR e TLP",
+      "fonte_Q": 1096
     }
   ],
   "escopo": "450 itens conceituais, 50 por aula, baseados no conteúdo já revisado de Q e nos materiais existentes. Sem certificação normativa independente."

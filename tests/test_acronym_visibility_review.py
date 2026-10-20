@@ -18,7 +18,7 @@ class AcronymVisibility(unittest.TestCase):
 
     def test_banks_keep_their_original_texts_answers_and_feedbacks(self):
         for bank in ['Q','BP']:
-            value=self.page.evaluate(bank)
+            value=self.page.evaluate(bank+'.slice(0,'+str(REPORT["contagens"]["questoes_regulares"] if bank=="Q" else REPORT["contagens"]["bate_pronto"])+')')
             digest=hashlib.sha256(json.dumps(value,ensure_ascii=False,separators=(',',':')).encode()).hexdigest()
             self.assertEqual(digest,REPORT['integridade'][bank+'_sha256'])
 
@@ -43,11 +43,11 @@ class AcronymVisibility(unittest.TestCase):
 
     def test_census_of_all_1500_items_has_no_unexplained_missing_definition(self):
         data=self.page.evaluate('''()=>{
-          const raw=JSON.stringify([Q,BP]),h=JSON.stringify(H),rows=[...Q.map((q,i)=>({id:i+1,q})),...BP_Q.map((q,i)=>({id:100001+i,q}))];
+          const raw=JSON.stringify([Q,BP]),h=JSON.stringify(H),rows=[...Q.slice(0,1000).map((q,i)=>({id:i+1,q})),...BP_Q.slice(0,500).map((q,i)=>({id:100001+i,q}))];
           return {rows:rows.map(({id,q})=>{const d=questionDisplay(q),after=questionDisplay(q,true),names=new Map();
             for(const text of [q[3],...questionOptions(q).map(o=>o[0])])for(const m of text.matchAll(new RegExp(acronymPattern,'giu'))){const e=acronymAliases.get(m[1].toLocaleLowerCase('pt-BR'));names.set(e.id,acronymMeaning(e,q));}
             return {id,names:[...names],deferred:d.deferred,text:d.stem+' '+d.options.join(' '),after:after.stem+' '+after.options.join(' ')};
-          }),unchanged:raw===JSON.stringify([Q,BP])&&h===JSON.stringify(H),guards:QUESTION_ACRONYM_CLUES};
+          }),unchanged:raw===JSON.stringify([Q,BP])&&h===JSON.stringify(H),guards:QUESTION_ACRONYM_CLUES.filter(id=>id<=1000||id>100000&&id<=100500)};
         }''')
         self.assertTrue(data['unchanged']);self.assertEqual(len(data['rows']),1500)
         self.assertEqual(sum(bool(r['names']) for r in data['rows']),940)

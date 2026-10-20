@@ -1,0 +1,1822 @@
+{
+  "aula": 11,
+  "titulo": "Aula 11: Macroeconomia, Atividade e Política Fiscal",
+  "data": "2026-10-20",
+  "fontes": {
+    "slides": {
+      "arquivo": "Screenshot_1 (4).pdf",
+      "paginas": 14,
+      "sha256": "599e08849d02ed6fcdaba7be4587da292f298b302a5b745f08a7a315026c7a97"
+    },
+    "transcricoes": {
+      "arquivo": "Texto colado.txt",
+      "aulas": [
+        16,
+        18,
+        22
+      ],
+      "sha256": "52b18d12ac030c37e9f02483bfd8c2e0b9590c5e96a6dc7cb4d24d8ced64dd16"
+    }
+  },
+  "cobertura": [
+    {
+      "bloco": 1,
+      "temas": [
+        "Fluxo: agentes e circuitos",
+        "Fluxo: decisões e repercussões"
+      ],
+      "transcricao": 16,
+      "slides": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "bloco": 2,
+      "temas": [
+        "Fiscal: objetivos e instrumentos",
+        "Fiscal: orientação e transmissão",
+        "Fiscal: financiamento e responsabilidade"
+      ],
+      "transcricao": 18,
+      "slides": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "bloco": 3,
+      "temas": [
+        "Indicadores: PIB e óticas",
+        "Indicadores: inflação e índices",
+        "Indicadores: Selic e DI",
+        "Indicadores: TR e TLP"
+      ],
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ]
+    }
+  ],
+  "proporcoes": {
+    "origem_professor": [
+      16,
+      18,
+      22
+    ],
+    "questoes": [
+      10,
+      30,
+      60
+    ],
+    "bate_pronto": [
+      5,
+      15,
+      30
+    ],
+    "por_nivel": {
+      "0": [
+        2,
+        6,
+        12
+      ],
+      "1": [
+        4,
+        12,
+        24
+      ],
+      "2": [
+        2,
+        6,
+        12
+      ],
+      "3": [
+        2,
+        6,
+        12
+      ]
+    },
+    "criterio": "Prioridade pedagógica solicitada pelo usuário, não previsão oficial de incidência."
+  },
+  "questoes": [
+    {
+      "id": 1001,
+      "tema": "Fluxo: agentes e circuitos",
+      "nivel": 0,
+      "transcricao": 16,
+      "slides": [
+        1,
+        2
+      ],
+      "hash": "59fe223dd3704d581df37fa9f080284db53b5e9535dd21921ddbf68072b438c7"
+    },
+    {
+      "id": 1002,
+      "tema": "Fluxo: decisões e repercussões",
+      "nivel": 0,
+      "transcricao": 16,
+      "slides": [
+        2,
+        3
+      ],
+      "hash": "9cf2de66e8fac92cb1955dd50cc8ab2c87d88b49df497542725fb4e2f7c1e3cd"
+    },
+    {
+      "id": 1003,
+      "tema": "Fluxo: agentes e circuitos",
+      "nivel": 1,
+      "transcricao": 16,
+      "slides": [
+        1,
+        2
+      ],
+      "hash": "15556246194edd6e51f218494839115fefb666f86e675a829139dc57be90e271"
+    },
+    {
+      "id": 1004,
+      "tema": "Fluxo: agentes e circuitos",
+      "nivel": 1,
+      "transcricao": 16,
+      "slides": [
+        1,
+        2
+      ],
+      "hash": "d384706ee5e4f6103e6b938a8b66c8e26973e61b4f0aa492ec8cced3dc65198c"
+    },
+    {
+      "id": 1005,
+      "tema": "Fluxo: decisões e repercussões",
+      "nivel": 1,
+      "transcricao": 16,
+      "slides": [
+        2,
+        3
+      ],
+      "hash": "f95baf22fa4d9bc88318cca70c979b37b50685abd15f5aae10393c5cc722c16f"
+    },
+    {
+      "id": 1006,
+      "tema": "Fluxo: decisões e repercussões",
+      "nivel": 1,
+      "transcricao": 16,
+      "slides": [
+        2,
+        3
+      ],
+      "hash": "bb0707633c75e1e879795893d33bc0a2bb48fb48273e1b71059bd30ea2f4e1b4"
+    },
+    {
+      "id": 1007,
+      "tema": "Fluxo: agentes e circuitos",
+      "nivel": 2,
+      "transcricao": 16,
+      "slides": [
+        1,
+        2
+      ],
+      "hash": "cd69701411464674638358113e312ca019478d08fe85c4d55f1c40dc5030b290"
+    },
+    {
+      "id": 1008,
+      "tema": "Fluxo: decisões e repercussões",
+      "nivel": 2,
+      "transcricao": 16,
+      "slides": [
+        2,
+        3
+      ],
+      "hash": "6e734b87fe6b5a8e0bfebcbca92ae8582b702964747ddabdec7877bd8ab51c22"
+    },
+    {
+      "id": 1009,
+      "tema": "Fluxo: agentes e circuitos",
+      "nivel": 3,
+      "transcricao": 16,
+      "slides": [
+        1,
+        2
+      ],
+      "hash": "c53c168f735fe30c076462cbe5316da72bbb72ecbeac471ab87fd00b170c4e2f"
+    },
+    {
+      "id": 1010,
+      "tema": "Fluxo: decisões e repercussões",
+      "nivel": 3,
+      "transcricao": 16,
+      "slides": [
+        2,
+        3
+      ],
+      "hash": "0e2b8e2550dbdee413f7509a418b35a20aae2a7fd7f48de5ad26aa078b943599"
+    },
+    {
+      "id": 1011,
+      "tema": "Fiscal: objetivos e instrumentos",
+      "nivel": 0,
+      "transcricao": 18,
+      "slides": [
+        4
+      ],
+      "hash": "f682f41cecb6f3f9af5f2ac53e37cf14b7b372d55791435a8446695b91545353"
+    },
+    {
+      "id": 1012,
+      "tema": "Fiscal: objetivos e instrumentos",
+      "nivel": 0,
+      "transcricao": 18,
+      "slides": [
+        4
+      ],
+      "hash": "427040c1314441554c75058eaceaeea74113e6f4e04414ec74e81dc484828839"
+    },
+    {
+      "id": 1013,
+      "tema": "Fiscal: orientação e transmissão",
+      "nivel": 0,
+      "transcricao": 18,
+      "slides": [
+        5
+      ],
+      "hash": "679759a6e005e1e73cd51af156c4f537e9a8023d5c015c68ac5e976f23ed6e46"
+    },
+    {
+      "id": 1014,
+      "tema": "Fiscal: orientação e transmissão",
+      "nivel": 0,
+      "transcricao": 18,
+      "slides": [
+        5
+      ],
+      "hash": "5b15d4b48fca13d39dfab1fbf4bf041e071ca491d7628bed9ade13b578cc377a"
+    },
+    {
+      "id": 1015,
+      "tema": "Fiscal: financiamento e responsabilidade",
+      "nivel": 0,
+      "transcricao": 18,
+      "slides": [
+        5,
+        6,
+        7
+      ],
+      "hash": "78cde7bf089a0e691a4f0cb04957058b81cf67dced3faaccecc903fd0bbdec85"
+    },
+    {
+      "id": 1016,
+      "tema": "Fiscal: financiamento e responsabilidade",
+      "nivel": 0,
+      "transcricao": 18,
+      "slides": [
+        5,
+        6,
+        7
+      ],
+      "hash": "760fdb5c10751640542901d6bbaa253026a6d01fe7d5c24795548ebc57ade45b"
+    },
+    {
+      "id": 1017,
+      "tema": "Fiscal: objetivos e instrumentos",
+      "nivel": 1,
+      "transcricao": 18,
+      "slides": [
+        4
+      ],
+      "hash": "d684604982443732d2f1c220bb363a7e322fd33ff7b5271fe01ea306d9b5cc6d"
+    },
+    {
+      "id": 1018,
+      "tema": "Fiscal: objetivos e instrumentos",
+      "nivel": 1,
+      "transcricao": 18,
+      "slides": [
+        4
+      ],
+      "hash": "f8c5cb4b2c46e3f663595a643f44ad9b92a3cac4aa73c0eecea2d0caed86aa2e"
+    },
+    {
+      "id": 1019,
+      "tema": "Fiscal: objetivos e instrumentos",
+      "nivel": 1,
+      "transcricao": 18,
+      "slides": [
+        4
+      ],
+      "hash": "4f224ddbc73aad28c25853236359cf6ecf5641153445669dd425b562ed0b1b9b"
+    },
+    {
+      "id": 1020,
+      "tema": "Fiscal: objetivos e instrumentos",
+      "nivel": 1,
+      "transcricao": 18,
+      "slides": [
+        4
+      ],
+      "hash": "23fb7a2546caec54396a39c35e5e4df7f530ff22447764b12ea0b80dfcbbc5a3"
+    },
+    {
+      "id": 1021,
+      "tema": "Fiscal: orientação e transmissão",
+      "nivel": 1,
+      "transcricao": 18,
+      "slides": [
+        5
+      ],
+      "hash": "fa56edfd6886a00f316433bb8e43b2ab64cccaff1ab823a6b35bc9d231ec3262"
+    },
+    {
+      "id": 1022,
+      "tema": "Fiscal: orientação e transmissão",
+      "nivel": 1,
+      "transcricao": 18,
+      "slides": [
+        5
+      ],
+      "hash": "ce089a5868f87738457bcd28c5313347ecce05cd4e6a0144e4ea029bb0c463c7"
+    },
+    {
+      "id": 1023,
+      "tema": "Fiscal: orientação e transmissão",
+      "nivel": 1,
+      "transcricao": 18,
+      "slides": [
+        5
+      ],
+      "hash": "0972ec405cab64f64ea42d993bff555fad4c7edffb68e9dba26b20a8718871b1"
+    },
+    {
+      "id": 1024,
+      "tema": "Fiscal: orientação e transmissão",
+      "nivel": 1,
+      "transcricao": 18,
+      "slides": [
+        5
+      ],
+      "hash": "fc3a0b830185b9fd7d9e6ca673971cf64cea50de03fcb1efc63ee1ddc0afceb6"
+    },
+    {
+      "id": 1025,
+      "tema": "Fiscal: financiamento e responsabilidade",
+      "nivel": 1,
+      "transcricao": 18,
+      "slides": [
+        5,
+        6,
+        7
+      ],
+      "hash": "51f2d47262118d4f816e2dfc20c4da4dda2722d08c560ce4ee4b45688e419e57"
+    },
+    {
+      "id": 1026,
+      "tema": "Fiscal: financiamento e responsabilidade",
+      "nivel": 1,
+      "transcricao": 18,
+      "slides": [
+        5,
+        6,
+        7
+      ],
+      "hash": "7f0f035dd6a9f9e86060ac54033577c82e14d55447516e6e84746a18fc9aa4e0"
+    },
+    {
+      "id": 1027,
+      "tema": "Fiscal: financiamento e responsabilidade",
+      "nivel": 1,
+      "transcricao": 18,
+      "slides": [
+        5,
+        6,
+        7
+      ],
+      "hash": "85db25c23760566099b76db6efcfa840f270260305562e48047b2bbe37d2e255"
+    },
+    {
+      "id": 1028,
+      "tema": "Fiscal: financiamento e responsabilidade",
+      "nivel": 1,
+      "transcricao": 18,
+      "slides": [
+        5,
+        6,
+        7
+      ],
+      "hash": "6e1c3ac38f9e13d3f49c322eb2d52d1a33f5c17d00749324880ecfe70f90b0bd"
+    },
+    {
+      "id": 1029,
+      "tema": "Fiscal: objetivos e instrumentos",
+      "nivel": 2,
+      "transcricao": 18,
+      "slides": [
+        4
+      ],
+      "hash": "cf3a481ee33f149f9ccbc0ffffa78777e5b17621d87c454ba287e208640cbcee"
+    },
+    {
+      "id": 1030,
+      "tema": "Fiscal: objetivos e instrumentos",
+      "nivel": 2,
+      "transcricao": 18,
+      "slides": [
+        4
+      ],
+      "hash": "3ad63f5d39063fb88717f742b0606a638605e481ba5c1e24cc5e076185fe49c1"
+    },
+    {
+      "id": 1031,
+      "tema": "Fiscal: orientação e transmissão",
+      "nivel": 2,
+      "transcricao": 18,
+      "slides": [
+        5
+      ],
+      "hash": "5a3b9d0f952734627a9e55cb12f5444f72e1cdf4a45da26a16d54029fd18702e"
+    },
+    {
+      "id": 1032,
+      "tema": "Fiscal: orientação e transmissão",
+      "nivel": 2,
+      "transcricao": 18,
+      "slides": [
+        5
+      ],
+      "hash": "dd2077bed7349db40630faf8a5edb450c56db16783c8d37046d2cc167451e289"
+    },
+    {
+      "id": 1033,
+      "tema": "Fiscal: financiamento e responsabilidade",
+      "nivel": 2,
+      "transcricao": 18,
+      "slides": [
+        5,
+        6,
+        7
+      ],
+      "hash": "48c246c2ee5c4612fdb4008c7b15689c331e58e0124fa73c2be2d12b4f82b990"
+    },
+    {
+      "id": 1034,
+      "tema": "Fiscal: financiamento e responsabilidade",
+      "nivel": 2,
+      "transcricao": 18,
+      "slides": [
+        5,
+        6,
+        7
+      ],
+      "hash": "3d0f37bb5c31d59fa77b4df8e6dff04271e0f7bcb487aa48636d3c90cf594933"
+    },
+    {
+      "id": 1035,
+      "tema": "Fiscal: objetivos e instrumentos",
+      "nivel": 3,
+      "transcricao": 18,
+      "slides": [
+        4
+      ],
+      "hash": "419b7ff85207260238a4a46339c84698a82ba5fb14debfe26606af62baa76dc5"
+    },
+    {
+      "id": 1036,
+      "tema": "Fiscal: objetivos e instrumentos",
+      "nivel": 3,
+      "transcricao": 18,
+      "slides": [
+        4
+      ],
+      "hash": "ba7896d1b57e02f1fbacae2006d1fb978790234bd3752623498dad0d5fe2b622"
+    },
+    {
+      "id": 1037,
+      "tema": "Fiscal: orientação e transmissão",
+      "nivel": 3,
+      "transcricao": 18,
+      "slides": [
+        5
+      ],
+      "hash": "049b678beb3ed6258c056f9bf4dce31279317a2b63a62e08e20a24d779ebc099"
+    },
+    {
+      "id": 1038,
+      "tema": "Fiscal: orientação e transmissão",
+      "nivel": 3,
+      "transcricao": 18,
+      "slides": [
+        5
+      ],
+      "hash": "6e0097f991fb5b7f4d342e8e7639de3d219d9a4ca65cd57f2e3bb5947985fafe"
+    },
+    {
+      "id": 1039,
+      "tema": "Fiscal: financiamento e responsabilidade",
+      "nivel": 3,
+      "transcricao": 18,
+      "slides": [
+        5,
+        6,
+        7
+      ],
+      "hash": "a4b3b8c8de7145d7c74e7873ce9255da57d561de7a537eefcb0208dba9752795"
+    },
+    {
+      "id": 1040,
+      "tema": "Fiscal: financiamento e responsabilidade",
+      "nivel": 3,
+      "transcricao": 18,
+      "slides": [
+        5,
+        6,
+        7
+      ],
+      "hash": "58342387b72eea803d32f6610af8ec84857725aae16232a7a0c83fec1b3fda86"
+    },
+    {
+      "id": 1041,
+      "tema": "Indicadores: PIB e óticas",
+      "nivel": 0,
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "hash": "9974e29f2715258be90896234ae53310a1ee2bc03f41d9d809590e5e7bd18212"
+    },
+    {
+      "id": 1042,
+      "tema": "Indicadores: PIB e óticas",
+      "nivel": 0,
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "hash": "082507c04b3b5907525dbcaffce7eee0e716bb696eda28247a2a27372d297f14"
+    },
+    {
+      "id": 1043,
+      "tema": "Indicadores: PIB e óticas",
+      "nivel": 0,
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "hash": "894d3152eb3521cff05a0bffb79266250a4b288d37c82afa5fb9a9dbadbf536f"
+    },
+    {
+      "id": 1044,
+      "tema": "Indicadores: PIB e óticas",
+      "nivel": 0,
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "hash": "b2b88ccf55d6644dfb7fd39592ac79967781b19761a8e53d2fd902ee813f3220"
+    },
+    {
+      "id": 1045,
+      "tema": "Indicadores: PIB e óticas",
+      "nivel": 1,
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "hash": "3bf5dce7d5ca9cdc6a3123d215de7abc3d763500a3438aaee8d06530812ea7e5"
+    },
+    {
+      "id": 1046,
+      "tema": "Indicadores: PIB e óticas",
+      "nivel": 1,
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "hash": "492fb80b599be2961c393ab194986da62fb467d7358bdf3a8e49d13c0adca5c3"
+    },
+    {
+      "id": 1047,
+      "tema": "Indicadores: PIB e óticas",
+      "nivel": 1,
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "hash": "f3c0153ced402378d236130981246fb4f1e8a15adeb27740b6150611f7306336"
+    },
+    {
+      "id": 1048,
+      "tema": "Indicadores: PIB e óticas",
+      "nivel": 1,
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "hash": "f87342d75ef16f6f0ac381d0a41740a83f47c6c69214862fbd88564a09f985ce"
+    },
+    {
+      "id": 1049,
+      "tema": "Indicadores: PIB e óticas",
+      "nivel": 1,
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "hash": "2a689bae962147b70c22fb2a22815486b2fc333e0550b50dc0ed9ec24b20de96"
+    },
+    {
+      "id": 1050,
+      "tema": "Indicadores: PIB e óticas",
+      "nivel": 1,
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "hash": "142a4ea772311fc44ad3d5dfe8e0e259a429645dccbb91cc38a2d044e3730077"
+    },
+    {
+      "id": 1051,
+      "tema": "Indicadores: PIB e óticas",
+      "nivel": 1,
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "hash": "1607c48521e05c4f891c08b4c77369aa17bff6005b3c54e321797cd98f60214e"
+    },
+    {
+      "id": 1052,
+      "tema": "Indicadores: PIB e óticas",
+      "nivel": 1,
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "hash": "3066fd9939d6e5702a441e4712403ccfd22d7c558c2046d52138d694cfedc939"
+    },
+    {
+      "id": 1053,
+      "tema": "Indicadores: PIB e óticas",
+      "nivel": 1,
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "hash": "fbc8b574ff83f5020a9828eb48bb5875b00c830fb97efdd4aae28368ed8f05c1"
+    },
+    {
+      "id": 1054,
+      "tema": "Indicadores: PIB e óticas",
+      "nivel": 1,
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "hash": "810c5687786ae76b936205222ccd6a1a164148d01f92e5858a0d5e627e514a28"
+    },
+    {
+      "id": 1055,
+      "tema": "Indicadores: PIB e óticas",
+      "nivel": 2,
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "hash": "d06e5beeded3917da68b26e360fa1471d20e30c885c02cfc48d6194be4768d23"
+    },
+    {
+      "id": 1056,
+      "tema": "Indicadores: PIB e óticas",
+      "nivel": 2,
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "hash": "ee3482107dbefb1cf9869de9efb6243021827c9464a1ef3f67b8615d482f37f7"
+    },
+    {
+      "id": 1057,
+      "tema": "Indicadores: PIB e óticas",
+      "nivel": 2,
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "hash": "3db9edd30a0540518c67d95b018ae8f17df6321f13289501e028f7c13a5de036"
+    },
+    {
+      "id": 1058,
+      "tema": "Indicadores: PIB e óticas",
+      "nivel": 2,
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "hash": "689556b15c2b29449d077e6770821e7fed7879c668c4c01e5d3b22e1bb0e9a76"
+    },
+    {
+      "id": 1059,
+      "tema": "Indicadores: PIB e óticas",
+      "nivel": 2,
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "hash": "1f1e80b4a809411d199da8520babdf0729041878b2fdd16f4d4f8e11bb2b8add"
+    },
+    {
+      "id": 1060,
+      "tema": "Indicadores: PIB e óticas",
+      "nivel": 3,
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "hash": "786d075034b10f5c17e248c0d0639d9107c39e8cfde7094205736c21e645a803"
+    },
+    {
+      "id": 1061,
+      "tema": "Indicadores: PIB e óticas",
+      "nivel": 3,
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "hash": "08de8a97c7fe94ef500425945a9bc81fd6ad2456da971655c333c1290a6f9f7a"
+    },
+    {
+      "id": 1062,
+      "tema": "Indicadores: PIB e óticas",
+      "nivel": 3,
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "hash": "fb4ec15253e5c04af7c26278672d989f283152acc5ac66982c9f61c7d6d0b9c6"
+    },
+    {
+      "id": 1063,
+      "tema": "Indicadores: PIB e óticas",
+      "nivel": 3,
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "hash": "97deb189d3e6c8d2c658fb51463404f22ede379be4318f6888459f90f1ab51c7"
+    },
+    {
+      "id": 1064,
+      "tema": "Indicadores: PIB e óticas",
+      "nivel": 3,
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "hash": "219484e913a7c31cbf6d2f9003db8998ac18a9e65801fafe165b2ac15b3b1c31"
+    },
+    {
+      "id": 1065,
+      "tema": "Indicadores: inflação e índices",
+      "nivel": 0,
+      "transcricao": 22,
+      "slides": [
+        11
+      ],
+      "hash": "4fb9d3c7f4b50a7d4a6fb881b8fc0c9104398a19098ff3deb4aa7eb6a94871fd"
+    },
+    {
+      "id": 1066,
+      "tema": "Indicadores: inflação e índices",
+      "nivel": 0,
+      "transcricao": 22,
+      "slides": [
+        11
+      ],
+      "hash": "8ca686479ec19968461f904418a1755adffbc4e67dc076a494dfccaf607f4153"
+    },
+    {
+      "id": 1067,
+      "tema": "Indicadores: inflação e índices",
+      "nivel": 0,
+      "transcricao": 22,
+      "slides": [
+        11
+      ],
+      "hash": "51f4140a4f89be0ad0c2a849a4c0cadf45b29a8d918e401081456e64ef2903d2"
+    },
+    {
+      "id": 1068,
+      "tema": "Indicadores: inflação e índices",
+      "nivel": 1,
+      "transcricao": 22,
+      "slides": [
+        11
+      ],
+      "hash": "9e859d6a86211ea485a4c84f32ed59888735d4e2c923b1d203f3321319ce5860"
+    },
+    {
+      "id": 1069,
+      "tema": "Indicadores: inflação e índices",
+      "nivel": 1,
+      "transcricao": 22,
+      "slides": [
+        11
+      ],
+      "hash": "306c73b4965b7a9dc29623b68673486e562deda16181cac9d6126aae19b94ee6"
+    },
+    {
+      "id": 1070,
+      "tema": "Indicadores: inflação e índices",
+      "nivel": 1,
+      "transcricao": 22,
+      "slides": [
+        11
+      ],
+      "hash": "47721eb40b94a77e82c943bdf81484d4a46e051221e625d8a429cf4826bf6638"
+    },
+    {
+      "id": 1071,
+      "tema": "Indicadores: inflação e índices",
+      "nivel": 1,
+      "transcricao": 22,
+      "slides": [
+        11
+      ],
+      "hash": "2f9ae1bb5ac36aeeace7893b4afc80c45ff62b259a562ea879bef34216ca23bb"
+    },
+    {
+      "id": 1072,
+      "tema": "Indicadores: inflação e índices",
+      "nivel": 1,
+      "transcricao": 22,
+      "slides": [
+        11
+      ],
+      "hash": "a56652025abf18b10016d9a65deb760ea0d414c13d0735e3cbfaab8eac59e3e9"
+    },
+    {
+      "id": 1073,
+      "tema": "Indicadores: inflação e índices",
+      "nivel": 1,
+      "transcricao": 22,
+      "slides": [
+        11
+      ],
+      "hash": "fad20e14ef0038335736caf3e206e5a8a62d64d90ae5f99b1df50ef3e59a27c3"
+    },
+    {
+      "id": 1074,
+      "tema": "Indicadores: inflação e índices",
+      "nivel": 2,
+      "transcricao": 22,
+      "slides": [
+        11
+      ],
+      "hash": "80f128e935c6fa1f2c82bcfad366df7a4b4bb881fbe8401a37e8739550c3b794"
+    },
+    {
+      "id": 1075,
+      "tema": "Indicadores: inflação e índices",
+      "nivel": 2,
+      "transcricao": 22,
+      "slides": [
+        11
+      ],
+      "hash": "fa5a9187242d03b075708b42572f635ff6573240ed10f397080fbe9ed32d71f1"
+    },
+    {
+      "id": 1076,
+      "tema": "Indicadores: inflação e índices",
+      "nivel": 2,
+      "transcricao": 22,
+      "slides": [
+        11
+      ],
+      "hash": "e67310988e2d3035cc29533864a5f2908c4d3e84430ff94039d721a2e90cce3c"
+    },
+    {
+      "id": 1077,
+      "tema": "Indicadores: inflação e índices",
+      "nivel": 3,
+      "transcricao": 22,
+      "slides": [
+        11
+      ],
+      "hash": "48f5b1bcefd0e5a0dfc5350a0ead9bd39eb71495ef7ff259d05ce9f168c6fe54"
+    },
+    {
+      "id": 1078,
+      "tema": "Indicadores: inflação e índices",
+      "nivel": 3,
+      "transcricao": 22,
+      "slides": [
+        11
+      ],
+      "hash": "5bc90b7f27686bb84f936d166fcfdaf84340487a5327740581d208a94f26c6ed"
+    },
+    {
+      "id": 1079,
+      "tema": "Indicadores: inflação e índices",
+      "nivel": 3,
+      "transcricao": 22,
+      "slides": [
+        11
+      ],
+      "hash": "3870c8f900f9ecb31eb2c7f46f30fd5122e5f50ab1be230e5813335f461f03af"
+    },
+    {
+      "id": 1080,
+      "tema": "Indicadores: inflação e índices",
+      "nivel": 3,
+      "transcricao": 22,
+      "slides": [
+        11
+      ],
+      "hash": "09d2ed8abf575a6005e032375866538b1ec1a6e6c42b9eda508d23e6ef0a190f"
+    },
+    {
+      "id": 1081,
+      "tema": "Indicadores: Selic e DI",
+      "nivel": 0,
+      "transcricao": 22,
+      "slides": [
+        12
+      ],
+      "hash": "2ecc9117cc5ebabf01638e6a15d00aca691d409b0887dccadeaaef3c46475fe6"
+    },
+    {
+      "id": 1082,
+      "tema": "Indicadores: Selic e DI",
+      "nivel": 0,
+      "transcricao": 22,
+      "slides": [
+        12
+      ],
+      "hash": "a5f3c7caeb20c562d8cfb9cf00e732b7033df7135d62ef10135b3200fb9be82e"
+    },
+    {
+      "id": 1083,
+      "tema": "Indicadores: Selic e DI",
+      "nivel": 0,
+      "transcricao": 22,
+      "slides": [
+        12
+      ],
+      "hash": "6b2ba6d5d7ae16861d5316fa0de9dea0482674529ba3d0c58df9ab582ceeddd1"
+    },
+    {
+      "id": 1084,
+      "tema": "Indicadores: Selic e DI",
+      "nivel": 1,
+      "transcricao": 22,
+      "slides": [
+        12
+      ],
+      "hash": "34d8191c3e2122017e248418c1925f601d269414fbc244740b729d85835bc5ca"
+    },
+    {
+      "id": 1085,
+      "tema": "Indicadores: Selic e DI",
+      "nivel": 1,
+      "transcricao": 22,
+      "slides": [
+        12
+      ],
+      "hash": "326dd71b51d6dc237962b2af1c5b8ab30c89a158acd51687934cdc35dfc8577e"
+    },
+    {
+      "id": 1086,
+      "tema": "Indicadores: Selic e DI",
+      "nivel": 1,
+      "transcricao": 22,
+      "slides": [
+        12
+      ],
+      "hash": "f514865d1cf8ddeb9e03fb1ea023c790eb70a63443fcb8906b99c6c448789fe3"
+    },
+    {
+      "id": 1087,
+      "tema": "Indicadores: Selic e DI",
+      "nivel": 1,
+      "transcricao": 22,
+      "slides": [
+        12
+      ],
+      "hash": "69b34887c1c2a6401c6713ea2a89bc19ee7128048fdca1fc923ed501dab586ee"
+    },
+    {
+      "id": 1088,
+      "tema": "Indicadores: Selic e DI",
+      "nivel": 2,
+      "transcricao": 22,
+      "slides": [
+        12
+      ],
+      "hash": "88ab5a7d3ac863f9006b57910adaf38938ce3e3ce4f3375d4f03862b14a4aaa6"
+    },
+    {
+      "id": 1089,
+      "tema": "Indicadores: Selic e DI",
+      "nivel": 2,
+      "transcricao": 22,
+      "slides": [
+        12
+      ],
+      "hash": "13ae026b3d388e24d002350dbd64faa75b32559fe0d3e117752ba279b3f95b5d"
+    },
+    {
+      "id": 1090,
+      "tema": "Indicadores: Selic e DI",
+      "nivel": 3,
+      "transcricao": 22,
+      "slides": [
+        12
+      ],
+      "hash": "33dfa05038000cbcda795d365dac28c2566e8079f0de1863d561d164a1024b70"
+    },
+    {
+      "id": 1091,
+      "tema": "Indicadores: TR e TLP",
+      "nivel": 0,
+      "transcricao": 22,
+      "slides": [
+        13,
+        14
+      ],
+      "hash": "29db47fda28afbd2ab9634d4481946e15a2f91e99892127575507a1fcca0e666"
+    },
+    {
+      "id": 1092,
+      "tema": "Indicadores: TR e TLP",
+      "nivel": 0,
+      "transcricao": 22,
+      "slides": [
+        13,
+        14
+      ],
+      "hash": "b90716ccb2cf92ea3420ef31863f4eccf4dbb708ece0b8fdc6fbd4a13ab6b8ff"
+    },
+    {
+      "id": 1093,
+      "tema": "Indicadores: TR e TLP",
+      "nivel": 1,
+      "transcricao": 22,
+      "slides": [
+        13,
+        14
+      ],
+      "hash": "3dda47c733b5ccec4d07ee991fcf8d34265420fa9d54ccbd8ae490ca68d22603"
+    },
+    {
+      "id": 1094,
+      "tema": "Indicadores: TR e TLP",
+      "nivel": 1,
+      "transcricao": 22,
+      "slides": [
+        13,
+        14
+      ],
+      "hash": "249f31696617134ca31a78222a6fdbb102879b910975b6487a0669a620ba482e"
+    },
+    {
+      "id": 1095,
+      "tema": "Indicadores: TR e TLP",
+      "nivel": 1,
+      "transcricao": 22,
+      "slides": [
+        13,
+        14
+      ],
+      "hash": "0e5d59b8eb26111eca84a4f9856e34fa2bec8c8bef2cde5d2b91c65477ffff50"
+    },
+    {
+      "id": 1096,
+      "tema": "Indicadores: TR e TLP",
+      "nivel": 1,
+      "transcricao": 22,
+      "slides": [
+        13,
+        14
+      ],
+      "hash": "894e9e3427929d973892640796171e477590f3e641744edca01dcc5327b282bf"
+    },
+    {
+      "id": 1097,
+      "tema": "Indicadores: TR e TLP",
+      "nivel": 2,
+      "transcricao": 22,
+      "slides": [
+        13,
+        14
+      ],
+      "hash": "eb81f50d504c74375831eb46e24b789f4f2beea5afac6f78e6ef7bc2a32f6345"
+    },
+    {
+      "id": 1098,
+      "tema": "Indicadores: TR e TLP",
+      "nivel": 2,
+      "transcricao": 22,
+      "slides": [
+        13,
+        14
+      ],
+      "hash": "1f524704acef81764677c17d1f3e7f3dee00324d540b003a27c08b5dae17aa14"
+    },
+    {
+      "id": 1099,
+      "tema": "Indicadores: TR e TLP",
+      "nivel": 3,
+      "transcricao": 22,
+      "slides": [
+        13,
+        14
+      ],
+      "hash": "9779b82710fb2533ead4c5c65a93019e865b23c6756883c4a739bb0c4416bbb0"
+    },
+    {
+      "id": 1100,
+      "tema": "Indicadores: TR e TLP",
+      "nivel": 3,
+      "transcricao": 22,
+      "slides": [
+        13,
+        14
+      ],
+      "hash": "3bd46e403a7a7db32a8ec6b5cacff58328bf953502664773ffcccf751317ddc8"
+    }
+  ],
+  "bate_pronto": [
+    {
+      "id": 100501,
+      "tema": "Fluxo: agentes e circuitos",
+      "transcricao": 16,
+      "slides": [
+        1,
+        2
+      ],
+      "fonte_Q": 1001,
+      "hash": "49684c7085290aa7cc31b8bed9582cf98a8ac3cb5a3ff6d931cf51e542fcbcf6"
+    },
+    {
+      "id": 100502,
+      "tema": "Fluxo: agentes e circuitos",
+      "transcricao": 16,
+      "slides": [
+        1,
+        2
+      ],
+      "fonte_Q": 1007,
+      "hash": "25948ef3d829cd197296c8f0a9b0053f355de1684cb335fff7ffccbef55c02d9"
+    },
+    {
+      "id": 100503,
+      "tema": "Fluxo: agentes e circuitos",
+      "transcricao": 16,
+      "slides": [
+        1,
+        2
+      ],
+      "fonte_Q": 1007,
+      "hash": "2d6d98120fcbcf829f77c4e95f20aa0143c2d5e747e4ad7321935ea38f18b8f7"
+    },
+    {
+      "id": 100504,
+      "tema": "Fluxo: decisões e repercussões",
+      "transcricao": 16,
+      "slides": [
+        2,
+        3
+      ],
+      "fonte_Q": 1002,
+      "hash": "7ae8a45b8589eb09414e72fb73406b092c0d2340f06374bd378301e67b057491"
+    },
+    {
+      "id": 100505,
+      "tema": "Fluxo: decisões e repercussões",
+      "transcricao": 16,
+      "slides": [
+        2,
+        3
+      ],
+      "fonte_Q": 1006,
+      "hash": "3d65283f86d38d2aa765f5acf0ad52f1ae482655e4daef804805960eb6e6a76d"
+    },
+    {
+      "id": 100506,
+      "tema": "Fiscal: objetivos e instrumentos",
+      "transcricao": 18,
+      "slides": [
+        4
+      ],
+      "fonte_Q": 1011,
+      "hash": "95402e5b95e255764328a7b48d5d1fcf09cf2a909e330f1679c2905ec7f8b5b4"
+    },
+    {
+      "id": 100507,
+      "tema": "Fiscal: objetivos e instrumentos",
+      "transcricao": 18,
+      "slides": [
+        4
+      ],
+      "fonte_Q": 1012,
+      "hash": "52c91b139c47b2663b8565033d2ef3f51469445786d6be5cad4008eecd52bb58"
+    },
+    {
+      "id": 100508,
+      "tema": "Fiscal: objetivos e instrumentos",
+      "transcricao": 18,
+      "slides": [
+        4
+      ],
+      "fonte_Q": 1019,
+      "hash": "2160fec8b7a86f29f4ecfcfe0032223fcc19153f538f43306329957a61bdf2b5"
+    },
+    {
+      "id": 100509,
+      "tema": "Fiscal: objetivos e instrumentos",
+      "transcricao": 18,
+      "slides": [
+        4
+      ],
+      "fonte_Q": 1018,
+      "hash": "8bb39112dd21361b28e8c03eb3bda696911a1f4a84e35ec44d2ff816580a3c3b"
+    },
+    {
+      "id": 100510,
+      "tema": "Fiscal: objetivos e instrumentos",
+      "transcricao": 18,
+      "slides": [
+        4
+      ],
+      "fonte_Q": 1020,
+      "hash": "97e531e2051a5f4b4f5ce1d4f4d81db5cd032302337bfaaef2452bd6aa0559e0"
+    },
+    {
+      "id": 100511,
+      "tema": "Fiscal: orientação e transmissão",
+      "transcricao": 18,
+      "slides": [
+        5
+      ],
+      "fonte_Q": 1013,
+      "hash": "448f1b4b2d4caecd89645924ae5feed28dcc2a8458cb06e395f3b3e59039fdd3"
+    },
+    {
+      "id": 100512,
+      "tema": "Fiscal: orientação e transmissão",
+      "transcricao": 18,
+      "slides": [
+        5
+      ],
+      "fonte_Q": 1014,
+      "hash": "00c44dd3674e2fde0b332899930570c8be617bd16831273d82ac2931a5317e9d"
+    },
+    {
+      "id": 100513,
+      "tema": "Fiscal: orientação e transmissão",
+      "transcricao": 18,
+      "slides": [
+        5
+      ],
+      "fonte_Q": 1021,
+      "hash": "055b5b0dd5610b5e5bba89e9b8157d71816dfa07a86d686ae6927ebd8a1dfe19"
+    },
+    {
+      "id": 100514,
+      "tema": "Fiscal: orientação e transmissão",
+      "transcricao": 18,
+      "slides": [
+        5
+      ],
+      "fonte_Q": 1024,
+      "hash": "01a626db82ea434dea2b18f2a9fd9c1a45c62e851993cf1f2b682ad2435f8b84"
+    },
+    {
+      "id": 100515,
+      "tema": "Fiscal: orientação e transmissão",
+      "transcricao": 18,
+      "slides": [
+        5
+      ],
+      "fonte_Q": 1032,
+      "hash": "02c37934cfa4a139a319921c0b4efc4121cc0cee4179697d06e3025960211c3f"
+    },
+    {
+      "id": 100516,
+      "tema": "Fiscal: financiamento e responsabilidade",
+      "transcricao": 18,
+      "slides": [
+        5,
+        6,
+        7
+      ],
+      "fonte_Q": 1015,
+      "hash": "396595000b486bc5c73a2bc551ae98b6d4be64532c3151bd35e055a23cd026af"
+    },
+    {
+      "id": 100517,
+      "tema": "Fiscal: financiamento e responsabilidade",
+      "transcricao": 18,
+      "slides": [
+        5,
+        6,
+        7
+      ],
+      "fonte_Q": 1015,
+      "hash": "d2e0a1c3bf297d36148715fc74fd19d372f6eea41cedb298ff893e8b81cef046"
+    },
+    {
+      "id": 100518,
+      "tema": "Fiscal: financiamento e responsabilidade",
+      "transcricao": 18,
+      "slides": [
+        5,
+        6,
+        7
+      ],
+      "fonte_Q": 1016,
+      "hash": "9668bcd36e9bc5c66e15dcff3ec650f49a10938ab9f6b847893b5c8e428d4a03"
+    },
+    {
+      "id": 100519,
+      "tema": "Fiscal: financiamento e responsabilidade",
+      "transcricao": 18,
+      "slides": [
+        5,
+        6,
+        7
+      ],
+      "fonte_Q": 1027,
+      "hash": "a5e4ae1b4bfe8e07957973041c4a51ac747d4fd0dcdae13af0e56214a28d99e6"
+    },
+    {
+      "id": 100520,
+      "tema": "Fiscal: financiamento e responsabilidade",
+      "transcricao": 18,
+      "slides": [
+        5,
+        6,
+        7
+      ],
+      "fonte_Q": 1025,
+      "hash": "f754b4a12edb222f9f379bf63a8ba54bb53c4eea1f884f0a94e740294d9932ed"
+    },
+    {
+      "id": 100521,
+      "tema": "Indicadores: PIB e óticas",
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "fonte_Q": 1041,
+      "hash": "cf3177895ddc27d8d58bc104a744730e69ac092d83573280911080a0b95f9eeb"
+    },
+    {
+      "id": 100522,
+      "tema": "Indicadores: PIB e óticas",
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "fonte_Q": 1046,
+      "hash": "ad40dc4cc49fd7fd9aa842ed309b623a24f417af4c96342964c00e789726abd8"
+    },
+    {
+      "id": 100523,
+      "tema": "Indicadores: PIB e óticas",
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "fonte_Q": 1042,
+      "hash": "fe1049eb31147ae67a8cefeb6c1bf65d8d2afd93f88cc1e33744f4230e17777d"
+    },
+    {
+      "id": 100524,
+      "tema": "Indicadores: PIB e óticas",
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "fonte_Q": 1045,
+      "hash": "9841e177fd8005b6088f3a639cca54bd9af0636fc3bb2cca8a6b95305cf9e86f"
+    },
+    {
+      "id": 100525,
+      "tema": "Indicadores: PIB e óticas",
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "fonte_Q": 1043,
+      "hash": "10e07ea7f43cdaf1ee5d02677a020c3dd6fd98a3d15ca98651bd414d093fa977"
+    },
+    {
+      "id": 100526,
+      "tema": "Indicadores: PIB e óticas",
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "fonte_Q": 1047,
+      "hash": "7d8d2f9a61741e60a61bba2bbef2332aa0eb10268ad1b591c219b54269bb9ea2"
+    },
+    {
+      "id": 100527,
+      "tema": "Indicadores: PIB e óticas",
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "fonte_Q": 1051,
+      "hash": "7f7cc6aed054c5c8596f5962113f59fc096f2c44bd85824ae54b9f14d3368227"
+    },
+    {
+      "id": 100528,
+      "tema": "Indicadores: PIB e óticas",
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "fonte_Q": 1050,
+      "hash": "60fdf3ace1d33c4b854b68adee616130224d0a8338067dbffa0585a300b4aca4"
+    },
+    {
+      "id": 100529,
+      "tema": "Indicadores: PIB e óticas",
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "fonte_Q": 1048,
+      "hash": "8ff6d84627bbed0f56a06705ee8fbd67d3fe6d6a742c252d112ee604fca0257f"
+    },
+    {
+      "id": 100530,
+      "tema": "Indicadores: PIB e óticas",
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "fonte_Q": 1049,
+      "hash": "31506d62c9f9380313369ab799294a148c7f44e60c753a37caa69e274fcea434"
+    },
+    {
+      "id": 100531,
+      "tema": "Indicadores: PIB e óticas",
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "fonte_Q": 1044,
+      "hash": "5c56e14179ef4a9edf116ef947c37efde83a1531db88e6e090ecd09f8f240d11"
+    },
+    {
+      "id": 100532,
+      "tema": "Indicadores: PIB e óticas",
+      "transcricao": 22,
+      "slides": [
+        8,
+        9,
+        10
+      ],
+      "fonte_Q": 1053,
+      "hash": "539ad8a6a930ebbebf31299a3a22856626452a9c8ef7fdbd153c3cf7882a13b1"
+    },
+    {
+      "id": 100533,
+      "tema": "Indicadores: inflação e índices",
+      "transcricao": 22,
+      "slides": [
+        11
+      ],
+      "fonte_Q": 1066,
+      "hash": "85609f1fb815b86ac6d22f8aba60877ac07f8e48e1117fc1fa77ab4b693d3392"
+    },
+    {
+      "id": 100534,
+      "tema": "Indicadores: inflação e índices",
+      "transcricao": 22,
+      "slides": [
+        11
+      ],
+      "fonte_Q": 1068,
+      "hash": "047bc32afb3432eab44a9af71f6ec03febaf038b59dfe339e457fabd0f41102a"
+    },
+    {
+      "id": 100535,
+      "tema": "Indicadores: inflação e índices",
+      "transcricao": 22,
+      "slides": [
+        11
+      ],
+      "fonte_Q": 1068,
+      "hash": "fe3cd32e9ffddca4bbd679b547c100acf4148be18daa6ff4e443fbea34191798"
+    },
+    {
+      "id": 100536,
+      "tema": "Indicadores: inflação e índices",
+      "transcricao": 22,
+      "slides": [
+        11
+      ],
+      "fonte_Q": 1067,
+      "hash": "2f6521fb296b49bd6e57efe33c215b184cdde823209ed028cab438be79c72135"
+    },
+    {
+      "id": 100537,
+      "tema": "Indicadores: inflação e índices",
+      "transcricao": 22,
+      "slides": [
+        11
+      ],
+      "fonte_Q": 1067,
+      "hash": "99ee2c90ed6571eedc78584e61ce899a18f22f60f83469298639537fe1b56dd2"
+    },
+    {
+      "id": 100538,
+      "tema": "Indicadores: inflação e índices",
+      "transcricao": 22,
+      "slides": [
+        11
+      ],
+      "fonte_Q": 1069,
+      "hash": "a2005a87e88d4b49a84145b4fb79a7a2b4807e47466638686d342a51732dde2c"
+    },
+    {
+      "id": 100539,
+      "tema": "Indicadores: inflação e índices",
+      "transcricao": 22,
+      "slides": [
+        11
+      ],
+      "fonte_Q": 1070,
+      "hash": "a80cf9d9aa2f82b18e5b788600088d0b8d0167fcb12f647f3280c22a43420803"
+    },
+    {
+      "id": 100540,
+      "tema": "Indicadores: inflação e índices",
+      "transcricao": 22,
+      "slides": [
+        11
+      ],
+      "fonte_Q": 1075,
+      "hash": "e0441ecbe33301d6f0ef1ffa9fbf46becb31e52073baa0870ab63d87d1741642"
+    },
+    {
+      "id": 100541,
+      "tema": "Indicadores: Selic e DI",
+      "transcricao": 22,
+      "slides": [
+        12
+      ],
+      "fonte_Q": 1081,
+      "hash": "33be44ff7ca726916758c37c49f48f729f4cd16ecd878ca5c1b68cacf1d5437c"
+    },
+    {
+      "id": 100542,
+      "tema": "Indicadores: Selic e DI",
+      "transcricao": 22,
+      "slides": [
+        12
+      ],
+      "fonte_Q": 1083,
+      "hash": "106822a61b4963e1110e0b220389b43a6e1265ba40c9bcfb6fa57dd169f3b174"
+    },
+    {
+      "id": 100543,
+      "tema": "Indicadores: Selic e DI",
+      "transcricao": 22,
+      "slides": [
+        12
+      ],
+      "fonte_Q": 1082,
+      "hash": "0c1e831d66c23abd3acc745e1f8ade316eba9cd1b751f90a76af9fa386604e7b"
+    },
+    {
+      "id": 100544,
+      "tema": "Indicadores: Selic e DI",
+      "transcricao": 22,
+      "slides": [
+        12
+      ],
+      "fonte_Q": 1086,
+      "hash": "794ec1be819e4c519f69f00d99bf314fffcd787035c77203a742f90c9122600f"
+    },
+    {
+      "id": 100545,
+      "tema": "Indicadores: Selic e DI",
+      "transcricao": 22,
+      "slides": [
+        12
+      ],
+      "fonte_Q": 1089,
+      "hash": "8aeb3e6c7844dbddaaeb63bc7174282ffcffd7a75ce503ac733ba036b6784dc7"
+    },
+    {
+      "id": 100546,
+      "tema": "Indicadores: TR e TLP",
+      "transcricao": 22,
+      "slides": [
+        13,
+        14
+      ],
+      "fonte_Q": 1091,
+      "hash": "8317821644b90ea6a1ee39e63b4d1130de7089a2036f449dc754d38ef8321533"
+    },
+    {
+      "id": 100547,
+      "tema": "Indicadores: TR e TLP",
+      "transcricao": 22,
+      "slides": [
+        13,
+        14
+      ],
+      "fonte_Q": 1093,
+      "hash": "4a6a17d6d733cdc26e757c758e044adda53f999814fd5b67dbf6d9bd5447e9cf"
+    },
+    {
+      "id": 100548,
+      "tema": "Indicadores: TR e TLP",
+      "transcricao": 22,
+      "slides": [
+        13,
+        14
+      ],
+      "fonte_Q": 1092,
+      "hash": "b04afaebf35399ea9b75de59deb26672f2027c6d5e42573be6f6287f4715a248"
+    },
+    {
+      "id": 100549,
+      "tema": "Indicadores: TR e TLP",
+      "transcricao": 22,
+      "slides": [
+        13,
+        14
+      ],
+      "fonte_Q": 1097,
+      "hash": "618199dc0690ca74269ad07537e137bee2669872a429f378feac2e0410c54a16"
+    },
+    {
+      "id": 100550,
+      "tema": "Indicadores: TR e TLP",
+      "transcricao": 22,
+      "slides": [
+        13,
+        14
+      ],
+      "fonte_Q": 1096,
+      "hash": "2c9488b8e7ffe07bf9ec62885f90e5efa336606194d46a2c077695fc15c211d5"
+    }
+  ],
+  "siglas_adiadas": [
+    1041,
+    1046,
+    1082,
+    1083,
+    1088,
+    100522,
+    100543
+  ],
+  "preservacao": {
+    "hash_primeiras_1000": "76b2a55055a121139050c81904f8c85f0f09452706e493b0f1976096317f8d22",
+    "hash_primeiros_500_bp": "0c2c3a9481cc1163e0304dc127db88a69752d0e8dc472aca391c504f215831ce",
+    "hash_aulas_1_a_10": "9df384daa8854430bbd42371148198e34334748a3c84fa1c6c830c3ab26efc02"
+  },
+  "consulta_normativa": {
+    "tentada": true,
+    "certificacao_de_vigencia": false,
+    "resultado": "Acesso a Planalto, IBGE e FGV bloqueado pelo proxy: Tunnel connection failed: 403 Forbidden.",
+    "criterio": "Conceitos estáveis e reconciliação das fontes; sem gabaritos de limites fiscais vigentes ou taxa real de TLP atual."
+  },
+  "normalizacoes": [
+    "Déficit é fluxo e dívida é estoque; corrigida inversão na fala.",
+    "Excedente operacional bruto não contém remunerações dos empregados; renda mista e ajustes são distinguidos.",
+    "PIB é fluxo de produção, não estoque de riqueza nem garantia de bem-estar.",
+    "EC 95/2016 contextualizada como antigo teto; LC 200/2023 é o regime que o substituiu, sem questões de limites numéricos vigentes.",
+    "STN é gestão financeira/dívida; política fiscal não é competência exclusiva de um órgão que também administre todos os tributos.",
+    "Selic sistema não atua como contraparte central; não confundir taxa, meta e infraestrutura.",
+    "IPCA coleta no mês de referência, não exige todo mês ter 30 dias; IGP-M começa no mês anterior.",
+    "TLP não é mera troca de nome da TJLP nem migração universal de contratos; 7,61% é exemplo.",
+    "Subtrair importações evita atribuir produção externa ao território; não implica perda isolada automática no PIB.",
+    "Encobertos por professor: complementados com a transcrição, sem inventar partes ocultas."
+  ],
+  "trilha_sha256": "62e4bde6affb477f16b287ff35e55923a63fb68cd21a48cf37ce1902d4c08401",
+  "materiais_sha256": "11f8f3c301b1567756066bb685c3110a91b4c966b97383cc548a2ad76d63c5a2",
+  "revisao_editorial": {
+    "enunciados": 150,
+    "feedbacks": 500,
+    "flashcards": 50,
+    "siglas_novas": 15,
+    "itens_renderizados_sem_definicao_ausente": 150,
+    "romanos_por_item": 4,
+    "feedbacks_refinados_na_segunda_leitura": [
+      {
+        "id": 1048,
+        "opcao_original": 2
+      },
+      {
+        "id": 1049,
+        "opcao_original": 3
+      },
+      {
+        "id": 1072,
+        "opcao_original": 1
+      },
+      {
+        "id": 1087,
+        "opcao_original": 1
+      },
+      {
+        "id": 1092,
+        "opcao_original": 1
+      },
+      {
+        "id": 1094,
+        "opcao_original": 1
+      },
+      {
+        "id": 1094,
+        "opcao_original": 2
+      },
+      {
+        "id": 1097,
+        "opcao_original": 2
+      }
+    ]
+  }
+}

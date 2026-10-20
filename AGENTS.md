@@ -888,3 +888,25 @@ em Estudo e Hardcore. Simulado e Bate-pronto continuam sem o quadro.
   coluna menor nas janelas estreitas). Não volte às células grandes da versão de
   400 px. Em telas largas, centralize a área da questão com espaço simétrico à
   direita, sem deixar o quadro empurrar a leitura para o centro-direita.
+
+### Aula 11 — Macroeconomia, Atividade e Política Fiscal
+
+As transcrições 16/18/22 e os 14 slides foram cruzados. O usuário pediu 10% fluxo
+circular, 30% fiscal e 60% indicadores: preserve 10/30/60 nas 100 questões e
+5/15/30 nos 50 Bate-pronto. Dentro dos níveis Fácil/Médio/Difícil/Hardcore, os
+blocos recebem 2/4/2/2, 6/12/6/6 e 12/24/12/12, respectivamente.
+IDs 1001–1100 e 100501–100550; três blocos com filtros e um quadro de 14 conceitos.
+
+Déficit é fluxo; dívida é estoque. Salários não são contados novamente dentro do
+excedente operacional bruto. PIB não é estoque de riqueza, inflação nem garantia
+de bem-estar individual. Importações retiram produção externa já contida no gasto;
+transferências não são compras diretas de produção. IPCA e IGP-M têm cestas e pesos
+distintos. TLP combina IPCA e parcela real: 7,61% é exemplo, não constante universal.
+O antigo teto da EC 95/2016 é histórico; não o publique como regra vigente.
+Não trate a TLP como migração automática de todos os contratos TJLP.
+Sistema Selic não é CCP.
+Consultas oficiais foram bloqueadas; não declare certificação normativa a partir
+da comparação das fontes. Veja `docs/aula-11.md` e `docs/aula-11-cobertura.json`.
+Execute `python3 tests/test_aula11.py` e as regressões gerais. Preserve relatórios
+históricos usando seus recortes de IDs; novas siglas/exceções podem ser acrescentadas
+com motivos por item sem reescrever decisões e hashes anteriores.

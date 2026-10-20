@@ -801,6 +801,128 @@
         "UTVM"
       ],
       "variants": []
+    },
+    {
+      "id": "pib",
+      "name": "Produto Interno Bruto",
+      "aliases": [
+        "PIB"
+      ],
+      "variants": []
+    },
+    {
+      "id": "igpm",
+      "name": "Índice Geral de Preços – Mercado",
+      "aliases": [
+        "IGP-M",
+        "IGPM"
+      ],
+      "variants": []
+    },
+    {
+      "id": "ibge",
+      "name": "Instituto Brasileiro de Geografia e Estatística",
+      "aliases": [
+        "IBGE"
+      ],
+      "variants": []
+    },
+    {
+      "id": "fgv",
+      "name": "Fundação Getulio Vargas",
+      "aliases": [
+        "FGV"
+      ],
+      "variants": []
+    },
+    {
+      "id": "ibre",
+      "name": "Instituto Brasileiro de Economia",
+      "aliases": [
+        "IBRE"
+      ],
+      "variants": []
+    },
+    {
+      "id": "ipa",
+      "name": "Índice de Preços ao Produtor Amplo",
+      "aliases": [
+        "IPA"
+      ],
+      "variants": []
+    },
+    {
+      "id": "ipc",
+      "name": "Índice de Preços ao Consumidor",
+      "aliases": [
+        "IPC"
+      ],
+      "variants": []
+    },
+    {
+      "id": "incc",
+      "name": "Índice Nacional de Custo da Construção",
+      "aliases": [
+        "INCC"
+      ],
+      "variants": []
+    },
+    {
+      "id": "lrf",
+      "name": "Lei de Responsabilidade Fiscal",
+      "aliases": [
+        "LRF"
+      ],
+      "variants": []
+    },
+    {
+      "id": "tbf",
+      "name": "Taxa Básica Financeira",
+      "aliases": [
+        "TBF"
+      ],
+      "variants": []
+    },
+    {
+      "id": "tlp",
+      "name": "Taxa de Longo Prazo",
+      "aliases": [
+        "TLP"
+      ],
+      "variants": []
+    },
+    {
+      "id": "ntnb",
+      "name": "Nota do Tesouro Nacional série B",
+      "aliases": [
+        "NTN-B",
+        "NTN-Bs"
+      ],
+      "variants": []
+    },
+    {
+      "id": "tjlp",
+      "name": "Taxa de Juros de Longo Prazo",
+      "aliases": [
+        "TJLP"
+      ],
+      "variants": []
+    },
+    {
+      "id": "eob",
+      "name": "Excedente Operacional Bruto",
+      "aliases": [
+        "EOB"
+      ],
+      "variants": []
+    },
+    {
+      "id": "fgts",
+      "name": "Fundo de Garantia do Tempo de Serviço",
+      "aliases": [
+        "FGTS"
+      ],
+      "variants": []
     }
   ]
 }

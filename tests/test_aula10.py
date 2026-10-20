@@ -15,10 +15,10 @@ class Aula10Content(unittest.TestCase):
   self.q=load_questions();self.bp=content('const BP=');self.al=content('const AL=')
   self.mat=content('\n10:');self.report=json.loads((ROOT/'docs/aula-10-cobertura.json').read_text())
  def test_counts_difficulties_and_unique_block_mapping(self):
-  self.assertEqual(len(self.q),1000);self.assertEqual(len(self.bp),500);self.assertEqual(len(self.al),10)
-  self.assertEqual(Counter(q[2] for q in self.q[900:]),{0:20,1:40,2:20,3:20})
+  self.assertGreaterEqual(len(self.q),1000);self.assertGreaterEqual(len(self.bp),500);self.assertGreaterEqual(len(self.al),10)
+  self.assertEqual(Counter(q[2] for q in self.q[900:1000]),{0:20,1:40,2:20,3:20})
   for b,count in zip(self.al[9]['b'],[30,30,40]):
-   rows=[q for q in self.q[900:] if q[1] in b['topics']];self.assertEqual(len(rows),count)
+   rows=[q for q in self.q[900:1000] if q[1] in b['topics']];self.assertEqual(len(rows),count)
    self.assertEqual(Counter(q[2] for q in rows),{0:count//5,1:count*2//5,2:count//5,3:count//5})
   self.assertTrue(validate_questions(self.q))
  def test_source_coverage_and_exact_provenance(self):
@@ -44,10 +44,10 @@ class Aula10Content(unittest.TestCase):
   text=json.dumps(self.mat,ensure_ascii=False)
   for phrase in ['Não atua como contraparte central','10% não representa alíquota vigente','restrições de capital','1 presidente + 8 diretores do BACEN','8 diretores do BACEN','45 dias úteis','cestas A e B']:
    self.assertIn(phrase.lower(),text.lower())
-  for q in self.q[900:]:
+  for q in self.q[900:1000]:
    self.assertNotRegex(' '.join(q[3:9]+[q[10]]+q[11]),r'(?i)\baula\b|\bslides?\b|segundo o professor')
   # Perguntas com afirmações têm uma por linha, sem confundir algarismos e texto corrido.
-  for q in self.q[900:]:
+  for q in self.q[900:1000]:
    if re.search(r'\bI\. ',q[3]):self.assertEqual(len(re.findall(r'^[IVX]+\. ',q[3],re.M)),4)
 
 class Aula10Browser(unittest.TestCase):
@@ -89,7 +89,7 @@ class Aula10Browser(unittest.TestCase):
    self.assertEqual(self.page.evaluate('H[0][0]'),1)
  def test_ten_lesson_daily_and_multi_lesson_selection_keep_ratios(self):
   self.assertEqual(self.page.evaluate('dailyPlan(dailyDate()).ids.length'),20)
-  counts=self.page.evaluate('dailyPlan(dailyDate()).groups.map(g=>g.count)');self.assertEqual(counts,[2]*10)
+  counts=self.page.evaluate('dailyPlan(dailyDate()).groups.map(g=>g.count)');self.assertEqual(len(counts),self.page.evaluate('AL.length'));self.assertEqual(sum(counts),20);self.assertLessEqual(max(counts)-min(counts),1)
   for mode in ['e','h','b','s']:
    self.page.evaluate('mode=>{cfg={a:0,as:[8,9,10],n:-1,m:"all",c:30,md:mode,b:0}}',mode)
    rows=self.page.evaluate('mix(sessionPlan()).map(id=>questionById(id))')
