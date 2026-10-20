@@ -610,6 +610,11 @@ nem avaliar como erros as questões que não foram respondidas.
   indicadores discretos por dificuldade. Use percentuais neutros e pontos por
   resposta (preenchido para acerto, contorno para erro), com legenda. Não retome
   barras extensas, percentuais azuis ou gráficos divididos em verde/vermelho.
+  Acertos usam verde (`--ok`): pontos preenchidos maiores e contagem destacada.
+  Cartões com 100% têm contorno verde, sem preenchimento integral; cartões com
+  erros mantêm contorno neutro. Erros usam âmbar (`--md`), inclusive os pontos
+  vazados. O anel geral também usa verde para acertos. Preserve percentuais
+  neutros e aplique esse padrão em todos os resultados e nos dois temas.
   Se limitar pontos, informe o limite e as demais respostas; totais sempre
   incluem o grupo inteiro. Ordenar por Mais erros só reorganiza os cartões;
   não modifica sessão, histórico, revisão aberta nem cálculos.

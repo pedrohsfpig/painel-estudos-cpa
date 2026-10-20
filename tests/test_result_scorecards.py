@@ -52,17 +52,36 @@ class ResultScorecards(unittest.TestCase):
         self.assertIn('pontos mostram as primeiras 12',card.locator('[role="img"]').get_attribute('aria-label'))
         self.assertEqual(self.page.evaluate('H.length'),20)
 
-    def test_percentages_are_neutral_and_plots_do_not_use_red_green_split(self):
-        self.complete_ids([1,2,21],'e',{0,2})
+    def test_success_is_green_errors_amber_and_percentages_stay_neutral(self):
+        self.complete_ids([1,101,102,201],'e',{0,1})
         for theme in ['light','dark']:
             self.page.evaluate('x=>document.documentElement.dataset.theme=x',theme)
             self.assertTrue(self.page.locator('.result-percent').evaluate_all('nodes=>nodes.every(n=>getComputedStyle(n).color===getComputedStyle(document.body).color)'))
             self.assertEqual(self.page.locator('.result-bar,.result-rate').count(),0)
-            styles=self.page.evaluate('''()=>{const root=getComputedStyle(document.documentElement);const probe=document.createElement('i');document.body.append(probe);const color=v=>{probe.style.color=v;return getComputedStyle(probe).color};const forbidden=[color(root.getPropertyValue('--ok')),color(root.getPropertyValue('--hd'))];probe.remove();return {forbidden,marks:[...document.querySelectorAll('.result-charts .result-answer-mark')].map(n=>({fill:getComputedStyle(n).backgroundColor,border:getComputedStyle(n).borderTopColor})),ring:[...document.querySelectorAll('.result-ring circle')].map(n=>getComputedStyle(n).stroke)};}''')
+            styles=self.page.evaluate('''()=>{
+                const root=getComputedStyle(document.documentElement),probe=document.createElement('i');
+                document.body.append(probe);
+                const color=v=>{probe.style.color=v;return getComputedStyle(probe).color};
+                const green=color(root.getPropertyValue('--ok')),amber=color(root.getPropertyValue('--md')),neutral=color(root.getPropertyValue('--bd'));
+                probe.remove();
+                return {green,amber,neutral,
+                  marks:[...document.querySelectorAll('.session-result .result-answer-mark,.result-dot')].map(n=>({error:n.matches('.is-error,.wrong'),fill:getComputedStyle(n).backgroundColor,border:getComputedStyle(n).borderTopColor,size:n.getBoundingClientRect().width})),
+                  cards:[...document.querySelectorAll('[data-result-lesson]')].map(n=>({ok:Number(n.dataset.resultCorrect),wrong:Number(n.dataset.resultWrong),border:getComputedStyle(n).borderTopColor})),
+                  correctCounts:[...document.querySelectorAll('.result-correct-count.has-correct')].map(n=>getComputedStyle(n).color),
+                  errorCounts:[...document.querySelectorAll('.result-error-count.has-errors')].map(n=>getComputedStyle(n).color),
+                  ring:getComputedStyle(document.querySelector('.result-ring circle[pathLength]')).stroke};
+            }''')
             self.assertTrue(styles['marks'])
             for mark in styles['marks']:
-                self.assertNotIn(mark['fill'],styles['forbidden'])
-                self.assertNotIn(mark['border'],styles['forbidden'])
-            for color in styles['ring']:self.assertNotIn(color,styles['forbidden'])
+                self.assertGreaterEqual(mark['size'],9)
+                self.assertEqual(mark['border'],styles['amber'] if mark['error'] else styles['green'])
+                self.assertEqual(mark['fill'],'rgba(0, 0, 0, 0)' if mark['error'] else styles['green'])
+            for card in styles['cards']:
+                self.assertEqual(card['border'],styles['green'] if card['ok'] and not card['wrong'] else styles['neutral'])
+            self.assertTrue(styles['correctCounts'])
+            self.assertTrue(styles['errorCounts'])
+            self.assertEqual(set(styles['correctCounts']),{styles['green']})
+            self.assertEqual(set(styles['errorCounts']),{styles['amber']})
+            self.assertEqual(styles['ring'],styles['green'])
 
 if __name__=='__main__':unittest.main(verbosity=2)

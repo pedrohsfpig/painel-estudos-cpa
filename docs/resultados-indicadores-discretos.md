@@ -38,3 +38,17 @@ Hardcore, Simulado e Bate-pronto, incluindo resultados consultados pelos atalhos
 Validação concluída: quatro testes de indicadores/ordenação, seis de resultados
 compactos e 76 de fluxos aprovados (86 no total). A comparação com o HTML anterior
 confirmou os 1.000 itens de Q, os 500 de BP e `sessionAnalysis` sem alterações.
+
+## Ajuste de cores — 20/10/2026
+
+Por solicitação do usuário, os acertos passam a verde: pontos preenchidos de
+9 px, contagem destacada e arco do resultado geral. Cartões por aula ou conceito
+com 100% recebem borda verde e um pequeno reforço interno à esquerda, preservando
+o fundo. Cartões com erros mantêm borda neutra. Os erros continuam em âmbar,
+inclusive nos pontos vazados. Os percentuais permanecem neutros.
+A mudança é compartilhada por todos os modos e não altera dados ou cálculos.
+
+Validação do ajuste: 90 testes aprovados (4 de indicadores, 6 de resultados
+compactos, 4 de exibição de siglas e 76 de fluxos), além da inspeção visual
+nos temas claro e escuro. Banco de questões, Bate-pronto e trilha idênticos
+à versão anterior; o diff do aplicativo se restringe à apresentação dos resultados.
