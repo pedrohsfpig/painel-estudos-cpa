@@ -281,9 +281,45 @@ button:focus-visible,summary:focus-visible{outline:3px solid var(--ac);outline-o
 .recent-lesson .icon-disc{width:48px;height:48px;color:var(--lesson-attention,#8150b0)}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .recent-lesson .icon-disc{color:#b580e8}}
 :root[data-theme="dark"] .recent-lesson .icon-disc{color:#b580e8}
-.detail-stats{margin-top:16px;border:1px solid var(--bd);border-radius:10px}
-.detail-stats>summary{cursor:pointer;padding:13px 18px;font-size:14px;font-weight:500}
-.detail-stats-content{padding:0 18px 18px}.detail-stats .gp .pn{background:var(--cd)}
+.detail-stats{margin-top:16px;border:1px solid var(--bd);border-radius:14px;background:var(--bg)}
+.detail-stats>summary{cursor:pointer;padding:16px 18px;font-size:14px;font-weight:600}
+.detail-stats[open]>summary{border-bottom:1px solid var(--bd);border-radius:14px 14px 0 0}
+.detail-stats-content{padding:18px}
+.detail-focus{display:flex;align-items:center;gap:12px;padding:12px 14px;margin-bottom:16px;background:var(--cd);border-radius:10px;min-width:0}
+.detail-focus>.ui-icon{width:20px;height:20px;flex:none;color:var(--mu)}
+.detail-focus>div{min-width:0;flex:1}.detail-focus small{display:block;color:var(--mu);font-size:12px}.detail-focus strong{display:block;font-size:14px;font-weight:600;overflow-wrap:anywhere}
+.detail-focus>span{font-size:13px;white-space:nowrap;color:var(--mu)}
+.detail-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.detail-tabs{display:flex;gap:4px;padding:4px;border:1px solid var(--bd);border-radius:11px;background:var(--cd);max-width:100%}
+.detail-tabs button{display:flex;align-items:center;justify-content:center;gap:7px;border:1px solid transparent;font-size:13px;font-weight:500;padding:8px 12px;min-height:40px;color:var(--mu);min-width:0}
+.detail-tabs button>.ui-icon{width:16px;height:16px;flex:none}.detail-tabs button small{font-size:11px;font-variant-numeric:tabular-nums}
+.detail-tabs button[aria-selected="true"]{background:var(--bg);border-color:var(--bd);color:var(--fg);font-weight:650;box-shadow:0 1px 3px #0001}
+.detail-order{display:flex;align-items:center;gap:4px}.detail-order button{font-size:12px;padding:7px 9px;color:var(--mu);border-color:transparent;min-height:36px}
+.detail-order button[aria-pressed="true"]{color:var(--fg);border-color:var(--bd);background:var(--cd)}
+.detail-list-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:16px 0 12px}
+.detail-list-head p{margin:0;font-size:12px;color:var(--mu)}
+.detail-search{display:flex;align-items:center;gap:8px;width:260px;max-width:100%;min-width:0;border:1px solid var(--bd);border-radius:9px;padding:8px 10px;background:var(--bg)}
+.detail-search:focus-within{border-color:var(--ac);outline:2px solid var(--ac);outline-offset:2px}.detail-search>.ui-icon{width:16px;height:16px;flex:none;color:var(--mu)}
+.detail-search input{font:inherit;font-size:13px;color:var(--fg);width:100%;min-width:0;padding:0;border:0;background:transparent;outline:none}.detail-search input::placeholder{color:var(--mu)}
+.detail-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.detail-stat-card{display:flex;flex-direction:column;gap:12px;padding:14px;border:1px solid var(--bd);border-radius:11px;min-width:0;background:var(--cd)}
+.detail-stat-card.is-perfect{border-color:color-mix(in srgb,var(--ok) 60%,var(--bd))}
+.detail-card-heading{display:flex;gap:10px;align-items:flex-start;min-width:0}.detail-card-heading>div{flex:1;min-width:0}
+.detail-card-heading small{display:block;font-size:11px;color:var(--mu);line-height:1.5;margin-bottom:3px}
+.detail-card-heading h3{font-size:14px;line-height:1.4;font-weight:600;margin:0;overflow-wrap:anywhere}
+.detail-stat-percent{flex:none;font-size:23px;line-height:1.1;font-weight:650;color:var(--fg);font-variant-numeric:tabular-nums}
+.detail-card-counts{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:auto;font-size:12px;line-height:1.5}
+.detail-card-counts>span{display:flex;align-items:center;gap:4px}.detail-card-counts .ui-icon{width:13px;height:13px;flex:none}
+.detail-card-correct{color:var(--ok)}.detail-card-errors{color:var(--md)}.detail-card-attempts{font-size:11px;color:var(--mu)}
+.detail-pagination{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:14px;font-size:12px;color:var(--mu)}
+.detail-pagination>div{display:flex;gap:6px}.detail-pagination button{display:flex;align-items:center;justify-content:center;gap:6px;min-height:36px;padding:7px 10px;font-size:12px}
+.detail-pagination .ui-icon{width:14px;height:14px}.detail-pagination button:first-child .ui-icon{transform:rotate(180deg)}
+.detail-pagination button:disabled{opacity:.4;cursor:default}
+.detail-empty{padding:26px 16px;border:1px dashed var(--bd);border-radius:10px;color:var(--mu);font-size:14px;text-align:center}
+.detail-stats .detail-help{font-size:12px;color:var(--mu);margin:14px 0 0;line-height:1.6}
+.detail-stats :is(button,summary):focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+@media(max-width:1150px){.detail-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.detail-stats-content{padding:14px}.detail-stats>summary{padding:14px}.detail-tabs{width:100%}.detail-tabs button{flex:1;gap:5px;padding:8px}.detail-tabs button>.ui-icon{display:none}.detail-order{margin-left:auto}.detail-list-head{align-items:flex-start;flex-direction:column;gap:10px}.detail-search{width:auto;align-self:stretch}.detail-cards{grid-template-columns:1fr}.detail-focus{display:grid;grid-template-columns:20px minmax(0,1fr);gap:8px 12px}.detail-focus>span{grid-column:2}.detail-card-heading h3{font-size:14px}}
 .dashboard-footer{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:16px;color:var(--mu);font-size:13px}
 .dashboard-footer p{margin:0}.reset-history{font-size:12px}
 .dashboard .evolution svg{display:block;max-height:210px;margin-top:12px}.dashboard .evolution svg text{font-size:13px}
@@ -4345,7 +4381,67 @@ function evo(){
 }
 
 const sem=p=>p>=80?"ok":p>=60?"md":"hd";
-function bars(m,lab,col,byP){return Object.entries(m).sort((a,b)=>byP?pct(...a[1])-pct(...b[1]):(a[0]>b[0]?1:-1)).map(([k,v])=>{const p=pct(v[0],v[1]);return `<div class="r"><div class="rt"><span>${lab(k)}</span><b>${p}%</b></div><div class="bar"><i style="width:${p}%;background:var(--${col?col(k):sem(p)})"></i></div><div class="rs">${v[0]} de ${v[1]} corretas</div></div>`}).join("")||'<p class="mu s">Sem respostas ainda.</p>'}
+// Consulta do histórico: controles locais não alteram filtros globais, prática ou respostas.
+const DETAIL_STATS_PAGE_SIZE=6;
+let detailStatsState={kind:"lesson",order:"default",query:"",page:0};
+function detailStatsData(){
+ const groups={lesson:new Map(),topic:new Map(),level:new Map()};
+ HF().forEach(([id,ok])=>{
+  const q=questionById(id);
+  for(const [kind,key] of [["lesson",q[0]],["topic",q[1]],["level",q[2]]]){
+   if(!groups[kind].has(key))groups[kind].set(key,{key,ok:0,n:0,lessons:new Set()});
+   const group=groups[kind].get(key);group.ok+=ok?1:0;group.n++;group.lessons.add(q[0]);
+  }
+ });
+ return Object.fromEntries(Object.entries(groups).map(([kind,map])=>[kind,[...map.values()].map(group=>({...group,percent:pct(group.ok,group.n),lessons:[...group.lessons].sort((a,b)=>a-b),title:kind==="lesson"?(AL[group.key-1]?.t||AU[group.key]).replace(/^Aula \d+:\s*/,""):kind==="level"?levelLabel(group.key):group.key}))]));
+}
+function detailStatsRows(data=detailStatsData()){
+ const state=detailStatsState,tokens=searchTokens(state.query);
+ return data[state.kind].filter(row=>{
+  if(!tokens.length)return true;
+  const words=searchTokens([row.title,...row.lessons.map(lesson=>AL[lesson-1]?.t||AU[lesson])].join(" "));
+  return tokens.every(token=>words.some(word=>word.startsWith(token)));
+ }).sort((a,b)=>state.order==="attention"?a.percent-b.percent||b.n-a.n||String(a.key).localeCompare(String(b.key),"pt-BR",{numeric:true}):state.kind==="topic"?a.title.localeCompare(b.title,"pt-BR"):Number(a.key)-Number(b.key));
+}
+function detailStatsCard(row){
+ const kind=detailStatsState.kind,meta=kind==="lesson"?`AULA ${String(row.key).padStart(2,"0")}`:kind==="level"?"DIFICULDADE":`${row.lessons.length===1?"AULA":"AULAS"} ${row.lessons.join(" · ")}`,wrong=row.n-row.ok;
+ return `<article class="detail-stat-card${wrong===0?" is-perfect":""}" data-detail-key="${escapeText(String(row.key))}"><div class="detail-card-heading"><div><small>${meta}</small><h3>${escapeText(row.title)}</h3></div><span class="detail-stat-percent" aria-label="${row.percent}% de acertos">${row.percent}%</span></div><div class="detail-card-counts"><span class="detail-card-correct">${uiIcon("check")}${row.ok} ${row.ok===1?"acerto":"acertos"}</span><span class="detail-card-errors">${uiIcon("cross")}${wrong} ${wrong===1?"erro":"erros"}</span><span class="detail-card-attempts">${row.n} ${row.n===1?"tentativa":"tentativas"}</span></div></article>`;
+}
+function detailStatsResults(){
+ const rows=detailStatsRows(),state=detailStatsState,pages=Math.max(1,Math.ceil(rows.length/DETAIL_STATS_PAGE_SIZE));
+ state.page=Math.max(0,Math.min(state.page,pages-1));const start=state.page*DETAIL_STATS_PAGE_SIZE;
+ const unit=state.kind==="lesson"?["aula","aulas"]:state.kind==="topic"?["tema","temas"]:["nível","níveis"];
+ return `${rows.length?`<div class="detail-cards">${rows.slice(start,start+DETAIL_STATS_PAGE_SIZE).map(detailStatsCard).join("")}</div>`:`<div class="detail-empty">${state.query.trim()?"Nenhum resultado para este termo. Tente outro nome de aula ou tema.":"Ainda não há respostas com os filtros de estatísticas atuais."}</div>`}<div class="detail-pagination"><span role="status">${rows.length?`${start+1}–${Math.min(start+DETAIL_STATS_PAGE_SIZE,rows.length)} de `:""}${rows.length} ${unit[Number(rows.length!==1)]}${rows.length?` · página ${state.page+1} de ${pages}`:""}</span>${pages>1?`<div><button type="button" data-detail-page="prev" aria-label="Página anterior do desempenho" onclick="setDetailStatsPage(${state.page-1},'prev')"${state.page?"":" disabled"}>${uiIcon("arrow")}Anterior</button><button type="button" data-detail-page="next" aria-label="Próxima página do desempenho" onclick="setDetailStatsPage(${state.page+1},'next')"${state.page===pages-1?" disabled":""}>Próxima${uiIcon("arrow")}</button></div>`:""}</div>`;
+}
+function detailStatsHtml(){
+ const data=detailStatsData(),state=detailStatsState,focus=[...data.topic].filter(row=>row.ok<row.n).sort((a,b)=>a.percent-b.percent||b.n-a.n||a.title.localeCompare(b.title,"pt-BR"))[0];
+ const orderLabel=state.kind==="lesson"?"Ordem das aulas":state.kind==="topic"?"Nome do tema":"Ordem dos níveis";
+ return `${focus?`<div class="detail-focus">${uiIcon("book")}<div><small>Foco sugerido · menor aproveitamento</small><strong>${escapeText(focus.title)}</strong></div><span>${focus.percent}% · ${focus.n} ${focus.n===1?"tentativa":"tentativas"}</span></div>`:""}<div class="detail-toolbar"><div class="detail-tabs" role="tablist" aria-label="Consultar desempenho por"><button type="button" id="detail-tab-lesson" role="tab" aria-controls="detail-stats-panel" aria-selected="${state.kind==="lesson"}" tabindex="${state.kind==="lesson"?0:-1}" onclick="setDetailStatsKind('lesson')" onkeydown="detailStatsTabKey(event,'lesson')">${uiIcon("book")}Aulas<small>${data.lesson.length}</small></button><button type="button" id="detail-tab-topic" role="tab" aria-controls="detail-stats-panel" aria-selected="${state.kind==="topic"}" tabindex="${state.kind==="topic"?0:-1}" onclick="setDetailStatsKind('topic')" onkeydown="detailStatsTabKey(event,'topic')">${uiIcon("links")}Temas<small>${data.topic.length}</small></button><button type="button" id="detail-tab-level" role="tab" aria-controls="detail-stats-panel" aria-selected="${state.kind==="level"}" tabindex="${state.kind==="level"?0:-1}" onclick="setDetailStatsKind('level')" onkeydown="detailStatsTabKey(event,'level')">${uiIcon("chart")}Dificuldades<small>${data.level.length}</small></button></div><div class="detail-order" role="group" aria-label="Ordenar desempenho detalhado"><button type="button" data-detail-order="default" aria-pressed="${state.order==="default"}" onclick="setDetailStatsOrder('default')">${orderLabel}</button><button type="button" data-detail-order="attention" aria-pressed="${state.order==="attention"}" onclick="setDetailStatsOrder('attention')">Menor acerto</button></div></div><div id="detail-stats-panel" role="tabpanel" aria-labelledby="detail-tab-${state.kind}"><div class="detail-list-head"><p>Comparação por ${state.kind==="lesson"?"aula":state.kind==="topic"?"tema":"dificuldade"} · respostas nos filtros atuais</p><label class="detail-search">${uiIcon("search")}<span class="sr-only">Buscar no desempenho detalhado</span><input type="search" maxlength="100" aria-label="Buscar no desempenho detalhado" aria-controls="detail-stats-results" placeholder="${state.kind==="lesson"?"Buscar aula...":state.kind==="topic"?"Buscar tema ou aula...":"Buscar dificuldade..."}" value="${escapeText(state.query)}" oninput="updateDetailStatsQuery(this.value)" onkeydown="if(event.key==='Escape'){event.preventDefault();this.value='';updateDetailStatsQuery('')}"></label></div><div id="detail-stats-results">${detailStatsResults()}</div></div><p class="detail-help">Percentuais calculados sobre as tentativas, incluindo repetições. Poucas respostas ainda não indicam domínio do assunto. Os filtros de nível e origem do painel também se aplicam aqui.</p>`;
+}
+function refreshDetailStats(){const node=document.querySelector('.detail-stats-content');if(node)node.innerHTML=detailStatsHtml()}
+function setDetailStatsKind(kind){
+ if(!["lesson","topic","level"].includes(kind))return;
+ if(detailStatsState.kind!==kind)detailStatsState={kind,order:kind==="topic"?"attention":"default",query:"",page:0};
+ refreshDetailStats();document.getElementById("detail-tab-"+kind)?.focus({preventScroll:true});
+}
+function detailStatsTabKey(event,kind){
+ const kinds=["lesson","topic","level"],index=kinds.indexOf(kind),offset={ArrowLeft:-1,ArrowRight:1,Home:-index,End:2-index}[event.key];
+ if(offset===undefined)return;event.preventDefault();setDetailStatsKind(kinds[(index+offset+3)%3]);
+}
+function setDetailStatsOrder(order){
+ if(!["default","attention"].includes(order))return;
+ detailStatsState.order=order;detailStatsState.page=0;refreshDetailStats();document.querySelector(`[data-detail-order="${order}"]`)?.focus({preventScroll:true});
+}
+function updateDetailStatsQuery(query){
+ detailStatsState.query=String(query).slice(0,100);detailStatsState.page=0;
+ const node=document.getElementById("detail-stats-results");if(node)node.innerHTML=detailStatsResults();
+}
+function setDetailStatsPage(page,direction){
+ detailStatsState.page=Math.max(0,Math.floor(Number(page)||0));
+ const node=document.getElementById("detail-stats-results");if(!node)return;node.innerHTML=detailStatsResults();
+ const preferred=node.querySelector(`[data-detail-page="${direction}"]:not(:disabled)`),fallback=node.querySelector('[data-detail-page]:not(:disabled)');
+ (preferred||fallback)?.focus({preventScroll:true});
+}
 function badge(n){if(n<0)return '<span class="bd" style="background:var(--acb);color:var(--ac)">Conceito</span>';return `<span class="bd" style="background:var(--${LC[n]}b);color:var(--${LC[n]})">${L[n]}</span>`}
 function chips(t,key,o){return `<div class="s mu">${t}</div><div class="chips">${o.map(([l,v])=>`<button class="chip${cfg[key]===v?" on":""}" onclick="cfg['${key}']=${JSON.stringify(v).replace(/"/g,"'")};go()">${l}</button>`).join("")}</div>`}
 const UI_ICONS={search:'<circle cx="10.5" cy="10.5" r="7.5"/><path d="m16 16 5 5"/>',home:'<path d="m3 10 9-7 9 7v11h-7v-7h-4v7H3z"/>',book:'<path d="M12 5c-3-2-6-2-10-1v15c4-1 7-1 10 1 3-2 6-2 10-1V4c-4-1-7-1-10 1zM12 5v15"/>',practice:'<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h3"/>',warning:'<path d="m12 3 10 17H2zM12 9v4M12 16h.01"/>',file:'<path d="M14 2H5v20h14V7zM14 2v5h5M8 12h8M8 16h6"/>',bank:'<path d="m2 7 10-5 10 5zM4 10v8M9 10v8M15 10v8M20 10v8M2 21h20"/>',check:'<path d="m5 12 4 4L19 6"/>',cross:'<path d="m6 6 12 12M6 18 18 6"/>',chart:'<path d="M5 20v-6M12 20V9M19 20V4"/>',arrow:'<path d="M4 12h16m-6-6 6 6-6 6"/>',save:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 3v6h10V3M7 21v-7h10v7"/>'};
@@ -4362,7 +4458,7 @@ pending.forEach(id=>{const q=questionById(id),key=JSON.stringify([q[0],q[1]]);if
 const lessons=AL.map((lesson,i)=>{const ids=Q.map((q,j)=>q[0]===i+1?j+1:0).filter(Boolean),covered=ids.filter(id=>seen.has(id)).length;return {lesson:i+1,title:lesson.t.split(": ").slice(1).join(": "),covered,total:ids.length,percent:ids.length?Math.floor(covered*100/ids.length):0}});
 return {seen,lessons,pending,priorities:[...groups.values()].sort((a,b)=>b.count-a.count||a.lesson-b.lesson||a.topic.localeCompare(b.topic,"pt-BR")),recent:H.filter(r=>questionById(r[0])).length?questionById(H.filter(r=>questionById(r[0])).at(-1)[0])[0]:null};
 }
-function dash(){const t=HF(),a=t.filter(x=>x[1]).length,data=dashboardData(),mt=agg(q=>q[1]),w=Object.entries(mt).sort((x,y)=>pct(...x[1])-pct(...y[1]))[0],filtered=fl>=0||fm>=0,recent=data.recent||1;
+function dash(){const t=HF(),a=t.filter(x=>x[1]).length,data=dashboardData(),filtered=fl>=0||fm>=0,recent=data.recent||1;
 return `<div class="dashboard">
 ${dailyCard()}
 ${contentSearchBox()}
@@ -4382,11 +4478,7 @@ ${nextStudyAction(data)}
 <section class="pn" aria-labelledby="recent-title"><h2 id="recent-title">${data.recent?"Retomar a última aula":"Primeira aula"}</h2><p class="panel-caption">${data.recent?"Última aula praticada no histórico completo.":"Comece pelos fundamentos do sistema financeiro."}</p><div class="recent-lesson"><span class="icon-disc">${uiIcon("book")}</span><div><h3>${escapeText(AL[recent-1].t)}</h3><p class="mu s">Resumo, dicas e pontos de atenção.</p></div></div><button class="outline-action" onclick="tr=${recent};view='t';go()">Abrir aula ${uiIcon("arrow")}</button></section>
 </div>
 </div>
-<details class="detail-stats"><summary>Desempenho detalhado por aula, tema e dificuldade</summary><div class="detail-stats-content">
-${w?`<p class="s">Foco sugerido: <b>${escapeText(w[0])}</b> (${pct(...w[1])}% de acerto nas tentativas).</p>`:""}
-<div class="lg s mu"><span><i class="dt" style="background:var(--ok)"></i>80% ou mais</span><span><i class="dt" style="background:var(--md)"></i>60 a 79%</span><span><i class="dt" style="background:var(--hd)"></i>abaixo de 60%</span><span>Em aula e tema, a cor indica o desempenho. Em nível, identifica a dificuldade.</span></div>
-<div class="gp"><div class="pn"><h3>Por nível</h3>${bars(agg(q=>q[2]),k=>levelLabel(k),k=>Number(k)<0?"ac":LC[k])}</div><div class="pn"><h3>Por aula</h3>${bars(agg(q=>q[0]),k=>AU[k])}</div></div>
-<div class="pn"><h3>Por tema (piores primeiro)</h3><div class="gt">${bars(mt,k=>k,0,1)}</div></div></div></details>
+<details class="detail-stats"><summary>Desempenho detalhado por aula, tema e dificuldade</summary><div class="detail-stats-content">${detailStatsHtml()}</div></details>
 <footer class="dashboard-footer"><p>Banco: ${Q.filter(q=>q[2]<3).length} questões da prova e ${Q.filter(q=>q[2]===3).length} hardcore, ${Q.length-data.seen.size} nunca respondidas.</p><button class="reset-history" onclick="rs=rs?(H=[],save(),0):1;go()">${rs?"Confirmar: apagar tudo":"Zerar histórico"}</button></footer></div>`}
 function bateProntoPool(){const last=new Map(H.map(r=>[r[0],r[1]])),selected=selectedPracticeLessons(),block=selected.length===1?lessonBlock(selected[0],cfg.b):null;return BP_Q.map((q,i)=>BP_FIRST_ID+i).filter(id=>{const q=questionById(id);return (!selected.length||selected.includes(q[0]))&&(!block||block.topics.includes(q[1]))&&(cfg.m==="all"||cfg.m==="new"&&!last.has(id)||cfg.m==="err"&&last.has(id)&&!last.get(id))})}
 function bateProntoPlan(){

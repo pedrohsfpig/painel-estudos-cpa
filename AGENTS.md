@@ -994,3 +994,21 @@ com rolagem interna. A implementação contextual substitui o padrão anterior.
   setas, Home/End, digitação, Enter/Espaço, Escape e Tab; fechar ao clicar fora,
   manter foco após selecionar e caber no espaço visível nos dois temas.
 - Ao alterar esse componente, execute também `tests/test_search_filter_menus.py`.
+
+## Desempenho detalhado no painel
+
+- Preserve o bloco recolhido até o clique. Ao abrir, mostre uma dimensão por vez
+  (Aulas, Temas, Dificuldades), em cartões compactos, no máximo seis por página.
+  Todos os grupos continuam acessíveis por paginação e busca local; não retome
+  barras longas, listas gigantes ou cores de nível misturadas ao aproveitamento.
+- Percentuais ficam neutros; acertos em verde e erros em âmbar, com números e
+  rótulos. Os cartões são informativos, sem aparência de ação. Aulas seguem ordem
+  numérica e temas começam por menor aproveitamento. Permita reordenar e buscar.
+- Use HF para respeitar nível/origem. Conte todas as tentativas, inclusive
+  repetições e Bate-pronto; ignore IDs inexistentes. Temas iguais conservam o
+  agrupamento histórico e mostram as aulas envolvidas. Não chame amostra pequena
+  de domínio nem sugira fraqueza se todas as respostas foram corretas.
+- Trocar aba, buscar, ordenar e paginar atualizam somente a consulta. Preserve H,
+  cfg, fl/fm, sessão, alternativas e relógio. Mantenha teclado, foco e dois temas.
+- Execute `tests/test_dashboard_details.py`, `tests/test_dashboard_hierarchy.py`
+  e `tests/smoke.py`; registre a validação em `docs/desempenho-detalhado.md`.

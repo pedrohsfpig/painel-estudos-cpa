@@ -272,3 +272,7 @@ de aula. Esses refinamentos não mudam a configuração da sessão nem o histór
 
 Os seletores de modo, histórico e aula usam menus no padrão visual do painel,
 com seleção marcada, navegação por teclado e adaptação ao espaço da tela.
+
+O desempenho detalhado do painel fica recolhido até o clique. A consulta tem
+abas por aulas, temas e dificuldades, busca local, ordenação e seis cartões por
+página, mantendo o histórico completo e os filtros de estatísticas.
