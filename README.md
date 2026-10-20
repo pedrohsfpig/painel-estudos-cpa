@@ -247,19 +247,19 @@ as antigas. Leia `AGENTS.md` antes de implementar novas aulas ou conteúdos.
 O visual prioriza o computador. Em janelas pequenas, o menu passa para o topo
 para manter os controles acessíveis.
 
-## Busca por assunto e painel orientado à próxima ação
+## Busca contextual e busca geral
 
-A busca de **Trilha**, **Material de apoio** e **Praticar** consulta títulos e
-conteúdos de todas as aulas. “Bacen”, “BCB” e “Banco Central” são equivalentes;
-“compulsório” encontra as aulas pertinentes, mesmo sem o termo em seus títulos.
-Os resultados indicam a aula, o material e um trecho, com atalho para a origem,
-filtros por tipo e acesso a todos os resultados por **Mostrar mais**.
+O painel oferece a busca geral logo abaixo de **Estudo de hoje**, com filtros de
+**Trilha**, **Questões** e **Materiais**. A busca encontra nomes e conteúdos entre
+as aulas, reconhece equivalências como Bacen/BCB/Banco Central e ignora acentos.
 
-Na prática, pesquisar apenas filtra as aulas visíveis: seleções anteriores são
-mantidas e continuam identificadas. A busca não altera os filtros das questões
-nem reinicia sessões. Limpar a busca restaura a lista completa.
+Nas outras telas, cada campo pesquisa apenas seu contexto: aulas e resumos na
+Trilha, questões em Praticar e o tipo aberto em Material de apoio. Por exemplo,
+em **Tabelas** só aparecem tabelas. As consultas ficam separadas por tela/tipo.
 
-O painel mantém o estudo diário em destaque, seguido do próximo passo sugerido,
-indicadores, evolução completa e trilha. Todas as aulas ficam acessíveis em uma
-lista com rolagem própria; prioridades e última aula permanecem na lateral.
-Detalhes e testes em [docs/busca-e-hierarquia-painel.md](docs/busca-e-hierarquia-painel.md).
+Resultados usam cartões curtos, quatro por página, com acesso direto ao conteúdo.
+A busca de questões mostra enunciados sem alternativas ou gabarito; praticar um
+resultado exige clique explícito. Uma sessão em andamento é preservada e pode ser
+retomada. A busca não altera a seleção de aulas nem a distribuição da sessão.
+
+Detalhes em [docs/busca-contextual.md](docs/busca-contextual.md).

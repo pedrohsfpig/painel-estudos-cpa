@@ -65,3 +65,10 @@ Validação concluída: **109 testes aprovados** — 7 de busca, 4 de hierarquia
 questões, 76 de fluxos completos e 6 de estrutura do banco. Inspeção visual nos
 dois temas. Comparação com a versão publicada confirmou Q, BP, AL, MAT e os dados
 dos quadros comparativos idênticos; as mudanças se limitam à navegação e apresentação.
+
+## Revisão posterior da busca
+
+O usuário rejeitou a apresentação universal nas telas locais. Os escopos,
+consultas compartilhadas e paginação incremental descritos acima foram substituídos
+pela [busca contextual](busca-contextual.md). A reorganização do restante do painel
+permanece; a busca geral fica agora logo após o estudo diário.

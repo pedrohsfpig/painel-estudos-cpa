@@ -920,35 +920,46 @@ Execute `python3 tests/test_aula11.py` e as regressões gerais. Preserve relató
 históricos usando seus recortes de IDs; novas siglas/exceções podem ser acrescentadas
 com motivos por item sem reescrever decisões e hashes anteriores.
 
-## Busca de conteúdo e hierarquia — padrão aprovado em 20/10/2026
+## Busca contextual e hierarquia — correção aprovada em 20/10/2026
 
-O usuário aprovou hierarquia do painel, busca por termos e hierarquia visual;
-não autorizou nessa entrega agrupamentos temáticos novos ou outras modalidades.
+O usuário rejeitou a busca universal dentro das telas locais e a lista extensa
+com rolagem interna. A implementação contextual substitui o padrão anterior.
 
-- Mantenha Estudo de hoje como atividade principal. `nextStudyAction` sugere a
-  sessão em andamento, assunto com mais pendências, última aula ou primeira aula,
-  nessa ordem. Mostre indicadores em Seu acompanhamento; evolução antes da lista
-  de todas as aulas na coluna principal; prioridades/última aula na lateral.
-  A trilha pode rolar internamente, com todos os itens acessíveis por teclado.
-  Preserve todas as datas, filtros e a distinção entre tentativas e cobertura.
-- `contentSearchIndex` deriva o índice de AL, MAT, quadros e nomes de assuntos;
-  não mantenha uma lista paralela de textos. Novas aulas entram automaticamente.
-  `QUESTION_ACRONYMS` fornece equivalências, incluindo BC/BCB/BACEN. Busca ignora
-  acentos e maiúsculas e combina termos no mesmo resultado/contexto da aula.
-- Compartilhe consulta em Trilha, Materiais e seleção de aulas em Praticar.
-  Mostre aula, material, trecho e atalho para a origem. Todos os resultados devem
-  permanecer acessíveis por Mostrar mais, com tipos e contagens reais.
-- Consultar não altera H, cfg, Q/BP, proporções ou sessão em andamento. Em Praticar,
-  a busca filtra aulas visíveis, mantendo as já selecionadas explicitamente
-  acessíveis; não filtre silenciosamente o conjunto de questões pelo termo.
-- Abrir resultado pode trocar aula/bloco/material e expandir a seção de destino;
-  preserve conteúdo integral. Flashcard abre na pergunta. Não use índices de uma
-  visão agregada para destacar outro bloco/cartão após uma mudança de seleção.
-- Não renderize o app inteiro a cada tecla: atualize resultados/listas mantendo
-  foco na entrada. Escape textos/consultas e ofereça limpeza, ausência de resultados,
-  filtros por tipo, teclado e os dois temas. Não acrescente cores só para hierarquia.
-- Execute `python3 tests/test_content_search.py`,
-  `python3 tests/test_dashboard_hierarchy.py`, `python3 tests/test_practice_layout.py`,
-  `python3 tests/test_practice_navigation.py`, `python3 tests/test_question_navigation.py`
-  e `python3 tests/smoke.py` ao alterar esses fluxos. Registre a validação em
-  `docs/busca-e-hierarquia-painel.md`.
+- Estudo de hoje continua principal. A busca geral fica imediatamente abaixo,
+  antes de `nextStudyAction`, indicadores e evolução. Mantenha todas as aulas,
+  datas, filtros, histórico e regras do checkpoint.
+- Apenas no painel a busca reúne todo o conteúdo e oferece filtros Tudo/Trilha/
+  Questões/Materiais. Em Materiais há um seletor adicional de tipo, incluindo
+  tabelas. O índice inclui aulas, AL/MAT, quadros, enunciados de Q/BP e o quadro SFN.
+  Nunca inclua alternativas, gabaritos ou feedbacks nos resultados de questões.
+- Trilha retorna somente aulas e conteúdo da trilha. Materiais retorna somente
+  o tipo atualmente aberto (tabelas, mapas, diagramas, prazos, flashcards ou
+  quadro comparativo), em todas as aulas; a busca fica após as abas de material.
+  Praticar retorna somente questões do modo, nível e filtro de histórico atuais.
+  Hardcore e Bate-pronto ignoram o nível normal herdado da configuração.
+- Guarde consultas e paginação separadas por contexto, incluindo cada tipo de
+  material. Uma busca geral não deve filtrar as telas locais ao navegar.
+- Use cartões com aula, tipo/nível, título, trecho curto e ação explícita. Mostre
+  quatro por página, com contador, Anterior/Próxima e seletor de página. Todos os
+  resultados permanecem acessíveis; não crie lista de resultados com rolagem
+  interna, accordion aninhado nem grupos de filtros universais nas telas locais.
+- `contentSearchIndex` deriva os dados atuais, com equivalências de siglas pelo
+  cadastro existente, ignorando acentos/maiúsculas. Novas aulas entram no índice.
+- Digitar/filtrar não altera H, cfg, Q/BP, proporções ou a sessão em andamento.
+  Na prática, mantenha selecionadas as aulas ocultas pela consulta e seus controles
+  de remoção. Iniciar a sessão normal continua seguindo a seleção configurada,
+  sem aplicar silenciosamente o termo às questões sorteadas.
+- A ação Praticar esta questão inicia só aquele ID, após clique explícito, no
+  modo correspondente (Simulado se escolhido na prática; Estudo por padrão na
+  busca geral). Com sessão em andamento, a ação deve apenas retomá-la, preservando
+  IDs, respostas e relógio. Não inicie questões ao digitar ou selecionar filtro.
+- Abrir conteúdo expande/foca a origem, preservando textos integrais. Não use
+  índices agregados para destacar outro bloco ou cartão após mudar a seleção.
+  Flashcards abrem na pergunta; consultas nunca reiniciam uma sessão existente.
+- Atualize apenas os resultados ao digitar, mantendo foco. Escape consultas e
+  conteúdos, ofereça limpeza/Escape, estado vazio, teclado, dois temas e layout
+  de PC/celular. Use a paleta existente e preserve a legibilidade.
+- Execute `tests/test_content_search.py`, `tests/test_dashboard_hierarchy.py`,
+  `tests/test_practice_layout.py`, `tests/test_practice_navigation.py`,
+  `tests/test_question_navigation.py` e `tests/smoke.py` antes de publicar.
+  Registre a entrega em `docs/busca-contextual.md`.
