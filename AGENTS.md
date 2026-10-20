@@ -82,6 +82,10 @@ conteúdo pedagógico de cada nova explicação com as aulas e referências forn
 O site publicado usa `main` no GitHub Pages. Quando o usuário pedir atualizações
 para vê-las no site, valide, envie os commits e informe o resultado real do envio.
 Não confunda envio ao GitHub com confirmação de que o Pages já publicou.
+O usuário autorizou expressamente em 20/10/2026 publicar na `main` as alterações
+solicitadas, após validação, sem pedir uma segunda confirmação. Essa autorização
+inclui futuras atualizações pedidas para este sistema; mantenha o escopo solicitado
+e não use force-push nem sobrescreva alterações remotas.
 
 ## Painel e navegação no computador
 
