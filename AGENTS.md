@@ -1065,3 +1065,26 @@ com rolagem interna. A implementação contextual substitui o padrão anterior.
 - Perguntas de continuidade podem herdar o assunto; uma entidade explícita
   substitui esse contexto. Preserve textos literais, fontes, destaques e estados
   de estudo. Execute também `tests/test_consulta_context.py` nas revisões.
+
+
+### Refinamentos da Consulta
+
+- Separe significados de siglas coincidentes no índice local. Use nomes completos,
+  definições explícitas com iniciais compatíveis e rótulos do material; não
+  transforme legendas genéricas em significados. Se o contexto não distinguir,
+  ofereça escolhas na própria aba. TR registradora é da aula 8; Taxa Referencial,
+  da aula 11. Não altere o cadastro global ou os materiais para resolver a busca.
+- Refinar pesquisa fica recolhido. Interseccione aulas e tipos em TODAS as fontes,
+  comparações e tabelas. Zero resultados não autoriza buscar fora do escopo.
+  Preserve rascunhos diferentes; atualize a pergunta aberta sem duplicar histórico.
+- Destaque uma frase literal e preserve qualificadores e listas completas de
+  composição. Ver contexto abre o registro integral; não substitua o texto da
+  fonte por uma paráfrase. Preserve fontes visíveis e destaque amarelo dos termos.
+- Características da comparação ficam sob controle expansível, com seleção
+  múltipla e Todas. Use rótulos reais das tabelas quando existentes. Campo sem
+  evidência recebe indicação de ausência; composição não comprova mandato.
+- Guarde escopo e características em cada resposta anterior, sem controles que
+  alterem a consulta atual. Abrir histórico não pode reordenar o array salvo.
+  Preserve H, cfg, qz, cronômetro, materiais, navegação, teclado e dois temas.
+- Execute também `tests/test_consulta_refinements.py` e mantenha a documentação
+  em `docs/consulta-local.md`. Não acrescente chamadas externas ou modelos pagos.

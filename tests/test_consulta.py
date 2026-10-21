@@ -84,7 +84,7 @@ class Consulta(unittest.TestCase):
         self.assertFalse(self.page.locator('.consult-history').evaluate('n=>n.open'))
         self.page.locator('.consult-history>summary').click()
         expect(self.page.locator('.consult-previous')).to_have_count(1)
-        self.page.locator('.consult-previous summary').click()
+        self.page.locator('.consult-previous > summary').click()
         self.assertIn('8 diretores',self.page.locator('.consult-previous').inner_text())
         self.ask('comparação entre CVM e Susep')
         self.ask('e a composição?')

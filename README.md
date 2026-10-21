@@ -300,3 +300,10 @@ A seleção também considera histórico e substituições, cálculo, causa e se
 2018, com as condições dos contratos. Relações são extraídas da mesma fonte;
 quando não há evidência para responder ao pedido, o resultado é identificado
 como relacionado.
+
+
+**Refinar pesquisa** permite combinar aulas e tipos de material em um controle
+recolhido. Siglas ambíguas recebem escolhas de significado quando o contexto não
+basta. Os trechos relevantes têm destaque e **Ver contexto** preserva a íntegra;
+comparações permitem escolher características ou restaurar todas. As respostas
+anteriores guardam seus próprios filtros e escolhas, sem alterar o estudo.

@@ -136,3 +136,61 @@ Validação desta revisão: **122 testes aprovados** — 23 da Consulta (16 exis
 + 7 de contexto), 11 de busca contextual, 3 de retorno/navegação, 9 de navegação
 entre questões e 76 de fluxos completos. A resposta TLP/TJLP foi inspecionada nos
 dois temas. `index.html` e `consulta.css` permanecem idênticos à versão anterior.
+
+
+## Esclarecimento, leitura e refinamento das fontes
+
+A Consulta ganhou quatro controles locais, com a paleta e a navegação existentes:
+
+1. **Esclarecer ambiguidades.** Significados de uma mesma sigla permanecem
+   separados. Além do cadastro, o índice reconhece definições explícitas dos
+   resumos quando as iniciais correspondem ao nome, e rótulos como
+   “Registradora (TR)”. Assim, TR pode ser Taxa Referencial (aula 11) ou entidade
+   registradora (aula 8). Nome completo, contexto distintivo ou uma aula com
+   definição única podem resolver o sentido. Quando faltam esses sinais,
+   aparecem escolhas na própria Consulta, sem selecionar um significado por
+   frequência ou posição. Uma legenda como “CMN — composição” não vira expansão.
+2. **Trecho relevante e contexto.** Cartões e células de comparações extraídas
+   enfatizam uma frase literal e podem mostrar um recorte compacto. Os demais
+   dados ficam em “Ver contexto”, fechado por padrão, com a íntegra do registro
+   e a fonte sempre identificada. Sentenças com qualificadores explícitos são
+   preservadas junto da frase principal; listas de composição ficam completas.
+   Esse destaque é distinto da marcação amarela dos termos pesquisados. Tabelas
+   originais conservam os textos das células e os filtros de linhas.
+3. **Refinar pesquisa.** Um controle recolhido abre seleção múltipla de aulas e
+   tipos de material. Sem seleção específica, todas as fontes participam.
+   Selecionar aulas e tipos intersecciona os dois filtros em cartões, tabelas e
+   comparações. Uma pergunta aberta se atualiza sem criar outra entrada no
+   histórico; um rascunho diferente aguarda Consultar. Não há retorno silencioso
+   a fontes de fora do filtro se faltar informação. A resposta identifica seu
+   escopo. Limpar restaura também todos os filtros.
+4. **Características da comparação.** Um controle expansível permite escolher
+   características e restaurar Todas. Em comparações montadas, as opções seguem
+   as características com evidência disponível; nas tabelas existentes, seguem
+   as linhas originais, inclusive rótulos próprios como Modelo e Fonte principal.
+   Campos sem evidência são indicados. Contagem de membros não comprova duração
+   de mandato. Nenhuma seleção recebe preenchimento inventado. Desmarcar tudo
+   apresenta uma orientação; selecionar uma característica recupera a tabela.
+
+Filtros e escolhas ficam apenas na memória da visita e sobrevivem à navegação.
+Respostas anteriores conservam seus próprios recortes, filtros e linhas de
+comparação; seus controles não alteram a resposta atual. Escolher significado,
+filtrar ou personalizar não duplica entradas. O histórico continua recolhido,
+sem botões de sugestões. Abrir o histórico durante um esclarecimento não altera
+sua ordem. Todos os controles funcionam por teclado e mantêm o foco ao atualizar.
+
+O mecanismo continua extrativo e baseado em regras: não reescreve os materiais,
+não infere fatos ausentes, não usa IA generativa e não envia perguntas à rede.
+Nenhuma alteração foi feita em `index.html`, nos bancos, materiais ou histórico
+de estudo. O teste antigo do histórico passou a selecionar somente o summary
+da pergunta, pois agora há também summaries internos de “Ver contexto”.
+
+
+Validação dos quatro refinamentos: **135 testes aprovados** — 36 da Consulta
+(16 de base, 7 de contexto e 13 de refinamentos), 11 de busca contextual, 3 de
+retorno/navegação, 9 de navegação entre questões e 76 de fluxos completos.
+Incluídos significados separados de TR, fontes por aula/tipo, seleção e restauração
+de linhas, falta de evidência, recorte literal com ressalvas, contexto integral,
+rascunho, histórico durante esclarecimento, sessão em andamento e rede bloqueada.
+Inspecionados os quatro recursos nos temas claro e escuro, além do celular;
+os testes de largura incluem 390, 1024 e 1440 px para os novos controles.
