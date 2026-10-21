@@ -294,3 +294,9 @@ Veja [docs/consulta-local.md](docs/consulta-local.md).
 Na Consulta, os termos encontrados ficam em negrito e na cor de atenção, inclusive
 siglas/nomes equivalentes e variantes de plural. Perguntas anteriores aparecem
 somente ao abrir seu controle expansível. Os botões de sugestões foram retirados.
+
+A seleção também considera histórico e substituições, cálculo, causa e sequência.
+“Qual era a taxa antes da TLP?” recupera os trechos sobre TJLP e a mudança de
+2018, com as condições dos contratos. Relações são extraídas da mesma fonte;
+quando não há evidência para responder ao pedido, o resultado é identificado
+como relacionado.

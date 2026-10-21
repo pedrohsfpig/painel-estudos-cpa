@@ -17,7 +17,7 @@ window.Consulta=(()=>{
   if(/s$/.test(word)&&!/[sx]s$/.test(word))return word.slice(0,-1);
   return word;
  }
- const synonymGroups=[['funcao','atribuicao','competencia','papel','responsabilidade','faz','fazer','atuacao','atua','atuam','serve','servem'],['objetivo','finalidade','proposito'],['composicao','membro','integrante','colegiado','compor'],['mandato','reconducao'],['limite','teto','cobertura'],['captacao','captar'],['emissao','emitir','emite'],['impressao','imprimir','imprime'],['regulacao','regular','regula','regulamentacao','regulamenta'],['autorizacao','autoriza','autorizar'],['garantia','garante','garantido','coberto'],['credito','emprestimo','financiamento'],['conceder','concede','concedem'],['definicao','conceito','significado','significa'],['diferenca','diferenciar','comparacao','comparar','distincao'],['fiscalizacao','fiscaliza','supervisao','supervisiona'],['remuneracao','rendimento','rentabilidade']];
+ const synonymGroups=[['funcao','atribuicao','competencia','papel','responsabilidade','faz','fazer','atuacao','atua','atuam','serve','servem'],['objetivo','finalidade','proposito'],['composicao','membro','integrante','colegiado','compor'],['mandato','reconducao'],['limite','teto','cobertura'],['captacao','captar'],['emissao','emitir','emite'],['impressao','imprimir','imprime'],['regulacao','regular','regula','regulamentacao','regulamenta'],['autorizacao','autoriza','autorizar'],['garantia','garante','garantido','coberto'],['credito','emprestimo','financiamento','emprestar'],['conceder','concede','concedem'],['definicao','conceito','significado','significa'],['diferenca','diferenciar','comparacao','comparar','distincao'],['fiscalizacao','fiscaliza','supervisao','supervisiona'],['remuneracao','rendimento','rentabilidade'],['reducao','reduzir','reduz'],['obrigacao','obriga','obrigar'],['afeta','afetam','afetar']];
  const synonyms=new Map(synonymGroups.flatMap(group=>group.map(word=>[word,group[0]])));
  const words=value=>fold(value).split(/\s+/).filter(word=>word&&!stop.has(word)).map(stem);
  const terms=value=>[...new Set(words(value).map(word=>synonyms.get(word)||word))];
@@ -72,9 +72,9 @@ window.Consulta=(()=>{
    return found.sort((a,b)=>a.at-b.at).map(item=>item.e);
   }
   function ownerFor(label,fallback=[]){const found=detect(label);return found.length===1?(found[0].topic?[...new Set([...fallback,found[0].id])]:found.map(e=>e.id)):found.length>1?[]:fallback}
-  function add({lesson,type,title,label=title,lines,owners=[],base=10,facets=null,table=null}){
+  function add({lesson,type,title,label=title,lines,owners=[],base=10,facets=null,table=null,group=null}){
    lines=lines.flat(Infinity).filter(value=>typeof value==='string'&&value.trim()).map(plain);if(!lines.length)return;
-   const text=lines.join(' · '),record={id:records.length,lesson,type,title:plain(title),label:plain(label),lines,owners,base,facets:facets||facetOf(label,text),table};
+   const text=lines.join(' · '),record={id:records.length,lesson,type,title:plain(title),label:plain(label),lines,owners,base,facets:facets||facetOf(label,text),table,group};
    record.terms=terms([title,label,text].join(' '));record.labelTerms=terms(label);record.mentions=detect([label,text].join(' ')).map(e=>e.id);
    records.push(record);
   }
@@ -107,7 +107,11 @@ window.Consulta=(()=>{
      });
     });
     (M.dg||[]).forEach((diagram)=>diagram[2].forEach(node=>add({lesson:n,type:'Diagrama',title:diagram[1],label:node[0],lines:node.slice(0,2).filter(v=>typeof v==='string'),owners:ownerFor(diagram[1],defaultOwners),base:16})));
-    (M.tl||[]).forEach(([title,items])=>items.forEach(item=>add({lesson:n,type:'Linha do tempo',title,label:item[0],lines:searchStrings(item),owners:ownerFor(title,defaultOwners),base:18,facets:facetOf(title,searchStrings(item).join(' '))})));
+    (M.tl||[]).forEach(([title,items],at)=>{
+     // O contexto pertence à mesma fonte, nunca a uma aula inteira.
+     const group={id:`timeline-${n}-${at}`,text:searchStrings(items).join(' '),title:plain(title)};
+     items.forEach(item=>add({lesson:n,type:'Linha do tempo',title,label:item[0],lines:searchStrings(item),owners:ownerFor(title,defaultOwners),base:18,facets:facetOf(title,searchStrings(item).join(' ')),group}));
+    });
     (M.fc||[]).forEach(([question,answer])=>add({lesson:n,type:'Flashcard',title:question,label:question,lines:[answer],owners:ownerFor(question,defaultOwners),base:26}));
    }
    const overview=LESSON_OVERVIEWS[n];
@@ -119,6 +123,9 @@ window.Consulta=(()=>{
   });
   Q.forEach((q,i)=>add({lesson:q[0],type:'Explicação de questão',title:q[1]+' · questão '+(i+1),label:q[1],lines:[q[11]?.[0]||q[8]],owners:ownerFor(q[1]),base:1}));
   BP.forEach((q,i)=>add({lesson:q[0],type:'Explicação Bate-pronto',title:q[2]+' · cartão '+(i+1),label:q[2],lines:[q[5]],owners:ownerFor(q[2]),base:2}));
+  records.forEach(record=>{
+   if(record.group){record.group.mentions=detect(record.group.title+' '+record.group.text).map(e=>e.id);record.group.terms=terms(record.group.title+' '+record.group.text)}
+  });
   const vocabulary=[...new Set(records.flatMap(record=>record.terms))];
   return cache={stamp,entities,records,tables,detect,vocabulary,lessonOwners:AL.map(lesson=>detect(lesson.t).map(e=>e.id))};
  }
@@ -127,8 +134,53 @@ window.Consulta=(()=>{
   while(i<a.length&&j<b.length){if(a[i]===b[j]){i++;j++;continue}if(++edits>1)return false;if(a.length>=b.length)i++;if(b.length>=a.length)j++}
   return edits+(i<a.length||j<b.length?1:0)<=1;
  }
+ // Intenções orientam a seleção de evidências; não geram fatos novos.
+ const RELATIONS=[
+  {id:'history',query:/\bantes\b|\bantig[ao]s?\b|anterior|preced|anteced|mudou|mudanca|sucede|substitu|entrou no lugar|veio no lugar|passou a|quando .*(?:cri|entrou|passou|comec|inici|surg|adot)|em que ano|\brenome|novo nome|desde quando|\bdepois\b|historico|evolucao/,
+   evidence:/substitu|mudanca de referencia|antes de \d{4}|desde .*\d{4}|instituiu|criad|originou|originando|integracao|se unem|adota/,
+   ignore:'era eram foi foram usava usavam usada usado usados usadas utilizava utilizado utilizada entrou lugar veio depois antes antigamente anterior anteriormente antecedeu antecedia passou valer taxa referencia nova novo antiga antigo agora ainda acontece aconteceu mudou mudanca substituiu substituida substituido substitui substituicao sucedeu sucedida sucedido precedia precedeu data ano anos inicio iniciou comecou criada criado criacao historico evolucao so nome renomeacao apenas simples'},
+  {id:'calculation',query:/calcul|como .*obt|como .*form|deriv|a partir de que|qual .*base|de onde vem/,
+   evidence:/calcul|a partir|redutor|formula|composicao|combin|parcela|obtida|apurad|baseada|baseado/,
+   ignore:'calculada calculado calcular calcula calculo obtida obtido formada formado forma deriva derivada derivado partir vem base'},
+  {id:'cause',query:/por que|porque|motivo|consequencia|efeito|impacto|influenc|o que acontece|o que ocorre/,
+   evidence:/porque|pois |devido|em razao|por isso|depende|dependem|pode |podem |permite|permitem|reduz|eleva|aumenta|afeta|pression|restring|incentiv|decorre|evita|condicion/,
+   ignore:'motivo razao consequencia efeito impacto influencia acontece ocorre nao'},
+  {id:'sequence',query:/etapas|passo a passo|sequencia|qual .*ordem|como funciona|como .*funciona/,
+   evidence:/primeir|segund|terceir|etapa|apos|antes|depois|encaminh|aprova|liquida|negocia|compensa|capta|empresta/,
+   ignore:'etapa passo sequencia ordem funciona funcionamento'}
+ ];
+ function relationEvidence(record,request){
+  if(!request.relation)return null;
+  const rule=RELATIONS.find(r=>r.id===request.relation),local=record.label+' '+record.lines.join(' ');
+  const grouped=record.group&&(request.relation==='history'||request.relation==='sequence');
+  const text=fold((grouped?record.group.title+' '+record.group.text+' ':'')+local);
+  if(!rule.evidence.test(text))return null;
+  if(request.relation==='history'){
+   const historical=text.replace(/\bnao (?:\w+ ){0,3}substitu\w*/g,'');
+   if(!rule.evidence.test(historical))return null;
+   if(!grouped&&request.direction&&!/substitu|anteced|sucede|entrou no lugar|mudanca de referencia/.test(historical))return null;
+   if(!grouped&&request.subjects.length&&!request.subjects.some(e=>record.owners.includes(e.id)||index().detect(record.label).some(owner=>owner.id===e.id)))return null;
+  }
+  // Um item vizinho só é recuperado se a fonte inteira explicitar a relação.
+  if(grouped&&request.relation==='history'&&!/mudanca|substitu|histor|marco|evolu|moderniz|cria|origem|integracao|datas/.test(fold(record.group.title)))return null;
+  if(grouped&&request.relation==='history'&&request.direction&&!/mudanca|substitu|evolu|origem|integracao/.test(fold(record.group.title))&&!/substitu|se unem|originando/.test(fold(record.group.text)))return null;
+  const mentions=grouped?record.group.mentions:record.mentions;
+  if(request.subjects.length&&!request.subjects.every(e=>mentions.includes(e.id)))return null;
+  const vocabulary=grouped?record.group.terms:record.terms;
+  const hits=request.keywords.filter(token=>vocabulary.some(word=>word===token||(token.length>=4&&word.startsWith(token))));
+  if(!request.subjects.length&&!hits.length)return null;
+  const coverage=request.keywords.length?hits.length/request.keywords.length:1;
+  // Intenção e relação explícita precedem a popularidade e a posse da entidade.
+  const labelHits=hits.filter(token=>record.labelTerms.includes(token)).length;
+  const direction=request.relation==='history'&&record.group?(
+   request.direction==='before'&&/antes|anterior/.test(fold(local))||request.direction==='after'&&/desde|nova|substituiu/.test(fold(local))?25:0):0;
+  const score=200+coverage*60+hits.length*16+labelHits*30+direction+(grouped?35:0)+(record.type==='Resumo'?20:0)+(record.type.startsWith('Explicação')?-50:0);
+  return {record,score,coverage,owns:request.subjects.filter(e=>record.owners.includes(e.id)).length,hits,relation:true};
+ }
  function interpret(query,context=[]){
   const db=index(),raw=fold(query),input=terms(query),subjects=db.detect(query);
+  const relation=['cause','calculation','history','sequence'].map(id=>RELATIONS.find(rule=>rule.id===id)).find(rule=>rule.query.test(raw))?.id||null;
+  const direction=/antes|anterior|preced|antig/.test(raw)?'before':/depois|entrou no lugar|veio no lugar|sucede|substituiu/.test(raw)?'after':null;
   let comparison=/compar|diferenc|distinc|versus|\bvs\b|\bx\b/.test(raw)||(subjects.length>1&&input.every(token=>subjects.some(e=>terms(e.aliases.join(' ')).includes(token))));
   // Nomes com substantivo compartilhado: "bancos comercial e múltiplo", "fluxos real e monetário".
   if(comparison&&subjects.length>=1){
@@ -137,16 +189,17 @@ window.Consulta=(()=>{
   }
   const facets=FACETS.filter(f=>f.pattern.test(raw)).map(f=>f.id);
   for(const [token,facet] of [['funcao','role'],['objetivo','role'],['composicao','composition'],['mandato','mandate'],['limite','limits'],['definicao','definition']])if(input.includes(token)&&!facets.includes(facet))facets.push(facet);
-  if(!subjects.length&&context.length&&facets.length){subjects.push(...context.map(id=>db.entities.find(e=>e.id===id)).filter(Boolean));if(subjects.length>1)comparison=true}
+  if(!subjects.length&&context.length&&(facets.length||relation)){subjects.push(...context.map(id=>db.entities.find(e=>e.id===id)).filter(Boolean));if(subjects.length>1)comparison=true}
   const entityTerms=new Set(subjects.flatMap(e=>terms(e.aliases.join(' '))));
-  const keys=input.filter(token=>!entityTerms.has(token)&&!['diferenca','comparacao','comparar','comparativo','explicar','entender','informacao','informacoes'].includes(token));
+  const relationWords=new Set(terms(RELATIONS.find(rule=>rule.id===relation)?.ignore||''));
+  const keys=input.filter(token=>!entityTerms.has(token)&&!relationWords.has(token)&&!['diferenca','comparacao','comparar','comparativo','explicar','entender','informacao','informacoes'].includes(token));
   const corrections=[],anchored=subjects.length>0||keys.some(token=>token.length>=4&&db.vocabulary.includes(token));
   const keywords=keys.map(token=>{
    if(db.vocabulary.includes(token)||token.length<5||(!anchored&&!(keys.length===1&&token.length>=8)))return token;
    const candidates=db.vocabulary.filter(word=>word.length>=5&&token[0]===word[0]&&editDistanceOne(token,word));
    if(candidates.length===1){corrections.push([token,candidates[0]]);return candidates[0]}return token;
   });
-  return {query,subjects:subjects.slice(0,4),extraSubjects:Math.max(0,subjects.length-4),facets,keywords,comparison,corrections};
+  return {query,subjects:subjects.slice(0,4),extraSubjects:Math.max(0,subjects.length-4),facets,keywords,comparison,corrections,relation,direction};
  }
  function rank(record,request,subject=null,facet=null){
   const selected=subject?[subject]:request.subjects;
@@ -175,13 +228,15 @@ window.Consulta=(()=>{
  function answer(query,context=[]){
   query=String(query).trim().slice(0,500);const db=index(),request=interpret(query,context);
   if(!query||(!request.keywords.length&&!request.subjects.length))return {query,request,status:'empty',items:[],comparisons:[]};
+  const related=request.relation&&!request.comparison?db.records.map(record=>relationEvidence(record,request)).filter(Boolean).sort((a,b)=>b.score-a.score||a.record.id-b.record.id):[];
   const ranked=db.records.map(record=>rank(record,request)).filter(Boolean).sort((a,b)=>b.score-a.score||a.record.id-b.record.id);
   const strong=ranked.filter(item=>(!request.subjects.length||item.owns>0)&&(!request.keywords.length||item.coverage>=.6)&&(!request.subjects.length||request.comparison||request.subjects.every(e=>item.record.owners.includes(e.id)||item.record.mentions.includes(e.id))));
   const focused=strong.filter(item=>request.subjects.length>1&&!request.comparison||!request.facets.length||request.facets.some(f=>item.record.facets.includes(f)));
-  const chosen=focused.length?focused:strong.length?strong:ranked;
+  const relevant=related.filter(item=>item.coverage>=.75&&item.score>=related[0].score-(request.relation==='cause'?45:65));
+  const chosen=relevant.length?relevant:related.length?related:focused.length?focused:strong.length?strong:ranked;
   const material=chosen.filter(item=>!item.record.type.startsWith('Explicação'));
   const items=unique(material.length?material:chosen,12);
-  const status=!items.length?'missing':strong.length?'found':'related';
+  const status=!items.length?'missing':(request.relation&&!request.comparison?relevant.length:strong.length)?'found':'related';
   const comparisons=[];
   if(request.comparison&&request.subjects.length>=2){
    const facets=request.facets.length?request.facets:['definition','scope','role','nature','composition','mandate','appointment','resources','limits'];
@@ -201,11 +256,15 @@ window.Consulta=(()=>{
    const table=db.tables.find(table=>request.subjects.every(subject=>table.headers.slice(1).some(header=>db.detect(header).length===1&&db.detect(header)[0].id===subject.id)));
    if(table){const columns=request.subjects.map(subject=>table.headers.findIndex((header,i)=>i>0&&db.detect(header).length===1&&db.detect(header)[0].id===subject.id));originalTable={...table,headers:[table.headers[0],...columns.map(i=>table.headers[i])],rows:table.rows.filter(row=>!request.facets.length||facetOf(row[0]).some(f=>request.facets.includes(f))).map(row=>[row[0],...columns.map(i=>row[i])])};if(!originalTable.rows.length)originalTable=null}
   }
-  if(!request.comparison&&request.subjects.length===1&&request.keywords.length){
+  if(!request.relation&&!request.comparison&&request.subjects.length===1&&request.keywords.length){
    originalTable=db.tables.find(table=>{
     const found=db.detect(table.title),titleTerms=terms(table.title);
     return table.rows.length<=8&&found.length===1&&found[0].id===request.subjects[0].id&&request.keywords.every(token=>titleTerms.includes(token))&&(!request.facets.length||table.rows.some(row=>facetOf(row[0],table.title).some(f=>request.facets.includes(f))));
    })||null;
+  }
+  if(relevant.length&&request.relation==='history'){
+   const relatedIds=new Set(items.flatMap(item=>item.record.mentions));
+   request.relatedSubjects=db.entities.filter(e=>relatedIds.has(e.id)&&!request.subjects.some(s=>s.id===e.id));
   }
   return {query,request,status,items,comparisons,suggestions,originalTable};
  }
@@ -238,7 +297,7 @@ window.Consulta=(()=>{
    const value=stem(fold(word));
    return value.length>=6&&/(?:ari|ici)[ao]$/.test(value)?value.slice(0,-1):value;
   };
-  const sequences=request.subjects.flatMap(subject=>subject.aliases.map(alias=>[...alias.matchAll(/[\p{L}\p{N}]+/gu)].map(match=>key(match[0]))));
+  const sequences=[...request.subjects,...(request.relatedSubjects||[])].flatMap(subject=>subject.aliases.map(alias=>[...alias.matchAll(/[\p{L}\p{N}]+/gu)].map(match=>key(match[0]))));
   const entityWords=new Set(sequences.flat());
   const keywords=[...words(request.query),...request.keywords].filter(word=>!filler.has(word)&&!entityWords.has(key(word)));
   keywords.forEach(word=>{if(word.length>1)sequences.push([key(word)])});

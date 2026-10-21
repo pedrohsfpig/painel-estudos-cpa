@@ -93,3 +93,46 @@ busca contextual, 3 de retorno/navegação da prática, 9 de navegação entre q
 e 76 de fluxos completos. Inspecionados os exemplos pignoratício, Bacen e TLP nos
 dois temas. O motor de consulta anterior ao renderizador permanece idêntico,
 assim como index.html, os bancos, materiais, histórico e seleção das respostas.
+
+
+## Relações e perguntas abertas
+
+A recuperação agora identifica pedidos de histórico/substituição, cálculo,
+causa/efeito e sequência, além das características e comparações existentes.
+Termos de comando da intenção deixam de competir com o assunto. Sinônimos de
+redução, obrigação e empréstimo aproximam perguntas abertas do vocabulário das
+fontes. Trechos com evidência da relação recebem prioridade sobre cartões que
+apenas descrevem a entidade.
+
+Itens de uma mesma linha do tempo compartilham contexto para a recuperação,
+sem alterar seu texto ou misturar linhas do tempo distintas. Por exemplo,
+“Qual era a taxa antes da TLP?” encontra o item TJLP anterior a 2018, o item TLP
+desde janeiro de 2018 e a ressalva do resumo: novas operações cabíveis, sem mera
+renomeação ou migração automática dos contratos antigos. A pergunta inversa
+prioriza a etapa posterior. TJLP também recebe destaque, por ser o outro assunto
+expresso nas fontes dessa relação. Nenhuma resposta TLP/TJLP foi cadastrada à
+parte: o teste de nova fonte verifica que outra relação entra pelo mesmo índice.
+
+A evidência precisa pertencer ao assunto e à fonte. Menção incidental ao IPCA
+numa mudança de regime fiscal não comprova uma taxa predecessora do IPCA;
+“não substitui” não comprova substituição. Datas e marcos desconexos não
+comprovam sucessão de entidades. Perguntar por que houve uma mudança exige
+evidência causal, não apenas seu histórico. Quando ela falta, o resultado
+continua identificado como relacionado, sem inventar o motivo.
+
+Perguntas de continuidade, como “e o que era usado antes?” ou “como é
+calculada?”, retomam o assunto anterior. Uma entidade explicitamente citada
+prevalece sobre esse contexto. O mecanismo continua local e extrativo, sem
+treinamento de modelo, IA, serviço pago ou acesso externo. Reconhecer padrões
+e relações documentadas amplia a consulta; não garante interpretação irrestrita
+de qualquer formulação.
+
+A revisão acrescenta sete testes de contexto, com paráfrases, direção temporal,
+ressalvas contratuais, cálculo, causa, sequência, fontes literais, nova aula,
+continuidade, destaques e perguntas negativas. `index.html`, conteúdos e bancos
+permanecem inalterados.
+
+Validação desta revisão: **122 testes aprovados** — 23 da Consulta (16 existentes
++ 7 de contexto), 11 de busca contextual, 3 de retorno/navegação, 9 de navegação
+entre questões e 76 de fluxos completos. A resposta TLP/TJLP foi inspecionada nos
+dois temas. `index.html` e `consulta.css` permanecem idênticos à versão anterior.

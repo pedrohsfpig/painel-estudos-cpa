@@ -1049,3 +1049,19 @@ com rolagem interna. A implementação contextual substitui o padrão anterior.
   nem destaque palavras de comando como se fossem o assunto principal.
 - Faça a marcação apenas no texto escapado das respostas, nunca em atributos,
   HTML ou no banco. Cada pergunta anterior usa os próprios termos de destaque.
+
+
+### Relações na Consulta
+
+- Priorize o pedido (histórico/substituição, cálculo, causa ou sequência), além
+  dos termos literais. Use evidências da mesma fonte; não cadastre respostas
+  manuais para contornar uma pergunta específica.
+- Preserve o contexto entre itens da mesma linha do tempo. Não una marcos ou
+  fontes independentes para inferir sucessão. “Antes da TLP” deve recuperar TJLP,
+  a transição de 2018 e as condições sobre novas operações/contratos antigos.
+- Menção incidental, negação de substituição ou origem financeira de recursos
+  não comprovam relação histórica. Um histórico não explica sozinho o motivo
+  da mudança. Se faltar evidência da relação pedida, identifique como relacionado.
+- Perguntas de continuidade podem herdar o assunto; uma entidade explícita
+  substitui esse contexto. Preserve textos literais, fontes, destaques e estados
+  de estudo. Execute também `tests/test_consulta_context.py` nas revisões.
