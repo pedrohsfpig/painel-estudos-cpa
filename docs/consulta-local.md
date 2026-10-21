@@ -3,8 +3,8 @@
 A aba Consulta foi acrescentada entre Trilha e Praticar, com a lupa e o mesmo
 padrão visual do sistema. O campo aceita uma pergunta de até 500 caracteres;
 Consultar ou Enter apresenta a resposta nessa tela. Shift+Enter permite outra
-linha. Exemplos são clicáveis e preenchem consultas reais. Limpar limpa somente
-a consulta. Perguntas anteriores ficam recolhidas, acessíveis durante a visita;
+linha. Não há botões de sugestões. Limpar limpa somente a consulta. Todas as
+perguntas anteriores ficam sob um único controle expansível, fechado por padrão;
 o rascunho e as respostas sobrevivem à navegação entre abas, não ao recarregamento.
 
 ## Dados e reconhecimento
@@ -68,3 +68,28 @@ desempenho detalhado, 4 de layout da prática, 3 de navegação/retorno, 9 de
 navegação entre questões e 76 de fluxos completos. Os testes usam contextos
 isolados. Q, BP, AL, MAT, quadros comparativos e funções de histórico/filtro
 foram comparados com a versão anterior e permanecem idênticos.
+
+## Ajustes visuais da consulta
+
+Retirados os botões de sugestões. Perguntas anteriores ficam em um único
+controle fechado, com contagem; a lista é montada somente ao expandir e retirada
+do DOM ao recolher. Cada pergunta conserva a própria resposta e os destaques
+correspondentes, sem acrescentar resumos de perguntas antigas à página fechada.
+
+Os termos da consulta aparecem em negrito e na cor de atenção (`--md`), sem
+pintar o cartão inteiro. O destaque cobre tópicos, títulos, nomes de assuntos e
+tabelas, incluindo nomes/siglas equivalentes e variantes de plural e gênero,
+como pignoratício/pignoratícias e TLP/Taxa de Longo Prazo. Palavras genéricas de
+comando, como função e comparação, não recebem o mesmo destaque dos assuntos.
+Fontes e avisos mantêm apresentação discreta.
+
+A marcação é aplicada a nós de texto depois do escape HTML, com limites de
+palavra e junção de intervalos sobrepostos. Preserva grafia, acentos, pontuação,
+atributos e textos integrais. Não altera o índice, a busca, a seleção dos trechos,
+os dados de aula ou qualquer resposta registrada.
+
+Validação dos ajustes visuais: **115 testes aprovados** — 16 da Consulta, 11 de
+busca contextual, 3 de retorno/navegação da prática, 9 de navegação entre questões
+e 76 de fluxos completos. Inspecionados os exemplos pignoratício, Bacen e TLP nos
+dois temas. O motor de consulta anterior ao renderizador permanece idêntico,
+assim como index.html, os bancos, materiais, histórico e seleção das respostas.

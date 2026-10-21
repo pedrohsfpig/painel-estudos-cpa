@@ -1,5 +1,6 @@
 """Consulta local: relevância, fontes, navegação e preservação dos dados."""
 import unittest
+from playwright.sync_api import expect
 import smoke as harness
 
 class Consulta(unittest.TestCase):
@@ -17,12 +18,12 @@ class Consulta(unittest.TestCase):
 
     def result(self,q):return self.page.evaluate('q=>Consulta.answer(q)',q)
 
-    def test_menu_position_inline_answers_examples_and_keyboard_submit(self):
+    def test_menu_position_inline_answers_without_suggestions_and_keyboard_submit(self):
         labels=self.page.locator('.nav button>span:first-of-type').all_text_contents()
         self.assertEqual(labels[:4],['Painel','Trilha','Consulta','Praticar'])
         self.click('Consulta')
         self.assertEqual(self.page.locator('.nav-item[aria-current="page"]').inner_text(),'Consulta')
-        self.assertEqual(self.page.locator('.consult-examples button').count(),4)
+        self.assertEqual(self.page.locator('.consult-examples').count(),0)
         self.page.locator('#consult-question').fill('Quantos membros compõem o Bacen?')
         self.page.locator('#consult-question').press('Enter')
         self.assertEqual(self.page.evaluate('view'),'c')
@@ -31,7 +32,7 @@ class Consulta(unittest.TestCase):
         self.assertTrue(self.page.locator('#consult-answer-title').evaluate('n=>n===document.activeElement'))
         self.assertGreater(self.page.locator('.consult-current .consult-source').count(),0)
         self.assertEqual(self.page.locator('.consult-current a').count(),0)
-        self.page.locator('.consult-examples button').first.click()
+        self.ask('funções do Bacen')
         self.assertIn('Banco dos bancos',self.page.locator('.consult-current').inner_text())
 
     def test_membership_answers_total_composition_not_conditional_arithmetic(self):
@@ -80,7 +81,9 @@ class Consulta(unittest.TestCase):
         text=self.ask('e o mandato?')
         self.assertIn('4 anos',text)
         self.assertIn('Banco Central',text)
-        self.assertEqual(self.page.locator('.consult-previous').count(),1)
+        self.assertFalse(self.page.locator('.consult-history').evaluate('n=>n.open'))
+        self.page.locator('.consult-history>summary').click()
+        expect(self.page.locator('.consult-previous')).to_have_count(1)
         self.page.locator('.consult-previous summary').click()
         self.assertIn('8 diretores',self.page.locator('.consult-previous').inner_text())
         self.ask('comparação entre CVM e Susep')
@@ -160,5 +163,61 @@ class Consulta(unittest.TestCase):
                     self.assertFalse(self.page.evaluate('document.documentElement.scrollWidth>innerWidth'),(width,theme,q))
                     self.assertTrue(self.page.locator('.consult-page').evaluate('n=>n.scrollWidth<=n.clientWidth+1'))
                     self.click('Limpar')
+
+    def test_keyword_highlights_handle_gender_plural_and_preserve_source_text(self):
+        self.ask('pignoratício')
+        marks=self.page.locator('.consult-current .consult-facts mark')
+        self.assertGreater(marks.count(),0)
+        self.assertTrue(any('pignoratícia' in text.lower() for text in marks.all_text_contents()))
+        self.assertTrue(self.page.evaluate("""()=>{const actual=[...document.querySelectorAll('.consult-current .consult-facts li')].map(n=>n.textContent),expected=Consulta.answer('pignoratício').items.flatMap(i=>i.record.lines);return actual.every(line=>expected.includes(line))}"""))
+        self.assertEqual(self.page.locator('.consult-current mark mark').count(),0)
+        self.assertEqual(self.page.locator('.consult-source mark').count(),0)
+
+    def test_acronym_and_full_name_highlights_work_in_cards_and_tables(self):
+        self.ask('O que é TLP, taxa de longo prazo?')
+        marks=self.page.locator('.consult-current mark').all_text_contents()
+        self.assertIn('TLP',marks)
+        self.assertIn('Taxa de Longo Prazo',marks)
+        self.assertNotIn('Prazo',marks)
+        self.ask('função do Bacen')
+        self.assertIn('Banco Central',self.page.locator('.consult-current table mark').all_text_contents())
+        self.assertNotIn('Função',self.page.locator('.consult-current mark').all_text_contents())
+        self.ask('comparação entre CVM e Susep')
+        headers=self.page.locator('.consult-current thead mark').all_text_contents()
+        self.assertIn('Comissão de Valores Mobiliários',headers)
+        self.assertIn('Superintendência de Seguros Privados',headers)
+        self.assertTrue(self.page.locator('.consult-current tbody mark').count())
+
+    def test_history_is_a_single_closed_control_and_renders_only_on_expansion(self):
+        self.ask('TLP')
+        for _ in range(5):self.ask('composição do Bacen')
+        history=self.page.locator('.consult-history')
+        self.assertEqual(history.count(),1)
+        self.assertFalse(history.evaluate('n=>n.open'))
+        self.assertEqual(self.page.locator('.consult-previous').count(),0)
+        self.assertIn('5',history.locator(':scope>summary').inner_text())
+        before=self.page.evaluate('JSON.stringify([H,cfg,qz,fl,fm])')
+        history.locator(':scope>summary').focus();self.page.keyboard.press('Enter')
+        expect(self.page.locator('.consult-previous')).to_have_count(5)
+        old_tlp=self.page.locator('.consult-previous').last
+        old_tlp.locator(':scope>summary').click()
+        self.assertIn('Taxa de Longo Prazo',old_tlp.locator('mark').all_text_contents())
+        history.locator(':scope>summary').click()
+        expect(self.page.locator('.consult-previous')).to_have_count(0)
+        self.assertEqual(self.page.evaluate('JSON.stringify([H,cfg,qz,fl,fm])'),before)
+        self.click('Painel');self.click('Consulta')
+        self.assertFalse(self.page.locator('.consult-history').evaluate('n=>n.open'))
+        self.assertEqual(self.page.locator('.consult-previous').count(),0)
+
+    def test_highlights_are_readable_in_both_themes_and_do_not_change_answers(self):
+        self.ask('TLP')
+        for theme in ['light','dark']:
+            self.page.evaluate('t=>document.documentElement.dataset.theme=t',theme)
+            self.assertTrue(self.page.locator('.consult-current mark').evaluate_all("""nodes=>{
+              const probe=document.createElement('i');probe.style.color='var(--md)';document.body.append(probe);const color=getComputedStyle(probe).color;probe.remove();return nodes.every(n=>getComputedStyle(n).color===color&&parseInt(getComputedStyle(n).fontWeight)>=700&&getComputedStyle(n).backgroundColor==='rgba(0, 0, 0, 0)')
+            }"""))
+        self.ask('Bacen <script>window.injected=1</script>')
+        self.assertEqual(self.page.locator('.consult-current script,.consult-current img').count(),0)
+        self.assertIsNone(self.page.evaluate('window.injected'))
 
 if __name__=='__main__':unittest.main(verbosity=2)

@@ -231,13 +231,51 @@ window.Consulta=(()=>{
   }
   return html;
  }
+ // Destaque aplicado só a nós de texto: preserva fontes, conteúdo e atributos HTML.
+ function highlightSequences(request){
+  const filler=new Set('funcao faz fazer serve servem atua atuam atribuicao competencia papel responsabilidade objetivo finalidade comparacao comparar comparativo diferenca diferenciar distincao definicao conceito significado significa explicar entender'.split(' '));
+  const key=word=>{
+   const value=stem(fold(word));
+   return value.length>=6&&/(?:ari|ici)[ao]$/.test(value)?value.slice(0,-1):value;
+  };
+  const sequences=request.subjects.flatMap(subject=>subject.aliases.map(alias=>[...alias.matchAll(/[\p{L}\p{N}]+/gu)].map(match=>key(match[0]))));
+  const entityWords=new Set(sequences.flat());
+  const keywords=[...words(request.query),...request.keywords].filter(word=>!filler.has(word)&&!entityWords.has(key(word)));
+  keywords.forEach(word=>{if(word.length>1)sequences.push([key(word)])});
+  return {key,sequences:sequences.filter(sequence=>sequence.length)};
+ }
+ function highlightedResponse(result){
+  const root=document.createElement('div');root.innerHTML=response(result);
+  const {key,sequences}=highlightSequences(result.request);
+  if(!sequences.length)return root.innerHTML;
+  const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),nodes=[];
+  while(walker.nextNode())if(!walker.currentNode.parentElement.closest('.consult-source,.consult-response-head,.consult-message,.consult-unavailable'))nodes.push(walker.currentNode);
+  nodes.forEach(node=>{
+   const text=node.nodeValue,tokens=[...text.matchAll(/[\p{L}\p{N}]+/gu)].map(match=>({key:key(match[0]),start:match.index,end:match.index+match[0].length}));
+   const ranges=[];
+   sequences.forEach(sequence=>{
+    for(let at=0;at<=tokens.length-sequence.length;at++)if(sequence.every((word,i)=>tokens[at+i].key===word))ranges.push([tokens[at].start,tokens[at+sequence.length-1].end]);
+   });
+   if(!ranges.length)return;
+   const merged=[];
+   ranges.sort((a,b)=>a[0]-b[0]||b[1]-a[1]).forEach(range=>{const last=merged.at(-1);if(last&&range[0]<last[1])last[1]=Math.max(last[1],range[1]);else merged.push([...range])});
+   const fragment=document.createDocumentFragment();let cursor=0;
+   merged.forEach(([start,end])=>{fragment.append(document.createTextNode(text.slice(cursor,start)));const mark=document.createElement('mark');mark.className='consult-highlight';mark.textContent=text.slice(start,end);fragment.append(mark);cursor=end});
+   fragment.append(document.createTextNode(text.slice(cursor)));node.replaceWith(fragment);
+  });
+  return root.innerHTML;
+ }
+ function toggleHistory(section){
+  const container=section.querySelector('.consult-history-content');if(!container)return;
+  container.innerHTML=section.open?state.entries.slice(0,-1).reverse().map(entry=>`<details class="consult-previous"><summary>${escapeText(entry.query)}</summary>${highlightedResponse(entry)}</details>`).join(''):'';
+ }
  function view(){
-  return `<section class="consult-page"><div class="consult-intro"><span class="consult-eyebrow">SEUS CONTEÚDOS, EM UM SÓ LUGAR</span><h2>Qual é a sua dúvida?</h2><p>Pergunte sobre as aulas ou compare assuntos. Os trechos e suas fontes aparecem aqui mesmo.</p></div><form class="consult-form" onsubmit="event.preventDefault();Consulta.submit()"><label for="consult-question">Escreva sua pergunta</label><textarea id="consult-question" rows="2" maxlength="500" placeholder="Ex.: Quantos membros compõem a diretoria do Bacen?" oninput="Consulta.draft(this.value)" onkeydown="if(event.key==='Enter'&&!event.shiftKey&&!event.isComposing){event.preventDefault();Consulta.submit()}">${escapeText(state.draft)}</textarea><div class="consult-form-footer"><span>Consulta aos materiais cadastrados</span><div><button type="button" onclick="Consulta.clear()">Limpar</button><button type="submit" class="consult-submit">${uiIcon('search')}Consultar</button></div></div></form><div class="consult-examples" aria-label="Exemplos de consulta">${['Funções do Bacen','Comparação entre CVM e Susep','Diferença entre SCD e SEP','Limites do FGC'].map(q=>`<button type="button" onclick="Consulta.example(this.textContent)">${q}</button>`).join('')}</div><div id="consult-answers">${answers()}</div></section>`;
+  return `<section class="consult-page"><div class="consult-intro"><span class="consult-eyebrow">SEUS CONTEÚDOS, EM UM SÓ LUGAR</span><h2>Qual é a sua dúvida?</h2><p>Pergunte sobre as aulas ou compare assuntos. Os trechos e suas fontes aparecem aqui mesmo.</p></div><form class="consult-form" onsubmit="event.preventDefault();Consulta.submit()"><label for="consult-question">Escreva sua pergunta</label><textarea id="consult-question" rows="2" maxlength="500" placeholder="Ex.: Quantos membros compõem a diretoria do Bacen?" oninput="Consulta.draft(this.value)" onkeydown="if(event.key==='Enter'&&!event.shiftKey&&!event.isComposing){event.preventDefault();Consulta.submit()}">${escapeText(state.draft)}</textarea><div class="consult-form-footer"><span>Consulta aos materiais cadastrados</span><div><button type="button" onclick="Consulta.clear()">Limpar</button><button type="submit" class="consult-submit">${uiIcon('search')}Consultar</button></div></div></form><div id="consult-answers">${answers()}</div></section>`;
  }
  function answers(){
   if(!state.entries.length)return `<div class="consult-welcome">${uiIcon('search')}<h3>Consulte sem sair desta tela</h3><p>Busque funções, composição, prazos, limites e diferenças entre os assuntos. As respostas reproduzem o conteúdo das aulas.</p></div>`;
   const current=state.entries.at(-1);
-  return `<section class="consult-current" aria-labelledby="consult-answer-title"><h2 id="consult-answer-title" tabindex="-1">${escapeText(current.query)}</h2><div role="status" class="sr-only">Consulta concluída. ${current.items.length} trechos encontrados.</div>${response(current)}</section>${state.entries.length>1?`<section class="consult-history" aria-label="Perguntas anteriores desta visita"><h3>Perguntas anteriores</h3>${state.entries.slice(0,-1).reverse().map(entry=>`<details class="consult-previous"><summary>${escapeText(entry.query)}</summary>${response(entry)}</details>`).join('')}</section>`:''}`;
+  return `<section class="consult-current" aria-labelledby="consult-answer-title"><h2 id="consult-answer-title" tabindex="-1">${escapeText(current.query)}</h2><div role="status" class="sr-only">Consulta concluída. ${current.items.length} trechos encontrados.</div>${highlightedResponse(current)}</section>${state.entries.length>1?`<details class="consult-history" ontoggle="Consulta.toggleHistory(this)"><summary>Perguntas anteriores <span>${state.entries.length-1}</span></summary><div class="consult-history-content"></div></details>`:''}`;
  }
  function submit(){
   const input=document.getElementById('consult-question'),value=(input?.value||state.draft).trim().slice(0,500);
@@ -246,7 +284,6 @@ window.Consulta=(()=>{
   state.context=result.request.subjects.map(e=>e.id);
   document.getElementById('consult-answers').innerHTML=answers();document.getElementById('consult-answer-title')?.focus({preventScroll:true});
  }
- function example(value){state.draft=value;const input=document.getElementById('consult-question');if(input)input.value=value;submit()}
  function clear(){state.draft='';state.entries=[];state.context=[];const root=document.querySelector('.consult-page');if(root)root.outerHTML=view();document.getElementById('consult-question')?.focus()}
- return {view,submit,example,clear,draft(value){state.draft=String(value).slice(0,500)},answer,interpret,index};
+ return {view,submit,toggleHistory,clear,draft(value){state.draft=String(value).slice(0,500)},answer,interpret,index};
 })();

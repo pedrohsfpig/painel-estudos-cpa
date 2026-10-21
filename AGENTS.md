@@ -1037,3 +1037,15 @@ com rolagem interna. A implementação contextual substitui o padrão anterior.
   não apenas a presença de um resultado; teste perguntas dos exemplos e de aulas
   variadas. Execute `tests/test_consulta.py`, regressões de navegação/busca e
   `tests/smoke.py`. Registre escopo e limites em `docs/consulta-local.md`.
+
+### Apresentação da Consulta
+
+- Não mostre botões de sugestões de perguntas. Perguntas anteriores ficam sob
+  um único controle expansível, fechado por padrão, com contagem. Monte a lista
+  somente ao abrir; uma pergunta nova não deve expandir o histórico sozinha.
+- Destaque termos pesquisados em negrito e na cor de atenção do tema, incluindo
+  siglas/nomes equivalentes, plurais e gênero (pignoratício/pignoratícias).
+  Preserve o texto literal e os limites de palavra; não pinte cartões inteiros
+  nem destaque palavras de comando como se fossem o assunto principal.
+- Faça a marcação apenas no texto escapado das respostas, nunca em atributos,
+  HTML ou no banco. Cada pergunta anterior usa os próprios termos de destaque.

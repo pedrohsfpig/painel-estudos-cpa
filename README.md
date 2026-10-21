@@ -290,3 +290,7 @@ conteúdo cadastrado, com indicação quando só há trechos relacionados ou nen
 correspondência. Rascunho e perguntas ficam na memória desta visita; Limpar não
 apaga o histórico de estudos. Publique também `consulta.js` e `consulta.css`.
 Veja [docs/consulta-local.md](docs/consulta-local.md).
+
+Na Consulta, os termos encontrados ficam em negrito e na cor de atenção, inclusive
+siglas/nomes equivalentes e variantes de plural. Perguntas anteriores aparecem
+somente ao abrir seu controle expansível. Os botões de sugestões foram retirados.
