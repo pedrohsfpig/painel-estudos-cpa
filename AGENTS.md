@@ -1012,3 +1012,28 @@ com rolagem interna. A implementação contextual substitui o padrão anterior.
   cfg, fl/fm, sessão, alternativas e relógio. Mantenha teclado, foco e dois temas.
 - Execute `tests/test_dashboard_details.py`, `tests/test_dashboard_hierarchy.py`
   e `tests/smoke.py`; registre a validação em `docs/desempenho-detalhado.md`.
+
+## Consulta local aos materiais — 21/10/2026
+
+- A aba Consulta fica entre Trilha e Praticar, com lupa. `consulta.js` e
+  `consulta.css` são recursos locais da página estática; publique-os junto com
+  index.html. Não integre IA, API paga, chave ou consulta externa sem solicitação.
+- Responda na própria aba com trechos literais, tópicos e tabelas, identificando
+  aula, tipo e título da fonte. Não transforme o resultado em um conjunto de
+  links que obrigue a sair da consulta. Não invente respostas ou complete lacunas.
+- O índice deriva AL, MAT, quadros, flashcards e explicações corretas. Distratores
+  não são fatos: nunca os indexe como respostas. Preserve os textos originais.
+- Reconheça siglas, nomes, plurais, sinônimos, perguntas por característica e
+  comparações. Erros de digitação só têm tolerância conservadora, com contexto;
+  palavras de fora do domínio não devem virar termos financeiros por semelhança.
+- Composição total não é contagem de mandatos iniciados num ano. Limite ordinário
+  não é garantia especial. Em comparações, alinhe características e preserve
+  a entidade de cada coluna; use tabelas existentes quando forem pertinentes.
+- Diferencie conteúdo encontrado, relacionado e ausente. Uma resposta parcial
+  deve ser identificada; ausência de informação não autoriza inferência nova.
+- Perguntas anteriores e rascunho ficam somente na memória da visita. Consultar,
+  limpar e navegar não alteram H, cfg, qz, cronômetro, filtros ou materiais.
+- Novas aulas entram automaticamente pelo índice. Confira relevância e fontes,
+  não apenas a presença de um resultado; teste perguntas dos exemplos e de aulas
+  variadas. Execute `tests/test_consulta.py`, regressões de navegação/busca e
+  `tests/smoke.py`. Registre escopo e limites em `docs/consulta-local.md`.

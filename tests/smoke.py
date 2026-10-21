@@ -526,7 +526,7 @@ class PainelCPA(unittest.TestCase):
 
     def test_18_theme_button_is_global_and_remembers_choice(self):
         self.assertEqual(self.page.locator("#theme-toggle svg").count(), 1)
-        for screen in ["Painel", "Quadro do SFN", "Trilha", "Praticar", "Erros (0)", "Material de apoio"]:
+        for screen in ["Painel", "Quadro do SFN", "Trilha", "Consulta", "Praticar", "Erros (0)", "Material de apoio"]:
             self.click(screen)
             self.toggle_theme()
         self.click("Flashcards")
@@ -649,12 +649,12 @@ class PainelCPA(unittest.TestCase):
                 self.page.set_viewport_size({"width":width,"height":900})
                 self.click("Painel")
                 self.assertEqual(self.page.locator(".nav button[aria-current='page']").inner_text(), "Painel")
-                self.assertEqual(self.page.locator(".nav button .ui-icon").count(), 6)
+                self.assertEqual(self.page.locator(".nav button .ui-icon").count(), 7)
                 self.assertEqual(self.page.locator(".sidebar").evaluate("e => getComputedStyle(e).position"), "fixed")
                 main = self.page.locator("main").bounding_box()
                 sidebar = self.page.locator(".sidebar").bounding_box()
                 self.assertGreaterEqual(main["x"], sidebar["x"] + sidebar["width"])
-                for screen in ["Painel","Quadro do SFN","Trilha","Praticar","Erros (0)","Material de apoio"]:
+                for screen in ["Painel","Quadro do SFN","Trilha","Consulta","Praticar","Erros (0)","Material de apoio"]:
                     self.click(screen)
                     self.assertTrue(self.page.evaluate("document.documentElement.scrollWidth <= innerWidth"), f"Rolagem horizontal: {width}, {theme}, {screen}")
                 self.click("Painel")

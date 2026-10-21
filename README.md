@@ -276,3 +276,17 @@ com seleção marcada, navegação por teclado e adaptação ao espaço da tela.
 O desempenho detalhado do painel fica recolhido até o clique. A consulta tem
 abas por aulas, temas e dificuldades, busca local, ordenação e seis cartões por
 página, mantendo o histórico completo e os filtros de estatísticas.
+
+## Consulta aos materiais
+
+A aba **Consulta**, entre Trilha e Praticar, recebe perguntas e mostra os trechos
+na própria tela, com suas fontes. Reconhece siglas, nomes, plurais e sinônimos;
+organiza características lado a lado em comparações. Por exemplo: “funções do
+Bacen”, “quantos membros compõem o Bacen?”, “comparação entre CVM e Susep” e
+“limites do FGC”. Perguntas curtas de continuidade retomam o assunto anterior.
+
+A consulta é local, sem IA paga, chave ou serviço externo. É uma seleção de
+conteúdo cadastrado, com indicação quando só há trechos relacionados ou nenhuma
+correspondência. Rascunho e perguntas ficam na memória desta visita; Limpar não
+apaga o histórico de estudos. Publique também `consulta.js` e `consulta.css`.
+Veja [docs/consulta-local.md](docs/consulta-local.md).
