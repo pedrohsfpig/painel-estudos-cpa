@@ -1088,3 +1088,29 @@ com rolagem interna. A implementação contextual substitui o padrão anterior.
   Preserve H, cfg, qz, cronômetro, materiais, navegação, teclado e dois temas.
 - Execute também `tests/test_consulta_refinements.py` e mantenha a documentação
   em `docs/consulta-local.md`. Não acrescente chamadas externas ou modelos pagos.
+
+## Próxima aula de câmbio — orientação registrada em 22/10/2026
+
+O usuário ainda enviará os slides e as transcrições. Ao criar a próxima aula,
+cruze as fontes e aplique a divisão FINAL solicitada:
+
+- Aula-fonte 19 — Mercados de Câmbio: **42,5%** das questões.
+- Aula-fonte 21 — Taxas de Câmbio: **42,5%** das questões.
+- Aula-fonte 20 — Cupom Cambial: **15%** das questões.
+
+Essa orientação substitui o pedido inicial de 40%/40%/20%. Os números 19, 21 e
+20 identificam as aulas-fonte do professor, não três novas aulas da plataforma.
+O usuário escolheu os pesos conforme sua avaliação de incidência no CPA;
+não os apresente como estatística oficial da prova.
+
+Mantenha a quantidade por aula e a distribuição de dificuldades já estabelecidas:
+100 questões, com 20 fáceis, 40 médias, 20 difíceis e 20 Hardcore, além do banco
+próprio de 50 Bate-pronto. Aplique os pesos temáticos também dentro dos níveis e
+no Bate-pronto, com arredondamento proporcional para números inteiros, preservando
+os totais e equilibrando as fontes 19 e 21. Em 100 questões, os pesos resultam
+em 43/42/15 (ou 42/43/15); em 50 Bate-pronto, a aproximação é 21/21/8. Não
+aumente o banco apenas para eliminar frações. Confira e informe o arredondamento
+na entrega da aula, sem prometer percentuais exatos impossíveis nesses totais.
+
+Este registro não autoriza antecipar conteúdo: aguarde os materiais que o
+usuário enviará para produzir a aula e suas questões.
