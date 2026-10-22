@@ -1114,3 +1114,32 @@ na entrega da aula, sem prometer percentuais exatos impossíveis nesses totais.
 
 Este registro não autoriza antecipar conteúdo: aguarde os materiais que o
 usuário enviará para produzir a aula e suas questões.
+
+### Associações de causa e efeito — padrão registrado em 22/10/2026
+
+O usuário aprende por associações entre conceitos. Sempre que os slides ou a
+explicação do professor apresentarem encadeamentos, registre-os em AMBOS:
+
+- **Material de apoio → Tabelas:** quadro que permita acompanhar as etapas.
+- **Trilha → Dicas e macetes:** a mesma relação em sequência curta e legível,
+  explicando o mecanismo, sem depender exclusivamente de setas ou cores.
+
+Na próxima aula de câmbio, confira especialmente os DOIS ÚLTIMOS slides citados
+pelo usuário: relações com juros internos, juros externos e prêmio de risco.
+Esses pontos devem ganhar tabelas, além de aparecer nas dicas. O exemplo dado
+foi a cadeia juros internos maiores → entrada de divisas → valorização da moeda
+doméstica → importações favorecidas. Confirme a formulação, as condições e os
+sentidos das setas nos slides E na transcrição antes de incorporá-la ao conteúdo.
+
+Quando couber, organize colunas como mudança inicial, fluxo de divisas, efeito
+sobre a moeda/cotação, comércio exterior e condições/observações. Adapte as
+colunas à relação efetivamente ensinada; não invente etapas para preencher o
+quadro. Explique a direção de cada elo e suas premissas. Diferencie tendência
+econômica de consequência automática e correlação de causalidade. Nas relações
+cambiais, identifique a moeda e a convenção de cotação: valorização da moeda
+doméstica não equivale necessariamente a alta do número usado para cotar câmbio.
+
+A orientação vale também para futuras aulas e pode ser aplicada às anteriores
+quando suas fontes forem revisadas, conforme autorização do usuário. Preserve
+coerência entre tabelas e dicas, conteúdos existentes e o padrão visual do
+sistema. Não crie as tabelas da nova aula antes de receber os materiais.
