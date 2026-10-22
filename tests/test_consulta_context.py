@@ -118,7 +118,7 @@ class ConsultaContexto(unittest.TestCase):
         }''')
         result = self.result('Qual era a referência antes da Taxa Selic?')
         self.assertEqual(result['status'], 'found')
-        self.assertEqual(result['items'][0]['record']['lesson'], 12)
+        self.assertEqual(result['items'][0]['record']['lesson'], self.page.evaluate('AL.length'))
         self.assertIn('XYZ era a referência anterior', self.primary(result))
 
 

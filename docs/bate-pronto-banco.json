@@ -3799,6 +3799,356 @@
       "aula": 11,
       "tema": "Indicadores: TR e TLP",
       "fonte_Q": 1096
+    },
+    {
+      "id": 100551,
+      "aula": 12,
+      "tema": "Mercado: operações e liquidação",
+      "fonte_Q": 1101,
+      "modelo": "direto"
+    },
+    {
+      "id": 100552,
+      "aula": 12,
+      "tema": "Mercado: operações e liquidação",
+      "fonte_Q": 1102,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100553,
+      "aula": 12,
+      "tema": "Mercado: operações e liquidação",
+      "fonte_Q": 1103,
+      "modelo": "direto"
+    },
+    {
+      "id": 100554,
+      "aula": 12,
+      "tema": "Mercado: operações e liquidação",
+      "fonte_Q": 1113,
+      "modelo": "direto"
+    },
+    {
+      "id": 100555,
+      "aula": 12,
+      "tema": "Mercado: operações e liquidação",
+      "fonte_Q": 1111,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100556,
+      "aula": 12,
+      "tema": "Mercado: operações e liquidação",
+      "fonte_Q": 1112,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100557,
+      "aula": 12,
+      "tema": "Mercado: operações e liquidação",
+      "fonte_Q": 1110,
+      "modelo": "direto"
+    },
+    {
+      "id": 100558,
+      "aula": 12,
+      "tema": "Mercado: agentes e regulação",
+      "fonte_Q": 1104,
+      "modelo": "direto"
+    },
+    {
+      "id": 100559,
+      "aula": 12,
+      "tema": "Mercado: agentes e regulação",
+      "fonte_Q": 1105,
+      "modelo": "direto"
+    },
+    {
+      "id": 100560,
+      "aula": 12,
+      "tema": "Mercado: agentes e regulação",
+      "fonte_Q": 1114,
+      "modelo": "direto"
+    },
+    {
+      "id": 100561,
+      "aula": 12,
+      "tema": "Mercado: financiamento à exportação",
+      "fonte_Q": 1106,
+      "modelo": "direto"
+    },
+    {
+      "id": 100562,
+      "aula": 12,
+      "tema": "Mercado: financiamento à exportação",
+      "fonte_Q": 1107,
+      "modelo": "direto"
+    },
+    {
+      "id": 100563,
+      "aula": 12,
+      "tema": "Mercado: financiamento à exportação",
+      "fonte_Q": 1117,
+      "modelo": "direto"
+    },
+    {
+      "id": 100564,
+      "aula": 12,
+      "tema": "Mercado: financiamento à exportação",
+      "fonte_Q": 1118,
+      "modelo": "direto"
+    },
+    {
+      "id": 100565,
+      "aula": 12,
+      "tema": "Mercado: regimes cambiais",
+      "fonte_Q": 1108,
+      "modelo": "direto"
+    },
+    {
+      "id": 100566,
+      "aula": 12,
+      "tema": "Mercado: regimes cambiais",
+      "fonte_Q": 1109,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100567,
+      "aula": 12,
+      "tema": "Mercado: regimes cambiais",
+      "fonte_Q": 1120,
+      "modelo": "direto"
+    },
+    {
+      "id": 100568,
+      "aula": 12,
+      "tema": "Mercado: regimes cambiais",
+      "fonte_Q": 1123,
+      "modelo": "direto"
+    },
+    {
+      "id": 100569,
+      "aula": 12,
+      "tema": "Mercado: regimes cambiais",
+      "fonte_Q": 1122,
+      "modelo": "direto"
+    },
+    {
+      "id": 100570,
+      "aula": 12,
+      "tema": "Mercado: regimes cambiais",
+      "fonte_Q": 1124,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100571,
+      "aula": 12,
+      "tema": "Mercado: regimes cambiais",
+      "fonte_Q": 1126,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100572,
+      "aula": 12,
+      "tema": "Cupom: retorno em dólares",
+      "fonte_Q": 1144,
+      "modelo": "direto"
+    },
+    {
+      "id": 100573,
+      "aula": 12,
+      "tema": "Cupom: retorno em dólares",
+      "fonte_Q": 1147,
+      "modelo": "direto"
+    },
+    {
+      "id": 100574,
+      "aula": 12,
+      "tema": "Cupom: retorno em dólares",
+      "fonte_Q": 1148,
+      "modelo": "direto"
+    },
+    {
+      "id": 100575,
+      "aula": 12,
+      "tema": "Cupom: swaps e proteção",
+      "fonte_Q": 1145,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100576,
+      "aula": 12,
+      "tema": "Cupom: swaps e proteção",
+      "fonte_Q": 1146,
+      "modelo": "direto"
+    },
+    {
+      "id": 100577,
+      "aula": 12,
+      "tema": "Cupom: swaps e proteção",
+      "fonte_Q": 1150,
+      "modelo": "direto"
+    },
+    {
+      "id": 100578,
+      "aula": 12,
+      "tema": "Cupom: swaps e proteção",
+      "fonte_Q": 1151,
+      "modelo": "direto"
+    },
+    {
+      "id": 100579,
+      "aula": 12,
+      "tema": "Cupom: swaps e proteção",
+      "fonte_Q": 1154,
+      "modelo": "direto"
+    },
+    {
+      "id": 100580,
+      "aula": 12,
+      "tema": "Taxas: cotações e referências",
+      "fonte_Q": 1159,
+      "modelo": "direto"
+    },
+    {
+      "id": 100581,
+      "aula": 12,
+      "tema": "Taxas: cotações e referências",
+      "fonte_Q": 1160,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100582,
+      "aula": 12,
+      "tema": "Taxas: cotações e referências",
+      "fonte_Q": 1160,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100583,
+      "aula": 12,
+      "tema": "Taxas: cotações e referências",
+      "fonte_Q": 1163,
+      "modelo": "direto"
+    },
+    {
+      "id": 100584,
+      "aula": 12,
+      "tema": "Taxas: cotações e referências",
+      "fonte_Q": 1168,
+      "modelo": "direto"
+    },
+    {
+      "id": 100585,
+      "aula": 12,
+      "tema": "Taxas: cotações e referências",
+      "fonte_Q": 1161,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100586,
+      "aula": 12,
+      "tema": "Taxas: cotações e referências",
+      "fonte_Q": 1169,
+      "modelo": "direto"
+    },
+    {
+      "id": 100587,
+      "aula": 12,
+      "tema": "Taxas: câmbio real e paridade",
+      "fonte_Q": 1164,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100588,
+      "aula": 12,
+      "tema": "Taxas: câmbio real e paridade",
+      "fonte_Q": 1172,
+      "modelo": "direto"
+    },
+    {
+      "id": 100589,
+      "aula": 12,
+      "tema": "Taxas: câmbio real e paridade",
+      "fonte_Q": 1173,
+      "modelo": "direto"
+    },
+    {
+      "id": 100590,
+      "aula": 12,
+      "tema": "Taxas: câmbio real e paridade",
+      "fonte_Q": 1174,
+      "modelo": "direto"
+    },
+    {
+      "id": 100591,
+      "aula": 12,
+      "tema": "Taxas: câmbio real e paridade",
+      "fonte_Q": 1176,
+      "modelo": "direto"
+    },
+    {
+      "id": 100592,
+      "aula": 12,
+      "tema": "Taxas: câmbio real e paridade",
+      "fonte_Q": 1187,
+      "modelo": "direto"
+    },
+    {
+      "id": 100593,
+      "aula": 12,
+      "tema": "Taxas: juros, risco e comércio",
+      "fonte_Q": 1177,
+      "modelo": "direto"
+    },
+    {
+      "id": 100594,
+      "aula": 12,
+      "tema": "Taxas: juros, risco e comércio",
+      "fonte_Q": 1178,
+      "modelo": "direto"
+    },
+    {
+      "id": 100595,
+      "aula": 12,
+      "tema": "Taxas: juros, risco e comércio",
+      "fonte_Q": 1166,
+      "modelo": "direto"
+    },
+    {
+      "id": 100596,
+      "aula": 12,
+      "tema": "Taxas: juros, risco e comércio",
+      "fonte_Q": 1178,
+      "modelo": "direto"
+    },
+    {
+      "id": 100597,
+      "aula": 12,
+      "tema": "Taxas: juros, risco e comércio",
+      "fonte_Q": 1183,
+      "modelo": "direto"
+    },
+    {
+      "id": 100598,
+      "aula": 12,
+      "tema": "Taxas: juros, risco e comércio",
+      "fonte_Q": 1182,
+      "modelo": "direto"
+    },
+    {
+      "id": 100599,
+      "aula": 12,
+      "tema": "Taxas: juros, risco e comércio",
+      "fonte_Q": 1180,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100600,
+      "aula": 12,
+      "tema": "Taxas: juros, risco e comércio",
+      "fonte_Q": 1181,
+      "modelo": "direto"
     }
   ],
   "escopo": "450 itens conceituais, 50 por aula, baseados no conteúdo já revisado de Q e nos materiais existentes. Sem certificação normativa independente."

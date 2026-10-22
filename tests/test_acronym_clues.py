@@ -60,7 +60,8 @@ class ClueBrowser(unittest.TestCase):
         correction=json.loads((ROOT/'docs/revisao-exibicao-siglas-2026-10-19.json').read_text())
         removed={r['id'] for r in correction['adiamentos_removidos']}
         new_lesson=json.loads((ROOT/'docs/aula-11-cobertura.json').read_text())['siglas_adiadas']
-        self.assertEqual(ids,sorted((set(historical+authored)-removed)|set(new_lesson)))
+        aula12=json.loads((ROOT/'docs/aula-12-cobertura.json').read_text())['siglas_adiadas']
+        self.assertEqual(ids,sorted((set(historical+authored)-removed)|set(new_lesson+aula12)))
         result=self.page.evaluate('''()=>{
           const seen=[];
           for(const id of QUESTION_ACRONYM_CLUES){

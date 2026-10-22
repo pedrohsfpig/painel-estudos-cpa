@@ -81,7 +81,7 @@ class Aula11Browser(unittest.TestCase):
  def test_eleven_lesson_daily_plan_and_block_practice_keep_allocation(self):
   daily=self.page.evaluate('dailyPlan(dailyDate())');self.assertEqual(len(daily['ids']),20);self.assertEqual(len(set(daily['ids'])),20)
   rows=self.page.evaluate('dailyPlan(dailyDate()).ids.map(id=>questionById(id))')
-  self.assertEqual(Counter(r[2] for r in rows),{0:5,1:10,2:5});self.assertEqual({r[0] for r in rows},set(range(1,12)))
+  self.assertEqual(Counter(r[2] for r in rows),{0:5,1:10,2:5});self.assertEqual({r[0] for r in rows},set(range(1,self.page.evaluate('AL.length')+1)))
   counts=Counter(r[0] for r in rows);self.assertLessEqual(max(counts.values())-min(counts.values()),1)
   for b,n in [(1,8),(2,24),(3,48)]:self.assertEqual(self.page.evaluate('b=>{cfg={a:11,as:[],n:-1,m:"all",c:20,md:"e",b};return pool().length}',b),n)
   for mode in ['e','h','b','s']:

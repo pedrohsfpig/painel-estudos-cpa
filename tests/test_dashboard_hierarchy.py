@@ -18,7 +18,7 @@ class DashboardHierarchy(unittest.TestCase):
         self.assertIn('Comece pelos fundamentos',self.page.locator('#next-action-title').inner_text())
         self.assertEqual(self.page.locator('.g4 .mv').all_text_contents(),['0','0','0','0%'])
         self.assertLess(self.page.locator('.evolution').bounding_box()['y'],self.page.locator('.dashboard-trail-list').bounding_box()['y'])
-        self.assertEqual(self.page.locator('.trail-row').count(),11)
+        self.assertEqual(self.page.locator('.trail-row').count(),self.page.evaluate('AL.length'))
         self.page.locator('.next-study-action button').click()
         self.assertEqual(self.page.evaluate('[view,tr]'),['t',1])
         self.assertEqual(self.page.evaluate('H'),[])
@@ -44,7 +44,7 @@ class DashboardHierarchy(unittest.TestCase):
 
     def test_all_lessons_and_full_evolution_remain_accessible_with_more_content(self):
         self.page.evaluate("AL.push(...AL.slice(0,9));H=[[1,1,Date.parse('2025-01-01T12:00:00Z'),0],[2,0,Date.parse('2026-10-20T12:00:00Z'),0]];go()")
-        self.assertEqual(self.page.locator('.trail-row').count(),20)
+        self.assertEqual(self.page.locator('.trail-row').count(),self.page.evaluate('AL.length'))
         self.assertEqual(self.page.evaluate('evolutionData().keys.length'),2)
         self.assertTrue(self.page.locator('.dashboard-trail-list').evaluate('n=>n.scrollHeight>n.clientHeight'))
         self.page.locator('.trail-row').last.focus()

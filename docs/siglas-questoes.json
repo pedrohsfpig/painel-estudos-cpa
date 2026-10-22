@@ -923,6 +923,22 @@
         "FGTS"
       ],
       "variants": []
+    },
+    {
+      "id": "ace",
+      "name": "Adiantamento sobre Cambiais Entregues",
+      "aliases": [
+        "ACE"
+      ],
+      "variants": []
+    },
+    {
+      "id": "ptax",
+      "name": "Taxa de câmbio de referência do Banco Central",
+      "aliases": [
+        "PTAX"
+      ],
+      "variants": []
     }
   ]
 }

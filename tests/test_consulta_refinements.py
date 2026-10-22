@@ -179,7 +179,7 @@ class ConsultaRefinamentos(unittest.TestCase):
         details.locator('summary').focus()
         self.page.keyboard.press('Enter')
         self.assertEqual(details.locator('li').inner_text(), paragraph)
-        self.assertIn('Aula 12', card.locator('.consult-source').inner_text())
+        self.assertIn(f"Aula {self.page.evaluate('AL.length')}", card.locator('.consult-source').inner_text())
 
     def test_new_source_acronym_collision_is_detected_from_explicit_definitions(self):
         self.page.evaluate('''()=>{

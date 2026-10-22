@@ -1,0 +1,1586 @@
+{
+  "aula": 12,
+  "titulo": "Aula 12: Mercado de Câmbio, Taxas e Cupom Cambial",
+  "data": "2026-10-22",
+  "fontes": [
+    {
+      "nome": "Screenshot_1 (5).pdf",
+      "sediment": "file_000000007fa0820e8a3b761d3c374229",
+      "paginas": 20,
+      "screenshots": [
+        1,
+        20
+      ]
+    },
+    {
+      "nome": "Screenshot_21.pdf",
+      "sediment": "file_000000005fa4820ea24c791f84d903f7",
+      "paginas": 5,
+      "screenshots": [
+        21,
+        25
+      ]
+    },
+    {
+      "nome": "Texto colado.txt",
+      "sediment": "file_000000005c4c820e8464f8d5d01ec4cf",
+      "transcricoes": [
+        19,
+        20,
+        21
+      ]
+    }
+  ],
+  "proporcoes": {
+    "solicitadas": {
+      "19": 42.5,
+      "20": 15,
+      "21": 42.5
+    },
+    "questoes": {
+      "19": 43,
+      "20": 15,
+      "21": 42
+    },
+    "bate_pronto": {
+      "19": 21,
+      "20": 8,
+      "21": 21
+    },
+    "dificuldades": {
+      "19": [
+        9,
+        17,
+        8,
+        9
+      ],
+      "20": [
+        3,
+        6,
+        3,
+        3
+      ],
+      "21": [
+        8,
+        17,
+        9,
+        8
+      ]
+    },
+    "arredondamento": "Indivisibilidade: 43/15/42 no banco principal e 21/8/21 no Bate-pronto; 20/40/20/20 no total."
+  },
+  "cobertura": [
+    {
+      "transcricao": 19,
+      "slides": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "bloco": 1,
+      "topicos": [
+        "Mercado: operações e liquidação",
+        "Mercado: agentes e regulação",
+        "Mercado: financiamento à exportação",
+        "Mercado: regimes cambiais"
+      ],
+      "pontos": [
+        "manual/sacado, pronto/futuro, arbitragem",
+        "negociação, primário/secundário e exceção ocasional",
+        "habilitações e referências numéricas",
+        "CMN e Banco Central",
+        "ACC, ACE e cadeia indireta",
+        "política cambial, comércio, inflação, produção e emprego sob hipóteses",
+        "fixo, puro, administrado, bandas, peg e currency board"
+      ]
+    },
+    {
+      "transcricao": 20,
+      "slides": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "bloco": 2,
+      "topicos": [
+        "Cupom: retorno em dólares",
+        "Cupom: swaps e proteção"
+      ],
+      "pontos": [
+        "cupom, reconversão e fatores de retorno",
+        "swap tradicional e reverso: perspectiva e pernas",
+        "liquidação em reais, reservas e hedge condicionado"
+      ]
+    },
+    {
+      "transcricao": 21,
+      "slides": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "bloco": 3,
+      "topicos": [
+        "Taxas: cotações e referências",
+        "Taxas: câmbio real e paridade",
+        "Taxas: juros, risco e comércio"
+      ],
+      "pontos": [
+        "nominal, incerto/certo e reciprocidade",
+        "spot e referência PTAX",
+        "real, preços relativos, paridade de poder de compra",
+        "nível versus variação e exemplos recalculados",
+        "exportação/importação",
+        "slides 24 e 25: juros, diferencial, risco, divisas, cotação e comércio"
+      ]
+    }
+  ],
+  "questoes": [
+    {
+      "id": 1101,
+      "transcricao": 19,
+      "slides": [
+        1
+      ],
+      "tema": "Mercado: operações e liquidação",
+      "nivel": 0,
+      "hash": "5027f9b7a6408c1314c40ab1898206891a95c5f376349fefbf6e91f95eb43c3c"
+    },
+    {
+      "id": 1102,
+      "transcricao": 19,
+      "slides": [
+        1
+      ],
+      "tema": "Mercado: operações e liquidação",
+      "nivel": 0,
+      "hash": "9e5683318784b5787ed601f6b31aa9d37a9bbdba9e23159c0f6ebbbb5486f85e"
+    },
+    {
+      "id": 1103,
+      "transcricao": 19,
+      "slides": [
+        1
+      ],
+      "tema": "Mercado: operações e liquidação",
+      "nivel": 0,
+      "hash": "1e3f00899fdcc3ec3d95671cb43adc34c56193cd2f95094573fcbb17b7d25377"
+    },
+    {
+      "id": 1104,
+      "transcricao": 19,
+      "slides": [
+        4
+      ],
+      "tema": "Mercado: agentes e regulação",
+      "nivel": 0,
+      "hash": "c023d2cd283f61e3d140c942401cb6ca247f5d1213197dc0484198345ed78ba8"
+    },
+    {
+      "id": 1105,
+      "transcricao": 19,
+      "slides": [
+        4
+      ],
+      "tema": "Mercado: agentes e regulação",
+      "nivel": 0,
+      "hash": "c61acb5a43ae220d1e63c21a6b0acea70a93ec487ef39dc21c0c3ef587ab85db"
+    },
+    {
+      "id": 1106,
+      "transcricao": 19,
+      "slides": [
+        5
+      ],
+      "tema": "Mercado: financiamento à exportação",
+      "nivel": 0,
+      "hash": "4029bdd87bb3ad3c0416343760fbc241901f059c96cd05fad6a541656c42798a"
+    },
+    {
+      "id": 1107,
+      "transcricao": 19,
+      "slides": [
+        5
+      ],
+      "tema": "Mercado: financiamento à exportação",
+      "nivel": 0,
+      "hash": "48eca39bbad5cf2960c08da550fe4a5575e46b2ba7f9715b89c95ccd490c6881"
+    },
+    {
+      "id": 1108,
+      "transcricao": 19,
+      "slides": [
+        8
+      ],
+      "tema": "Mercado: regimes cambiais",
+      "nivel": 0,
+      "hash": "4c875601bfc62dc955f1ee689d10e36ac98dfe432bbbb94107d36748df1f303f"
+    },
+    {
+      "id": 1109,
+      "transcricao": 19,
+      "slides": [
+        9
+      ],
+      "tema": "Mercado: regimes cambiais",
+      "nivel": 0,
+      "hash": "67c5e5bd57a4f7497dc50e59d390622f50c227a9ca2208812d1ddf017b0a1884"
+    },
+    {
+      "id": 1110,
+      "transcricao": 19,
+      "slides": [
+        1
+      ],
+      "tema": "Mercado: operações e liquidação",
+      "nivel": 1,
+      "hash": "1669dc95e612a83c588d09ce7e81b01a81033eb764a7d9a3a99380e7db42c4a6"
+    },
+    {
+      "id": 1111,
+      "transcricao": 19,
+      "slides": [
+        2
+      ],
+      "tema": "Mercado: operações e liquidação",
+      "nivel": 1,
+      "hash": "c23a65d0560d249ee36e665d2db0a4a663ca8e02257bdea860a9eefa4ab54851"
+    },
+    {
+      "id": 1112,
+      "transcricao": 19,
+      "slides": [
+        2
+      ],
+      "tema": "Mercado: operações e liquidação",
+      "nivel": 1,
+      "hash": "a89073db36ae30b59a196d3cee066f83df3dfce605079b5f98ba91670dab4444"
+    },
+    {
+      "id": 1113,
+      "transcricao": 19,
+      "slides": [
+        1
+      ],
+      "tema": "Mercado: operações e liquidação",
+      "nivel": 1,
+      "hash": "e836b7b3275139cf75d31f4a33b6f2e3cbb017ec4c1aba3c789bc5585997f587"
+    },
+    {
+      "id": 1114,
+      "transcricao": 19,
+      "slides": [
+        3
+      ],
+      "tema": "Mercado: agentes e regulação",
+      "nivel": 1,
+      "hash": "4539743671f9ca8495937a2ed7d8a7c0552525a052a0fa693505732a7b2907af"
+    },
+    {
+      "id": 1115,
+      "transcricao": 19,
+      "slides": [
+        2,
+        3
+      ],
+      "tema": "Mercado: agentes e regulação",
+      "nivel": 1,
+      "hash": "13b5ef16704957262b93de31471e15986e145ede24853df77eb10a796e9abef0"
+    },
+    {
+      "id": 1116,
+      "transcricao": 19,
+      "slides": [
+        2
+      ],
+      "tema": "Mercado: agentes e regulação",
+      "nivel": 1,
+      "hash": "fe16486acc844b6a718b374ea9d1e17dbd1c375f52ff4d0a4d395c90a1621e3b"
+    },
+    {
+      "id": 1117,
+      "transcricao": 19,
+      "slides": [
+        5
+      ],
+      "tema": "Mercado: financiamento à exportação",
+      "nivel": 1,
+      "hash": "b197ad2cbb22262495d182d30832cf8cede3847c47f8250c2c307e18faf24c91"
+    },
+    {
+      "id": 1118,
+      "transcricao": 19,
+      "slides": [
+        5
+      ],
+      "tema": "Mercado: financiamento à exportação",
+      "nivel": 1,
+      "hash": "12798a1d9385af16f82fd04257c00fa74fb93adea4733b4e207f572aedb05c68"
+    },
+    {
+      "id": 1119,
+      "transcricao": 19,
+      "slides": [
+        5
+      ],
+      "tema": "Mercado: financiamento à exportação",
+      "nivel": 1,
+      "hash": "985bd1158a9754a60501433669897c250dbcc27d9686640ced4bebf966c1897e"
+    },
+    {
+      "id": 1120,
+      "transcricao": 19,
+      "slides": [
+        7
+      ],
+      "tema": "Mercado: regimes cambiais",
+      "nivel": 1,
+      "hash": "0ec21e22fe219cd38fb84c9b6bd62f33e437c365d227bb94eaf89b70e85e55f5"
+    },
+    {
+      "id": 1121,
+      "transcricao": 19,
+      "slides": [
+        7
+      ],
+      "tema": "Mercado: regimes cambiais",
+      "nivel": 1,
+      "hash": "7c02741bed10a0e38b3b15e6364c031dc88f5db7c97a0763cd75d5cf508c1399"
+    },
+    {
+      "id": 1122,
+      "transcricao": 19,
+      "slides": [
+        9
+      ],
+      "tema": "Mercado: regimes cambiais",
+      "nivel": 1,
+      "hash": "b988679ac77334a5db269ad20812928d200ac0eca97a87d2920d46aa8df5964d"
+    },
+    {
+      "id": 1123,
+      "transcricao": 19,
+      "slides": [
+        9
+      ],
+      "tema": "Mercado: regimes cambiais",
+      "nivel": 1,
+      "hash": "db7e0dbb8a354536b4f31a8a48bef60d3abf5558f78a8c022d4a97b5687f9cdb"
+    },
+    {
+      "id": 1124,
+      "transcricao": 19,
+      "slides": [
+        10
+      ],
+      "tema": "Mercado: regimes cambiais",
+      "nivel": 1,
+      "hash": "dbe9802eba0719da54af2c5da59ebd22399b40f9c005e533f3e6ae79170ca960"
+    },
+    {
+      "id": 1125,
+      "transcricao": 19,
+      "slides": [
+        10
+      ],
+      "tema": "Mercado: regimes cambiais",
+      "nivel": 1,
+      "hash": "a25a96f6a387cc0a1e20c22a96b278e882cef7ec07e48e999ed0b33ae09554cb"
+    },
+    {
+      "id": 1126,
+      "transcricao": 19,
+      "slides": [
+        11
+      ],
+      "tema": "Mercado: regimes cambiais",
+      "nivel": 1,
+      "hash": "d445cd62a499b329d07533924f75daa70d39bde3c9cdd3ed9325f3f583ac4dad"
+    },
+    {
+      "id": 1127,
+      "transcricao": 19,
+      "slides": [
+        1
+      ],
+      "tema": "Mercado: operações e liquidação",
+      "nivel": 2,
+      "hash": "0e4744df4ab050ef0af167553d874e63adf7a0d502ef3ee946c8d37b221b8486"
+    },
+    {
+      "id": 1128,
+      "transcricao": 19,
+      "slides": [
+        2,
+        3
+      ],
+      "tema": "Mercado: agentes e regulação",
+      "nivel": 2,
+      "hash": "d645ea0987fe4aa2c03ef120745bb7cb9ddf839dd87112394176a58b437b3a79"
+    },
+    {
+      "id": 1129,
+      "transcricao": 19,
+      "slides": [
+        5
+      ],
+      "tema": "Mercado: financiamento à exportação",
+      "nivel": 2,
+      "hash": "2a0d5ad221f20eb15ca08c7142cbd70d972b2d0f18e99eadafa3cd36e98bf02b"
+    },
+    {
+      "id": 1130,
+      "transcricao": 19,
+      "slides": [
+        8
+      ],
+      "tema": "Mercado: regimes cambiais",
+      "nivel": 2,
+      "hash": "14591a99fde30d52ead65c5fa0e4ffa1af81fad9f2c0a083a84845c6482a9b01"
+    },
+    {
+      "id": 1131,
+      "transcricao": 19,
+      "slides": [
+        7
+      ],
+      "tema": "Mercado: regimes cambiais",
+      "nivel": 2,
+      "hash": "d2e1bf097f53dd5ae8bd9a4cff06f0f970d7f359e0493ac2156bc073997dac66"
+    },
+    {
+      "id": 1132,
+      "transcricao": 19,
+      "slides": [
+        10,
+        11
+      ],
+      "tema": "Mercado: regimes cambiais",
+      "nivel": 2,
+      "hash": "79c3433861251bd703e3ddac9391980268a521911ed17ab4fe66a1ee409cb983"
+    },
+    {
+      "id": 1133,
+      "transcricao": 19,
+      "slides": [
+        10
+      ],
+      "tema": "Mercado: regimes cambiais",
+      "nivel": 2,
+      "hash": "1a7fb10bb788d1563ceeaff20d356dc7a8ccdfc2024c7f0d04966a0fcbc88c42"
+    },
+    {
+      "id": 1134,
+      "transcricao": 19,
+      "slides": [
+        11
+      ],
+      "tema": "Mercado: regimes cambiais",
+      "nivel": 2,
+      "hash": "6a94ced755757f13ea8236f73235fbd87f68b58907c8bddbc3966db552ecb10a"
+    },
+    {
+      "id": 1135,
+      "transcricao": 19,
+      "slides": [
+        1
+      ],
+      "tema": "Mercado: operações e liquidação",
+      "nivel": 3,
+      "hash": "9d05590e64c78232e107a4f6bb2d02978fccd2602059b0f8c28e365f6975a6c8"
+    },
+    {
+      "id": 1136,
+      "transcricao": 19,
+      "slides": [
+        2
+      ],
+      "tema": "Mercado: agentes e regulação",
+      "nivel": 3,
+      "hash": "4868fe858c9885b0b6f0accf081ed3a02915086d60c1a2670d76f1c4db67c6d5"
+    },
+    {
+      "id": 1137,
+      "transcricao": 19,
+      "slides": [
+        2,
+        3
+      ],
+      "tema": "Mercado: agentes e regulação",
+      "nivel": 3,
+      "hash": "8051c0cb52fcc35eb293f01600defe178741df8d5409572bc0a50c18ffea3698"
+    },
+    {
+      "id": 1138,
+      "transcricao": 19,
+      "slides": [
+        5
+      ],
+      "tema": "Mercado: financiamento à exportação",
+      "nivel": 3,
+      "hash": "c4d1f667426bf635d5a71374817e6b4dfcefb44bdb27b8d3cb01eaad11cd881c"
+    },
+    {
+      "id": 1139,
+      "transcricao": 19,
+      "slides": [
+        9
+      ],
+      "tema": "Mercado: regimes cambiais",
+      "nivel": 3,
+      "hash": "9c072482ad478c35852d99e0eb9da934777026dc7e8874e2f11eabf946ea69d4"
+    },
+    {
+      "id": 1140,
+      "transcricao": 19,
+      "slides": [
+        10,
+        11
+      ],
+      "tema": "Mercado: regimes cambiais",
+      "nivel": 3,
+      "hash": "b03cd1c1dbce8fdc07964ef43027e04f10c2d19c821af7bb3ec9ca48b740b2f7"
+    },
+    {
+      "id": 1141,
+      "transcricao": 19,
+      "slides": [
+        7,
+        8
+      ],
+      "tema": "Mercado: regimes cambiais",
+      "nivel": 3,
+      "hash": "65983c9622c04bde0b8deeac5fa6ca57416c8e4c03a4f200d94d2e8fb06532a4"
+    },
+    {
+      "id": 1142,
+      "transcricao": 19,
+      "slides": [
+        7,
+        11
+      ],
+      "tema": "Mercado: regimes cambiais",
+      "nivel": 3,
+      "hash": "5e6aac0104b436863926edf6dc8d02512273e6a9e7d85a7e9d783f58a101dc6c"
+    },
+    {
+      "id": 1143,
+      "transcricao": 19,
+      "slides": [
+        4,
+        7,
+        8,
+        9
+      ],
+      "tema": "Mercado: regimes cambiais",
+      "nivel": 3,
+      "hash": "ad995215b32dd5b227d984e2770966373e3028f5ec4303ea4cbef9acca6b9d98"
+    },
+    {
+      "id": 1144,
+      "transcricao": 20,
+      "slides": [
+        12
+      ],
+      "tema": "Cupom: retorno em dólares",
+      "nivel": 0,
+      "hash": "07cb468db4a6fc53547f23ce77419e9c8f9f520438ab51998afe3bba00a33cee"
+    },
+    {
+      "id": 1145,
+      "transcricao": 20,
+      "slides": [
+        13,
+        14
+      ],
+      "tema": "Cupom: swaps e proteção",
+      "nivel": 0,
+      "hash": "342409c589fa68c43b703596e8406e7d575a253599430e0c00ca52be8c127ec2"
+    },
+    {
+      "id": 1146,
+      "transcricao": 20,
+      "slides": [
+        13,
+        14
+      ],
+      "tema": "Cupom: swaps e proteção",
+      "nivel": 0,
+      "hash": "f0f9e9cc46370e3626f38a9d649e7c34775ad6f46e8d576e0673e2761449a389"
+    },
+    {
+      "id": 1147,
+      "transcricao": 20,
+      "slides": [
+        12
+      ],
+      "tema": "Cupom: retorno em dólares",
+      "nivel": 1,
+      "hash": "a12a310d4d30fb76116d6a630e88f907977026025ccbc1327f20a4bd165e9e7a"
+    },
+    {
+      "id": 1148,
+      "transcricao": 20,
+      "slides": [
+        12
+      ],
+      "tema": "Cupom: retorno em dólares",
+      "nivel": 1,
+      "hash": "44f61e3a4bdbbd26a57cb839cf5c816518743b854166a3059c39522caaebdec7"
+    },
+    {
+      "id": 1149,
+      "transcricao": 20,
+      "slides": [
+        12
+      ],
+      "tema": "Cupom: retorno em dólares",
+      "nivel": 1,
+      "hash": "0b6f03d82984edbfdaa2cb1078ee5f04bf7a9608219a9afd426bbde73b509a79"
+    },
+    {
+      "id": 1150,
+      "transcricao": 20,
+      "slides": [
+        15
+      ],
+      "tema": "Cupom: swaps e proteção",
+      "nivel": 1,
+      "hash": "47de27fc225aadf7f8eedf6e15ff4306ebf1991dc89e327ed82cae4477631bc8"
+    },
+    {
+      "id": 1151,
+      "transcricao": 20,
+      "slides": [
+        13,
+        14
+      ],
+      "tema": "Cupom: swaps e proteção",
+      "nivel": 1,
+      "hash": "d4e16c1f155e0ad7386ddf91bafb866af7110e9fd9ff916c867b31df0d86c4d7"
+    },
+    {
+      "id": 1152,
+      "transcricao": 20,
+      "slides": [
+        15
+      ],
+      "tema": "Cupom: swaps e proteção",
+      "nivel": 1,
+      "hash": "8d685f1cb2b1bc3a3147b11d07422011638a14bedf2610eb3d58938d0be01a98"
+    },
+    {
+      "id": 1153,
+      "transcricao": 20,
+      "slides": [
+        12
+      ],
+      "tema": "Cupom: retorno em dólares",
+      "nivel": 2,
+      "hash": "dd988f0be576fea3e88363ef6921d87a8615c73ec72a915e754a94b772468dba"
+    },
+    {
+      "id": 1154,
+      "transcricao": 20,
+      "slides": [
+        13,
+        14
+      ],
+      "tema": "Cupom: swaps e proteção",
+      "nivel": 2,
+      "hash": "b098e323c739eef20616389bdd0f25ed4a6ddd0098f6291d85466c59f3d8bea9"
+    },
+    {
+      "id": 1155,
+      "transcricao": 20,
+      "slides": [
+        13,
+        14
+      ],
+      "tema": "Cupom: swaps e proteção",
+      "nivel": 2,
+      "hash": "412b0b72924bfc75a0522aa5f7a56b37eee83fad3d9b34ca6ec532395d6acac5"
+    },
+    {
+      "id": 1156,
+      "transcricao": 20,
+      "slides": [
+        12
+      ],
+      "tema": "Cupom: retorno em dólares",
+      "nivel": 3,
+      "hash": "8280a4b4e02c5979ca11e7508427b5840549dccd7bb0a0bc9b3c7f362b955c2f"
+    },
+    {
+      "id": 1157,
+      "transcricao": 20,
+      "slides": [
+        13,
+        14,
+        15
+      ],
+      "tema": "Cupom: swaps e proteção",
+      "nivel": 3,
+      "hash": "20a9dc8ab7866be188933ad5d09c633be36e37aa3d30026e72844e8ec65ed432"
+    },
+    {
+      "id": 1158,
+      "transcricao": 20,
+      "slides": [
+        13,
+        14,
+        15
+      ],
+      "tema": "Cupom: swaps e proteção",
+      "nivel": 3,
+      "hash": "195d033bd2bf91c0977fd70ffd73755489a1c7e95060d681b183d8683bd3acab"
+    },
+    {
+      "id": 1159,
+      "transcricao": 21,
+      "slides": [
+        16
+      ],
+      "tema": "Taxas: cotações e referências",
+      "nivel": 0,
+      "hash": "28e682de65d2a63bbc6af0048ca1eda1d1d7d68e0b2f5949c259dbf48af9cc03"
+    },
+    {
+      "id": 1160,
+      "transcricao": 21,
+      "slides": [
+        16
+      ],
+      "tema": "Taxas: cotações e referências",
+      "nivel": 0,
+      "hash": "d477c861ef277878f648e5dadd3aabdfd93591d359ae481b8300664e49a29f26"
+    },
+    {
+      "id": 1161,
+      "transcricao": 21,
+      "slides": [
+        17
+      ],
+      "tema": "Taxas: cotações e referências",
+      "nivel": 0,
+      "hash": "d2a286ff928bac71af65086411dfe0be0d9dfac0ed5bbaa34c3c543490fddc33"
+    },
+    {
+      "id": 1162,
+      "transcricao": 21,
+      "slides": [
+        17
+      ],
+      "tema": "Taxas: cotações e referências",
+      "nivel": 0,
+      "hash": "6893bc98d8fd9d7e2f612315c1e0d54819c114ab429ecc93d98acf38b7f9856c"
+    },
+    {
+      "id": 1163,
+      "transcricao": 21,
+      "slides": [
+        18
+      ],
+      "tema": "Taxas: cotações e referências",
+      "nivel": 0,
+      "hash": "fd5e1265add0c9b7cc55e7be122afc51088da6c66e90b385b4db4e51beabb131"
+    },
+    {
+      "id": 1164,
+      "transcricao": 21,
+      "slides": [
+        19,
+        20,
+        21,
+        22
+      ],
+      "tema": "Taxas: câmbio real e paridade",
+      "nivel": 0,
+      "hash": "35f5a2bb5c04fcd1d4e79182c8a8f4959d62ad3908025bf70e01e6d1609a8b74"
+    },
+    {
+      "id": 1165,
+      "transcricao": 21,
+      "slides": [
+        23
+      ],
+      "tema": "Taxas: juros, risco e comércio",
+      "nivel": 0,
+      "hash": "a0efef0985fb872a121d939b39ecb7265af535bbdf723f31f6f85a553dc2ab29"
+    },
+    {
+      "id": 1166,
+      "transcricao": 21,
+      "slides": [
+        24
+      ],
+      "tema": "Taxas: juros, risco e comércio",
+      "nivel": 0,
+      "hash": "691dbb89c292f4b8b74c534b0e264ac689eb0fddda73df4c0ddb51bba80ba64c"
+    },
+    {
+      "id": 1167,
+      "transcricao": 21,
+      "slides": [
+        16
+      ],
+      "tema": "Taxas: cotações e referências",
+      "nivel": 1,
+      "hash": "e344293520409e42f2a6c5272dee220d2191c3db3a1025c740dd6c5634324a2d"
+    },
+    {
+      "id": 1168,
+      "transcricao": 21,
+      "slides": [
+        18
+      ],
+      "tema": "Taxas: cotações e referências",
+      "nivel": 1,
+      "hash": "b39815e144d04c5d1d7afe5f286f9cd8737b19c09a27ce75d3ae8b9420f01cbe"
+    },
+    {
+      "id": 1169,
+      "transcricao": 21,
+      "slides": [
+        17
+      ],
+      "tema": "Taxas: cotações e referências",
+      "nivel": 1,
+      "hash": "0d7e60ea04fce679596b3dc40e2bed23ec3761c8b7c19949b7c89f2ca868682e"
+    },
+    {
+      "id": 1170,
+      "transcricao": 21,
+      "slides": [
+        17
+      ],
+      "tema": "Taxas: cotações e referências",
+      "nivel": 1,
+      "hash": "12bf3d284142243d7c3358e03ad3e48ab5d4f99997d2a460d1702733839d8e5d"
+    },
+    {
+      "id": 1171,
+      "transcricao": 21,
+      "slides": [
+        17
+      ],
+      "tema": "Taxas: cotações e referências",
+      "nivel": 1,
+      "hash": "cb75ac12078ced8b01de5fd7bdaafbf6fb2c7088d2d4db4644556834fcaae1a2"
+    },
+    {
+      "id": 1172,
+      "transcricao": 21,
+      "slides": [
+        19,
+        20,
+        21,
+        22
+      ],
+      "tema": "Taxas: câmbio real e paridade",
+      "nivel": 1,
+      "hash": "5c97006b423ba96b528c189c81b2bccf21c867dc3fb8e0cd91b88692f91551dd"
+    },
+    {
+      "id": 1173,
+      "transcricao": 21,
+      "slides": [
+        19,
+        20,
+        21,
+        22
+      ],
+      "tema": "Taxas: câmbio real e paridade",
+      "nivel": 1,
+      "hash": "31c859adcfa4008253402949f1fdf749fe93f9263e0744f36253134ad631f2f3"
+    },
+    {
+      "id": 1174,
+      "transcricao": 21,
+      "slides": [
+        20,
+        21,
+        22
+      ],
+      "tema": "Taxas: câmbio real e paridade",
+      "nivel": 1,
+      "hash": "ba6ffe11539ba22e0507107156047437fde9516735faf8d9cb66196d4c409dd3"
+    },
+    {
+      "id": 1175,
+      "transcricao": 21,
+      "slides": [
+        19,
+        20,
+        21
+      ],
+      "tema": "Taxas: câmbio real e paridade",
+      "nivel": 1,
+      "hash": "0ccb804770cd756ba7d4adb15c3851046d9a21c182d685a6ddbcd4564604fa59"
+    },
+    {
+      "id": 1176,
+      "transcricao": 21,
+      "slides": [
+        20,
+        21,
+        22
+      ],
+      "tema": "Taxas: câmbio real e paridade",
+      "nivel": 1,
+      "hash": "42e4558eca310e894a45c7903d525fd6377bb32569a10cd7fa02d09add789d23"
+    },
+    {
+      "id": 1177,
+      "transcricao": 21,
+      "slides": [
+        24
+      ],
+      "tema": "Taxas: juros, risco e comércio",
+      "nivel": 1,
+      "hash": "73432de2600a724f92d246c1c791525bad0261860879de9e4275a4a29bb4886d"
+    },
+    {
+      "id": 1178,
+      "transcricao": 21,
+      "slides": [
+        24
+      ],
+      "tema": "Taxas: juros, risco e comércio",
+      "nivel": 1,
+      "hash": "0179f7a14ae6276621b07ef257db444535999f6e8e24f6b42c6761741ac6e9cb"
+    },
+    {
+      "id": 1179,
+      "transcricao": 21,
+      "slides": [
+        24
+      ],
+      "tema": "Taxas: juros, risco e comércio",
+      "nivel": 1,
+      "hash": "55cd1d10c5e25ef3968408013215f711464672c6839a020e67d3214c4c2bfc01"
+    },
+    {
+      "id": 1180,
+      "transcricao": 21,
+      "slides": [
+        25
+      ],
+      "tema": "Taxas: juros, risco e comércio",
+      "nivel": 1,
+      "hash": "97047a4920190d7cf98742635e99c2b0c943398da166e01832f445fbb6192211"
+    },
+    {
+      "id": 1181,
+      "transcricao": 21,
+      "slides": [
+        24,
+        25
+      ],
+      "tema": "Taxas: juros, risco e comércio",
+      "nivel": 1,
+      "hash": "749995595743f2bd4e65a6bea654246c5476a8da29ae459ef6ac1f4ee5f0126c"
+    },
+    {
+      "id": 1182,
+      "transcricao": 21,
+      "slides": [
+        23
+      ],
+      "tema": "Taxas: juros, risco e comércio",
+      "nivel": 1,
+      "hash": "34eae72ac8a9f71edba33f9e18fcf430f6a6c6df56bc3def4969d705b252a092"
+    },
+    {
+      "id": 1183,
+      "transcricao": 21,
+      "slides": [
+        23,
+        24
+      ],
+      "tema": "Taxas: juros, risco e comércio",
+      "nivel": 1,
+      "hash": "c76acbe3738938579d6147e1f826eacf1e79452bf175c3027d55d1f2bbe2431e"
+    },
+    {
+      "id": 1184,
+      "transcricao": 21,
+      "slides": [
+        16,
+        18
+      ],
+      "tema": "Taxas: cotações e referências",
+      "nivel": 2,
+      "hash": "77b86dc9400e9c6898bcca960dc8da45f2f8a503961d542f2da1f87d7102cb90"
+    },
+    {
+      "id": 1185,
+      "transcricao": 21,
+      "slides": [
+        20
+      ],
+      "tema": "Taxas: câmbio real e paridade",
+      "nivel": 2,
+      "hash": "ce009fc53f1ebd29136c593a45080bcb55ed89b70ba89cc1b21cb2b08402e340"
+    },
+    {
+      "id": 1186,
+      "transcricao": 21,
+      "slides": [
+        22
+      ],
+      "tema": "Taxas: câmbio real e paridade",
+      "nivel": 2,
+      "hash": "94e488556624054f81a0fc858d88787de0bbc858192784ca4716b9b44b71d87e"
+    },
+    {
+      "id": 1187,
+      "transcricao": 21,
+      "slides": [
+        19,
+        22
+      ],
+      "tema": "Taxas: câmbio real e paridade",
+      "nivel": 2,
+      "hash": "051fa6c3dcf9dccaf667ce0843d3f602798b17c686cc3247a9f70fd2f7773f3d"
+    },
+    {
+      "id": 1188,
+      "transcricao": 21,
+      "slides": [
+        20,
+        21,
+        23
+      ],
+      "tema": "Taxas: câmbio real e paridade",
+      "nivel": 2,
+      "hash": "07a065583962e50c3fb8862364f7b14f311168cab29a31c6fff05875aea7cde0"
+    },
+    {
+      "id": 1189,
+      "transcricao": 21,
+      "slides": [
+        24,
+        25
+      ],
+      "tema": "Taxas: juros, risco e comércio",
+      "nivel": 2,
+      "hash": "ce88259d23c5443af898409a3489905d6d85cfb2512c136442ccd2809973f4d1"
+    },
+    {
+      "id": 1190,
+      "transcricao": 21,
+      "slides": [
+        24,
+        25
+      ],
+      "tema": "Taxas: juros, risco e comércio",
+      "nivel": 2,
+      "hash": "bf8c21be28ae92f27552a0c8ea5b1ab5efb2bf5fe747dcd7faca2fe7d76b47dc"
+    },
+    {
+      "id": 1191,
+      "transcricao": 21,
+      "slides": [
+        23
+      ],
+      "tema": "Taxas: juros, risco e comércio",
+      "nivel": 2,
+      "hash": "13fd6132fff9837717c1b593d8f6d8767bc503a40872bd044867b1c577b14554"
+    },
+    {
+      "id": 1192,
+      "transcricao": 21,
+      "slides": [
+        24
+      ],
+      "tema": "Taxas: juros, risco e comércio",
+      "nivel": 2,
+      "hash": "cd60afbb534085c11a0d5426b13f8c35ad8475ab6fdc4c050fa2db0c5d656362"
+    },
+    {
+      "id": 1193,
+      "transcricao": 21,
+      "slides": [
+        16,
+        18
+      ],
+      "tema": "Taxas: cotações e referências",
+      "nivel": 3,
+      "hash": "66267c03b1b2ba09d473192cbde48dcb039d9a70667c3f76ae67417380d428df"
+    },
+    {
+      "id": 1194,
+      "transcricao": 21,
+      "slides": [
+        19,
+        22
+      ],
+      "tema": "Taxas: câmbio real e paridade",
+      "nivel": 3,
+      "hash": "0436e65bba24d7683676d2e0b091080ed082010e04305f7989ce6291c3f73027"
+    },
+    {
+      "id": 1195,
+      "transcricao": 21,
+      "slides": [
+        22
+      ],
+      "tema": "Taxas: câmbio real e paridade",
+      "nivel": 3,
+      "hash": "d89087c956a627d7dc9b762d42515ac504b83ad941a011037d5f70181896a332"
+    },
+    {
+      "id": 1196,
+      "transcricao": 21,
+      "slides": [
+        20,
+        21,
+        22,
+        23
+      ],
+      "tema": "Taxas: câmbio real e paridade",
+      "nivel": 3,
+      "hash": "5e9ca18f270f6b067263438a805297a4bd79084ba8e604eeea80149db6c10c2e"
+    },
+    {
+      "id": 1197,
+      "transcricao": 21,
+      "slides": [
+        24,
+        25
+      ],
+      "tema": "Taxas: juros, risco e comércio",
+      "nivel": 3,
+      "hash": "6f93810b4692a740be8d3123d6086d14b007106a276237cf034d3c089504145d"
+    },
+    {
+      "id": 1198,
+      "transcricao": 21,
+      "slides": [
+        24,
+        25
+      ],
+      "tema": "Taxas: juros, risco e comércio",
+      "nivel": 3,
+      "hash": "9c4429483c5f0d01e2a4c322fdb81249083be106ce1af0f3b3d9ad24c9c3fc69"
+    },
+    {
+      "id": 1199,
+      "transcricao": 21,
+      "slides": [
+        23,
+        24,
+        25
+      ],
+      "tema": "Taxas: juros, risco e comércio",
+      "nivel": 3,
+      "hash": "2d709f046a02bb73fa22c5f8548b3596c194b69acb441ef7da245ba128dd7de4"
+    },
+    {
+      "id": 1200,
+      "transcricao": 21,
+      "slides": [
+        23,
+        24
+      ],
+      "tema": "Taxas: juros, risco e comércio",
+      "nivel": 3,
+      "hash": "30fc73547f13811942b16c493046a551b4fa7142891a2a2cb3c604508a1ff0ea"
+    }
+  ],
+  "bate_pronto": [
+    {
+      "id": 100551,
+      "transcricao": 19,
+      "fonte_Q": 1101,
+      "hash": "d1f1457c170959e8acbf1d9cc4f505534e2318666f07130f111cdf3c6ec6171c"
+    },
+    {
+      "id": 100552,
+      "transcricao": 19,
+      "fonte_Q": 1102,
+      "hash": "f9506de854a0f8a77a6a59a1767993b2a8c36de753828f6c026410f3565b896f"
+    },
+    {
+      "id": 100553,
+      "transcricao": 19,
+      "fonte_Q": 1103,
+      "hash": "bdf35de74cdd81ae17be10e314052c2e79ee2fa53f378a68642ce50cdac38d2b"
+    },
+    {
+      "id": 100554,
+      "transcricao": 19,
+      "fonte_Q": 1113,
+      "hash": "a7d609897663d127add12beb71d6c4ca4741d2a9133f03d6e50899c57f370c5e"
+    },
+    {
+      "id": 100555,
+      "transcricao": 19,
+      "fonte_Q": 1111,
+      "hash": "a54278e95d3b4e1823b5400a10bf40e482ee8a76fa6b6336b7f3762fcb204bf3"
+    },
+    {
+      "id": 100556,
+      "transcricao": 19,
+      "fonte_Q": 1112,
+      "hash": "281a4b5a636e3b68d0481fb7d0df8f6f9c709138f0d7964e6597f1ac7ecb088c"
+    },
+    {
+      "id": 100557,
+      "transcricao": 19,
+      "fonte_Q": 1110,
+      "hash": "35c958ede864847acbedfed0140b479e7d954daa7ad42ee01f2d60390ca68409"
+    },
+    {
+      "id": 100558,
+      "transcricao": 19,
+      "fonte_Q": 1104,
+      "hash": "7435a6cf48299b9fbb21b37709c001f936a1ca40120bfe3ce5fa68365bfc1ca0"
+    },
+    {
+      "id": 100559,
+      "transcricao": 19,
+      "fonte_Q": 1105,
+      "hash": "15f1a8b098f32058b0b4598d01c02882582554fce83d5b29b29983ba56653c51"
+    },
+    {
+      "id": 100560,
+      "transcricao": 19,
+      "fonte_Q": 1114,
+      "hash": "4297a1f367a54ce650d8935a4c230f8f33ea392625a743e1e5bba5d2ed40d1c8"
+    },
+    {
+      "id": 100561,
+      "transcricao": 19,
+      "fonte_Q": 1106,
+      "hash": "35322e7d2b554b107c05854d3e0f56a9083459e2ed0accc08d2309ee64ab9491"
+    },
+    {
+      "id": 100562,
+      "transcricao": 19,
+      "fonte_Q": 1107,
+      "hash": "979d04def463d7ec0b8421e5ae9d7596467eaba65b68fc9672392384072f19f9"
+    },
+    {
+      "id": 100563,
+      "transcricao": 19,
+      "fonte_Q": 1117,
+      "hash": "a75cf7d6a1fd8b41b19099cbf2b16d5531964c763c5f785ac43623255b05556a"
+    },
+    {
+      "id": 100564,
+      "transcricao": 19,
+      "fonte_Q": 1118,
+      "hash": "a4ce93a4b4eb5f40a3b74e0d945f33ba4107438905732b5de8e46c37ec5c736d"
+    },
+    {
+      "id": 100565,
+      "transcricao": 19,
+      "fonte_Q": 1108,
+      "hash": "ed4c81144c0fdd8e8a0c0193350541309b46e27a9e846b0616f85b14991b668f"
+    },
+    {
+      "id": 100566,
+      "transcricao": 19,
+      "fonte_Q": 1109,
+      "hash": "d977c14c4f86f1a5232f4386a1594671514ff40ae6f95fed2da42f9241e1cca5"
+    },
+    {
+      "id": 100567,
+      "transcricao": 19,
+      "fonte_Q": 1120,
+      "hash": "3a76c51b4de6812f53645b4a17bd67bd3c519dde3e44c436cf8cd508f64e8162"
+    },
+    {
+      "id": 100568,
+      "transcricao": 19,
+      "fonte_Q": 1123,
+      "hash": "0e82e88df656db731c722292741ad7f2f634730d333fd22ada31e5310082f136"
+    },
+    {
+      "id": 100569,
+      "transcricao": 19,
+      "fonte_Q": 1122,
+      "hash": "ae12c22a18153277be11b92c2e218eb2beef5cca87f4ae2a55f0b7389e75527a"
+    },
+    {
+      "id": 100570,
+      "transcricao": 19,
+      "fonte_Q": 1124,
+      "hash": "f7279249dfe8d1c9348bd00bad4c82919c3c9d7a3402a4c9640dd348a8c818de"
+    },
+    {
+      "id": 100571,
+      "transcricao": 19,
+      "fonte_Q": 1126,
+      "hash": "99ce2a149da4d1d2933d1753fe38617a9fdb60b5caf7b164f9b0bedbc890b983"
+    },
+    {
+      "id": 100572,
+      "transcricao": 20,
+      "fonte_Q": 1144,
+      "hash": "0cb57dc19e9f483789ff3c3f72465fd88eca4f9f03f635c4386ca597627b6c43"
+    },
+    {
+      "id": 100573,
+      "transcricao": 20,
+      "fonte_Q": 1147,
+      "hash": "924bab14db9a505327f220a2bc3ecc2db7e8d44986a08aefd27a3fe5b4d0e052"
+    },
+    {
+      "id": 100574,
+      "transcricao": 20,
+      "fonte_Q": 1148,
+      "hash": "1f6a3cc2ed70d30e4009e4fa2a5ca048abdf01c0de8c1ceaf3e3b1a6328446ba"
+    },
+    {
+      "id": 100575,
+      "transcricao": 20,
+      "fonte_Q": 1145,
+      "hash": "3ddfbec5d60200afaf6d1274f32c894d5f608301d7a47f520b830dcae3954706"
+    },
+    {
+      "id": 100576,
+      "transcricao": 20,
+      "fonte_Q": 1146,
+      "hash": "a54842d4b38f5d906ac6252514d4bda84406210ee196e1a48008d5abc034918a"
+    },
+    {
+      "id": 100577,
+      "transcricao": 20,
+      "fonte_Q": 1150,
+      "hash": "13853cce6e18238b991773bd70f391fffcb41968a3ff1f61630c0fb79d4df798"
+    },
+    {
+      "id": 100578,
+      "transcricao": 20,
+      "fonte_Q": 1151,
+      "hash": "0c5c7ee09f08bd8b81b4222c82541eab133ba60ab06be74eb80d970ae2b2ace0"
+    },
+    {
+      "id": 100579,
+      "transcricao": 20,
+      "fonte_Q": 1154,
+      "hash": "849ec742a7220caf2f6abfb492258854ccb52173f86e116ee4a3058cb8279c20"
+    },
+    {
+      "id": 100580,
+      "transcricao": 21,
+      "fonte_Q": 1159,
+      "hash": "89091a950de641407a9f376a0c56aa896a0ac0b1465947780e1ff139fbe308ef"
+    },
+    {
+      "id": 100581,
+      "transcricao": 21,
+      "fonte_Q": 1160,
+      "hash": "c7dba12177cfe8aaf4008386716702cdc5cb16276714694abd005f78e15f4c1e"
+    },
+    {
+      "id": 100582,
+      "transcricao": 21,
+      "fonte_Q": 1160,
+      "hash": "7994a991bd932dbdbaffd546eb87ce08100145b884fb3c990c4a411e117d3446"
+    },
+    {
+      "id": 100583,
+      "transcricao": 21,
+      "fonte_Q": 1163,
+      "hash": "154e703d0692a107cd254c83d949a4b014947a1d174d11329ba8acb144a5a4d9"
+    },
+    {
+      "id": 100584,
+      "transcricao": 21,
+      "fonte_Q": 1168,
+      "hash": "01f42293b11e93dd0d1bf3d41fdfe5827c603c92ba649e180e36aa826e6378ea"
+    },
+    {
+      "id": 100585,
+      "transcricao": 21,
+      "fonte_Q": 1161,
+      "hash": "3669bf71eae0bcd29621555c8fd00359dffd13c721ee31260abe4acabb0d3224"
+    },
+    {
+      "id": 100586,
+      "transcricao": 21,
+      "fonte_Q": 1169,
+      "hash": "d4e84276430efe311dde6e1ef013e408409c0dc91aa77bed77d62f0c4cbf43a0"
+    },
+    {
+      "id": 100587,
+      "transcricao": 21,
+      "fonte_Q": 1164,
+      "hash": "2ecbf917d104960a0c86aa61856a3c0d694f96ddcc7e4350a8ecfcd2b18104ec"
+    },
+    {
+      "id": 100588,
+      "transcricao": 21,
+      "fonte_Q": 1172,
+      "hash": "e0299f0841dd199eb0f8ca20a6b1728d231c878bc4b49a6d0aa7be91e795dd61"
+    },
+    {
+      "id": 100589,
+      "transcricao": 21,
+      "fonte_Q": 1173,
+      "hash": "0d6e94fb698b17269ebe6b7bb5eb7e6b39ce5001ba8154b3aaf0f26e1d01c10c"
+    },
+    {
+      "id": 100590,
+      "transcricao": 21,
+      "fonte_Q": 1174,
+      "hash": "c17d982905e513dedb47ee87540e83100fae535b64159bb9cb2a4a10cd88b5f2"
+    },
+    {
+      "id": 100591,
+      "transcricao": 21,
+      "fonte_Q": 1176,
+      "hash": "444847e018cdc37bc1ed1082de770afac0e5757d64eea235006105e1de7f1066"
+    },
+    {
+      "id": 100592,
+      "transcricao": 21,
+      "fonte_Q": 1187,
+      "hash": "5ab36819d7faeb21157c49bc6d4f2f0a45bbab03b99da37dadd2f3e3e64b06bf"
+    },
+    {
+      "id": 100593,
+      "transcricao": 21,
+      "fonte_Q": 1177,
+      "hash": "eaeb641ed97e68060871d343d5e5e4ad12b8ec801ccaae325cc4059aa931c36f"
+    },
+    {
+      "id": 100594,
+      "transcricao": 21,
+      "fonte_Q": 1178,
+      "hash": "ba7967789283872ff238fd779eaf710f9e4efd40ba7690b65103fd1aa855cc4b"
+    },
+    {
+      "id": 100595,
+      "transcricao": 21,
+      "fonte_Q": 1166,
+      "hash": "0669cde6cbfb7735654ce57eb7186754180741cf0c7125aae9968c2b6e2d48c9"
+    },
+    {
+      "id": 100596,
+      "transcricao": 21,
+      "fonte_Q": 1178,
+      "hash": "dd5f608b507f7c09c66091aefabba3460d68b8fb2f9a9eb40dd146bc6f74c872"
+    },
+    {
+      "id": 100597,
+      "transcricao": 21,
+      "fonte_Q": 1183,
+      "hash": "942be9ee81b19747fadb156373773a9d995ee3ff62bdfce88e0d70d5f06030d3"
+    },
+    {
+      "id": 100598,
+      "transcricao": 21,
+      "fonte_Q": 1182,
+      "hash": "15815de5f029ad6611c4ee3d86abd01cd2b87950aeb3a22f6182fc23d7ce3ed8"
+    },
+    {
+      "id": 100599,
+      "transcricao": 21,
+      "fonte_Q": 1180,
+      "hash": "2d74724481a035fe98f887aacfa3977dcb969d5c9d97d68f8449515f68fce7d7"
+    },
+    {
+      "id": 100600,
+      "transcricao": 21,
+      "fonte_Q": 1181,
+      "hash": "0121d388640b23ffbbf9430af86550d704adbd294a885f1669e5026c58a8af30"
+    }
+  ],
+  "preservacao": {
+    "hash_primeiras_1100": "a72a3f9a2e18b65099fbaea0e693327ffb30fbcdb32d1550a7409d643ba9d3d8",
+    "hash_primeiros_550_bp": "69f8301f7c29b8d00cbe355b881b50d1ef3a321c1ae02ef552f4b22fdb99b8bb",
+    "hash_aulas_1_a_11": "5366fd3165e3ef8e690543e0d92b706ccf7bbd8d984b1ceba40dd9ea06c478ef",
+    "materiais_1_a_11": {
+      "1": "3be2da61117b524bdf54bb26fcd7d5711e143bab67c248fc2fa7b11f3edaad42",
+      "2": "8abb90999de6964689b47e51ecb138508069c5c87f9495172f73334569e8e819",
+      "3": "79d9bcc0c84563f41e0dff8a7c98df8e92d6ae2c6a38b7e0783251a7a0481520",
+      "4": "b033d6802960dcf9672f567dd2489a53e8dcef0a9c37253667fe0f08895152bb",
+      "5": "288665aa5630d1faffdffd4e60b26f311d360e7930fc25103d8efb187c35dee1",
+      "6": "232a9cb290b0ccf6e9db071d56c57a280f9ab07940f2275a374b740c6877fcb3",
+      "7": "8aa65839ba7c103e8abed6f3bb1a41d222906e9a07e7e79297b2cf55163e5b3e",
+      "8": "588e1efd12d9d4f39ae7ce1ce8a2475123691c88d7f65272e5832f1578f5e660",
+      "9": "71190c026939012b6118945009f0d231dfd26f59a5e493e9a16412f3f8b434c9",
+      "10": "41851e8f893391dca779ba3185f35600554f5f420abec2addaf04d062934f8b1",
+      "11": "11f8f3c301b1567756066bb685c3110a91b4c966b97383cc548a2ad76d63c5a2"
+    }
+  },
+  "trilha_sha256": "92bb576fdd56fec9a7a6a9491883f1658d7a932044f70681578bc9ab3bcc8f35",
+  "materiais_sha256": "6437c850fb83bedadd72d0f8d8c8fd8db47bd4d478514131ee94f33898737d7b",
+  "comparativo_sha256": "aa31be69df561ad2558bccfe652b7abdc06d7ccb35d52526a9940d0090403943",
+  "siglas_adiadas": [
+    1106,
+    1107,
+    1119,
+    1129,
+    1138,
+    1162,
+    1169,
+    100561,
+    100562
+  ],
+  "siglas_novas": [
+    {
+      "id": "ace",
+      "name": "Adiantamento sobre Cambiais Entregues",
+      "aliases": [
+        "ACE"
+      ],
+      "variants": []
+    },
+    {
+      "id": "ptax",
+      "name": "Taxa de câmbio de referência do Banco Central",
+      "aliases": [
+        "PTAX"
+      ],
+      "variants": []
+    }
+  ],
+  "siglas_nota": "PTAX é designação da taxa de referência; a descrição funcional não é apresentada como expansão etimológica de iniciais.",
+  "materiais": {
+    "tabelas": 19,
+    "diagramas": 11,
+    "flashcards": 50,
+    "linhas_comparativo": 19,
+    "blocos": 3
+  },
+  "consulta_normativa": {
+    "certificacao_de_vigencia": false,
+    "resultado": "Consultas ao Banco Central e ao Planalto bloqueadas pelo proxy HTTP 403. Limites e detalhes metodológicos dos slides identificados como referências de fonte, sem gabaritos numéricos de norma atual."
+  },
+  "normalizacoes": [
+    "Slide 3: IP US$ 100 mil, não 1 milhão; CTVM/DTVM e demais listadas US$ 300 mil; R$ 10 mil é reais em espécie, não toda operação.",
+    "Slide 2: sair da exceção entre PF não comprova automaticamente crime de evasão de divisas.",
+    "Contas em moeda estrangeira e de não residentes: distinguir localização e condições, sem generalizar toda conta no exterior como conta em reais.",
+    "ACC/ACE: antecipação em reais; etapa é embarque/documentos, não chegada ao destino.",
+    "Slide 12: fator 1,1365; retorno US$ 92,78846 sobre US$ 1.000; 9,28% arredondado, 9,27% truncado.",
+    "Swap: indexador não é moeda de liquidação; sem entrega do principal e sem redução automática das reservas; nome de compra/venda não substitui análise das pernas.",
+    "12% ao ano não são exatamente 1% ao mês; não somar automaticamente retorno cambial e cupom fora da regra contratada.",
+    "Slide 16: R$ 5/US$ 1 equivale a US$ 0,20/R$ 1; corrigir orientação invertida no exemplo da fonte.",
+    "Slides 20 e 21: níveis 255/275 e 275/255; comparações com base 1 de −7,27% e +7,84%, sem arredondamento intermediário.",
+    "Slide 22: nível 306/310=0,987097, variação −1,29% contra base 1. Não tratar nível como percentual negativo.",
+    "Slides 24/25: associações condicionadas; maior remuneração relativa não se confunde com piora de risco; diferencial 10−3 é 7 pontos percentuais.",
+    "PTAX e spot: referência metodológica não é preço obrigatório; pronto não exige liquidação instantânea."
+  ]
+}

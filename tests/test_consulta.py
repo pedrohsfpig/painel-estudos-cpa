@@ -146,10 +146,11 @@ class Consulta(unittest.TestCase):
 
     def test_future_lesson_content_is_indexed_without_changing_existing_materials(self):
         self.page.evaluate('Consulta.index()')
-        self.page.evaluate('''()=>{AL.push({t:'Aula 12: Caderno adicional',r:['Referência complementar: texto de consulta exclusivo do caderno adicional.'],n:[],d:[],p:[]});MAT[12]={mm:['Caderno adicional',[]],tb:[],dg:[],tl:[],fc:[]}}''')
+        next_lesson=self.page.evaluate('AL.length+1')
+        self.page.evaluate('''n=>{AL.push({t:`Aula ${n}: Caderno adicional`,r:['Referência complementar: texto de consulta exclusivo do caderno adicional.'],n:[],d:[],p:[]});MAT[n]={mm:['Caderno adicional',[]],tb:[],dg:[],tl:[],fc:[]}}''',next_lesson)
         result=self.result('texto de consulta exclusivo do caderno adicional')
         self.assertTrue(result['items'])
-        self.assertEqual(result['items'][0]['record']['lesson'],12)
+        self.assertEqual(result['items'][0]['record']['lesson'],next_lesson)
         self.assertIn('texto de consulta exclusivo',' '.join(result['items'][0]['record']['lines']))
 
     def test_both_themes_comparisons_and_single_answers_fit_desktop_and_mobile(self):

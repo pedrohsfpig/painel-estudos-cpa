@@ -77,7 +77,7 @@ class ContentSearch(unittest.TestCase):
         self.assertEqual(self.page.locator('#content-search-input').input_value(),'inflação')
         self.page.evaluate("view='q';go()")
         self.assertEqual(self.page.locator('#content-search-input').input_value(),'')
-        self.assertEqual(self.page.locator('[data-practice-lesson]:visible').count(),12)
+        self.assertEqual(self.page.locator('[data-practice-lesson]:visible').count(),self.page.evaluate('AL.length+1'))
 
     def test_compact_pagination_reaches_every_match_without_an_inner_scroll_list(self):
         self.search('inflação','d')
@@ -155,7 +155,7 @@ class ContentSearch(unittest.TestCase):
         self.assertIn('Nenhum resultado',self.page.locator('.search-empty').inner_text())
         self.assertEqual(self.page.evaluate('sessionPlan()'),plan)
         self.page.locator('#content-search-input').press('Escape')
-        self.assertEqual(self.page.locator('[data-practice-lesson]:visible').count(),12)
+        self.assertEqual(self.page.locator('[data-practice-lesson]:visible').count(),self.page.evaluate('AL.length+1'))
         self.click('Iniciar estudo')
         self.assertEqual(self.page.evaluate('[1,10].map(a=>qz.ids.filter(id=>questionById(id)[0]===a).length)'),[5,5])
 
@@ -167,7 +167,7 @@ class ContentSearch(unittest.TestCase):
         self.assertEqual(self.page.locator('.content-search img').count(),0)
         self.assertFalse(self.page.evaluate('Boolean(window.searchInjected)'))
         self.page.locator('.search-clear').click()
-        self.assertEqual(self.page.locator('.tr .st:visible').count(),11)
+        self.assertEqual(self.page.locator('.tr .st:visible').count(),self.page.evaluate('AL.length'))
         self.page.evaluate("view='m';mt.c='tab';go()")
         self.page.locator('#content-search-input').fill('Bacen');self.page.locator('[data-search-result]').first.click()
         self.page.locator('#theme-toggle').click()
@@ -186,8 +186,9 @@ class ContentSearch(unittest.TestCase):
                     self.assertEqual(self.page.locator('#content-search-input').count(),1)
                     self.assertFalse(self.page.evaluate('document.documentElement.scrollWidth>innerWidth'),(width,theme,screen))
                     self.assertTrue(self.page.locator('.content-search').evaluate('n=>n.scrollWidth<=n.clientWidth+1'))
-        self.page.evaluate("AL.push({...AL[0],t:'Aula 12: Reservafutura',o:'Conceitofuturo exclusivo'});view='t';go()")
+        next_lesson=self.page.evaluate('AL.length+1')
+        self.page.evaluate("n=>{AL.push({...AL[0],t:`Aula ${n}: Reservafutura`,o:'Conceitofuturo exclusivo'});view='t';go()}",next_lesson)
         self.page.locator('#content-search-input').fill('conceitofuturo')
-        self.assertEqual(self.page.evaluate('filteredSearchResults().map(d=>d.lesson)'),[12])
+        self.assertEqual(self.page.evaluate('filteredSearchResults().map(d=>d.lesson)'),[next_lesson])
 
 if __name__=='__main__':unittest.main(verbosity=2)

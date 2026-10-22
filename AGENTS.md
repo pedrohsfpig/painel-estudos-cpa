@@ -1159,4 +1159,32 @@ sistema. Não crie as tabelas da nova aula antes de receber os materiais.
   com a transcrição, preserve o contexto desse diferencial; não confunda uma
   remuneração relativa maior com a afirmação universal de que aumento do risco
   percebido atrai capitais. Registre as premissas nas tabelas e dicas.
-- Falta receber a transcrição nesta etapa; ainda não criar nem publicar a aula.
+- A transcrição foi recebida em 22/10/2026 e cruzada com as 25 imagens na aula 12. A regra de aguardar as fontes foi satisfeita.
+
+### Aula 12 — Mercado de Câmbio, Taxas e Cupom Cambial
+
+- Três blocos: mercado (transcrição 19, slides 1–11), cupom e swaps (20, slides
+  12–15), taxas e relações econômicas (21, slides 16–25). Manter as três partes
+  acessíveis na única entrada Aula 12, com filtros compartilhados e agregados.
+- Pedido final: 42,5% / 15% / 42,5%. Arredondamento em 100 questões: 43/15/42;
+  níveis Fácil/Médio/Difícil/Hardcore por fonte: 9/17/8/9, 3/6/3/3 e 8/17/9/8.
+  Bate-pronto: 21/8/21. IDs 1101–1200 e 100551–100600, sem alterar os anteriores.
+- Screenshots 24 e 25: cadeias explícitas nas tabelas E nas dicas; cotação em
+  R$/US$, divisas, moeda doméstica, comércio e hipóteses. Maior diferencial com
+  risco constante não é piora de risco. 10% − 3% = 7 pontos percentuais.
+- Cupom usa fatores compatíveis no tempo; 13,65% com cotação 5→5,20 resulta em
+  9,28% arredondado. Swap do BC liquida em reais, sem entrega do principal em
+  dólares e sem retirada automática de reservas. Explicitar a perspectiva das
+  pernas e condições de valor, prazo e indexador do hedge.
+- Câmbio real: q=e×Pexterno/Pinterno; separar nível de variação. Os exemplos
+  conferidos são 255/275, 275/255 e 306/310, com variações contra base 1 de
+  −7,27%, +7,84% e −1,29%. Preço positivo abaixo de 1 não é número negativo.
+- A expansão ACE foi cadastrada; PTAX recebe descrição funcional fiel, não uma
+  etimologia inventada. Adiar nomes só quando revelam o fato cobrado.
+- Limites do slide 3: IP US$100 mil, grupo CTVM/DTVM etc. US$300 mil, reais em
+  espécie R$10 mil. Referências, sem certificação de vigência: consultas oficiais
+  bloqueadas pelo proxy. Não usar como gabaritos numéricos atuais nem inferir
+  crime de evasão de divisas automaticamente de descumprimento da exceção PF.
+- Relatórios: docs/aula-12.md e docs/aula-12-cobertura.json. Rodar também
+  tests/test_aula12.py ao alterar esta aula. Preservar o conteúdo e os hashes
+  históricos das onze aulas, seus manifestos e registros de respostas.
