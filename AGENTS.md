@@ -1143,3 +1143,20 @@ A orientação vale também para futuras aulas e pode ser aplicada às anteriore
 quando suas fontes forem revisadas, conforme autorização do usuário. Preserve
 coerência entre tabelas e dicas, conteúdos existentes e o padrão visual do
 sistema. Não crie as tabelas da nova aula antes de receber os materiais.
+
+### Slides recebidos para a próxima aula de câmbio
+
+- `Screenshot_1 (5).pdf`, Sediment `file_000000007fa0820e8a3b761d3c374229`:
+  20 páginas, correspondentes aos screenshots 1–20.
+- `Screenshot_21.pdf`, Sediment `file_000000005fa4820ea24c791f84d903f7`:
+  5 páginas, correspondentes aos screenshots 21–25, nessa ordem.
+- Os dois PDFs foram abertos e suas 25 páginas renderizadas. São prints sem
+  camada de texto; confira as imagens em resolução adequada ao extrair conteúdo.
+- O usuário confirmou os screenshots **24 e 25**: são, respectivamente, as
+  páginas **4 e 5 do segundo PDF**. O 24 trata das relações com juros internos e
+  externos; o 25, de prêmio de risco. Ambos foram inspecionados individualmente.
+- No 25, o exemplo de prêmio é o diferencial de juros 10% − 3% = 7%. Ao cruzar
+  com a transcrição, preserve o contexto desse diferencial; não confunda uma
+  remuneração relativa maior com a afirmação universal de que aumento do risco
+  percebido atrai capitais. Registre as premissas nas tabelas e dicas.
+- Falta receber a transcrição nesta etapa; ainda não criar nem publicar a aula.
