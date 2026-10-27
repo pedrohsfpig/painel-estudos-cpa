@@ -68,7 +68,7 @@ permanecem iguais. Não foi manipulado histórico real do usuário.
 ## Refinamento de cores — 27/10/2026
 
 A escala da matriz passou a ocupar uma faixa ampla de verdes. Conforme o
-ajuste seguinte do usuário, 0% é quase branco e 100% verde escuro nos dois temas. Uma legenda com 0%, 25%, 50%, 75% e 100%
+ajuste seguinte do usuário, 0% é verde claro e 100% verde escuro nos dois temas. Uma legenda com 0%, 25%, 50%, 75% e 100%
 facilita distinguir as intensidades. O texto troca entre preto e branco para
 manter contraste mínimo de 4,5:1, inclusive nas contagens das células. Sem
 respostas continua sendo um traço, separado do verde de 0% observado.
@@ -94,7 +94,7 @@ Todos os gráficos circulares de Estatísticas receberam contornos mais espessos
 para 72 px para preservar o percentual central e dar espaço ao anel. Isso vale
 para o resumo, as dificuldades e os cartões de aulas, temas e níveis.
 
-A matriz usa a mesma direção nos dois temas: **0% verde quase branco → 100%
+A matriz usa a mesma direção nos dois temas: **0% verde claro → 100%
 verde escuro**. A faixa de luminosidade foi ampliada para diferenciar bem os
 valores intermediários. Texto preto/branco mantém contraste mínimo de 4,5:1,
 e bordas discretas delimitam as células escuras. Sem respostas segue como traço.
@@ -102,3 +102,17 @@ Somente a apresentação foi alterada; percentuais, contagens e histórico ficam
 
 Validação desta atualização: **24 testes específicos e 76 fluxos de navegador
 aprovados**, com inspeção visual dos anéis e da escala nos temas claro e escuro.
+
+## Ajuste fino de saturação
+
+O 0% da matriz passou de quase branco para verde claro, apenas um pouco mais
+claro que o tom de 25%. A escala de 25% a 100% foi preservada, incluindo o verde
+escuro no extremo de maior aproveitamento. A legenda usa as mesmas cores.
+
+Os anéis e sua legenda usam verde e vermelho um pouco mais escuros e saturados,
+com ajustes próprios para claro/escuro. Espessura, dimensões, percentuais e
+proporções foram mantidos. As outras telas e os filtros de dificuldade não
+recebem essas cores específicas dos gráficos.
+
+Validação do ajuste fino: **24 testes específicos e 76 fluxos gerais aprovados**,
+com conferência visual em claro/escuro e contraste das 101 intensidades da matriz.

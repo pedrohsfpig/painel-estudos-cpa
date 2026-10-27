@@ -1,6 +1,6 @@
 /* Área exclusiva de análise; a paleta acompanha os temas do sistema. */
 .workspace-main:has(.statistics-page) .main-inner{max-width:1600px}
-.statistics-page{display:flex;flex-direction:column;gap:20px;min-width:0}
+.statistics-page{--stats-chart-ok:hsl(122 52% 31%);--stats-chart-error:hsl(0 65% 37%);display:flex;flex-direction:column;gap:20px;min-width:0}
 .statistics-page h2{font-size:18px;line-height:1.4;font-weight:650;margin:0}
 .statistics-page h3{font-size:14px;line-height:1.4;font-weight:600;margin:0}
 .statistics-page p{line-height:1.6}
@@ -20,12 +20,12 @@
 .stats-score{display:flex;align-items:center;gap:14px;border-left:1px solid var(--bd);padding-left:22px}.stats-score h2{font-size:15px}.stats-score>div>span{font-size:12px;color:var(--mu)}
 .stats-ring{position:relative;display:inline-grid;place-items:center;width:104px;height:104px;flex:none;vertical-align:middle}
 .stats-ring svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;fill:none;stroke-width:16}
-.stats-ring-track{stroke:var(--bd)}.stats-ring-track.has-data{stroke:var(--hd)}.stats-ring-correct{stroke:var(--ok)}
+.stats-ring-track{stroke:var(--bd)}.stats-ring-track.has-data{stroke:var(--stats-chart-error,var(--hd))}.stats-ring-correct{stroke:var(--stats-chart-ok,var(--ok))}
 .stats-ring .mv{font-size:24px;font-weight:650;line-height:1;font-variant-numeric:tabular-nums;color:var(--fg)}
 .stats-ring.is-compact{width:72px;height:72px}.stats-ring.is-compact .detail-stat-percent{font-size:17px;color:var(--fg)}
 .stats-summary .metric-note{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:18px 0 0;padding-top:14px;border-top:1px solid var(--bd);font-size:12px;color:var(--mu)}
 .stats-level-panel{padding:20px}.stats-section-heading p{font-size:13px;color:var(--mu);margin:5px 0 0}
-.stats-chart-legend{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--mu)}.stats-chart-legend i{width:8px;height:8px;border-radius:50%;background:var(--ok)}.stats-chart-legend i:nth-child(2){background:var(--hd);margin-left:6px}
+.stats-chart-legend{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--mu)}.stats-chart-legend i{width:8px;height:8px;border-radius:50%;background:var(--stats-chart-ok)}.stats-chart-legend i:nth-child(2){background:var(--stats-chart-error);margin-left:6px}
 .stats-levels{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:18px}
 .stats-level{display:grid;grid-template-columns:1fr auto;column-gap:10px;align-items:center;border:1px solid var(--bd);border-radius:11px;padding:14px;min-width:0;background:var(--bg)}
 .stats-level h3{grid-column:1}.stats-level .stats-ring{grid-column:2;grid-row:1/4}.stats-level p{grid-column:1;font-size:12px;margin:6px 0 0}.stats-level small{font-size:12px;color:var(--mu);grid-column:1}
@@ -63,3 +63,7 @@
 .stats-filter-groups .stats-difficulty.on:not([data-stat-filter="level:-1"]){background:color-mix(in srgb,var(--difficulty) 17%,var(--bg));border-color:var(--difficulty);box-shadow:inset 0 0 0 1px var(--difficulty);font-weight:650}
 .stats-filter-groups .stats-origin-chip{display:inline-flex;align-items:center;gap:6px}
 .stats-origin-chip .ui-icon{width:15px;height:15px;flex:none}
+
+/* Cores dos anéis um pouco mais escuras e saturadas, sem alterar o restante. */
+:root[data-theme="dark"] .statistics-page{--stats-chart-ok:hsl(105 55% 61%);--stats-chart-error:hsl(0 78% 69%)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .statistics-page{--stats-chart-ok:hsl(105 55% 61%);--stats-chart-error:hsl(0 78% 69%)}}

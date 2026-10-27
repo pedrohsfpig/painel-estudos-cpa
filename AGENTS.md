@@ -1031,11 +1031,12 @@ com rolagem interna. A implementação contextual substitui o padrão anterior.
   Estatísticas**; preservar âmbar nos resultados das sessões e nas demais telas.
   A matriz mantém uma escala sequencial verde mais ampla, com referências
   0/25/50/75/100 e tinta contrastante nos dois temas. A orientação foi
-  ajustada pelo usuário: **0% quase branco e 100% verde escuro em ambos os temas**. Não misturar cores de
+  ajustada pelo usuário: **0% verde claro, pouco mais claro que 25%, e 100% verde escuro em ambos os temas**. Não misturar cores de
   dificuldade nessa escala. Filtros de dificuldade seguem verde/âmbar/vermelho/
   Hardcore do sistema; origem recebe ícones, sem cores aleatórias por modo.
   Todos os anéis de Estatísticas usam contorno espesso, com percentual legível
-  no centro; preservar as proporções reais de acerto/erro.
+  no centro; preservar as proporções reais de acerto/erro. As cores dos anéis
+  são um pouco mais escuras e saturadas; manter espessura e dimensões aprovadas.
   Conferir também `tests/test_statistics_colors.py` e `tests/test_result_scorecards.py`.
 
 ## Consulta local aos materiais — 21/10/2026

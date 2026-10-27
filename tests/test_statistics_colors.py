@@ -26,10 +26,13 @@ class StatisticsColors(unittest.TestCase):
    }''')
    for p,c in enumerate(colors):
     self.assertGreaterEqual(c['contrast'],4.5,(theme,p,c));self.assertGreater(c['bg'][1],max(c['bg'][0],c['bg'][2]))
-   self.assertGreater(colors[0]['luminance'],.9);self.assertLess(colors[100]['luminance'],.04)
+   self.assertGreater(colors[0]['bg'][1]-colors[0]['bg'][0],30)
+   self.assertLess(colors[0]['luminance'],.8);self.assertLess(colors[100]['luminance'],.04)
    anchors=[colors[p] for p in [0,25,50,75,100]]
-   for a,b in zip(anchors,anchors[1:]):
-    self.assertGreater(math.dist(a['bg'],b['bg']),35,(theme,a,b))
+   for i,(a,b) in enumerate(zip(anchors,anchors[1:])):
+    distance=math.dist(a['bg'],b['bg'])
+    self.assertGreater(distance,20 if i==0 else 35,(theme,a,b))
+    if i==0:self.assertLess(distance,45,(theme,a,b))
     self.assertGreater(a['luminance'],b['luminance'])
    self.assertEqual(self.page.locator('.stats-heat-scale .stats-matrix-value').all_text_contents(),['0%','25%','50%','75%','100%'])
  def test_errors_use_red_and_difficulty_colors_remain_distinct(self):
@@ -37,12 +40,12 @@ class StatisticsColors(unittest.TestCase):
   for theme in ['light','dark']:
    self.page.evaluate('t=>document.documentElement.dataset.theme=t',theme)
    result=self.page.evaluate('''()=>{
-    const probe=document.createElement('i');document.body.append(probe);probe.style.color='var(--hd)';const red=getComputedStyle(probe).color;probe.remove();
-    return {red,errors:[...document.querySelectorAll('.stats-metric-icon.incorrect,.stats-metric:has(.incorrect) .mv,.detail-card-errors,.stats-level-errors')].map(n=>getComputedStyle(n).color),stroke:getComputedStyle(document.querySelector('.stats-ring-track.has-data')).stroke,
+    const probe=document.createElement('i');document.body.append(probe);probe.style.color='var(--hd)';const red=getComputedStyle(probe).color;probe.style.color='var(--stats-chart-error)';document.querySelector('.statistics-page').append(probe);const chartRed=getComputedStyle(probe).color;probe.remove();
+    return {red,chartRed,errors:[...document.querySelectorAll('.stats-metric-icon.incorrect,.stats-metric:has(.incorrect) .mv,.detail-card-errors,.stats-level-errors')].map(n=>getComputedStyle(n).color),stroke:getComputedStyle(document.querySelector('.stats-ring-track.has-data')).stroke,
      levels:[...document.querySelectorAll('.stats-difficulty:not([data-stat-filter="level:-1"])')].map(n=>getComputedStyle(n).color),
      icons:[...document.querySelectorAll('.stats-origin-chip svg')].map(n=>n.innerHTML)};
    }''')
-   self.assertTrue(result['errors']);self.assertTrue(all(color==result['red'] for color in result['errors']));self.assertEqual(result['stroke'],result['red'])
+   self.assertTrue(result['errors']);self.assertTrue(all(color==result['red'] for color in result['errors']));self.assertEqual(result['stroke'],result['chartRed'])
    self.assertEqual(len(set(result['levels'])),4);self.assertEqual(len(set(result['icons'])),4)
    self.page.locator('[data-stat-filter="level:1"]').focus();self.page.keyboard.press('Enter')
    self.assertEqual(self.page.evaluate('fl'),1);self.assertEqual(self.page.locator('[data-stat-filter="level:1"]').get_attribute('aria-pressed'),'true')

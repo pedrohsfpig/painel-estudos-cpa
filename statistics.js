@@ -23,11 +23,12 @@ function statisticsFilters(){
 function statisticsLevels(data){
  return `<section class="stats-level-panel" aria-labelledby="stats-level-title"><div class="stats-section-heading"><div><h2 id="stats-level-title">Aproveitamento por dificuldade</h2><p>Compare os percentuais junto com o número de tentativas.</p></div><span class="stats-chart-legend"><i></i>Acertos <i></i>Erros</span></div><div class="stats-levels">${[-1,0,1,2,3].map(level=>{const row=data.levels.find(r=>r.key===level)||{ok:0,n:0};return `<article class="stats-level" data-stat-level="${level}"><h3>${level===-1?'Bate-pronto':L[level]}</h3>${statisticsRing(row.ok,row.n,true)}<p>${row.n?`${row.ok} de ${row.n} corretas`:'Sem respostas'}</p><small${row.n?' class="stats-level-errors"':""}>${row.n?`${row.n-row.ok} ${row.n-row.ok===1?'erro':'erros'}`:'Neste recorte'}</small></article>`}).join('')}</div></section>`;
 }
-// Escala sequencial verde: 0% quase branco e 100% escuro nos dois temas.
+// Escala verde: 0% claro, próximo de 25%; 100% escuro nos dois temas.
 // As trocas de tinta mantêm contraste mínimo de 4,5:1 em todos os percentuais inteiros.
 function statisticsHeatStyle(percent){
  const value=Math.max(0,Math.min(100,Math.round(Number(percent)||0)));
- return `--matrix-fill:hsl(134 46% ${(96-.82*value).toFixed(2)}%);--matrix-ink:${value>=74?'#fff':'#000'}`;
+ const lightness=value<=25?82-.26*value:96-.82*value;
+ return `--matrix-fill:hsl(134 46% ${lightness.toFixed(2)}%);--matrix-ink:${value>=74?'#fff':'#000'}`;
 }
 function statisticsMatrix(data){
  if(!data.n)return '<p class="stats-matrix-empty">Responda questões para comparar aulas e dificuldades. Nenhuma informação foi estimada.</p>';
