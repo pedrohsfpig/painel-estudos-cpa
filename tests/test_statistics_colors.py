@@ -26,10 +26,11 @@ class StatisticsColors(unittest.TestCase):
    }''')
    for p,c in enumerate(colors):
     self.assertGreaterEqual(c['contrast'],4.5,(theme,p,c));self.assertGreater(c['bg'][1],max(c['bg'][0],c['bg'][2]))
+   self.assertGreater(colors[0]['luminance'],.9);self.assertLess(colors[100]['luminance'],.04)
    anchors=[colors[p] for p in [0,25,50,75,100]]
    for a,b in zip(anchors,anchors[1:]):
     self.assertGreater(math.dist(a['bg'],b['bg']),35,(theme,a,b))
-    self.assertTrue(a['luminance']>b['luminance'] if theme=='light' else a['luminance']<b['luminance'])
+    self.assertGreater(a['luminance'],b['luminance'])
    self.assertEqual(self.page.locator('.stats-heat-scale .stats-matrix-value').all_text_contents(),['0%','25%','50%','75%','100%'])
  def test_errors_use_red_and_difficulty_colors_remain_distinct(self):
   self.open()
@@ -46,6 +47,17 @@ class StatisticsColors(unittest.TestCase):
    self.page.locator('[data-stat-filter="level:1"]').focus();self.page.keyboard.press('Enter')
    self.assertEqual(self.page.evaluate('fl'),1);self.assertEqual(self.page.locator('[data-stat-filter="level:1"]').get_attribute('aria-pressed'),'true')
    self.click('Limpar filtros')
+ def test_all_circular_charts_have_bold_rings_and_readable_center_values(self):
+  self.page.evaluate("(()=>{const id=Q.findIndex(q=>q[2]===1)+1;H=[true,true,true,false].map(ok=>[id,ok,1700000000000,0]);view='stats';go()})()")
+  for theme in ['light','dark']:
+   self.page.evaluate('t=>document.documentElement.dataset.theme=t',theme)
+   for kind in ['lesson','topic','level']:
+    self.page.evaluate('kind=>setDetailStatsKind(kind)',kind)
+    rings=self.page.locator('.stats-ring').evaluate_all("""nodes=>nodes.map(node=>{const svg=node.querySelector('svg'),circle=svg.querySelector('circle'),text=node.querySelector('.mv,.detail-stat-percent'),weight=parseFloat(getComputedStyle(svg).strokeWidth),r=circle.r.baseVal.value;return {weight,text:text.textContent,visible:text.getBoundingClientRect().width,space:(2*r-weight)*node.clientWidth/100,bounds:2*r+weight}})""")
+    self.assertTrue(any(r['text']=='75%' for r in rings))
+    for r in rings:
+     self.assertGreaterEqual(r['weight'],14);self.assertLessEqual(r['bounds'],100);self.assertLess(r['visible'],r['space'])
+    self.assertEqual(self.page.locator('.stats-score .mv').inner_text(),'75%')
  def test_new_colors_keep_filters_responsive_and_history_unchanged(self):
   self.open();state=self.page.evaluate('JSON.stringify([H,cfg,Q,BP,AL,MAT])')
   for width in [390,768,1024,1440,1920]:

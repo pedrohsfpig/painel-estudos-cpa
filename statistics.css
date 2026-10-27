@@ -19,10 +19,10 @@
 .stats-metric>div>span{font-size:13px;color:var(--mu);display:block}.stats-metric .mv{display:block;font-size:34px;line-height:1.25;font-weight:650;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
 .stats-score{display:flex;align-items:center;gap:14px;border-left:1px solid var(--bd);padding-left:22px}.stats-score h2{font-size:15px}.stats-score>div>span{font-size:12px;color:var(--mu)}
 .stats-ring{position:relative;display:inline-grid;place-items:center;width:104px;height:104px;flex:none;vertical-align:middle}
-.stats-ring svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;fill:none;stroke-width:7}
-.stats-ring-track{stroke:var(--bd)}.stats-ring-track.has-data{stroke:var(--hd);opacity:.7}.stats-ring-correct{stroke:var(--ok)}
+.stats-ring svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;fill:none;stroke-width:16}
+.stats-ring-track{stroke:var(--bd)}.stats-ring-track.has-data{stroke:var(--hd)}.stats-ring-correct{stroke:var(--ok)}
 .stats-ring .mv{font-size:24px;font-weight:650;line-height:1;font-variant-numeric:tabular-nums;color:var(--fg)}
-.stats-ring.is-compact{width:66px;height:66px}.stats-ring.is-compact .detail-stat-percent{font-size:17px;color:var(--fg)}
+.stats-ring.is-compact{width:72px;height:72px}.stats-ring.is-compact .detail-stat-percent{font-size:17px;color:var(--fg)}
 .stats-summary .metric-note{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:18px 0 0;padding-top:14px;border-top:1px solid var(--bd);font-size:12px;color:var(--mu)}
 .stats-level-panel{padding:20px}.stats-section-heading p{font-size:13px;color:var(--mu);margin:5px 0 0}
 .stats-chart-legend{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--mu)}.stats-chart-legend i{width:8px;height:8px;border-radius:50%;background:var(--ok)}.stats-chart-legend i:nth-child(2){background:var(--hd);margin-left:6px}
@@ -42,7 +42,7 @@
 .stats-matrix{border-collapse:collapse;width:100%;min-width:680px;font-size:13px}.stats-matrix th,.stats-matrix td{border-bottom:1px solid var(--bd);padding:8px 10px;text-align:center}
 .stats-matrix thead th{font-size:12px;font-weight:600;background:var(--cd);color:var(--mu)}
 .stats-matrix th:first-child{width:32%;text-align:left}.stats-matrix tbody th{font-weight:500;line-height:1.4}.stats-matrix tbody th>span{color:var(--mu);font-size:12px;display:inline-block;min-width:28px;font-variant-numeric:tabular-nums}
-.stats-matrix tbody tr:last-child>*{border-bottom:0}.stats-matrix-value{background:var(--matrix-light);color:var(--matrix-ink-light);border-radius:7px;padding:5px 9px;min-width:60px}
+.stats-matrix tbody tr:last-child>*{border-bottom:0}.stats-matrix-value{background:var(--matrix-fill);color:var(--matrix-ink);border:1px solid color-mix(in srgb,currentColor 14%,transparent);border-radius:7px;padding:5px 9px;min-width:60px}
 .stats-matrix-value strong{display:block;font-weight:600;font-variant-numeric:tabular-nums}.stats-matrix-value small{display:block;color:inherit;font-size:11px}.stats-matrix-missing{color:var(--mu)}
 .stats-method{margin:0}.statistics-page :is(button,summary,.stats-matrix-scroll):focus-visible{outline:2px solid var(--ac);outline-offset:3px}
 .dashboard-statistics-link{display:flex;align-items:center;gap:6px;padding:0;margin:12px 0 0;color:var(--ac);border:0;font-size:13px}.dashboard-statistics-link .ui-icon{width:16px}
@@ -55,8 +55,6 @@
 .stats-matrix-value small{font-size:12px}
 
 /* Variação ampla dentro da mesma família de verdes; texto com contraste próprio. */
-:root[data-theme="dark"] .stats-matrix-value{background:var(--matrix-dark);color:var(--matrix-ink-dark)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .stats-matrix-value{background:var(--matrix-dark);color:var(--matrix-ink-dark)}}
 .stats-heat-scale{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:0 0 14px;font-size:12px}
 .stats-heat-scale>span:first-child{color:var(--mu);margin-right:4px}
 .stats-heat-scale .stats-matrix-value{min-width:44px;padding:5px 9px;text-align:center;border:1px solid color-mix(in srgb,currentColor 14%,transparent);font-weight:600}
