@@ -18,7 +18,9 @@ completo para os focos temáticos e justificativas de cada linha.
   de seleção**. Não aplique esses pesos ao diário, simulado ou banco sem novo
   pedido explícito. Não invente pesos/blocos ausentes nem some faixas aproximadas.
 - A aba **Guia da prova** fica logo abaixo de Estatísticas. Preserve os filtros
-  de importância, bloco, cadastro, busca e ordem original visível. A posição não
+  de importância, busca e ordem original visível. Por pedido posterior, não exiba
+  filtros de bloco/cadastro nem rótulos de bloco na tabela. Ordenar somente por
+  prioridade ou aula (1–13), sem opção Tema. A posição não
   muda ao filtrar; temas da tabela não renomeiam aulas já cadastradas.
 - Aula 13 é prevista no quadro, ainda sem conteúdo; não a crie apenas por existir
   nessa referência. A interface verifica o cadastro real ao exibir o aviso.

@@ -41,7 +41,7 @@ class ExamGuide(unittest.TestCase):
             self.assertEqual(row.locator('th').inner_text(),topic)
             self.assertEqual(row.locator('.exam-importance').inner_text(),importance)
             self.assertEqual(row.locator('.exam-detail').inner_text(),detail)
-            self.assertEqual(row.locator('.exam-block').all_text_contents(),[block] if block else [])
+            self.assertEqual(row.locator('.exam-block,.exam-no-block').count(),0)
         self.assertEqual(self.page.locator('.exam-planned').count(),1)
         self.assertIn('não cadastrada',self.page.locator('[data-exam-lesson="13"]').inner_text())
         self.assertEqual(self.page.evaluate('[AL.length,Q.length,BP.length]'),[12,1200,600])
@@ -50,8 +50,12 @@ class ExamGuide(unittest.TestCase):
 
     def test_filters_intersect_and_search_handles_accents_aliases_and_empty_results(self):
         self.open();self.filter('importance','media');self.assertEqual(self.lessons(),[8,9,2,5,6,7])
-        self.filter('block','A');self.assertEqual(self.lessons(),[8])
-        self.filter('availability','planned');self.assertEqual(self.lessons(),[])
+        self.assertEqual(self.page.get_by_role('group',name='Bloco',exact=True).count(),0)
+        self.assertEqual(self.page.get_by_role('group',name='Cadastro',exact=True).count(),0)
+        self.assertNotIn('Bloco',self.page.locator('.exam-guide-page').inner_text())
+        self.page.get_by_role('searchbox',name='Buscar aula, tema ou conteúdo').fill('crédito')
+        self.assertEqual(self.lessons(),[8])
+        self.page.get_by_role('searchbox',name='Buscar aula, tema ou conteúdo').fill('inexistente')
         self.click('Limpar filtros e busca');self.assertEqual(len(self.lessons()),13)
         search=self.page.get_by_role('searchbox',name='Buscar aula, tema ou conteúdo')
         for query,wanted in [('BACEN',[3]),('CVM',[4]),('CAMBIO',[12]),('SUSEP',[5]),('aula 03',[3]),('riscos',[13])]:
@@ -60,8 +64,6 @@ class ExamGuide(unittest.TestCase):
         search.fill('<img src=x onerror=alert(1)>');self.assertEqual(self.lessons(),[])
         self.assertEqual(self.page.locator('.exam-guide-page img').count(),0)
         search.press('Escape');self.assertEqual(len(self.lessons()),13)
-        self.filter('availability','planned');self.assertEqual(self.lessons(),[13])
-        self.filter('availability','available');self.assertEqual(len(self.lessons()),12)
         self.page.evaluate("AL.push({t:'Aula 13: Métricas'});refreshExamGuide()")
         self.assertEqual(len(self.lessons()),13);self.assertEqual(self.page.locator('.exam-planned').count(),0)
 
@@ -71,15 +73,14 @@ class ExamGuide(unittest.TestCase):
         self.page.locator('#theme-toggle').click();self.assertEqual(self.lessons(),[10,12])
         self.click('Painel');self.open();self.assertEqual(self.lessons(),[10,12])
         self.click('Limpar filtros');self.filter('sort','lesson');self.assertEqual(self.lessons(),list(range(1,14)))
-        self.filter('sort','topic');topics=self.page.locator('.exam-table tbody th').all_text_contents()
-        self.assertEqual(topics[0],'Autorregulação, Proteção e Livre Mercado')
+        self.assertEqual(self.page.locator('[data-exam-filter^="sort:"]').all_text_contents(),['Prioridade','Aula'])
         self.filter('sort','rank');self.assertEqual(self.lessons()[0],13)
 
     def test_controls_and_navigation_preserve_active_practice_history_banks_and_selection(self):
         self.page.evaluate("H=[[1,true,1000,0]];begin([1,2,3],'e')");self.answer();self.open()
         stable='JSON.stringify([Q,BP,AL,MAT,H,cfg,qz,fl,fm,dailyBook])'
         before=self.page.evaluate(stable)
-        self.filter('block','F');self.filter('sort','topic')
+        self.filter('importance','maxima');self.filter('sort','lesson')
         self.page.get_by_role('searchbox',name='Buscar aula, tema ou conteúdo').fill('métricas')
         self.click('Limpar filtros');self.page.locator('#theme-toggle').click()
         self.click('Estatísticas');self.open()

@@ -52,7 +52,7 @@ local permanece porque a origem do site não muda.
   Os filtros de análise ficam nessa aba; o painel mantém os indicadores gerais
   e a evolução do histórico completo.
 - Aba **Guia da prova**, abaixo de Estatísticas: tabela de prioridades fornecida
-  pelo usuário, com busca, filtros de importância/bloco/cadastro e ordenação.
+  pelo usuário, com busca, filtro de importância e ordenação.
   [Referência completa](docs/guia-da-prova.md), preservada sem alterar questões
   ou sorteios; a Aula 13 é identificada como prevista até ser cadastrada.
 - Painel em duas colunas independentes: trilha e evolução na principal;

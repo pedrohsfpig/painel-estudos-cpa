@@ -43,10 +43,16 @@ e não devem ser apresentados como distribuição oficial verificada da CPA.
 **Estatísticas** no menu lateral. Todos os 13 registros aparecem inicialmente,
 na ordem original. A posição permanece a mesma após filtros e reordenação.
 
-Busca sem distinção de acento/caixa por aula, bloco, tema e descrição, incluindo
-aliases Bacen, BC, CVM, CMN e SFN. Filtros combináveis de importância, bloco e
-cadastro (todas/cadastradas/previstas), com botões no padrão do sistema; não há
-menus nativos antigos. Ordenação por prioridade, aula ou tema e limpeza única.
+Busca sem distinção de acento/caixa por aula, tema e descrição, incluindo
+aliases Bacen, BC, CVM, CMN e SFN. Filtro de importância com botões no padrão
+do sistema. Ordenação por prioridade ou aula (1–13) e limpeza única.
+
+Em refinamento solicitado no mesmo dia, foram retirados os filtros de bloco e
+cadastro e todos os rótulos de bloco na tabela. A coluna agora é apenas Aula.
+A ordenação por tema também foi retirada a pedido do usuário.
+As associações originais permanecem somente no registro-fonte para memória;
+não participam da busca nem funcionam como filtros ocultos. O aviso da Aula 13
+prevista foi preservado.
 
 Sinais de cor discretos acompanham os nomes de importância; informação não
 depende só de cor. No computador, tabela sem cortes de dados. Em telas pequenas,
@@ -62,7 +68,7 @@ na consulta de outras abas.
 ## Validação
 
 Testes em navegador: fidelidade das 13 linhas à imagem, pesos, blocos, ordem,
-filtros combinados, busca por sigla/acentos, vazio, limpeza, teclado, temas,
+importância combinada à busca, busca por sigla/acentos, vazio, limpeza, teclado, temas,
 larguras 390–1920, cadastro futuro e preservação da prática/checkpoint ativos.
 Resultado: **17 testes** do guia/Estatísticas/painel, **6 validações** do banco e
 **76 testes** de fluxos gerais aprovados. Conferência visual em claro/escuro;
@@ -73,3 +79,8 @@ PYTHONPATH=tests python3 -m unittest -v test_exam_guide test_statistics test_das
 python3 tests/validate_bank.py
 python3 tests/smoke.py
 ```
+
+Refinamento da interface: 17 regressões do guia/Estatísticas/painel aprovadas,
+6 testes específicos repetidos após retirar a ordenação Tema e 76 fluxos gerais
+aprovados. Conferidas as duas opções de ordem, ausência dos filtros removidos
+e preservação de pesos, prioridades e sessões.
