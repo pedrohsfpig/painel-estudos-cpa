@@ -51,6 +51,10 @@ local permanece porque a origem do site não muda.
   dificuldade, detalhamento por aula/tema e matriz comparativa expansível.
   Os filtros de análise ficam nessa aba; o painel mantém os indicadores gerais
   e a evolução do histórico completo.
+- Aba **Guia da prova**, abaixo de Estatísticas: tabela de prioridades fornecida
+  pelo usuário, com busca, filtros de importância/bloco/cadastro e ordenação.
+  [Referência completa](docs/guia-da-prova.md), preservada sem alterar questões
+  ou sorteios; a Aula 13 é identificada como prevista até ser cadastrada.
 - Painel em duas colunas independentes: trilha e evolução na principal;
   revisão e última aula empilhadas na lateral, com textos e controles legíveis.
 - Botão de lâmpada fixo para alternar claro/escuro em qualquer tela, com escolha

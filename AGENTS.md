@@ -4,6 +4,30 @@ Use o checkout existente: as tarefas de nuvem já são isoladas. Não crie workt
 sem solicitação explícita do usuário. O aplicativo é uma página independente em
 `index.html`; não introduza dependências de servidor para funcionalidades locais.
 
+## Referência permanente de prioridades da prova — 27/10/2026
+
+O usuário forneceu o quadro de relevância registrado integralmente em
+`docs/guia-da-prova.md` e `EXAM_GUIDE_REFERENCE` (`exam-guide.js`). Use essa
+referência até ele informar atualização; não a apresente como edital oficial
+verificado. Ordem: Aula 13/F (máxima, 40%/20 questões), 11/D (alta, 20%/10),
+1 (alta, base conceitual), 3 e 4 (média-alta), 8/A e 9/B (média, ~10–15%
+cada), 2, 5, 6 e 7 (média), 10/C e 12/E (baixa, ~5% cada). Consulte o registro
+completo para os focos temáticos e justificativas de cada linha.
+
+- O pedido é importar/consultar a tabela, **sem alterar questões ou proporções
+  de seleção**. Não aplique esses pesos ao diário, simulado ou banco sem novo
+  pedido explícito. Não invente pesos/blocos ausentes nem some faixas aproximadas.
+- A aba **Guia da prova** fica logo abaixo de Estatísticas. Preserve os filtros
+  de importância, bloco, cadastro, busca e ordem original visível. A posição não
+  muda ao filtrar; temas da tabela não renomeiam aulas já cadastradas.
+- Aula 13 é prevista no quadro, ainda sem conteúdo; não a crie apenas por existir
+  nessa referência. A interface verifica o cadastro real ao exibir o aviso.
+- Preserve Q/BP/AL/MAT, H, cfg, filtros de outras telas, sessão e relógio. Os
+  blocos deste guia não substituem os blocos internos das aulas. Sem API paga.
+- Ao alterar o guia, execute `tests/test_exam_guide.py`, regressões de navegação
+  e `tests/smoke.py`. Mantenha dois temas, teclado, telas pequenas e o registro
+  em `docs/guia-da-prova.md`.
+
 ## Regra permanente de feedback
 
 O usuário exige feedback da alternativa correta e das três incorretas em TODAS

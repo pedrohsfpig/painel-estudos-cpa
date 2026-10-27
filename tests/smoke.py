@@ -658,7 +658,7 @@ class PainelCPA(unittest.TestCase):
                 main = self.page.locator("main").bounding_box()
                 sidebar = self.page.locator(".sidebar").bounding_box()
                 self.assertGreaterEqual(main["x"], sidebar["x"] + sidebar["width"])
-                for screen in ["Painel","Quadro do SFN","Estatísticas","Trilha","Consulta","Praticar","Erros (0)","Material de apoio"]:
+                for screen in ["Painel","Quadro do SFN","Estatísticas","Guia da prova","Trilha","Consulta","Praticar","Erros (0)","Material de apoio"]:
                     self.click(screen)
                     self.assertTrue(self.page.evaluate("document.documentElement.scrollWidth <= innerWidth"), f"Rolagem horizontal: {width}, {theme}, {screen}")
                 self.click("Estatísticas")

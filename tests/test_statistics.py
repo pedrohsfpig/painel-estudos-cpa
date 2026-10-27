@@ -21,7 +21,7 @@ class Statistics(unittest.TestCase):
   }''')
  def test_menu_and_panel_keep_basic_unfiltered_summary_and_full_evolution(self):
   self.fixture();labels=self.page.locator('.nav button>span:first-of-type').all_text_contents()
-  self.assertEqual(labels[-2:],['Quadro do SFN','Estatísticas']);self.assertEqual(self.page.locator('.detail-stats,.stats-filters,.dashboard-filters').count(),0)
+  self.assertEqual(labels[-3:],['Quadro do SFN','Estatísticas','Guia da prova']);self.assertEqual(self.page.locator('.detail-stats,.stats-filters,.dashboard-filters').count(),0)
   self.assertEqual(self.page.locator('.g4 .mv').all_text_contents(),['7','4','3','57%'])
   self.assertTrue(self.page.locator('.hoje,.evolution,.dashboard-trail-list').count()==3)
   initial=self.page.locator('[data-evolution-day]').all_text_contents()
