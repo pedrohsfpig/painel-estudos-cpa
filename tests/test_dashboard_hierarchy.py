@@ -61,7 +61,8 @@ class DashboardHierarchy(unittest.TestCase):
                 self.assertFalse(self.page.evaluate('document.documentElement.scrollWidth>innerWidth'))
                 self.assertEqual(self.page.evaluate('JSON.stringify([H,Q,BP,cfg,fl,fm])'),state)
                 self.assertGreaterEqual(self.page.locator('.next-study-action p').evaluate('n=>parseFloat(getComputedStyle(n).fontSize)'),14)
-                self.assertTrue(self.page.locator('.dashboard-filters').evaluate('n=>n.open'))
+                self.assertEqual(self.page.locator('.dashboard-filters,.detail-stats').count(),0)
+                self.assertEqual(self.page.get_by_role('button',name='Ver estatísticas detalhadas').count(),1)
                 self.assertTrue(self.page.locator('.next-study-action,.dashboard-metrics,.dashboard-column').evaluate_all('nodes=>nodes.every(n=>n.scrollWidth<=n.clientWidth+1)'))
 
 if __name__=='__main__':unittest.main(verbosity=2)

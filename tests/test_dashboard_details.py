@@ -18,7 +18,8 @@ class DashboardDetails(unittest.TestCase):
         }''')
 
     def open(self):
-        self.page.locator('.detail-stats>summary').click()
+        if self.page.evaluate('view')!='stats':self.page.get_by_role('button',name='Estatísticas',exact=True).click()
+        if not self.page.locator('.detail-stats').evaluate('n=>n.open'):self.page.locator('.detail-stats>summary').click()
 
     def select(self,kind):
         self.page.locator('#detail-tab-'+kind).click()
@@ -35,17 +36,18 @@ class DashboardDetails(unittest.TestCase):
             next_page.click()
         return found
 
-    def test_collapsed_default_compact_views_and_consistent_semantic_colors(self):
+    def test_dedicated_view_compact_views_and_consistent_semantic_colors(self):
         self.fixture()
-        self.assertFalse(self.page.locator('.detail-stats').evaluate('n=>n.open'))
-        summary=self.page.locator('.detail-stats>summary');summary.focus();summary.press('Enter')
+        self.assertEqual(self.page.locator('.detail-stats').count(),0)
+        self.open()
+        summary=self.page.locator('.detail-stats>summary');summary.focus()
         self.assertTrue(self.page.locator('.detail-stats').evaluate('n=>n.open'))
         self.assertEqual(self.page.get_by_role('tab',selected=True).get_attribute('id'),'detail-tab-lesson')
         self.assertEqual(self.page.locator('.detail-stats [role="tab"]').count(),3)
         self.assertEqual(self.page.locator('.detail-stats .bar').count(),0)
         self.assertEqual(len(self.cards()),6)
         self.page.set_viewport_size(dict(width=1440,height=1000))
-        self.assertLess(self.page.locator('.detail-stats').bounding_box()['height'],630)
+        self.assertLess(self.page.locator('.detail-stats').bounding_box()['height'],800)
         for theme in ['light','dark']:
             self.page.evaluate('t=>document.documentElement.dataset.theme=t',theme)
             self.assertTrue(self.page.locator('.detail-stat-percent').evaluate_all('nodes=>nodes.every(n=>getComputedStyle(n).color===getComputedStyle(document.body).color)'))

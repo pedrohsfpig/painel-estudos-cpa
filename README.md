@@ -47,6 +47,10 @@ local permanece porque a origem do site não muda.
 - Menu lateral fixo no computador, com ícones e indicação da tela atual.
 - Painel com estatísticas reais, andamento por aula, prioridades de revisão,
   evolução dos acertos e acesso à última aula praticada.
+- Aba **Estatísticas**, abaixo de Quadro do SFN: gráficos de acertos por
+  dificuldade, detalhamento por aula/tema e matriz comparativa expansível.
+  Os filtros de análise ficam nessa aba; o painel mantém os indicadores gerais
+  e a evolução do histórico completo.
 - Painel em duas colunas independentes: trilha e evolução na principal;
   revisão e última aula empilhadas na lateral, com textos e controles legíveis.
 - Botão de lâmpada fixo para alternar claro/escuro em qualquer tela, com escolha

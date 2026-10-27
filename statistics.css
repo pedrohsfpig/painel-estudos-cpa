@@ -1,0 +1,55 @@
+/* Área exclusiva de análise; a paleta acompanha os temas do sistema. */
+.workspace-main:has(.statistics-page) .main-inner{max-width:1600px}
+.statistics-page{display:flex;flex-direction:column;gap:20px;min-width:0}
+.statistics-page h2{font-size:18px;line-height:1.4;font-weight:650;margin:0}
+.statistics-page h3{font-size:14px;line-height:1.4;font-weight:600;margin:0}
+.statistics-page p{line-height:1.6}
+.stats-filters,.stats-summary,.stats-level-panel,.stats-section{border:1px solid var(--bd);border-radius:14px;background:var(--cd);min-width:0}
+.stats-filters{padding:16px 20px}
+.stats-filter-heading,.stats-section-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.stats-filter-heading>div{display:flex;gap:9px;align-items:center}.stats-filter-heading .ui-icon{width:18px;color:var(--mu)}
+.stats-filter-heading h2{font-size:15px}.stats-filter-heading button{font-size:12px;color:var(--mu);padding:5px 9px;border-color:transparent}
+.stats-filter-groups{display:flex;align-items:flex-start;gap:24px;flex-wrap:wrap;margin-top:12px}
+.stats-filter-groups>div{display:flex;align-items:center;gap:12px;min-width:0}.stats-filter-label{font-size:13px;font-weight:600;color:var(--mu);flex:none}
+.stats-filter-groups .chips{margin:0;gap:6px}.stats-filter-groups .chip{font-size:13px;padding:6px 10px;min-height:36px}
+.stats-filters>p{font-size:12px;color:var(--mu);margin:12px 0 0}
+.stats-summary{padding:20px 24px}.stats-summary .g4{grid-template-columns:repeat(3,minmax(0,1fr)) minmax(240px,1.4fr);gap:18px;align-items:center}
+.stats-metric{display:flex;align-items:center;gap:12px;min-width:0}.stats-metric-icon{display:grid;place-items:center;width:38px;height:38px;border:1px solid var(--bd);border-radius:11px;color:var(--mu);flex:none}
+.stats-metric-icon.correct{color:var(--ok)}.stats-metric-icon.incorrect{color:var(--md)}
+.stats-metric>div>span{font-size:13px;color:var(--mu);display:block}.stats-metric .mv{display:block;font-size:34px;line-height:1.25;font-weight:650;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.stats-score{display:flex;align-items:center;gap:14px;border-left:1px solid var(--bd);padding-left:22px}.stats-score h2{font-size:15px}.stats-score>div>span{font-size:12px;color:var(--mu)}
+.stats-ring{position:relative;display:inline-grid;place-items:center;width:104px;height:104px;flex:none;vertical-align:middle}
+.stats-ring svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;fill:none;stroke-width:7}
+.stats-ring-track{stroke:var(--bd)}.stats-ring-track.has-data{stroke:var(--md);opacity:.7}.stats-ring-correct{stroke:var(--ok)}
+.stats-ring .mv{font-size:24px;font-weight:650;line-height:1;font-variant-numeric:tabular-nums;color:var(--fg)}
+.stats-ring.is-compact{width:66px;height:66px}.stats-ring.is-compact .detail-stat-percent{font-size:17px;color:var(--fg)}
+.stats-summary .metric-note{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:18px 0 0;padding-top:14px;border-top:1px solid var(--bd);font-size:12px;color:var(--mu)}
+.stats-level-panel{padding:20px}.stats-section-heading p{font-size:13px;color:var(--mu);margin:5px 0 0}
+.stats-chart-legend{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--mu)}.stats-chart-legend i{width:8px;height:8px;border-radius:50%;background:var(--ok)}.stats-chart-legend i:nth-child(2){background:var(--md);margin-left:6px}
+.stats-levels{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:18px}
+.stats-level{display:grid;grid-template-columns:1fr auto;column-gap:10px;align-items:center;border:1px solid var(--bd);border-radius:11px;padding:14px;min-width:0;background:var(--bg)}
+.stats-level h3{grid-column:1}.stats-level .stats-ring{grid-column:2;grid-row:1/4}.stats-level p{grid-column:1;font-size:12px;margin:6px 0 0}.stats-level small{font-size:12px;color:var(--mu);grid-column:1}
+.stats-section{margin:0;background:var(--bg)}
+.stats-section>summary{cursor:pointer;padding:18px 20px;font-size:16px;font-weight:650;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.stats-section>summary::-webkit-details-marker{display:none}.stats-section>summary>span{display:flex;gap:10px;align-items:center}.stats-section>summary .ui-icon{width:19px;height:19px;color:var(--mu)}
+.stats-section>summary small{font-size:12px;font-weight:400;color:var(--mu);display:flex;align-items:center;gap:14px}.stats-section>summary small:after{content:'+';font-size:21px;line-height:1}
+.stats-section[open]>summary small:after{content:'−'}.stats-section[open]>summary{border-bottom:1px solid var(--bd)}
+.statistics-page .detail-stats-content{padding:20px}.statistics-page .detail-stat-card{gap:12px}
+.statistics-page .detail-card-heading{align-items:center}.statistics-page .detail-card-heading h3{font-size:15px}.statistics-page .detail-card-heading small{font-size:12px}
+.statistics-page .detail-card-counts{font-size:13px;gap:10px}.statistics-page .detail-card-attempts{font-size:12px}.statistics-page .detail-help{font-size:13px}
+.stats-matrix-content{padding:20px}.stats-matrix-guide,.stats-method{font-size:13px;color:var(--mu);margin:0 0 14px}
+.stats-matrix-scroll{overflow:auto;max-width:100%;border:1px solid var(--bd);border-radius:11px;scrollbar-gutter:stable}
+.stats-matrix{border-collapse:collapse;width:100%;min-width:680px;font-size:13px}.stats-matrix th,.stats-matrix td{border-bottom:1px solid var(--bd);padding:8px 10px;text-align:center}
+.stats-matrix thead th{font-size:12px;font-weight:600;background:var(--cd);color:var(--mu)}
+.stats-matrix th:first-child{width:32%;text-align:left}.stats-matrix tbody th{font-weight:500;line-height:1.4}.stats-matrix tbody th>span{color:var(--mu);font-size:12px;display:inline-block;min-width:28px;font-variant-numeric:tabular-nums}
+.stats-matrix tbody tr:last-child>*{border-bottom:0}.stats-matrix-value{background:color-mix(in srgb,var(--ok) var(--heat),var(--cd));border-radius:7px;padding:5px 9px;min-width:60px}
+.stats-matrix-value strong{display:block;font-weight:600;font-variant-numeric:tabular-nums}.stats-matrix-value small{display:block;color:var(--mu);font-size:11px}.stats-matrix-missing{color:var(--mu)}
+.stats-method{margin:0}.statistics-page :is(button,summary,.stats-matrix-scroll):focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+.dashboard-statistics-link{display:flex;align-items:center;gap:6px;padding:0;margin:12px 0 0;color:var(--ac);border:0;font-size:13px}.dashboard-statistics-link .ui-icon{width:16px}
+@media(max-width:1300px){.stats-levels{gap:8px}.stats-level{display:flex;flex-direction:column;gap:7px;text-align:center;padding:14px 8px}.stats-level p{margin:0}.stats-summary .g4{grid-template-columns:repeat(3,minmax(0,1fr)) minmax(200px,1.35fr);gap:10px}.stats-metric-icon{display:none}.stats-score{padding-left:16px;gap:10px}.stats-ring{width:88px;height:88px}}
+@media(max-width:800px){.stats-summary .g4{grid-template-columns:repeat(3,minmax(0,1fr))}.stats-score{grid-column:1/-1;border-left:0;border-top:1px solid var(--bd);padding:14px 0 0;justify-content:center}.stats-summary .metric-note{display:block}.stats-summary .metric-note span{display:block;margin-top:4px}.stats-levels{grid-template-columns:repeat(3,minmax(0,1fr))}.stats-filter-groups>div{flex-direction:column;align-items:flex-start;gap:6px}}
+@media(max-width:500px){.statistics-page{gap:14px}.stats-filters,.stats-summary,.stats-level-panel,.statistics-page .detail-stats-content,.stats-matrix-content{padding:14px}.stats-section>summary{padding:14px}.stats-section>summary small{width:100%;justify-content:space-between}.stats-levels{grid-template-columns:repeat(2,minmax(0,1fr))}.stats-level:last-child{grid-column:1/-1}.stats-level:last-child{display:grid;grid-template-columns:1fr auto;text-align:left;padding:14px}.stats-level:last-child .stats-ring{grid-column:2;grid-row:1/4}.stats-metric .mv{font-size:28px}.stats-metric>div>span{font-size:12px}}
+
+.stats-matrix-empty{padding:24px;border:1px dashed var(--bd);border-radius:10px;text-align:center;color:var(--mu);font-size:14px;margin:0}
+.stats-metric:has(.correct) .mv{color:var(--ok)}.stats-metric:has(.incorrect) .mv{color:var(--md)}
+.stats-matrix-value small{font-size:12px}

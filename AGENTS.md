@@ -95,7 +95,8 @@ sessão ao navegar ou trocar de tema. Os indicadores devem usar dados reais:
 tentativas incluem repetições; andamento da aula mede questões únicas praticadas
 (prova + Hardcore); pendências seguem a última resposta de cada questão. Não
 apresente cobertura como domínio. Filtros de estatísticas afetam tentativas e
-desempenho detalhado; evolução, trilha e pendências usam o histórico completo.
+desempenho detalhado na aba Estatísticas; painel básico, evolução, trilha e
+pendências usam o histórico completo.
 O acesso à última aula se baseia no histórico e abre seus materiais, sem alegar
 restauração de uma sessão. Trate histórico vazio e novas aulas sem números fixos.
 Confira os dois temas e os fluxos existentes antes de publicar mudanças no painel.
@@ -995,12 +996,21 @@ com rolagem interna. A implementação contextual substitui o padrão anterior.
   manter foco após selecionar e caber no espaço visível nos dois temas.
 - Ao alterar esse componente, execute também `tests/test_search_filter_menus.py`.
 
-## Desempenho detalhado no painel
+## Estatísticas — área dedicada em 27/10/2026
 
-- Preserve o bloco recolhido até o clique. Ao abrir, mostre uma dimensão por vez
+- A aba **Estatísticas** fica abaixo de Quadro do SFN. O painel mantém
+  checkpoint, evolução completa, acompanhamento básico e acessos. Os filtros
+  de nível/origem e o detalhamento ficam na área dedicada; o painel usa H
+  completo com IDs válidos, independentemente de fl/fm.
+- O detalhamento começa aberto, com uma dimensão por vez
   (Aulas, Temas, Dificuldades), em cartões compactos, no máximo seis por página.
   Todos os grupos continuam acessíveis por paginação e busca local; não retome
   barras longas, listas gigantes ou cores de nível misturadas ao aproveitamento.
+- Gráficos circulares usam verde nos acertos, âmbar nos erros e percentuais
+  neutros. Matriz aulas × dificuldades começa recolhida; cada célula mostra
+  percentual e amostra. Ausência de respostas é um traço, não 0%. Preserve
+  abertura das seções ao filtrar e navegar. Grupos com poucas respostas
+  recebem indicação de revisão pontual, sem diagnóstico de domínio.
 - Percentuais ficam neutros; acertos em verde e erros em âmbar, com números e
   rótulos. Os cartões são informativos, sem aparência de ação. Aulas seguem ordem
   numérica e temas começam por menor aproveitamento. Permita reordenar e buscar.
@@ -1010,8 +1020,12 @@ com rolagem interna. A implementação contextual substitui o padrão anterior.
   de domínio nem sugira fraqueza se todas as respostas foram corretas.
 - Trocar aba, buscar, ordenar e paginar atualizam somente a consulta. Preserve H,
   cfg, fl/fm, sessão, alternativas e relógio. Mantenha teclado, foco e dois temas.
-- Execute `tests/test_dashboard_details.py`, `tests/test_dashboard_hierarchy.py`
-  e `tests/smoke.py`; registre a validação em `docs/desempenho-detalhado.md`.
+- Execute `tests/test_statistics.py`, `tests/test_dashboard_details.py`,
+  `tests/test_dashboard_hierarchy.py` e `tests/smoke.py`. Registre a entrega em
+  `docs/estatisticas.md`; mantenha dois temas, teclado e telas pequenas.
+- Os filtros usam as mesmas tentativas de HF em todos os gráficos; preserve
+  Q/BP/AL/MAT, H, cfg, sessão e cronômetro. A gravação normal de um rascunho
+  diário pode atualizar elapsed/updatedAt, sem reiniciar ou concluir a sessão.
 
 ## Consulta local aos materiais — 21/10/2026
 
