@@ -51,7 +51,7 @@ class DashboardDetails(unittest.TestCase):
         for theme in ['light','dark']:
             self.page.evaluate('t=>document.documentElement.dataset.theme=t',theme)
             self.assertTrue(self.page.locator('.detail-stat-percent').evaluate_all('nodes=>nodes.every(n=>getComputedStyle(n).color===getComputedStyle(document.body).color)'))
-            for selector,var in [('.detail-card-correct','--ok'),('.detail-card-errors','--md')]:
+            for selector,var in [('.detail-card-correct','--ok'),('.detail-card-errors','--hd')]:
                 self.assertTrue(self.page.locator(selector).evaluate_all('''(nodes,v)=>{const probe=document.createElement('i');probe.style.color='var('+v+')';document.body.append(probe);const expected=getComputedStyle(probe).color;probe.remove();return nodes.every(n=>getComputedStyle(n).color===expected)}''',var))
         summary.press('Enter');self.assertFalse(self.page.locator('.detail-stats').evaluate('n=>n.open'))
 

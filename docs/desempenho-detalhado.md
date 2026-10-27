@@ -10,9 +10,9 @@ indicavam dificuldade, ora aproveitamento. Agora Aulas, Temas e Dificuldades
 ocupam abas de uma única área, com até seis cartões por página.
 
 Cada cartão mostra título, percentual neutro, contagem de acertos em verde,
-erros em âmbar e total de tentativas. Aulas têm nome completo e número; temas
+erros em vermelho nesta aba e total de tentativas. Aulas têm nome completo e número; temas
 identificam suas aulas. O contorno verde marca grupos sem erros, sem pintar o
-cartão inteiro. Mini gráficos circulares usam verde nos acertos e âmbar nos erros. Não há
+cartão inteiro. Mini gráficos circulares usam verde nos acertos e vermelho nos erros. Não há
 barras extensas nem cores de dificuldade misturadas ao aproveitamento.
 
 Aulas aparecem em ordem numérica, incluindo 10 e 11 depois de 9. Temas abrem

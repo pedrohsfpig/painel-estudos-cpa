@@ -1006,12 +1006,12 @@ com rolagem interna. A implementação contextual substitui o padrão anterior.
   (Aulas, Temas, Dificuldades), em cartões compactos, no máximo seis por página.
   Todos os grupos continuam acessíveis por paginação e busca local; não retome
   barras longas, listas gigantes ou cores de nível misturadas ao aproveitamento.
-- Gráficos circulares usam verde nos acertos, âmbar nos erros e percentuais
+- Gráficos circulares usam verde nos acertos, vermelho nos erros e percentuais
   neutros. Matriz aulas × dificuldades começa recolhida; cada célula mostra
   percentual e amostra. Ausência de respostas é um traço, não 0%. Preserve
   abertura das seções ao filtrar e navegar. Grupos com poucas respostas
   recebem indicação de revisão pontual, sem diagnóstico de domínio.
-- Percentuais ficam neutros; acertos em verde e erros em âmbar, com números e
+- Percentuais ficam neutros; acertos em verde e erros em vermelho, com números e
   rótulos. Os cartões são informativos, sem aparência de ação. Aulas seguem ordem
   numérica e temas começam por menor aproveitamento. Permita reordenar e buscar.
 - Use HF para respeitar nível/origem. Conte todas as tentativas, inclusive
@@ -1026,6 +1026,14 @@ com rolagem interna. A implementação contextual substitui o padrão anterior.
 - Os filtros usam as mesmas tentativas de HF em todos os gráficos; preserve
   Q/BP/AL/MAT, H, cfg, sessão e cronômetro. A gravação normal de um rascunho
   diário pode atualizar elapsed/updatedAt, sem reiniciar ou concluir a sessão.
+
+- Ajuste visual solicitado em 27/10/2026: vermelho nos erros **somente em
+  Estatísticas**; preservar âmbar nos resultados das sessões e nas demais telas.
+  A matriz mantém uma escala sequencial verde mais ampla, com referências
+  0/25/50/75/100 e tinta contrastante nos dois temas. Não misturar cores de
+  dificuldade nessa escala. Filtros de dificuldade seguem verde/âmbar/vermelho/
+  Hardcore do sistema; origem recebe ícones, sem cores aleatórias por modo.
+  Conferir também `tests/test_statistics_colors.py` e `tests/test_result_scorecards.py`.
 
 ## Consulta local aos materiais — 21/10/2026
 

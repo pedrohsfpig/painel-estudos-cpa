@@ -11,7 +11,7 @@ A área dedicada aproveita a largura disponível e concentra:
 - Filtros por nível e origem, com seleção visível, teclado e limpeza.
 - Tentativas, acertos, erros, aproveitamento, itens diferentes e aulas praticadas.
 - Gráficos circulares para o aproveitamento total e por dificuldade. Acertos
-  usam verde, erros usam âmbar e os percentuais ficam neutros. Sem respostas,
+  usam verde, erros usam vermelho exclusivamente nesta aba e os percentuais ficam neutros. Sem respostas,
   o gráfico fica vazio e mostra um traço, não um percentual estimado.
   O texto é arredondado; os arcos mantêm a fração exata, inclusive um erro
   residual quando o valor exibido arredonda para 100%.
@@ -64,3 +64,25 @@ inspecionados os temas claro/escuro em 1440 px e a matriz no celular em 390 px;
 os testes também cobrem 768, 1024, 1280 e 1920 px. Os dados completos de
 Q (1.200), BP (600), AL (12) e MAT foram comparados à versão anterior e
 permanecem iguais. Não foi manipulado histórico real do usuário.
+
+## Refinamento de cores — 27/10/2026
+
+A escala da matriz passou a ocupar uma faixa ampla de verdes: clara a escura no
+tema claro, escura a clara no escuro. Uma legenda com 0%, 25%, 50%, 75% e 100%
+facilita distinguir as intensidades. O texto troca entre preto e branco para
+manter contraste mínimo de 4,5:1, inclusive nas contagens das células. Sem
+respostas continua sendo um traço, separado do verde de 0% observado.
+
+Erros aparecem em vermelho no resumo, anéis, legendas e detalhamento de
+Estatísticas. As telas de resultado continuam usando âmbar, como antes.
+Filtros de nível seguem as cores já usadas em Fácil, Médio, Difícil e Hardcore;
+as opções de origem usam ícones de conjunto, livro, questionário e associação
+rápida, mantendo seus rótulos e o comportamento de seleção.
+
+`tests/test_statistics_colors.py` confere os 101 percentuais em ambos os temas,
+a separação visual dos intervalos, contraste, cores semânticas, ícones distintos,
+teclado, larguras de 390–1920 px e preservação do histórico e bancos.
+
+Validação deste refinamento: **23 testes específicos e 76 fluxos de navegador
+aprovados**. Inspeção visual das escalas e filtros nos temas claro/escuro;
+index.html e os bancos de conteúdo permaneceram integralmente iguais.
