@@ -55,6 +55,9 @@ local permanece porque a origem do site não muda.
   pelo usuário, com busca, filtro de importância e ordenação.
   [Referência completa](docs/guia-da-prova.md), preservada sem alterar questões
   ou sorteios; a Aula 13 é identificada como prevista até ser cadastrada.
+- **Fazer questões** nos conceitos de revisão: contagem e sessão com todas as
+  questões de Estudo/Hardcore ligadas ao assunto e à característica do material,
+  inclusive entre aulas. [Funcionamento e limites](docs/estudo-por-conteudo.md).
 - Painel em duas colunas independentes: trilha e evolução na principal;
   revisão e última aula empilhadas na lateral, com textos e controles legíveis.
 - Botão de lâmpada fixo para alternar claro/escuro em qualquer tela, com escolha

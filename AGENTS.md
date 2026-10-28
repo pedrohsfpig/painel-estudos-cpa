@@ -206,6 +206,28 @@ da primeira renderização e respeite os destaques semânticos nos dois temas.
 
 ## Apresentação dos materiais de apoio
 
+### Estudo ativo por conceito — pedido de 28/10/2026
+
+- Todos os conceitos de revisão oferecem Fazer questões com contagem exata:
+  quadro geral (participante/característica), mapas, diagramas, tabelas, linha
+  do tempo, flashcards, resumo, dicas, pegadinhas e números. Preserve o conteúdo.
+- `active-study.js` associa **assunto + característica/subtema**. Não basta
+  mencionar BC para ligar composição a competências. Citar BC/CVM como membros
+  do CNSP não muda o colegiado estudado. No quadro geral, respeite a entidade
+  da linha, inclusive na coluna Regulação/supervisão. Não use distratores.
+- Puxe todos os IDs pertinentes de Q, de todas as aulas, incluindo Hardcore,
+  sem Bate-pronto, limite, cota ou filtro de histórico. Zero é válido; não
+  preencha com outro assunto. O número exibido deve ser o total da sessão.
+- Preserve cfg, H, materiais e sessões existentes. Se já há prática pendente,
+  mostre a indicação e Retomar sessão; não substitua o diário ou outra prática.
+  Na sessão por conteúdo, Hardcore mantém badge, ausência de ajudas e origem 2;
+  Estudo mantém ajudas e origem 0. Resultado/refazer erros conservam o contexto.
+- Ao criar conteúdo, confira/amplie o cadastro editorial de assuntos e subtemas
+  e audite os botões. Não aceite correspondências amplas como solução automática
+  para tema novo. Veja `docs/estudo-por-conteudo.md`.
+- Execute `tests/test_active_study.py`, regressões de navegação/resultados e
+  `tests/smoke.py`; confira temas, teclado, telas pequenas e os textos originais.
+
 O usuário exige preservar os textos, quantidades e hierarquia dos mapas,
 diagramas, tabelas e prazos de `MAT`. Uma mudança visual não autoriza resumir,
 reescrever ou excluir informações. Confira os dados antes/depois e a presença de
