@@ -1,0 +1,739 @@
+{
+  "aula": 13,
+  "aula_interna": 1,
+  "titulo": "Riscos Financeiros",
+  "fonte": {
+    "transcricao": {
+      "aula_professor": 23,
+      "arquivo": "Texto colado.txt",
+      "sediment": "file_000000002a98820e9e17faced8bf159b",
+      "sha256": "88c27ced70210af4e1f618a7ce48077c524104774b2fe81f2879aba252e7be0d"
+    },
+    "imagens": [
+      {
+        "numero": 1,
+        "tema": "Crédito, agências e topo da escala de ratings"
+      },
+      {
+        "numero": 2,
+        "tema": "Faixas inferiores dos ratings e spread de crédito"
+      },
+      {
+        "numero": 3,
+        "tema": "Mercado: variáveis e perda da carteira de ações"
+      },
+      {
+        "numero": 4,
+        "tema": "Juros: aplicação e avaliação aos seis meses"
+      },
+      {
+        "numero": 5,
+        "tema": "Juros: taxas de 8% e 4%, condições de sensibilidade"
+      },
+      {
+        "numero": 6,
+        "tema": "Liquidez: financiamento e mercado"
+      }
+    ]
+  },
+  "volumes": {
+    "Q": 50,
+    "Estudo_e_Simulado": 40,
+    "Hardcore": 10,
+    "BP": 25,
+    "flashcards": 25,
+    "Q_niveis": {
+      "facil": 10,
+      "medio": 20,
+      "dificil": 10,
+      "hardcore": 10
+    },
+    "flashcards_niveis": {
+      "facil": 9,
+      "medio": 8,
+      "dificil": 8
+    }
+  },
+  "bancos_anteriores": {
+    "Q": {
+      "count": 1200,
+      "sha256": "99736f49661239b005534ef56225db891eb5b76456b65006521d6b6d3af9ddc4"
+    },
+    "BP": {
+      "count": 600,
+      "sha256": "b0f2adf679972e3a260ce46ba053c942c0baea97877d038399d2c72ccbd210d8"
+    },
+    "AL": {
+      "count": 12,
+      "sha256": "42e50f91d6929fb7566a711680054a34dccad91b7e8a60652f55264a8ac42407"
+    }
+  },
+  "preservacao": "Primeiros 1200 Q, 600 BP e 12 AL preservados integralmente, inclusive ordem e elegibilidade. MAT 1–12 conferidos em navegador.",
+  "criterios": [
+    "Cruzar transcrição e seis imagens; corrigir simplificações sem inventar garantias.",
+    "Feedback correto e três incorretos por questão; original da alternativa preservado após embaralhar.",
+    "Bate-pronto sem casos longos, pistas de gênero ou cobrança de iniciais de siglas.",
+    "Rating não garante pagamento, preço ou liquidez. Não afirmar notas atuais de emissores.",
+    "Falta de liquidez pode levar ao descumprimento e afetar o crédito para o credor.",
+    "Preço aos seis meses não é cupom recebido; fluxo único no mês 12.",
+    "Juros compostos e desconto usam semestre compatível; redução exige base explícita.",
+    "Taxa contratada alta não prevê nem limita juros futuros.",
+    "Notações finais dos ratings reproduzem a ilustração histórica e não equivalência exata ou escala atual."
+  ],
+  "validacao_normativa_independente": false,
+  "itens": [
+    {
+      "id": 1201,
+      "tema": "Riscos: liquidez",
+      "nivel": 0,
+      "imagens": [
+        6
+      ],
+      "transcricao": 23,
+      "sha256": "58cc0ce041d2eb09ac59cb8234875e7e420a5616d9991e236d55b946b5ded184"
+    },
+    {
+      "id": 1202,
+      "tema": "Riscos: liquidez",
+      "nivel": 0,
+      "imagens": [
+        6
+      ],
+      "transcricao": 23,
+      "sha256": "20d6046eb17d6f985f38283971b2583d18cfa8e7cc71eb9a1b00cb7b75b4969e"
+    },
+    {
+      "id": 1203,
+      "tema": "Riscos: liquidez",
+      "nivel": 1,
+      "imagens": [
+        6
+      ],
+      "transcricao": 23,
+      "sha256": "f12f8787fdcdd3d6e04ae797e5525ca5af3182f91dcab8989db5f4e54e57a6f8"
+    },
+    {
+      "id": 1204,
+      "tema": "Riscos: liquidez",
+      "nivel": 1,
+      "imagens": [
+        6
+      ],
+      "transcricao": 23,
+      "sha256": "f957e10ce071a093ba3aded23c9ae736d0b9dfd753c7d9aa9589be9a878ea101"
+    },
+    {
+      "id": 1205,
+      "tema": "Riscos: liquidez",
+      "nivel": 1,
+      "imagens": [
+        6
+      ],
+      "transcricao": 23,
+      "sha256": "71ab22e1ccbe2328c0337d7ee369c823b64729a5d6d79082233093264dad8ddd"
+    },
+    {
+      "id": 1206,
+      "tema": "Riscos: liquidez",
+      "nivel": 1,
+      "imagens": [
+        6
+      ],
+      "transcricao": 23,
+      "sha256": "5f9dc3e08c78fff62163a167e9cc1cab53bcca7c648c0ffcb1535b67e907a6e2"
+    },
+    {
+      "id": 1207,
+      "tema": "Riscos: liquidez",
+      "nivel": 2,
+      "imagens": [
+        6
+      ],
+      "transcricao": 23,
+      "sha256": "b5271d92445a52911a6db645427c93dd39754e1a4d2fc6e250971f5101bacbe0"
+    },
+    {
+      "id": 1208,
+      "tema": "Riscos: liquidez",
+      "nivel": 2,
+      "imagens": [
+        6
+      ],
+      "transcricao": 23,
+      "sha256": "a972547346ead3605fcc7a985f1e5db2480098eb4182c993aaf460e456fb048c"
+    },
+    {
+      "id": 1209,
+      "tema": "Riscos: liquidez",
+      "nivel": 3,
+      "imagens": [
+        6
+      ],
+      "transcricao": 23,
+      "sha256": "72198b30f8bf006fd1986f8ebb1e17b1f0a50f409c0b928283feb628a0041432"
+    },
+    {
+      "id": 1210,
+      "tema": "Riscos: liquidez",
+      "nivel": 3,
+      "imagens": [
+        6
+      ],
+      "transcricao": 23,
+      "sha256": "f5e83413b6d75705bb625c264907a5130c1fa5efd335b4ed0ff9537744530cf2"
+    },
+    {
+      "id": 1211,
+      "tema": "Riscos: crédito e ratings",
+      "nivel": 0,
+      "imagens": [
+        1,
+        2
+      ],
+      "transcricao": 23,
+      "sha256": "d583469203cbdcf5619e92366cd6a1fd5823fe3f354c341556f64246ddfc416a"
+    },
+    {
+      "id": 1212,
+      "tema": "Riscos: crédito e ratings",
+      "nivel": 0,
+      "imagens": [
+        1,
+        2
+      ],
+      "transcricao": 23,
+      "sha256": "95db8dadc2aaca7fcba5eba9759682d33c64daf6c8f290cb895f31a4ed9261e0"
+    },
+    {
+      "id": 1213,
+      "tema": "Riscos: crédito e ratings",
+      "nivel": 1,
+      "imagens": [
+        1,
+        2
+      ],
+      "transcricao": 23,
+      "sha256": "75646a3f681f4e134b3b56b71a8f9f0d7f5f777493602efa7373379d27150343"
+    },
+    {
+      "id": 1214,
+      "tema": "Riscos: crédito e ratings",
+      "nivel": 1,
+      "imagens": [
+        1,
+        2
+      ],
+      "transcricao": 23,
+      "sha256": "bd7eac8a030ee5eaff1f20a51d230aa8213a6063345eec1c38795e804ce56fb7"
+    },
+    {
+      "id": 1215,
+      "tema": "Riscos: crédito e ratings",
+      "nivel": 1,
+      "imagens": [
+        1,
+        2
+      ],
+      "transcricao": 23,
+      "sha256": "d97e58d75e578db21b133ebef2b76af4b89d57fafc8768af9286ffe902924685"
+    },
+    {
+      "id": 1216,
+      "tema": "Riscos: crédito e ratings",
+      "nivel": 1,
+      "imagens": [
+        1,
+        2
+      ],
+      "transcricao": 23,
+      "sha256": "3a264c885ab64eaf1714c7c719dd90c4c0f14ca754a677961de11a2d0a8cab1b"
+    },
+    {
+      "id": 1217,
+      "tema": "Riscos: crédito e ratings",
+      "nivel": 2,
+      "imagens": [
+        1,
+        2
+      ],
+      "transcricao": 23,
+      "sha256": "30f64fb43b4d7fdd5f5578899670a240e876d52805711571915bd64bf93661e4"
+    },
+    {
+      "id": 1218,
+      "tema": "Riscos: crédito e ratings",
+      "nivel": 2,
+      "imagens": [
+        1,
+        2
+      ],
+      "transcricao": 23,
+      "sha256": "e356a186e8bed698f4889360f5460146424ef5a95a83d7371578196b3b9b5e44"
+    },
+    {
+      "id": 1219,
+      "tema": "Riscos: crédito e ratings",
+      "nivel": 3,
+      "imagens": [
+        1,
+        2
+      ],
+      "transcricao": 23,
+      "sha256": "bd7b2e6b228702a467ca049f9f32bc6ec63d8ee2ddd543357f153c3343c8837b"
+    },
+    {
+      "id": 1220,
+      "tema": "Riscos: crédito e ratings",
+      "nivel": 3,
+      "imagens": [
+        1,
+        2
+      ],
+      "transcricao": 23,
+      "sha256": "f7bb3e3263848aca06cbf18830d30a19883878901b1f0ae65aac33ef7dec2fd1"
+    },
+    {
+      "id": 1221,
+      "tema": "Riscos: spread de crédito",
+      "nivel": 0,
+      "imagens": [
+        2
+      ],
+      "transcricao": 23,
+      "sha256": "fa2b9a8504fb70080e5e347a570a8c37b1765b27fe3b5e70b72cd8da0842a2e5"
+    },
+    {
+      "id": 1222,
+      "tema": "Riscos: spread de crédito",
+      "nivel": 0,
+      "imagens": [
+        2
+      ],
+      "transcricao": 23,
+      "sha256": "1ef07eec3a5e68b0aa4ecb858c78cfc9dd32b7720c953940900602ece8111577"
+    },
+    {
+      "id": 1223,
+      "tema": "Riscos: spread de crédito",
+      "nivel": 1,
+      "imagens": [
+        2
+      ],
+      "transcricao": 23,
+      "sha256": "a9d90e0d78d095c191c9cf760fedd0b2d7e147827e7e2d641812be900508d9ae"
+    },
+    {
+      "id": 1224,
+      "tema": "Riscos: spread de crédito",
+      "nivel": 1,
+      "imagens": [
+        2
+      ],
+      "transcricao": 23,
+      "sha256": "98cd9446bf2c6526b1813333744608fa783f5f92978ef263721b16ee5a01f256"
+    },
+    {
+      "id": 1225,
+      "tema": "Riscos: spread de crédito",
+      "nivel": 1,
+      "imagens": [
+        2
+      ],
+      "transcricao": 23,
+      "sha256": "584fb75e9bd105382e5f3c5a1c3554e8413f0a7d047bd544fb4df3f260c045c8"
+    },
+    {
+      "id": 1226,
+      "tema": "Riscos: spread de crédito",
+      "nivel": 2,
+      "imagens": [
+        2
+      ],
+      "transcricao": 23,
+      "sha256": "cc1054c928f5937d886ece4d2918e9c284db7e5218cd162044c3f931809e9f72"
+    },
+    {
+      "id": 1227,
+      "tema": "Riscos: spread de crédito",
+      "nivel": 3,
+      "imagens": [
+        2
+      ],
+      "transcricao": 23,
+      "sha256": "8520e61524393b589ff2115ff44a2a3e7b29a9d9d0b9dae749a1943d0fb7c46a"
+    },
+    {
+      "id": 1228,
+      "tema": "Riscos: spread de crédito",
+      "nivel": 3,
+      "imagens": [
+        2
+      ],
+      "transcricao": 23,
+      "sha256": "9e5efb59764acd033e3649c81b7258c772e40f20dd710b2239711d1613579e65"
+    },
+    {
+      "id": 1229,
+      "tema": "Riscos: mercado",
+      "nivel": 0,
+      "imagens": [
+        3
+      ],
+      "transcricao": 23,
+      "sha256": "a2acfd99f0c0bc8eff8475c5fab324c85d15862dc69bc46b647f211787317232"
+    },
+    {
+      "id": 1230,
+      "tema": "Riscos: mercado",
+      "nivel": 0,
+      "imagens": [
+        3
+      ],
+      "transcricao": 23,
+      "sha256": "e19a6a03aa082bf3c89699ab665e8d0215307a0e84bd8edcd7d928c640afe8dc"
+    },
+    {
+      "id": 1231,
+      "tema": "Riscos: mercado",
+      "nivel": 1,
+      "imagens": [
+        3
+      ],
+      "transcricao": 23,
+      "sha256": "cecc29ef0ad1a39d477afeaf3588dd3271f3d2c0bcf3a1cfd8f4d91d30935ae9"
+    },
+    {
+      "id": 1232,
+      "tema": "Riscos: mercado",
+      "nivel": 1,
+      "imagens": [
+        3
+      ],
+      "transcricao": 23,
+      "sha256": "1c658cd6b8056a24cc192b3283cc4a5557f91aa8df937ad683fad7d3965c226c"
+    },
+    {
+      "id": 1233,
+      "tema": "Riscos: mercado",
+      "nivel": 1,
+      "imagens": [
+        3
+      ],
+      "transcricao": 23,
+      "sha256": "3d8556b91ad5d82aafe4104e945f9db1e1914d96887e59ab15e7db9c9fc508b2"
+    },
+    {
+      "id": 1234,
+      "tema": "Riscos: mercado",
+      "nivel": 2,
+      "imagens": [
+        3
+      ],
+      "transcricao": 23,
+      "sha256": "774ff7b80d3ca2e328c2f462b9005780a688054496efbbe72d13e32f61a32e5e"
+    },
+    {
+      "id": 1235,
+      "tema": "Riscos: mercado",
+      "nivel": 2,
+      "imagens": [
+        3
+      ],
+      "transcricao": 23,
+      "sha256": "adfd93e8d711208440feb99a41674eecf88401a27a0ff0c829651de60314f548"
+    },
+    {
+      "id": 1236,
+      "tema": "Riscos: mercado",
+      "nivel": 3,
+      "imagens": [
+        3
+      ],
+      "transcricao": 23,
+      "sha256": "074b242207c2080234af2a1685b3514f08330cc4847bd6885ac1048514f82476"
+    },
+    {
+      "id": 1237,
+      "tema": "Riscos: juros e marcação a mercado",
+      "nivel": 0,
+      "imagens": [
+        4,
+        5
+      ],
+      "transcricao": 23,
+      "sha256": "a51287c61962683e1eb92ef3362790eaf4651d66709e0587018e876877230049"
+    },
+    {
+      "id": 1238,
+      "tema": "Riscos: juros e marcação a mercado",
+      "nivel": 0,
+      "imagens": [
+        4,
+        5
+      ],
+      "transcricao": 23,
+      "sha256": "de4f7189f92406952bd8d4dbcaa443e16dd82c1712a9bfa8b61e94906ae071ae"
+    },
+    {
+      "id": 1239,
+      "tema": "Riscos: juros e marcação a mercado",
+      "nivel": 1,
+      "imagens": [
+        4,
+        5
+      ],
+      "transcricao": 23,
+      "sha256": "1679bec3451ea41a91bb46d04c157ca002b472995db35d3c4221a4549d6b44c4"
+    },
+    {
+      "id": 1240,
+      "tema": "Riscos: juros e marcação a mercado",
+      "nivel": 1,
+      "imagens": [
+        4,
+        5
+      ],
+      "transcricao": 23,
+      "sha256": "d36aed84af1a2b8a8c2054fe0ed2198066d29f3962fac9bcc99e9b067bca55d3"
+    },
+    {
+      "id": 1241,
+      "tema": "Riscos: juros e marcação a mercado",
+      "nivel": 1,
+      "imagens": [
+        4,
+        5
+      ],
+      "transcricao": 23,
+      "sha256": "d7e0d4ac163ef326ee3925692fc41180305480476dd31f9f0110c60ad0c7ab99"
+    },
+    {
+      "id": 1242,
+      "tema": "Riscos: juros e marcação a mercado",
+      "nivel": 1,
+      "imagens": [
+        4,
+        5
+      ],
+      "transcricao": 23,
+      "sha256": "de3fa6c314ea49e84ca593c5459260eb31fe88eea4abfc2d05d0b5b6d4c7d80c"
+    },
+    {
+      "id": 1243,
+      "tema": "Riscos: juros e marcação a mercado",
+      "nivel": 1,
+      "imagens": [
+        4,
+        5
+      ],
+      "transcricao": 23,
+      "sha256": "657cbd7f9abd937f46e5346d63ae2115318d6425ac99bdc239b4cdcd743eeb72"
+    },
+    {
+      "id": 1244,
+      "tema": "Riscos: juros e marcação a mercado",
+      "nivel": 1,
+      "imagens": [
+        4,
+        5
+      ],
+      "transcricao": 23,
+      "sha256": "87ce66ff1be65db44bd84f46385e85db8e0f993da783e5c17e615bf7db3cfad3"
+    },
+    {
+      "id": 1245,
+      "tema": "Riscos: juros e marcação a mercado",
+      "nivel": 2,
+      "imagens": [
+        4,
+        5
+      ],
+      "transcricao": 23,
+      "sha256": "1c36ef4722ff20ccf60fde06b438bfaaaad381cd2de485882647a6860c43b8c2"
+    },
+    {
+      "id": 1246,
+      "tema": "Riscos: juros e marcação a mercado",
+      "nivel": 2,
+      "imagens": [
+        4,
+        5
+      ],
+      "transcricao": 23,
+      "sha256": "5a4be2e784ac5bf22dbc17e8575687297a4a5f854f8eb6f3554db38cb349ef19"
+    },
+    {
+      "id": 1247,
+      "tema": "Riscos: juros e marcação a mercado",
+      "nivel": 2,
+      "imagens": [
+        4,
+        5
+      ],
+      "transcricao": 23,
+      "sha256": "38942b40e5ab77beb1375ea3f74013a8fe42c3bbaf2098796bff310421a306f3"
+    },
+    {
+      "id": 1248,
+      "tema": "Riscos: juros e marcação a mercado",
+      "nivel": 3,
+      "imagens": [
+        4,
+        5
+      ],
+      "transcricao": 23,
+      "sha256": "10b246583abd75b1c9572c1f6740c4863ae9f56b45454867f1d7d48b83a329ca"
+    },
+    {
+      "id": 1249,
+      "tema": "Riscos: juros e marcação a mercado",
+      "nivel": 3,
+      "imagens": [
+        4,
+        5
+      ],
+      "transcricao": 23,
+      "sha256": "7f616dbe848dff4566e2a475d0b769c42ddaaec1a881be385250cc68aff160e6"
+    },
+    {
+      "id": 1250,
+      "tema": "Riscos: juros e marcação a mercado",
+      "nivel": 3,
+      "imagens": [
+        4,
+        5
+      ],
+      "transcricao": 23,
+      "sha256": "31ac157052903c3e83eed264c08abaf8d988672b4980b269a73771f694254f55"
+    }
+  ],
+  "bate_pronto": [
+    {
+      "id": 100601,
+      "fonte_Q": 1201,
+      "sha256": "5488a96bfaa87a062cb9c13e2d9aedcd97dea7ee91b1e59c43bb8a065362b4be"
+    },
+    {
+      "id": 100602,
+      "fonte_Q": 1202,
+      "sha256": "e8ac5b63c4a12540667fcf3b12031bd30a8c6f1fdf0a7a90b8c71ef1c3867113"
+    },
+    {
+      "id": 100603,
+      "fonte_Q": 1203,
+      "sha256": "7131e94cb44ae2447ad674e1def7f5c0d1cf9fa5e9e4728162f6bb745e6dae4b"
+    },
+    {
+      "id": 100604,
+      "fonte_Q": 1204,
+      "sha256": "5cabd9505e937a9645cec792c1f28d918dd7c9ec312592298c28d7076d6e74ba"
+    },
+    {
+      "id": 100605,
+      "fonte_Q": 1207,
+      "sha256": "2e5ad11ba697974889031399b84dbecfd1d8b947fe977edcbd6be22c12b1b18a"
+    },
+    {
+      "id": 100606,
+      "fonte_Q": 1211,
+      "sha256": "037b66b7796c39ec85de97407e6a7982d5f49ac7ba39da7b6ec252cbcdd9af53"
+    },
+    {
+      "id": 100607,
+      "fonte_Q": 1212,
+      "sha256": "6d39fb8366e3a1e01c85fd95a407d29d2e6dbb2c747dffe077b20a9d001d0555"
+    },
+    {
+      "id": 100608,
+      "fonte_Q": 1213,
+      "sha256": "ed75970a8661292ab0f25b0b1d42fb9133bf0f6f94c05ab841f666c27dd4270e"
+    },
+    {
+      "id": 100609,
+      "fonte_Q": 1215,
+      "sha256": "6c64d18e766d3a1555fcd7d1634f3fd7b631b4373ba1b05905003d52b57d8f90"
+    },
+    {
+      "id": 100610,
+      "fonte_Q": 1216,
+      "sha256": "3e04b0be6402bf48840245e9724503b59acc54d5d5627a478c9ed58014e1f5f3"
+    },
+    {
+      "id": 100611,
+      "fonte_Q": 1221,
+      "sha256": "63d646bcb64b7ed451cd435f3434784a1fceb4acaefe49f09ff71141731e0ec6"
+    },
+    {
+      "id": 100612,
+      "fonte_Q": 1222,
+      "sha256": "de0551cc32a9ec227bbad67dc8b0a5afdcc95405486e63294d8182ec6fbf3f4e"
+    },
+    {
+      "id": 100613,
+      "fonte_Q": 1223,
+      "sha256": "592db2668438810701e38fafa1c1bbd7720bf2ebc1eed017309986a84784be18"
+    },
+    {
+      "id": 100614,
+      "fonte_Q": 1226,
+      "sha256": "899bb027bd4dab32743669e7de1be22c38046c3218b1140d5b2ac52900b70896"
+    },
+    {
+      "id": 100615,
+      "fonte_Q": 1229,
+      "sha256": "370503576d292f1a7ac2924f0b0179487fc8bb9819199519a46cd2b9e148c8b5"
+    },
+    {
+      "id": 100616,
+      "fonte_Q": 1236,
+      "sha256": "b023cb8bc2570dc37eded63f5a4aa8a6a1568653117929a85aa015f850044352"
+    },
+    {
+      "id": 100617,
+      "fonte_Q": 1232,
+      "sha256": "11748c1b6d04451bcb0edd05242ef7b20d12506809032cccaf5b48ca080f1dc0"
+    },
+    {
+      "id": 100618,
+      "fonte_Q": 1233,
+      "sha256": "65618e80b7da09ca5a80947b424320d4c66725b621e2187fbd58bfe468e3cc40"
+    },
+    {
+      "id": 100619,
+      "fonte_Q": 1237,
+      "sha256": "b041acc3bab5feb99a2fb94652f24d817780daa9ac0fd5b83e01b1469562dae0"
+    },
+    {
+      "id": 100620,
+      "fonte_Q": 1238,
+      "sha256": "1c25bb4ba27ffe9bddd5dca9f24c796024e5da2c5285f7d46027c6acbfa4cac0"
+    },
+    {
+      "id": 100621,
+      "fonte_Q": 1240,
+      "sha256": "a9cc3095c541db0f07b8a53e2ec1ff1091c7d3ecb0ca3f7f82559a0cca84b8ea"
+    },
+    {
+      "id": 100622,
+      "fonte_Q": 1244,
+      "sha256": "9c743abc9dec2d99c49e59316a4473bcc77369a85da594b2a0f5b7f4d7526443"
+    },
+    {
+      "id": 100623,
+      "fonte_Q": 1243,
+      "sha256": "3c55c715146646aefbd668980ad68a06ee2c13aba5b92969627195cd1838b0bd"
+    },
+    {
+      "id": 100624,
+      "fonte_Q": 1245,
+      "sha256": "81ce17ba66d07abc3d9bb8c80d3602faaa0aabb2d8eaac846b6e2a77f3016db6"
+    },
+    {
+      "id": 100625,
+      "fonte_Q": 1247,
+      "sha256": "605d99b060157436bf844ee77cbc11c9dab25f0dda9c10ac42b587f3fa48d921"
+    }
+  ],
+  "materiais_anteriores_sha256": "8b144ed29fbb06e0c4d8182defc58019f0bfb2288631a3dab6393f207a21a24e",
+  "trilha_sha256": "f6331006dfc4675baf16772c738d1a16a1a7d27ba59ffbec2960b21ea32b0156"
+}

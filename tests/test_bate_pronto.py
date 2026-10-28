@@ -13,8 +13,8 @@ def bank():return json.JSONDecoder().raw_decode((ROOT/'index.html').read_text().
 
 class BateProntoContentTests(unittest.TestCase):
     def test_fifty_per_lesson_with_two_options_and_two_specific_explanations(self):
-        rows=bank();lessons={q[0] for q in load_questions()};self.assertEqual(len(rows),50*len(lessons))
-        self.assertEqual(Counter(r[0] for r in rows),{l:50 for l in lessons})
+        rows=bank();lessons={q[0] for q in load_questions()};self.assertEqual(len(rows),sum(25 if l==13 else 50 for l in lessons))
+        self.assertEqual(Counter(r[0] for r in rows),{l:(25 if l==13 else 50) for l in lessons})
         for r in rows:
             self.assertEqual(len(r),8)
             self.assertNotEqual(r[3].lower(),r[4].lower())
@@ -28,7 +28,7 @@ class BateProntoContentTests(unittest.TestCase):
         self.assertEqual(len(ledger),len(rows))
         for lesson in sorted({r[0] for r in rows}):
             a=[r for r in rows if r[0]==lesson]
-            self.assertEqual(len({r[2] for r in a}),50)
+            self.assertEqual(len({r[2] for r in a}),25 if lesson==13 else 50)
             self.assertGreater(sum('____' in r[2] for r in a),0)
             self.assertLess(sum('____' in r[2] for r in a),25)
         for i,(r,record) in enumerate(zip(rows,ledger)):
@@ -144,7 +144,7 @@ class BateProntoBrowserTests(unittest.TestCase):
             self.page.screenshot(path=f'/tmp/cpa-bate-pronto-{theme}.png',full_page=True)
 
     def test_normal_banks_daily_and_filters_do_not_receive_concept_items(self):
-        self.assertEqual(self.page.evaluate('Q.length'),100*self.page.evaluate('AL.length'))
+        self.assertEqual(self.page.evaluate('Q.length'),self.page.evaluate('AL.reduce((n,a)=>n+(a.internalLessons?50*a.b.length:100),0)'))
         for mode in ['e','h','s']:
             self.page.evaluate('mode=>{cfg={a:0,as:[1,2],n:-1,m:"all",c:10,md:mode,b:0}}',mode)
             self.assertTrue(all(id<100001 for id in self.page.evaluate('mix(sessionPlan())')))

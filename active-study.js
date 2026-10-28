@@ -4,6 +4,12 @@ window.ActiveStudy=(()=>{
  'use strict';
  const fold=value=>String(value??'').replace(/\{\{(?:atencao|negacao)\|([^{}]+)\}\}/g,'$1').replace(/\*\*/g,'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
  const subjects=[
+  ['risk-liquidity','Risco de liquidez',/risco(?:s)? de liquidez|liquidez de financiamento|liquidez de mercado|pressao de caixa/],
+  ['risk-credit','Risco de crédito',/risco(?:s)? de credito|obrigac(?:ao|oes) do emissor|inadimplencia/],
+  ['risk-market','Risco de mercado',/risco(?:s)? de mercado|oscilacoes adversas|desvalorizacao a mercado/],
+  ['risk-rates','Risco de juros',/risco(?:s)? (?:de taxa )?de juros|juros e marcacao|marcacao a mercado|sensibilidade a juros|taxa de desconto|fluxo unico|valores de avaliacao|exemplo prefixado/],
+  ['rating','Ratings',/\bratings?\b|moodys?|moody s|standard.*poor|fitch|qualidade de credito|escala.*credito/],
+  ['creditspread','Spread de crédito',/spread de credito/],
   ['bc','Banco Central',/\b(bacen|bcb|bc|banco central|banco dos bancos|banco do governo|banco emissor)\b/],
   ['cmn','CMN',/\b(cmn|conselho monetario nacional)\b/],['cvm','CVM',/\b(cvm|comissao de valores mobiliarios)\b/],
   ['comoc','Comoc',/\b(comoc|comissao tecnica da moeda e do credito)\b/],['secretaria','Secretaria-Executiva',/\bsecretaria executiva\b|^secretaria$/],
@@ -76,6 +82,9 @@ window.ActiveStudy=(()=>{
   ['structure',/singular|cooperativas? centrais|^central$|^centrais$|confederacao|piramide|carteiras|controle acionario|acionistas|minimo.*carteira/]
  ];
  const topicRules=[
+  [/^Riscos: liquidez/,['risk-liquidity']],[/^Riscos: crédito e ratings/,['risk-credit','rating']],
+  [/^Riscos: spread/,['creditspread']],[/^Riscos: mercado/,['risk-market']],
+  [/^Riscos: juros/,['risk-rates']],
   [/^IP:/,['ip']],[/^Fintechs:.*SCR/,['scd','sep','scr']],[/^Fintechs:.*SCD/,['scd']],[/^Fintechs:.*SEP/,['sep']],[/^Fintechs:/,['scd','sep','fintech']],
   [/^SPB:.*STR/,['str']],[/^SPB:.*SPI/,['spi']],[/^SPB:.*sistemas e t.tulos/,['selicsystem','otherpayments']],[/^SPB:.*infraestruturas/,['imf']],[/^SPB:.*arranjo/,['arrangement']],[/^SPB:/,['spb']],
   [/^ANBIMA:/,['anbima']],[/^Garantias:.*DPGE/,['dpge']],[/^Garantias:.*FGCoop/,['fgcoop']],[/^Garantias:/,['fgc']],[/^Liberdade:/,['freedom']],
@@ -87,6 +96,12 @@ window.ActiveStudy=(()=>{
   [/^Cupom:.*retorno/,['cupom']],[/^Cupom:/,['swap']],[/^Taxas:.*cota/,['quotation']],[/^Taxas:.*real/,['realfx']],[/^Taxas:/,['fxflows']]
  ];
  const microRules={
+  'risk-liquidity':[['financing',/financiamento|saques?|caixa|honrar|pagar|patrimonio/],['trading',/liquidez de mercado|negoci|vend|convert|convers|comprador|desagio|desconto significativo|valor justo/],['interaction',/descumpr|inadimpl|credor|coexist|intera/]],
+  'risk-credit':[['payment',/juros|principal|pagamento|descumpr|inadimpl|obrigac/],['analysis',/capacidade|qualidade|rating|remuneracao|compensacao|retorno|porte|patrimonio/]],
+  'risk-market':[['variables',/precos|preco|juros|cambio|indices|acoes/],['valuation',/valor|desvalori|venda|realiza|perda|queda/],['exposure',/ativos|passivos|exposicao|divida|moeda/]],
+  'risk-rates':[['pricing',/taxa de desconto|marcacao|valor presente|preco|precos|juros.*sobe|juros.*cai|taxa.*maior|taxa.*menor/],['coupon',/cupom|cupons|periodic/],['maturity',/prazo|vencimento|periodo|semestre/],['flows',/fluxos?|pagamento|recebimento|1 123|1 060|1 040|1 080/],['sensitivity',/sensibilidade|taxa contratada|rendimento/]],
+  rating:[['scale',/aaa|aa1|baa|bbb|notac|escala|faixa|classificac/],['limits',/garant|liquidez|mercado|preco|metodologia|revist|risco zero/],['role',/avalia|qualidade|agencia|capacidade|credito/]],
+  creditspread:[['definition',/diferenca|diferencial|compar|referencia|spread/],['calculation',/percentuais|calculo|calcular|ao ano|14|10|4/],['limits',/realizado|garant|liquidez|condicoes|moeda|prazo|indexador/]],
   securities:[['shares',/\bacoes\b|\bacao\b/],['debentures',/debenture/],['subscription',/bonus de subscricao/],['notes',/nota comercial|notas comerciais|commercial paper/],['funds',/cotas? de fundos?|fundos? de investimento/],['receipts',/certificados? de deposito|recibos? de deposito|cedulas? de debentures/],['derivatives',/derivativo|futuros?|opcoes|subjacente/],['collective',/investimento coletivo|oferta publica|esforco de terceiros/],['public',/divida publica|divida federal|divida municipal|divida estadual/],['bank',/titulo cambial|titulos cambiais|instituicao financeira|instituicoes financeiras/]],
   bc:[['aims',/objetivo|estabilidade de precos|pleno emprego|flutuacoes.*atividade/],['emission',/emiss|emitir|emite|moeda papel|moeda metalica|divida propria|titulos proprios/],['printing',/imprime|impressao|casa da moeda|producao fisica|produzir cedulas/],['bankofbanks',/banco dos bancos|redesconto|emprestimo.*instituic|recolhimento|compulsorio/],['governmentbank',/banco do governo|reservas internacionais|reservas oficiais|depositario|ouro/],['supervision',/supervisor|fiscaliza|vigilan|inspec/],['authorization',/autoriz|instala|transfer.*sede|fusao|fundida|incorpor|transform|controle acionario|agencia.*exterior/],['monetary',/politica monetaria|operacoes monetarias|compra.*venda.*titulos|compras.*vendas.*titulos/],['exchange',/cambio|capitais estrangeiros/],['credit',/controle do credito/],['secretariat',/secretaria|orcamento monetario|orcamentos monetarios/]],
   cmn:[['aims',/objetivo|liquidez e solvencia|desenvolvimento harmonico|coordenar.*politicas/],['credit',/credito|juros|comissoes|descontos/],['exchange',/cambio|balanco de pagamentos|emprestimo externo/],['budget',/orcamento monetario|orcamentos monetarios/],['accounting',/contabilidade|estatistica/],['capital',/bolsa|corretor|valores mobiliarios/]],
@@ -117,6 +132,9 @@ window.ActiveStudy=(()=>{
  function reduce(ids,lesson){
   let out=unique(ids);
   const remove=id=>out=out.filter(x=>x!==id);
+  if(out.includes('risk-liquidity'))remove('liquidity');
+  if(out.some(id=>['risk-credit','rating','creditspread'].includes(id)))remove('credit');
+  if(out.includes('creditspread'))remove('spread');
   if(out.includes('coopbank'))remove('coop');
   if(lesson===8&&out.includes('imf'))remove('tr');
   if(out.includes('insurancebroker'))remove('brokers');
@@ -176,6 +194,13 @@ window.ActiveStudy=(()=>{
   if(id===328||[287,290,321].includes(id))parts=['functions'];
   const supplemental=found(body).filter(o=>['underwriting','pledge','margin','fiduciary','pgbl','insurancecontract'].includes(o));
   owners.push(...supplemental);
+  // Negociabilidade do ativo é o mesmo conceito nas aulas 1 e 13;
+  // necessidade de caixa para obrigações permanece uma dimensão distinta.
+  if(owners.includes('liquidity'))owners.push('risk-liquidity');
+  if(owners.includes('risk-liquidity')&&/negoci|vend|convert|convers|valor justo/.test(fold(body)))owners.push('liquidity');
+  if(lesson===13&&owners.includes('creditspread')&&/banco.*capta|intermediacao|spread bancario/.test(fold(body)))owners.push('spread');
+  // Relações secundárias exigem o nome do risco no enunciado/correta.
+  owners.push(...found(body).filter(o=>['risk-liquidity','risk-credit','risk-market','risk-rates'].includes(o)));
   if(lesson===9&&/comparacoes institucionais/.test(t))owners=reduce(found(body),lesson).filter(o=>['anbima','apimec','ancord','planejar'].includes(o));
   return {id,lesson,owners:unique(owners),facets:unique(parts),micro:microFacets(owners,body),topic,stem};
  }
@@ -205,6 +230,31 @@ window.ActiveStudy=(()=>{
   const hinted=reduce(ownerHints.flatMap(found),lesson);
   if(hinted.length&&(lockOwners||!owners.some(o=>orgs.has(o))||hinted.some(o=>orgs.has(o))))owners=hinted;
   else if(whole&&!owners.some(o=>orgs.has(o))&&!reduce(found(label),lesson).length)owners=reduce([...owners,...found(text)],lesson);
+  if(lesson===13){
+   const riskIds=new Set(['risk-liquidity','risk-credit','risk-market','risk-rates','rating','creditspread','spread']);
+   const convert=ids=>unique(ids.map(id=>({liquidity:'risk-liquidity',credit:'risk-credit',markets:'risk-market'}[id]||id)).filter(id=>riskIds.has(id)));
+   const anchor=value=>{const t=fold(value);
+    if(/^spread bancario e spread de credito/.test(t))return ['spread','creditspread'];
+    if(/^spread de credito/.test(t))return ['creditspread'];
+    if(/^ratings?\b|^agencias? de (?:risco|rating)/.test(t))return ['rating'];
+    if(/^liquidez\b|^duas perspectivas da liquidez|^da pressao de caixa/.test(t))return ['risk-liquidity'];
+    if(/^credito$|^qualidade de credito e compensacao/.test(t))return ['risk-credit'];
+    if(/^mercado$|^risco de mercado/.test(t))return ['risk-market'];
+    if(/^retorno exigido/.test(t))return ['risk-credit'];
+    if(/^patrimonio.*caixa|^desconto grande|^financiamento.*caixa/.test(t))return ['risk-liquidity'];
+    if(/^juros e principal/.test(t))return ['risk-credit','risk-market'];
+    if(/^cupom\b|^vencimento$|^prazo (?:restante|original)|^taxa (?:alta|contratada)|^antes de chamar de perda|^r 1 060.*cupom|^juros compostos|^fluxo prefixado|^desconto do fluxo/.test(t))return ['risk-rates'];
+    if(/^juros\b|^sensibilidade\b|^fluxo unico|^exemplo prefixado|^marcacao aos|^bases de comparacao dos exemplos/.test(t))return ['risk-rates'];
+    return null;
+   };
+   const hintedAnchor=lockOwners?unique(ownerHints.flatMap(h=>anchor(h)||[])):[];
+   const parentAnchor=[...parents].reverse().map(anchor).find(Boolean);
+   const primary=hintedAnchor.length?hintedAnchor:parentAnchor||anchor(label);
+   owners=primary||convert(owners);
+   if(!owners.length){for(const h of headings){const ids=convert(reduce(found(h),lesson));if(ids.length){owners=ids;break}}}
+   if(!owners.length)owners=convert(reduce(found(text),lesson));
+   if(whole&&!primary)owners=unique([...owners,...convert(reduce(found(text),lesson))]);
+  }
   let micro=microFacets(owners,label+' '+text);
   if(!micro.length)micro=microFacets(owners,[...parents].reverse().find(p=>microFacets(owners,p).length)||'');
   return {owners:unique(owners),facets:unique(fs),micro};

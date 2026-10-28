@@ -103,7 +103,7 @@ class ActiveStudy(unittest.TestCase):
             self.click('Retomar sessão');self.assertEqual(self.page.evaluate('view'),'q');self.assertEqual(self.page.evaluate(stable),before)
 
     def test_all_material_types_and_trail_have_actions_and_valid_exact_counts(self):
-        for lesson in range(1,13):
+        for lesson in range(1,self.page.evaluate("AL.length")+1):
             self.page.evaluate("n=>{view='t';tr=n;go()}",lesson)
             self.assertEqual(self.page.locator('.acb>.active-study-action').count(),self.page.locator('.lesson-section .pt').count())
             for kind in ['mapa','diag','tab','tl','fc','geral']:
@@ -113,8 +113,8 @@ class ActiveStudy(unittest.TestCase):
                 for node in self.page.locator(selectors[kind]).all():self.assertEqual(node.locator(':scope>.active-study-action').count(),1,(lesson,kind))
                 self.assertTrue(self.page.locator('.active-study-action').evaluate_all("es=>es.every(e=>Number(e.querySelector('.active-study-count').textContent.match(/\\d+/)[0])===Number(e.querySelector('button').getAttribute('aria-label').match(/: (\\d+) dispon/)[1]))"))
         audit=self.page.evaluate('ActiveStudy.audit()');questions=self.page.evaluate('ActiveStudy.bank()')
-        self.assertEqual(len(questions),1200);self.assertTrue(all(q['owners'] for q in questions))
-        self.assertTrue(all(len(e['ids'])==len(set(e['ids'])) and all(1<=i<=1200 for i in e['ids']) for e in audit))
+        self.assertEqual(len(questions),self.page.evaluate("Q.length"));self.assertTrue(all(q['owners'] for q in questions))
+        self.assertTrue(all(len(e['ids'])==len(set(e['ids'])) and all(1<=i<=len(questions) for i in e['ids']) for e in audit))
         self.assertTrue(any(not e['ids'] for e in audit))
         self.assertEqual(self.page.locator('.active-study-button:disabled').count(),sum(not self.source_entry(box)['ids'] for box in self.page.locator('.active-study-action').all()))
         Path('/tmp/cpa-active-study/final-links.json').write_text(json.dumps(audit,ensure_ascii=False))

@@ -42,9 +42,9 @@ class ExamGuide(unittest.TestCase):
             self.assertEqual(row.locator('.exam-importance').inner_text(),importance)
             self.assertEqual(row.locator('.exam-detail').inner_text(),detail)
             self.assertEqual(row.locator('.exam-block,.exam-no-block').count(),0)
-        self.assertEqual(self.page.locator('.exam-planned').count(),1)
-        self.assertIn('não cadastrada',self.page.locator('[data-exam-lesson="13"]').inner_text())
-        self.assertEqual(self.page.evaluate('[AL.length,Q.length,BP.length]'),[12,1200,600])
+        self.assertEqual(self.page.locator('.exam-planned').count(),0)
+        self.assertNotIn('não cadastrada',self.page.locator('[data-exam-lesson="13"]').inner_text())
+        self.assertEqual(self.page.evaluate('[AL.length,Q.length,BP.length]'),[13,1250,625])
         self.page.locator('.exam-reference-notes summary').click()
         self.assertIn('não representa uma conferência independente de edital',self.page.locator('.exam-reference-notes').inner_text())
 
@@ -64,7 +64,9 @@ class ExamGuide(unittest.TestCase):
         search.fill('<img src=x onerror=alert(1)>');self.assertEqual(self.lessons(),[])
         self.assertEqual(self.page.locator('.exam-guide-page img').count(),0)
         search.press('Escape');self.assertEqual(len(self.lessons()),13)
-        self.page.evaluate("AL.push({t:'Aula 13: Métricas'});refreshExamGuide()")
+        self.page.evaluate("window.savedFinalLesson=AL.pop();refreshExamGuide()")
+        self.assertEqual(self.page.locator('.exam-planned').count(),1)
+        self.page.evaluate("AL.push(window.savedFinalLesson);refreshExamGuide()")
         self.assertEqual(len(self.lessons()),13);self.assertEqual(self.page.locator('.exam-planned').count(),0)
 
     def test_sort_keeps_original_priority_and_choices_survive_theme_and_navigation(self):

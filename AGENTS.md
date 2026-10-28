@@ -22,8 +22,8 @@ completo para os focos temáticos e justificativas de cada linha.
   filtros de bloco/cadastro nem rótulos de bloco na tabela. Ordenar somente por
   prioridade ou aula (1–13), sem opção Tema. A posição não
   muda ao filtrar; temas da tabela não renomeiam aulas já cadastradas.
-- Aula 13 é prevista no quadro, ainda sem conteúdo; não a crie apenas por existir
-  nessa referência. A interface verifica o cadastro real ao exibir o aviso.
+- Aula 13 tem a primeira aula interna de Riscos Financeiros recebida em 28/10/2026.
+  As demais aguardam fontes; o guia verifica o cadastro real ao exibir o aviso.
 - Preserve Q/BP/AL/MAT, H, cfg, filtros de outras telas, sessão e relógio. Os
   blocos deste guia não substituem os blocos internos das aulas. Sem API paga.
 - Ao alterar o guia, execute `tests/test_exam_guide.py`, regressões de navegação
@@ -380,19 +380,22 @@ completude, qualidade de um macete ou validade jurídica.
 
 ## Aula 13 — bloco final com aulas internas (28/10/2026)
 
-Pedido futuro: registrar agora, aguardar slides, transcrições e resumos. A Aula
-13 será um bloco final, composto por aulas internas específicas das seis aulas
-curtas do professor. O usuário quer praticar/simular o bloco inteiro e também
-selecionar aulas internas, individualmente ou em conjunto.
+A primeira aula interna foi recebida em 28/10/2026: transcrição da aula 23,
+seis imagens, assunto **Riscos Financeiros**. Está cadastrada como Aula 1 dentro
+de **Aula 13: Bloco Final**. As outras cinco aulas aguardam fontes; não criar
+placeholders ou conteúdo presumido.
 
-Cada aula interna terá **menos de 100 questões**; a quantidade ainda não foi
-definida e será avaliada com o conteúdo. Esta é uma exceção expressa à quota
-normal de 100 por aula: não impor 100 por subaula nem ao bloco inteiro. Manter
-as proporções de dificuldade acordadas, com arredondamento para totais menores.
-Não inventar quantidades de Bate-pronto ou novos pesos. Não criar placeholders
-ou questões antes de receber as fontes. Preservar as doze aulas e seus IDs.
-Este pedido substitui o plano de decidir por duas ou três aulas externas.
-Detalhes: `docs/aula-13-planejamento.md`.
+Pedido FINAL explícito: metade do padrão **por aula interna**: **50 questões
+(10 fáceis, 20 médias, 10 difíceis, 10 Hardcore), 25 Bate-pronto e 25 flashcards**.
+Estudo e simulado compartilham as 40 normais. Flashcards: arredondar a proporção
+usual; primeira interna 9/8/8. Esta exceção substitui o volume indefinido e a
+quota normal de 100. Não impor 100 ao bloco inteiro nem novos pesos temáticos.
+
+Leitura/material por aula interna ou bloco completo; praticar/simular o conjunto
+e selecionar uma ou mais aulas internas. Preservar as doze aulas, IDs e histórico.
+Cruzar fontes e conferir feedbacks, siglas, pistas gramaticais e cálculos.
+Detalhes: `docs/aula-13-planejamento.md`, `docs/aula-13.md` e cobertura JSON.
+Rodar também `tests/test_aula13.py` ao alterar este bloco.
 
 ## Novas aulas com vários blocos
 

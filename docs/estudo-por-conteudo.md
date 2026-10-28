@@ -138,3 +138,14 @@ anterior: **nenhum conjunto de IDs alterado**. Os testes de geometria confirmam
 que a tabela do quadro geral e os nós dos diagramas conservam suas dimensões;
 o mapa recebe apenas o controle compacto por ramificação. Conferência visual
 em dois temas e no computador/celular concluída.
+
+## Aula 13: riscos financeiros
+
+Em 28/10/2026, o cadastro ganhou assuntos de risco de liquidez, crédito,
+mercado, juros, ratings e spread de crédito. A correspondência considera
+financiamento/negociação, pagamento, avaliação, sensibilidade, cupom e prazo.
+Os grupos do mapa herdam o assunto do quadro: Mercado dentro de Liquidez é
+liquidez de mercado; Cupom dentro de Sensibilidade pertence aos juros.
+Mercado de crédito não equivale automaticamente a risco de crédito. Exemplos
+numéricos identificam o conceito no próprio texto, sem relações por ID fixo.
+Os controles compactos e o seletor Por conceito permanecem iguais.

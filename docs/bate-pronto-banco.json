@@ -4149,6 +4149,181 @@
       "tema": "Taxas: juros, risco e comércio",
       "fonte_Q": 1181,
       "modelo": "direto"
+    },
+    {
+      "id": 100601,
+      "aula": 13,
+      "tema": "Riscos: liquidez",
+      "fonte_Q": 1201,
+      "modelo": "direto"
+    },
+    {
+      "id": 100602,
+      "aula": 13,
+      "tema": "Riscos: liquidez",
+      "fonte_Q": 1202,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100603,
+      "aula": 13,
+      "tema": "Riscos: liquidez",
+      "fonte_Q": 1203,
+      "modelo": "direto"
+    },
+    {
+      "id": 100604,
+      "aula": 13,
+      "tema": "Riscos: liquidez",
+      "fonte_Q": 1204,
+      "modelo": "direto"
+    },
+    {
+      "id": 100605,
+      "aula": 13,
+      "tema": "Riscos: liquidez",
+      "fonte_Q": 1207,
+      "modelo": "direto"
+    },
+    {
+      "id": 100606,
+      "aula": 13,
+      "tema": "Riscos: crédito e ratings",
+      "fonte_Q": 1211,
+      "modelo": "direto"
+    },
+    {
+      "id": 100607,
+      "aula": 13,
+      "tema": "Riscos: crédito e ratings",
+      "fonte_Q": 1212,
+      "modelo": "direto"
+    },
+    {
+      "id": 100608,
+      "aula": 13,
+      "tema": "Riscos: crédito e ratings",
+      "fonte_Q": 1213,
+      "modelo": "direto"
+    },
+    {
+      "id": 100609,
+      "aula": 13,
+      "tema": "Riscos: crédito e ratings",
+      "fonte_Q": 1215,
+      "modelo": "direto"
+    },
+    {
+      "id": 100610,
+      "aula": 13,
+      "tema": "Riscos: crédito e ratings",
+      "fonte_Q": 1216,
+      "modelo": "direto"
+    },
+    {
+      "id": 100611,
+      "aula": 13,
+      "tema": "Riscos: spread de crédito",
+      "fonte_Q": 1221,
+      "modelo": "direto"
+    },
+    {
+      "id": 100612,
+      "aula": 13,
+      "tema": "Riscos: spread de crédito",
+      "fonte_Q": 1222,
+      "modelo": "direto"
+    },
+    {
+      "id": 100613,
+      "aula": 13,
+      "tema": "Riscos: spread de crédito",
+      "fonte_Q": 1223,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100614,
+      "aula": 13,
+      "tema": "Riscos: spread de crédito",
+      "fonte_Q": 1226,
+      "modelo": "direto"
+    },
+    {
+      "id": 100615,
+      "aula": 13,
+      "tema": "Riscos: mercado",
+      "fonte_Q": 1229,
+      "modelo": "direto"
+    },
+    {
+      "id": 100616,
+      "aula": 13,
+      "tema": "Riscos: mercado",
+      "fonte_Q": 1236,
+      "modelo": "direto"
+    },
+    {
+      "id": 100617,
+      "aula": 13,
+      "tema": "Riscos: mercado",
+      "fonte_Q": 1232,
+      "modelo": "direto"
+    },
+    {
+      "id": 100618,
+      "aula": 13,
+      "tema": "Riscos: mercado",
+      "fonte_Q": 1233,
+      "modelo": "direto"
+    },
+    {
+      "id": 100619,
+      "aula": 13,
+      "tema": "Riscos: juros e marcação a mercado",
+      "fonte_Q": 1237,
+      "modelo": "direto"
+    },
+    {
+      "id": 100620,
+      "aula": 13,
+      "tema": "Riscos: juros e marcação a mercado",
+      "fonte_Q": 1238,
+      "modelo": "direto"
+    },
+    {
+      "id": 100621,
+      "aula": 13,
+      "tema": "Riscos: juros e marcação a mercado",
+      "fonte_Q": 1240,
+      "modelo": "direto"
+    },
+    {
+      "id": 100622,
+      "aula": 13,
+      "tema": "Riscos: juros e marcação a mercado",
+      "fonte_Q": 1244,
+      "modelo": "direto"
+    },
+    {
+      "id": 100623,
+      "aula": 13,
+      "tema": "Riscos: juros e marcação a mercado",
+      "fonte_Q": 1243,
+      "modelo": "direto"
+    },
+    {
+      "id": 100624,
+      "aula": 13,
+      "tema": "Riscos: juros e marcação a mercado",
+      "fonte_Q": 1245,
+      "modelo": "direto"
+    },
+    {
+      "id": 100625,
+      "aula": 13,
+      "tema": "Riscos: juros e marcação a mercado",
+      "fonte_Q": 1247,
+      "modelo": "direto"
     }
   ],
   "escopo": "450 itens conceituais, 50 por aula, baseados no conteúdo já revisado de Q e nos materiais existentes. Sem certificação normativa independente."

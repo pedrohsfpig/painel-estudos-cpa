@@ -1,32 +1,22 @@
-# Aula 13 — planejamento registrado em 28/10/2026
+# Aula 13 — bloco final com aulas internas
 
-Orientação futura do usuário; **aguardar os conteúdos antes de cadastrar aulas ou
-questões**. O conjunto corresponde às seis aulas curtas do curso do professor,
-cujas fontes completas ainda serão enviadas (slides, transcrições e resumos).
+Orientação atualizada em 28/10/2026, após recebimento da primeira aula.
 
-- Aula 13 será um **bloco final**, contendo **aulas internas específicas**,
-  preservando a separação dos assuntos. “Bloco final” é o nome provisório; o
-  nome definitivo será ajustado ao conteúdo recebido.
-- Cada aula interna terá uma quantidade de questões **menor que 100**.
-  A quantidade ainda não foi definida: avaliar cobertura e variedade de cada
-  conteúdo, sem fixar números por suposição nem repetir questões para completar
-  uma quota. Não impor automaticamente 100 ao bloco inteiro.
-- Permitir praticar/simular **todo o bloco** e selecionar **aulas internas**,
-  individualmente ou em conjunto. Preservar a origem de cada questão e oferecer
-  revisão específica da aula interna.
-- Manter as proporções de dificuldades já combinadas, com arredondamento
-  proporcional para totais menores; não definir agora novos pesos temáticos,
-  quantidades de Bate-pronto ou uma divisão de seis vídeos sem analisar as fontes.
-- Cruzar slides, transcrições e resumos. Risco financeiro, crédito privado,
-  fluxo de pagamentos, prazo médio de vencimento, retornos histórico/esperado e
-  classificação de investimentos foram citados como assuntos iniciais, e não
-  como cobertura completa já confirmada das seis aulas.
-- Esta orientação substitui a ideia anterior de decidir entre criar duas ou
-  três aulas externas: a organização desejada agora é um bloco final com aulas
-  internas. Preserve as doze aulas existentes e seus IDs, questões e histórico.
-- A relevância informada pelo usuário é referência de planejamento; não a
-  apresente como frequência oficial de prova verificada de forma independente.
-
-Esta etapa registra a memória de planejamento, sem criar placeholders, alterar
-o sorteio diário ou modificar os bancos existentes. As quantidades e a divisão
-pedagógica serão concretizadas quando os materiais forem recebidos.
+- Uma entrada **Aula 13: Bloco Final**, com aulas internas separadas por assunto.
+- Cada aula interna: **50 questões**, sendo 10 fáceis, 20 médias, 10 difíceis
+  e 10 Hardcore, **25 Bate-pronto e 25 flashcards**. Esta instrução explícita
+  substitui a quantidade anteriormente indefinida e reduz à metade o padrão.
+- Estudo e simulado usam o mesmo banco normal (40); Hardcore tem 10 próprios.
+  Flashcards preservam proporção por arredondamento; na primeira aula 9/8/8.
+- Praticar/simular o bloco inteiro ou aulas internas individualmente/em conjunto.
+  Não impor 100 por aula interna nem 100 ao bloco inteiro. Não aplicar pesos
+  temáticos da prova aos sorteios sem pedido.
+- Primeira aula recebida e cadastrada: **Aula 1: Riscos Financeiros**, baseada
+  na transcrição da aula 23 e seis imagens. Ver `aula-13.md` e cobertura JSON.
+- As outras cinco aulas curtas do professor ainda aguardam slides/transcrições.
+  Não antecipar temas, criar placeholders ou preencher questões sem fontes.
+- Cruzar as fontes, preservar cálculos e condições, evitar pistas gramaticais,
+  siglas que revelem resposta e distratores sem contexto. Todas as alternativas
+  de Q e ambas do Bate-pronto têm justificativa individual.
+- Preservar as doze aulas anteriores, seus IDs e o histórico. O usuário atribui
+  alta relevância a esse bloco; isso não é estatística oficial verificada.
