@@ -1,0 +1,1080 @@
+{
+  "data": "2026-10-28",
+  "pedido": "Priorizar conceitos de risco e marcação a mercado; explicitar causas, usar cenários e valores próprios e evitar contas mecânicas como finalidade da questão.",
+  "questoes": [
+    {
+      "id": 1206,
+      "antes": [
+        13,
+        "Riscos: liquidez",
+        1,
+        "Um banco atende saques vendendo títulos às pressas com grande deságio. Quais dimensões de liquidez aparecem no encadeamento descrito?",
+        "Necessidade de caixa e dificuldade de vender sem perda relevante.",
+        "Descumprimento contratual e queda comprovada do rating soberano.",
+        "Oscilação cambial e elevação comprovada da taxa básica de juros.",
+        "Redução de cupom e alongamento comprovado do vencimento dos títulos.",
+        "Os saques pressionam a liquidez de financiamento; a venda com deságio mostra a liquidez de mercado. As duas dimensões podem interagir, pois obter caixa rapidamente pode exigir perdas na negociação.",
+        0,
+        "Observe a causa da venda e a condição necessária para executá-la.",
+        [
+          "Os saques pressionam a liquidez de financiamento; a venda com deságio mostra a liquidez de mercado. As duas dimensões podem interagir, pois obter caixa rapidamente pode exigir perdas na negociação.",
+          "Atender os saques não é um descumprimento contratual. Também não há informação sobre rating soberano; esses elementos acrescentariam eventos que o caso não descreve.",
+          "A venda urgente pode ocorrer sem mudança do câmbio ou dos juros. Essas variáveis seriam relevantes se fossem a causa informada da reprecificação, o que não aconteceu aqui.",
+          "Cupom e vencimento são características do título. O caso não informa alteração dessas condições, mas uma pressão de caixa e uma negociação desfavorável no mercado."
+        ]
+      ],
+      "depois": [
+        13,
+        "Riscos: liquidez",
+        1,
+        "Um banco precisa atender saques hoje e vende títulos com deságio por haver poucas ofertas de compra. Na ordem necessidade de caixa e condição de venda, quais dimensões de liquidez estão presentes?",
+        "Financiamento e mercado.",
+        "Mercado e financiamento.",
+        "Financiamento e financiamento.",
+        "Mercado e mercado.",
+        "Atender saques exige obter caixa no prazo: liquidez de financiamento. Negociar apenas com deságio por pouca demanda caracteriza liquidez de mercado. As duas dimensões podem aparecer na mesma situação.",
+        0,
+        "Classifique primeiro a obrigação de pagar e depois a possibilidade de negociar.",
+        [
+          "Atender saques exige obter caixa no prazo: liquidez de financiamento. Negociar apenas com deságio por pouca demanda caracteriza liquidez de mercado. As duas dimensões podem aparecer na mesma situação.",
+          "A ordem foi invertida. A necessidade de pagar os saques é de financiamento; o desconto exigido para negociar os ativos pertence à liquidez de mercado.",
+          "A primeira classificação corresponde à necessidade de caixa. Na segunda etapa, o dado relevante é o preço e a demanda para vender o ativo, dimensão de mercado da liquidez.",
+          "A segunda classificação corresponde ao deságio de negociação. Na primeira etapa, o banco precisa de recursos disponíveis para pagar saques, dimensão de financiamento."
+        ]
+      ],
+      "hash_antes": "5f9dc3e08c78fff62163a167e9cc1cab53bcca7c648c0ffcb1535b67e907a6e2",
+      "hash_depois": "d48d9ecc91643916665b54ba4dd2750be504c8539278c50d587b1027785d0bcc",
+      "criterio": "Substituir fatos não informados por alternativas da mesma natureza e distinguir duas dimensões de liquidez."
+    },
+    {
+      "id": 1207,
+      "antes": [
+        13,
+        "Riscos: liquidez",
+        2,
+        "Uma carteira tem títulos de boa qualidade de crédito, mas poucos compradores. O investidor precisa sair imediatamente e aceita deságio. Qual conclusão respeita as duas análises?",
+        "Boa qualidade de crédito pode coexistir com baixa liquidez.",
+        "Boa qualidade de crédito assegura negociação ao valor justo.",
+        "Poucos compradores comprovam que o emissor já está inadimplente.",
+        "O deságio permite concluir que houve elevação dos juros de mercado.",
+        "Crédito trata do cumprimento das obrigações do emissor; liquidez trata da conversão do ativo em dinheiro. Uma avaliação favorável do pagamento não garante demanda imediata para quem deseja vender.",
+        0,
+        "Qualidade de pagamento e facilidade de negociação são dimensões distintas.",
+        [
+          "Crédito trata do cumprimento das obrigações do emissor; liquidez trata da conversão do ativo em dinheiro. Uma avaliação favorável do pagamento não garante demanda imediata para quem deseja vender.",
+          "Rating ou análise favorável de crédito não são compromisso de recompra ao valor justo. A negociação depende também de compradores, volume e prazo disponível para executar a venda.",
+          "Ausência de compradores imediatos não comprova inadimplência. Pode haver um mercado secundário pouco ativo mesmo quando os juros e o principal são pagos conforme o contrato.",
+          "Um deságio pode refletir pressão de venda e baixa demanda, entre outras causas. Sem informação sobre juros, não se pode atribuir automaticamente a perda a uma mudança da taxa de desconto."
+        ]
+      ],
+      "depois": [
+        13,
+        "Riscos: liquidez",
+        2,
+        "Uma gestora tem títulos de boa qualidade de crédito, mas recebe poucas ofertas para vender um lote hoje. Para avaliar a saída no prazo necessário, qual informação responde mais diretamente ao problema observado?",
+        "Volume das ofertas compradoras e desconto necessário para negociar o lote.",
+        "Histórico de pagamento do emissor e avaliações anteriores de crédito.",
+        "Taxa prefixada contratada e montante do resgate previsto no título.",
+        "Variação da taxa de desconto e sensibilidade da cotação aos juros.",
+        "Volume de ordens, prazo e desconto necessário mostram a liquidez de mercado do lote. A boa avaliação de crédito não informa quanto será possível vender hoje próximo ao valor justo.",
+        0,
+        "Diferencie capacidade de pagar, sensibilidade do preço e possibilidade de negociar.",
+        [
+          "Volume de ordens, prazo e desconto necessário mostram a liquidez de mercado do lote. A boa avaliação de crédito não informa quanto será possível vender hoje próximo ao valor justo.",
+          "Histórico e avaliações ajudam a examinar a capacidade de pagar a dívida. Essa análise é relevante, mas não mostra se há compradores suficientes para a saída no prazo.",
+          "Taxa e resgate descrevem o fluxo contratado. Esses dados não substituem a observação da demanda para negociar o lote antes do vencimento.",
+          "Esses dados permitem analisar o risco de juros e a reprecificação do título. O problema observado é a quantidade de ofertas disponíveis para a venda imediata."
+        ]
+      ],
+      "hash_antes": "b5271d92445a52911a6db645427c93dd39754e1a4d2fc6e250971f5101bacbe0",
+      "hash_depois": "e038cb0e03e3fa0106bfe169e787ebe216d6d779afad83e68876dad7a50c895b",
+      "criterio": "Cobrar a informação necessária à análise de liquidez, com distratores plausíveis de outros riscos."
+    },
+    {
+      "id": 1222,
+      "antes": [
+        13,
+        "Riscos: spread de crédito",
+        0,
+        "Uma dívida privada rende 14% ao ano e a referência pública comparável rende 10% ao ano. Qual é o diferencial entre essas taxas?",
+        "4 pontos percentuais.",
+        "24 pontos percentuais.",
+        "40 pontos percentuais.",
+        "10 pontos percentuais.",
+        "O diferencial é 14% − 10% = 4 pontos percentuais. A unidade expressa a diferença entre taxas, sem significar quatro por cento de ganho assegurado ao investidor.",
+        0,
+        "Diferença entre taxas é expressa em pontos percentuais.",
+        [
+          "O diferencial é 14% − 10% = 4 pontos percentuais. A unidade expressa a diferença entre taxas, sem significar quatro por cento de ganho assegurado ao investidor.",
+          "24 pontos percentuais resultam de somar 14 e 10. A soma reúne as duas taxas, mas não informa quanto uma excede a outra.",
+          "40 é o aumento relativo de 14 sobre 10 em porcentagem: (14/10 − 1) × 100. Isso é outra medida; a diferença pedida é quatro pontos percentuais.",
+          "10 pontos percentuais repetem a referência pública. Para obter o diferencial, essa taxa deve ser subtraída dos 14% do título privado."
+        ]
+      ],
+      "depois": [
+        13,
+        "Riscos: spread de crédito",
+        0,
+        "Um analista compara o retorno oferecido por uma dívida privada com o de um título público de mesma moeda e prazo, com condições comparáveis. Que conceito ele está examinando?",
+        "Spread de crédito: diferencial de retorno da dívida em relação à referência.",
+        "Spread bancário: diferencial entre aplicação em empréstimos e captação do banco.",
+        "Risco de juros: sensibilidade da cotação do título às taxas de desconto.",
+        "Retorno realizado: resultado efetivamente recebido após os fluxos da aplicação.",
+        "O spread de crédito compara a remuneração da dívida com uma referência adequada. O diferencial ajuda a analisar a compensação oferecida e não se confunde com o ganho que será realizado.",
+        0,
+        "Observe quais instrumentos e quais retornos estão sendo comparados.",
+        [
+          "O spread de crédito compara a remuneração da dívida com uma referência adequada. O diferencial ajuda a analisar a compensação oferecida e não se confunde com o ganho que será realizado.",
+          "Spread bancário compara taxas de aplicação e captação na intermediação. Aqui foram comparados os retornos de dois títulos, não o empréstimo de um banco e sua fonte de recursos.",
+          "A sensibilidade a juros é examinada pela mudança no valor dos fluxos quando a taxa de desconto varia. A comparação descrita mede um diferencial de retornos entre títulos.",
+          "O retorno realizado depende dos pagamentos, do preço de saída e dos custos efetivos. Comparar remunerações oferecidas não mede um resultado já recebido."
+        ]
+      ],
+      "hash_antes": "1ef07eec3a5e68b0aa4ecb858c78cfc9dd32b7720c953940900602ece8111577",
+      "hash_depois": "90386a3737b9756b80f7c4727c4496e7119c7f42c1d2a4c369c791c8a1f4904c",
+      "criterio": "Trocar a subtração 14 menos 10 pelo reconhecimento do spread de crédito e de seu significado financeiro."
+    },
+    {
+      "id": 1223,
+      "antes": [
+        13,
+        "Riscos: spread de crédito",
+        1,
+        "Um banco capta a 9% ao ano e empresta a 17% ao ano. Separadamente, sua dívida rende 13% ao ano contra 10% de uma referência comparável. Quais diferenciais correspondem à intermediação e à dívida, respectivamente?",
+        "8 e 3 pontos percentuais.",
+        "3 e 8 pontos percentuais.",
+        "26 e 23 pontos percentuais.",
+        "4 e 7 pontos percentuais.",
+        "Na intermediação, 17 − 9 = 8 pontos percentuais. Na comparação da dívida com a referência, 13 − 10 = 3 pontos percentuais. São comparações de naturezas distintas, embora ambas usem diferenças de taxas.",
+        0,
+        "Mantenha juntos os pares aplicação/captação e dívida/referência.",
+        [
+          "Na intermediação, 17 − 9 = 8 pontos percentuais. Na comparação da dívida com a referência, 13 − 10 = 3 pontos percentuais. São comparações de naturezas distintas, embora ambas usem diferenças de taxas.",
+          "Os valores foram trocados. O diferencial da intermediação usa empréstimo e captação; o da dívida usa o retorno do título e o da referência.",
+          "26 e 23 são somas dos pares de taxas. Somar não mede o quanto uma taxa supera a outra em nenhum dos dois recortes.",
+          "Esses valores cruzam taxas de operações diferentes: 13 − 9 e 17 − 10. A comparação precisa manter os pares que definem cada conceito."
+        ]
+      ],
+      "depois": [
+        13,
+        "Riscos: spread de crédito",
+        1,
+        "Um banco compara sua taxa de captação com a taxa dos empréstimos. Em outro relatório, compara o retorno de um título privado com uma referência pública equivalente. Por que esses diferenciais são medidas distintas?",
+        "O primeiro trata da intermediação; o segundo, da remuneração relativa da dívida.",
+        "O primeiro trata da dívida frente à referência; o segundo, da intermediação.",
+        "O primeiro mede a perda de preço; o segundo, os pagamentos já recebidos.",
+        "O primeiro mede a oscilação cambial; o segundo, a sensibilidade aos juros.",
+        "Aplicação em empréstimos menos captação é o spread bancário. Dívida privada menos referência comparável é o spread de crédito. Ambos são diferenciais, mas comparam objetos diferentes e não asseguram resultado líquido ou retorno realizado.",
+        0,
+        "Identifique os dois lados da comparação antes de dar nome ao indicador.",
+        [
+          "Aplicação em empréstimos menos captação é o spread bancário. Dívida privada menos referência comparável é o spread de crédito. Ambos são diferenciais, mas comparam objetos diferentes e não asseguram resultado líquido ou retorno realizado.",
+          "As duas medidas foram trocadas. A captação e os empréstimos pertencem à intermediação bancária; a comparação entre títulos examina o retorno relativo da dívida.",
+          "Nenhum dos relatórios foi descrito como apuração de uma perda de cotação ou de caixa recebido. Ambos comparam taxas, usando pares diferentes de operações ou instrumentos.",
+          "Uma oscilação cambial compara preços de moedas em datas ou posições definidas; a sensibilidade a juros relaciona taxa de desconto e preço. Não são os pares de taxas descritos nos relatórios."
+        ]
+      ],
+      "hash_antes": "a9d90e0d78d095c191c9cf760fedd0b2d7e147827e7e2d641812be900508d9ae",
+      "hash_depois": "1203c5e7bd9e3e967dc8b40e2a55fbb343287d472d801b7958d0d4378602901c",
+      "criterio": "Substituir duas contas básicas pela distinção entre spread bancário e spread de crédito."
+    },
+    {
+      "id": 1224,
+      "antes": [
+        13,
+        "Riscos: spread de crédito",
+        1,
+        "Uma dívida privada e sua referência pública são comparáveis. A primeira passa de 14% para 16% ao ano, e a segunda permanece em 10%. O que aconteceu com o spread?",
+        "Aumentou de 4 para 6 pontos percentuais.",
+        "Aumentou de 4 para 16 pontos percentuais.",
+        "Diminuiu de 6 para 4 pontos percentuais.",
+        "Permaneceu em 4 pontos percentuais.",
+        "Antes, 14 − 10 = 4; depois, 16 − 10 = 6 pontos percentuais. A referência não mudou, de modo que os dois pontos adicionais do retorno privado ampliaram o diferencial.",
+        0,
+        "Calcule a diferença antes e depois usando a mesma referência.",
+        [
+          "Antes, 14 − 10 = 4; depois, 16 − 10 = 6 pontos percentuais. A referência não mudou, de modo que os dois pontos adicionais do retorno privado ampliaram o diferencial.",
+          "16% é a nova taxa privada, não o novo spread. Ainda é preciso descontar a referência pública de 10%, obtendo seis pontos percentuais.",
+          "A ordem temporal foi invertida. A taxa privada subiu enquanto a referência ficou constante; por isso o diferencial aumentou, em vez de diminuir.",
+          "O diferencial só permaneceria em quatro se a referência também subisse na mesma medida, mantida a comparabilidade. Ela permaneceu em 10%, então o spread mudou."
+        ]
+      ],
+      "depois": [
+        13,
+        "Riscos: spread de crédito",
+        1,
+        "O retorno exigido de uma dívida privada aumenta, enquanto o da referência pública comparável fica estável. Houve menor negociação do título privado, mas não há informação de atraso do emissor. Como interpretar a ampliação do spread de crédito?",
+        "Investigar crédito e liquidez para explicar a maior compensação exigida.",
+        "Registrar inadimplência, usando a elevação do spread como pagamento faltante.",
+        "Registrar redução do risco de crédito, usando o retorno maior como sinal.",
+        "Atribuir a mudança à referência pública, usando a taxa dela como causa.",
+        "O diferencial maior indica maior compensação exigida em relação à referência. A piora da negociação pode influenciar esse prêmio; também é necessário examinar o crédito, sem transformar a cotação em prova de um pagamento descumprido.",
+        0,
+        "Separe prêmio exigido, condição de negociação e descumprimento de uma obrigação.",
+        [
+          "O diferencial maior indica maior compensação exigida em relação à referência. A piora da negociação pode influenciar esse prêmio; também é necessário examinar o crédito, sem transformar a cotação em prova de um pagamento descumprido.",
+          "Spread é diferencial de remuneração, não registro de pagamento faltante. O caso não informa atraso; é preciso verificar as obrigações do emissor para avaliar descumprimento.",
+          "Retorno exigido maior não demonstra crédito melhor. Pode representar maior compensação pedida pelo investidor diante de riscos ou condições de negociação menos favoráveis.",
+          "A referência foi mantida estável. A mudança descrita está no retorno exigido do título privado e precisa ser analisada junto ao seu crédito e à sua liquidez."
+        ]
+      ],
+      "hash_antes": "98cd9446bf2c6526b1813333744608fa783f5f92978ef263721b16ee5a01f256",
+      "hash_depois": "bd0c284cffb4ba89cf8f1c6022cfb56620793e15978577d55f1fbf7045617a71",
+      "criterio": "Interpretar a ampliação do spread sem reduzi-la a uma subtração ou atribuí-la automaticamente à inadimplência."
+    },
+    {
+      "id": 1227,
+      "antes": [
+        13,
+        "Riscos: spread de crédito",
+        3,
+        "A taxa de uma dívida privada sobe de 12% para 14% ao ano e a referência pública comparável sobe de 9% para 11%. Qual conclusão separa nível de taxas e diferencial?",
+        "O spread permanece em 3 pontos percentuais, apesar da alta das duas taxas.",
+        "O spread sobe para 5 pontos percentuais, pois basta usar a referência inicial.",
+        "O spread sobe para 14 pontos percentuais, pois coincide com a taxa privada final.",
+        "O spread cai para 1 ponto percentual, pois a referência subiu dois pontos.",
+        "O diferencial inicial é 12 − 9 = 3 e o final é 14 − 11 = 3 pontos percentuais. A alta comum das taxas não ampliou, por si só, a remuneração relativa da dívida privada.",
+        0,
+        "Mantenha a taxa privada e a referência de cada data no mesmo cálculo.",
+        [
+          "O diferencial inicial é 12 − 9 = 3 e o final é 14 − 11 = 3 pontos percentuais. A alta comum das taxas não ampliou, por si só, a remuneração relativa da dívida privada.",
+          "Subtrair a referência antiga da taxa privada nova mistura momentos diferentes. Para comparar a evolução, calcule cada diferencial com as taxas do mesmo momento.",
+          "14% é a taxa privada final. O spread exige deduzir os 11% da referência correspondente, resultando em três pontos percentuais.",
+          "A referência subiu dois pontos, mas a taxa privada também. Ignorar a mudança da taxa privada distorce a comparação; o diferencial não mudou."
+        ]
+      ],
+      "depois": [
+        13,
+        "Riscos: spread de crédito",
+        3,
+        "Uma dívida privada e sua referência pública comparável passam a oferecer taxas maiores. O relatório informa que o spread de crédito ficou no mesmo nível. Um analista atribui a alta da taxa privada exclusivamente à piora do emissor. Qual avaliação é sustentada pelos dados?",
+        "A mudança é compatível com juros gerais maiores; a avaliação do crédito exige outros dados.",
+        "A taxa privada maior demonstra deterioração do emissor; o movimento da referência é secundário.",
+        "O spread estável demonstra crédito inalterado; a análise dos pagamentos pode ser dispensada.",
+        "A referência maior demonstra inadimplência privada; a taxa pública mede o pagamento do emissor.",
+        "A referência também subiu e o diferencial foi mantido. Isso é compatível com um movimento geral das taxas, sem comprovar a causa exclusivamente creditícia. O spread estável tampouco certifica crédito inalterado: é necessário examinar informações do emissor e da emissão.",
+        0,
+        "Separe a taxa de referência, o diferencial relativo e a evidência sobre o emissor.",
+        [
+          "A referência também subiu e o diferencial foi mantido. Isso é compatível com um movimento geral das taxas, sem comprovar a causa exclusivamente creditícia. O spread estável tampouco certifica crédito inalterado: é necessário examinar informações do emissor e da emissão.",
+          "É preciso separar o nível geral de juros do prêmio relativo da dívida. Ignorar a alta da referência transforma uma mudança comum de taxas em uma conclusão de crédito que os dados não demonstram.",
+          "Um diferencial estável é uma informação de mercado, não certificação da capacidade de pagar. A análise das obrigações, das condições do emissor e da emissão continua necessária.",
+          "A taxa pública é uma referência de remuneração para a comparação; não registra o cumprimento de uma dívida privada. Não foi informado descumprimento do emissor."
+        ]
+      ],
+      "hash_antes": "8520e61524393b589ff2115ff44a2a3e7b29a9d9d0b9dae749a1943d0fb7c46a",
+      "hash_depois": "94bcafd5d0c78f1672a1dc6efe15d7766411cb20624c1d7dedb11e18f00444c5",
+      "criterio": "Substituir o cálculo de diferenças pela análise conjunta de curva de juros e spread, sem inferência indevida de crédito."
+    },
+    {
+      "id": 1231,
+      "antes": [
+        13,
+        "Riscos: mercado",
+        1,
+        "Uma carteira de ações vale R$ 2 milhões e sofre queda de 8% em um dia. Sem compras ou vendas, qual é a redução de seu valor de mercado?",
+        "R$ 160 mil.",
+        "R$ 16 mil.",
+        "R$ 1,84 milhão.",
+        "R$ 2,16 milhões.",
+        "A redução é 2.000.000 × 0,08 = 160.000 reais. O valor de mercado remanescente é 1.840.000 reais; ele é diferente da perda calculada.",
+        0,
+        "Separe a perda monetária do valor restante da carteira.",
+        [
+          "A redução é 2.000.000 × 0,08 = 160.000 reais. O valor de mercado remanescente é 1.840.000 reais; ele é diferente da perda calculada.",
+          "16 mil corresponderiam a 0,8% de dois milhões. A queda informada é de 8%, portanto o fator a multiplicar é 0,08.",
+          "1,84 milhão é o valor da carteira depois da queda: 2.000.000 − 160.000. A pergunta pede a redução, que é 160 mil reais.",
+          "2,16 milhões seria o valor após uma alta de 8%, e não a perda de uma queda. O sinal da variação precisa ser respeitado."
+        ]
+      ],
+      "depois": [
+        13,
+        "Riscos: mercado",
+        1,
+        "Uma carteira de ações é reavaliada para baixo após a divulgação de resultados empresariais piores que o esperado. O investidor mantém as ações e não houve venda. Como essa situação se relaciona ao risco de mercado?",
+        "A oscilação das cotações reduz o valor corrente da carteira antes da venda.",
+        "A manutenção das ações conserva o valor corrente até ocorrer a venda.",
+        "A divulgação de resultados caracteriza juros da dívida já não pagos.",
+        "A reavaliação das ações caracteriza falta de caixa para cumprir obrigações.",
+        "O risco de mercado envolve perdas por oscilações adversas de preços. A cotação menor já reduz o valor corrente da posição; a venda é o momento de realização de um resultado de saída.",
+        0,
+        "Diferencie valor de mercado, venda e pagamento de uma dívida.",
+        [
+          "O risco de mercado envolve perdas por oscilações adversas de preços. A cotação menor já reduz o valor corrente da posição; a venda é o momento de realização de um resultado de saída.",
+          "Manter o ativo preserva a posição, mas não fixa sua cotação. Valor corrente e resultado realizado na venda são medidas distintas.",
+          "Resultados empresariais e preços das ações não equivalem a juros de dívida vencidos. Para identificar descumprimento de uma obrigação seria necessário ter informação de pagamento devido e não realizado.",
+          "Falta de caixa para pagar obrigações caracteriza liquidez de financiamento. O caso descreve reavaliação dos preços das ações, não indisponibilidade de recursos para pagar."
+        ]
+      ],
+      "hash_antes": "cecc29ef0ad1a39d477afeaf3588dd3271f3d2c0bcf3a1cfd8f4d91d30935ae9",
+      "hash_depois": "0998564cbebd0754a071e086787904e6a18b0df2406f34b62627bdbc3c6ad4d2",
+      "criterio": "Trocar a multiplicação idêntica à do slide pela identificação de desvalorização e risco de mercado."
+    },
+    {
+      "id": 1232,
+      "antes": [
+        13,
+        "Riscos: mercado",
+        1,
+        "Um investidor comprou uma ação por R$ 10,35. A cotação cai para R$ 9,90, mas ele ainda não vendeu. Qual descrição é adequada?",
+        "Há desvalorização de mercado; a venda é um momento de realização do resultado.",
+        "Não há exposição a mercado enquanto a ação permanecer na carteira.",
+        "A queda deixa de alterar o valor da posição porque o preço de compra é conhecido.",
+        "A ausência de venda transforma a queda em atraso de pagamento do emissor.",
+        "A posição já vale menos à cotação corrente. Vender realiza um resultado em relação ao custo de aquisição; manter o ativo não impede que seu valor de mercado oscile.",
+        0,
+        "Manutenção da posição e avaliação a mercado não são a mesma coisa.",
+        [
+          "A posição já vale menos à cotação corrente. Vender realiza um resultado em relação ao custo de aquisição; manter o ativo não impede que seu valor de mercado oscile.",
+          "Risco de mercado existe durante a manutenção da posição. A ausência de venda não fixa a cotação nem elimina a possibilidade de variação no patrimônio avaliado a mercado.",
+          "Preço de compra é referência para apurar resultado, não uma cotação garantida. O ativo pode ter valor corrente diferente daquele pago pelo investidor.",
+          "Não foi descrita dívida vencida ou obrigação não paga. Uma mudança de preço de ação é diferente do descumprimento de juros ou principal de um título de dívida."
+        ]
+      ],
+      "depois": [
+        13,
+        "Riscos: mercado",
+        1,
+        "Uma ação comprada por R$ 27 passa a ser negociada a R$ 24 após uma revisão das expectativas de lucro da empresa. O investidor ainda não vendeu. Qual conclusão distingue o que foi observado da sua possível causa?",
+        "Há desvalorização de mercado; a cotação isolada não identifica o movimento dos juros.",
+        "Há queda comprovada dos juros; a ação mais barata indica qual taxa foi alterada.",
+        "Há juros contratuais não pagos; a cotação menor identifica a obrigação descumprida.",
+        "Há apenas resultado de venda; a avaliação corrente permanece no preço de compra.",
+        "O preço de negociação menor evidencia desvalorização da posição. A revisão de lucro é o contexto informado; sem outras evidências, não se pode deduzir qual movimento de juros ocorreu. Reconhecer risco de mercado não exige atribuir toda oscilação aos juros.",
+        0,
+        "Separe a mudança de cotação da evidência necessária para explicar sua causa.",
+        [
+          "O preço de negociação menor evidencia desvalorização da posição. A revisão de lucro é o contexto informado; sem outras evidências, não se pode deduzir qual movimento de juros ocorreu. Reconhecer risco de mercado não exige atribuir toda oscilação aos juros.",
+          "Ações podem oscilar por expectativas de lucro, risco, demanda e outros fatores. A mudança de preço, por si, não demonstra queda de uma taxa de juros específica.",
+          "A ação representa participação societária, e o enunciado não informou juros de dívida vencidos. Queda de cotação não identifica automaticamente um descumprimento contratual.",
+          "Não houve venda, mas a posição já tem cotação menor. O preço de compra permite comparar resultados; não substitui a avaliação corrente de mercado."
+        ]
+      ],
+      "hash_antes": "1c658cd6b8056a24cc192b3283cc4a5557f91aa8df937ad683fad7d3965c226c",
+      "hash_depois": "dd036eaba6bb890cbd04f0996c5d6ea9ca160ea523e96cb3b5f7f6b4390847bf",
+      "criterio": "Usar preços novos e distinguir oscilação de ações de uma conclusão não demonstrada sobre juros."
+    },
+    {
+      "id": 1239,
+      "antes": [
+        13,
+        "Riscos: juros e marcação a mercado",
+        1,
+        "Um título sem pagamentos intermediários recebe aplicação de R$ 1.000 e remunera a 6% por semestre, com capitalização composta. Qual é o pagamento após dois semestres, sem custos?",
+        "R$ 1.123,60.",
+        "R$ 1.120,00.",
+        "R$ 1.060,00.",
+        "R$ 1.126,00.",
+        "O valor é 1.000 × 1,06 × 1,06 = 1.123,60 reais. A taxa semestral incide por dois períodos, incluindo juros sobre os juros incorporados após o primeiro semestre.",
+        0,
+        "Use dois fatores semestrais para um prazo total de doze meses.",
+        [
+          "O valor é 1.000 × 1,06 × 1,06 = 1.123,60 reais. A taxa semestral incide por dois períodos, incluindo juros sobre os juros incorporados após o primeiro semestre.",
+          "1.120 reais usam juros simples de 6% por dois semestres. O enunciado especifica capitalização composta; no segundo período também rendem os juros do primeiro.",
+          "1.060 reais correspondem a apenas um semestre de 6%. O prazo informado contém dois períodos dessa taxa.",
+          "1.126 reais não resultam de aplicar o fator 1,06 por dois períodos. A composição correta gera fator 1,1236, e não 1,126."
+        ]
+      ],
+      "depois": [
+        13,
+        "Riscos: juros e marcação a mercado",
+        1,
+        "Um título prefixado promete pagamentos fixos. Após sua emissão, novas aplicações de mesmo prazo e risco de crédito passam a oferecer taxas maiores. Por que isso pode reduzir o preço do título já emitido?",
+        "Um preço menor ajusta o retorno dos mesmos pagamentos à taxa agora exigida.",
+        "Um preço menor registra a redução automática dos pagamentos fixados no contrato.",
+        "Um preço menor representa o aumento do principal devido pelo emissor no resgate.",
+        "Um preço menor transforma a taxa prefixada em remuneração pós-fixada no resgate.",
+        "O comprador passa a exigir retorno maior para pagamentos comparáveis. Mantidos os fluxos, isso é obtido por um preço de aquisição menor: é a relação inversa entre taxa de desconto e valor presente.",
+        0,
+        "Pense no preço que permite ao novo comprador obter o retorno exigido dos mesmos fluxos.",
+        [
+          "O comprador passa a exigir retorno maior para pagamentos comparáveis. Mantidos os fluxos, isso é obtido por um preço de aquisição menor: é a relação inversa entre taxa de desconto e valor presente.",
+          "A marcação altera a avaliação ou o preço de negociação. Ela não reduz automaticamente os pagamentos contratuais de um título prefixado com fluxos mantidos.",
+          "O preço de aquisição e o principal prometido são grandezas distintas. Ajustar a cotação para o retorno exigido não aumenta a dívida contratual do emissor.",
+          "Uma mudança de cotação não muda o indexador ou a natureza do contrato. O título continua prefixado, embora seu preço responda às condições de mercado."
+        ]
+      ],
+      "hash_antes": "1679bec3451ea41a91bb46d04c157ca002b472995db35d3c4221a4549d6b44c4",
+      "hash_depois": "734fd3e06638ad2a08c86085a03aeffbfaa983122bf8faebc4a43f5778a71486",
+      "criterio": "Substituir a capitalização copiada do slide pelo mecanismo financeiro da reprecificação."
+    },
+    {
+      "id": 1240,
+      "antes": [
+        13,
+        "Riscos: juros e marcação a mercado",
+        1,
+        "Faltam seis meses para um título sem cupons pagar R$ 1.123,60. A taxa de desconto de mercado é 8% para esse semestre restante. Qual é seu valor presente aproximado, sem custos?",
+        "R$ 1.040,37.",
+        "R$ 1.060,00.",
+        "R$ 963,31.",
+        "R$ 1.213,49.",
+        "Resta um período semestral: 1.123,60 ÷ 1,08 = 1.040,37037 reais. A taxa de mercado desconta o pagamento futuro para a data atual.",
+        0,
+        "Use a taxa do mercado para o prazo que ainda falta, não para o prazo original.",
+        [
+          "Resta um período semestral: 1.123,60 ÷ 1,08 = 1.040,37037 reais. A taxa de mercado desconta o pagamento futuro para a data atual.",
+          "1.060 reais correspondem ao desconto por 6% no semestre restante. O mercado informado exige 8%, reduzindo o preço em relação a essa referência.",
+          "963,31 reais resultam aproximadamente de descontar por dois semestres a 8%. O prazo já decorrido não deve ser descontado novamente; resta somente um semestre.",
+          "1.213,49 reais correspondem aproximadamente a multiplicar por 1,08. Para trazer um pagamento futuro a valor presente, divide-se pelo fator, em vez de capitalizar para a frente."
+        ]
+      ],
+      "depois": [
+        13,
+        "Riscos: juros e marcação a mercado",
+        1,
+        "Um título sem cupons pagará R$ 12.000 em dois anos. A taxa de desconto de mercado para emissões equivalentes sobe de 9% para 12% ao ano, com avaliação de crédito e demais condições mantidas. Qual ajuste corresponde à marcação a mercado?",
+        "Reduzir o preço atual e manter o pagamento contratado de R$ 12.000.",
+        "Elevar o preço atual e manter o pagamento contratado de R$ 12.000.",
+        "Manter o preço atual e elevar o pagamento contratado segundo a nova taxa.",
+        "Reduzir o preço atual e reduzir o pagamento contratado na mesma proporção.",
+        "A taxa de desconto maior reduz o valor presente do mesmo fluxo. O preço de mercado se ajusta; os R$ 12.000 continuam sendo o pagamento contratual, sujeito ao cumprimento pelo emissor.",
+        0,
+        "Identifique a variável que o mercado reavalia e a que continua no contrato.",
+        [
+          "A taxa de desconto maior reduz o valor presente do mesmo fluxo. O preço de mercado se ajusta; os R$ 12.000 continuam sendo o pagamento contratual, sujeito ao cumprimento pelo emissor.",
+          "Para o mesmo fluxo e prazo, uma taxa de desconto maior produz valor presente menor. A valorização seria compatível com queda da taxa, mantidas as condições.",
+          "A taxa de mercado muda a avaliação corrente, não reescreve o fluxo de um contrato prefixado. O pagamento permanece R$ 12.000 e o preço se ajusta para baixo.",
+          "A redução de preço não representa uma redução proporcional da obrigação. Trata-se de desconto financeiro do fluxo de R$ 12.000, não de alteração do valor contratado."
+        ]
+      ],
+      "hash_antes": "d36aed84af1a2b8a8c2054fe0ed2198066d29f3962fac9bcc99e9b067bca55d3",
+      "hash_depois": "22f9372625c37258b8bd94f6392a327287e272451795b4b685f8008e7b99b2fd",
+      "criterio": "Explicitar a alta de juros e avaliar preço versus fluxo fixo com valores diferentes dos slides, sem exigir divisão."
+    },
+    {
+      "id": 1241,
+      "antes": [
+        13,
+        "Riscos: juros e marcação a mercado",
+        1,
+        "Um título sem cupons pagará R$ 1.123,60 em seis meses. Se a taxa de desconto para esse período for 4%, qual será o preço aproximado, sem custos?",
+        "R$ 1.080,38.",
+        "R$ 1.060,00.",
+        "R$ 1.038,83.",
+        "R$ 1.168,54.",
+        "O preço é 1.123,60 ÷ 1,04 = 1.080,384615 reais. O desconto menor valoriza o mesmo fluxo em comparação com taxas de mercado de 6% ou 8% para o semestre.",
+        0,
+        "Para o mesmo pagamento e prazo, menor desconto significa maior valor presente.",
+        [
+          "O preço é 1.123,60 ÷ 1,04 = 1.080,384615 reais. O desconto menor valoriza o mesmo fluxo em comparação com taxas de mercado de 6% ou 8% para o semestre.",
+          "1.060 reais usam taxa de 6% no semestre, não os 4% informados. Um desconto menor implica preço maior para esse mesmo pagamento.",
+          "1.038,83 reais resultam aproximadamente do desconto por dois períodos de 4%. O enunciado informa um único semestre até o pagamento.",
+          "1.168,54 reais representam aproximadamente capitalizar por 4%. O exercício pede valor presente, que exige dividir pelo fator 1,04."
+        ]
+      ],
+      "depois": [
+        13,
+        "Riscos: juros e marcação a mercado",
+        1,
+        "Um investidor possui um título prefixado com pagamentos fixos. A taxa exigida em novas emissões comparáveis cai de 13% para 10% ao ano. Mantidos o crédito, o prazo e os fluxos, qual mecanismo explica a valorização do título?",
+        "Os pagamentos existentes passam a valer mais quando descontados por uma taxa menor.",
+        "Os pagamentos existentes aumentam porque o emissor atualiza os juros já contratados.",
+        "O principal a vencer é antecipado porque o prazo contratual acompanha a taxa menor.",
+        "O risco de crédito diminui porque uma taxa menor equivale a melhora da nota do emissor.",
+        "O mesmo fluxo futuro é descontado por um fator menor. Seu valor presente aumenta, permitindo valorização do título sem aumento dos pagamentos contratuais.",
+        0,
+        "Compare o valor presente do mesmo fluxo antes e depois da redução do desconto.",
+        [
+          "O mesmo fluxo futuro é descontado por um fator menor. Seu valor presente aumenta, permitindo valorização do título sem aumento dos pagamentos contratuais.",
+          "Os fluxos foram mantidos no enunciado. A valorização decorre do desconto usado na avaliação, não de uma atualização dos juros prefixados do contrato.",
+          "A queda da taxa de desconto não antecipa por si o vencimento da obrigação. O prazo foi mantido; muda a avaliação corrente dos mesmos pagamentos.",
+          "O enunciado mantém o crédito constante para isolar o efeito dos juros. Uma queda da taxa de mercado não equivale, por si, a revisão favorável de rating."
+        ]
+      ],
+      "hash_antes": "d7e0d4ac163ef326ee3925692fc41180305480476dd31f9f0110c60ad0c7ab99",
+      "hash_depois": "255ed25a437be6b717b639da3c5344c4ad4d8fb2bf0f6b37e4e5f9219d49c200",
+      "criterio": "Trocar o cálculo do valor presente por interpretação de uma queda explícita de juros, com taxas novas."
+    },
+    {
+      "id": 1242,
+      "antes": [
+        13,
+        "Riscos: juros e marcação a mercado",
+        1,
+        "Após seis meses, um título comprado por R$ 1.000 teria valor de R$ 1.060 se a taxa de mercado continuasse igual. A alta da taxa leva seu preço a R$ 1.040,37. Qual comparação é correta?",
+        "Há redução de R$ 19,63 frente à referência, mas o preço supera a aplicação inicial.",
+        "Há perda de R$ 19,63 frente à aplicação inicial, e o preço fica abaixo de R$ 1.000.",
+        "Há ganho de R$ 60,00 frente à referência, e o preço supera os R$ 1.060 esperados.",
+        "Há perda de R$ 59,63 frente à referência, e o preço coincide com o principal inicial.",
+        "1.060 − 1.040,37 = 19,63 reais de redução relativa à referência sem a alta da taxa. Como 1.040,37 supera os 1.000 aplicados, essa redução não é uma perda nominal do mesmo valor em relação ao desembolso inicial.",
+        0,
+        "Toda afirmação de ganho ou perda precisa indicar a base de comparação.",
+        [
+          "1.060 − 1.040,37 = 19,63 reais de redução relativa à referência sem a alta da taxa. Como 1.040,37 supera os 1.000 aplicados, essa redução não é uma perda nominal do mesmo valor em relação ao desembolso inicial.",
+          "A base foi confundida. Em relação aos 1.000 iniciais, o preço é maior em 40,37 reais; a redução de 19,63 usa como referência o valor de 1.060.",
+          "O preço de 1.040,37 está abaixo, e não acima, de 1.060. Os 60 reais representam o acréscimo até a referência de 1.060 em relação aos 1.000 iniciais.",
+          "A diferença correta frente à referência é 19,63 reais. O preço também não coincide com o principal: ele permanece 40,37 reais acima dos 1.000 aplicados."
+        ]
+      ],
+      "depois": [
+        13,
+        "Riscos: juros e marcação a mercado",
+        1,
+        "Um título foi adquirido por R$ 10.800 e promete um único pagamento de R$ 12.600 daqui a um ano. Na data da avaliação, valeria R$ 12.000 com taxa de mercado de 5% ao ano; após a alta para 12%, vale R$ 11.250. O investidor diz que não houve risco de mercado porque a cotação supera seu custo. Como avaliar essa afirmação?",
+        "Ela confunde ganho acumulado com ausência de desvalorização causada pelos juros.",
+        "Ela usa corretamente o custo como limite para reconhecer qualquer risco de mercado.",
+        "Ela identifica um atraso do emissor pelo fato de o preço ter mudado na avaliação.",
+        "Ela identifica perda de principal no contrato pelo ajuste da taxa usada pelo mercado.",
+        "O preço pode permanecer acima do custo e, ainda assim, ter sido reduzido pela mudança de juros. A comparação com o desembolso inicial mede um resultado acumulado; a reprecificação mostra exposição de mercado em outra comparação.",
+        0,
+        "Separe a comparação com o custo da comparação entre avaliações sob taxas diferentes.",
+        [
+          "O preço pode permanecer acima do custo e, ainda assim, ter sido reduzido pela mudança de juros. A comparação com o desembolso inicial mede um resultado acumulado; a reprecificação mostra exposição de mercado em outra comparação.",
+          "A exposição a mercado não começa apenas quando a cotação cai abaixo do custo de aquisição. A alta da taxa reduziu a avaliação dos mesmos fluxos, mesmo com preço ainda superior ao valor aplicado.",
+          "Não foi informado pagamento vencido ou descumprimento. A mudança foi atribuída à alta da taxa de desconto, mantendo o fluxo contratual.",
+          "O mercado ajustou o preço, não o pagamento prometido de R$ 12.600. Alterar a taxa de desconto não reduz automaticamente o principal ou o fluxo contratual."
+        ]
+      ],
+      "hash_antes": "de3fa6c314ea49e84ca593c5459260eb31fe88eea4abfc2d05d0b5b6d4c7d80c",
+      "hash_depois": "663452a0ae1f55ba889b00ca156c16b49efd99faef2c3ef0c5503fa8ded2b372",
+      "criterio": "Trocar a subtração pedida no print pela interpretação de ganho acumulado versus exposição a juros; conferir os preços novos."
+    },
+    {
+      "id": 1243,
+      "antes": [
+        13,
+        "Riscos: juros e marcação a mercado",
+        1,
+        "Dois títulos têm mesmo vencimento, taxa de desconto e risco de crédito. Em uma comparação das estruturas, o pagamento de cupons maiores tende a produzir qual efeito sobre a sensibilidade a juros?",
+        "Reduzir a sensibilidade ao antecipar mais recursos ao investidor.",
+        "Aumentar a sensibilidade por concentrar todos os recursos no vencimento.",
+        "Eliminar a sensibilidade por transformar os pagamentos em taxa de mercado.",
+        "Manter a sensibilidade idêntica por não alterar os fluxos intermediários.",
+        "Cupons maiores aumentam o peso de recebimentos anteriores ao vencimento. Nas condições comparadas, isso tende a reduzir a sensibilidade do preço às mudanças dos juros, sem eliminar os demais riscos.",
+        0,
+        "Compare quanto do recebimento ocorre antes do vencimento.",
+        [
+          "Cupons maiores aumentam o peso de recebimentos anteriores ao vencimento. Nas condições comparadas, isso tende a reduzir a sensibilidade do preço às mudanças dos juros, sem eliminar os demais riscos.",
+          "Cupons são pagamentos intermediários, não concentração de todo o valor no final. É a antecipação de recursos que explica o sentido da relação apresentada.",
+          "Cupom contratado não passa a variar automaticamente com o mercado. Mesmo com cupons, os fluxos fixos são descontados por taxas que podem mudar e afetar o preço.",
+          "Aumentar o cupom altera a estrutura e os pesos dos fluxos intermediários. Portanto, não é correto afirmar que esses fluxos ficaram iguais na comparação."
+        ]
+      ],
+      "depois": [
+        13,
+        "Riscos: juros e marcação a mercado",
+        1,
+        "Dois títulos têm o mesmo valor nominal, vencimento, taxa de desconto e risco de crédito. Mantidas as demais condições, uma taxa de cupom maior tende a produzir qual efeito sobre a sensibilidade do preço aos juros?",
+        "Reduzir a sensibilidade ao antecipar mais recursos ao investidor.",
+        "Aumentar a sensibilidade por concentrar todos os recursos no vencimento.",
+        "Eliminar a sensibilidade por transformar os pagamentos em taxa de mercado.",
+        "Manter a sensibilidade idêntica por não alterar os fluxos intermediários.",
+        "Cupons maiores aumentam o peso de recebimentos anteriores ao vencimento. Nas condições comparadas, isso tende a reduzir a sensibilidade do preço às mudanças dos juros, sem eliminar os demais riscos.",
+        0,
+        "Compare quanto do recebimento ocorre antes do vencimento.",
+        [
+          "Cupons maiores aumentam o peso de recebimentos anteriores ao vencimento. Nas condições comparadas, isso tende a reduzir a sensibilidade do preço às mudanças dos juros, sem eliminar os demais riscos.",
+          "Cupons são pagamentos intermediários, não concentração de todo o valor no final. É a antecipação de recursos que explica o sentido da relação apresentada.",
+          "Cupom contratado não passa a variar automaticamente com o mercado. Mesmo com cupons, os fluxos fixos são descontados por taxas que podem mudar e afetar o preço.",
+          "Aumentar o cupom altera a estrutura e os pesos dos fluxos intermediários. Portanto, não é correto afirmar que esses fluxos ficaram iguais na comparação."
+        ]
+      ],
+      "hash_antes": "657cbd7f9abd937f46e5346d63ae2115318d6425ac99bdc239b4cdcd743eeb72",
+      "hash_depois": "511e39cdf0c0bb50a9eaff628cd79d39a9ac2adfef360c07017a8894a408ea95",
+      "criterio": "Explicitar o mesmo valor nominal e comparar taxas de cupom, distinguindo cupom maior de um fluxo ampliado apenas pelo principal."
+    },
+    {
+      "id": 1245,
+      "antes": [
+        13,
+        "Riscos: juros e marcação a mercado",
+        2,
+        "Um título sem cupons foi comprado por R$ 1.000 para pagar R$ 1.123,60 em doze meses. Aos seis meses, R$ 1.060 é apresentado como valor do título a uma taxa de mercado de 6% por semestre. O que esse valor representa?",
+        "Preço de avaliação naquele momento, sem constituir pagamento adicional previsto.",
+        "Cupom recebido naquele momento, somado ao pagamento de R$ 1.123,60 no final.",
+        "Devolução integral do principal, que cancela o pagamento previsto para o final.",
+        "Valor da dívida em atraso, pois o fluxo final ainda não chegou a ser pago.",
+        "O título foi descrito sem pagamentos intermediários. Os 1.060 reais são o valor presente, aos seis meses, do pagamento de 1.123,60 no semestre seguinte; só seriam recebidos na hipótese de venda por esse preço.",
+        0,
+        "Diferencie ponto de avaliação de uma data efetiva de recebimento de caixa.",
+        [
+          "O título foi descrito sem pagamentos intermediários. Os 1.060 reais são o valor presente, aos seis meses, do pagamento de 1.123,60 no semestre seguinte; só seriam recebidos na hipótese de venda por esse preço.",
+          "Essa leitura adiciona um fluxo inexistente. Um título sem cupons não paga 1.060 aos seis meses e mais 1.123,60 no fim; o primeiro valor é uma cotação intermediária.",
+          "Avaliar o preço antes do vencimento não extingue o fluxo final. O emissor continua obrigado ao pagamento contratado, nas condições do título.",
+          "O pagamento vence em doze meses e ainda não está atrasado aos seis. A avaliação intermediária não comprova inadimplência."
+        ]
+      ],
+      "depois": [
+        13,
+        "Riscos: juros e marcação a mercado",
+        2,
+        "Um título sem cupons tem um único pagamento de R$ 9.450 previsto para daqui a um ano. A taxa de mercado cai de 8% para 5% ao ano e seu preço de avaliação passa de R$ 8.750 para R$ 9.000. Sem vender o título, um investidor registra R$ 9.000 como entrada de caixa hoje. Qual é o erro do registro?",
+        "Tratar um preço de marcação como recebimento, embora não exista fluxo intermediário.",
+        "Tratar o pagamento final como fixo, embora a queda da taxa altere o valor contratado.",
+        "Tratar o preço de avaliação como variável, embora a ausência de cupons fixe a cotação.",
+        "Tratar a valorização como efeito dos juros, embora ela demonstre pagamento antecipado.",
+        "R$ 9.000 é o preço de avaliação dos mesmos R$ 9.450 futuros. Sem cupom, venda ou outro evento de pagamento, não há entrada de caixa nessa data. A queda dos juros eleva o valor presente sem criar um recebimento.",
+        0,
+        "Diferencie avaliação, negociação e efetivo recebimento de um fluxo.",
+        [
+          "R$ 9.000 é o preço de avaliação dos mesmos R$ 9.450 futuros. Sem cupom, venda ou outro evento de pagamento, não há entrada de caixa nessa data. A queda dos juros eleva o valor presente sem criar um recebimento.",
+          "O fluxo final foi fixado no contrato e permanece R$ 9.450 nas condições descritas. A taxa de mercado altera a avaliação, não o valor contratado.",
+          "Não ter cupons significa não prever juros intermediários nessa estrutura. O título continua tendo preço de mercado sensível à taxa de desconto.",
+          "A valorização foi explicada pela taxa menor aplicada ao mesmo fluxo. Antecipação de pagamento é um evento de caixa ou contratual que não foi informado."
+        ]
+      ],
+      "hash_antes": "1c36ef4722ff20ccf60fde06b438bfaaaad381cd2de485882647a6860c43b8c2",
+      "hash_depois": "121dddcd4abcd91b3b57ea9dc5eb010664b2b811e8f3dc9872c618eccdf964ed",
+      "criterio": "Usar outro fluxo e taxas coerentes para distinguir valorização de cupom ou caixa, explicitando queda dos juros."
+    },
+    {
+      "id": 1247,
+      "antes": [
+        13,
+        "Riscos: juros e marcação a mercado",
+        2,
+        "Um título sem cupons foi comprado por R$ 1.000 para pagar R$ 1.123,60 em doze meses. Aos seis meses, seu preço cai para R$ 1.040,37. Supondo o cumprimento integral do contrato e manutenção até o vencimento, qual valor contratual será recebido?",
+        "R$ 1.123,60.",
+        "R$ 1.040,37.",
+        "R$ 1.060,00.",
+        "R$ 1.000,00.",
+        "Nas condições expressas, mantém-se o pagamento contratado de 1.123,60 no vencimento. A cotação aos seis meses é uma referência de venda intermediária e não reescreve o fluxo do emissor.",
+        0,
+        "A pergunta fixa o cumprimento contratual e distingue venda antecipada de vencimento.",
+        [
+          "Nas condições expressas, mantém-se o pagamento contratado de 1.123,60 no vencimento. A cotação aos seis meses é uma referência de venda intermediária e não reescreve o fluxo do emissor.",
+          "1.040,37 é o preço de mercado informado aos seis meses. Ele não se torna automaticamente o pagamento no vencimento de um contrato prefixado com fluxo fixo.",
+          "1.060 é a referência intermediária aos seis meses sob taxa semestral de 6%. O contrato informado capitaliza por dois semestres até o pagamento final.",
+          "1.000 é o desembolso inicial. Receber apenas esse valor omite a remuneração contratada, cuja quitação integral foi expressamente suposta."
+        ]
+      ],
+      "depois": [
+        13,
+        "Riscos: juros e marcação a mercado",
+        2,
+        "Um título prefixado sem cupons pagará R$ 15.000 daqui a um ano. A taxa de desconto para títulos equivalentes sobe de 10% para 12,5% ao ano e a cotação cai. Mantido o fluxo contratual e supondo que o emissor cumpra a obrigação, qual leitura distingue venda antecipada e manutenção até o vencimento?",
+        "A venda usa um preço menor; a manutenção conserva o fluxo contratual de R$ 15.000.",
+        "A venda usa um preço maior; a manutenção conserva o fluxo contratual de R$ 15.000.",
+        "A venda usa o preço anterior; a manutenção aumenta o fluxo conforme a taxa de mercado.",
+        "A venda usa um preço menor; a manutenção reduz o fluxo conforme a queda da cotação.",
+        "A alta da taxa exigida reduz o preço de negociação dos mesmos fluxos prefixados. Se mantido o título e cumprido o contrato, o emissor paga R$ 15.000; a cotação intermediária não substitui esse fluxo.",
+        0,
+        "A taxa de desconto atua no preço de negociação; observe separadamente o fluxo do contrato.",
+        [
+          "A alta da taxa exigida reduz o preço de negociação dos mesmos fluxos prefixados. Se mantido o título e cumprido o contrato, o emissor paga R$ 15.000; a cotação intermediária não substitui esse fluxo.",
+          "A taxa de desconto subiu. Para o mesmo fluxo e prazo, esse movimento reduz o preço de venda, em vez de elevá-lo. O pagamento contratual continua R$ 15.000.",
+          "A avaliação de mercado acompanha a nova taxa e o fluxo prefixado permanece fixo. Não se conserva automaticamente a cotação anterior nem se aumenta o pagamento por essa mudança de mercado.",
+          "O preço de venda cai, mas essa avaliação não reduz o pagamento contratado. Receber o fluxo final depende do cumprimento pelo emissor, não de usar a cotação como novo valor da obrigação."
+        ]
+      ],
+      "hash_antes": "38942b40e5ab77beb1375ea3f74013a8fe42c3bbaf2098796bff310421a306f3",
+      "hash_depois": "c321b79130650439c7b681608d2adeef34c9a4d03e7f7f9fce5b014bf079e1b8",
+      "criterio": "Reformular a questão do primeiro print: explicitar a alta dos juros e cobrar a distinção financeira, com novo valor contratual."
+    },
+    {
+      "id": 1250,
+      "antes": [
+        13,
+        "Riscos: juros e marcação a mercado",
+        3,
+        "A referência de um título aos seis meses, sem mudança de juros, seria R$ 1.060. A alta da taxa reduz seu valor justo para R$ 1.040,37. Por urgência e pouca demanda, a venda ocorre por R$ 1.000. Como decompor a redução total de R$ 60 frente à referência, sem evidência de inadimplência?",
+        "R$ 19,63 pela reprecificação dos juros e R$ 40,37 pelo desconto adicional de liquidez.",
+        "R$ 40,37 pela reprecificação dos juros e R$ 19,63 pelo desconto adicional de liquidez.",
+        "R$ 60 por inadimplência do emissor e nenhum valor relacionado à negociação no mercado.",
+        "R$ 60 pelo pagamento do principal no vencimento e nenhum valor ligado à taxa de desconto.",
+        "A mudança de juros leva de 1.060 para 1.040,37: redução de 19,63. A execução abaixo desse valor leva de 1.040,37 para 1.000: outros 40,37. As duas parcelas somam 60 frente à referência, sem comprovar atraso do emissor.",
+        0,
+        "Use a sequência referência → novo valor justo → preço executado.",
+        [
+          "A mudança de juros leva de 1.060 para 1.040,37: redução de 19,63. A execução abaixo desse valor leva de 1.040,37 para 1.000: outros 40,37. As duas parcelas somam 60 frente à referência, sem comprovar atraso do emissor.",
+          "As parcelas foram invertidas. O efeito atribuído aos juros é a diferença entre referência e novo valor justo; o custo adicional de liquidez é a diferença entre esse valor justo e o preço efetivo.",
+          "O caso não apresenta descumprimento contratual. Ele separa uma mudança de valor justo por juros e um desconto adicional para vender com urgência.",
+          "A venda ocorre aos seis meses e é diferente de resgate no vencimento. A comparação de 60 reais usa a referência de 1.060, não descreve pagamento do principal pelo emissor."
+        ]
+      ],
+      "depois": [
+        13,
+        "Riscos: juros e marcação a mercado",
+        3,
+        "Uma instituição enfrenta saques antes do vencimento de seus ativos. Ao mesmo tempo, taxas de mercado sobem e reduzem o valor justo de seus títulos prefixados. Para vender o lote imediatamente, ela aceita preço ainda menor que o valor justo por haver poucas ofertas. Na ordem saques, reprecificação por juros e desconto adicional da venda, quais exposições foram descritas?",
+        "Liquidez de financiamento; risco de mercado; liquidez de mercado.",
+        "Risco de mercado; liquidez de financiamento; liquidez de mercado.",
+        "Liquidez de financiamento; liquidez de mercado; risco de mercado.",
+        "Liquidez de mercado; risco de mercado; liquidez de financiamento.",
+        "Os saques exigem caixa no prazo, dimensão de financiamento. A alta dos juros reduz o valor presente dos fluxos, fonte de risco de mercado. O desconto adicional por pouca demanda pertence à liquidez de mercado. A separação identifica os mecanismos sem atribuir automaticamente inadimplência ao emissor.",
+        0,
+        "Separe o prazo para pagar, o desconto financeiro dos fluxos e a condição de negociar o lote.",
+        [
+          "Os saques exigem caixa no prazo, dimensão de financiamento. A alta dos juros reduz o valor presente dos fluxos, fonte de risco de mercado. O desconto adicional por pouca demanda pertence à liquidez de mercado. A separação identifica os mecanismos sem atribuir automaticamente inadimplência ao emissor.",
+          "As duas primeiras classificações foram trocadas. Os saques criam necessidade de financiamento, enquanto a reprecificação pela taxa é risco de mercado; o desconto extra para negociar é liquidez de mercado.",
+          "As duas últimas classificações foram trocadas. A mudança do valor justo pela taxa é risco de mercado; a diferença adicional exigida pela pouca demanda é liquidez de mercado.",
+          "A necessidade de atender saques é de financiamento, não de negociação. A reprecificação por juros está corretamente classificada; o desconto extra do lote é de liquidez de mercado, não a necessidade inicial de caixa."
+        ]
+      ],
+      "hash_antes": "31ac157052903c3e83eed264c08abaf8d988672b4980b269a73771f694254f55",
+      "hash_depois": "7c0ef744b05e603465030499dace6a1b691c9e264a8dd7c50e5be5ca43346a46",
+      "criterio": "Substituir a decomposição por somas e subtrações pela classificação integrada de três mecanismos de risco."
+    }
+  ],
+  "flashcards": [
+    {
+      "aula": 13,
+      "indice": 20,
+      "antes": [
+        "Quanto pagará, após dois semestres, uma aplicação de R$ 1.000 a 6% por semestre em juros compostos, sem fluxos intermediários?",
+        "R$ 1.123,60: 1.000 × 1,06 × 1,06. É um único pagamento final no modelo.",
+        2
+      ],
+      "depois": [
+        "O que deve permanecer constante ao isolar o efeito dos juros sobre o preço de um título?",
+        "Fluxos contratuais, prazo, crédito e demais condições comparáveis. Assim, a diferença na avaliação pode ser atribuída à taxa de desconto.",
+        2
+      ]
+    },
+    {
+      "aula": 13,
+      "indice": 21,
+      "antes": [
+        "Como avaliar aos seis meses um fluxo de R$ 1.123,60 devido no mês 12, com taxa de mercado de 8% por semestre?",
+        "Descontar um período restante: 1.123,60 ÷ 1,08 = aproximadamente R$ 1.040,37, sem custos.",
+        2
+      ],
+      "depois": [
+        "Se a taxa comparável sobe de 9% para 12% ao ano, como fica um prefixado com fluxos mantidos?",
+        "Seu preço de mercado tende a cair, pois os mesmos pagamentos são descontados por uma taxa maior. O fluxo prefixado do contrato permanece fixo.",
+        2
+      ]
+    },
+    {
+      "aula": 13,
+      "indice": 22,
+      "antes": [
+        "Como avaliar o mesmo fluxo aos seis meses, com taxa de mercado de 4% por semestre?",
+        "1.123,60 ÷ 1,04 = aproximadamente R$ 1.080,38. Menor desconto eleva o preço do mesmo fluxo.",
+        2
+      ],
+      "depois": [
+        "Quando a taxa de mercado cai, o cupom já contratado aumenta?",
+        "Não. A queda da taxa pode valorizar o título, mas não aumenta automaticamente os pagamentos prefixados nem cria cupons em um título que não os prevê.",
+        2
+      ]
+    },
+    {
+      "aula": 13,
+      "indice": 23,
+      "antes": [
+        "Por que R$ 1.040,37 podem representar ganho frente a uma base e redução frente a outra?",
+        "Superam em R$ 40,37 os R$ 1.000 aplicados, mas ficam R$ 19,63 abaixo da referência de R$ 1.060 aos seis meses.",
+        2
+      ],
+      "depois": [
+        "Por que uma cotação acima do custo de aquisição não afasta o risco de mercado?",
+        "O ganho acumulado em relação ao custo pode coexistir com uma desvalorização causada por juros ou outras variáveis. São comparações diferentes; o risco não começa apenas abaixo do preço de compra.",
+        2
+      ]
+    }
+  ],
+  "preservacao": {
+    "primeiras_1200_Q": "99736f49661239b005534ef56225db891eb5b76456b65006521d6b6d3af9ddc4",
+    "total_Q": 1250,
+    "ids_aula_13": [
+      1201,
+      1202,
+      1203,
+      1204,
+      1205,
+      1206,
+      1207,
+      1208,
+      1209,
+      1210,
+      1211,
+      1212,
+      1213,
+      1214,
+      1215,
+      1216,
+      1217,
+      1218,
+      1219,
+      1220,
+      1221,
+      1222,
+      1223,
+      1224,
+      1225,
+      1226,
+      1227,
+      1228,
+      1229,
+      1230,
+      1231,
+      1232,
+      1233,
+      1234,
+      1235,
+      1236,
+      1237,
+      1238,
+      1239,
+      1240,
+      1241,
+      1242,
+      1243,
+      1244,
+      1245,
+      1246,
+      1247,
+      1248,
+      1249,
+      1250
+    ],
+    "BP": "91b87964f42c4613b42411cbaaa4236f769aa95c32f73185c1717c74ec74b9fc",
+    "AL": "4ad25a40d4bdbf55cc0952691f9f6e6635928b082c7f1bd45c6a91dbf5d8c713",
+    "flashcards_13_antes": "2440827bb345402f08ce14dc31edf287688db576e0ca1d647a0b333fb3721491",
+    "materiais_13_exceto_flashcards": "cc4a9d7afec4fc06fe1c4125d974f9099959d33c42976129acccaa85474e2a45"
+  },
+  "revisao_das_50": [
+    {
+      "id": 1201,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1202,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1203,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1204,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1205,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1206,
+      "acao": "reformulada",
+      "criterio": "Substituir fatos não informados por alternativas da mesma natureza e distinguir duas dimensões de liquidez."
+    },
+    {
+      "id": 1207,
+      "acao": "reformulada",
+      "criterio": "Cobrar a informação necessária à análise de liquidez, com distratores plausíveis de outros riscos."
+    },
+    {
+      "id": 1208,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1209,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1210,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1211,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1212,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1213,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1214,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1215,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1216,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1217,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1218,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1219,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1220,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1221,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1222,
+      "acao": "reformulada",
+      "criterio": "Trocar a subtração 14 menos 10 pelo reconhecimento do spread de crédito e de seu significado financeiro."
+    },
+    {
+      "id": 1223,
+      "acao": "reformulada",
+      "criterio": "Substituir duas contas básicas pela distinção entre spread bancário e spread de crédito."
+    },
+    {
+      "id": 1224,
+      "acao": "reformulada",
+      "criterio": "Interpretar a ampliação do spread sem reduzi-la a uma subtração ou atribuí-la automaticamente à inadimplência."
+    },
+    {
+      "id": 1225,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1226,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1227,
+      "acao": "reformulada",
+      "criterio": "Substituir o cálculo de diferenças pela análise conjunta de curva de juros e spread, sem inferência indevida de crédito."
+    },
+    {
+      "id": 1228,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1229,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1230,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1231,
+      "acao": "reformulada",
+      "criterio": "Trocar a multiplicação idêntica à do slide pela identificação de desvalorização e risco de mercado."
+    },
+    {
+      "id": 1232,
+      "acao": "reformulada",
+      "criterio": "Usar preços novos e distinguir oscilação de ações de uma conclusão não demonstrada sobre juros."
+    },
+    {
+      "id": 1233,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1234,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1235,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1236,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1237,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1238,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1239,
+      "acao": "reformulada",
+      "criterio": "Substituir a capitalização copiada do slide pelo mecanismo financeiro da reprecificação."
+    },
+    {
+      "id": 1240,
+      "acao": "reformulada",
+      "criterio": "Explicitar a alta de juros e avaliar preço versus fluxo fixo com valores diferentes dos slides, sem exigir divisão."
+    },
+    {
+      "id": 1241,
+      "acao": "reformulada",
+      "criterio": "Trocar o cálculo do valor presente por interpretação de uma queda explícita de juros, com taxas novas."
+    },
+    {
+      "id": 1242,
+      "acao": "reformulada",
+      "criterio": "Trocar a subtração pedida no print pela interpretação de ganho acumulado versus exposição a juros; conferir os preços novos."
+    },
+    {
+      "id": 1243,
+      "acao": "reformulada",
+      "criterio": "Explicitar o mesmo valor nominal e comparar taxas de cupom, distinguindo cupom maior de um fluxo ampliado apenas pelo principal."
+    },
+    {
+      "id": 1244,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1245,
+      "acao": "reformulada",
+      "criterio": "Usar outro fluxo e taxas coerentes para distinguir valorização de cupom ou caixa, explicitando queda dos juros."
+    },
+    {
+      "id": 1246,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1247,
+      "acao": "reformulada",
+      "criterio": "Reformular a questão do primeiro print: explicitar a alta dos juros e cobrar a distinção financeira, com novo valor contratual."
+    },
+    {
+      "id": 1248,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1249,
+      "acao": "preservada",
+      "criterio": "Questão conceitual: classificação, distinção ou aplicação de risco; não exige reproduzir valor do exemplo dos slides."
+    },
+    {
+      "id": 1250,
+      "acao": "reformulada",
+      "criterio": "Substituir a decomposição por somas e subtrações pela classificação integrada de três mecanismos de risco."
+    }
+  ]
+}

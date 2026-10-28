@@ -79,3 +79,17 @@ def questions_before_context_revision(current):
     # aceitar alterações posteriores. Primeiro desfazer a revisão mais recente.
     context=questions_before_feedback_revision(current)
     return _restore(context,'revisao-enunciados-autossuficientes.json')
+
+def questions_before_risk_concept_revision(current):
+    """Desfaz apenas a revisão autorizada da aula 13, mantendo o manifesto inicial."""
+    report=json.loads((ROOT/'docs/revisao-aula-13-conceitos.json').read_text())
+    restored=copy.deepcopy(current)
+    ids=[r['id'] for r in report['questoes']]
+    assert ids==sorted(set(ids))
+    for row in report['questoes']:
+        index=row['id']-1
+        assert digest(current[index])==row['hash_depois'],f'Revisão conceitual divergente: {row["id"]}'
+        assert current[index]==row['depois']
+        assert digest(row['antes'])==row['hash_antes']
+        restored[index]=copy.deepcopy(row['antes'])
+    return restored

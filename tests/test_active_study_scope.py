@@ -13,12 +13,12 @@ class ActiveStudyScope(unittest.TestCase):
     def material(self,n,kind):
         self.page.evaluate("([n,c])=>{qz=null;view='m';mt={a:n,c};go()}",[n,kind])
 
-    def test_liquidity_filters_share_thirteen_unique_questions_not_market_risk(self):
+    def test_liquidity_filters_share_unique_questions_not_unrelated_market_risk(self):
         self.material(13,'mapa')
         panel=self.page.locator('.mind-branch').filter(has=self.page.get_by_role('heading',name=re.compile('^Liquidez$',re.I)))
         key=panel.get_attribute('data-active-study')
         parent=self.page.evaluate('k=>ActiveStudy.audit().find(e=>e.key===k)',key)
-        self.assertEqual(parent['ids'],[176,195,218,*range(1201,1211)])
+        self.assertEqual(parent['ids'],[176,195,218,*range(1201,1211),1250])
         panel.locator('.active-study-options-trigger').click()
         dialog=self.page.get_by_role('dialog',name='Escolher conceito')
         self.assertIn('não devem ser somadas',dialog.inner_text())

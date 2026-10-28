@@ -1298,3 +1298,24 @@ sistema. Não crie as tabelas da nova aula antes de receber os materiais.
 - Relatórios: docs/aula-12.md e docs/aula-12-cobertura.json. Rodar também
   tests/test_aula12.py ao alterar esta aula. Preservar o conteúdo e os hashes
   históricos das onze aulas, seus manifestos e registros de respostas.
+
+## Revisão dos riscos e evolução por questão — 28/10/2026
+
+- Em riscos, priorizar interpretação de mecanismos, classificação e aplicação.
+  Não preencher a aula com somas/subtrações ou cópias do exemplo numérico dos
+  slides. Usar cenários próprios, conferindo todos os números e feedbacks.
+- Em prefixados, explicitar o movimento da taxa de desconto ao atribuir a ele
+  a mudança do preço; isolar fluxos, prazo e crédito quando esse for o objetivo.
+  Cotação de uma ação não permite inferir uma taxa de juros sem evidência.
+  Distinguir preço, fluxo contratual, cupom, venda e recebimento de caixa.
+- A revisão da primeira aula interna da 13 está em
+  `docs/revisao-aula-13-conceitos.json` e `.md`. Não reescrever o manifesto de
+  autoria inicial: reconstruir a versão anterior pelos registros de revisão.
+- Quantidades padrão na seleção de prática: **5, 10, 15, 20, 30**, em todos os
+  modos. Preservar quantidade personalizada do Bate-pronto e as regras próprias
+  de checkpoint, conteúdo completo e erros. Não impor teto 30 a esses conjuntos.
+- A barra da sessão tem um segmento por questão, altura/cor anteriores. Preencher
+  a posição do ID respondido; pular ou revisitar não aumenta o progresso. Mesma
+  regra nos quatro modos e no diário, mantendo persistência e cronômetro.
+- Executar também `tests/test_risk_concepts_and_progress.py`, testes da aula 13,
+  navegação e escopo por conceito, além dos checks obrigatórios de conteúdo/smoke.

@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 import re
 import unittest
+from question_revision import questions_before_risk_concept_revision
 from validate_bank import load_questions
 import smoke as harness
 ROOT=Path(__file__).resolve().parents[1]
@@ -25,7 +26,8 @@ class Content(unittest.TestCase):
   self.assertEqual(hashlib.sha256(material_prefix.encode()).hexdigest(),self.report['materiais_anteriores_sha256'])
   self.assertEqual([r['id'] for r in self.report['itens']],list(range(1201,1251)))
   self.assertEqual({i for r in self.report['itens'] for i in r['imagens']},set(range(1,7)))
-  for r in self.report['itens']:self.assertEqual(digest(self.q[r['id']-1]),r['sha256'])
+  authored=questions_before_risk_concept_revision(self.q)
+  for r in self.report['itens']:self.assertEqual(digest(authored[r['id']-1]),r['sha256'])
   for r in self.report['bate_pronto']:self.assertEqual(digest(self.bp[r['id']-100001]),r['sha256'])
   for r in self.bp[600:]:self.assertEqual(self.q[r[7]-1][:2],r[:2])
  def test_aggregates_preserve_every_material_and_causal_conditions(self):
@@ -44,7 +46,7 @@ class Content(unittest.TestCase):
   for q in self.q[1200:]:
    self.assertNotRegex(' '.join(q[3:9]+[q[10]]+q[11]),r'(?i)\baula\b|\bslides?\b|professor|transcrição')
    self.assertEqual(len(set(q[11])),4)
-  self.assertIn('sem constituir pagamento adicional',self.q[1244][4])
+  self.assertIn('preço de marcação',self.q[1244][4])
   self.assertNotIn('taxa futura não pode subir',json.dumps(self.mat,ensure_ascii=False))
 class Browser(unittest.TestCase):
  setUpClass=classmethod(harness.PainelCPA.setUpClass.__func__)

@@ -1125,7 +1125,7 @@ class PainelCPA(unittest.TestCase):
         cases = self.page.evaluate("""() => {
             const results=[];
             for(const md of ['e','s','h'])for(const as of [[1,2],[1,2,3],[1,2,3,4],[1,7],[2,5,7],[1,2,3,4,5,6,7]])
-            for(const c of [5,10,20,30,40])for(const n of (md==='h'?[-1]:[-1,0,1,2])){
+            for(const c of [5,10,15,20,30])for(const n of (md==='h'?[-1]:[-1,0,1,2])){
                 cfg={a:0,as,b:0,n,c,md,m:'all'};
                 const plan=sessionPlan(),ids=mix(plan);
                 results.push({md,as,c,n,total:plan.n,note:plan.note,
