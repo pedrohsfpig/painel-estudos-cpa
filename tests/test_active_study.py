@@ -17,7 +17,7 @@ class ActiveStudy(unittest.TestCase):
     def material(self,lesson,kind):self.page.evaluate("([n,t])=>{view='m';mt={a:n,c:t};fi=0;ff=0;go()}",[lesson,kind])
     def matching(self,**source):return self.page.evaluate('s=>ActiveStudy.matching(s)',source)
     def source_entry(self,box):
-        return self.page.evaluate('k=>ActiveStudy.audit().find(e=>e.key===k)',box.get_attribute('data-active-study-key'))
+        return self.page.evaluate('k=>ActiveStudy.audit().find(e=>e.key===k)',box.get_attribute('data-active-study-key') or box.get_attribute('data-active-study'))
     def branch(self,title):
         return self.page.locator('.mind-branch').filter(has=self.page.get_by_role('heading',name=re.compile('^'+re.escape(title)+'$',re.I))).locator(':scope>.active-study-action')
 
@@ -65,7 +65,7 @@ class ActiveStudy(unittest.TestCase):
         before=self.page.evaluate('JSON.stringify([H,cfg,Q,BP,AL,MAT,selectedLessonBlocks])')
         self.assertGreater(len(entry['ids']),5)
         self.assertEqual(box.locator('.active-study-count').inner_text(),f"{len(entry['ids'])} disponíveis")
-        box.get_by_role('button').click()
+        box.locator('.active-study-button').click()
         actual=self.page.evaluate('qz.ids');self.assertEqual(set(actual),set(entry['ids']));self.assertEqual(len(actual),len(entry['ids']))
         self.assertEqual(self.page.evaluate('JSON.stringify([H,cfg,Q,BP,AL,MAT,selectedLessonBlocks])'),before)
         self.assertEqual(self.page.evaluate('qz.md'),'e');self.assertTrue(all(i<100001 for i in actual))
@@ -73,7 +73,7 @@ class ActiveStudy(unittest.TestCase):
         self.assertEqual(self.page.locator('.question-number').count() or self.page.locator('[data-question-index]').count(),len(actual))
 
     def test_hardcore_feedback_history_origin_and_return_to_source(self):
-        self.material(3,'mapa');box=self.branch('DIRETORIA');entry=self.source_entry(box);box.get_by_role('button').click()
+        self.material(3,'mapa');box=self.branch('DIRETORIA');entry=self.source_entry(box);box.locator('.active-study-button').click()
         self.page.evaluate('jumpQuestion(qz.ids.findIndex(id=>questionById(id)[2]===3))')
         self.assertEqual(self.page.locator('.question-stage>.quick-context').count(),0)
         self.assertIn('Hardcore',self.page.locator('.question-stage>p').inner_text())
@@ -122,10 +122,10 @@ class ActiveStudy(unittest.TestCase):
     def test_block_and_flashcard_context_survive_round_trip_and_count_is_live(self):
         self.page.evaluate("selectedLessonBlocks[7]=2;view='m';mt={a:7,c:'fc'};fi=1;ff=1;go()")
         box=self.page.locator('.flashcard-stage>.active-study-action')
-        if box.get_by_role('button').is_disabled():
+        if box.locator('.active-study-button').is_disabled():
             self.page.evaluate("fi=0;go()")
             box=self.page.locator('.flashcard-stage>.active-study-action')
-        state=self.page.evaluate('[mt,selectedLessonBlocks[7],fi,ff]');box.get_by_role('button').click()
+        state=self.page.evaluate('[mt,selectedLessonBlocks[7],fi,ff]');box.locator('.active-study-button').click()
         self.click('Voltar ao conteúdo');self.assertEqual(self.page.evaluate('[mt,selectedLessonBlocks[7],fi,ff]'),state)
 
     def test_overview_cell_locks_to_its_operator_and_not_incidental_supervisor(self):
@@ -133,14 +133,15 @@ class ActiveStudy(unittest.TestCase):
         row=self.page.locator('.operator-overview-table [data-operator="investimento"]')
         # Identificação por nome preserva o teste se o ID editorial mudar.
         if not row.count():row=self.page.locator('.operator-overview-table tr').filter(has=self.page.locator('.overview-operator-name',has_text='Banco de investimento'))
-        box=row.locator('[data-feature="oversight"]>.active-study-action')
+        box=row.locator('[data-feature="oversight"]')
+        self.assertEqual(box.locator('.active-study-action').count(),0)
         entry=self.source_entry(box)
         self.assertEqual(entry['profile']['owners'],['investment'])
         self.assertTrue({53,58,69,283,304}.isdisjoint(entry['ids']))
         self.assertLessEqual(len(entry['ids']),10)
 
     def test_result_retry_keeps_context_and_only_repeats_actual_errors(self):
-        self.material(3,'mapa');box=self.branch('DIRETORIA');box.get_by_role('button').click()
+        self.material(3,'mapa');box=self.branch('DIRETORIA');box.locator('.active-study-button').click()
         # Um recorte pequeno da própria sessão exercita término e revisão.
         self.page.evaluate("qz.ids=qz.ids.slice(0,3);go()")
         self.answer(False);self.click('Próxima');self.answer();self.click('Próxima');self.answer();self.click('Ver resultado')
@@ -150,7 +151,7 @@ class ActiveStudy(unittest.TestCase):
         self.click('Voltar ao conteúdo');self.assertEqual(self.page.evaluate('view'),'m')
 
     def test_themes_keyboard_and_responsive_screens_preserve_data(self):
-        self.material(3,'mapa');box=self.branch('DIRETORIA');box.get_by_role('button').focus();self.page.keyboard.press('Enter')
+        self.material(3,'mapa');box=self.branch('DIRETORIA');box.locator('.active-study-button').focus();self.page.keyboard.press('Enter')
         self.assertTrue(self.page.evaluate('!!qz.contextStudy'));self.click('Voltar ao conteúdo')
         stable=self.page.evaluate('JSON.stringify([Q,BP,AL,MAT,H,cfg,qz])')
         for width in [390,768,1024,1440,1920]:

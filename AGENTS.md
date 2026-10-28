@@ -227,6 +227,13 @@ da primeira renderização e respeite os destaques semânticos nos dois temas.
   para tema novo. Veja `docs/estudo-por-conteudo.md`.
 - Execute `tests/test_active_study.py`, regressões de navegação/resultados e
   `tests/smoke.py`; confira temas, teclado, telas pequenas e os textos originais.
+- Refinamento visual solicitado no mesmo dia: mapas, diagramas, linhas do tempo
+  e quadro geral usam **um controle por quadro/ramificação**, com acesso aos
+  conceitos em um seletor lateral. Não inserir botões/contagens em cada nó ou
+  célula. Preserve TODOS os vínculos, contagens e ações no seletor; pesquisa,
+  grupos expansíveis, teclado, foco e fechamento precisam funcionar. Tabelas
+  mantêm o atalho discreto abaixo. Não aumentar linhas/colunas para acomodar
+  ações. Verifique também `tests/test_active_study_design.py`.
 
 O usuário exige preservar os textos, quantidades e hierarquia dos mapas,
 diagramas, tabelas e prazos de `MAT`. Uma mudança visual não autoriza resumir,
@@ -370,6 +377,22 @@ Antes de publicar mudanças na trilha, execute os quatro comandos de validação
 acima. O teste de navegação abre e confere as três seções das seis aulas. Faça
 também revisão pedagógica manual: testes de estrutura e renderização não provam
 completude, qualidade de um macete ou validade jurídica.
+
+## Aula 13 — bloco final com aulas internas (28/10/2026)
+
+Pedido futuro: registrar agora, aguardar slides, transcrições e resumos. A Aula
+13 será um bloco final, composto por aulas internas específicas das seis aulas
+curtas do professor. O usuário quer praticar/simular o bloco inteiro e também
+selecionar aulas internas, individualmente ou em conjunto.
+
+Cada aula interna terá **menos de 100 questões**; a quantidade ainda não foi
+definida e será avaliada com o conteúdo. Esta é uma exceção expressa à quota
+normal de 100 por aula: não impor 100 por subaula nem ao bloco inteiro. Manter
+as proporções de dificuldade acordadas, com arredondamento para totais menores.
+Não inventar quantidades de Bate-pronto ou novos pesos. Não criar placeholders
+ou questões antes de receber as fontes. Preservar as doze aulas e seus IDs.
+Este pedido substitui o plano de decidir por duas ou três aulas externas.
+Detalhes: `docs/aula-13-planejamento.md`.
 
 ## Novas aulas com vários blocos
 

@@ -222,7 +222,8 @@ window.ActiveStudy=(()=>{
    return true;
   }).map(q=>q.id);
  }
- const entries=new Map(),keys=new Map();let nextKey=0;
+ const entries=new Map(),keys=new Map(),scopes=new WeakMap();let nextKey=0,chooser=null;
+ const DENSE_SCOPE='.mind-branch,.diagram-group,.diagram-sequence,.material-time-panel,.operator-overview';
  function register(source){
   const signature=JSON.stringify(source);let key=keys.get(signature);
   if(key===undefined){key=String(++nextKey);keys.set(signature,key);entries.set(key,{source,stamp:0,ids:[]})}
@@ -231,7 +232,11 @@ window.ActiveStudy=(()=>{
  }
  function footer(node,source,after=false){
   if(!node||node.dataset.activeStudy)return;
-  const entry=register(source),count=entry.ids.length,box=document.createElement('div');
+  const entry=register(source),count=entry.ids.length,scope=node.closest(DENSE_SCOPE);
+  node.dataset.activeStudy=entry.key;
+  // Os vínculos finos ficam disponíveis no seletor, fora do desenho do conteúdo.
+  if(scope&&scope!==node){const list=scopes.get(scope)||[];if(!list.includes(entry.key))list.push(entry.key);scopes.set(scope,list);return;}
+  const box=document.createElement('div');
   box.className='active-study-action';box.dataset.activeStudyKey=entry.key;
   const button=document.createElement('button');button.type='button';button.className='active-study-button';button.disabled=!count;
   button.innerHTML=uiIcon('practice')+'<span>Fazer questões</span>';
@@ -239,7 +244,59 @@ window.ActiveStudy=(()=>{
   button.addEventListener('click',()=>start(entry.key,box));
   const total=document.createElement('span');total.className='active-study-count';total.textContent=`${count} ${count===1?'disponível':'disponíveis'}`;box.append(button,total);
   if(!count)button.title='Ainda não há questões vinculadas a este conteúdo específico.';
-  node.dataset.activeStudy=entry.key;if(after)node.after(box);else node.append(box);
+  const choices=scopes.get(node)||[];
+  if(choices.length){
+   box.classList.add('active-study-scope');
+   const refine=document.createElement('button');refine.type='button';refine.className='active-study-options-trigger';
+   refine.innerHTML='<span>Por conceito</span>'+uiIcon('filter');refine.setAttribute('aria-haspopup','dialog');
+   refine.setAttribute('aria-label',`Escolher conceito em ${source.label}`);
+   refine.onclick=()=>openChooser(entry.key,choices);box.append(refine);
+  }
+  if(after)node.after(box);else node.append(box);
+ }
+ function closeChooser(restore=true){
+  if(!chooser)return;
+  const previous=chooser;chooser=null;previous.dialog.close();previous.dialog.remove();
+  if(restore)document.querySelector(`[data-active-study-key="${previous.key}"] .active-study-options-trigger`)?.focus({preventScroll:true});
+ }
+ function openChooser(key,choices){
+  const entry=entries.get(String(key));if(!entry)return;closeChooser(false);
+  const dialog=document.createElement('dialog');dialog.className='active-study-dialog';dialog.setAttribute('aria-labelledby','active-study-dialog-title');
+  dialog.innerHTML=`<header class="active-study-dialog-head"><div><span>ESTUDO POR CONTEÚDO</span><h2 id="active-study-dialog-title">Escolher conceito</h2></div><div><button type="button" class="active-study-dialog-theme" aria-label="Alternar tema na seleção de questões">${uiIcon('bulb')}</button><button type="button" class="active-study-dialog-close" aria-label="Fechar seleção de conceitos">${uiIcon('cross')}</button></div></header><div class="active-study-dialog-content"><p class="active-study-dialog-scope">${escapeText(entry.source.label)}</p><label class="active-study-dialog-search" for="active-study-concept-search">Buscar neste conteúdo<div>${uiIcon('search')}<input id="active-study-concept-search" type="search" placeholder="Nome do conceito ou característica" maxlength="160" autocomplete="off"></div></label><p class="active-study-dialog-help">Escolha o conjunto completo ou um conceito específico. Cada contagem corresponde à sessão que será aberta.</p><div id="active-study-choices"></div></div>`;
+  document.body.append(dialog);chooser={dialog,key:String(key),choices:[...choices],query:''};
+  dialog.querySelector('.active-study-dialog-close').onclick=()=>closeChooser();
+  dialog.querySelector('.active-study-dialog-theme').onclick=()=>document.getElementById('theme-toggle')?.click();
+  dialog.querySelector('input').oninput=event=>{if(!chooser)return;chooser.query=event.target.value;paintChoices()};
+  dialog.addEventListener('cancel',event=>{event.preventDefault();closeChooser()});
+  dialog.addEventListener('click',event=>{if(event.target!==dialog)return;const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)closeChooser()});
+  paintChoices();dialog.showModal();dialog.querySelector('input').focus();
+ }
+ function choiceRow(key,whole=false){
+  const entry=entries.get(key),count=entry.ids.length,row=document.createElement('div');row.className='active-study-choice'+(whole?' is-whole':'');row.dataset.activeStudyKey=key;
+  const text=document.createElement('div'),title=document.createElement('strong'),total=document.createElement('span');
+  title.textContent=whole?'Todo este conteúdo':entry.source.label;total.textContent=`${count} ${count===1?'questão disponível':'questões disponíveis'}`;
+  text.append(title,total);
+  const action=document.createElement('button');action.type='button';action.className='active-study-choice-start';action.disabled=!count;action.textContent='Fazer questões';
+  action.setAttribute('aria-label',`Fazer questões: ${whole?'todo este conteúdo':entry.source.label} (${count})`);action.onclick=()=>start(key,row);row.append(text,action);return row;
+ }
+ function paintChoices(){
+  if(!chooser)return;const root=chooser.dialog.querySelector('#active-study-choices');root.replaceChildren();
+  const query=fold(chooser.query),words=query.split(' ').filter(Boolean),groups=new Map();
+  if(!query)root.append(choiceRow(chooser.key,true));
+  chooser.choices.forEach(key=>{
+   const e=entries.get(key);if(!e)return;
+   const group=e.source.parents.slice(1).join(' · ')||e.source.label;
+   if(!words.every(word=>fold(group+' '+e.source.label+' '+e.source.text).includes(word)))return;
+   if(!groups.has(group))groups.set(group,[]);groups.get(group).push(key);
+  });
+  const status=document.createElement('p');status.className='active-study-choice-status';status.setAttribute('role','status');
+  const count=[...groups.values()].reduce((n,keys)=>n+keys.length,0);status.textContent=`${count} ${count===1?'conceito':'conceitos'}`;root.append(status);
+  groups.forEach((keys,label)=>{
+   const group=document.createElement('details');group.className='active-study-choice-group';group.open=!!query||groups.size===1;
+   const heading=document.createElement('summary'),title=document.createElement('span'),total=document.createElement('small');title.textContent=label;total.textContent=`${keys.length} ${keys.length===1?'conceito':'conceitos'}`;heading.append(title,total);group.append(heading);
+   keys.forEach(key=>group.append(choiceRow(key)));root.append(group);
+  });
+  if(!count){const empty=document.createElement('p');empty.className='active-study-choice-empty';empty.textContent='Nenhum conceito encontrado neste conteúdo. Tente outro termo.';root.append(empty)}
  }
  const textOf=node=>{if(!node)return '';const clone=node.cloneNode(true);clone.querySelectorAll('.active-study-action,svg,button,.collegiate-chart').forEach(n=>n.remove());return clone.textContent.trim()};
  function decorate(){
@@ -285,18 +342,19 @@ window.ActiveStudy=(()=>{
  function start(key,box){
   const entry=entries.get(String(key));if(!entry)return;
   if(qz&&qz.rev.length<qz.ids.length){
-   let notice=box.querySelector('.active-study-pending');if(!notice){notice=document.createElement('span');notice.className='active-study-pending';notice.setAttribute('role','status');notice.textContent='Conclua ou encerre a sessão atual para iniciar estas questões. ';const resume=document.createElement('button');resume.type='button';resume.textContent='Retomar sessão';resume.onclick=()=>{view='q';go()};notice.append(resume);box.append(notice)}return;
+   let notice=box.querySelector('.active-study-pending');if(!notice){notice=document.createElement('span');notice.className='active-study-pending';notice.setAttribute('role','status');notice.textContent='Conclua ou encerre a sessão atual para iniciar estas questões. ';const resume=document.createElement('button');resume.type='button';resume.textContent='Retomar sessão';resume.onclick=()=>{closeChooser(false);view='q';go()};notice.append(resume);box.append(notice)}return;
   }
   const ids=matching(entry.source);if(!ids.length)return;
   const origin={view,tr,mt:{...mt},fi,ff,block:selectedLessonBlocks[entry.source.lesson]||0,key:String(key)};
   const title=unique([entry.source.parents.at(-1),entry.source.label]).filter(Boolean).join(' · ');
+  closeChooser(false);
   begin(shuffle([...ids]),'e',{contextStudy:{title,origin}});
  }
  function returnToContent(){
   const context=qz?.contextStudy;if(!context)return;
   const origin=context.origin;view=origin.view;tr=origin.tr;mt={...origin.mt};fi=origin.fi;ff=origin.ff;
   const entry=entries.get(origin.key);if(entry)selectedLessonBlocks[entry.source.lesson]=origin.block;
-  go();const target=document.querySelector(`[data-active-study-key="${origin.key}"]`);target?.scrollIntoView({block:'center'});target?.querySelector('button')?.focus({preventScroll:true});
+  go();const target=document.querySelector(`[data-active-study-key="${origin.key}"]`)||document.querySelector(`[data-active-study="${origin.key}"]`);target?.scrollIntoView({block:'center'});const control=target?.querySelector('button')||target;if(control){if(control===target)control.setAttribute('tabindex','-1');control.focus({preventScroll:true})}
  }
  function sessionHeader(){return qz?.contextStudy?`<div class="active-study-session"><div><span>ESTUDO POR CONTEÚDO</span><strong>${escapeText(qz.contextStudy.title)}</strong><small>${qz.ids.length} questões · Estudo e Hardcore conforme o banco</small></div><button type="button" onclick="ActiveStudy.returnToContent()">Voltar ao conteúdo</button></div>`:''}
  return {decorate,matching,profile,questionProfile,bank,start,returnToContent,sessionHeader,audit:()=>[...entries].map(([key,e])=>({key,...e,profile:profile(e.source)}))};

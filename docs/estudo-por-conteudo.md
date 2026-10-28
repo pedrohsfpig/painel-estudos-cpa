@@ -17,6 +17,12 @@ sem limite de quantidade, filtro de inéditas ou proporção de sorteio.
 - Flashcards: abaixo do cartão, fora da área que vira a pergunta/resposta.
 - Quadro do SFN: cada órgão e grupo de operadores.
 
+Os vínculos específicos continuam disponíveis em todos esses locais. Nos mapas,
+diagramas, quadros gerais e linhas do tempo, o controle **Por conceito** abre
+um seletor lateral com grupos, busca e contagem de cada conceito. Há apenas
+um atalho por ramificação/quadro; os nós e células ficam livres de controles.
+Tabelas mantêm o acesso discreto abaixo; os demais textos preservam seus atalhos.
+
 A interface é inserida depois da renderização, sem reescrever AL/MAT, os
 quadros, os textos, suas cores ou os dados de Q/BP. Os controles ficam fora dos
 textos usados por mapas e trilha, preservando a hierarquia original. Zero
@@ -108,3 +114,27 @@ gera `/tmp/cpa-active-study/final-links.json` para inspeção local dos vínculo
   contagens e conjuntos sem IDs duplicados. Zero não é preenchido artificialmente.
 - Bancos Q/BP, textos AL/MAT e quadros preservados; o diff de index.html contém
   somente os recursos, integração visual, retorno e regras da nova sessão.
+
+### Refinamento visual posterior — 28/10/2026
+
+O usuário considerou os botões repetidos visualmente prejudiciais. Foram
+retirados dos nós de mapas/diagramas, células do quadro geral e registros de
+linha do tempo. Os mesmos vínculos ficam em **Por conceito**, ao lado da ação
+compacta do quadro/ramificação. O seletor lateral é fechado por padrão e não
+ocupa espaço no material, com conjunto completo e todos os conceitos específicos.
+
+Busca local, contagens, grupos expansíveis, vazio, zero desabilitado, navegação
+por teclado, Escape, clique fora, devolução de foco e tema preservados. Iniciar
+fecha o seletor; Retomar sessão também o fecha, sem substituir uma prática.
+Voltar ao conteúdo pode focar o conceito original, mesmo sem botão em seu nó.
+
+O seletor não modifica o catálogo de assuntos, os conjuntos de IDs ou a lógica
+da sessão. Os controles não alargam colunas nem aumentam os nós dos diagramas.
+Conferir `tests/test_active_study_design.py` além das regressões existentes.
+
+Validação do refinamento: 11 testes de estudo ativo, 6 testes de apresentação e
+76 fluxos gerais aprovados. Comparação dos 3.421 descritores com a versão
+anterior: **nenhum conjunto de IDs alterado**. Os testes de geometria confirmam
+que a tabela do quadro geral e os nós dos diagramas conservam suas dimensões;
+o mapa recebe apenas o controle compacto por ramificação. Conferência visual
+em dois temas e no computador/celular concluída.
