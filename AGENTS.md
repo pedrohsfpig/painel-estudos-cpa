@@ -189,6 +189,14 @@ um resumo separado com contagem/aproveitamento; não invente sua posição tempo
 O gráfico mostra agregados por dia, não notas individuais de sessões antigas,
 cuja separação não foi gravada no formato original. Não apague nenhum registro.
 
+Pedido de 28/10/2026: mostrar **aproveitamento e volume juntos**, sem alternância
+obrigatória. A linha mantém o percentual; barras em uma faixa inferior, alinhadas
+às mesmas datas, mostram a quantidade explícita de respostas. Usar escalas
+separadas, legenda e números visíveis, sem depender do mouse. Repetições contam
+como tentativas; volume não significa questões únicas. Preservar todos os dias,
+fuso, resumo sem data e independência dos filtros. Executar também
+`tests/test_evolution_volume.py` ao alterar o gráfico.
+
 Confira seleção, retomada, conclusão, repetição, meia-noite, sequência/recorde,
 abas, API de conta, armazenamento indisponível, histórico longo/sem data, temas e
 PC. Consulte `docs/estudo-diario-e-evolucao.md`.

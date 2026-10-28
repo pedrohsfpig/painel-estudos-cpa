@@ -79,6 +79,24 @@ valores inventados. Todos os pontos ficam no desenho, com rolagem horizontal,
 datas completas, percentual e contagem no título acessível. Há atalhos para
 Início do histórico/Mais recente e preservação da posição de leitura.
 
+### Aproveitamento e quantidade juntos — 28/10/2026
+
+A mesma visualização agora mostra a linha do percentual e, abaixo, barras com o
+total de questões respondidas em cada data. Os números das barras ficam sempre
+visíveis, alinhados aos pontos e às datas; a legenda diferencia as duas medidas.
+As barras têm escala própria de quantidade, proporcional ao maior total diário
+do histórico. Elas não compartilham a escala percentual da linha. Valores muito
+pequenos mantêm uma marca mínima visível e o número exato acima da barra.
+
+O total usa o mesmo agregado diário do aproveitamento: todas as tentativas com
+IDs válidos, inclusive repetições, Estudo, Hardcore, Simulado e Bate-pronto. Não
+significa quantidade de questões únicas. Não há troca entre volume e percentual
+nem filtros que ocultem uma das duas medidas. A leitura funciona sem mouse e
+mantém o horário de Brasília, rolagem, temas e o resumo dos registros sem data.
+
+Validação específica: `python3 tests/test_evolution_volume.py`, além das
+regressões do painel, Estatísticas e smoke.
+
 O formato histórico não identifica sessões completas separadamente. Por isso,
 o gráfico apresenta **agregados diários**, não uma reconstrução das notas de cada
 simulado antigo. Registros sem data, ou com data ilegível, permanecem num resumo
