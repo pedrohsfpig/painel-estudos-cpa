@@ -234,6 +234,16 @@ da primeira renderização e respeite os destaques semânticos nos dois temas.
   grupos expansíveis, teclado, foco e fechamento precisam funcionar. Tabelas
   mantêm o atalho discreto abaixo. Não aumentar linhas/colunas para acomodar
   ações. Verifique também `tests/test_active_study_design.py`.
+- Revisão global posterior de 28/10/2026: cada conjunto completo reúne IDs
+  próprios e de TODOS os conceitos visíveis, sem repetição. `source.concepts`
+  registra a hierarquia; contagem, diálogo e início usam o mesmo resolvedor.
+  Conceitos podem se sobrepor, mas não podem trazer IDs fora de seu quadro.
+  Não cortar vínculos pertinentes para manter um número antigo: revisar o
+  contexto e agregar os subconjuntos corretos. Instituição específica e
+  característica prevalecem sobre palavras incidentais; Mercado em Liquidez
+  não é risco de mercado. Siglas de índices exigem limites de palavra.
+  Execute `tests/test_active_study_scope.py` em TODAS as aulas/blocos, além dos
+  testes de estudo ativo, desenho e smoke. Ver `docs/revisao-conceitos.json`.
 
 O usuário exige preservar os textos, quantidades e hierarquia dos mapas,
 diagramas, tabelas e prazos de `MAT`. Uma mudança visual não autoriza resumir,

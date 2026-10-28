@@ -149,3 +149,48 @@ liquidez de mercado; Cupom dentro de Sensibilidade pertence aos juros.
 Mercado de crédito não equivale automaticamente a risco de crédito. Exemplos
 numéricos identificam o conceito no próprio texto, sem relações por ID fixo.
 Os controles compactos e o seletor Por conceito permanecem iguais.
+
+## Coerência entre quadro e conceitos — revisão global de 28/10/2026
+
+O usuário identificou que Liquidez tinha 13 questões, mas alguns subitens
+traziam questões de risco de mercado, somando 22 IDs distintos. A causa era
+interpretar cada texto isoladamente: Mercado sob Liquidez perdia o assunto do
+quadro. O mesmo padrão afetava outras aulas.
+
+A correção combina contexto de cima para baixo e agregação de baixo para cima:
+
+- Fatos herdam o assunto de seus grupos. Uma entidade específica, como agência
+  de fomento, continua sendo o assunto de fundo de liquidez, beneficiários e
+  operações. A menção ao supervisor não transforma isso em todas as funções do BC.
+- Características institucionais mantêm o foco. Aprovação do Senado dentro do
+  caminho de nomeação é nomeação; processo disciplinar dentro de Exoneração é
+  exoneração. Autonomia administrativa não vira todas as operações do BC.
+- Siglas como IPA e IPC são reconhecidas com limites de palavra; não se presume
+  inflação por fragmentos de participação, capital ou finalidades principais.
+- Grupos são registrados após seus descendentes. `source.concepts` contém os
+  descritores visíveis do grupo; `matching` reúne os IDs próprios e dos conceitos,
+  com deduplicação e ordenação. O quadro completo inclui todos os seus conceitos.
+  Não se esconde uma questão pertinente para conservar um número anterior.
+- Botão, seletor e sessão consultam o mesmo resolvedor. O cache acompanha o tamanho
+  do banco e devolve cópias, preservando os conjuntos contra mutação do consumidor.
+- Grupos distintos podem compartilhar perguntas. As contagens por conceito não
+  devem ser somadas; o seletor explica isso junto à escolha do conjunto completo.
+
+A auditoria percorreu 129 combinações de aula/bloco/material, 277 quadros únicos
+e 2.858 descritores. Havia 176 quadros com algum subitem fora do conjunto principal;
+a reexecução terminou com **zero**. Em Liquidez, a união dos filtros agora contém
+os mesmos 13 IDs do quadro, incluindo questões pertinentes da aula 1 e da aula 13.
+Os subitens de mercado não trazem as questões 1229–1236 de risco de mercado.
+
+Relatório: `revisao-conceitos.json`, com totais, hashes dos conjuntos e o
+exemplo de Liquidez conferido por ID. Este relatório é um registro desta revisão, não um número
+fixo para futuras aulas. O arquivo index.html, bancos Q/BP, materiais AL/MAT,
+histórico e regras de dificuldade foram preservados.
+
+Validação: seis testes de escopo (incluindo todas as aulas/blocos e hierarquias),
+11 de estudo ativo, seis de apresentação, 11 da aula 13, 16 de navegação/resultados
+e os 76 fluxos gerais do smoke aprovados. Conferir também:
+
+```bash
+python3 tests/test_active_study_scope.py
+```

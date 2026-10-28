@@ -12,7 +12,7 @@ window.ActiveStudy=(()=>{
   ['creditspread','Spread de crédito',/spread de credito/],
   ['bc','Banco Central',/\b(bacen|bcb|bc|banco central|banco dos bancos|banco do governo|banco emissor)\b/],
   ['cmn','CMN',/\b(cmn|conselho monetario nacional)\b/],['cvm','CVM',/\b(cvm|comissao de valores mobiliarios)\b/],
-  ['comoc','Comoc',/\b(comoc|comissao tecnica da moeda e do credito)\b/],['secretaria','Secretaria-Executiva',/\bsecretaria executiva\b|^secretaria$/],
+  ['comoc','Comoc',/\b(comoc|comissao tecnica da moeda e do credito)\b/],['secretaria','Secretaria-Executiva',/\bsecretaria(?: executiva)?\b/],
   ['cnsp','CNSP',/\b(cnsp|conselho nacional de seguros privados)\b/],['susep','Susep',/\b(susep|superintendencia de seguros privados)\b/],
   ['cnpc','CNPC',/\b(cnpc|conselho nacional de previdencia complementar)\b/],['previc','Previc',/\b(previc|superintendencia nacional de previdencia complementar)\b/],
   ['comef','Comef',/\bcomef\b/],
@@ -42,9 +42,9 @@ window.ActiveStudy=(()=>{
   ['clearing','Clearing e liquidação',/\bclearing\b|compensacao|liquidacao|pos negociacao/],['dvp','Entrega contra pagamento',/\bdvp\b|entrega contra pagamento/],['cetip','Cetip',/\bcetip\b/],
   ['accp','ACCP Brasil',/\baccp\b/],['compulsory','Compulsórios',/\bcompulsori\w*\b/],['lfl','Linhas de liquidez',/\b(lfl|lli|llt)\b|linhas? de liquidez|cestas? de garantias?|colateral/],
   ['flow','Fluxo circular',/fluxo circular|fluxo real|fluxo monetario|mercados? de fatores|familias|bens e servicos/],
-  ['fiscal','Política fiscal',/\bfiscal\b|tribut\w*|orcamento|contas publicas|deficit|divida publica|teto de gastos|tesouro nacional/],
+  ['fiscal','Política fiscal',/\bfiscal\b|\btribut\w*|orcamento|contas publicas|deficit|divida publica|teto de gastos|tesouro nacional/],
   ['pib','PIB',/\bpib\b|produto interno|produto nominal|produto real|per capita|valor adicionado|dupla contagem|oticas/],
-  ['inflation','Inflação e índices',/inflacao|ipca|igp m|ipa|incc|ipc|deflacao|indices? de precos/],['inflationtarget','Meta de inflação',/meta de inflacao|metas para a inflacao|meta continua|tolerancia|descumprimento|\bmeta\b/],
+  ['inflation','Inflação e índices',/inflacao|\b(?:ipca|igp m|ipa|incc|ipc)\b|deflacao|indices? de precos/],['inflationtarget','Meta de inflação',/meta de inflacao|metas para a inflacao|meta continua|tolerancia|descumprimento|\bmeta\b/],
   ['selicrate','Taxa Selic e DI',/\b(selic|copom|di)\b|taxa basica|deposito interfinanceiro/],['tr','TR',/\b(tr|tbf)\b|taxa referencial/],['tlp','TLP e TJLP',/\b(tlp|tjlp)\b|taxa de longo prazo/],
   ['spread','Spread',/\bspread\b|taxa de captacao|taxa de aplicacao/],['intermediation','Intermediação e serviços',/intermediacao|superavitario|deficitario|poupadores|tomadores|prestacao de servicos|gerenciamento de recursos/],
   ['usury','Lei da Usura',/lei da usura/],['liquidity','Liquidez',/\bliquidez\b/],['bankclass','Classificação bancária',/operadores monetarios|monetarias|nao monetarias|bancarias|nao bancarias/],
@@ -206,6 +206,44 @@ window.ActiveStudy=(()=>{
  }
  let bankCache=null;
  function bank(){if(bankCache?.length===Q.length)return bankCache.profiles;const profiles=Q.map((q,i)=>questionProfile(q,i+1));bankCache={length:Q.length,profiles};return profiles;}
+ const entitySubjects=new Set(['commercial','multiple','savingsbank','coopbank','coop','investment','development','fomento','fxbank','sci','mortgage','scfi','scmepp','consortium','b3','brokers','capitalization','eapc','efpc','insurer','reinsurance','insurancebroker','ip','scd','sep']);
+ const broadSubjects=new Set(['sfn','markets','money','credit','capital','exchange','regulation','clearing','bankclass']);
+ function headingSubjects(label,lesson){
+  let ids=reduce(found(label),lesson);
+  const named=ids.filter(id=>!broadSubjects.has(id));
+  if(named.length)ids=named;
+  else if(!/^(?:mercado(?:s)? de |monetario$|credito$|capitais$|cambio$)/.test(fold(label)))ids=[];
+  if(ids.includes('inflationtarget'))ids=ids.filter(id=>id!=='inflation');
+  return ids;
+ }
+ function inheritedSubjects(source){
+  const {lesson,label='',parents=[],whole=false}=source;
+  const own=headingSubjects(label,lesson),ancestry=parents.slice(1);
+  const contexts=ancestry.map(h=>headingSubjects(h,lesson));
+  const entity=contexts.map(ids=>ids.filter(id=>entitySubjects.has(id))).find(ids=>ids.length);
+  let context=entity||[...contexts].reverse().find(ids=>ids.length);
+  const rootOrgs=reduce(found(parents[0]||''),lesson).filter(id=>orgs.has(id));
+  if(!context?.length)context=rootOrgs;
+  if(!context.length)return null;
+  if(entity?.length)return entity;
+  const refinements={imf:['selicsystem','str','spi','b3','cetip','otherpayments','dvp'],spb:['imf','selicsystem','str','spi','ip','arrangement','otherpayments'],fgc:['dpge','fgcoop']};
+  const refined=own.filter(id=>context.some(parent=>refinements[parent]?.includes(id)));
+  if(refined.length)return refined;
+  const institution=context.filter(id=>orgs.has(id));
+  const membership=ancestry.some(h=>/composicao|diretoria|colegiado|membros|participantes/.test(fold(h)));
+  if(institution.length){
+   if(membership)return institution;
+   // A new, explicitly named group may introduce a comparison or another
+   // concept. A sentence that merely cites an institution cannot do so.
+   const explicit=whole&&fold(label).split(' ').length<=8?own.filter(id=>!broadSubjects.has(id)):[];
+   if(explicit.length&&!explicit.every(id=>context.includes(id)))return explicit;
+   const same=own.filter(id=>context.includes(id));return same.length?same:context;
+  }
+  // A named concept (meta de inflação, PTAX, regime cambial...) supplies
+  // the meaning of roles and facts inside it, even when they cite an organ.
+  if(context.includes('creditspread')&&/spread bancario/.test(fold(label)))return ['spread'];
+  return context;
+ }
  function profile(source){
   const {lesson,label='',text='',parents=[],whole=false,ownerHints=[],lockOwners=false}=source;
   const headings=[label,...[...parents].reverse()];
@@ -217,19 +255,28 @@ window.ActiveStudy=(()=>{
   if(!owners.length)owners=reduce(found(text),lesson);
   if(lesson===6){const hints=fold(label+' '+text);if(!owners.length){if(/singular|centrais|confederac|nao associad/.test(hints))owners=['coop'];else if(/carteira|multiplo|cnpj/.test(hints))owners=['multiple'];else if(/acoes com voto|50.*acao|51/.test(hints))owners=['coopbank'];else if(/deposito a vista/.test(hints))owners=['bankclass'];}}
   if(lesson===7&&!owners.length){const hints=fold(label+' '+text);if(/investimento|capital fixo|capital de giro/.test(hints))owners=['investment'];else if(/sorteio|lance|consorciad|categoria|fornecedor/.test(hints))owners=['consortium'];else if(/lim[ií]trofe/.test(hints))owners=['development'];else if(/formacao de preco/.test(hints))owners=['b3'];}
+  const inherited=inheritedSubjects(source);if(inherited?.length)owners=inherited;
   // Um fragmento de diretoria herda seu órgão; citar BC como membro do CMN não
   // transforma o fragmento em composição do próprio BC.
   let fs=aspects(label+' '+text),labelFacets=aspects(label),parentFacets=[];
   for(const h of [...parents].reverse()){const f=aspects(h);if(f.length){parentFacets=f;break}}
   if(labelFacets.length)fs=labelFacets;
   if(/^(diretoria|composicao|dirigentes)|^colegiado.*(?:membro|diretor|presiden|composicao)/.test(fold(label))){fs=aspects(text).filter(f=>['members','mandate','appointment','requirements','dismissal'].includes(f));if(!fs.length)fs=['members'];}
-  if(owners.some(o=>orgs.has(o)))fs=fs.filter(f=>!['structure','audience','funding','insurance','limits'].includes(f));
+  if(owners.some(o=>orgs.has(o))){
+   const localFocus=labelFacets.filter(f=>focused.has(f));
+   const parentFocus=[...parents].reverse().map(h=>/^caminho$/.test(fold(h))?['appointment']:aspects(h).filter(f=>focused.has(f))).find(fs=>fs.length)||[];
+   if(localFocus.length)fs=localFocus;
+   else if(/^caminho$/.test(fold(label)))fs=['appointment'];
+   else if(parentFocus.length)fs=parentFocus;
+   else if(whole&&fs.some(f=>focused.has(f)))fs=fs.filter(f=>focused.has(f));
+   fs=fs.filter(f=>!['structure','audience','funding','insurance','limits'].includes(f));
+  }
   if(!fs.length)fs=parentFacets.filter(f=>!owners.some(o=>orgs.has(o))||!['structure','audience','funding','insurance','limits'].includes(f));
   if(institution&&fs.some(f=>focused.has(f))&&owners.every(o=>orgs.has(o))){owners=institution;}
   if([2,3].includes(lesson)&&/prestacao de contas|carta.*fazenda|nota no relatorio|descumprimento|calendario da meta/.test(fold(label+' '+text))&&!/mandato|exoneracao|nomeacao/.test(fold(label)))owners=['inflationtarget'];
   const hinted=reduce(ownerHints.flatMap(found),lesson);
   if(hinted.length&&(lockOwners||!owners.some(o=>orgs.has(o))||hinted.some(o=>orgs.has(o))))owners=hinted;
-  else if(whole&&!owners.some(o=>orgs.has(o))&&!reduce(found(label),lesson).length)owners=reduce([...owners,...found(text)],lesson);
+  else if(whole&&!inherited?.length&&!owners.some(o=>orgs.has(o))&&!reduce(found(label),lesson).length)owners=reduce([...owners,...found(text)],lesson);
   if(lesson===13){
    const riskIds=new Set(['risk-liquidity','risk-credit','risk-market','risk-rates','rating','creditspread','spread']);
    const convert=ids=>unique(ids.map(id=>({liquidity:'risk-liquidity',credit:'risk-credit',markets:'risk-market'}[id]||id)).filter(id=>riskIds.has(id)));
@@ -248,7 +295,7 @@ window.ActiveStudy=(()=>{
     return null;
    };
    const hintedAnchor=lockOwners?unique(ownerHints.flatMap(h=>anchor(h)||[])):[];
-   const parentAnchor=[...parents].reverse().map(anchor).find(Boolean);
+   const parentAnchor=parents.slice(1).map(anchor).find(Boolean);
    const primary=hintedAnchor.length?hintedAnchor:parentAnchor||anchor(label);
    owners=primary||convert(owners);
    if(!owners.length){for(const h of headings){const ids=convert(reduce(found(h),lesson));if(ids.length){owners=ids;break}}}
@@ -259,7 +306,7 @@ window.ActiveStudy=(()=>{
   if(!micro.length)micro=microFacets(owners,[...parents].reverse().find(p=>microFacets(owners,p).length)||'');
   return {owners:unique(owners),facets:unique(fs),micro};
  }
- function matching(source){
+ function directMatching(source){
   const p=profile(source);if(!p.owners.length)return [];
   return bank().filter(q=>{
    if(!q.owners.some(o=>p.owners.includes(o)))return false;
@@ -272,7 +319,15 @@ window.ActiveStudy=(()=>{
    return true;
   }).map(q=>q.id);
  }
- const entries=new Map(),keys=new Map(),scopes=new WeakMap();let nextKey=0,chooser=null;
+ const matchCache=new WeakMap();
+ function matching(source){
+  const previous=matchCache.get(source);if(previous?.stamp===Q.length)return [...previous.ids];
+  // A panel covers both its own concept and all concepts visibly contained
+  // in it. Shared questions count once, regardless of the number of labels.
+  const ids=unique([...directMatching(source),...(source.concepts||[]).flatMap(matching)]).sort((a,b)=>a-b);
+  matchCache.set(source,{stamp:Q.length,ids});return [...ids];
+ }
+ const entries=new Map(),keys=new Map();let nextKey=0,chooser=null;
  const DENSE_SCOPE='.mind-branch,.diagram-group,.diagram-sequence,.material-time-panel,.operator-overview';
  function register(source){
   const signature=JSON.stringify(source);let key=keys.get(signature);
@@ -282,10 +337,15 @@ window.ActiveStudy=(()=>{
  }
  function footer(node,source,after=false){
   if(!node||node.dataset.activeStudy)return;
-  const entry=register(source),count=entry.ids.length,scope=node.closest(DENSE_SCOPE);
+  const scope=node.closest(DENSE_SCOPE);
+  const container=source.whole&&after&&node.parentElement?.classList.contains('mind-group')?node.parentElement:
+   source.whole&&node.matches('th')?node.closest('[data-operator]'):node;
+  const choices=source.whole?unique([...container.querySelectorAll('[data-active-study]')].filter(child=>child!==node).map(child=>child.dataset.activeStudy)):[];
+  const concepts=choices.map(key=>entries.get(key)?.source).filter(Boolean);
+  const entry=register(concepts.length?{...source,concepts}:source),count=entry.ids.length;
   node.dataset.activeStudy=entry.key;
   // Os vínculos finos ficam disponíveis no seletor, fora do desenho do conteúdo.
-  if(scope&&scope!==node){const list=scopes.get(scope)||[];if(!list.includes(entry.key))list.push(entry.key);scopes.set(scope,list);return;}
+  if(scope&&scope!==node)return;
   const box=document.createElement('div');
   box.className='active-study-action';box.dataset.activeStudyKey=entry.key;
   const button=document.createElement('button');button.type='button';button.className='active-study-button';button.disabled=!count;
@@ -294,7 +354,6 @@ window.ActiveStudy=(()=>{
   button.addEventListener('click',()=>start(entry.key,box));
   const total=document.createElement('span');total.className='active-study-count';total.textContent=`${count} ${count===1?'disponível':'disponíveis'}`;box.append(button,total);
   if(!count)button.title='Ainda não há questões vinculadas a este conteúdo específico.';
-  const choices=scopes.get(node)||[];
   if(choices.length){
    box.classList.add('active-study-scope');
    const refine=document.createElement('button');refine.type='button';refine.className='active-study-options-trigger';
@@ -312,7 +371,7 @@ window.ActiveStudy=(()=>{
  function openChooser(key,choices){
   const entry=entries.get(String(key));if(!entry)return;closeChooser(false);
   const dialog=document.createElement('dialog');dialog.className='active-study-dialog';dialog.setAttribute('aria-labelledby','active-study-dialog-title');
-  dialog.innerHTML=`<header class="active-study-dialog-head"><div><span>ESTUDO POR CONTEÚDO</span><h2 id="active-study-dialog-title">Escolher conceito</h2></div><div><button type="button" class="active-study-dialog-theme" aria-label="Alternar tema na seleção de questões">${uiIcon('bulb')}</button><button type="button" class="active-study-dialog-close" aria-label="Fechar seleção de conceitos">${uiIcon('cross')}</button></div></header><div class="active-study-dialog-content"><p class="active-study-dialog-scope">${escapeText(entry.source.label)}</p><label class="active-study-dialog-search" for="active-study-concept-search">Buscar neste conteúdo<div>${uiIcon('search')}<input id="active-study-concept-search" type="search" placeholder="Nome do conceito ou característica" maxlength="160" autocomplete="off"></div></label><p class="active-study-dialog-help">Escolha o conjunto completo ou um conceito específico. Cada contagem corresponde à sessão que será aberta.</p><div id="active-study-choices"></div></div>`;
+  dialog.innerHTML=`<header class="active-study-dialog-head"><div><span>ESTUDO POR CONTEÚDO</span><h2 id="active-study-dialog-title">Escolher conceito</h2></div><div><button type="button" class="active-study-dialog-theme" aria-label="Alternar tema na seleção de questões">${uiIcon('bulb')}</button><button type="button" class="active-study-dialog-close" aria-label="Fechar seleção de conceitos">${uiIcon('cross')}</button></div></header><div class="active-study-dialog-content"><p class="active-study-dialog-scope">${escapeText(entry.source.label)}</p><label class="active-study-dialog-search" for="active-study-concept-search">Buscar neste conteúdo<div>${uiIcon('search')}<input id="active-study-concept-search" type="search" placeholder="Nome do conceito ou característica" maxlength="160" autocomplete="off"></div></label><p class="active-study-dialog-help">Escolha o conjunto completo ou um conceito específico. Uma questão pode aparecer em vários conceitos; o total do quadro conta cada questão uma única vez. As contagens dos conceitos não devem ser somadas.</p><div id="active-study-choices"></div></div>`;
   document.body.append(dialog);chooser={dialog,key:String(key),choices:[...choices],query:''};
   dialog.querySelector('.active-study-dialog-close').onclick=()=>closeChooser();
   dialog.querySelector('.active-study-dialog-theme').onclick=()=>document.getElementById('theme-toggle')?.click();
@@ -360,7 +419,8 @@ window.ActiveStudy=(()=>{
   if(view==='m'){
    document.querySelectorAll('.mind-branch').forEach(branch=>{
     const title=textOf(branch.querySelector('h3'));
-    branch.querySelectorAll('.mind-node').forEach(node=>{
+    // Register descendants first so every group can include its own subgroups.
+    [...branch.querySelectorAll('.mind-node')].reverse().forEach(node=>{
      const parents=[title],groups=[];let parent=node.parentElement.closest('.mind-group');
      while(parent&&branch.contains(parent)){const heading=textOf(parent.querySelector(':scope>.mind-node'));if(parent.querySelector(':scope>.mind-node')!==node)groups.unshift(heading);parent=parent.parentElement.closest('.mind-group')}
      parents.push(...groups);const label=textOf(node),group=node.parentElement.classList.contains('mind-group');
