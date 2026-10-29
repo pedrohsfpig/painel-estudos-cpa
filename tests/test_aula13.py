@@ -7,7 +7,7 @@ import re
 import unittest
 from question_revision import questions_before_risk_concept_revision
 from validate_bank import load_questions
-from final_block import before_private_credit
+from final_block import before_private_credit,unit_count
 import smoke as harness
 ROOT=Path(__file__).resolve().parents[1]
 def read(marker):return json.JSONDecoder().raw_decode((ROOT/'index.html').read_text().split(marker,1)[1])[0]
@@ -70,13 +70,14 @@ class Browser(unittest.TestCase):
   self.assertEqual(self.page.locator('#overview-scroll tbody tr').count(),6)
   self.assertEqual(self.page.evaluate('[AU[13],AL[12].t,MAT[13].mm[0]]'),['Aula 13: Bloco Final']*3)
  def test_practice_internal_controls_and_all_modes_have_exact_stock(self):
-  for mode,n in [('e',80),('s',80),('h',20),('b',50)]:
+  for mode,single in [('e',40),('s',40),('h',10),('b',25)]:
+   n=single*unit_count()
    self.page.evaluate("md=>{cfg={a:13,as:[],b:0,us:[],md,n:-1,m:'all',c:40};qz=null;view='q';go()}",mode)
    self.assertEqual(self.page.evaluate('pool().length'),n)
    self.page.locator('.practice-blocks [data-lesson-block="1"]').click()
-   self.assertEqual(self.page.evaluate('cfg.us'),[1]);self.assertEqual(self.page.evaluate('pool().length'),n//2)
-   self.assertEqual(self.page.evaluate('sessionPlan().n'),min(40,n//2))
-   self.assertEqual(len(set(self.page.evaluate('mix(sessionPlan())'))),min(40,n//2))
+   self.assertEqual(self.page.evaluate('cfg.us'),[1]);self.assertEqual(self.page.evaluate('pool().length'),single)
+   self.assertEqual(self.page.evaluate('sessionPlan().n'),min(40,single))
+   self.assertEqual(len(set(self.page.evaluate('mix(sessionPlan())'))),min(40,single))
    self.page.locator('.practice-blocks [data-lesson-block="0"]').click();self.assertEqual(self.page.evaluate('cfg.us'),[])
  def test_multiple_internal_units_balance_without_changing_the_real_bank(self):
   original=self.page.evaluate('JSON.stringify([Q,BP,AL])')

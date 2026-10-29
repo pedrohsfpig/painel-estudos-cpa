@@ -4499,6 +4499,181 @@
       "tema": "Crédito privado: capitalização",
       "fonte_Q": 1296,
       "modelo": "direto"
+    },
+    {
+      "id": 100651,
+      "aula": 13,
+      "tema": "Fluxos: cronograma contratual",
+      "fonte_Q": 1301,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100652,
+      "aula": 13,
+      "tema": "Fluxos: cronograma contratual",
+      "fonte_Q": 1303,
+      "modelo": "direto"
+    },
+    {
+      "id": 100653,
+      "aula": 13,
+      "tema": "Fluxos: cronograma contratual",
+      "fonte_Q": 1304,
+      "modelo": "direto"
+    },
+    {
+      "id": 100654,
+      "aula": 13,
+      "tema": "Fluxos: cronograma contratual",
+      "fonte_Q": 1306,
+      "modelo": "direto"
+    },
+    {
+      "id": 100655,
+      "aula": 13,
+      "tema": "Fluxos: cronograma contratual",
+      "fonte_Q": 1310,
+      "modelo": "direto"
+    },
+    {
+      "id": 100656,
+      "aula": 13,
+      "tema": "Fluxos: caixa e perspectivas",
+      "fonte_Q": 1313,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100657,
+      "aula": 13,
+      "tema": "Fluxos: caixa e perspectivas",
+      "fonte_Q": 1312,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100658,
+      "aula": 13,
+      "tema": "Fluxos: caixa e perspectivas",
+      "fonte_Q": 1318,
+      "modelo": "direto"
+    },
+    {
+      "id": 100659,
+      "aula": 13,
+      "tema": "Fluxos: caixa e perspectivas",
+      "fonte_Q": 1316,
+      "modelo": "direto"
+    },
+    {
+      "id": 100660,
+      "aula": 13,
+      "tema": "Fluxos: caixa e perspectivas",
+      "fonte_Q": 1319,
+      "modelo": "direto"
+    },
+    {
+      "id": 100661,
+      "aula": 13,
+      "tema": "Fluxos: equivalência temporal",
+      "fonte_Q": 1321,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100662,
+      "aula": 13,
+      "tema": "Fluxos: equivalência temporal",
+      "fonte_Q": 1324,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100663,
+      "aula": 13,
+      "tema": "Fluxos: equivalência temporal",
+      "fonte_Q": 1330,
+      "modelo": "direto"
+    },
+    {
+      "id": 100664,
+      "aula": 13,
+      "tema": "Fluxos: equivalência temporal",
+      "fonte_Q": 1327,
+      "modelo": "direto"
+    },
+    {
+      "id": 100665,
+      "aula": 13,
+      "tema": "Fluxos: equivalência temporal",
+      "fonte_Q": 1328,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100666,
+      "aula": 13,
+      "tema": "Fluxos: valor presente líquido",
+      "fonte_Q": 1334,
+      "modelo": "direto"
+    },
+    {
+      "id": 100667,
+      "aula": 13,
+      "tema": "Fluxos: valor presente líquido",
+      "fonte_Q": 1335,
+      "modelo": "direto"
+    },
+    {
+      "id": 100668,
+      "aula": 13,
+      "tema": "Fluxos: valor presente líquido",
+      "fonte_Q": 1337,
+      "modelo": "direto"
+    },
+    {
+      "id": 100669,
+      "aula": 13,
+      "tema": "Fluxos: valor presente líquido",
+      "fonte_Q": 1336,
+      "modelo": "direto"
+    },
+    {
+      "id": 100670,
+      "aula": 13,
+      "tema": "Fluxos: valor presente líquido",
+      "fonte_Q": 1338,
+      "modelo": "direto"
+    },
+    {
+      "id": 100671,
+      "aula": 13,
+      "tema": "Fluxos: cupons e retorno líquido",
+      "fonte_Q": 1343,
+      "modelo": "direto"
+    },
+    {
+      "id": 100672,
+      "aula": 13,
+      "tema": "Fluxos: cupons e retorno líquido",
+      "fonte_Q": 1342,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100673,
+      "aula": 13,
+      "tema": "Fluxos: cupons e retorno líquido",
+      "fonte_Q": 1346,
+      "modelo": "direto"
+    },
+    {
+      "id": 100674,
+      "aula": 13,
+      "tema": "Fluxos: cupons e retorno líquido",
+      "fonte_Q": 1345,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100675,
+      "aula": 13,
+      "tema": "Fluxos: cupons e retorno líquido",
+      "fonte_Q": 1350,
+      "modelo": "direto"
     }
   ],
   "escopo": "Banco conceitual próprio: 50 por aula regular e 25 por aula interna do bloco final. Fontes e validação específicas registradas nos relatórios de cada aula; sem certificação normativa independente."

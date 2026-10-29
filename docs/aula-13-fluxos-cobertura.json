@@ -1,0 +1,1063 @@
+{
+  "data": "2026-10-29",
+  "aula": 13,
+  "unidade": 3,
+  "titulo": "Aula 3: Fluxo de Pagamentos",
+  "preservacao": {
+    "Q": {
+      "count": 1300,
+      "sha256": "020a3363142bd3a56101fb8b88e9b5d58033f389651b236873563c8dea0f5843"
+    },
+    "BP": {
+      "count": 650,
+      "sha256": "b81248d87003a06171c236b9bfb92eb3ea52f23f1b6bea41421cf6333c9673ce"
+    },
+    "AL_1_12": "42e50f91d6929fb7566a711680054a34dccad91b7e8a60652f55264a8ac42407",
+    "aula13_o": "Bloco final com aulas internas: Riscos Financeiros e Crédito Privado. Revise cada tema separadamente ou pratique o conjunto.",
+    "unidades_AL": "34a2dfaba84bbe3daeb598ce03e5f9fade619caac677912c0d6d4818add43302",
+    "unidades_MAT": "817dd47816b9186c89af9129c5d428c6050aac1f55fd4cd2ba727e7ddbab9f78",
+    "overview_rows": "c9ca7aaa52c39444eb925cfa93674ddc9971daf4bc36b630bf0bd2b9adcda148"
+  },
+  "fontes": {
+    "transcricao": {
+      "sediment": "file_00000000eed0820eb56bf5fc530bfd9b",
+      "aula_fonte": 25,
+      "sha256": "c77351af0c4ad3658d8bdf0a45e888ab427a1c5c7a28f1b1e5a09c62898f5603"
+    },
+    "ordem_confirmada_pelo_usuario": [
+      "Fluxo de Pagamentos",
+      "Fluxo de Caixa"
+    ],
+    "complementos": [
+      "Valor Futuro e fórmula composta",
+      "Valor Presente e fórmula composta",
+      "Valor Presente Líquido e investimento inicial"
+    ]
+  },
+  "quantidades": {
+    "Q": 50,
+    "niveis": [
+      10,
+      20,
+      10,
+      10
+    ],
+    "estudo_simulado_compartilhadas": 40,
+    "hardcore": 10,
+    "BP": 25,
+    "flashcards": 25,
+    "flashcards_niveis": [
+      9,
+      8,
+      8
+    ]
+  },
+  "itens": [
+    {
+      "id": 1301,
+      "tema": "Fluxos: cronograma contratual",
+      "nivel": 0,
+      "angulo": "Cronograma define obrigações antes de valores realizados",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Pagamentos"
+      ],
+      "sha256": "5e37e5e68bfb1fff9a023dc3e326f2b95133c170ed5b9d32d24ca11597cbe9f9"
+    },
+    {
+      "id": 1302,
+      "tema": "Fluxos: cronograma contratual",
+      "nivel": 0,
+      "angulo": "Periodicidade versus data final",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Pagamentos"
+      ],
+      "sha256": "02728048834ea32c29dc0585f8eb6d01862fb229aa8ced26e5ec3652d98ee752"
+    },
+    {
+      "id": 1303,
+      "tema": "Fluxos: cronograma contratual",
+      "nivel": 1,
+      "angulo": "Emissão e aquisição secundária são marcos distintos",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Pagamentos"
+      ],
+      "sha256": "d1856a033a2f22795ca6989c64a101ae5b4cf05646a6fced57adfba640438317"
+    },
+    {
+      "id": 1304,
+      "tema": "Fluxos: cronograma contratual",
+      "nivel": 1,
+      "angulo": "Carência restrita ao principal não suspende cupons",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Pagamentos"
+      ],
+      "sha256": "43b86b6ae5b3394a26f0ee83f06fa338a9ad1f44607428f3e4b5e537b5a41783"
+    },
+    {
+      "id": 1305,
+      "tema": "Fluxos: cronograma contratual",
+      "nivel": 1,
+      "angulo": "Carência não define sozinha tratamento dos juros",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Pagamentos"
+      ],
+      "sha256": "470bfdbaef928712e40dd246b8f55110ba910692f3fe47139984ae62595cabde"
+    },
+    {
+      "id": 1306,
+      "tema": "Fluxos: cronograma contratual",
+      "nivel": 1,
+      "angulo": "Cupom e principal podem coincidir na última data",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Pagamentos"
+      ],
+      "sha256": "e87cb55769a5c1a821bec6aa03295a6774b8217ef301fe20761d0265519a134f"
+    },
+    {
+      "id": 1307,
+      "tema": "Fluxos: cronograma contratual",
+      "nivel": 2,
+      "angulo": "Frequência igual não torna calendários equivalentes",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Pagamentos"
+      ],
+      "sha256": "dfefe6ed8ad88d012f3ffa838610a665037b1d53b3651aab2fedc15d50ec22a0"
+    },
+    {
+      "id": 1308,
+      "tema": "Fluxos: cronograma contratual",
+      "nivel": 2,
+      "angulo": "Frequência dos juros não se estende a eventos não recorrentes",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Pagamentos"
+      ],
+      "sha256": "024a77ca270425b511839214b931da5cf7dd33e34876d17a2d4f75106d748380"
+    },
+    {
+      "id": 1309,
+      "tema": "Fluxos: cronograma contratual",
+      "nivel": 3,
+      "angulo": "Reconstrução contratual exige cruzar cláusulas independentes",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Pagamentos"
+      ],
+      "sha256": "334ceb8bf7a90e7e5ef1707db8dab42aa784bcb98237d55e50663010efaa72f3"
+    },
+    {
+      "id": 1310,
+      "tema": "Fluxos: cronograma contratual",
+      "nivel": 3,
+      "angulo": "Evento previsto, mudança de data e inadimplemento não são equivalentes",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Pagamentos"
+      ],
+      "sha256": "8cde34ba55c6ed7968b4c735aa85b65a9c03b0ba3fc31a9116290ee42e7e966c"
+    },
+    {
+      "id": 1311,
+      "tema": "Fluxos: caixa e perspectivas",
+      "nivel": 0,
+      "angulo": "Leitura de seta pela perspectiva declarada",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa"
+      ],
+      "sha256": "113a804a131a36f263ebdf9e715e12d1cd061ed577fe4256709fffff756be18e"
+    },
+    {
+      "id": 1312,
+      "tema": "Fluxos: caixa e perspectivas",
+      "nivel": 0,
+      "angulo": "Informação que quantifica o fluxo de caixa",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa"
+      ],
+      "sha256": "bf7dd9cf5451dd223666639660ed745bba21be9b2bfc17a8d34ca512d31df55e"
+    },
+    {
+      "id": 1313,
+      "tema": "Fluxos: caixa e perspectivas",
+      "nivel": 1,
+      "angulo": "Mesma transferência com sinais opostos",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa"
+      ],
+      "sha256": "5e40d67afe8d59c2c7d95829264c287c554534cc534e508029774ddb0cde720c"
+    },
+    {
+      "id": 1314,
+      "tema": "Fluxos: caixa e perspectivas",
+      "nivel": 1,
+      "angulo": "Recorte dos eventos de um novo titular",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa"
+      ],
+      "sha256": "bd28c60fa5722a8d15c1f2ba9d5602357628bbdd3a50c2ce9a71ce34b8f939b2"
+    },
+    {
+      "id": 1315,
+      "tema": "Fluxos: caixa e perspectivas",
+      "nivel": 1,
+      "angulo": "Forma da seta não é escala de valores",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa"
+      ],
+      "sha256": "a54b314b1fd801e7d08a690477a204e9666884a42f12732bcc028555d94668f7"
+    },
+    {
+      "id": 1316,
+      "tema": "Fluxos: caixa e perspectivas",
+      "nivel": 1,
+      "angulo": "Ausência de cupons e existência de remuneração",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa"
+      ],
+      "sha256": "0a2304b14b76e11b2ffef9a0da1710d57724e260bf78db7d2d0fe787f8408f69"
+    },
+    {
+      "id": 1317,
+      "tema": "Fluxos: caixa e perspectivas",
+      "nivel": 2,
+      "angulo": "Custo de aquisição não altera o cronograma da emissora",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa"
+      ],
+      "sha256": "602c450b53f7f96b9f35344031ab82fda3d7c9c7016d5ec80a23ef330f6e9f51"
+    },
+    {
+      "id": 1318,
+      "tema": "Fluxos: caixa e perspectivas",
+      "nivel": 2,
+      "angulo": "Previsão quantificada não é recebimento comprovado",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa"
+      ],
+      "sha256": "19362625f5b7378c7bf51662916bfccf8713db0c28f7f92a369f1d0d06abd941"
+    },
+    {
+      "id": 1319,
+      "tema": "Fluxos: caixa e perspectivas",
+      "nivel": 3,
+      "angulo": "Consolidação indevida de perspectivas opostas",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa"
+      ],
+      "sha256": "38b1819f13462379209371735342a8dcd88ba89f270246ec1f5dbf78d51f0572"
+    },
+    {
+      "id": 1320,
+      "tema": "Fluxos: caixa e perspectivas",
+      "nivel": 3,
+      "angulo": "Transição de obrigação para projeção e depois realização",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa"
+      ],
+      "sha256": "f23780214a91243b623ef6f5c779b323225646a171c0f3fda9d8b66c052bf879"
+    },
+    {
+      "id": 1321,
+      "tema": "Fluxos: equivalência temporal",
+      "nivel": 0,
+      "angulo": "Valor referido à data de hoje",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa",
+        "Fórmulas de VF e VP"
+      ],
+      "sha256": "c25f29e69252ab8f646462849b7c42b0a11b1a89893b5db21267774216ddc55a"
+    },
+    {
+      "id": 1322,
+      "tema": "Fluxos: equivalência temporal",
+      "nivel": 0,
+      "angulo": "Capitalização leva recurso atual à data posterior",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa",
+        "Fórmulas de VF e VP"
+      ],
+      "sha256": "dff209a2da879d293dddcec05b6a82f37d19c15cdd14a1e27bfc356c1a8ca152"
+    },
+    {
+      "id": 1323,
+      "tema": "Fluxos: equivalência temporal",
+      "nivel": 1,
+      "angulo": "Expoente representa número de períodos compatíveis",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa",
+        "Fórmulas de VF e VP"
+      ],
+      "sha256": "4ab7a343ebf7cea9edb2de557e73c69c01147860df5e500f24e4abdc2a671ab5"
+    },
+    {
+      "id": 1324,
+      "tema": "Fluxos: equivalência temporal",
+      "nivel": 1,
+      "angulo": "Taxa não é o próprio fator de desconto",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa",
+        "Fórmulas de VF e VP"
+      ],
+      "sha256": "3544033c9c9e2f81938e2fc4d402fe0f4207f0edae28ec4551319110dc441de3"
+    },
+    {
+      "id": 1325,
+      "tema": "Fluxos: equivalência temporal",
+      "nivel": 1,
+      "angulo": "Prazo de desconto contado a partir da data de avaliação",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa",
+        "Fórmulas de VF e VP"
+      ],
+      "sha256": "f8c9c7c5bf1e8cb53d363d7c035403770bedf4b958a6270b6e6c0066cfad5cf8"
+    },
+    {
+      "id": 1326,
+      "tema": "Fluxos: equivalência temporal",
+      "nivel": 1,
+      "angulo": "Datas diferentes impedem equivalência pela soma nominal",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa",
+        "Fórmulas de VF e VP"
+      ],
+      "sha256": "3dcb04befd8466fc670e95ff453442596e0b4c288bc80825baa7c71bbc2fd8f9"
+    },
+    {
+      "id": 1327,
+      "tema": "Fluxos: equivalência temporal",
+      "nivel": 2,
+      "angulo": "Desconto individual de recebimentos intermediários",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa",
+        "Fórmulas de VF e VP"
+      ],
+      "sha256": "f5f4c1d36d52b4b7f65d37f12a10ab1d12afe41dbda833611132c067f7d4164a"
+    },
+    {
+      "id": 1328,
+      "tema": "Fluxos: equivalência temporal",
+      "nivel": 2,
+      "angulo": "Pagamento já na data-base não recebe novo desconto",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa",
+        "Fórmulas de VF e VP"
+      ],
+      "sha256": "b3ae6f0eefd43ca252f863d56c0ed48a59e9e3ecdb7021bb30a0de60effa64e1"
+    },
+    {
+      "id": 1329,
+      "tema": "Fluxos: equivalência temporal",
+      "nivel": 3,
+      "angulo": "Direção e sinal de obrigação futura no valor presente",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa",
+        "Fórmulas de VF e VP"
+      ],
+      "sha256": "5cc4bfbd53e709c88e9a72f46c1f226b09626ca56276309e594986b25a8b67a6"
+    },
+    {
+      "id": 1330,
+      "tema": "Fluxos: equivalência temporal",
+      "nivel": 3,
+      "angulo": "Unidade de taxa e intervalos em fórmula de valor presente",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa",
+        "Fórmulas de VF e VP"
+      ],
+      "sha256": "cb6415f1071ffc97e1d04b36883fededf194f8394392ec35a2bda39faff320c4"
+    },
+    {
+      "id": 1331,
+      "tema": "Fluxos: valor presente líquido",
+      "nivel": 0,
+      "angulo": "Grandeza que inclui custo inicial e valor temporal dos recebimentos",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa",
+        "Fórmula de VPL"
+      ],
+      "sha256": "061b5c5a73064802f1dff559a739b74e8837e582b615d37319c609d8e7ff8986"
+    },
+    {
+      "id": 1332,
+      "tema": "Fluxos: valor presente líquido",
+      "nivel": 0,
+      "angulo": "Custo inicial como saída no cálculo completo",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa",
+        "Fórmula de VPL"
+      ],
+      "sha256": "f6866aa7b767e415619e3f4b6fb79531c55ab4fb866df843f8bddb2aea3b2f39"
+    },
+    {
+      "id": 1333,
+      "tema": "Fluxos: valor presente líquido",
+      "nivel": 1,
+      "angulo": "VPL positivo condicionado à taxa e à projeção",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa",
+        "Fórmula de VPL"
+      ],
+      "sha256": "de3aa8ae7f1f246f3c22d427b78487020d781b37c12579323bdc7b22e9c8943d"
+    },
+    {
+      "id": 1334,
+      "tema": "Fluxos: valor presente líquido",
+      "nivel": 1,
+      "angulo": "VPL zero não elimina a remuneração temporal",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa",
+        "Fórmula de VPL"
+      ],
+      "sha256": "dc61d7b9f02e9296e2c96d870d302069dc44d6db4c34b60d07c3caf16d343fc4"
+    },
+    {
+      "id": 1335,
+      "tema": "Fluxos: valor presente líquido",
+      "nivel": 1,
+      "angulo": "Ganho nominal pode coexistir com VPL negativo",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa",
+        "Fórmula de VPL"
+      ],
+      "sha256": "27968591bc4c2827c38f2479ce61198e68b66e64ff86ae5b14cc9f18b1ed305c"
+    },
+    {
+      "id": 1336,
+      "tema": "Fluxos: valor presente líquido",
+      "nivel": 1,
+      "angulo": "Saídas futuras também integram a avaliação",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa",
+        "Fórmula de VPL"
+      ],
+      "sha256": "a32eff1c856cbd428ff7880770497487a66e477fce7e8a7ac0b489530d19b732"
+    },
+    {
+      "id": 1337,
+      "tema": "Fluxos: valor presente líquido",
+      "nivel": 2,
+      "angulo": "Duas representações algébricas sem duplicar investimento",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa",
+        "Fórmula de VPL"
+      ],
+      "sha256": "86c1e861ae8eb742bec5c5978f1c917e5b3af80b894e62b231dbd831c3f44608"
+    },
+    {
+      "id": 1338,
+      "tema": "Fluxos: valor presente líquido",
+      "nivel": 2,
+      "angulo": "Critério de desconto não altera obrigações contratadas",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa",
+        "Fórmula de VPL"
+      ],
+      "sha256": "1c452ec2b9ced44917200d690733e4c4433b317e1c7dda9dd7141ebbc5e9a640"
+    },
+    {
+      "id": 1339,
+      "tema": "Fluxos: valor presente líquido",
+      "nivel": 3,
+      "angulo": "Taxa que zera o cálculo não substitui taxa exigida independente",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa",
+        "Fórmula de VPL"
+      ],
+      "sha256": "c5cf012a1cdaa4231da70e70bdaa1eea0dd14e2a2f25203664512b088487ff29"
+    },
+    {
+      "id": 1340,
+      "tema": "Fluxos: valor presente líquido",
+      "nivel": 3,
+      "angulo": "Tributação deve entrar nos fluxos e não como corte arbitrário do VPL",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa",
+        "Fórmula de VPL"
+      ],
+      "sha256": "093fd283a9f2ca99f0ab8ede4417a98766c45a87be5137158297b25c5cb1ba28"
+    },
+    {
+      "id": 1341,
+      "tema": "Fluxos: cupons e retorno líquido",
+      "nivel": 0,
+      "angulo": "Desconto financeiro não equivale a dedução de impostos",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa"
+      ],
+      "sha256": "0f09bbc839570772770c4061e774fc89691b452086dc42c66da253660f65ff94"
+    },
+    {
+      "id": 1342,
+      "tema": "Fluxos: cupons e retorno líquido",
+      "nivel": 0,
+      "angulo": "Líquida de impostos é posterior à incidência aplicável",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa"
+      ],
+      "sha256": "786e455ea0467a7c161e6b609b8c842769e3ddd38097a1e33eef5dde2562925c"
+    },
+    {
+      "id": 1343,
+      "tema": "Fluxos: cupons e retorno líquido",
+      "nivel": 1,
+      "angulo": "Cupom contratual igual não prova mesma rentabilidade de aquisição",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa"
+      ],
+      "sha256": "5c58977d1a42143f9416a3ff56f02629126b3dcd122c3178a5eca752455ed416"
+    },
+    {
+      "id": 1344,
+      "tema": "Fluxos: cupons e retorno líquido",
+      "nivel": 1,
+      "angulo": "Tributo sobre rendimento não recai automaticamente sobre todo recebimento",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa"
+      ],
+      "sha256": "0905c7f68bfb7768ad5e4a91c5852d297f29b0da761129fca591f11e97e38501"
+    },
+    {
+      "id": 1345,
+      "tema": "Fluxos: cupons e retorno líquido",
+      "nivel": 1,
+      "angulo": "Isenção no caso não autoriza imposto automático",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa"
+      ],
+      "sha256": "136e8af6b4dda192227ec152e2549a33a8a5cd8831a59c0d0928e1554b55953f"
+    },
+    {
+      "id": 1346,
+      "tema": "Fluxos: cupons e retorno líquido",
+      "nivel": 1,
+      "angulo": "Retorno não deve ser confundido com saldo que inclui capital",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa"
+      ],
+      "sha256": "ab489ac787aeea7cba3c2b6d730a77cb4bf8bcd37f6a3d678aad499aa04de3fd"
+    },
+    {
+      "id": 1347,
+      "tema": "Fluxos: cupons e retorno líquido",
+      "nivel": 2,
+      "angulo": "Comparação bruta e líquida exige mesma base temporal",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa"
+      ],
+      "sha256": "2a2317c8b9ca0dc4b4e096c9f51c305cd8f420db403f31fd38f960eaa5cc8e11"
+    },
+    {
+      "id": 1348,
+      "tema": "Fluxos: cupons e retorno líquido",
+      "nivel": 2,
+      "angulo": "Cupons brutos e resgate líquido não podem ser misturados sem ajuste",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa"
+      ],
+      "sha256": "95d9f29d0e8f78bc8288c9f28d4b1b9ee457cb80f1945f99ef75a5ea3a7cbf2d"
+    },
+    {
+      "id": 1349,
+      "tema": "Fluxos: cupons e retorno líquido",
+      "nivel": 3,
+      "angulo": "Taxa líquida projetada não é rendimento realizado garantido",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa"
+      ],
+      "sha256": "299e69976dee4566de5292995993b4333a74194bbab658c512a31aeeae519d6b"
+    },
+    {
+      "id": 1350,
+      "tema": "Fluxos: cupons e retorno líquido",
+      "nivel": 3,
+      "angulo": "Auditoria de três fluxos: cupom, reinvestimento e resgate",
+      "fontes": [
+        "Transcrição 25",
+        "Fluxo de Caixa"
+      ],
+      "sha256": "a48ea5545601bd50b6d69c39896e9a7c03c19721d202d0d73250d3f3b6e03a80"
+    }
+  ],
+  "bate_pronto": [
+    {
+      "id": 100651,
+      "angulo": "Natureza do calendário contratual",
+      "fonte_Q": 1301,
+      "sha256": "593be6504dc684a9c05a6404fcf2981115634ef047cb7e461e36251475728ce5"
+    },
+    {
+      "id": 100652,
+      "angulo": "Emissão versus aquisição",
+      "fonte_Q": 1303,
+      "sha256": "a9324c3e4a1a0b913b49e180dbb69d75ff1e8e6b7383951cb96490ae5143ab96"
+    },
+    {
+      "id": 100653,
+      "angulo": "Carência parcial e juros",
+      "fonte_Q": 1304,
+      "sha256": "ca45ff5ab6dd7e6ace7cc002a423ce8549b16f8d4be6ba585d033edd8448b30b"
+    },
+    {
+      "id": 100654,
+      "angulo": "Maturidade de saldo e cupom",
+      "fonte_Q": 1306,
+      "sha256": "2fe42f6da493723874e51cdfc33e6c02d620632c9510d073f561e0695baf5dfc"
+    },
+    {
+      "id": 100655,
+      "angulo": "Atraso versus alteração",
+      "fonte_Q": 1310,
+      "sha256": "9b997506b1eb7ecb0d2b5e687afc3ffe9a4b7751eb75212c7094e000166da8f5"
+    },
+    {
+      "id": 100656,
+      "angulo": "Perspectiva e captação",
+      "fonte_Q": 1313,
+      "sha256": "b646949695ac1433364c58f438f0dda01cc792eecec5d522a9c3bc8e2d70a822"
+    },
+    {
+      "id": 100657,
+      "angulo": "Quantidade e data",
+      "fonte_Q": 1312,
+      "sha256": "c0c1b81e0a450ef90f6c609821cc16a7b5fb45a0841e094165c7d6ed1ea0905c"
+    },
+    {
+      "id": 100658,
+      "angulo": "Representação não é liquidação",
+      "fonte_Q": 1318,
+      "sha256": "4670158d7f9adaf7a1670e49e3fc7c6853450a76772a489922697c3b4c000c61"
+    },
+    {
+      "id": 100659,
+      "angulo": "Ausência de juros periódicos",
+      "fonte_Q": 1316,
+      "sha256": "026e278e880464e886a39d178d91c2800ea3c54b7c33c48101294a9a9846dcb1"
+    },
+    {
+      "id": 100660,
+      "angulo": "Duas perspectivas",
+      "fonte_Q": 1319,
+      "sha256": "70fe21667866bb727df59c44f9f5089067134449bc6e00f37ffbe89bc9bcfee7"
+    },
+    {
+      "id": 100661,
+      "angulo": "Sentido temporal",
+      "fonte_Q": 1321,
+      "sha256": "a8a240efd04593d114065d89a036bbf1a50adf0827d36412f6c15a2453ec7ee9"
+    },
+    {
+      "id": 100662,
+      "angulo": "Fator de um período",
+      "fonte_Q": 1324,
+      "sha256": "90aba0b8d8dae9cc1a3bead4c277149116504a77c022fda766988257f7ec0fc0"
+    },
+    {
+      "id": 100663,
+      "angulo": "Prazos compatíveis",
+      "fonte_Q": 1330,
+      "sha256": "dfa843e912f06e635c2e3235aba658ef57bef2c98a770da7dd7da0e1f950de76"
+    },
+    {
+      "id": 100664,
+      "angulo": "Fluxos intermediários",
+      "fonte_Q": 1327,
+      "sha256": "e81e8188226c5632955ee26c6dd63b827b5ea51f592b500f50b87a5c1eb0c16e"
+    },
+    {
+      "id": 100665,
+      "angulo": "Fluxo já na referência",
+      "fonte_Q": 1328,
+      "sha256": "4cba537834a48ac924525c3eb5da9c2b1d77bc8665b64d0b7e7b3f0602264b0e"
+    },
+    {
+      "id": 100666,
+      "angulo": "Interpretação econômica do zero",
+      "fonte_Q": 1334,
+      "sha256": "bdb7076dada8ef3680807ade6871582132268f7d849bcf194423871dd9110c58"
+    },
+    {
+      "id": 100667,
+      "angulo": "Critério além do nominal",
+      "fonte_Q": 1335,
+      "sha256": "d8d1734165672d2fad441ca00ae2e1942c99cd782ef1eb28236cefee13d5952c"
+    },
+    {
+      "id": 100668,
+      "angulo": "Investimento já incluído",
+      "fonte_Q": 1337,
+      "sha256": "8d8359c1b0edb964691647b15bce485ec6111a8cfcb3604c7f91c3783debe911"
+    },
+    {
+      "id": 100669,
+      "angulo": "Custos futuros",
+      "fonte_Q": 1336,
+      "sha256": "468145e86b935177f4d4aef2bcebaf1a1299fbae571e18c8de56852446714e5f"
+    },
+    {
+      "id": 100670,
+      "angulo": "Parâmetro não altera caixa",
+      "fonte_Q": 1338,
+      "sha256": "39fc2d6069c6cd04fff0f2c4da4163e9fa0635631bea254102c122a74bab273b"
+    },
+    {
+      "id": 100671,
+      "angulo": "Cupons e base investida",
+      "fonte_Q": 1343,
+      "sha256": "2bf209152a58223b03296e48b13d6945f807cc14f1bc76937de50c7792374f56"
+    },
+    {
+      "id": 100672,
+      "angulo": "Base após tributo",
+      "fonte_Q": 1342,
+      "sha256": "151932bab2cfc0d9eace9fadf82b2a9590713cb3824950d38f076428fbd09e2d"
+    },
+    {
+      "id": 100673,
+      "angulo": "Capital no resgate",
+      "fonte_Q": 1346,
+      "sha256": "eaebe8b62a30d372d1b7959c0507cf9f44b31c39b146cb53baa6e8b45ce8f8ac"
+    },
+    {
+      "id": 100674,
+      "angulo": "Isenção expressa",
+      "fonte_Q": 1345,
+      "sha256": "770b8206c6b6fd72f74ad5af162ddaf70af83806bc423fe72c86e0d0e2d05722"
+    },
+    {
+      "id": 100675,
+      "angulo": "Reaplicação e contagem",
+      "fonte_Q": 1350,
+      "sha256": "47a5a35cf7d87304f7129ca65b8d6d7ab9c6625499ea4acc3d724f868ad5fec9"
+    }
+  ],
+  "flashcards": [
+    {
+      "indice": 0,
+      "nivel": 0,
+      "sha256": "bfce2e5c3695f6b1fcdaae38ca7c32aa36cb1fab2038ccd599d96a2bbf2cb6f5"
+    },
+    {
+      "indice": 1,
+      "nivel": 0,
+      "sha256": "04d73a150156c863053632802ceff833a3c8fa0c4c38b769ba2d023212f504b7"
+    },
+    {
+      "indice": 2,
+      "nivel": 0,
+      "sha256": "51364a33b38f607da1ce4606996408680c30e82cc0192c59a06b26ad6a483d83"
+    },
+    {
+      "indice": 3,
+      "nivel": 0,
+      "sha256": "1f4bc75b4feefd343a4dee8d0669b03bef6275b770865635b58f88908c9e168f"
+    },
+    {
+      "indice": 4,
+      "nivel": 0,
+      "sha256": "dd66b048560e713d06a49f373962fc501ffa133792a01c0a0089e6c128554dfb"
+    },
+    {
+      "indice": 5,
+      "nivel": 0,
+      "sha256": "5f60de29ece585ea229649b2a784b3eec6ee910d3eb87c9375f01e1a07c51f4e"
+    },
+    {
+      "indice": 6,
+      "nivel": 0,
+      "sha256": "9e6088c78ade490a1f7b536e8362d1792356c969e848bf0af4a2813fc1fcaef5"
+    },
+    {
+      "indice": 7,
+      "nivel": 0,
+      "sha256": "96c3fbeae7e807bc5d19b37fb5f0ca770f1410d806e9ad74cf8a5ba9693fd88b"
+    },
+    {
+      "indice": 8,
+      "nivel": 0,
+      "sha256": "8b31f8f23081d1f361e46d3cf1e45733e49badd3b7fb901ae4769d9126e59c97"
+    },
+    {
+      "indice": 9,
+      "nivel": 1,
+      "sha256": "e98062ac17c5f28b2aa5b270a7770117246edc2dbf9b3b0f7a78a03145a3d944"
+    },
+    {
+      "indice": 10,
+      "nivel": 1,
+      "sha256": "5de77b4c4a5b067a1481bb763e14e19048e1d109333e7faec2086275d1fe55ea"
+    },
+    {
+      "indice": 11,
+      "nivel": 1,
+      "sha256": "fb687e245ebf1db23c30cc14dc67397199e6d5e98844d2a48b6fb2cfaace4b01"
+    },
+    {
+      "indice": 12,
+      "nivel": 1,
+      "sha256": "453a03ee59c86e9bf173f3f44c48350e7249c2c5a12d1421c587af3b38eeb8e7"
+    },
+    {
+      "indice": 13,
+      "nivel": 1,
+      "sha256": "94b71649ca41f1964f8c6eb68442e93e4dc2a7d29ef97092b15ac2c0bede8b5f"
+    },
+    {
+      "indice": 14,
+      "nivel": 1,
+      "sha256": "45b684efe748282b667d062137458bbd9ae4661e67ad656c46ea51a487ff8f6a"
+    },
+    {
+      "indice": 15,
+      "nivel": 2,
+      "sha256": "d832281f1c696bfb15071da86ffae9867c078cda47b8669b3638bdae19bad1aa"
+    },
+    {
+      "indice": 16,
+      "nivel": 1,
+      "sha256": "e57a0d14dcbc0a4ffb7dda19b8a38cf1177752ba6034dcc9552129f7d582d39e"
+    },
+    {
+      "indice": 17,
+      "nivel": 1,
+      "sha256": "f4882b79ff3e809845b56d272d64fe8b065f094f31534305092e3f87c897bb11"
+    },
+    {
+      "indice": 18,
+      "nivel": 2,
+      "sha256": "64595fc1518d482d4da4ad22d9ffc5abca4f1a57c1f4680ab6075d36fd4d6c34"
+    },
+    {
+      "indice": 19,
+      "nivel": 2,
+      "sha256": "53d945377a5dcf98570609392594d4220d45e42ae7d6f9cad99bd66ba3a00e3f"
+    },
+    {
+      "indice": 20,
+      "nivel": 2,
+      "sha256": "0ceeba8693e91ab9454b5e491c48ce445e42f18149ba4bdc499012cb4418db67"
+    },
+    {
+      "indice": 21,
+      "nivel": 2,
+      "sha256": "8c311137d670a1767526a00459050d0e0b79370c16b00cbfe2684e7ae43f7ff7"
+    },
+    {
+      "indice": 22,
+      "nivel": 2,
+      "sha256": "9c54a084cda85cc2be58b5c3bb390f1aa055cfb2f2c6094dd61f391962e659b2"
+    },
+    {
+      "indice": 23,
+      "nivel": 2,
+      "sha256": "bb72e5c1225995bc7a39b48e427e0c1b31cf2b9bf8c83e40cb9ec4ed2a1f94d9"
+    },
+    {
+      "indice": 24,
+      "nivel": 2,
+      "sha256": "1524737d28c9a3b41042344b1673253d798ea1845780448fd239b982feec571c"
+    }
+  ],
+  "ressalvas": [
+    "Valores de fluxo projetado não são comprovação de recebimento.",
+    "Setas e sinais são relativos à perspectiva.",
+    "Taxa de desconto transporta valores; não é dedução tributária.",
+    "VPL zero pode conter juros nominais; não é lucro contábil realizado.",
+    "Não foram inventadas alíquotas ou tabelas fiscais, fórmulas SAC/Price, TIR ou payback.",
+    "Fórmulas VF/VP estão qualificadas como modelo composto; vários fluxos exigem prazos individuais."
+  ],
+  "exemplos": {
+    "capital": "2000",
+    "taxa": "0.05",
+    "periodos": 2,
+    "futuro": "2205",
+    "VP_a_6_porcento": "1962.442150231399074403702385",
+    "VPL_a_6_porcento": "-37.557849768600925596297615"
+  },
+  "verificacao": {
+    "banco": "6 aprovados",
+    "auditoria_tamanho": "aprovada",
+    "conteudo_qualidade_desenho_feedback_preservacao": "35 aprovados",
+    "smoke": "76 aprovados",
+    "siglas_consulta_busca": "68 aprovados",
+    "escopo_desenho_estudo_ativo": "13 aprovados",
+    "visual_e_feedback_final": "2 aprovados",
+    "ressalva": "Casos sobrepostos entre execuções; não somar como testes distintos. Sem certificação jurídica ou pedagógica automática."
+  },
+  "triagem_originalidade": {
+    "enunciados_distintos": 50,
+    "copias_literais_anteriores": 0,
+    "normais": {
+      "questions": 40,
+      "characters": {
+        "correct_strictly_longest": 12,
+        "correct_strictly_shortest": 8,
+        "correct_tied_for_longest": 1,
+        "rank_strategy_rates": [
+          0.2125,
+          0.2375,
+          0.2375,
+          0.3125
+        ]
+      },
+      "words": {
+        "correct_strictly_longest": 12,
+        "correct_strictly_shortest": 6,
+        "correct_tied_for_longest": 6,
+        "rank_strategy_rates": [
+          0.2625,
+          0.22499999999999995,
+          0.14999999999999997,
+          0.3625
+        ]
+      },
+      "correct_over_50_percent_longer_than_all_distractors": 0
+    },
+    "hardcore": {
+      "questions": 10,
+      "characters": {
+        "correct_strictly_longest": 3,
+        "correct_strictly_shortest": 2,
+        "correct_tied_for_longest": 0,
+        "rank_strategy_rates": [
+          0.3,
+          0.25,
+          0.15,
+          0.3
+        ]
+      },
+      "words": {
+        "correct_strictly_longest": 1,
+        "correct_strictly_shortest": 2,
+        "correct_tied_for_longest": 4,
+        "rank_strategy_rates": [
+          0.3,
+          0.26666666666666666,
+          0.16666666666666666,
+          0.26666666666666666
+        ]
+      },
+      "correct_over_50_percent_longer_than_all_distractors": 0
+    },
+    "ressalva": "Revisão semântica de pares próximos documentada em aula-13-fluxos.md; métrica lexical não é prova de unicidade."
+  },
+  "assuntos_integrados": {
+    "1303": [
+      "payment-cashflow"
+    ],
+    "1306": [
+      "debt-repayment",
+      "payment-net"
+    ],
+    "1307": [
+      "debt-repayment"
+    ],
+    "1316": [
+      "payment-net"
+    ],
+    "1323": [
+      "interest-capitalization"
+    ],
+    "1324": [
+      "interest-capitalization"
+    ],
+    "1330": [
+      "interest-capitalization"
+    ],
+    "1332": [
+      "payment-cashflow"
+    ],
+    "1336": [
+      "payment-cashflow"
+    ],
+    "1337": [
+      "payment-cashflow"
+    ],
+    "1340": [
+      "payment-net"
+    ],
+    "1341": [
+      "timevalue"
+    ],
+    "1343": [
+      "debt-yield"
+    ],
+    "1347": [
+      "interest-capitalization"
+    ],
+    "1350": [
+      "payment-cashflow"
+    ]
+  },
+  "diagrama_de_caixa": {
+    "perspectivas": [
+      "Investidor",
+      "Emissora"
+    ],
+    "convencao": "cima entrada, baixo saída; alturas não proporcionais",
+    "investidor": [
+      -3000,
+      180,
+      180,
+      3180
+    ],
+    "emissora": [
+      3000,
+      -180,
+      -180,
+      -3180
+    ],
+    "datas": [
+      "Aquisição/Captação",
+      "Ano 1",
+      "Ano 2",
+      "Ano 3"
+    ],
+    "tributos": "não incluídos no exemplo"
+  }
+}

@@ -7,6 +7,7 @@ import re
 import unittest
 from validate_bank import load_questions
 from question_revision import digest
+from final_block import before_payment_flows,unit_count
 import smoke as harness
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -16,6 +17,7 @@ def read(marker):
 class Content(unittest.TestCase):
     def setUp(self):
         self.q=load_questions();self.bp=read('const BP=');self.al=read('const AL=');self.mat=read('\n13:')
+        self.q=self.q[:1300];self.bp=self.bp[:650];self.al,self.mat=before_payment_flows(self.al,self.mat)
         self.report=json.loads((ROOT/'docs/aula-13-credito-privado-cobertura.json').read_text())
         self.unit=self.al[12]['b'][1];self.m=self.mat['b'][1]
 
@@ -90,7 +92,8 @@ class Browser(unittest.TestCase):
     assert_material_content=harness.PainelCPA.assert_material_content
 
     def test_real_internal_selection_and_full_block_balance_all_modes(self):
-        for mode,single,total in [('e',40,80),('s',40,80),('h',10,20),('b',25,50)]:
+        for mode,single in [('e',40),('s',40),('h',10),('b',25)]:
+            total=single*unit_count()
             self.page.evaluate("md=>{cfg={a:13,as:[],b:0,us:[],md,n:-1,m:'all',c:30};qz=null;view='q';go()}",mode)
             self.assertEqual(self.page.evaluate('pool().length'),total)
             self.page.locator('.practice-blocks [data-lesson-block="2"]').click()
@@ -118,7 +121,7 @@ class Browser(unittest.TestCase):
         self.assertEqual(self.page.locator('#overview-scroll tbody tr').count(),5)
         self.assertEqual(self.page.locator('[data-operator-block="1"]').count(),0)
         self.page.evaluate('selectedLessonBlocks[13]=0;go()')
-        self.assertEqual(self.page.locator('#overview-scroll tbody tr').count(),11)
+        self.assertEqual(self.page.locator('#overview-scroll tbody tr').count(),self.page.evaluate('LESSON_OVERVIEWS[13].rows.length'))
 
     def test_concept_actions_do_not_confuse_financial_and_insurance_capitalization(self):
         examples=[

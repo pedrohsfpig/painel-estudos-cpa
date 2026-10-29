@@ -4,6 +4,11 @@ window.ActiveStudy=(()=>{
  'use strict';
  const fold=value=>String(value??'').replace(/\{\{(?:atencao|negacao)\|([^{}]+)\}\}/g,'$1').replace(/\*\*/g,'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
  const subjects=[
+  ['payment-calendar','Cronograma contratual',/fluxo de pagamentos|cronograma contratual|calendario contratual/],
+  ['payment-cashflow','Caixa e perspectivas',/fluxo de caixa|caixa e perspectivas|entradas e saidas/],
+  ['timevalue','Equivalência temporal',/equivalencia temporal|valor presente|valor futuro|\bvp\b|\bvf\b/],
+  ['npv','Valor presente líquido',/valor presente liquido|\bvpl\b/],
+  ['payment-net','Cupons e retorno líquido',/cupons e retorno liquido|taxa liquida|retorno liquido|liquido de impostos/],
   ['private-debt','Crédito privado',/credito privado|emissor e divida|titulos? de divida privada/],
   ['debt-yield','Juros e indexadores',/juros e indexadores|remuneracao da divida|remuneracao (?:pre|pos) fixada|remuneracao hibrida/],
   ['debt-repayment','Amortização e resgate',/amortizac|amortizacoes|\bbullet\b|resgate antecipado|resgate pela emissora/],
@@ -87,6 +92,8 @@ window.ActiveStudy=(()=>{
   ['structure',/singular|cooperativas? centrais|^central$|^centrais$|confederacao|piramide|carteiras|controle acionario|acionistas|minimo.*carteira/]
  ];
  const topicRules=[
+  [/^Fluxos: cronograma/,['payment-calendar']],[/^Fluxos: caixa/,['payment-cashflow']],
+  [/^Fluxos: equivalência/,['timevalue']],[/^Fluxos: valor presente/,['npv']],[/^Fluxos: cupons/,['payment-net']],
   [/^Crédito privado: emissor/,['private-debt']],[/^Crédito privado: juros/,['debt-yield']],
   [/^Crédito privado: amortização/,['debt-repayment']],[/^Crédito privado: empréstimo/,['loan-contract']],
   [/^Crédito privado: capitalização/,['interest-capitalization']],
@@ -104,6 +111,11 @@ window.ActiveStudy=(()=>{
   [/^Cupom:.*retorno/,['cupom']],[/^Cupom:/,['swap']],[/^Taxas:.*cota/,['quotation']],[/^Taxas:.*real/,['realfx']],[/^Taxas:/,['fxflows']]
  ];
  const microRules={
+  'payment-calendar':[['dates',/emissao|vencimento|data|prazo|aquisic|compra/],['grace',/carencia|incorpora|suspende|isen/],['frequency',/periodicidade|trimestra|semestra|anua|mensal|frequencia/],['components',/cupom|cupons|principal|amortiz|tipo|evento/],['performance',/nao foi pago|atras|nao pagamento|repactu|cumprimento/]],
+  'payment-cashflow':[['perspective',/perspectiva|emissora|investidor|sinais|sinal|entrad|said/],['projection',/projec|projetad|previst|realiz|disponiv|cenari/],['acquisition',/compra|comprador|aquisic|preco|despesa|antigo titular/],['diagram',/seta|desenho|altura|escala|linha do tempo/]],
+  timevalue:[['present',/presente|descont|data base|avaliac/],['future',/futuro|capitaliz|posterior|frente/],['periods',/periodo|prazo|semestr|meses|ano|expoente|unidade/],['multiple',/cada|dois|varios|soma|parcelas|pagamento/],['factor',/fator|decimal|porcentagem|1 08|0 08/]],
+  npv:[['initial',/inicial|investimento|desembolso|data zero|soma completa|dupl|novamente/],['interpretation',/positivo|negativo|zero|excedente|ganho|lucro/],['criterion',/taxa|criterio|comparac|exigida|hipotes/],['flows',/recebimento|despesa|saida|periodo|tribut/]],
+  'payment-net':[['coupon',/cupom|cupons|periodic|reaplic|reinvest/],['taxes',/tribut|impost|aliquota|retenc|isenc|isento|brut|liquid/],['base',/principal|capital|rendimento|remunerac|saldo|preco/],['periods',/periodo|anual|semestra|prazo|taxa/],['projection',/projec|garant|cenari|realiz/]],
   'private-debt':[['issuer',/emiss|emit|governo|tesouro|public[ao]|distribu|banco/],['rights',/credor|acionista|socio|societari|capital da|participacao/],['funding',/captac|captar|financ|subscre|subscric|emissao|recursos/],['components',/juros|amortiz|principal|pagamento|extrato/]],
   'debt-yield':[['fixed',/prefixad|pre fixad|taxa fixa|taxa constante/],['indexed',/pos fixad|indexador|referencia|\bcdi\b|variavel/],['hybrid',/hibrid|\bipca\b|inflacao|parcela fixa/],['base',/saldo|amortiz|base|principal/],['comparison',/compar|relatorio|resultado|ranking|coincid|projec/]],
   'debt-repayment':[['bullet',/\bbullet\b|unica|integral.*vencimento|principal.*final/],['partial',/parcia|parcela|constante|variavel|saldo/],['coupon',/juros|cupom|cupons|remunerac/],['early',/antecip|extraordin|opcao|resgate/],['trading',/vend|mercado|outro investidor|transfer/]],
@@ -142,12 +154,14 @@ window.ActiveStudy=(()=>{
  // Relações editoriais: o assunto também é efetivamente cobrado na questão,
  // e não apenas citado no contexto ou nos distratores. IDs continuam estáveis.
  const privateCreditCrossTopics={1257:['debt-repayment'],1258:['loan-contract'],1259:['loan-contract'],1260:['debt-repayment'],1266:['debt-repayment'],1269:['debt-repayment'],1273:['debt-yield'],1276:['debt-yield'],1288:['interest-capitalization'],1289:['interest-capitalization'],1290:['private-debt'],1299:['debt-yield','debt-repayment'],1300:['debt-repayment']};
+ const paymentCrossTopics={1303:['payment-cashflow'],1306:['debt-repayment','payment-net'],1307:['debt-repayment'],1316:['payment-net'],1323:['interest-capitalization'],1324:['interest-capitalization'],1330:['interest-capitalization'],1332:['payment-cashflow'],1336:['payment-cashflow'],1337:['payment-cashflow'],1340:['payment-net'],1341:['timevalue'],1343:['debt-yield'],1347:['interest-capitalization'],1350:['payment-cashflow']};
  const found=text=>{const t=fold(text);let ids=subjects.filter(([, ,re])=>re.test(t)).map(([id])=>id);if(ids.includes('selicrate')&&/taxa selic|meta selic|taxa basica|copom/.test(t)&&!/sistema selic|custodia|liquidacao/.test(t))ids=ids.filter(id=>id!=='selicsystem');return ids};
  const aspects=text=>{const t=fold(text);return facets.filter(([,re])=>re.test(t)).map(([id])=>id)};
  const unique=list=>[...new Set(list)];
  function reduce(ids,lesson){
   let out=unique(ids);
   const remove=id=>out=out.filter(x=>x!==id);
+  if(out.includes('npv'))remove('timevalue');
   if(out.includes('interest-capitalization'))remove('capitalization');
   if(out.includes('risk-liquidity'))remove('liquidity');
   if(out.some(id=>['risk-credit','rating','creditspread'].includes(id)))remove('credit');
@@ -169,6 +183,7 @@ window.ActiveStudy=(()=>{
   let owners=rule?[...rule[1]]:reduce(found(topic),lesson),parts=[];
   if(rule&&owners.length>1){const detected=reduce(found(body),lesson),specific=owners.filter(o=>detected.includes(o));if(specific.length)owners=specific;}
   if(lesson===13&&/^Crédito privado:/.test(topic))owners.push(...(privateCreditCrossTopics[id]||[]));
+  if(lesson===13&&/^Fluxos:/.test(topic))owners.push(...(paymentCrossTopics[id]||[]));
   const base={2:'cmn',3:'bc',4:'cvm'}[lesson];
   if(base&&!rule){
    if(/comoc/.test(t))owners=['comoc'];else if(/secretaria/.test(t))owners=['secretaria'];
@@ -296,9 +311,14 @@ window.ActiveStudy=(()=>{
   if(hinted.length&&(lockOwners||!owners.some(o=>orgs.has(o))||hinted.some(o=>orgs.has(o))))owners=hinted;
   else if(whole&&!inherited?.length&&!owners.some(o=>orgs.has(o))&&!reduce(found(label),lesson).length)owners=reduce([...owners,...found(text)],lesson);
   if(lesson===13){
-   const riskIds=new Set(['risk-liquidity','risk-credit','risk-market','risk-rates','rating','creditspread','spread','private-debt','debt-yield','debt-repayment','loan-contract','interest-capitalization']);
+   const riskIds=new Set(['risk-liquidity','risk-credit','risk-market','risk-rates','rating','creditspread','spread','private-debt','debt-yield','debt-repayment','loan-contract','interest-capitalization','payment-calendar','payment-cashflow','timevalue','npv','payment-net']);
    const convert=ids=>unique(ids.map(id=>({liquidity:'risk-liquidity',credit:'risk-credit',markets:'risk-market'}[id]||id)).filter(id=>riskIds.has(id)));
    const anchor=value=>{const t=fold(value);
+    if(/^valor presente liquido|^vpl\b|^interpretacao do vpl/.test(t))return ['npv'];
+    if(/^equivalencia temporal|^valor presente\b|^valor futuro\b|^varios fluxos|^para a frente|^para tras|^taxa semestral/.test(t))return ['timevalue'];
+    if(/^cronograma\b|^fluxo de pagamentos|^marcos$|^carencia\b/.test(t))return ['payment-calendar'];
+    if(/^caixa e perspectivas|^fluxo de caixa|^perspectiva\b|^primeiro o calendario|^quem esta olhando/.test(t))return ['payment-cashflow'];
+    if(/^cupons e retorno liquido|^taxa liquida|^saldo e rendimento|^bruto\b|^reinvestimento de cupons|^desconto financeiro|^liquido\b/.test(t))return ['payment-net'];
     if(/^emissor e divida|^credito privado|^ativos de credito privado/.test(t))return ['private-debt'];
     if(/^juros e indexadores|^remuneracao\b|^referencias$|^prefixada\b|^pos fixada\b|^hibrida\b/.test(t))return ['debt-yield'];
     if(/^amortizacao|^resgate\b|^principal e juros|^pagamentos$|^sair antes|^bullet\b/.test(t))return ['debt-repayment'];
@@ -327,7 +347,7 @@ window.ActiveStudy=(()=>{
   }
   let micro=microFacets(owners,label+' '+text);
   if(!micro.length)micro=microFacets(owners,[...parents].reverse().find(p=>microFacets(owners,p).length)||'');
-  if(whole&&lesson===13&&['emissor e divida','juros e indexadores','amortizacao e resgate','emprestimo e mutuo','capitalizacao financeira'].includes(fold(label)))micro=[];
+  if(whole&&lesson===13&&['emissor e divida','juros e indexadores','amortizacao e resgate','emprestimo e mutuo','capitalizacao financeira','cronograma contratual','caixa e perspectivas','equivalencia temporal','valor presente liquido','cupons e retorno liquido'].includes(fold(label)))micro=[];
   return {owners:unique(owners),facets:unique(fs),micro};
  }
  function directMatching(source){

@@ -939,6 +939,46 @@
         "PTAX"
       ],
       "variants": []
+    },
+    {
+      "id": "vp",
+      "name": "Valor Presente",
+      "aliases": [
+        "VP"
+      ],
+      "variants": []
+    },
+    {
+      "id": "vf",
+      "name": "Valor Futuro",
+      "aliases": [
+        "VF"
+      ],
+      "variants": []
+    },
+    {
+      "id": "vpl",
+      "name": "Valor Presente Líquido",
+      "aliases": [
+        "VPL"
+      ],
+      "variants": []
+    },
+    {
+      "id": "sac",
+      "name": "Sistema de Amortização Constante",
+      "aliases": [
+        "SAC"
+      ],
+      "variants": []
+    },
+    {
+      "id": "iof",
+      "name": "Imposto sobre Operações Financeiras",
+      "aliases": [
+        "IOF"
+      ],
+      "variants": []
     }
   ]
 }

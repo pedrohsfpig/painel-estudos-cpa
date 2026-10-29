@@ -22,7 +22,8 @@ completo para os focos temáticos e justificativas de cada linha.
   filtros de bloco/cadastro nem rótulos de bloco na tabela. Ordenar somente por
   prioridade ou aula (1–13), sem opção Tema. A posição não
   muda ao filtrar; temas da tabela não renomeiam aulas já cadastradas.
-- Aula 13 tem Riscos Financeiros (28/10/2026) e Crédito Privado (29/10/2026).
+- Aula 13 tem Riscos Financeiros (28/10/2026), Crédito Privado e Fluxo de
+  Pagamentos (29/10/2026).
   As demais aguardam fontes; o guia verifica o cadastro real ao exibir o aviso.
 - Preserve Q/BP/AL/MAT, H, cfg, filtros de outras telas, sessão e relógio. Os
   blocos deste guia não substituem os blocos internos das aulas. Sem API paga.
@@ -401,7 +402,8 @@ completude, qualidade de um macete ou validade jurídica.
 A primeira aula interna foi recebida em 28/10/2026: transcrição da aula 23,
 seis imagens, assunto **Riscos Financeiros**. Está cadastrada como Aula 1 dentro
 de **Aula 13: Bloco Final**. A segunda, **Aula 2: Crédito Privado**, foi recebida
-em 29/10/2026: transcrição 24 e duas imagens. As outras quatro aguardam fontes; não criar
+em 29/10/2026: transcrição 24 e duas imagens. A terceira é **Aula 3: Fluxo de
+Pagamentos**, transcrição 25, dois slides e três complementos. As outras três aguardam fontes; não criar
 placeholders ou conteúdo presumido.
 
 Pedido FINAL explícito: metade do padrão **por aula interna**: **50 questões
@@ -433,6 +435,19 @@ Rodar também `tests/test_aula13.py` ao alterar este bloco.
 - Executar `tests/test_aula13_credito.py` e testes da interna 1, escopo por conceito,
   Bate-pronto, siglas, busca/Consulta e checks gerais. Preservar hashes e fontes
   históricos; a documentação da segunda interna registra a entrega atual.
+- Terceira interna: Q 1301–1350, BP 100651–100675 e 25 flashcards 9/8/8.
+  Ordem confirmada pelo usuário: Fluxo de Pagamentos, depois Fluxo de Caixa;
+  fórmulas VF/VP/VPL são complementos cruzados com a transcrição. Não confundir
+  ordem de anexação com ordem dos arquivos; se os nomes não estiverem disponíveis,
+  esclarecer os temas como foi feito nesta entrega.
+- Fluxo quantificado pode ser projetado: não alegar dinheiro recebido por haver
+  um valor. Separar sinais de cada perspectiva, juros/principal, taxa de desconto/
+  tributo e VPL/lucro realizado. VPL zero pode remunerar à taxa exigida; não prova
+  rendimento nominal zero. Taxa/período e prazos próprios precisam ser coerentes.
+- SAC/Price apenas exemplos citados: sem fórmulas não fornecidas, alíquotas
+  inventadas, TIR ou temas futuros. Cupons retirados/reaplicados não se duplicam.
+- Rodar `tests/test_aula13_fluxos.py`, regressões das duas internas, escopo,
+  siglas, Consulta/busca e smoke. Ver `docs/aula-13-fluxos.md` e cobertura JSON.
 
 ## Novas aulas com vários blocos
 
