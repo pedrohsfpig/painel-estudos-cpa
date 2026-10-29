@@ -1,6 +1,6 @@
 # Aula 13 — bloco final com aulas internas
 
-Orientação atualizada em 28/10/2026, após recebimento da primeira aula.
+Orientação atualizada em 29/10/2026, após recebimento da segunda aula.
 
 - Uma entrada **Aula 13: Bloco Final**, com aulas internas separadas por assunto.
 - Cada aula interna: **50 questões**, sendo 10 fáceis, 20 médias, 10 difíceis
@@ -13,7 +13,10 @@ Orientação atualizada em 28/10/2026, após recebimento da primeira aula.
   temáticos da prova aos sorteios sem pedido.
 - Primeira aula recebida e cadastrada: **Aula 1: Riscos Financeiros**, baseada
   na transcrição da aula 23 e seis imagens. Ver `aula-13.md` e cobertura JSON.
-- As outras cinco aulas curtas do professor ainda aguardam slides/transcrições.
+- Segunda cadastrada: **Aula 2: Crédito Privado**, transcrição 24 e duas imagens.
+  Ver `aula-13-credito-privado.md` e seu manifesto de cobertura.
+- Flashcards das duas internas: 9/8/8 e 8/9/8; agregado 17/17/16.
+- As outras quatro aulas curtas do professor ainda aguardam slides/transcrições.
   Não antecipar temas, criar placeholders ou preencher questões sem fontes.
 - Cruzar as fontes, preservar cálculos e condições, evitar pistas gramaticais,
   siglas que revelem resposta e distratores sem contexto. Todas as alternativas

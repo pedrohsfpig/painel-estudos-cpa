@@ -6,6 +6,7 @@ from pathlib import Path
 import unittest
 
 from validate_bank import load_questions
+from final_block import unit_count
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -18,7 +19,7 @@ class QuestionDesignTests(unittest.TestCase):
         for lesson in sorted({q[0] for q in self.q}):
             rows = [q for q in self.q if q[0] == lesson]
             self.assertEqual(collections.Counter(q[2] for q in rows),
-                             ({0:10, 1:20, 2:10, 3:10} if lesson==13 else {0:20, 1:40, 2:20, 3:20}), f"Aula {lesson}")
+                             ({0:10*unit_count(), 1:20*unit_count(), 2:10*unit_count(), 3:10*unit_count()} if lesson==13 else {0:20, 1:40, 2:20, 3:20}), f"Aula {lesson}")
 
     def test_cnpc_regression_does_not_supply_duration_for_a_sum(self):
         question = self.q[495]

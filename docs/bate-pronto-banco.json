@@ -4324,7 +4324,182 @@
       "tema": "Riscos: juros e marcação a mercado",
       "fonte_Q": 1247,
       "modelo": "direto"
+    },
+    {
+      "id": 100626,
+      "aula": 13,
+      "tema": "Crédito privado: emissor e dívida",
+      "fonte_Q": 1251,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100627,
+      "aula": 13,
+      "tema": "Crédito privado: emissor e dívida",
+      "fonte_Q": 1254,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100628,
+      "aula": 13,
+      "tema": "Crédito privado: emissor e dívida",
+      "fonte_Q": 1253,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100629,
+      "aula": 13,
+      "tema": "Crédito privado: emissor e dívida",
+      "fonte_Q": 1252,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100630,
+      "aula": 13,
+      "tema": "Crédito privado: emissor e dívida",
+      "fonte_Q": 1257,
+      "modelo": "direto"
+    },
+    {
+      "id": 100631,
+      "aula": 13,
+      "tema": "Crédito privado: juros e indexadores",
+      "fonte_Q": 1263,
+      "modelo": "direto"
+    },
+    {
+      "id": 100632,
+      "aula": 13,
+      "tema": "Crédito privado: juros e indexadores",
+      "fonte_Q": 1270,
+      "modelo": "direto"
+    },
+    {
+      "id": 100633,
+      "aula": 13,
+      "tema": "Crédito privado: juros e indexadores",
+      "fonte_Q": 1265,
+      "modelo": "direto"
+    },
+    {
+      "id": 100634,
+      "aula": 13,
+      "tema": "Crédito privado: juros e indexadores",
+      "fonte_Q": 1268,
+      "modelo": "direto"
+    },
+    {
+      "id": 100635,
+      "aula": 13,
+      "tema": "Crédito privado: juros e indexadores",
+      "fonte_Q": 1266,
+      "modelo": "direto"
+    },
+    {
+      "id": 100636,
+      "aula": 13,
+      "tema": "Crédito privado: amortização e resgate",
+      "fonte_Q": 1280,
+      "modelo": "direto"
+    },
+    {
+      "id": 100637,
+      "aula": 13,
+      "tema": "Crédito privado: amortização e resgate",
+      "fonte_Q": 1273,
+      "modelo": "direto"
+    },
+    {
+      "id": 100638,
+      "aula": 13,
+      "tema": "Crédito privado: amortização e resgate",
+      "fonte_Q": 1272,
+      "modelo": "direto"
+    },
+    {
+      "id": 100639,
+      "aula": 13,
+      "tema": "Crédito privado: amortização e resgate",
+      "fonte_Q": 1275,
+      "modelo": "direto"
+    },
+    {
+      "id": 100640,
+      "aula": 13,
+      "tema": "Crédito privado: amortização e resgate",
+      "fonte_Q": 1278,
+      "modelo": "direto"
+    },
+    {
+      "id": 100641,
+      "aula": 13,
+      "tema": "Crédito privado: empréstimo e mútuo",
+      "fonte_Q": 1281,
+      "modelo": "direto"
+    },
+    {
+      "id": 100642,
+      "aula": 13,
+      "tema": "Crédito privado: empréstimo e mútuo",
+      "fonte_Q": 1285,
+      "modelo": "direto"
+    },
+    {
+      "id": 100643,
+      "aula": 13,
+      "tema": "Crédito privado: empréstimo e mútuo",
+      "fonte_Q": 1284,
+      "modelo": "direto"
+    },
+    {
+      "id": 100644,
+      "aula": 13,
+      "tema": "Crédito privado: empréstimo e mútuo",
+      "fonte_Q": 1283,
+      "modelo": "direto"
+    },
+    {
+      "id": 100645,
+      "aula": 13,
+      "tema": "Crédito privado: empréstimo e mútuo",
+      "fonte_Q": 1284,
+      "modelo": "direto"
+    },
+    {
+      "id": 100646,
+      "aula": 13,
+      "tema": "Crédito privado: capitalização",
+      "fonte_Q": 1293,
+      "modelo": "direto"
+    },
+    {
+      "id": 100647,
+      "aula": 13,
+      "tema": "Crédito privado: capitalização",
+      "fonte_Q": 1294,
+      "modelo": "direto"
+    },
+    {
+      "id": 100648,
+      "aula": 13,
+      "tema": "Crédito privado: capitalização",
+      "fonte_Q": 1299,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100649,
+      "aula": 13,
+      "tema": "Crédito privado: capitalização",
+      "fonte_Q": 1297,
+      "modelo": "direto"
+    },
+    {
+      "id": 100650,
+      "aula": 13,
+      "tema": "Crédito privado: capitalização",
+      "fonte_Q": 1296,
+      "modelo": "direto"
     }
   ],
-  "escopo": "450 itens conceituais, 50 por aula, baseados no conteúdo já revisado de Q e nos materiais existentes. Sem certificação normativa independente."
+  "escopo": "Banco conceitual próprio: 50 por aula regular e 25 por aula interna do bloco final. Fontes e validação específicas registradas nos relatórios de cada aula; sem certificação normativa independente."
 }

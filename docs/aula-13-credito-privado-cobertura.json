@@ -1,0 +1,1115 @@
+{
+  "data": "2026-10-29",
+  "aula": 13,
+  "unidade": 2,
+  "titulo": "Aula 2: Crédito Privado",
+  "fontes": {
+    "transcricao": {
+      "nome": "Aula 24: Crédito Privado",
+      "sediment": "file_000000002698820e946b31c5cc5d1128",
+      "sha256": "51d5236aeb22fc0cdcc96143049896ca3181bb40344436f53d73ed2f41f86d3b"
+    },
+    "imagens": {
+      "1": "Empréstimo, mútuo e capitalização simples/composta",
+      "2": "Ativos de crédito privado, juros, amortização e resgate"
+    }
+  },
+  "preservacao": {
+    "Q": {
+      "count": 1250,
+      "sha256": "be6024a53d96fef7948abd5ed83c31fcd2c8cd9410a54cde112cd4c0937c1eb7"
+    },
+    "BP": {
+      "count": 625,
+      "sha256": "91b87964f42c4613b42411cbaaa4236f769aa95c32f73185c1717c74ec74b9fc"
+    },
+    "AL_1_12": "42e50f91d6929fb7566a711680054a34dccad91b7e8a60652f55264a8ac42407",
+    "unidade_1_AL": "22de122b2bce10d19b9d527d7734785f16bafb4a4c7962e721e126a5400a7ee0",
+    "unidade_1_MAT": "e043172e0c8b6d3d788bb5d4d5d94439263f1d339c5e7720c43ea04263e975b3",
+    "aula13_o": "Primeira aula interna: Riscos Financeiros. Compare liquidez, crédito, mercado e juros; interprete ratings, spread e marcação a mercado.",
+    "overview_unit1": "6e4c7f077e3ba098e9611d02ab4a26efa22d3f076bdc0f31803d6a5f4a12ef57"
+  },
+  "quantidades": {
+    "Q": 50,
+    "niveis": [
+      10,
+      20,
+      10,
+      10
+    ],
+    "estudo_simulado_compartilhadas": 40,
+    "hardcore": 10,
+    "BP": 25,
+    "flashcards": 25,
+    "flashcards_niveis": [
+      8,
+      9,
+      8
+    ]
+  },
+  "itens": [
+    {
+      "id": 1251,
+      "tema": "Crédito privado: emissor e dívida",
+      "nivel": 0,
+      "angulo": "Posição jurídica do detentor de dívida",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "77922f5884577738dee40abe5b9e3c59bf6547945b411d9672db70c4b6a4bf6a"
+    },
+    {
+      "id": 1252,
+      "tema": "Crédito privado: emissor e dívida",
+      "nivel": 0,
+      "angulo": "Reconhecimento de instrumento em uma carteira mista",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "61dd46aa05f3d97babbe1169874ccdaab124ee444d82c590ebeefe0e74099b8f"
+    },
+    {
+      "id": 1253,
+      "tema": "Crédito privado: emissor e dívida",
+      "nivel": 1,
+      "angulo": "Recursos de emissão nova versus negociação secundária",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "4c61f19778bb7e39b9070c1b0b493ecec0e9c7ad59f8f1ea283d21ca19afe60f"
+    },
+    {
+      "id": 1254,
+      "tema": "Crédito privado: emissor e dívida",
+      "nivel": 1,
+      "angulo": "Canal de distribuição não define a natureza da dívida",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "7dc6f646dbb5d5dd673dd2f1af5c0a9590d25a0fd0cf52a01c43b4091b88d0f9"
+    },
+    {
+      "id": 1255,
+      "tema": "Crédito privado: emissor e dívida",
+      "nivel": 1,
+      "angulo": "Mesmo título como ativo e obrigação",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "ef5a8dd73dec376988fa757993973935e5de5f9bccdcf91d239c9ad482e9742c"
+    },
+    {
+      "id": 1256,
+      "tema": "Crédito privado: emissor e dívida",
+      "nivel": 1,
+      "angulo": "Instituição financeira privada também pode ser emissora de dívida",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "cc3943bd39c23dd9714eea3b795731be3a969628a8ccb1c6b5382b10c4fc8da8"
+    },
+    {
+      "id": 1257,
+      "tema": "Crédito privado: emissor e dívida",
+      "nivel": 2,
+      "angulo": "Auditoria de três eventos: captação, remuneração e restituição final",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "7971f9e6de93deb30b0ddb452f3388653677cbfba04a1cf7d1dd6b749e06f226"
+    },
+    {
+      "id": 1258,
+      "tema": "Crédito privado: emissor e dívida",
+      "nivel": 2,
+      "angulo": "Financiamento direto por título versus crédito bancário",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "deea7802f20844035e621cc417f4ecf6f28c2e6cbc5dd3b5ad5ce6e5620857ac"
+    },
+    {
+      "id": 1259,
+      "tema": "Crédito privado: emissor e dívida",
+      "nivel": 3,
+      "angulo": "Limite da classificação residual em conjunto de instrumentos",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "5d94749bacd08eb3f83d71fe869c7ef408b6f12ee35cf132586146c186a0b080"
+    },
+    {
+      "id": 1260,
+      "tema": "Crédito privado: emissor e dívida",
+      "nivel": 3,
+      "angulo": "Separar componentes de extrato e obrigação remanescente",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "b98927d86e3802ea4bb81759d2bb601e6956615f19ac83c3f349a44a55f22e79"
+    },
+    {
+      "id": 1261,
+      "tema": "Crédito privado: juros e indexadores",
+      "nivel": 0,
+      "angulo": "Identificação de taxa nominal definida na contratação",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "38a18ce4d35a5641337a1639936393e036ef0457fed5e55f72b03764a0ec6fcf"
+    },
+    {
+      "id": 1262,
+      "tema": "Crédito privado: juros e indexadores",
+      "nivel": 0,
+      "angulo": "Identificação de remuneração com duas parcelas",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "be31fb99ea36e95b6eb08f0f704acf12f5a1dfc05f9163f728156fb1d2107138"
+    },
+    {
+      "id": 1263,
+      "tema": "Crédito privado: juros e indexadores",
+      "nivel": 1,
+      "angulo": "Percentual do indexador não é taxa anual contratada",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "a82dc8284b1a47e8f28c33e60837346852036bff0b12809c92de0a0f1e2c25da"
+    },
+    {
+      "id": 1264,
+      "tema": "Crédito privado: juros e indexadores",
+      "nivel": 1,
+      "angulo": "Taxa do último período não é apuração futura",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "273d01febdcf79d45bdf5923426f528adba7b45b9a3e26b26e0a88de1f405754"
+    },
+    {
+      "id": 1265,
+      "tema": "Crédito privado: juros e indexadores",
+      "nivel": 1,
+      "angulo": "Parcela fixa do híbrido não determina toda a remuneração",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "95c31b11484bd957647c3fad825e9c8d9cfa963eddffc97768923bb4e2dab2e8"
+    },
+    {
+      "id": 1266,
+      "tema": "Crédito privado: juros e indexadores",
+      "nivel": 1,
+      "angulo": "Taxa fixa e juros em dinheiro com saldo amortizado",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "c9b5c0b9b6d9f813dff140e1b2dff67ea0c1b2461ab079170cc830c37bd517ac"
+    },
+    {
+      "id": 1267,
+      "tema": "Crédito privado: juros e indexadores",
+      "nivel": 2,
+      "angulo": "Comparação de propostas sem trajetória dos indexadores",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "74e60691161d12289038151d501776134afd926f67a38f89d2636e270d57ecf6"
+    },
+    {
+      "id": 1268,
+      "tema": "Crédito privado: juros e indexadores",
+      "nivel": 2,
+      "angulo": "Resultado coincidente não comprova a mesma regra de remuneração",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "b03c8d7cdbd28a80bc96fad2dd77c104f260f7076f98a151bb7933bc078c4c10"
+    },
+    {
+      "id": 1269,
+      "tema": "Crédito privado: juros e indexadores",
+      "nivel": 3,
+      "angulo": "Auditoria cruzada de remuneração e cronograma do principal",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "005a009b5ac994f6cef8c3fc2d123f54e03b54c1baa6f3cf90f2f2c78bdd812e"
+    },
+    {
+      "id": 1270,
+      "tema": "Crédito privado: juros e indexadores",
+      "nivel": 3,
+      "angulo": "Reconciliação de informação contratada e valor ainda variável",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "47abedaa23f9fc9c6ad1646079f029a015a87f2681de78bb96379f37dc4fdbff"
+    },
+    {
+      "id": 1271,
+      "tema": "Crédito privado: amortização e resgate",
+      "nivel": 0,
+      "angulo": "Definição de bullet pelo principal",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "8f3defda2c7b6e5dba9b94d4ba6c2d3ca8794cbeaccb474cbf492810e0db4560"
+    },
+    {
+      "id": 1272,
+      "tema": "Crédito privado: amortização e resgate",
+      "nivel": 0,
+      "angulo": "Reconhecimento de amortização parcial variável",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "1bc32df5d1ba5868fa0f4d2ce8fcc29b8261e38a0f56008ab56d8a10280bbd02"
+    },
+    {
+      "id": 1273,
+      "tema": "Crédito privado: amortização e resgate",
+      "nivel": 1,
+      "angulo": "Cupom intermediário não descaracteriza principal bullet",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "0095098a010429d3fc53794cceaf3f3c3806e412ddf6e765157213785884d773"
+    },
+    {
+      "id": 1274,
+      "tema": "Crédito privado: amortização e resgate",
+      "nivel": 1,
+      "angulo": "Titularidade de opção contratual de resgate",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "042358a7185c4f14a5b37a5342ab72429842b083aa15008990f9942ffba57af3"
+    },
+    {
+      "id": 1275,
+      "tema": "Crédito privado: amortização e resgate",
+      "nivel": 1,
+      "angulo": "Saída de investimento versus resgate pelo devedor",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "3d04e84a87b55f5b9674827975a7247ee01ae2cb85e65bec72b4481eb91e7577"
+    },
+    {
+      "id": 1276,
+      "tema": "Crédito privado: amortização e resgate",
+      "nivel": 1,
+      "angulo": "Amortização constante não assegura prestação total constante",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "fbf7d871a0d1d0e1a822d9e517d60d7e547a0e620b1d587f8cdf386ea803735a"
+    },
+    {
+      "id": 1277,
+      "tema": "Crédito privado: amortização e resgate",
+      "nivel": 2,
+      "angulo": "Comparação de capital ainda a restituir entre cronogramas",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "3f798e57f14aedefd6815d631c9a25cc3b52c6451ce0f5406fb8e5e2cf252361"
+    },
+    {
+      "id": 1278,
+      "tema": "Crédito privado: amortização e resgate",
+      "nivel": 2,
+      "angulo": "Pagamento de resgate não soma principal já amortizado",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "35d86476e50b201b7882822cd1afdb64b0c480f79c15095c6c4173afb4a3e3fd"
+    },
+    {
+      "id": 1279,
+      "tema": "Crédito privado: amortização e resgate",
+      "nivel": 3,
+      "angulo": "Identificar cronograma pela decomposição e não pela aparência",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "ce4689ef248d845f78b286fab5b64635917a480da09ac81a5562a2d0b46d917d"
+    },
+    {
+      "id": 1280,
+      "tema": "Crédito privado: amortização e resgate",
+      "nivel": 3,
+      "angulo": "Coexistência de amortização programada e extraordinária",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ],
+      "sha256": "cc2ddb5937a44f79ee884b1a5bcbd63efe9929a32ecec27b467a69268e44a977"
+    },
+    {
+      "id": 1281,
+      "tema": "Crédito privado: empréstimo e mútuo",
+      "nivel": 0,
+      "angulo": "Identificação dos papéis em um contrato civil",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ],
+      "sha256": "9aa8deaa5ef1a52076130edae698875e4768d5988d2bd56eeba54bd517b0a3b1"
+    },
+    {
+      "id": 1282,
+      "tema": "Crédito privado: empréstimo e mútuo",
+      "nivel": 0,
+      "angulo": "Fungibilidade e objeto da restituição",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ],
+      "sha256": "f54448260b7adc39f8bd6bff1cf65c1a8a64ee9b0d10cfbeac533a88b29af6e7"
+    },
+    {
+      "id": 1283,
+      "tema": "Crédito privado: empréstimo e mútuo",
+      "nivel": 1,
+      "angulo": "Remuneração no mútuo civil não é condição universal",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ],
+      "sha256": "5abcb445b96490a47a8d679431ad250603957b571ef872a97407dabdd7826273"
+    },
+    {
+      "id": 1284,
+      "tema": "Crédito privado: empréstimo e mútuo",
+      "nivel": 1,
+      "angulo": "Mútuo bancário e sobreposição de nomenclaturas",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ],
+      "sha256": "6ba3928db0818056eeb3de8e3f2c7f4b1b426357d904c2c1100cdb01138e2fed"
+    },
+    {
+      "id": 1285,
+      "tema": "Crédito privado: empréstimo e mútuo",
+      "nivel": 1,
+      "angulo": "Contratos civis também podem envolver pessoas jurídicas",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ],
+      "sha256": "c56ad00077b06578a84f788727bb70a01c74e2b3a6a21d175313368d37a38e88"
+    },
+    {
+      "id": 1286,
+      "tema": "Crédito privado: empréstimo e mútuo",
+      "nivel": 1,
+      "angulo": "Mútuo de bem fungível que não é dinheiro",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ],
+      "sha256": "074414aa61fe21c4be96cd5432fdf23da6d668d35a631134d1517682885c5a46"
+    },
+    {
+      "id": 1287,
+      "tema": "Crédito privado: empréstimo e mútuo",
+      "nivel": 2,
+      "angulo": "Perspectiva da cooperativa e do associado tomador",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ],
+      "sha256": "2e0ad316c67fd4f181a5e315704efb26c7efcf26a01fbb6e097954efd9f73838"
+    },
+    {
+      "id": 1288,
+      "tema": "Crédito privado: empréstimo e mútuo",
+      "nivel": 2,
+      "angulo": "Aplicação de regras exige enquadramento além de rótulo",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ],
+      "sha256": "3447908b20e3df1469b8c1f4d3370e93fd98095530122d71bcb1fbab2d017ffa"
+    },
+    {
+      "id": 1289,
+      "tema": "Crédito privado: empréstimo e mútuo",
+      "nivel": 3,
+      "angulo": "Regime de juros não identifica sozinho a natureza do credor",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ],
+      "sha256": "bcb2cc0b4a0e2210ad0cfe368c9768a11b4528a64e003f9aeb0131a0dfd25da6"
+    },
+    {
+      "id": 1290,
+      "tema": "Crédito privado: empréstimo e mútuo",
+      "nivel": 3,
+      "angulo": "Triagem de relações privadas com e sem dívida de restituição",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ],
+      "sha256": "017a019bd7c9bd8ac496b52895e207e9c637b1cbb0f484557a51a787a88e59ca"
+    },
+    {
+      "id": 1291,
+      "tema": "Crédito privado: capitalização",
+      "nivel": 0,
+      "angulo": "Base de incidência no regime simples",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ],
+      "sha256": "bfe847ec716db74a3ed28b9fad31ac7c2f5b522ada7a3d0f58a33a54c5f655df"
+    },
+    {
+      "id": 1292,
+      "tema": "Crédito privado: capitalização",
+      "nivel": 0,
+      "angulo": "Mecanismo distintivo da capitalização composta",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ],
+      "sha256": "7f5edc6d186c40ffa1c8b5040efb11d5002d821a68684badfa0695c39b471ea4"
+    },
+    {
+      "id": 1293,
+      "tema": "Crédito privado: capitalização",
+      "nivel": 1,
+      "angulo": "Identificar regime pela forma de crescimento",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ],
+      "sha256": "f185bb81077e184a81c2c1cf171ef3ca3e54decc68d7df466e770df8fafa082f"
+    },
+    {
+      "id": 1294,
+      "tema": "Crédito privado: capitalização",
+      "nivel": 1,
+      "angulo": "Fronteira de um período na comparação de regimes",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ],
+      "sha256": "3d3cedfed9ca168d74a39cef1c5b6381304fff04cabbb9b87432381d8aae56bf"
+    },
+    {
+      "id": 1295,
+      "tema": "Crédito privado: capitalização",
+      "nivel": 1,
+      "angulo": "Condições para montante composto superior em prazo inteiro",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ],
+      "sha256": "97265e979fdf92ba28ce67728f55c3bc43b0763fe1e0dce8d9d242a4f8272581"
+    },
+    {
+      "id": 1296,
+      "tema": "Crédito privado: capitalização",
+      "nivel": 1,
+      "angulo": "Unidade de taxa e período de capitalização",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ],
+      "sha256": "4cf91a45de2b40f06dd9ebe5b2fb41219129dc73b46c33a663155cb46fe6e227"
+    },
+    {
+      "id": 1297,
+      "tema": "Crédito privado: capitalização",
+      "nivel": 2,
+      "angulo": "Pagamento de juros versus sua incorporação ao saldo",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ],
+      "sha256": "317bb27fa4c865ce3395f8dd0876271f5cd4f7f1b3ccc87c510ae61c48049bbc"
+    },
+    {
+      "id": 1298,
+      "tema": "Crédito privado: capitalização",
+      "nivel": 2,
+      "angulo": "Crescimento linear de juros não duplica o capital",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ],
+      "sha256": "8f90f7625b0b7050809047456a4fbdaefb334570e84bfb0571f01f9fc2ca5af8"
+    },
+    {
+      "id": 1299,
+      "tema": "Crédito privado: capitalização",
+      "nivel": 3,
+      "angulo": "Classificação independente de três eixos financeiros",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ],
+      "sha256": "5ee8e3de3fa3b7f8b48ed1ae5396c6921c4029b0e002f3fec1d8cccc862e7b93"
+    },
+    {
+      "id": 1300,
+      "tema": "Crédito privado: capitalização",
+      "nivel": 3,
+      "angulo": "Auditoria integrada de base, fluxos pagos e unidade temporal",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ],
+      "sha256": "96b8de3db773917bcd54732efb5d14cfc116ba5221cf639ea62b8e4fd0e5c068"
+    }
+  ],
+  "bate_pronto": [
+    {
+      "id": 100626,
+      "angulo": "Crédito sem participação no voto",
+      "referencia_Q": 1251,
+      "sha256": "d12dee760061b50f08b0f4869169fe63820b9c3750e6bbd919291d8342555e8e",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ]
+    },
+    {
+      "id": 100627,
+      "angulo": "Natureza do emissor versus perfil do detentor",
+      "referencia_Q": 1254,
+      "sha256": "200dcc1c3b3228f4db907054c5fd38169f3c95d91785fec6d6bb14d541f3153d",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ]
+    },
+    {
+      "id": 100628,
+      "angulo": "Obrigação continua apesar da circulação",
+      "referencia_Q": 1253,
+      "sha256": "a72d067a2718ba3aea995dbf3de6099903b49cc471f699cf854c1a2f8ed48f05",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ]
+    },
+    {
+      "id": 100629,
+      "angulo": "Natureza da nota em carteira corporativa",
+      "referencia_Q": 1252,
+      "sha256": "e66b9e2b039f1155f8f745393a5c7fa04959918b5e0026001a41bfb39046e90c",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ]
+    },
+    {
+      "id": 100630,
+      "angulo": "Captação versus pagamento ao credor",
+      "referencia_Q": 1257,
+      "sha256": "d074c63c902400a1927e8d39e0cf57f321a3a0f2a5395cc20adfb8d50caea36b",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ]
+    },
+    {
+      "id": 100631,
+      "angulo": "Termo ao ano versus referência indexada",
+      "referencia_Q": 1263,
+      "sha256": "69fcbdba909293704c131563b5572bf0b13c0439a90b28e9081bf603809f259b",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ]
+    },
+    {
+      "id": 100632,
+      "angulo": "Taxa definida não exige cupom periódico",
+      "referencia_Q": 1270,
+      "sha256": "218eaa62ff24ccd2d92df8b8f33e0059f22c0a08840a7884b948790340b817e7",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ]
+    },
+    {
+      "id": 100633,
+      "angulo": "Dado faltante na previsão híbrida",
+      "referencia_Q": 1265,
+      "sha256": "66be76e6af0f3a34a291e8a13d5033b278c775a885e3be270d71fc98299b5ed7",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ]
+    },
+    {
+      "id": 100634,
+      "angulo": "Mudança de indexador não autorizada pela coincidência",
+      "referencia_Q": 1268,
+      "sha256": "4d0ec56e46c4264bd68802503a5b0a25bc385e8e4fbff371afd592aa6291ffa7",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ]
+    },
+    {
+      "id": 100635,
+      "angulo": "Taxa e valor em dinheiro",
+      "referencia_Q": 1266,
+      "sha256": "037014890f5267473e6d0cda93ac3aae5763f4c395736dd7e5094527e125af85",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ]
+    },
+    {
+      "id": 100636,
+      "angulo": "Evento regular versus evento extraordinário",
+      "referencia_Q": 1280,
+      "sha256": "f8c20ef48e8b4bab8d9bf3892902069febdabcdee3f8062d2c31c69e07214890",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ]
+    },
+    {
+      "id": 100637,
+      "angulo": "Capital integral no final com cupons",
+      "referencia_Q": 1273,
+      "sha256": "18e3da32f6e63f53b4d24a0032e109911050ffcdecc5ffd2617bfde8abf86702",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ]
+    },
+    {
+      "id": 100638,
+      "angulo": "Regularidade de datas e variabilidade do principal",
+      "referencia_Q": 1272,
+      "sha256": "42be761f421816f416371348fa539b802d9a63ea4fa793e940e2d9ca6b2e3740",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ]
+    },
+    {
+      "id": 100639,
+      "angulo": "Preço de venda versus pagamento da emissora",
+      "referencia_Q": 1275,
+      "sha256": "3deaff21544eacde4b1d8d974925dd54297af16d1c165eb0db8680b14f31d394",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ]
+    },
+    {
+      "id": 100640,
+      "angulo": "Capital já devolvido em quitação posterior",
+      "referencia_Q": 1278,
+      "sha256": "9fbc06e972b8186aa7efd406040e29d7dc4715178ef25e017792a47a57ad505c",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 2"
+      ]
+    },
+    {
+      "id": 100641,
+      "angulo": "Identidade do mutuante",
+      "referencia_Q": 1281,
+      "sha256": "28bd5ea3726e1382a2b03cdd48adca2489ab2f15769b8489688d53a04ce98376",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ]
+    },
+    {
+      "id": 100642,
+      "angulo": "Mútuo fora do sistema bancário",
+      "referencia_Q": 1285,
+      "sha256": "6b969cd5dc7a68ead156ede2525bc14eefc2c6814dff48d12919e5d38bbc0779",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ]
+    },
+    {
+      "id": 100643,
+      "angulo": "Nome civil não constitui autorização institucional",
+      "referencia_Q": 1284,
+      "sha256": "0322ddc43dd5a9b8e32bee5749c3fc9356212c6f5aa7c2dba92ff36f196ae58e",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ]
+    },
+    {
+      "id": 100644,
+      "angulo": "Gratuidade expressa e obrigação de restituição",
+      "referencia_Q": 1283,
+      "sha256": "439451e9b414008511128fd7cdc5b9d7036acb6049e4f68bf00fba5fbd5870a3",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ]
+    },
+    {
+      "id": 100645,
+      "angulo": "Compatibilidade do termo bancário",
+      "referencia_Q": 1284,
+      "sha256": "fe93b14a9c939a8fa014b75139caf9c14ab12d76c51979ccd49f4926dea67c2a",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ]
+    },
+    {
+      "id": 100646,
+      "angulo": "Juros sobre juros versus aumento por tempo",
+      "referencia_Q": 1293,
+      "sha256": "344f0156613bc73f5d882d1ad0f4e6e4397544edd7574d68fcafead5fa7fee31",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ]
+    },
+    {
+      "id": 100647,
+      "angulo": "Condição ausente na alegação sempre maior",
+      "referencia_Q": 1294,
+      "sha256": "2c4f14a266a0a460a242461a0b36d1a275b1df001c74ca0cd3d3cc06f4714fe6",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ]
+    },
+    {
+      "id": 100648,
+      "angulo": "Capitalização não determina índice de remuneração",
+      "referencia_Q": 1299,
+      "sha256": "f2b59bc98590f0fa5155b93aae2e3fe45934f66a7bddd99970be322a62dc5f43",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ]
+    },
+    {
+      "id": 100649,
+      "angulo": "Fluxo retirado não continua rendendo no saldo",
+      "referencia_Q": 1297,
+      "sha256": "23c14669e56f7f6e43adbd1c3523aed6226993dba9299ba4b79b982b3b7cdd9b",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ]
+    },
+    {
+      "id": 100650,
+      "angulo": "Compatibilidade da taxa com a unidade de tempo",
+      "referencia_Q": 1296,
+      "sha256": "5a69be24078dfeb1c0dba82827d8852b5461c4f77371edb0f3412906fd62baf3",
+      "fontes": [
+        "Transcrição 24",
+        "Imagem 1"
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "indice": 0,
+      "nivel": 0,
+      "sha256": "12036f8ea4f65dbbbde72d67f16a24f6a2b9e4ca0825a7dd8137c1817f6bb8c4"
+    },
+    {
+      "indice": 1,
+      "nivel": 0,
+      "sha256": "5aef5416c7f9b3607f9025feeb3d9733962949c04e98ced5f744ac4e3fb9c408"
+    },
+    {
+      "indice": 2,
+      "nivel": 0,
+      "sha256": "21723907eb72849d1ea003dc419aaf5bdc4443ea95fb8f55ad0bc7afb0fab569"
+    },
+    {
+      "indice": 3,
+      "nivel": 0,
+      "sha256": "00df05516c838cce9ab96d77141a97271add1bedd7b1862714a3d764d6d21ee2"
+    },
+    {
+      "indice": 4,
+      "nivel": 0,
+      "sha256": "7244bf5d93865b38520be0aed1bba2ab300f7e9f383c26d78e570941e89bf4d0"
+    },
+    {
+      "indice": 5,
+      "nivel": 0,
+      "sha256": "42391980e551c73968f4baf9cb5d61323c74db1f00d6153ca097007d514668ea"
+    },
+    {
+      "indice": 6,
+      "nivel": 0,
+      "sha256": "df602e5a4fae7ac017e90d8ecf41ebb18c2fc57c039bc5b1a526cda8403cf3a1"
+    },
+    {
+      "indice": 7,
+      "nivel": 0,
+      "sha256": "b61be416c87ea57f1970e0e9353bb51c98f684a052bc6c83c2223bc3317b88b9"
+    },
+    {
+      "indice": 8,
+      "nivel": 1,
+      "sha256": "890c4636092635357c59478fe06a3e2d9f533cf346e3b9d4df0379cddc7d4ee9"
+    },
+    {
+      "indice": 9,
+      "nivel": 1,
+      "sha256": "3770815f1ead555481ad88d2787bbc933044af46234f6c0fbe16e6141335fece"
+    },
+    {
+      "indice": 10,
+      "nivel": 1,
+      "sha256": "79463eb224750326145e7163f827d77cfa57ae567a21d9348f8029d9bc173c47"
+    },
+    {
+      "indice": 11,
+      "nivel": 1,
+      "sha256": "91b3f88868686a61fc951fdf5a19acb75eb7eb39ffbc7768fb57ce98f7246aa3"
+    },
+    {
+      "indice": 12,
+      "nivel": 1,
+      "sha256": "f711fe11af3d49bde92628e3e9862ab5c6fa087ae358e269c0dc5eaa8abcab85"
+    },
+    {
+      "indice": 13,
+      "nivel": 1,
+      "sha256": "453114064ee8a9ba9f367f202f9e36be2fdd30c606e843c20e267a28a1703b45"
+    },
+    {
+      "indice": 14,
+      "nivel": 1,
+      "sha256": "51fff0f35d04ed7d58eb07195143287ab5feffcb5a414a347f0641c5bbdfa569"
+    },
+    {
+      "indice": 15,
+      "nivel": 1,
+      "sha256": "9f5762c62b4e7309e74821c118c24029328e588eff71b621b4ae30246d39e101"
+    },
+    {
+      "indice": 16,
+      "nivel": 1,
+      "sha256": "46322a54fe89e69306a023888749371ed07fbc79c15aca292c352ed49b9af535"
+    },
+    {
+      "indice": 17,
+      "nivel": 2,
+      "sha256": "47d2b0da90b9ac735c1f3e4762955fd44d017ae6717839f8fa43e90e0f95b426"
+    },
+    {
+      "indice": 18,
+      "nivel": 2,
+      "sha256": "cd16853ad50af745f81b6d891d77dd4a680508d5686de90c4e9abf07ff28bf42"
+    },
+    {
+      "indice": 19,
+      "nivel": 2,
+      "sha256": "ce9f82c55fd43f4b8a4a0e79ba8789c628dac4220f9d67ffd9b9dc6411ec043d"
+    },
+    {
+      "indice": 20,
+      "nivel": 2,
+      "sha256": "20da7da297ea5035d1228574a1c6495a68230ab36df91eb64b791fe186ed4352"
+    },
+    {
+      "indice": 21,
+      "nivel": 2,
+      "sha256": "93dbcc109553d7ddb577881ceaaee1aff3b375b1540cd979a66643438fe41ca8"
+    },
+    {
+      "indice": 22,
+      "nivel": 2,
+      "sha256": "b31876bfe37f5b2b568b923abb8713898671c82b648913906aecf2deab8e40d6"
+    },
+    {
+      "indice": 23,
+      "nivel": 2,
+      "sha256": "00c05000bd8b649911a3f2cc153eea3186bd010d1661154097441bf1d4242785"
+    },
+    {
+      "indice": 24,
+      "nivel": 2,
+      "sha256": "d313e5b9e7a431c4a5ad23f8ba6cdda91de72c01491e9206160f14785bc163ce"
+    }
+  ],
+  "assuntos_integrados": {
+    "1257": [
+      "debt-repayment"
+    ],
+    "1258": [
+      "loan-contract"
+    ],
+    "1259": [
+      "loan-contract"
+    ],
+    "1260": [
+      "debt-repayment"
+    ],
+    "1266": [
+      "debt-repayment"
+    ],
+    "1269": [
+      "debt-repayment"
+    ],
+    "1273": [
+      "debt-yield"
+    ],
+    "1276": [
+      "debt-yield"
+    ],
+    "1288": [
+      "interest-capitalization"
+    ],
+    "1289": [
+      "interest-capitalization"
+    ],
+    "1290": [
+      "private-debt"
+    ],
+    "1299": [
+      "debt-yield",
+      "debt-repayment"
+    ],
+    "1300": [
+      "debt-repayment"
+    ]
+  },
+  "revisao_fontes": [
+    "Corrigidos erros de reconhecimento da transcrição: debentores/debentory para debêntures, IPSA para IPCA, CRAS para CRA.",
+    "Crédito privado é tratado dentro do universo de títulos de dívida; a definição residual não inclui automaticamente ações ou todo contrato privado.",
+    "Venda secundária separada de resgate ou amortização pela emissora; a explicação oral aproxima esses eventos, mas seus pagadores e efeitos são distintos.",
+    "Mútuo pode ser bancário; não são categorias disjuntas. Mútuo civil expressamente gratuito conserva obrigação de restituição.",
+    "Omissão contratual preservada como síntese didática do professor, com qualificação explícita; não convertida em gabarito jurídico universal. Consulta à Lei 14.905/2024 no Planalto bloqueada pelo proxy (CONNECT 403); sem certificação normativa externa.",
+    "Comparação simples/composto condicionada a capital, taxa, prazo, convenção e fluxos; não há alegação de que composto é sempre maior.",
+    "Novos cenários avaliam relações financeiras; nenhuma pergunta tem somente números como alternativas ou pede soma/subtração isolada."
+  ],
+  "exemplo_material": {
+    "principal": 18000,
+    "taxa_anual": "0.05",
+    "ano_1": {
+      "juros": 900,
+      "principal": 6000,
+      "saldo": 12000
+    },
+    "ano_2": {
+      "juros": 600,
+      "principal": 12000,
+      "saldo": 0
+    }
+  },
+  "criterio_editorial": "Cada item tem ângulo explícito; sobreposição de tema é permitida, repetição do mesmo problema com valores/nomes trocados é rejeitada. Medidas automáticas são triagem, não prova de unicidade semântica.",
+  "verificacao": {
+    "banco": "6 testes aprovados",
+    "auditoria_tamanho": "aprovada",
+    "qualidade_desenho_feedback_conteudo": "22 testes aprovados",
+    "regressao_geral": "76 testes aprovados",
+    "integracao": "46 testes aprovados",
+    "consulta_busca_aula_nova": "63 testes aprovados",
+    "escopo_final": "9 testes aprovados",
+    "siglas": "15 testes aprovados",
+    "ressalva": "Execuções sobrepostas; não somar como testes distintos. Não certificam semântica ou vigência jurídica."
+  },
+  "triagem_textual": {
+    "enunciados_novos_distintos": 50,
+    "iguais_a_enunciados_anteriores": 0,
+    "normais": {
+      "questions": 40,
+      "characters": {
+        "correct_strictly_longest": 9,
+        "correct_strictly_shortest": 9,
+        "correct_tied_for_longest": 7,
+        "rank_strategy_rates": [
+          0.26875,
+          0.17291666666666666,
+          0.26041666666666663,
+          0.2979166666666667
+        ]
+      },
+      "words": {
+        "correct_strictly_longest": 3,
+        "correct_strictly_shortest": 4,
+        "correct_tied_for_longest": 13,
+        "rank_strategy_rates": [
+          0.20416666666666666,
+          0.2833333333333333,
+          0.30833333333333335,
+          0.20416666666666666
+        ]
+      },
+      "correct_over_50_percent_longer_than_all_distractors": 0
+    },
+    "hardcore": {
+      "questions": 10,
+      "characters": {
+        "correct_strictly_longest": 5,
+        "correct_strictly_shortest": 1,
+        "correct_tied_for_longest": 1,
+        "rank_strategy_rates": [
+          0.1,
+          0.25,
+          0.1,
+          0.55
+        ]
+      },
+      "words": {
+        "correct_strictly_longest": 2,
+        "correct_strictly_shortest": 0,
+        "correct_tied_for_longest": 5,
+        "rank_strategy_rates": [
+          0.05833333333333333,
+          0.15833333333333333,
+          0.35833333333333334,
+          0.425
+        ]
+      },
+      "correct_over_50_percent_longer_than_all_distractors": 0
+    },
+    "limite": "Triagem lexical não comprova distinção de ângulos; revisão comparada descrita no relatório Markdown."
+  }
+}

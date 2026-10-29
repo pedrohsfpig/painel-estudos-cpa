@@ -198,7 +198,7 @@ window.Consulta=(()=>{
    ignore:'calculada calculado calcular calcula calculo obtida obtido formada formado forma deriva derivada derivado partir vem base'},
   {id:'cause',query:/por que|porque|motivo|consequencia|efeito|impacto|influenc|o que acontece|o que ocorre/,
    evidence:/porque|pois |devido|em razao|por isso|depende|dependem|pode |podem |permite|permitem|reduz|eleva|aumenta|afeta|pression|restring|incentiv|decorre|evita|condicion/,
-   ignore:'motivo razao consequencia efeito impacto influencia acontece ocorre nao'},
+   ignore:'motivo razao consequencia efeito impacto influencia acontece ocorre nao afeta afetam afetar'},
   {id:'sequence',query:/etapas|passo a passo|sequencia|qual .*ordem|como funciona|como .*funciona/,
    evidence:/primeir|segund|terceir|etapa|apos|antes|depois|encaminh|aprova|liquida|negocia|compensa|capta|empresta/,
    ignore:'etapa passo sequencia ordem funciona funcionamento'}

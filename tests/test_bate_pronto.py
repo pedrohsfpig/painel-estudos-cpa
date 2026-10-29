@@ -5,6 +5,7 @@ from pathlib import Path
 import re
 import unittest
 from validate_bank import load_questions
+from final_block import unit_count
 import smoke as harness
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -13,8 +14,8 @@ def bank():return json.JSONDecoder().raw_decode((ROOT/'index.html').read_text().
 
 class BateProntoContentTests(unittest.TestCase):
     def test_fifty_per_lesson_with_two_options_and_two_specific_explanations(self):
-        rows=bank();lessons={q[0] for q in load_questions()};self.assertEqual(len(rows),sum(25 if l==13 else 50 for l in lessons))
-        self.assertEqual(Counter(r[0] for r in rows),{l:(25 if l==13 else 50) for l in lessons})
+        rows=bank();lessons={q[0] for q in load_questions()};self.assertEqual(len(rows),sum(25*unit_count() if l==13 else 50 for l in lessons))
+        self.assertEqual(Counter(r[0] for r in rows),{l:(25*unit_count() if l==13 else 50) for l in lessons})
         for r in rows:
             self.assertEqual(len(r),8)
             self.assertNotEqual(r[3].lower(),r[4].lower())
@@ -28,7 +29,7 @@ class BateProntoContentTests(unittest.TestCase):
         self.assertEqual(len(ledger),len(rows))
         for lesson in sorted({r[0] for r in rows}):
             a=[r for r in rows if r[0]==lesson]
-            self.assertEqual(len({r[2] for r in a}),25 if lesson==13 else 50)
+            self.assertEqual(len({r[2] for r in a}),25*unit_count() if lesson==13 else 50)
             self.assertGreater(sum('____' in r[2] for r in a),0)
             self.assertLess(sum('____' in r[2] for r in a),25)
         for i,(r,record) in enumerate(zip(rows,ledger)):

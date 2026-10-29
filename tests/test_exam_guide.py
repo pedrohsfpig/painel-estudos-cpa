@@ -44,7 +44,7 @@ class ExamGuide(unittest.TestCase):
             self.assertEqual(row.locator('.exam-block,.exam-no-block').count(),0)
         self.assertEqual(self.page.locator('.exam-planned').count(),0)
         self.assertNotIn('não cadastrada',self.page.locator('[data-exam-lesson="13"]').inner_text())
-        self.assertEqual(self.page.evaluate('[AL.length,Q.length,BP.length]'),[13,1250,625])
+        self.assertEqual(self.page.evaluate('[AL.length,Q.length,BP.length]'),self.page.evaluate('[13,1200+50*AL[12].b.length,600+25*AL[12].b.length]'))
         self.page.locator('.exam-reference-notes summary').click()
         self.assertIn('não representa uma conferência independente de edital',self.page.locator('.exam-reference-notes').inner_text())
 

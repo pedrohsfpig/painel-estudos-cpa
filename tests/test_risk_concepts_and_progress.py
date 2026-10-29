@@ -7,6 +7,7 @@ import re
 import unittest
 from validate_bank import load_questions
 from question_revision import digest,questions_before_risk_concept_revision
+from final_block import before_private_credit
 import smoke as harness
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -18,8 +19,8 @@ class RiskContent(unittest.TestCase):
   self.assertEqual([r['id'] for r in report['revisao_das_50']],list(range(1201,1251)))
   self.assertEqual(len(report['questoes']),16)
   for a,b in zip(before,current):self.assertEqual([a[i] for i in [0,1,2,9]],[b[i] for i in [0,1,2,9]])
-  self.assertEqual(Counter(q[2] for q in current[1200:]),{0:10,1:20,2:10,3:10})
-  for q in current[1200:]:
+  self.assertEqual(Counter(q[2] for q in current[1200:1250]),{0:10,1:20,2:10,3:10})
+  for q in current[1200:1250]:
    self.assertNotRegex(' '.join(q[3:9]+q[11]),r'1\.123,60|1\.040,37|1\.080,38|1\.060,00')
   for id in [1222,1223,1224,1227,1231,1239,1240,1241,1242,1245,1247,1250]:
    q=current[id-1]
@@ -38,12 +39,15 @@ class RiskContent(unittest.TestCase):
   self.assertIn('Liquidez de financiamento; risco de mercado; liquidez de mercado.',q[1249][4])
   report=json.loads((ROOT/'docs/revisao-aula-13-conceitos.json').read_text())
   html=(ROOT/'index.html').read_text();mat=json.JSONDecoder().raw_decode(html.split('\n13:',1)[1])[0]
+  lessons=json.JSONDecoder().raw_decode(html.split('const AL=',1)[1])[0]
+  lessons,mat=before_private_credit(lessons,mat)
   self.assertIn('R$ 9.450',q[1244][3]);self.assertIn('R$ 8.750',q[1244][3])
   restored=json.loads(json.dumps(mat['fc']))
   for r in report['flashcards']:restored[r['indice']]=r['antes']
   self.assertEqual(digest(restored),report['preservacao']['flashcards_13_antes'])
   for key in ['BP','AL']:
    data=json.JSONDecoder().raw_decode(html.split('const '+key+'=',1)[1])[0]
+   data=data[:625] if key=='BP' else lessons
    self.assertEqual(digest(data),report['preservacao'][key])
   stripped=json.loads(json.dumps(mat));stripped.pop('fc');stripped['b'][0].pop('fc')
   self.assertEqual(digest(stripped),report['preservacao']['materiais_13_exceto_flashcards'])

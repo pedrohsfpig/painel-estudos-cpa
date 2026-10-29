@@ -7,6 +7,7 @@ import re
 import unittest
 from question_revision import questions_before_risk_concept_revision
 from validate_bank import load_questions
+from final_block import before_private_credit
 import smoke as harness
 ROOT=Path(__file__).resolve().parents[1]
 def read(marker):return json.JSONDecoder().raw_decode((ROOT/'index.html').read_text().split(marker,1)[1])[0]
@@ -14,9 +15,10 @@ def digest(v):return hashlib.sha256(json.dumps(v,ensure_ascii=False,separators=(
 class Content(unittest.TestCase):
  def setUp(self):
   self.q=load_questions();self.bp=read('const BP=');self.al=read('const AL=');self.mat=read('\n13:');self.report=json.loads((ROOT/'docs/aula-13-cobertura.json').read_text())
+  self.al,self.mat=before_private_credit(self.al,self.mat)
  def test_half_volumes_preserve_normal_and_hardcore_proportions(self):
-  self.assertEqual(Counter(q[2] for q in self.q[1200:]),{0:10,1:20,2:10,3:10})
-  self.assertEqual(len(self.bp[600:]),25);self.assertEqual(len(self.mat['fc']),25);self.assertEqual(Counter(c[2] for c in self.mat['fc']),{0:9,1:8,2:8})
+  self.assertEqual(Counter(q[2] for q in self.q[1200:1250]),{0:10,1:20,2:10,3:10})
+  self.assertEqual(len(self.bp[600:625]),25);self.assertEqual(len(self.mat['fc']),25);self.assertEqual(Counter(c[2] for c in self.mat['fc']),{0:9,1:8,2:8})
   self.assertTrue(self.al[12]['internalLessons']);self.assertEqual(len(self.al[12]['b']),1)
   self.assertEqual({q[0] for q in self.q[1200:]},{13});self.assertTrue(all(q[9]==0 for q in self.q[1200:]))
  def test_sources_and_old_banks_are_preserved_and_every_new_id_is_covered(self):
@@ -29,7 +31,7 @@ class Content(unittest.TestCase):
   authored=questions_before_risk_concept_revision(self.q)
   for r in self.report['itens']:self.assertEqual(digest(authored[r['id']-1]),r['sha256'])
   for r in self.report['bate_pronto']:self.assertEqual(digest(self.bp[r['id']-100001]),r['sha256'])
-  for r in self.bp[600:]:self.assertEqual(self.q[r[7]-1][:2],r[:2])
+  for r in self.bp[600:625]:self.assertEqual(self.q[r[7]-1][:2],r[:2])
  def test_aggregates_preserve_every_material_and_causal_conditions(self):
   unit=self.al[12]['b'][0];material=self.mat['b'][0]
   for key in ['r','d','p','n']:self.assertEqual(unit[key],self.al[12][key])
@@ -68,13 +70,13 @@ class Browser(unittest.TestCase):
   self.assertEqual(self.page.locator('#overview-scroll tbody tr').count(),6)
   self.assertEqual(self.page.evaluate('[AU[13],AL[12].t,MAT[13].mm[0]]'),['Aula 13: Bloco Final']*3)
  def test_practice_internal_controls_and_all_modes_have_exact_stock(self):
-  for mode,n in [('e',40),('s',40),('h',10),('b',25)]:
+  for mode,n in [('e',80),('s',80),('h',20),('b',50)]:
    self.page.evaluate("md=>{cfg={a:13,as:[],b:0,us:[],md,n:-1,m:'all',c:40};qz=null;view='q';go()}",mode)
    self.assertEqual(self.page.evaluate('pool().length'),n)
    self.page.locator('.practice-blocks [data-lesson-block="1"]').click()
-   self.assertEqual(self.page.evaluate('cfg.us'),[1]);self.assertEqual(self.page.evaluate('pool().length'),n)
-   self.assertEqual(self.page.evaluate('sessionPlan().n'),min(40,n))
-   self.assertEqual(len(set(self.page.evaluate('mix(sessionPlan())'))),min(40,n))
+   self.assertEqual(self.page.evaluate('cfg.us'),[1]);self.assertEqual(self.page.evaluate('pool().length'),n//2)
+   self.assertEqual(self.page.evaluate('sessionPlan().n'),min(40,n//2))
+   self.assertEqual(len(set(self.page.evaluate('mix(sessionPlan())'))),min(40,n//2))
    self.page.locator('.practice-blocks [data-lesson-block="0"]').click();self.assertEqual(self.page.evaluate('cfg.us'),[])
  def test_multiple_internal_units_balance_without_changing_the_real_bank(self):
   original=self.page.evaluate('JSON.stringify([Q,BP,AL])')

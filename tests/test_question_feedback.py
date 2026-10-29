@@ -6,6 +6,7 @@ from pathlib import Path
 import re
 import unittest
 from validate_bank import load_questions,validate_questions
+from final_block import unit_count
 from question_revision import FIELD_INDEX,digest,questions_before_feedback_revision,questions_before_context_revision,questions_before_teaching_revision
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -47,9 +48,9 @@ class QuestionFeedbackTests(unittest.TestCase):
         self.assertTrue(validate_questions(self.latest))
         for a,b in zip(self.before,self.latest):
             self.assertEqual([a[i] for i in (0,1,2,9)],[b[i] for i in (0,1,2,9)])
-        self.assertEqual(Counter(r[0] for r in self.latest),{n:(50 if n==13 else 100) for n in {q[0] for q in self.latest}})
+        self.assertEqual(Counter(r[0] for r in self.latest),{n:(50*unit_count() if n==13 else 100) for n in {q[0] for q in self.latest}})
         for lesson in sorted({q[0] for q in self.latest}):
-            self.assertEqual(Counter(r[2] for r in self.latest if r[0]==lesson),({0:10,1:20,2:10,3:10} if lesson==13 else {0:20,1:40,2:20,3:20}))
+            self.assertEqual(Counter(r[2] for r in self.latest if r[0]==lesson),({0:10*unit_count(),1:20*unit_count(),2:10*unit_count(),3:10*unit_count()} if lesson==13 else {0:20,1:40,2:20,3:20}))
 
     def test_numeric_explanations_distinguish_possible_value_from_requested_minimum(self):
         for id,r in enumerate(self.latest,1):

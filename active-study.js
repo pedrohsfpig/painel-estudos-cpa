@@ -4,6 +4,11 @@ window.ActiveStudy=(()=>{
  'use strict';
  const fold=value=>String(value??'').replace(/\{\{(?:atencao|negacao)\|([^{}]+)\}\}/g,'$1').replace(/\*\*/g,'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
  const subjects=[
+  ['private-debt','Crédito privado',/credito privado|emissor e divida|titulos? de divida privada/],
+  ['debt-yield','Juros e indexadores',/juros e indexadores|remuneracao da divida|remuneracao (?:pre|pos) fixada|remuneracao hibrida/],
+  ['debt-repayment','Amortização e resgate',/amortizac|amortizacoes|\bbullet\b|resgate antecipado|resgate pela emissora/],
+  ['loan-contract','Empréstimo e mútuo',/\bmutuo\b|\bmutuante\b|\bmutuario\b|emprestimos? bancarios?/],
+  ['interest-capitalization','Capitalização financeira',/capitalizacao financeira|capitalizacao simples|capitalizacao composta|juros simples|juros compostos/],
   ['risk-liquidity','Risco de liquidez',/risco(?:s)? de liquidez|liquidez de financiamento|liquidez de mercado|pressao de caixa/],
   ['risk-credit','Risco de crédito',/risco(?:s)? de credito|obrigac(?:ao|oes) do emissor|inadimplencia/],
   ['risk-market','Risco de mercado',/risco(?:s)? de mercado|oscilacoes adversas|desvalorizacao a mercado/],
@@ -82,6 +87,9 @@ window.ActiveStudy=(()=>{
   ['structure',/singular|cooperativas? centrais|^central$|^centrais$|confederacao|piramide|carteiras|controle acionario|acionistas|minimo.*carteira/]
  ];
  const topicRules=[
+  [/^Crédito privado: emissor/,['private-debt']],[/^Crédito privado: juros/,['debt-yield']],
+  [/^Crédito privado: amortização/,['debt-repayment']],[/^Crédito privado: empréstimo/,['loan-contract']],
+  [/^Crédito privado: capitalização/,['interest-capitalization']],
   [/^Riscos: liquidez/,['risk-liquidity']],[/^Riscos: crédito e ratings/,['risk-credit','rating']],
   [/^Riscos: spread/,['creditspread']],[/^Riscos: mercado/,['risk-market']],
   [/^Riscos: juros/,['risk-rates']],
@@ -96,6 +104,11 @@ window.ActiveStudy=(()=>{
   [/^Cupom:.*retorno/,['cupom']],[/^Cupom:/,['swap']],[/^Taxas:.*cota/,['quotation']],[/^Taxas:.*real/,['realfx']],[/^Taxas:/,['fxflows']]
  ];
  const microRules={
+  'private-debt':[['issuer',/emiss|emit|governo|tesouro|public[ao]|distribu|banco/],['rights',/credor|acionista|socio|societari|capital da|participacao/],['funding',/captac|captar|financ|subscre|subscric|emissao|recursos/],['components',/juros|amortiz|principal|pagamento|extrato/]],
+  'debt-yield':[['fixed',/prefixad|pre fixad|taxa fixa|taxa constante/],['indexed',/pos fixad|indexador|referencia|\bcdi\b|variavel/],['hybrid',/hibrid|\bipca\b|inflacao|parcela fixa/],['base',/saldo|amortiz|base|principal/],['comparison',/compar|relatorio|resultado|ranking|coincid|projec/]],
+  'debt-repayment':[['bullet',/\bbullet\b|unica|integral.*vencimento|principal.*final/],['partial',/parcia|parcela|constante|variavel|saldo/],['coupon',/juros|cupom|cupons|remunerac/],['early',/antecip|extraordin|opcao|resgate/],['trading',/vend|mercado|outro investidor|transfer/]],
+  'loan-contract':[['roles',/mutuante|mutuario|credor|tomador|entrega|fornece|recebe/],['fungible',/fungiv|cedula|equivalente/],['civil',/civil|particulares|pessoas|gratuit|juridic/],['bank',/banc|autoriz|financeir|cooperativa/],['regime',/regime|norma|clausula|disciplina|enquadramento|nome|denominac/]],
+  'interest-capitalization':[['simple',/simples|linear|base inicial|capital inicial/],['compound',/compost|incorpor|acumulad|exponencial/],['period',/periodo|prazo|mensal|anual|taxa positiva|unidade/],['flows',/amortiz|fluxos?|pagamento|retirad|reaplic|saldo/],['contract',/contrat|omissao|norma|disciplina|regime juridico/]],
   'risk-liquidity':[['financing',/financiamento|saques?|caixa|honrar|pagar|patrimonio/],['trading',/liquidez de mercado|negoci|vend|convert|convers|comprador|desagio|desconto significativo|valor justo/],['interaction',/descumpr|inadimpl|credor|coexist|intera/]],
   'risk-credit':[['payment',/juros|principal|pagamento|descumpr|inadimpl|obrigac/],['analysis',/capacidade|qualidade|rating|remuneracao|compensacao|retorno|porte|patrimonio/]],
   'risk-market':[['variables',/precos|preco|juros|cambio|indices|acoes/],['valuation',/valor|desvalori|venda|realiza|perda|queda/],['exposure',/ativos|passivos|exposicao|divida|moeda/]],
@@ -126,12 +139,16 @@ window.ActiveStudy=(()=>{
  };
  function microFacets(owners,text){const t=fold(text);return owners.flatMap(owner=>(microRules[owner]||[]).filter(([,pattern])=>pattern.test(t)).map(([key])=>owner+':'+key))}
  const focused=new Set(['members','mandate','appointment','requirements','dismissal','nature','meetings','norms']);
+ // Relações editoriais: o assunto também é efetivamente cobrado na questão,
+ // e não apenas citado no contexto ou nos distratores. IDs continuam estáveis.
+ const privateCreditCrossTopics={1257:['debt-repayment'],1258:['loan-contract'],1259:['loan-contract'],1260:['debt-repayment'],1266:['debt-repayment'],1269:['debt-repayment'],1273:['debt-yield'],1276:['debt-yield'],1288:['interest-capitalization'],1289:['interest-capitalization'],1290:['private-debt'],1299:['debt-yield','debt-repayment'],1300:['debt-repayment']};
  const found=text=>{const t=fold(text);let ids=subjects.filter(([, ,re])=>re.test(t)).map(([id])=>id);if(ids.includes('selicrate')&&/taxa selic|meta selic|taxa basica|copom/.test(t)&&!/sistema selic|custodia|liquidacao/.test(t))ids=ids.filter(id=>id!=='selicsystem');return ids};
  const aspects=text=>{const t=fold(text);return facets.filter(([,re])=>re.test(t)).map(([id])=>id)};
  const unique=list=>[...new Set(list)];
  function reduce(ids,lesson){
   let out=unique(ids);
   const remove=id=>out=out.filter(x=>x!==id);
+  if(out.includes('interest-capitalization'))remove('capitalization');
   if(out.includes('risk-liquidity'))remove('liquidity');
   if(out.some(id=>['risk-credit','rating','creditspread'].includes(id)))remove('credit');
   if(out.includes('creditspread'))remove('spread');
@@ -151,6 +168,7 @@ window.ActiveStudy=(()=>{
   const rule=topicRules.find(([re])=>re.test(topic));
   let owners=rule?[...rule[1]]:reduce(found(topic),lesson),parts=[];
   if(rule&&owners.length>1){const detected=reduce(found(body),lesson),specific=owners.filter(o=>detected.includes(o));if(specific.length)owners=specific;}
+  if(lesson===13&&/^Crédito privado:/.test(topic))owners.push(...(privateCreditCrossTopics[id]||[]));
   const base={2:'cmn',3:'bc',4:'cvm'}[lesson];
   if(base&&!rule){
    if(/comoc/.test(t))owners=['comoc'];else if(/secretaria/.test(t))owners=['secretaria'];
@@ -278,9 +296,14 @@ window.ActiveStudy=(()=>{
   if(hinted.length&&(lockOwners||!owners.some(o=>orgs.has(o))||hinted.some(o=>orgs.has(o))))owners=hinted;
   else if(whole&&!inherited?.length&&!owners.some(o=>orgs.has(o))&&!reduce(found(label),lesson).length)owners=reduce([...owners,...found(text)],lesson);
   if(lesson===13){
-   const riskIds=new Set(['risk-liquidity','risk-credit','risk-market','risk-rates','rating','creditspread','spread']);
+   const riskIds=new Set(['risk-liquidity','risk-credit','risk-market','risk-rates','rating','creditspread','spread','private-debt','debt-yield','debt-repayment','loan-contract','interest-capitalization']);
    const convert=ids=>unique(ids.map(id=>({liquidity:'risk-liquidity',credit:'risk-credit',markets:'risk-market'}[id]||id)).filter(id=>riskIds.has(id)));
    const anchor=value=>{const t=fold(value);
+    if(/^emissor e divida|^credito privado|^ativos de credito privado/.test(t))return ['private-debt'];
+    if(/^juros e indexadores|^remuneracao\b|^referencias$|^prefixada\b|^pos fixada\b|^hibrida\b/.test(t))return ['debt-yield'];
+    if(/^amortizacao|^resgate\b|^principal e juros|^pagamentos$|^sair antes|^bullet\b/.test(t))return ['debt-repayment'];
+    if(/^emprestimo e mutuo|^mutuo\b|^mutuante\b|^emprestimo bancario/.test(t))return ['loan-contract'];
+    if(/^capitalizacao\b|^simples$|^composta$|^tres perguntas independentes/.test(t))return ['interest-capitalization'];
     if(/^spread bancario e spread de credito/.test(t))return ['spread','creditspread'];
     if(/^spread de credito/.test(t))return ['creditspread'];
     if(/^ratings?\b|^agencias? de (?:risco|rating)/.test(t))return ['rating'];
@@ -304,6 +327,7 @@ window.ActiveStudy=(()=>{
   }
   let micro=microFacets(owners,label+' '+text);
   if(!micro.length)micro=microFacets(owners,[...parents].reverse().find(p=>microFacets(owners,p).length)||'');
+  if(whole&&lesson===13&&['emissor e divida','juros e indexadores','amortizacao e resgate','emprestimo e mutuo','capitalizacao financeira'].includes(fold(label)))micro=[];
   return {owners:unique(owners),facets:unique(fs),micro};
  }
  function directMatching(source){
