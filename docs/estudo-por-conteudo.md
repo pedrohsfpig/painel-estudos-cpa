@@ -51,6 +51,14 @@ navegação/busca/materiais, 76 de smoke e os checks de banco/qualidade/feedback
 aprovados. Após o ajuste final da quebra de linha, passaram também os dois
 casos específicos de contenção e layout e os dois de rótulo/ícone global.
 
+Refinamento visual posterior no mesmo dia: botão dos três tópicos com altura
+de 21 px no computador (antes 28 px), ícone de 10 px, rótulo de 10 px, borda
+mais compacta e área de 24 px no celular. Contagem em 11 px, com espaço
+reservado para manter o alinhamento. Margens de 8 px acima e 20 px ao lado do
+conjunto evitam proximidade com o texto. Outros materiais mantêm seus tamanhos.
+Conferência: oito testes de desenho e os 76 fluxos gerais aprovados; checks do
+banco, alternativas e feedback também aprovados. Conteúdo e vínculos preservados.
+
 ## Assunto e característica
 
 `active-study.js` mantém um cadastro editorial local de assuntos, sinônimos,

@@ -252,6 +252,12 @@ da primeira renderização e respeite os destaques semânticos nos dois temas.
   ações irmãs separando cartões nem sobrepor/cortar texto. `flow-root` mantém
   a ação flutuante contida; aviso de sessão pendente usa linha própria interna.
   Não mudar fontes, associações, contagens ou os controles discretos dos mapas.
+- Refinamento posterior de 30/10: nos três tópicos da Trilha, reduzir o botão
+  aproximadamente 25% (altura 28→21 px; 24 px no celular), com ícone de 10 px,
+  rótulo de 10 px e preenchimento compacto. Manter a contagem legível em 11 px,
+  com espaço reservado para alinhar os controles. Separar o conjunto do texto
+  por 8 px acima e 20 px ao lado; evitar botões encostados nas linhas. Aplicação
+  somente aos tópicos, preservando o tamanho dos atalhos dos outros materiais.
 - Todos os conceitos de revisão oferecem Fazer questões com contagem exata:
   quadro geral (participante/característica), mapas, diagramas, tabelas, linha
   do tempo, flashcards, resumo, dicas, pegadinhas e números. Preserve o conteúdo.
