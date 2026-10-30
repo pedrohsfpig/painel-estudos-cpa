@@ -1,6 +1,6 @@
 # Aula 13 — bloco final com aulas internas
 
-Orientação atualizada em 29/10/2026, após recebimento da terceira aula.
+Orientação atualizada em 30/10/2026, após recebimento da quarta aula interna.
 
 - Uma entrada **Aula 13: Bloco Final**, com aulas internas separadas por assunto.
 - Cada aula interna: **50 questões**, sendo 10 fáceis, 20 médias, 10 difíceis
@@ -19,7 +19,11 @@ Orientação atualizada em 29/10/2026, após recebimento da terceira aula.
 - Terceira cadastrada: **Aula 3: Fluxo de Pagamentos**, transcrição 25,
   slides na ordem confirmada Pagamentos → Caixa e três complementos de fórmulas.
   Ver `aula-13-fluxos.md` e seu manifesto. Flashcards 9/8/8; agregado 26/25/24.
-- As outras três aulas curtas do professor ainda aguardam slides/transcrições.
+- Quarta cadastrada: **Aula 4: Prazos e Retornos de Carteiras**, reunindo as
+  fontes 26 e 27 com quatro slides. Ver `aula-13-carteiras.md`. Questões normais
+  incluem cálculos; Bate-pronto e flashcards são conceituais.
+- Flashcards da quarta: 8/8/9; agregado 34/33/33. Total: 200 Q, 100 BP, 100 FC.
+- A última aula curta do professor ainda aguarda slides/transcrição.
   Não antecipar temas, criar placeholders ou preencher questões sem fontes.
 - Cruzar as fontes, preservar cálculos e condições, evitar pistas gramaticais,
   siglas que revelem resposta e distratores sem contexto. Todas as alternativas

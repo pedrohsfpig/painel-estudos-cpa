@@ -23,7 +23,7 @@ completo para os focos temáticos e justificativas de cada linha.
   prioridade ou aula (1–13), sem opção Tema. A posição não
   muda ao filtrar; temas da tabela não renomeiam aulas já cadastradas.
 - Aula 13 tem Riscos Financeiros (28/10/2026), Crédito Privado e Fluxo de
-  Pagamentos (29/10/2026).
+  Pagamentos (29/10/2026), Prazos e Retornos de Carteiras (30/10/2026).
   As demais aguardam fontes; o guia verifica o cadastro real ao exibir o aviso.
 - Preserve Q/BP/AL/MAT, H, cfg, filtros de outras telas, sessão e relógio. Os
   blocos deste guia não substituem os blocos internos das aulas. Sem API paga.
@@ -222,7 +222,7 @@ da primeira renderização e respeite os destaques semânticos nos dois temas.
   dados `MAT.mm`, os controles por conceito e o renderizador `mapa()` permanecem.
   As regras detalhadas abaixo sobre o desenho azul aplicam-se às Ramificações.
 - **Mapa mental** é uma categoria adicional (`visual`), com imagens de revisão
-  elaboradas a partir das aulas cadastradas. Nesta entrega: 28 mapas, cobrindo
+  elaboradas a partir das aulas cadastradas. Catálogo atual: 29 mapas, cobrindo
   as 13 aulas e os blocos recebidos. Não presumir as internas futuras da 13.
   Catálogo em `mental-maps-data.js`; imagens locais em `assets/mental-maps`.
 - Exibir um mapa por vez, selecionar pelos assuntos e respeitar os filtros de
@@ -444,7 +444,10 @@ A primeira aula interna foi recebida em 28/10/2026: transcrição da aula 23,
 seis imagens, assunto **Riscos Financeiros**. Está cadastrada como Aula 1 dentro
 de **Aula 13: Bloco Final**. A segunda, **Aula 2: Crédito Privado**, foi recebida
 em 29/10/2026: transcrição 24 e duas imagens. A terceira é **Aula 3: Fluxo de
-Pagamentos**, transcrição 25, dois slides e três complementos. As outras três aguardam fontes; não criar
+Pagamentos**, transcrição 25, dois slides e três complementos. A quarta,
+**Aula 4: Prazos e Retornos de Carteiras**, reúne as fontes 26 e 27
+(30/10/2026), quatro slides e transcrição conjunta. A última aula curta
+aguarda fontes; não criar
 placeholders ou conteúdo presumido.
 
 Pedido FINAL explícito: metade do padrão **por aula interna**: **50 questões
@@ -489,6 +492,21 @@ Rodar também `tests/test_aula13.py` ao alterar este bloco.
   inventadas, TIR ou temas futuros. Cupons retirados/reaplicados não se duplicam.
 - Rodar `tests/test_aula13_fluxos.py`, regressões das duas internas, escopo,
   siglas, Consulta/busca e smoke. Ver `docs/aula-13-fluxos.md` e cobertura JSON.
+
+- Quarta interna: Q 1351–1400, BP 100676–100700 e 25 flashcards 8/8/9.
+  Agregado: 200 Q (160 normais/40 HC), 100 BP, 100 FC (34/33/33).
+  O usuário pediu cálculos neste conteúdo: usar as fórmulas fornecidas, números
+  próprios e dificuldade coerente. Flashcards e Bate-pronto continuam conceituais.
+  Conferir médias, bases, períodos e pesos. Prazo médio não muda vencimentos;
+  retorno esperado não garante resultado; aporte não é rendimento. No modelo de
+  posições mantidas sem fluxos externos, o histórico usa pesos iniciais.
+  Ver `docs/aula-13-carteiras.md` e rodar `tests/test_aula13_carteiras.py`.
+- Números para decorar, em TODAS as aulas: somente fatos/regras/relações gerais,
+  nunca entradas ou resultados de exemplos, metas de treino ou contagens
+  editoriais. Exemplos podem permanecer identificados nas explicações e tabelas.
+  Revisão global de 30/10: 13 entradas removidas nas aulas 1/10/12/13; ver
+  `docs/revisao-numeros-para-decorar.md` e JSON. Preserve hashes históricos;
+  testes reconstituem somente os cartões alterados ao comparar versões antigas.
 
 ## Novas aulas com vários blocos
 

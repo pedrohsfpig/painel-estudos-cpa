@@ -52,3 +52,10 @@ Validação concluída: 7 testes específicos da galeria, 76 de smoke, 11 de bus
 Foram conferidos os dois temas, larguras de 390/1280/1920 pixels, teclado,
 zoom/rolagem/Esc/foco, os 28 arquivos, as seleções de bloco, a sessão pendente e
 a identidade dos quatro bancos originais. Contagens incluem suítes sobrepostas.
+
+
+Atualização de 30/10/2026: o catálogo tem agora 29 imagens. A quarta aula
+interna do bloco final acrescenta Prazos e Retornos de Carteiras. Os 28 arquivos
+e hashes da entrega original permanecem; o novo arquivo e sua fonte constam
+em `aula-13-carteiras-cobertura.json`. Verificação histórica reconstitui os dados
+anteriores à nova aula e à revisão autorizada dos cartões numéricos.

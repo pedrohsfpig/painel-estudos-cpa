@@ -1,0 +1,1414 @@
+{
+  "data": "2026-10-30",
+  "aula": 13,
+  "unidade": 4,
+  "titulo": "Aula 4: Prazos e Retornos de Carteiras",
+  "preservacao": {
+    "Q": {
+      "count": 1350,
+      "sha256": "fcee4437ab1fffbd3ae039dee36d01b3efa13ced8d8c0c70d3713f0f929bab10"
+    },
+    "BP": {
+      "count": 675,
+      "sha256": "59261872481137ff7327e7e7ea93a516836fdf892928a5b54c55c1448612174d"
+    },
+    "AL": "43655abf0e3a6890022427e6bfd58e0fc255475064b1bf3ad472a83ac6277d59",
+    "MAT": "3f5f113546c489b25d4fb404d7523d9739f1d29cf9b332968589c22fb59fd385",
+    "aula13_o": "Bloco final com aulas internas de Riscos Financeiros, Crédito Privado e Fluxo de Pagamentos. Revise cada tema ou pratique o conjunto.",
+    "unidades_AL": "8528df4faef50194b0430c3927b82f41810137268f24a955ce26c82db398b35a",
+    "unidades_MAT": "fd7ee366afe09de424d129d930085e9d553f0aed1639f5de9e08c1c6f2881e55"
+  },
+  "fontes": {
+    "transcricao": {
+      "sediment": "file_00000000cde4820eac49f8930d28c9e7",
+      "aulas": [
+        26,
+        27
+      ],
+      "sha256": "0205426dacd8f7facbd020eafbd6d24e8bbd723f388a50a2d16d7544ff5152d9"
+    },
+    "slides": {
+      "sediment": "file_00000000fb8c820e8bfaddc044141c3f",
+      "arquivo": "Screenshot_1 (6).pdf",
+      "paginas": {
+        "1–2": "Prazo Médio e Vencimento",
+        "3–4": "Retorno Histórico e Esperado"
+      }
+    }
+  },
+  "quantidades": {
+    "Q": 50,
+    "niveis": [
+      10,
+      20,
+      10,
+      10
+    ],
+    "estudo_simulado_compartilhadas": 40,
+    "hardcore": 10,
+    "BP": 25,
+    "flashcards": 25,
+    "flashcards_niveis": [
+      8,
+      8,
+      9
+    ]
+  },
+  "itens": [
+    {
+      "id": 1351,
+      "tema": "Carteiras: médias e pesos",
+      "nivel": 0,
+      "angulo": "Média aritmética divide pela quantidade de observações",
+      "calculos": [
+        {
+          "expressao": "(3+6+9)/3",
+          "resultado": "6",
+          "trecho_correto": "6 meses"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 1–2"
+      ],
+      "sha256": "b5f2f9b0ed3a36c19189e1958925252983ae723173fe77041baac0fe6ad4c1e2"
+    },
+    {
+      "id": 1352,
+      "tema": "Carteiras: médias e pesos",
+      "nivel": 0,
+      "angulo": "Informação indispensável para ponderar uma carteira",
+      "calculos": [],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 1–2"
+      ],
+      "sha256": "32a45a63f863d3f2f13315ad67d61d3acc5b1b2bff93b8126781fce17ac8eafb"
+    },
+    {
+      "id": 1353,
+      "tema": "Carteiras: médias e pesos",
+      "nivel": 1,
+      "angulo": "Média ponderada com pesos relativos não normalizados",
+      "calculos": [
+        {
+          "expressao": "(5*2+9*3)/(2+3)",
+          "resultado": "7.4",
+          "trecho_correto": "7,4"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 1–2"
+      ],
+      "sha256": "2595ca1cfbbf38e94f9aea0b1605226094e4497c16e28624990a10552356c44c"
+    },
+    {
+      "id": 1354,
+      "tema": "Carteiras: médias e pesos",
+      "nivel": 1,
+      "angulo": "Peso financeiro calculado a partir das posições",
+      "calculos": [
+        {
+          "expressao": "9000/(15000+9000+6000)*100",
+          "resultado": "30",
+          "trecho_correto": "30%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 1–2"
+      ],
+      "sha256": "39ed7c50f7b46fe68810261f2438b7cb691fb58a58be3ca9cb113e152b210377"
+    },
+    {
+      "id": 1355,
+      "tema": "Carteiras: médias e pesos",
+      "nivel": 1,
+      "angulo": "Percentuais inteiros e denominador compatível",
+      "calculos": [
+        {
+          "expressao": "(4*40+7*60)/100",
+          "resultado": "5.8",
+          "trecho_correto": "5,8"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 1–2"
+      ],
+      "sha256": "3067af1ef57fc8a3531058e28717e568401174195c16d1d9716e46ad92deead8"
+    },
+    {
+      "id": 1356,
+      "tema": "Carteiras: médias e pesos",
+      "nivel": 1,
+      "angulo": "Valores iguais tornam irrelevante a diferença dos pesos",
+      "calculos": [
+        {
+          "expressao": "(15*7+25*7+60*7)/100",
+          "resultado": "7",
+          "trecho_correto": "7%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 1–2"
+      ],
+      "sha256": "95ace6389ed0af757afa197179715dd9bf8aa31ecaa2f5b8630d5294c674986b"
+    },
+    {
+      "id": 1357,
+      "tema": "Carteiras: médias e pesos",
+      "nivel": 2,
+      "angulo": "Renormalização de um subconjunto",
+      "calculos": [
+        {
+          "expressao": "(20*4+30*10)/(20+30)",
+          "resultado": "7.6",
+          "trecho_correto": "7,6"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 1–2"
+      ],
+      "sha256": "1ed226f1fbdbe8161b0d67ef40dccf640261d2da8c09911006e157cd454d7f8c"
+    },
+    {
+      "id": 1358,
+      "tema": "Carteiras: médias e pesos",
+      "nivel": 2,
+      "angulo": "Inconsistência de participações antes de calcular",
+      "calculos": [
+        {
+          "expressao": "18000/(18000+12000)*100",
+          "resultado": "60",
+          "trecho_correto": "60%"
+        },
+        {
+          "expressao": "12000/30000*100",
+          "resultado": "40",
+          "trecho_correto": "40%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 1–2"
+      ],
+      "sha256": "db11135ef23c673ef14267dac750724024960b6ddc90fe977e563701c639e226"
+    },
+    {
+      "id": 1359,
+      "tema": "Carteiras: médias e pesos",
+      "nivel": 3,
+      "angulo": "Ponderação em dois níveis sem somar pesos de bases distintas",
+      "calculos": [
+        {
+          "expressao": "((80*5+20*10)/100)*40/100+60*4/100",
+          "resultado": "4.8",
+          "trecho_correto": "4,8"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 1–2"
+      ],
+      "sha256": "eed6e4e6840ec091b411c249a2a041dc59e588e2eb81a59a1ca1de9e688f3081"
+    },
+    {
+      "id": 1360,
+      "tema": "Carteiras: médias e pesos",
+      "nivel": 3,
+      "angulo": "Quantidade de cotas não substitui valor financeiro",
+      "calculos": [
+        {
+          "expressao": "(100*80*7+40*300*12)/(100*80+40*300)",
+          "resultado": "10",
+          "trecho_correto": "10%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 1–2"
+      ],
+      "sha256": "e1744fae7d9eb0427c97c5bfe7a31ce1cf14819bfaaba186593d4df1d4931abe"
+    },
+    {
+      "id": 1361,
+      "tema": "Carteiras: prazo médio e vencimento",
+      "nivel": 0,
+      "angulo": "Prazo médio com posições de mesmo valor",
+      "calculos": [
+        {
+          "expressao": "(12+36)/2",
+          "resultado": "24",
+          "trecho_correto": "24 meses"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 1–2"
+      ],
+      "sha256": "a12640878d7c9cbee7e62bbae809b95663e40cc1dc26f8752cf96ccd3a6c41ba"
+    },
+    {
+      "id": 1362,
+      "tema": "Carteiras: prazo médio e vencimento",
+      "nivel": 0,
+      "angulo": "Média de vencimentos não cria uma data contratual",
+      "calculos": [],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 1–2"
+      ],
+      "sha256": "16459265ada49218b107629f6e35f556770144f42c25ea8e52c315fc0171c153"
+    },
+    {
+      "id": 1363,
+      "tema": "Carteiras: prazo médio e vencimento",
+      "nivel": 1,
+      "angulo": "Ponderação monetária de vencimentos distintos",
+      "calculos": [
+        {
+          "expressao": "(18000*6+42000*18)/(18000+42000)",
+          "resultado": "14.4",
+          "trecho_correto": "14,4"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 1–2"
+      ],
+      "sha256": "56a857c1d777ed1c3905c4907533570876a8fa40f721d1e89ac70da74483984a"
+    },
+    {
+      "id": 1364,
+      "tema": "Carteiras: prazo médio e vencimento",
+      "nivel": 1,
+      "angulo": "Conversão de unidades antes de ponderar prazos",
+      "calculos": [
+        {
+          "expressao": "40*12/100+60*30/100",
+          "resultado": "22.8",
+          "trecho_correto": "22,8"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 1–2"
+      ],
+      "sha256": "f7ed0537b5b1ced43039a2a8d780adb0f5dfe898a832ae2523a79833bedd7f30"
+    },
+    {
+      "id": 1365,
+      "tema": "Carteiras: prazo médio e vencimento",
+      "nivel": 1,
+      "angulo": "Parte decimal de ano não é número de meses",
+      "calculos": [
+        {
+          "expressao": "2.25*12",
+          "resultado": "27",
+          "trecho_correto": "27 meses"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 1–2"
+      ],
+      "sha256": "e7f2a6c2f60f4c481abfb6bda2b9255b7411f5b08607df17518fcd54bc72b12c"
+    },
+    {
+      "id": 1366,
+      "tema": "Carteiras: prazo médio e vencimento",
+      "nivel": 1,
+      "angulo": "Reallocação entre prazos e efeito marginal",
+      "calculos": [
+        {
+          "expressao": "(30*12+70*48)/100",
+          "resultado": "37.2",
+          "trecho_correto": "37,2"
+        },
+        {
+          "expressao": "(40*12+60*48)/100",
+          "resultado": "33.6",
+          "trecho_correto": "33,6"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 1–2"
+      ],
+      "sha256": "2d10a6b6cde51b94cc7cd406bfe6dda194f428f8e49175243955ab122550ddbd"
+    },
+    {
+      "id": 1367,
+      "tema": "Carteiras: prazo médio e vencimento",
+      "nivel": 2,
+      "angulo": "Encontrar vencimento desconhecido a partir da média",
+      "calculos": [
+        {
+          "expressao": "(20-25*8/100)/(75/100)",
+          "resultado": "24",
+          "trecho_correto": "24 meses"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 1–2"
+      ],
+      "sha256": "a4649e8ccda9ba2804e9188b74d4d6161f4236fd61c6ce09665bb595711ecfe4"
+    },
+    {
+      "id": 1368,
+      "tema": "Carteiras: prazo médio e vencimento",
+      "nivel": 2,
+      "angulo": "Data-base muda prazo restante sem criar novo vencimento",
+      "calculos": [
+        {
+          "expressao": "((18-6)+(42-6))/2",
+          "resultado": "24",
+          "trecho_correto": "24 meses"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 1–2"
+      ],
+      "sha256": "53ad043aae0fe2959a189e178dbc45f5905c5a85f984ba64f6d62dec3cb7bb00"
+    },
+    {
+      "id": 1369,
+      "tema": "Carteiras: prazo médio e vencimento",
+      "nivel": 3,
+      "angulo": "Prazo médio não assegura caixa integral na data média",
+      "calculos": [
+        {
+          "expressao": "(30*6+70*30)/100",
+          "resultado": "22.8",
+          "trecho_correto": "22,8"
+        },
+        {
+          "expressao": "100000*30/100",
+          "resultado": "30000",
+          "trecho_correto": "30.000"
+        },
+        {
+          "expressao": "48000-30000",
+          "resultado": "18000",
+          "trecho_correto": "18.000"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 1–2"
+      ],
+      "sha256": "1d519ec1b71bb628e76b6660424c790fe7b7db186f871f67f85544acb9c4748b"
+    },
+    {
+      "id": 1370,
+      "tema": "Carteiras: prazo médio e vencimento",
+      "nivel": 3,
+      "angulo": "Aporte em uma posição exige recomputar toda a base",
+      "calculos": [
+        {
+          "expressao": "((20000+10000)*12+30000*36)/(20000+10000+30000)",
+          "resultado": "24",
+          "trecho_correto": "24 meses"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 1–2"
+      ],
+      "sha256": "2151a39bca26c2d2f7c30d0297c49d03b092edd680dc19f11aa427247f150244"
+    },
+    {
+      "id": 1371,
+      "tema": "Carteiras: retorno histórico do ativo",
+      "nivel": 0,
+      "angulo": "Retorno positivo de preço em um período",
+      "calculos": [
+        {
+          "expressao": "(92-80)/80*100",
+          "resultado": "15",
+          "trecho_correto": "15%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "11f962f959c27d084034aaccb3f9532483ca5803ca409d1f6484731478c37843"
+    },
+    {
+      "id": 1372,
+      "tema": "Carteiras: retorno histórico do ativo",
+      "nivel": 0,
+      "angulo": "Retorno negativo conserva o sinal da perda",
+      "calculos": [
+        {
+          "expressao": "(135-150)/150*100",
+          "resultado": "-10",
+          "trecho_correto": "−10%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "3584b1afd9403db51f8809a5b5759eaa60312a904164c122e39f6e41d9064390"
+    },
+    {
+      "id": 1373,
+      "tema": "Carteiras: retorno histórico do ativo",
+      "nivel": 1,
+      "angulo": "Recuperar preço inicial a partir do retorno",
+      "calculos": [
+        {
+          "expressao": "138/(1+15/100)",
+          "resultado": "120",
+          "trecho_correto": "120"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "d83cd6409cdabdb24097863bc0ceb635d1ceb46148370db1ee620eaa8b2b0264"
+    },
+    {
+      "id": 1374,
+      "tema": "Carteiras: retorno histórico do ativo",
+      "nivel": 1,
+      "angulo": "Obter preço final compatível com o retorno",
+      "calculos": [
+        {
+          "expressao": "240*(1+12.5/100)",
+          "resultado": "270",
+          "trecho_correto": "270"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "acfcaf0706477a8709736eaacaa76c4de50ecec4af6598ec61c51d73223cf4f0"
+    },
+    {
+      "id": 1375,
+      "tema": "Carteiras: retorno histórico do ativo",
+      "nivel": 1,
+      "angulo": "Auditar denominador baseado no preço final",
+      "calculos": [
+        {
+          "expressao": "(300-250)/250*100",
+          "resultado": "20",
+          "trecho_correto": "20%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "246449929f0d9a421912ec6438f3331d1e7d5281c0195ae5d69ae33db8f1a378"
+    },
+    {
+      "id": 1376,
+      "tema": "Carteiras: retorno histórico do ativo",
+      "nivel": 1,
+      "angulo": "Maior ganho absoluto não implica maior rentabilidade",
+      "calculos": [
+        {
+          "expressao": "(72-60)/60*100",
+          "resultado": "20",
+          "trecho_correto": "20%"
+        },
+        {
+          "expressao": "(230-200)/200*100",
+          "resultado": "15",
+          "trecho_correto": "15%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "7f6eb431c48438de0f549f5a725324baad17d27a3e53687d7c6aad59410eb320"
+    },
+    {
+      "id": 1377,
+      "tema": "Carteiras: retorno histórico do ativo",
+      "nivel": 2,
+      "angulo": "Taxa necessária para recuperar uma perda usa a nova base",
+      "calculos": [
+        {
+          "expressao": "(160-128)/128*100",
+          "resultado": "25",
+          "trecho_correto": "25%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "06d13941f07c726baa1a0e875a2bc17895898e4f6450d16d8b34c3978812b077"
+    },
+    {
+      "id": 1378,
+      "tema": "Carteiras: retorno histórico do ativo",
+      "nivel": 2,
+      "angulo": "Taxa decimal e percentual na comunicação do cálculo",
+      "calculos": [
+        {
+          "expressao": "(258-240)/240",
+          "resultado": "0.075",
+          "trecho_correto": "0,075"
+        },
+        {
+          "expressao": "(258-240)/240*100",
+          "resultado": "7.5",
+          "trecho_correto": "7,5%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "f69b19713dad45d8d6bac491c0db855107218a7081863940eb0e416a4737b1d3"
+    },
+    {
+      "id": 1379,
+      "tema": "Carteiras: retorno histórico do ativo",
+      "nivel": 3,
+      "angulo": "Auditoria de duas séries e inferência indevida sobre o futuro",
+      "calculos": [
+        {
+          "expressao": "(140-125)/125*100",
+          "resultado": "12",
+          "trecho_correto": "12%"
+        },
+        {
+          "expressao": "(184-200)/200*100",
+          "resultado": "-8",
+          "trecho_correto": "−8%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "7c2ddb2af3deb8c203c34e8193ccf56539a9304f563c3384224ed985e1401003"
+    },
+    {
+      "id": 1380,
+      "tema": "Carteiras: retorno histórico do ativo",
+      "nivel": 3,
+      "angulo": "Retorno de cotação e resultado líquido com custo explícito",
+      "calculos": [
+        {
+          "expressao": "(220-200)/200*100",
+          "resultado": "10",
+          "trecho_correto": "+10%"
+        },
+        {
+          "expressao": "(220-30-200)/200*100",
+          "resultado": "-5",
+          "trecho_correto": "−5%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "69f3cf2b04290344e5d9c042c63a1e53c14b4672102d0608597b92889ca2d2c8"
+    },
+    {
+      "id": 1381,
+      "tema": "Carteiras: retorno histórico da carteira",
+      "nivel": 0,
+      "angulo": "Retorno da carteira com alocações iguais",
+      "calculos": [
+        {
+          "expressao": "(4+10)/2",
+          "resultado": "7",
+          "trecho_correto": "7%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "379a5401f3bf471515b26c5a39dcb3d7b5a18ea64c06b431edf69e0cb8dfcdb5"
+    },
+    {
+      "id": 1382,
+      "tema": "Carteiras: retorno histórico da carteira",
+      "nivel": 0,
+      "angulo": "Classificar a medida de desempenho de uma carteira",
+      "calculos": [],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "1100927de558bfcf139a8239c6f8a43f555928ec0dfe3ab4244247ac209ec677"
+    },
+    {
+      "id": 1383,
+      "tema": "Carteiras: retorno histórico da carteira",
+      "nivel": 1,
+      "angulo": "Contribuição negativa pode ser compensada na carteira",
+      "calculos": [
+        {
+          "expressao": "(3000*(-6)+7000*9)/10000",
+          "resultado": "4.5",
+          "trecho_correto": "4,5%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "08487853dcd71cacac975115f85a4b514910800c1e771bdd8cfd1b70faa1c5e4"
+    },
+    {
+      "id": 1384,
+      "tema": "Carteiras: retorno histórico da carteira",
+      "nivel": 1,
+      "angulo": "Completar participação residual em três ativos",
+      "calculos": [
+        {
+          "expressao": "(25*6+35*10+40*(-2))/100",
+          "resultado": "4.2",
+          "trecho_correto": "4,2%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "9ca20a0024bfe0c8338c03c46be77baf3135732670d1d3fea9346d52b7a080ce"
+    },
+    {
+      "id": 1385,
+      "tema": "Carteiras: retorno histórico da carteira",
+      "nivel": 1,
+      "angulo": "Retorno agregado calculado pelos valores totais",
+      "calculos": [
+        {
+          "expressao": "((1200+9450)-(1000+9000))/(1000+9000)*100",
+          "resultado": "6.5",
+          "trecho_correto": "6,5%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "5385af2ba83cfa571ecf20217ec7bac955a518830de4de6868ec4f0b2853c8a0"
+    },
+    {
+      "id": 1386,
+      "tema": "Carteiras: retorno histórico da carteira",
+      "nivel": 1,
+      "angulo": "Reserva sem rendimento continua compondo a base",
+      "calculos": [
+        {
+          "expressao": "80*10/100+20*0/100",
+          "resultado": "8",
+          "trecho_correto": "8%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "81724dae03dfb8cf8eda0eb0f788424421e001286016f71c5b0176438e289303"
+    },
+    {
+      "id": 1387,
+      "tema": "Carteiras: retorno histórico da carteira",
+      "nivel": 2,
+      "angulo": "Reconstruir retorno de um componente pela contribuição conhecida",
+      "calculos": [
+        {
+          "expressao": "(5-25*8/100)/(75/100)",
+          "resultado": "4",
+          "trecho_correto": "4%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "34a92fc1fcb5b00c023db648fd2048267d3589d352a637727ea6a4ab29bb164f"
+    },
+    {
+      "id": 1388,
+      "tema": "Carteiras: retorno histórico da carteira",
+      "nivel": 2,
+      "angulo": "Pesos finais não substituem as alocações iniciais no retorno do período",
+      "calculos": [
+        {
+          "expressao": "(10000*20+10000*0)/20000",
+          "resultado": "10",
+          "trecho_correto": "10%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "7f832ef1dbe5380a3969bacb8001ccbe5ea2ee2b265622eaf5fee4fb71f7096b"
+    },
+    {
+      "id": 1389,
+      "tema": "Carteiras: retorno histórico da carteira",
+      "nivel": 3,
+      "angulo": "Maior posição não precisa ter maior contribuição ao retorno",
+      "calculos": [
+        {
+          "expressao": "2000/10000*20",
+          "resultado": "4",
+          "trecho_correto": "+4 p.p."
+        },
+        {
+          "expressao": "5000/10000*(-4)",
+          "resultado": "-2",
+          "trecho_correto": "−2 p.p."
+        },
+        {
+          "expressao": "(2000*20+5000*(-4))/10000",
+          "resultado": "2",
+          "trecho_correto": "+2%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "320e6f18865452fb0232c71faa2e1288eb10740c62a0145e69b27dbf7538d3ed"
+    },
+    {
+      "id": 1390,
+      "tema": "Carteiras: retorno histórico da carteira",
+      "nivel": 3,
+      "angulo": "Aporte no encerramento não é rentabilidade do patrimônio anterior",
+      "calculos": [
+        {
+          "expressao": "(0+(-20))/2",
+          "resultado": "-10",
+          "trecho_correto": "−10%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "6036c7e621da6941042eaab95792effe161f83faf9c3dfadd4ef218bad7584a9"
+    },
+    {
+      "id": 1391,
+      "tema": "Carteiras: retorno esperado e comparação",
+      "nivel": 0,
+      "angulo": "Retorno esperado é estimativa e não promessa",
+      "calculos": [],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "14dada9a6b34e1705329d37575872d19a784413a0d3c60be83c26c339fc0468a"
+    },
+    {
+      "id": 1392,
+      "tema": "Carteiras: retorno esperado e comparação",
+      "nivel": 0,
+      "angulo": "Calcular retorno esperado com pesos já fornecidos",
+      "calculos": [
+        {
+          "expressao": "(70*8+30*12)/100",
+          "resultado": "9.2",
+          "trecho_correto": "9,2%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "17b2c6780f69a499ffa64567514af0d63e934edd898b01e8f74d34ccdc849ed6"
+    },
+    {
+      "id": 1393,
+      "tema": "Carteiras: retorno esperado e comparação",
+      "nivel": 1,
+      "angulo": "Revisão de uma previsão altera apenas sua contribuição",
+      "calculos": [
+        {
+          "expressao": "(40*8+60*6)/100",
+          "resultado": "6.8",
+          "trecho_correto": "6,8%"
+        },
+        {
+          "expressao": "(40*11+60*6)/100",
+          "resultado": "8",
+          "trecho_correto": "8%"
+        },
+        {
+          "expressao": "(40*(11-8))/100",
+          "resultado": "1.2",
+          "trecho_correto": "1,2 p.p."
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "2b01f0049f6b2ffa7cd5e60ec3a87be65f875283a506263dd4ec9bfe03ec2372"
+    },
+    {
+      "id": 1394,
+      "tema": "Carteiras: retorno esperado e comparação",
+      "nivel": 1,
+      "angulo": "Comparar carteiras em vez da maior taxa isolada",
+      "calculos": [
+        {
+          "expressao": "(25*14+75*6)/100",
+          "resultado": "8",
+          "trecho_correto": "8%"
+        },
+        {
+          "expressao": "(75*10+25*4)/100",
+          "resultado": "8.5",
+          "trecho_correto": "8,5%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "3b61e8cd98bfba278b25f1fb1a78e19cd39ce27c306f5f159d11c3f12700bf0d"
+    },
+    {
+      "id": 1395,
+      "tema": "Carteiras: retorno esperado e comparação",
+      "nivel": 1,
+      "angulo": "Separar colunas históricas e projetadas na ponderação",
+      "calculos": [
+        {
+          "expressao": "(35*4+65*8)/100",
+          "resultado": "6.6",
+          "trecho_correto": "6,6%"
+        },
+        {
+          "expressao": "(35*10+65*6)/100",
+          "resultado": "7.4",
+          "trecho_correto": "7,4%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "54a5b36b145491532d419757f1728d5a9827b966d836a9a7cbdf93fd434ee97c"
+    },
+    {
+      "id": 1396,
+      "tema": "Carteiras: retorno esperado e comparação",
+      "nivel": 1,
+      "angulo": "Estimativa negativa não é impossibilidade matemática nem perda certa",
+      "calculos": [
+        {
+          "expressao": "(60*(-5)+40*2)/100",
+          "resultado": "-2.2",
+          "trecho_correto": "−2,2%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "dd69b4484a0e55a880d0e1043cad865c6a0f0da9bec9218b3c23078309514de3"
+    },
+    {
+      "id": 1397,
+      "tema": "Carteiras: retorno esperado e comparação",
+      "nivel": 2,
+      "angulo": "Determinar mistura que atende a uma meta projetada",
+      "calculos": [
+        {
+          "expressao": "(10-8)/(13-8)*100",
+          "resultado": "40",
+          "trecho_correto": "40%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "4cdd86d06e2fea596259e5d579b9011612f573e56937df8be481e042b3bd70f9"
+    },
+    {
+      "id": 1398,
+      "tema": "Carteiras: retorno esperado e comparação",
+      "nivel": 2,
+      "angulo": "Intervalo de previsão de um componente e limites da média",
+      "calculos": [
+        {
+          "expressao": "(30*10+40*4+30*6)/100",
+          "resultado": "6.4",
+          "trecho_correto": "6,4%"
+        },
+        {
+          "expressao": "(30*10+40*8+30*6)/100",
+          "resultado": "8",
+          "trecho_correto": "8%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "1ed32622cd0237e798e114bda3b2a12baab4ad72c997086eb79fde13058c1abe"
+    },
+    {
+      "id": 1399,
+      "tema": "Carteiras: retorno esperado e comparação",
+      "nivel": 3,
+      "angulo": "Ranking de previsão não substitui adequação de risco e liquidez",
+      "calculos": [
+        {
+          "expressao": "(70*13+30*5)/100",
+          "resultado": "10.6",
+          "trecho_correto": "10,6%"
+        },
+        {
+          "expressao": "(40*14+60*7)/100",
+          "resultado": "9.8",
+          "trecho_correto": "9,8%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "ed54f4e8480cae600fac9e6e4238f50e6fb101e193fbf291ec531f8cb7ca19e4"
+    },
+    {
+      "id": 1400,
+      "tema": "Carteiras: retorno esperado e comparação",
+      "nivel": 3,
+      "angulo": "Decompor erro de previsão pelas contribuições dos ativos",
+      "calculos": [
+        {
+          "expressao": "25*((-4)-16)/100",
+          "resultado": "-5",
+          "trecho_correto": "−5 p.p."
+        },
+        {
+          "expressao": "75*(8-4)/100",
+          "resultado": "3",
+          "trecho_correto": "+3 p.p."
+        },
+        {
+          "expressao": "(25*(-4)+75*8)/100",
+          "resultado": "5",
+          "trecho_correto": "5%"
+        }
+      ],
+      "fontes": [
+        "Transcrição 26 e 27",
+        "PDF: páginas 3–4"
+      ],
+      "sha256": "c3eda4a4460e8c02a3bde9801886c0a23b902c357f347ca1e6c2b98a10a00d4d"
+    }
+  ],
+  "bate_pronto": [
+    {
+      "id": 100676,
+      "angulo": "Peso ligado a valor financeiro",
+      "referencia_Q": 1354,
+      "sha256": "2287870bb5e8c2a82837520a19c73655a6b2a48b025f367653ce4ed3086dc974"
+    },
+    {
+      "id": 100677,
+      "angulo": "Divisor da média ponderada",
+      "referencia_Q": 1353,
+      "sha256": "c85ff9259b4a3ee787a105dc89284d2f03ad44941233d750af564d083cb0fcc8"
+    },
+    {
+      "id": 100678,
+      "angulo": "Carteira completa e unidade",
+      "referencia_Q": 1355,
+      "sha256": "8516fa22195d246b0e98ab9249c4bd00f71eb1ddad588e065600e6b7ee56e3e0"
+    },
+    {
+      "id": 100679,
+      "angulo": "Condição de equivalência",
+      "referencia_Q": 1356,
+      "sha256": "851851a159fd175ebe3aea28256f3ec40b3d9c96d40ec37d74ca719a821e6c21"
+    },
+    {
+      "id": 100680,
+      "angulo": "Base de um subconjunto",
+      "referencia_Q": 1357,
+      "sha256": "15b80f7c277fa3adb205cd589fdbdfe4599ba2dbdafee5cdd0b397cc29e87c7c"
+    },
+    {
+      "id": 100681,
+      "angulo": "Média e contrato",
+      "referencia_Q": 1362,
+      "sha256": "b2d9d4f9ade649941f156e61ad8626aac001ce14995df32d63e6cb42976f6ff1"
+    },
+    {
+      "id": 100682,
+      "angulo": "Unidade dos prazos",
+      "referencia_Q": 1364,
+      "sha256": "591f1a94dfc0a61335d558023d7787fa4b569a24eb63d9ce16e99df4156e907c"
+    },
+    {
+      "id": 100683,
+      "angulo": "Alocação temporal",
+      "referencia_Q": 1366,
+      "sha256": "c23d8f702e4ebc570e6b7157c4d9a8ef9934ad382da2fae6ac1c07b98507b174"
+    },
+    {
+      "id": 100684,
+      "angulo": "Calendário e necessidade",
+      "referencia_Q": 1369,
+      "sha256": "fddec912382f518347de4759cce45761abc3ea207bea7cd8993f4569bf715f40"
+    },
+    {
+      "id": 100685,
+      "angulo": "Tempo restante",
+      "referencia_Q": 1368,
+      "sha256": "2f9097d329e736f5590d95c79c339c0c6203cd93604a83406359ff9844479240"
+    },
+    {
+      "id": 100686,
+      "angulo": "Denominador do retorno",
+      "referencia_Q": 1375,
+      "sha256": "01e34124aa2d5147519a0e3e56d22660c534cea12b282dbda8ecd6585b66895b"
+    },
+    {
+      "id": 100687,
+      "angulo": "Sinal da variação",
+      "referencia_Q": 1372,
+      "sha256": "eccfe7af3548984e234f8de5f37ca729e19cc4301f84de38ba04b430369cd2d3"
+    },
+    {
+      "id": 100688,
+      "angulo": "Montante e taxa",
+      "referencia_Q": 1376,
+      "sha256": "89f7ebffda7b4a7ddd34758c6cdd7b7662cd828c31b1f549d3e990cf1b6ce7fc"
+    },
+    {
+      "id": 100689,
+      "angulo": "Representações da taxa",
+      "referencia_Q": 1378,
+      "sha256": "61d0bd5e9da710f5556f0e2b47767b24204c43d4da0a3613244ebec24f24e90f"
+    },
+    {
+      "id": 100690,
+      "angulo": "Escopo de cotação",
+      "referencia_Q": 1380,
+      "sha256": "48fac6c6d30fec12b966898ebb32bc712e57fb388e34f0707b633f7312300c3f"
+    },
+    {
+      "id": 100691,
+      "angulo": "Taxa e participação",
+      "referencia_Q": 1387,
+      "sha256": "bcac13535bfcc733bcb4488e97ab646d79c3cfbf529bcafb7622e1fb833c6f40"
+    },
+    {
+      "id": 100692,
+      "angulo": "Compensação de resultados",
+      "referencia_Q": 1383,
+      "sha256": "74cd4ee991605a55c83a846e88f5f5f1877419e874bda1a9ff08fd734e6a6a8f"
+    },
+    {
+      "id": 100693,
+      "angulo": "Exposição da base inicial",
+      "referencia_Q": 1388,
+      "sha256": "76bd092b98f208688a4e9e788710961c6bce87b07f54092c57c989d52fffe900"
+    },
+    {
+      "id": 100694,
+      "angulo": "Saldo e aporte",
+      "referencia_Q": 1390,
+      "sha256": "0eaaf9479ff6cee486846224e73eac777fcc6ce0da884363ba721009ffee7ecf"
+    },
+    {
+      "id": 100695,
+      "angulo": "Caixa na base total",
+      "referencia_Q": 1386,
+      "sha256": "58698947e9c99ba0993dffdeb5fabf2602fdff4c5aadd8e2904bf2ed0c64393c"
+    },
+    {
+      "id": 100696,
+      "angulo": "Natureza da expectativa",
+      "referencia_Q": 1391,
+      "sha256": "b6dc2e380007869021c3c3744ff4a126fc63ba8247e963825777c288e856d8f2"
+    },
+    {
+      "id": 100697,
+      "angulo": "Condições da escolha",
+      "referencia_Q": 1399,
+      "sha256": "3a7f6ca98aa9536c6c28cc8cfcb20dc023a50fb9f58185530f3c0c6ca16b138e"
+    },
+    {
+      "id": 100698,
+      "angulo": "Horizonte das previsões",
+      "referencia_Q": 1395,
+      "sha256": "a93f7fb8f2dd84c03fefc650cfa9e8748a831f406d498ce186d24efcc98c9f36"
+    },
+    {
+      "id": 100699,
+      "angulo": "Diferença entre taxas",
+      "referencia_Q": 1393,
+      "sha256": "c7b2839c6250a032c30ed2544ef64d7db698b5e2d71016ed2c402d39aacd9f73"
+    },
+    {
+      "id": 100700,
+      "angulo": "Erro de previsão ponderado",
+      "referencia_Q": 1400,
+      "sha256": "5a8d8db02ed80cc9829e3544969b8a55aaaa173f96a152d0a5fdc98c6325fd66"
+    }
+  ],
+  "flashcards": [
+    {
+      "indice": 0,
+      "nivel": 0,
+      "sha256": "94eba45a804e8266492bb9f57be0aadf552294bcba2dc79011c29746091a618f"
+    },
+    {
+      "indice": 1,
+      "nivel": 0,
+      "sha256": "d665253d6f359176f76f91563313cf3ff7f351af1dface65526597c05557a8de"
+    },
+    {
+      "indice": 2,
+      "nivel": 1,
+      "sha256": "a16f59560984cdc61b1d1f7a2f7016e1a85df266750d887fe4d933ab29157235"
+    },
+    {
+      "indice": 3,
+      "nivel": 1,
+      "sha256": "bc912b7f8c1018eec322abf9211b25cca93cfa2c8e397273884ac13593188d1c"
+    },
+    {
+      "indice": 4,
+      "nivel": 2,
+      "sha256": "095615d40f8b0d4d4b142af1d169be768c7ddec0282ffc383769ceec3f35551a"
+    },
+    {
+      "indice": 5,
+      "nivel": 0,
+      "sha256": "20c19851d021d67c24971bee9177e8de31c49b1485525a9c6ded73f9705e7c3b"
+    },
+    {
+      "indice": 6,
+      "nivel": 1,
+      "sha256": "517c5865b13e86c6f86a1093efee79674dd0230a9786c3ea6bf6bed8f0db4d4e"
+    },
+    {
+      "indice": 7,
+      "nivel": 1,
+      "sha256": "36d9f0a28f360f1fdb2ab56b161920cbb36b00a7fa9aa95bb458344f01719282"
+    },
+    {
+      "indice": 8,
+      "nivel": 2,
+      "sha256": "7dac7d3ef741119bb27d0c84f8f02b899173cdca246892af8ddbb93d7ff06ed8"
+    },
+    {
+      "indice": 9,
+      "nivel": 2,
+      "sha256": "75fdb2a838d5fab8c14738454112067203145a987ce60374a758c1a7dc174377"
+    },
+    {
+      "indice": 10,
+      "nivel": 0,
+      "sha256": "e3c729c528751cfae437651f8cf8982e841d413cee1625ed2200215c74196bf1"
+    },
+    {
+      "indice": 11,
+      "nivel": 0,
+      "sha256": "d775dfac470f3921c59c2209ca0f821a08e6a8f0baaa66c98c060b3f8d46c189"
+    },
+    {
+      "indice": 12,
+      "nivel": 1,
+      "sha256": "208893e0387a370dd28ebea8d7237006b6eb850e7613c2b230d397da90db91f4"
+    },
+    {
+      "indice": 13,
+      "nivel": 2,
+      "sha256": "e7611fa14654b38ff593e54be0ed19635def65775e6abcd07a11646c68d54213"
+    },
+    {
+      "indice": 14,
+      "nivel": 2,
+      "sha256": "023db3e4a68692d3462ff28846d3fadb17326b331cd46b21733596c19cc712cf"
+    },
+    {
+      "indice": 15,
+      "nivel": 0,
+      "sha256": "42787a3c2943f2f79cd85164b1a0b50a9920724f08c5eb706963f7e3223969b6"
+    },
+    {
+      "indice": 16,
+      "nivel": 1,
+      "sha256": "66bec11ce2e38d504ce9343c08a9ccab4dcce6b637a2048914598f4211ee669a"
+    },
+    {
+      "indice": 17,
+      "nivel": 1,
+      "sha256": "51e6175186d987d9f6a232d4a44c5ce625f5797d116fdd36230669872fdf112a"
+    },
+    {
+      "indice": 18,
+      "nivel": 2,
+      "sha256": "3c78f0e99026a6ec02cc8257884894470a2d1b7be19669beb2922e6ffc1902ec"
+    },
+    {
+      "indice": 19,
+      "nivel": 2,
+      "sha256": "ad7a2a970ca859075489150083b278059abc8c8a3c7eb0872b163d3092b0d3fa"
+    },
+    {
+      "indice": 20,
+      "nivel": 0,
+      "sha256": "d84eac1f5a053802cf286a2e90d851b00d9b377f89e5c07b0c08633f3a308784"
+    },
+    {
+      "indice": 21,
+      "nivel": 0,
+      "sha256": "7779b8a621531a9fcdb2d8ffc5dd162b00918bc40265d2244b9c159607d7e3b2"
+    },
+    {
+      "indice": 22,
+      "nivel": 1,
+      "sha256": "6905438f84e7454d1fcf2c1575a292f20913ba1a9ea9fa4c5eb8fb651100aa88"
+    },
+    {
+      "indice": 23,
+      "nivel": 2,
+      "sha256": "81a60fc880332b984a9e7cda799677177d11db5c08cc16fa2f2977fb87515ea0"
+    },
+    {
+      "indice": 24,
+      "nivel": 2,
+      "sha256": "ea38ea4d189f674555cb7c8f48eaa932532fc4e7422738f1d6bc1366abeadd66"
+    }
+  ],
+  "ressalvas": [
+    "Prazo médio não é data única de recebimento integral.",
+    "Retorno de preço exige delimitar outros fluxos.",
+    "Pesos históricos usam a base inicial no modelo de posições mantidas sem fluxos externos.",
+    "Retornos esperados não são garantias nem comprovam adequação.",
+    "No slide 4 o rótulo RHC sob retorno esperado é erro de identificação; a fórmula é de retorno esperado.",
+    "Na transcrição, 0,8 na multiplicação do retorno de 8% é lapso: o correto é 0,08, confirmado pelo slide.",
+    "R$ 10.000, e não a leitura truncada de R$ 1.000, é a base do exemplo de prazo do slide 2."
+  ],
+  "validacao": [
+    {
+      "suite": "validate_bank; audit_alternatives --check; test_alternative_quality; test_question_design",
+      "resultado": "aprovados; 64 cálculos exatos conferidos no manifesto"
+    },
+    {
+      "suite": "test_aula13_carteiras + estudo ativo/escopo/desenho",
+      "testes": 35,
+      "resultado": "aprovados; conversão de unidades verificada separadamente com IDs 1364/1365"
+    },
+    {
+      "suite": "test_aula13; test_aula13_credito; test_aula13_fluxos; test_aula13_carteiras",
+      "testes": 39,
+      "resultado": "aprovados; versão com a nova aula e quadro geral integrado"
+    },
+    {
+      "suite": "test_aula10; test_aula11; test_aula12",
+      "resultado": "aulas 10 e 11 aprovadas na execução conjunta; aula 12 aprovada em 11 testes após adaptar a comparação histórica dos cartões autorizados"
+    },
+    {
+      "suite": "test_visual_mental_maps",
+      "testes": 7,
+      "resultado": "aprovados; 29 imagens e preservação dos 28 mapas anteriores"
+    },
+    {
+      "suite": "feedback; estudo ativo; Bate-pronto; siglas; Consulta; busca; navegação; guia; smoke",
+      "testes": 193,
+      "resultado": "aprovados"
+    },
+    {
+      "suite": "revisão editorial/visual",
+      "resultado": "50 questões e quatro alternativas/feedbacks revisados; fontes cruzadas; imagem e materiais conferidos nos temas claro/escuro e larguras 390/1280/1920"
+    }
+  ],
+  "mapa_visual": {
+    "catalogo": {
+      "id": "aula-13-4",
+      "lesson": 13,
+      "block": 4,
+      "title": "Prazos e Retornos de Carteiras",
+      "branches": [
+        [
+          "Médias e pesos",
+          [
+            "Simples: soma dos valores ÷ quantidade",
+            "Ponderada: Σ(valor × peso) ÷ Σpesos",
+            "Peso financeiro: valor da posição ÷ valor total"
+          ]
+        ],
+        [
+          "Prazo médio",
+          [
+            "PM = Σ(prazo × valor) ÷ Σvalores",
+            "Uniformize as unidades dos prazos",
+            "A média não muda os vencimentos contratuais"
+          ]
+        ],
+        [
+          "Retorno histórico",
+          [
+            "Ativo: (preço final − inicial) ÷ inicial × 100",
+            "Carteira: Σ(peso inicial × retorno observado)",
+            "Mesmo período; modelo sem fluxos externos"
+          ]
+        ],
+        [
+          "Retorno esperado",
+          [
+            "Carteira: Σ(peso × retorno esperado)",
+            "Projeção não é garantia",
+            "Compare também risco, liquidez e horizonte"
+          ]
+        ]
+      ],
+      "note": "Pesos da carteira completa somam 100%. Exemplos numéricos ilustram fórmulas; não são regras para decorar.",
+      "src": "assets/mental-maps/aula-13-4.webp",
+      "sourceTitle": "Prazos e Retornos de Carteiras",
+      "sourceSha256": "23d93159098332ffc9aeb7bf339c1491f0517b1127272e4dc5c7e516f9b75deb",
+      "conceptBindings": [
+        [
+          "Médias e pesos"
+        ],
+        [
+          "Prazo médio e vencimento"
+        ],
+        [
+          "Retorno histórico do ativo",
+          "Retorno histórico da carteira"
+        ],
+        [
+          "Retorno esperado e comparação"
+        ]
+      ]
+    },
+    "arquivo_sha256": "72b0fbc136c87e12f33ce60d870592dbbdd52dd5dba3cb1c4b38f03fda124f7c",
+    "dimensoes": [
+      1536,
+      1024
+    ],
+    "revisao_visual": "Texto, fórmulas e relações conferidos na imagem gerada."
+  }
+}

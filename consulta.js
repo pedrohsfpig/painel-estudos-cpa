@@ -66,7 +66,7 @@ window.Consulta=(()=>{
    const key=words(row.name).join(' '),candidates=entities.filter(e=>e.sequences.some(seq=>seq.join(' ')===key));
    const hint=fold([row.kind,row.form,...searchStrings(row.base)].join(' '));
    const match=candidates.filter(e=>fold(e.name)===fold(row.kind)||hint.includes(fold(e.name)));
-   return match.length===1?match[0]:entity(row.name,[row.short,...(row.short||'').split(/\s*·\s*/)].filter(Boolean));
+   return match.length===1?match[0]:entity(row.name,[row.short,...(row.aliases||[]),...(row.short||'').split(/\s*·\s*/)].filter(Boolean));
   }
   Object.values(LESSON_OVERVIEWS).forEach(overview=>overview.rows.forEach(overviewEntity));
   // Apelidos de operadores vêm dos títulos cadastrados, não acrescentam fatos.
@@ -194,7 +194,7 @@ window.Consulta=(()=>{
    evidence:/substitu|mudanca de referencia|antes de \d{4}|desde .*\d{4}|instituiu|criad|originou|originando|integracao|se unem|adota/,
    ignore:'era eram foi foram usava usavam usada usado usados usadas utilizava utilizado utilizada entrou lugar veio depois antes antigamente anterior anteriormente antecedeu antecedia passou valer taxa referencia nova novo antiga antigo agora ainda acontece aconteceu mudou mudanca substituiu substituida substituido substitui substituicao sucedeu sucedida sucedido precedia precedeu data ano anos inicio iniciou comecou criada criado criacao historico evolucao so nome renomeacao apenas simples'},
   {id:'calculation',query:/calcul|como .*obt|como .*form|deriv|a partir de que|qual .*base|de onde vem/,
-   evidence:/calcul|a partir|redutor|formula|composicao|combin|parcela|obtida|apurad|baseada|baseado/,
+   evidence:/calcul|a partir|redutor|formula|composicao|combin|parcela|obtida|apurad|baseada|baseado|soma.*(?:peso|divid)|media.*ponder|dividid|multiplic/,
    ignore:'calculada calculado calcular calcula calculo obtida obtido formada formado forma deriva derivada derivado partir vem base'},
   {id:'cause',query:/por que|porque|motivo|consequencia|efeito|impacto|influenc|o que acontece|o que ocorre/,
    evidence:/porque|pois |devido|em razao|por isso|depende|dependem|pode |podem |permite|permitem|reduz|eleva|aumenta|afeta|pression|restring|incentiv|decorre|evita|condicion/,

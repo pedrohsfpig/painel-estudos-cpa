@@ -1,0 +1,584 @@
+{
+  "data": "2026-10-30",
+  "criterio": "Somente fatos, regras e relações gerais do conteúdo; valores de exemplos permanecem nas explicações, não em Números para decorar.",
+  "aulas_verificadas": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "alteracoes": [
+    {
+      "aula": 1,
+      "antes": [
+        [
+          "6",
+          "mercados do SFN"
+        ],
+        [
+          "3",
+          "tipos de entidade: normativa, supervisora e operacional"
+        ],
+        [
+          "3",
+          "segmentos no quadro do SFN"
+        ],
+        [
+          "2",
+          "tipos de regulação"
+        ],
+        [
+          "1933",
+          "Decreto da Lei da Usura (22.626)"
+        ],
+        [
+          "12% a.a.",
+          "teto da Lei da Usura (as instituições financeiras são exceção)"
+        ],
+        [
+          "80%",
+          "aproveitamento recomendado nos simulados"
+        ]
+      ],
+      "depois": [
+        [
+          "6",
+          "mercados do SFN"
+        ],
+        [
+          "3",
+          "tipos de entidade: normativa, supervisora e operacional"
+        ],
+        [
+          "3",
+          "segmentos no quadro do SFN"
+        ],
+        [
+          "2",
+          "tipos de regulação"
+        ],
+        [
+          "1933",
+          "Decreto da Lei da Usura (22.626)"
+        ],
+        [
+          "12% a.a.",
+          "teto da Lei da Usura (as instituições financeiras são exceção)"
+        ]
+      ],
+      "removidos": [
+        {
+          "item": [
+            "80%",
+            "aproveitamento recomendado nos simulados"
+          ],
+          "motivo": "Resultado ou dado de exemplo, recomendação de treino ou contagem editorial; não fato numérico geral do conteúdo"
+        }
+      ],
+      "blocos_antes": {},
+      "blocos_depois": {}
+    },
+    {
+      "aula": 10,
+      "antes": [
+        [
+          "4",
+          "segmentos: monetário, crédito, capitais e câmbio"
+        ],
+        [
+          "2",
+          "ambientes de capitais: primário e secundário"
+        ],
+        [
+          "2017",
+          "integração da Cetip à B3"
+        ],
+        [
+          "D+2",
+          "referência para ações descritas; não é prazo universal"
+        ],
+        [
+          "2",
+          "pernas vinculadas no DVP: ativo e fundos"
+        ],
+        [
+          "Trimestral",
+          "reunião ordinária do Comef e decisão do ACCP"
+        ],
+        [
+          "45 dias úteis",
+          "prazo máximo da LLI"
+        ],
+        [
+          "1 ano",
+          "prazo máximo da LLT"
+        ],
+        [
+          "10%",
+          "hipótese didática do exemplo; não alíquota normativa"
+        ]
+      ],
+      "depois": [
+        [
+          "4",
+          "segmentos: monetário, crédito, capitais e câmbio"
+        ],
+        [
+          "2",
+          "ambientes de capitais: primário e secundário"
+        ],
+        [
+          "2017",
+          "integração da Cetip à B3"
+        ],
+        [
+          "D+2",
+          "referência para ações descritas; não é prazo universal"
+        ],
+        [
+          "2",
+          "pernas vinculadas no DVP: ativo e fundos"
+        ],
+        [
+          "Trimestral",
+          "reunião ordinária do Comef e decisão do ACCP"
+        ],
+        [
+          "45 dias úteis",
+          "prazo máximo da LLI"
+        ],
+        [
+          "1 ano",
+          "prazo máximo da LLT"
+        ]
+      ],
+      "removidos": [
+        {
+          "item": [
+            "10%",
+            "hipótese didática do exemplo; não alíquota normativa"
+          ],
+          "motivo": "Resultado ou dado de exemplo, recomendação de treino ou contagem editorial; não fato numérico geral do conteúdo"
+        }
+      ],
+      "blocos_antes": {
+        "1": [
+          [
+            "4",
+            "segmentos: monetário, crédito, capitais e câmbio"
+          ],
+          [
+            "2",
+            "ambientes de capitais: primário e secundário"
+          ]
+        ],
+        "2": [
+          [
+            "2017",
+            "integração da Cetip à B3"
+          ],
+          [
+            "D+2",
+            "referência para ações descritas; não é prazo universal"
+          ],
+          [
+            "2",
+            "pernas vinculadas no DVP: ativo e fundos"
+          ]
+        ],
+        "3": [
+          [
+            "Trimestral",
+            "reunião ordinária do Comef e decisão do ACCP"
+          ],
+          [
+            "45 dias úteis",
+            "prazo máximo da LLI"
+          ],
+          [
+            "1 ano",
+            "prazo máximo da LLT"
+          ],
+          [
+            "10%",
+            "hipótese didática do exemplo; não alíquota normativa"
+          ]
+        ]
+      },
+      "blocos_depois": {
+        "1": [
+          [
+            "4",
+            "segmentos: monetário, crédito, capitais e câmbio"
+          ],
+          [
+            "2",
+            "ambientes de capitais: primário e secundário"
+          ]
+        ],
+        "2": [
+          [
+            "2017",
+            "integração da Cetip à B3"
+          ],
+          [
+            "D+2",
+            "referência para ações descritas; não é prazo universal"
+          ],
+          [
+            "2",
+            "pernas vinculadas no DVP: ativo e fundos"
+          ]
+        ],
+        "3": [
+          [
+            "Trimestral",
+            "reunião ordinária do Comef e decisão do ACCP"
+          ],
+          [
+            "45 dias úteis",
+            "prazo máximo da LLI"
+          ],
+          [
+            "1 ano",
+            "prazo máximo da LLT"
+          ]
+        ]
+      }
+    },
+    {
+      "aula": 12,
+      "antes": [
+        [
+          "2 dias úteis",
+          "Limite da janela de liquidação pronta, contado da contratação"
+        ],
+        [
+          "9,28%",
+          "Cupom aproximado no exemplo 13,65% em reais com dólar de R$ 5 para R$ 5,20; não é taxa fixa"
+        ],
+        [
+          "7 p.p.",
+          "Diferencial ilustrativo entre 10% internos e 3% externos; não lucro realizado"
+        ],
+        [
+          "−1,29%",
+          "Variação real do exemplo com cotação 5→6 e preços 50→51 e 250→310"
+        ]
+      ],
+      "depois": [
+        [
+          "2 dias úteis",
+          "Limite da janela de liquidação pronta, contado da contratação"
+        ]
+      ],
+      "removidos": [
+        {
+          "item": [
+            "9,28%",
+            "Cupom aproximado no exemplo 13,65% em reais com dólar de R$ 5 para R$ 5,20; não é taxa fixa"
+          ],
+          "motivo": "Resultado ou dado de exemplo, recomendação de treino ou contagem editorial; não fato numérico geral do conteúdo"
+        },
+        {
+          "item": [
+            "7 p.p.",
+            "Diferencial ilustrativo entre 10% internos e 3% externos; não lucro realizado"
+          ],
+          "motivo": "Resultado ou dado de exemplo, recomendação de treino ou contagem editorial; não fato numérico geral do conteúdo"
+        },
+        {
+          "item": [
+            "−1,29%",
+            "Variação real do exemplo com cotação 5→6 e preços 50→51 e 250→310"
+          ],
+          "motivo": "Resultado ou dado de exemplo, recomendação de treino ou contagem editorial; não fato numérico geral do conteúdo"
+        }
+      ],
+      "blocos_antes": {
+        "1": [
+          [
+            "2 dias úteis",
+            "Limite da janela de liquidação pronta, contado da contratação"
+          ]
+        ],
+        "2": [
+          [
+            "9,28%",
+            "Cupom aproximado no exemplo 13,65% em reais com dólar de R$ 5 para R$ 5,20; não é taxa fixa"
+          ]
+        ],
+        "3": [
+          [
+            "7 p.p.",
+            "Diferencial ilustrativo entre 10% internos e 3% externos; não lucro realizado"
+          ],
+          [
+            "−1,29%",
+            "Variação real do exemplo com cotação 5→6 e preços 50→51 e 250→310"
+          ]
+        ]
+      },
+      "blocos_depois": {
+        "1": [
+          [
+            "2 dias úteis",
+            "Limite da janela de liquidação pronta, contado da contratação"
+          ]
+        ],
+        "2": [],
+        "3": []
+      }
+    },
+    {
+      "aula": 13,
+      "antes": [
+        [
+          "2",
+          "óticas da liquidez: financiamento e mercado"
+        ],
+        [
+          "4 p.p.",
+          "spread de crédito: exemplo: 14% ao ano menos referência de 10% ao ano"
+        ],
+        [
+          "R$ 160 mil",
+          "risco de mercado: queda de 8% sobre R$ 2 milhões"
+        ],
+        [
+          "2 semestres",
+          "juros compostos: capitalização de 6% por semestre até o mês 12"
+        ],
+        [
+          "R$ 1.123,60",
+          "fluxo prefixado: único pagamento final do exemplo"
+        ],
+        [
+          "1 semestre",
+          "desconto do fluxo: prazo restante na avaliação do mês 6"
+        ],
+        [
+          "R$ 19,63",
+          "marcação a mercado: redução de 1.060 para 1.040,37"
+        ],
+        [
+          "R$ 20,38",
+          "marcação a mercado: aumento de 1.060 para 1.080,38, arredondado"
+        ],
+        [
+          "3 eixos",
+          "remuneração, capitalização e amortização: classificações independentes"
+        ],
+        [
+          "1 período",
+          "simples e composto coincidem com mesmo capital e taxa, sem fluxos intermediários"
+        ],
+        [
+          "n",
+          "número de períodos compatível com a taxa i"
+        ],
+        [
+          "t = 0",
+          "data-base: o investimento inicial entra uma única vez"
+        ],
+        [
+          "VPL = 0",
+          "equivalência ao critério usado, não ausência de juros"
+        ]
+      ],
+      "depois": [
+        [
+          "2",
+          "óticas da liquidez: financiamento e mercado"
+        ],
+        [
+          "1 período",
+          "simples e composto coincidem com mesmo capital e taxa, sem fluxos intermediários"
+        ],
+        [
+          "n",
+          "número de períodos compatível com a taxa i"
+        ],
+        [
+          "t = 0",
+          "data-base: o investimento inicial entra uma única vez"
+        ],
+        [
+          "VPL = 0",
+          "equivalência ao critério usado, não ausência de juros"
+        ]
+      ],
+      "removidos": [
+        {
+          "item": [
+            "4 p.p.",
+            "spread de crédito: exemplo: 14% ao ano menos referência de 10% ao ano"
+          ],
+          "motivo": "Resultado ou dado de exemplo, recomendação de treino ou contagem editorial; não fato numérico geral do conteúdo"
+        },
+        {
+          "item": [
+            "R$ 160 mil",
+            "risco de mercado: queda de 8% sobre R$ 2 milhões"
+          ],
+          "motivo": "Resultado ou dado de exemplo, recomendação de treino ou contagem editorial; não fato numérico geral do conteúdo"
+        },
+        {
+          "item": [
+            "2 semestres",
+            "juros compostos: capitalização de 6% por semestre até o mês 12"
+          ],
+          "motivo": "Resultado ou dado de exemplo, recomendação de treino ou contagem editorial; não fato numérico geral do conteúdo"
+        },
+        {
+          "item": [
+            "R$ 1.123,60",
+            "fluxo prefixado: único pagamento final do exemplo"
+          ],
+          "motivo": "Resultado ou dado de exemplo, recomendação de treino ou contagem editorial; não fato numérico geral do conteúdo"
+        },
+        {
+          "item": [
+            "1 semestre",
+            "desconto do fluxo: prazo restante na avaliação do mês 6"
+          ],
+          "motivo": "Resultado ou dado de exemplo, recomendação de treino ou contagem editorial; não fato numérico geral do conteúdo"
+        },
+        {
+          "item": [
+            "R$ 19,63",
+            "marcação a mercado: redução de 1.060 para 1.040,37"
+          ],
+          "motivo": "Resultado ou dado de exemplo, recomendação de treino ou contagem editorial; não fato numérico geral do conteúdo"
+        },
+        {
+          "item": [
+            "R$ 20,38",
+            "marcação a mercado: aumento de 1.060 para 1.080,38, arredondado"
+          ],
+          "motivo": "Resultado ou dado de exemplo, recomendação de treino ou contagem editorial; não fato numérico geral do conteúdo"
+        },
+        {
+          "item": [
+            "3 eixos",
+            "remuneração, capitalização e amortização: classificações independentes"
+          ],
+          "motivo": "Resultado ou dado de exemplo, recomendação de treino ou contagem editorial; não fato numérico geral do conteúdo"
+        }
+      ],
+      "blocos_antes": {
+        "1": [
+          [
+            "2",
+            "óticas da liquidez: financiamento e mercado"
+          ],
+          [
+            "4 p.p.",
+            "spread de crédito: exemplo: 14% ao ano menos referência de 10% ao ano"
+          ],
+          [
+            "R$ 160 mil",
+            "risco de mercado: queda de 8% sobre R$ 2 milhões"
+          ],
+          [
+            "2 semestres",
+            "juros compostos: capitalização de 6% por semestre até o mês 12"
+          ],
+          [
+            "R$ 1.123,60",
+            "fluxo prefixado: único pagamento final do exemplo"
+          ],
+          [
+            "1 semestre",
+            "desconto do fluxo: prazo restante na avaliação do mês 6"
+          ],
+          [
+            "R$ 19,63",
+            "marcação a mercado: redução de 1.060 para 1.040,37"
+          ],
+          [
+            "R$ 20,38",
+            "marcação a mercado: aumento de 1.060 para 1.080,38, arredondado"
+          ]
+        ],
+        "2": [
+          [
+            "3 eixos",
+            "remuneração, capitalização e amortização: classificações independentes"
+          ],
+          [
+            "1 período",
+            "simples e composto coincidem com mesmo capital e taxa, sem fluxos intermediários"
+          ]
+        ],
+        "3": [
+          [
+            "n",
+            "número de períodos compatível com a taxa i"
+          ],
+          [
+            "t = 0",
+            "data-base: o investimento inicial entra uma única vez"
+          ],
+          [
+            "VPL = 0",
+            "equivalência ao critério usado, não ausência de juros"
+          ]
+        ]
+      },
+      "blocos_depois": {
+        "1": [
+          [
+            "2",
+            "óticas da liquidez: financiamento e mercado"
+          ]
+        ],
+        "2": [
+          [
+            "1 período",
+            "simples e composto coincidem com mesmo capital e taxa, sem fluxos intermediários"
+          ]
+        ],
+        "3": [
+          [
+            "n",
+            "número de períodos compatível com a taxa i"
+          ],
+          [
+            "t = 0",
+            "data-base: o investimento inicial entra uma única vez"
+          ],
+          [
+            "VPL = 0",
+            "equivalência ao critério usado, não ausência de juros"
+          ]
+        ]
+      }
+    }
+  ],
+  "entradas_removidas": 13,
+  "aula13_nova_interna_n": [
+    [
+      "100% ou 1",
+      "soma dos pesos de uma carteira completa sem posições vendidas, conforme a representação"
+    ],
+    [
+      "12 meses",
+      "equivalência de um ano para uniformizar a unidade dos prazos"
+    ]
+  ],
+  "preservacao": {
+    "Q": "fcee4437ab1fffbd3ae039dee36d01b3efa13ced8d8c0c70d3713f0f929bab10",
+    "BP": "59261872481137ff7327e7e7ea93a516836fdf892928a5b54c55c1448612174d",
+    "MAT": "3f5f113546c489b25d4fb404d7523d9739f1d29cf9b332968589c22fb59fd385"
+  }
+}

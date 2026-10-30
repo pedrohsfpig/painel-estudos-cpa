@@ -4674,6 +4674,181 @@
       "tema": "Fluxos: cupons e retorno líquido",
       "fonte_Q": 1350,
       "modelo": "direto"
+    },
+    {
+      "id": 100676,
+      "aula": 13,
+      "tema": "Carteiras: médias e pesos",
+      "fonte_Q": 1354,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100677,
+      "aula": 13,
+      "tema": "Carteiras: médias e pesos",
+      "fonte_Q": 1353,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100678,
+      "aula": 13,
+      "tema": "Carteiras: médias e pesos",
+      "fonte_Q": 1355,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100679,
+      "aula": 13,
+      "tema": "Carteiras: médias e pesos",
+      "fonte_Q": 1356,
+      "modelo": "direto"
+    },
+    {
+      "id": 100680,
+      "aula": 13,
+      "tema": "Carteiras: médias e pesos",
+      "fonte_Q": 1357,
+      "modelo": "direto"
+    },
+    {
+      "id": 100681,
+      "aula": 13,
+      "tema": "Carteiras: prazo médio e vencimento",
+      "fonte_Q": 1362,
+      "modelo": "direto"
+    },
+    {
+      "id": 100682,
+      "aula": 13,
+      "tema": "Carteiras: prazo médio e vencimento",
+      "fonte_Q": 1364,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100683,
+      "aula": 13,
+      "tema": "Carteiras: prazo médio e vencimento",
+      "fonte_Q": 1366,
+      "modelo": "direto"
+    },
+    {
+      "id": 100684,
+      "aula": 13,
+      "tema": "Carteiras: prazo médio e vencimento",
+      "fonte_Q": 1369,
+      "modelo": "direto"
+    },
+    {
+      "id": 100685,
+      "aula": 13,
+      "tema": "Carteiras: prazo médio e vencimento",
+      "fonte_Q": 1368,
+      "modelo": "direto"
+    },
+    {
+      "id": 100686,
+      "aula": 13,
+      "tema": "Carteiras: retorno histórico do ativo",
+      "fonte_Q": 1375,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100687,
+      "aula": 13,
+      "tema": "Carteiras: retorno histórico do ativo",
+      "fonte_Q": 1372,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100688,
+      "aula": 13,
+      "tema": "Carteiras: retorno histórico do ativo",
+      "fonte_Q": 1376,
+      "modelo": "direto"
+    },
+    {
+      "id": 100689,
+      "aula": 13,
+      "tema": "Carteiras: retorno histórico do ativo",
+      "fonte_Q": 1378,
+      "modelo": "direto"
+    },
+    {
+      "id": 100690,
+      "aula": 13,
+      "tema": "Carteiras: retorno histórico do ativo",
+      "fonte_Q": 1380,
+      "modelo": "direto"
+    },
+    {
+      "id": 100691,
+      "aula": 13,
+      "tema": "Carteiras: retorno histórico da carteira",
+      "fonte_Q": 1387,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100692,
+      "aula": 13,
+      "tema": "Carteiras: retorno histórico da carteira",
+      "fonte_Q": 1383,
+      "modelo": "direto"
+    },
+    {
+      "id": 100693,
+      "aula": 13,
+      "tema": "Carteiras: retorno histórico da carteira",
+      "fonte_Q": 1388,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100694,
+      "aula": 13,
+      "tema": "Carteiras: retorno histórico da carteira",
+      "fonte_Q": 1390,
+      "modelo": "direto"
+    },
+    {
+      "id": 100695,
+      "aula": 13,
+      "tema": "Carteiras: retorno histórico da carteira",
+      "fonte_Q": 1386,
+      "modelo": "direto"
+    },
+    {
+      "id": 100696,
+      "aula": 13,
+      "tema": "Carteiras: retorno esperado e comparação",
+      "fonte_Q": 1391,
+      "modelo": "direto"
+    },
+    {
+      "id": 100697,
+      "aula": 13,
+      "tema": "Carteiras: retorno esperado e comparação",
+      "fonte_Q": 1399,
+      "modelo": "direto"
+    },
+    {
+      "id": 100698,
+      "aula": 13,
+      "tema": "Carteiras: retorno esperado e comparação",
+      "fonte_Q": 1395,
+      "modelo": "direto"
+    },
+    {
+      "id": 100699,
+      "aula": 13,
+      "tema": "Carteiras: retorno esperado e comparação",
+      "fonte_Q": 1393,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100700,
+      "aula": 13,
+      "tema": "Carteiras: retorno esperado e comparação",
+      "fonte_Q": 1400,
+      "modelo": "direto"
     }
   ],
   "escopo": "Banco conceitual próprio: 50 por aula regular e 25 por aula interna do bloco final. Fontes e validação específicas registradas nos relatórios de cada aula; sem certificação normativa independente."

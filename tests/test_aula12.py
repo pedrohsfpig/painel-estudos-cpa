@@ -6,6 +6,7 @@ import re
 import unittest
 from validate_bank import load_questions,validate_questions
 from question_revision import digest
+from numbers_revision import restore_before_numbers
 import smoke as harness
 ROOT=Path(__file__).resolve().parents[1]
 def content(marker):return json.JSONDecoder().raw_decode((ROOT/'index.html').read_text().split(marker,1)[1])[0]
@@ -23,9 +24,9 @@ class Aula12Content(unittest.TestCase):
   self.assertEqual([r['id'] for r in self.report['questoes']],list(range(1101,1201)))
   for r in self.report['questoes']:self.assertEqual(digest(self.all[r['id']-1]),r['hash']);self.assertTrue(r['slides'])
   for r in self.report['bate_pronto']:self.assertEqual(digest(self.bp[r['id']-100001]),r['hash'])
-  self.assertFalse(self.report['consulta_normativa']['certificacao_de_vigencia']);self.assertEqual(self.report['trilha_sha256'],digest(self.al[11]));self.assertEqual(self.report['materiais_sha256'],digest(self.mat))
+  self.assertFalse(self.report['consulta_normativa']['certificacao_de_vigencia']);self.assertEqual(self.report['trilha_sha256'],digest(restore_before_numbers(self.al)[11]));self.assertEqual(self.report['materiais_sha256'],digest(self.mat))
  def test_previous_banks_are_unchanged(self):
-  p=self.report['preservacao'];self.assertEqual(digest(self.all[:1100]),p['hash_primeiras_1100']);self.assertEqual(digest(self.bp[:550]),p['hash_primeiros_550_bp']);self.assertEqual(digest(self.al[:11]),p['hash_aulas_1_a_11'])
+  p=self.report['preservacao'];self.assertEqual(digest(self.all[:1100]),p['hash_primeiras_1100']);self.assertEqual(digest(self.bp[:550]),p['hash_primeiros_550_bp']);self.assertEqual(digest(restore_before_numbers(self.al)[:11]),p['hash_aulas_1_a_11'])
  def test_blocks_aggregate_and_materials_have_consistent_cells(self):
   for k in ['r','d','p','n']:self.assertEqual(self.al[11][k],sum((b[k] for b in self.al[11]['b']),[]))
   for k in ['dg','tb','tl','fc']:self.assertEqual(self.mat[k],sum((b[k] for b in self.mat['b']),[]))

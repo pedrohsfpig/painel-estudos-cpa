@@ -5,6 +5,7 @@ import json,re,unittest
 from pathlib import Path
 from validate_bank import load_questions
 from question_revision import digest
+from final_block import before_portfolio_lesson,unit_count
 import smoke as harness
 ROOT=Path(__file__).resolve().parents[1]
 def read(marker):return json.JSONDecoder().raw_decode((ROOT/'index.html').read_text().split(marker,1)[1])[0]
@@ -12,6 +13,7 @@ def read(marker):return json.JSONDecoder().raw_decode((ROOT/'index.html').read_t
 class Content(unittest.TestCase):
  def setUp(self):
   self.q=load_questions();self.bp=read('const BP=');self.al=read('const AL=');self.m=read('\n13:');self.r=json.loads((ROOT/'docs/aula-13-fluxos-cobertura.json').read_text())
+  self.q=self.q[:1350];self.bp=self.bp[:675];self.al,self.m=before_portfolio_lesson(self.al,self.m)
  def test_internal_half_volumes_stable_ids_and_source_order(self):
   self.assertEqual([u['id'] for u in self.al[12]['b']],[1,2,3])
   self.assertEqual([len(self.q),len(self.bp),len(self.al)],[1350,675,13])
@@ -65,8 +67,8 @@ class Browser(unittest.TestCase):
  def test_real_third_unit_and_complete_block_balance_in_every_mode(self):
   for mode,single,total in [('e',40,120),('s',40,120),('h',10,30),('b',25,75)]:
    self.page.evaluate("md=>{cfg={a:13,as:[],b:0,us:[],md,n:-1,m:'all',c:30};qz=null;view='q';go()}",mode)
-   self.assertEqual(self.page.evaluate('pool().length'),total)
-   self.assertEqual({g[0] for g in self.page.evaluate('sessionPlan().groups.map(g=>[g.unit,g.count])')},{1,2,3})
+   self.assertEqual(self.page.evaluate('pool().length'),single*unit_count())
+   self.assertEqual({g[0] for g in self.page.evaluate('sessionPlan().groups.map(g=>[g.unit,g.count])')},set(range(1,unit_count()+1)))
    self.page.locator('.practice-blocks [data-lesson-block="3"]').click()
    self.assertEqual(self.page.evaluate('cfg.us'),[3]);self.assertEqual(self.page.evaluate('pool().length'),single)
    ids=self.page.evaluate('mix(sessionPlan())');self.assertEqual(len(ids),min(30,single))
@@ -83,7 +85,7 @@ class Browser(unittest.TestCase):
   self.page.evaluate("mt.c='geral';go()")
   self.assertEqual(self.page.locator('#overview-scroll tbody tr').count(),6)
   self.assertTrue(self.page.locator('#overview-scroll tbody tr').evaluate_all('es=>es.every(e=>e.dataset.operatorBlock==="3")'))
-  self.page.evaluate('selectedLessonBlocks[13]=0;go()');self.assertEqual(self.page.locator('#overview-scroll tbody tr').count(),17)
+  self.page.evaluate('selectedLessonBlocks[13]=0;go()');self.assertEqual(self.page.locator('#overview-scroll tbody tr').count(),self.page.evaluate('LESSON_OVERVIEWS[13].rows.length'))
  def test_cash_diagram_signs_and_keyboard_scroll_and_both_themes(self):
   self.page.evaluate("selectedLessonBlocks[13]=3;view='m';mt={a:13,c:'diag'};go()")
   chart=self.page.locator('.payment-flow-scroll')

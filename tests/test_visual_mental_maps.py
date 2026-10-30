@@ -3,15 +3,16 @@ import hashlib,json,unittest
 from pathlib import Path
 from PIL import Image
 import smoke as harness
+from final_block import before_portfolio_lesson,unit_count
 ROOT=Path(__file__).resolve().parents[1]
 def digest(value):return hashlib.sha256(json.dumps(value,ensure_ascii=False,separators=(',',':')).encode()).hexdigest()
 def catalog():return json.JSONDecoder().raw_decode((ROOT/'mental-maps-data.js').read_text().split('window.MENTAL_MAPS=',1)[1])[0]
 
 class Content(unittest.TestCase):
  def test_every_received_lesson_and_unit_has_real_legible_assets(self):
-  maps=catalog();self.assertEqual(len(maps),28);self.assertEqual({m['lesson'] for m in maps},set(range(1,14)))
-  self.assertEqual(len({m['id'] for m in maps}),28)
-  self.assertEqual({m['block'] for m in maps if m['lesson']==13},{1,2,3})
+  maps=catalog();self.assertEqual(len(maps),25+unit_count());self.assertEqual({m['lesson'] for m in maps},set(range(1,14)))
+  self.assertEqual(len({m['id'] for m in maps}),25+unit_count())
+  self.assertEqual({m['block'] for m in maps if m['lesson']==13},set(range(1,unit_count()+1)))
   for m in maps:
    with self.subTest(m=m['id']):
     self.assertEqual(len(m['branches']),4);self.assertTrue(m['sourceSha256'])
@@ -26,14 +27,19 @@ class Browser(unittest.TestCase):
  setUp=harness.PainelCPA.setUp;tearDown=harness.PainelCPA.tearDown
  answer=harness.PainelCPA.answer;click=harness.PainelCPA.click
  def show(self,lesson=13,block=1):self.page.evaluate("([a,b])=>{view='m';mt={a,c:'visual'};selectedLessonBlocks[a]=b;go()}",[lesson,block])
+ def assert_historical_arrays(self,expected):
+  values=self.page.evaluate('({Q,BP,AL,MAT})')
+  values['Q']=values['Q'][:1350];values['BP']=values['BP'][:675]
+  values['AL'],values['MAT']['13']=before_portfolio_lesson(values['AL'],values['MAT']['13'])
+  for key,value in expected.items():self.assertEqual(digest(values[key]),value,key)
  def test_preserves_every_original_array_and_ramification_renderer(self):
   expected=json.loads((ROOT/'docs/mapas-mentais-visuais.json').read_text())['preservation']
-  for key,value in expected.items():self.assertEqual(digest(self.page.evaluate(key)),value,key)
+  self.assert_historical_arrays(expected)
   self.show(13,1)
   self.click('Ramificações');self.assertEqual(self.page.locator('.mind-root>span').inner_text(),'Riscos Financeiros')
   self.assertTrue(self.page.locator('.mind-branch').count()>0)
   self.click('Mapa mental');self.assertEqual(self.page.locator('[data-visual-map]').get_attribute('data-visual-map'),'aula-13-1')
-  for key,value in expected.items():self.assertEqual(digest(self.page.evaluate(key)),value,key)
+  self.assert_historical_arrays(expected)
  def test_all_sources_block_filters_images_and_transcripts(self):
   for m in catalog():
    self.show(m['lesson'],m['block'])

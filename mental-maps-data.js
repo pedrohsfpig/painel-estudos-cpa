@@ -1304,5 +1304,64 @@ window.MENTAL_MAPS=[
         "Cupons e retorno líquido"
       ]
     ]
+  },
+  {
+    "id": "aula-13-4",
+    "lesson": 13,
+    "block": 4,
+    "title": "Prazos e Retornos de Carteiras",
+    "branches": [
+      [
+        "Médias e pesos",
+        [
+          "Simples: soma dos valores ÷ quantidade",
+          "Ponderada: Σ(valor × peso) ÷ Σpesos",
+          "Peso financeiro: valor da posição ÷ valor total"
+        ]
+      ],
+      [
+        "Prazo médio",
+        [
+          "PM = Σ(prazo × valor) ÷ Σvalores",
+          "Uniformize as unidades dos prazos",
+          "A média não muda os vencimentos contratuais"
+        ]
+      ],
+      [
+        "Retorno histórico",
+        [
+          "Ativo: (preço final − inicial) ÷ inicial × 100",
+          "Carteira: Σ(peso inicial × retorno observado)",
+          "Mesmo período; modelo sem fluxos externos"
+        ]
+      ],
+      [
+        "Retorno esperado",
+        [
+          "Carteira: Σ(peso × retorno esperado)",
+          "Projeção não é garantia",
+          "Compare também risco, liquidez e horizonte"
+        ]
+      ]
+    ],
+    "note": "Pesos da carteira completa somam 100%. Exemplos numéricos ilustram fórmulas; não são regras para decorar.",
+    "src": "assets/mental-maps/aula-13-4.webp",
+    "sourceTitle": "Prazos e Retornos de Carteiras",
+    "sourceSha256": "23d93159098332ffc9aeb7bf339c1491f0517b1127272e4dc5c7e516f9b75deb",
+    "conceptBindings": [
+      [
+        "Médias e pesos"
+      ],
+      [
+        "Prazo médio e vencimento"
+      ],
+      [
+        "Retorno histórico do ativo",
+        "Retorno histórico da carteira"
+      ],
+      [
+        "Retorno esperado e comparação"
+      ]
+    ]
   }
 ];

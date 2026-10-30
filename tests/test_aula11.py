@@ -6,6 +6,7 @@ import re
 import unittest
 from validate_bank import load_questions,validate_questions
 from question_revision import digest
+from numbers_revision import restore_before_numbers
 import smoke as harness
 ROOT=Path(__file__).resolve().parents[1]
 def content(marker):return json.JSONDecoder().raw_decode((ROOT/'index.html').read_text().split(marker,1)[1])[0]
@@ -29,7 +30,7 @@ class Aula11Content(unittest.TestCase):
   self.assertFalse(self.report['consulta_normativa']['certificacao_de_vigencia'])
   self.assertEqual(self.report['trilha_sha256'],digest(self.al[10]));self.assertEqual(self.report['materiais_sha256'],digest(self.mat))
  def test_previous_ids_answers_feedbacks_and_reading_are_preserved(self):
-  p=self.report['preservacao'];self.assertEqual(digest(self.all[:1000]),p['hash_primeiras_1000']);self.assertEqual(digest(self.bp[:500]),p['hash_primeiros_500_bp']);self.assertEqual(digest(self.al[:10]),p['hash_aulas_1_a_10'])
+  p=self.report['preservacao'];self.assertEqual(digest(self.all[:1000]),p['hash_primeiras_1000']);self.assertEqual(digest(self.bp[:500]),p['hash_primeiros_500_bp']);self.assertEqual(digest(restore_before_numbers(self.al)[:10]),p['hash_aulas_1_a_10'])
  def test_materials_aggregate_all_blocks_and_preserve_table_cells(self):
   for k in ['r','d','p','n']:self.assertEqual(self.al[10][k],sum((b[k] for b in self.al[10]['b']),[]))
   for k in ['dg','tb','tl','fc']:self.assertEqual(self.mat[k],sum((b[k] for b in self.mat['b']),[]))

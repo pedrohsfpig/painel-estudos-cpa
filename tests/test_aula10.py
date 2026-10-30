@@ -6,6 +6,7 @@ import re
 import unittest
 from validate_bank import load_questions,validate_questions
 from question_revision import digest
+from numbers_revision import restore_before_numbers
 import smoke as harness
 ROOT=Path(__file__).resolve().parents[1]
 def content(marker):
@@ -32,7 +33,7 @@ class Aula10Content(unittest.TestCase):
   p=self.report['preservacao']
   self.assertEqual(digest(self.q[:900]),p['hash_primeiras_900'])
   self.assertEqual(digest(self.bp[:450]),p['hash_primeiros_450_bp'])
-  self.assertEqual(digest(self.al[:9]),p['hash_aulas_1_a_9'])
+  self.assertEqual(digest(restore_before_numbers(self.al)[:9]),p['hash_aulas_1_a_9'])
  def test_materials_aggregate_all_blocks_without_loss(self):
   for key in ['r','d','p','n']:self.assertEqual(self.al[9][key],sum((b[key] for b in self.al[9]['b']),[]))
   for key in ['dg','tb','tl','fc']:self.assertEqual(self.mat[key],sum((b[key] for b in self.mat['b']),[]))
