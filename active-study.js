@@ -393,7 +393,7 @@ window.ActiveStudy=(()=>{
   const box=document.createElement('div');
   box.className='active-study-action';box.dataset.activeStudyKey=entry.key;
   const button=document.createElement('button');button.type='button';button.className='active-study-button';button.disabled=!count;
-  button.innerHTML=uiIcon('practice')+'<span>Fazer questões</span>';
+  button.innerHTML=uiIcon('book')+'<span>Questões</span>';
   button.setAttribute('aria-label',`Fazer questões sobre ${source.label||source.parents?.at(-1)||'este conteúdo'}: ${count} ${count===1?'disponível':'disponíveis'}`);
   button.addEventListener('click',()=>start(entry.key,box));
   const total=document.createElement('span');total.className='active-study-count';total.textContent=`${count} ${count===1?'disponível':'disponíveis'}`;box.append(button,total);
@@ -429,7 +429,7 @@ window.ActiveStudy=(()=>{
   const text=document.createElement('div'),title=document.createElement('strong'),total=document.createElement('span');
   title.textContent=whole?'Todo este conteúdo':entry.source.label;total.textContent=`${count} ${count===1?'questão disponível':'questões disponíveis'}`;
   text.append(title,total);
-  const action=document.createElement('button');action.type='button';action.className='active-study-choice-start';action.disabled=!count;action.textContent='Fazer questões';
+  const action=document.createElement('button');action.type='button';action.className='active-study-choice-start';action.disabled=!count;action.innerHTML=uiIcon('book')+'<span>Questões</span>';
   action.setAttribute('aria-label',`Fazer questões: ${whole?'todo este conteúdo':entry.source.label} (${count})`);action.onclick=()=>start(key,row);row.append(text,action);return row;
  }
  function paintChoices(){
@@ -457,7 +457,7 @@ window.ActiveStudy=(()=>{
   const lesson=view==='t'?tr:view==='m'?mt.a:1,root=AL[lesson-1]?.t||'';
   const source=(label,text,parents=[],whole=false,ownerHints=[])=>({lesson,label,text,parents:[root,...parents],whole,ownerHints});
   if(view==='t'){
-   document.querySelectorAll('.lesson-section .pt').forEach(node=>{const text=textOf(node);footer(node,source(text.split(':')[0],text),true)});
+   document.querySelectorAll('.lesson-section .pt').forEach(node=>{const text=textOf(node);footer(node,source(text.split(':')[0],text))});
    document.querySelectorAll('#lesson-numbers .m').forEach(node=>footer(node,source(textOf(node.querySelector('.s')),textOf(node))));
   }
   if(view==='m'){

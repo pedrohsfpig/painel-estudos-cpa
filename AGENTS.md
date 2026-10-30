@@ -243,6 +243,15 @@ da primeira renderização e respeite os destaques semânticos nos dois temas.
 
 ### Estudo ativo por conceito — pedido de 28/10/2026
 
+- Ajuste visual de 30/10/2026: o rótulo visível de TODOS os atalhos passa a ser
+  ícone de livro + **Questões**, inclusive no seletor Por conceito; manter a
+  contagem e o nome acessível descritivo. Resumo, Dicas e macetes e Pegadinhas
+  inserem o controle DENTRO de cada `.pt`, depois do texto em
+  `.lesson-topic-text`, em todas as aulas/blocos. Aproveitar espaço à direita
+  na última linha; se não couber, ampliar somente o próprio tópico. Não deixar
+  ações irmãs separando cartões nem sobrepor/cortar texto. `flow-root` mantém
+  a ação flutuante contida; aviso de sessão pendente usa linha própria interna.
+  Não mudar fontes, associações, contagens ou os controles discretos dos mapas.
 - Todos os conceitos de revisão oferecem Fazer questões com contagem exata:
   quadro geral (participante/característica), mapas, diagramas, tabelas, linha
   do tempo, flashcards, resumo, dicas, pegadinhas e números. Preserve o conteúdo.

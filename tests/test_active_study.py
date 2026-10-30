@@ -105,12 +105,13 @@ class ActiveStudy(unittest.TestCase):
     def test_all_material_types_and_trail_have_actions_and_valid_exact_counts(self):
         for lesson in range(1,self.page.evaluate("AL.length")+1):
             self.page.evaluate("n=>{view='t';tr=n;go()}",lesson)
-            self.assertEqual(self.page.locator('.acb>.active-study-action').count(),self.page.locator('.lesson-section .pt').count())
+            self.assertEqual(self.page.locator('.lesson-section .pt>.active-study-action').count(),self.page.locator('.lesson-section .pt').count())
             for kind in ['mapa','diag','tab','tl','fc','geral']:
                 if kind=='geral' and not self.page.evaluate('n=>hasLessonOverview(n)',lesson):continue
                 self.material(lesson,kind)
                 selectors={'mapa':'.mind-branch','diag':'.material-panel','tab':'.material-table','tl':'.material-time-panel','fc':'.flashcard-stage','geral':'.operator-overview'}
                 for node in self.page.locator(selectors[kind]).all():self.assertEqual(node.locator(':scope>.active-study-action').count(),1,(lesson,kind))
+                self.assertTrue(self.page.locator('.active-study-button').evaluate_all("es=>es.every(e=>e.querySelector('span').textContent==='Questões'&&e.querySelectorAll('svg').length===1)"))
                 self.assertTrue(self.page.locator('.active-study-action').evaluate_all("es=>es.every(e=>Number(e.querySelector('.active-study-count').textContent.match(/\\d+/)[0])===Number(e.querySelector('button').getAttribute('aria-label').match(/: (\\d+) dispon/)[1]))"))
         audit=self.page.evaluate('ActiveStudy.audit()');questions=self.page.evaluate('ActiveStudy.bank()')
         self.assertEqual(len(questions),self.page.evaluate("Q.length"));self.assertTrue(all(q['owners'] for q in questions))

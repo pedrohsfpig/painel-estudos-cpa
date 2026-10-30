@@ -1,6 +1,6 @@
 # Fazer questões a partir do conteúdo — 28/10/2026
 
-Cada trecho de revisão oferece **Fazer questões** e o número de questões
+Cada trecho de revisão oferece **ícone de livro + Questões** e o número de questões
 disponíveis para aquele conteúdo. O clique inicia uma sessão normal de Estudo
 com **todos os IDs correspondentes do banco principal**, incluindo Hardcore,
 sem limite de quantidade, filtro de inéditas ou proporção de sorteio.
@@ -24,9 +24,32 @@ um atalho por ramificação/quadro; os nós e células ficam livres de controles
 Tabelas mantêm o acesso discreto abaixo; os demais textos preservam seus atalhos.
 
 A interface é inserida depois da renderização, sem reescrever AL/MAT, os
-quadros, os textos, suas cores ou os dados de Q/BP. Os controles ficam fora dos
-textos usados por mapas e trilha, preservando a hierarquia original. Zero
+quadros, os textos, suas cores ou os dados de Q/BP. Os controles ficam separados
+do conteúdo textual usado nas associações, preservando a hierarquia original. Zero
 correspondências aparece como **0 disponíveis**, com ação desabilitada.
+
+### Tópicos compactos — 30/10/2026
+
+Em Resumo, Dicas e macetes e Pegadinhas, cada controle fica dentro do tópico
+correspondente, junto da contagem, alinhado à direita. Usa o espaço disponível
+na última linha e passa para baixo somente quando necessário, sem um bloco
+externo entre os tópicos. O próprio cartão contém a altura adicional. Textos e
+seus destaques permanecem integrais em `.lesson-topic-text`; as associações de
+questões continuam usando o texto original e os mesmos IDs.
+
+O rótulo curto **livro + Questões** vale para todos os materiais e o seletor
+Por conceito. O nome acessível continua descrevendo o assunto e a contagem.
+Zero mantém a ação desabilitada. Um aviso de sessão pendente aparece dentro do
+tópico, em linha própria, e Retomar sessão preserva as respostas e o relógio.
+
+Conferência de todas as aulas e blocos, dois temas e larguras de 390, 768 e
+1440 pixels, incluindo textos longos, contagens, ausência de sobreposição e
+acionamento por teclado. Ver `tests/test_active_study_design.py`.
+
+Validação desta alteração: 25 testes de estudo ativo/desenho/escopo, 40 de
+navegação/busca/materiais, 76 de smoke e os checks de banco/qualidade/feedback
+aprovados. Após o ajuste final da quebra de linha, passaram também os dois
+casos específicos de contenção e layout e os dois de rótulo/ícone global.
 
 ## Assunto e característica
 

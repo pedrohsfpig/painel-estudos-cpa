@@ -193,7 +193,7 @@ class PainelCPA(unittest.TestCase):
                 )
                 accordion.locator("summary").click()
                 expected = [re.sub(r"\{\{(?:atencao|negacao)\|([^{}]+)\}\}", r"\1", item.replace("**", "")) for item in content[section]]
-                self.assertEqual(accordion.locator(".pt").all_text_contents(), expected)
+                self.assertEqual(accordion.locator(".lesson-topic-text").all_text_contents(), expected)
                 self.assertEqual(accordion.locator(".acb > p").count(), 0)
                 self.assertGreater(accordion.locator(".pt strong").count(), 0)
                 for selector, variable in [(".lesson-attention", "--lesson-attention"), (".lesson-negative", "--hd")]:
@@ -1059,7 +1059,7 @@ class PainelCPA(unittest.TestCase):
                     self.assertEqual(self.page.evaluate("document.activeElement.dataset.lessonBlock"), str(block_id))
                     for section, key in [("lesson-summary","r"),("lesson-tips","d"),("lesson-traps","p")]:
                         self.assertTrue(self.page.locator(f"#{section}").evaluate("e=>e.open"))
-                        self.assertEqual(self.page.locator(f"#{section} .pt").all_text_contents(),
+                        self.assertEqual(self.page.locator(f"#{section} .lesson-topic-text").all_text_contents(),
                                          [plain(text) for text in expected[key]])
                     self.assertEqual(self.page.locator("#lesson-numbers .mv").all_text_contents(),
                                      [item[0] for item in expected["n"]])
@@ -1662,7 +1662,7 @@ class PainelCPA(unittest.TestCase):
             for key, selector in [("r","#lesson-summary"),("d","#lesson-tips"),("p","#lesson-traps")]:
                 self.assertTrue(self.page.locator(selector).evaluate("node=>node.open"))
                 expected = self.page.evaluate("key=>lessonContent(8)[key].map(x=>x.replace(/\\{\\{(?:atencao|negacao)\\|([^{}]+)\\}\\}/g,'$1').replace(/\\*\\*/g,''))", key)
-                self.assertEqual(self.page.locator(selector+" .pt").all_text_contents(), expected)
+                self.assertEqual(self.page.locator(selector+" .lesson-topic-text").all_text_contents(), expected)
         self.assertEqual(self.page.evaluate("({history:H,practice:JSON.stringify(cfg)})"), previous)
         self.page.locator(".hero").get_by_role("button", name="Material de apoio", exact=True).click()
         for block in [1,2,3,0]:
@@ -2014,7 +2014,7 @@ class PainelCPA(unittest.TestCase):
             for key,selector in [("r","#lesson-summary"),("d","#lesson-tips"),("p","#lesson-traps")]:
                 self.assertTrue(self.page.locator(selector).evaluate("node=>node.open"))
                 expected=self.page.evaluate("key=>lessonContent(9)[key].map(x=>x.replace(/\\{\\{(?:atencao|negacao)\\|([^{}]+)\\}\\}/g,'$1').replace(/\\*\\*/g,''))",key)
-                self.assertEqual(self.page.locator(selector+" .pt").all_text_contents(),expected)
+                self.assertEqual(self.page.locator(selector+" .lesson-topic-text").all_text_contents(),expected)
         self.page.locator(".hero").get_by_role("button",name="Material de apoio",exact=True).click()
         for block in [1,2,3,0]:
             self.page.locator(f'.lesson-blocks [data-lesson-block="{block}"]').click()

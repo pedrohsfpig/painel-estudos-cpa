@@ -38,6 +38,7 @@ class ActiveStudyDesign(unittest.TestCase):
     def test_specific_concept_count_opens_exact_same_session_and_returns_to_node(self):
         self.material(3,'mapa');branch=self.branch();branch.locator('.active-study-options-trigger').click()
         dialog=self.picker();self.assertTrue(dialog.is_visible())
+        self.assertTrue(dialog.locator('.active-study-choice-start').evaluate_all("es=>es.every(e=>e.querySelector('span').textContent==='Questões'&&e.querySelectorAll('svg').length===1)"))
         before=self.page.evaluate('JSON.stringify([H,cfg,Q,BP,AL,MAT])')
         search=dialog.get_by_role('searchbox');search.fill('9 membros')
         rows=dialog.locator('.active-study-choice');self.assertGreater(rows.count(),0)
@@ -101,5 +102,56 @@ class ActiveStudyDesign(unittest.TestCase):
                 dialog.get_by_role('button',name='Fechar seleção de conceitos').click()
         for n,kind in [(3,'mapa'),(6,'diag'),(7,'geral')]:
             self.material(n,kind);self.page.screenshot(path=str(output/f'{n}-{kind}.png'),full_page=True)
+
+    def test_trail_actions_stay_inside_every_topic_without_changing_content_or_counts(self):
+        result=self.page.evaluate('''()=>{
+            const before=JSON.stringify([Q,BP,AL,MAT,H,cfg]),issues=[];let topics=0,views=0;
+            for(let n=1;n<=AL.length;n++)for(const block of [0,...(AL[n-1].b||[]).map(b=>b.id)]){
+                view='t';tr=n;selectedLessonBlocks[n]=block;go();views++;
+                const content=lessonContent(n),registry=new Map(ActiveStudy.audit().map(e=>[e.key,e]));
+                for(const [id,key] of [['lesson-summary','r'],['lesson-tips','d'],['lesson-traps','p']]){
+                    const section=document.getElementById(id);section.open=true;
+                    const rows=[...section.querySelectorAll('.pt')];
+                    if(rows.length!==content[key].length)issues.push({n,block,id,type:'missing topics'});
+                    rows.forEach((row,i)=>{
+                        topics++;const text=row.querySelector(':scope>.lesson-topic-text'),actions=row.querySelectorAll(':scope>.active-study-action'),entry=registry.get(row.dataset.activeStudy);
+                        if(text?.textContent!==searchPlain(content[key][i]))issues.push({n,block,id,i,type:'changed text'});
+                        if(actions.length!==1)issues.push({n,block,id,i,type:'action outside topic'});
+                        const action=actions[0],button=action?.querySelector('.active-study-button');
+                        if(button?.querySelector('span')?.textContent!=='Questões'||button?.querySelectorAll('svg').length!==1)issues.push({n,id,i,type:'button label/icon'});
+                        if(Number(action?.querySelector('.active-study-count').textContent.match(/\\d+/)[0])!==entry?.ids.length)issues.push({n,id,i,type:'wrong count'});
+                    });
+                    if(section.querySelector('.acb>.active-study-action'))issues.push({n,id,type:'external action'});
+                }
+            }
+            return {topics,views,issues,preserved:before===JSON.stringify([Q,BP,AL,MAT,H,cfg])};
+        }''')
+        self.assertEqual(result['issues'],[]);self.assertTrue(result['preserved'])
+        self.assertGreater(result['views'],13);self.assertGreater(result['topics'],300)
+
+    def test_trail_compact_actions_wrap_inside_cards_in_both_themes_and_resume_session(self):
+        out=Path('/tmp/cpa-topic-actions');out.mkdir(exist_ok=True)
+        self.page.evaluate("begin([1,2],'e')");self.answer()
+        stable=self.page.evaluate('JSON.stringify([H,qz,cfg])')
+        for width in [390,768,1440]:
+            self.page.set_viewport_size(dict(width=width,height=1000))
+            self.page.evaluate("view='t';tr=1;go();document.querySelectorAll('.lesson-section').forEach(e=>e.open=true)")
+            for theme in ['light','dark']:
+                self.page.evaluate('t=>document.documentElement.dataset.theme=t',theme)
+                self.assertTrue(self.page.evaluate('document.documentElement.scrollWidth<=innerWidth'))
+                boxes=self.page.locator('.lesson-section .pt').evaluate_all('''es=>es.map(e=>{
+                    const r=e.getBoundingClientRect(),lines=[...e.querySelector('.lesson-topic-text').getClientRects()],a=e.querySelector('.active-study-action').getBoundingClientRect();
+                    return {fits:a.left>=r.left&&a.right<=r.right&&a.top>=r.top&&a.bottom<=r.bottom,overlap:lines.some(t=>Math.min(t.right,a.right)>Math.max(t.left,a.left)&&Math.min(t.bottom,a.bottom)>Math.max(t.top,a.top)),inline:lines.some(t=>Math.abs(t.top-a.top)<8)};
+                })''')
+                self.assertTrue(all(b['fits'] and not b['overlap'] for b in boxes))
+                if width==1440:self.assertTrue(any(b['inline'] for b in boxes))
+                if width in [390,1440]:
+                    self.page.locator('#lesson-summary').screenshot(path=str(out/f'topics-{theme}-{width}.png'))
+        button=self.page.locator('#lesson-summary .active-study-button:not([disabled])').first
+        button.focus();self.page.keyboard.press('Enter')
+        self.assertTrue(self.page.get_by_role('button',name='Retomar sessão',exact=True).is_visible())
+        self.assertEqual(stable,self.page.evaluate('JSON.stringify([H,qz,cfg])'))
+        self.page.get_by_role('button',name='Retomar sessão',exact=True).click()
+        self.assertEqual(self.page.evaluate('view'),'q');self.assertEqual(stable,self.page.evaluate('JSON.stringify([H,qz,cfg])'))
 
 if __name__=='__main__':unittest.main(verbosity=2)
