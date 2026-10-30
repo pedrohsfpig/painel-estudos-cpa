@@ -143,7 +143,7 @@ window.Consulta=(()=>{
      if(!Array.isArray(branch))return;
      const [label,items]=branch;if(!Array.isArray(items))return;
      const own=ownerFor(label,owners,n),direct=items.filter(item=>typeof item==='string');
-     add({lesson:n,type:'Mapa mental',title:[...path,label].join(' · '),label,lines:direct,owners:own,base:25,facets:facetOf(label).length?facetOf(label):inherited});
+     add({lesson:n,type:'Ramificações',title:[...path,label].join(' · '),label,lines:direct,owners:own,base:25,facets:facetOf(label).length?facetOf(label):inherited});
      walk(items.filter(Array.isArray),[...path,label],own,facetOf(label).length?facetOf(label):inherited);
     });
     walk(M.mm?.[1]||[],[],defaultOwners);
@@ -270,7 +270,7 @@ window.Consulta=(()=>{
    if(!/\b(anos?|meses|prazo|duracao|periodo|mandato)\b|recondu|exoner/.test(body))return null;
   }
   const coverage=request.keywords.length?hits.length/request.keywords.length:1;
-  const structured=['Tabela','Quadro comparativo','Mapa mental','Resumo'].includes(record.type)?30:0;
+  const structured=['Tabela','Quadro comparativo','Ramificações','Resumo'].includes(record.type)?30:0;
   const primary=selected.some(e=>index().lessonOwners[record.lesson-1]?.includes(e.id))?18:0;
   const score=record.base+structured+primary+(record.type==='Quadro comparativo'&&record.label==='Competências'?20:0)+owns*65+mentions*8+hits.length*20+labelHits.length*8+coverage*25+matchedFacets.length*23+(facet?25:0)+(record.lines.join(' ').length<20?-8:0);
   return {record,score,coverage,owns,hits};
@@ -284,7 +284,7 @@ window.Consulta=(()=>{
    result.push(item);if(result.length===limit)break;
   }return result;
  }
- const TYPES=['Resumo','Dicas e macetes','Pegadinhas','Números para decorar','Mapa mental','Tabela','Quadro comparativo','Diagrama','Linha do tempo','Flashcard','Explicação de questão','Explicação Bate-pronto'];
+ const TYPES=['Resumo','Dicas e macetes','Pegadinhas','Números para decorar','Ramificações','Tabela','Quadro comparativo','Diagrama','Linha do tempo','Flashcard','Explicação de questão','Explicação Bate-pronto'];
  function normalizeOptions(options={}){
   return {lessons:[...new Set((options.lessons||[]).filter(n=>Number.isInteger(n)&&n>0&&n<=AL.length))],types:[...new Set((options.types||[]).filter(t=>TYPES.includes(t)))],choices:{...(options.choices||{})},features:Array.isArray(options.features)?[...new Set(options.features.filter(f=>typeof f==='string'))]:null};
  }

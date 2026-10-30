@@ -80,7 +80,7 @@ class PainelCPA(unittest.TestCase):
                 return [value]
             return [text for child in value for text in strings(child)]
 
-        if kind == "Mapa mental":
+        if kind == "Ramificações":
             self.assertEqual(self.page.locator(".mind-root>span").inner_text(), material["mm"][0])
             branches = self.page.locator(".mind-branch")
             self.assertEqual(branches.count(), len(material["mm"][1]))
@@ -220,7 +220,7 @@ class PainelCPA(unittest.TestCase):
         for lesson in self.lesson_numbers():
             self.click(f"Aula {lesson}")
             content = self.page.evaluate("lesson => AL[lesson - 1]", lesson)
-            for kind in ["Mapa mental", "Diagramas", "Tabelas", "Linha do tempo", "Flashcards"]:
+            for kind in ["Ramificações", "Diagramas", "Tabelas", "Linha do tempo", "Flashcards"]:
                 self.click(kind)
                 self.assertGreater(len(self.page.locator("#app").inner_text()), 300)
                 self.assertEqual(self.page.locator(".material-lesson h2").inner_text(), content["t"])
@@ -825,7 +825,7 @@ class PainelCPA(unittest.TestCase):
             self.page.evaluate("theme=>document.documentElement.dataset.theme=theme", theme)
             for lesson in self.lesson_numbers():
                 self.page.evaluate("lesson=>{view='m';mt={a:lesson,c:'mapa'};go()}", lesson)
-                self.assert_material_content("Mapa mental")
+                self.assert_material_content("Ramificações")
                 self.assertTrue(self.page.locator(".mind-branch h3,.mind-branch h3>span").evaluate_all(
                     """nodes=>nodes.every(e=>{
                         const sample=document.createElement('span');sample.style.color='var(--ac)';e.append(sample);
@@ -941,7 +941,7 @@ class PainelCPA(unittest.TestCase):
         for block in self.page.evaluate("AL[6].b"):
             self.page.locator(".lesson-blocks button[data-lesson-block='%d']" % block["id"]).click()
             self.assertEqual(self.page.locator(".lesson-blocks button[aria-pressed='true']").get_attribute("data-lesson-block"), str(block["id"]))
-            for kind in ["Mapa mental", "Diagramas", "Tabelas", "Linha do tempo", "Flashcards"]:
+            for kind in ["Ramificações", "Diagramas", "Tabelas", "Linha do tempo", "Flashcards"]:
                 with self.subTest(block=block["id"], kind=kind):
                     self.click(kind)
                     self.assert_material_content(kind)
@@ -949,8 +949,8 @@ class PainelCPA(unittest.TestCase):
                                     "Materiais do bloco não devem criar rolagem horizontal da página")
                     self.assertEqual(self.page.evaluate("({ids:qz.ids,index:qz.i,start:qz.t0,history:H})"), state)
         self.page.locator(".lesson-blocks button[data-lesson-block='0']").click()
-        self.click("Mapa mental")
-        self.assert_material_content("Mapa mental")
+        self.click("Ramificações")
+        self.assert_material_content("Ramificações")
         self.assertEqual(self.page.evaluate("({ids:qz.ids,index:qz.i,start:qz.t0,history:H})"), state)
 
     def test_30_lesson7_flashcards_wrap_by_selected_block_and_keep_face_on_theme_change(self):
@@ -1421,7 +1421,7 @@ class PainelCPA(unittest.TestCase):
             self.assertEqual(self.page.evaluate("selectedLessonBlocks[7]"), block)
             self.assertEqual(self.page.locator(".overview-filters [aria-pressed='true']").get_attribute("data-overview-block"), str(block))
             self.assertEqual(self.page.evaluate("document.activeElement.dataset.overviewBlock"), str(block))
-        self.click("Mapa mental")
+        self.click("Ramificações")
         self.assertEqual(self.page.evaluate("currentMaterial().mm[0]"), "Seguros, capitalização e previdência")
         self.click("Quadro geral")
         self.assertEqual(self.page.locator(".operator-overview-table tbody tr").count(), 6)
@@ -1667,7 +1667,7 @@ class PainelCPA(unittest.TestCase):
         self.page.locator(".hero").get_by_role("button", name="Material de apoio", exact=True).click()
         for block in [1,2,3,0]:
             self.page.locator(f'.lesson-blocks [data-lesson-block="{block}"]').click()
-            for kind in ["Mapa mental","Diagramas","Tabelas","Linha do tempo","Flashcards"]:
+            for kind in ["Ramificações","Diagramas","Tabelas","Linha do tempo","Flashcards"]:
                 self.click(kind)
                 self.assert_material_content(kind)
                 if kind == "Flashcards":
@@ -1725,8 +1725,8 @@ class PainelCPA(unittest.TestCase):
             self.page.locator(f'[data-overview-block="{block}"]').click()
             self.assertEqual(self.page.evaluate("selectedLessonBlocks[8]"),block)
             self.assertEqual(self.page.locator(".operator-overview-table tbody tr").evaluate_all("rows=>rows.map(r=>r.dataset.operator)"),ids)
-            self.click("Mapa mental")
-            self.assert_material_content("Mapa mental")
+            self.click("Ramificações")
+            self.assert_material_content("Ramificações")
             self.click("Quadro geral")
         self.assertIn("não é conta de varejo",self.page.locator('[data-operator="spi"] .overview-notes').inner_text())
         self.page.get_by_role("button",name="Ampliar quadro comparativo",exact=True).click()
@@ -2018,7 +2018,7 @@ class PainelCPA(unittest.TestCase):
         self.page.locator(".hero").get_by_role("button",name="Material de apoio",exact=True).click()
         for block in [1,2,3,0]:
             self.page.locator(f'.lesson-blocks [data-lesson-block="{block}"]').click()
-            for kind in ["Mapa mental","Diagramas","Tabelas","Linha do tempo","Flashcards"]:
+            for kind in ["Ramificações","Diagramas","Tabelas","Linha do tempo","Flashcards"]:
                 self.click(kind)
                 self.assert_material_content(kind)
                 if kind=="Flashcards":

@@ -31,7 +31,7 @@ class ContentSearch(unittest.TestCase):
         for ids in result['aliases']:self.assertEqual(ids,result['aliases'][0])
         self.assertEqual(result['accent'],result['plain'])
         self.assertTrue({3,10}.issubset(result['lessons']))
-        self.assertEqual(set(result['types']),{'aula','trilha','mapa','diag','tab','tl','fc','geral','questao','bate','sfn'})
+        self.assertEqual(set(result['types']),{'aula','trilha','mapa','visual','diag','tab','tl','fc','geral','questao','bate','sfn'})
         self.assertTrue(result['safe']);self.assertEqual(result['empty'],0)
         self.assertTrue(self.page.evaluate("searchContent('Bacen compulsório','all').every(d=>searchTokens('Bacen compulsório').every(t=>d.words.some(w=>w.startsWith(t))))"))
 
@@ -39,7 +39,7 @@ class ContentSearch(unittest.TestCase):
         self.search('Bacen','t')
         self.assertTrue(set(self.sources()).issubset({'aula','trilha'}))
         self.assertEqual(self.page.locator('.search-global-filters').count(),0)
-        for kind in ['mapa','diag','tab','tl','fc','geral']:
+        for kind in ['mapa','visual','diag','tab','tl','fc','geral']:
             self.search('Bacen','m',kind)
             self.assertTrue(self.sources(),kind)
             self.assertEqual(set(self.sources()),{kind})
@@ -54,7 +54,7 @@ class ContentSearch(unittest.TestCase):
         self.search('inflação','d')
         self.assertTrue(self.page.locator('.hoje').evaluate("n=>n.nextElementSibling.classList.contains('search-global')"))
         self.assertEqual(self.page.locator('[data-search-area]').count(),4)
-        for area,allowed in [('trilha',{'aula','trilha'}),('questoes',{'questao','bate'}),('materiais',{'mapa','diag','tab','tl','fc','geral','sfn'})]:
+        for area,allowed in [('trilha',{'aula','trilha'}),('questoes',{'questao','bate'}),('materiais',{'mapa','visual','diag','tab','tl','fc','geral','sfn'})]:
             self.page.locator(f'[data-search-area="{area}"]').click()
             self.assertTrue(set(self.sources()).issubset(allowed))
             if area=='trilha':

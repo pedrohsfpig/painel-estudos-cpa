@@ -64,7 +64,7 @@ class Browser(unittest.TestCase):
   self.page.locator('.lesson-blocks [data-lesson-block="1"]').click()
   self.assertEqual(self.page.evaluate('lessonContent(13).id'),1)
   self.assertEqual(self.page.get_by_role('button',name='Estudar esta aula interna',exact=True).count(),1)
-  for name,key in [('Mapa mental','mapa'),('Diagramas','diag'),('Tabelas','tab'),('Linha do tempo','tl'),('Flashcards','fc')]:
+  for name,key in [('Ramificações','mapa'),('Diagramas','diag'),('Tabelas','tab'),('Linha do tempo','tl'),('Flashcards','fc')]:
    self.page.evaluate("k=>{view='m';mt={a:13,c:k};fi=0;ff=0;go()}",key);self.assert_material_content(name)
   self.page.evaluate("mt.c='geral';go()")
   self.assertEqual(self.page.locator('#overview-scroll tbody tr').count(),6)

@@ -1,0 +1,40 @@
+/* Somente a nova galeria; as Ramificações mantêm sua apresentação. */
+.material-tabs{grid-template-columns:repeat(6,minmax(0,1fr))}
+.material-tabs.has-overview{grid-template-columns:repeat(7,minmax(0,1fr))}
+.visual-map-choices{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.visual-map-choices button{display:flex;gap:9px;align-items:center;text-align:left;padding:10px 13px;border-radius:10px}
+.visual-map-choices button[aria-pressed=true]{border-color:var(--ac);background:color-mix(in srgb,var(--ac) 10%,var(--cd));color:var(--fg)}
+.visual-map-choice-number{font-size:11px;color:var(--ac);font-variant-numeric:tabular-nums}
+.visual-map-panel{border:1px solid var(--bd);border-radius:16px;background:var(--cd);overflow:hidden}
+.visual-map-toolbar{padding:20px;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.visual-map-toolbar h3{margin:5px 0 0;font-size:20px;line-height:1.35}
+.visual-map-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.visual-map-actions button,.visual-map-actions a{display:inline-flex;gap:7px;align-items:center;justify-content:center;min-height:40px;padding:8px 12px;font-size:13px;border:1px solid var(--bd);border-radius:9px;background:transparent;color:var(--fg);text-decoration:none;white-space:nowrap}
+.visual-map-actions a:hover{border-color:var(--ac)}
+.visual-map-panel figure{margin:0;padding:0 12px}
+.visual-map-preview{display:block;width:100%;padding:0;border:0;border-radius:11px;overflow:hidden;background:#151a1d;cursor:zoom-in}
+.visual-map-preview img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain}
+.visual-map-preview:hover{border:0;filter:none}
+.visual-map-panel figcaption{font-size:12px;color:var(--mu);padding:12px 8px;line-height:1.5}
+.visual-map-text{margin:0 20px 20px;border-top:1px solid var(--bd);padding-top:14px}
+.visual-map-text summary{cursor:pointer;font-size:13px;width:fit-content}
+.visual-map-transcript{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 24px;padding-top:16px;line-height:1.65}
+.visual-map-transcript h4{margin:0 0 6px;color:var(--ac);font-size:14px}
+.visual-map-transcript ul{padding-left:18px;margin:0;font-size:14px}
+.visual-map-transcript>p{grid-column:1/-1;margin:0;font-size:13px;color:var(--mu)}
+.visual-map-panel>.active-study-action{padding:0 20px 18px}
+.visual-map-error{padding:24px;font-size:14px}
+.visual-map-preview[hidden],.visual-map-error[hidden]{display:none}
+.mental-map-viewer{width:calc(100vw - 40px);max-width:1800px;height:calc(100dvh - 40px);max-height:none;box-sizing:border-box;padding:18px;border:1px solid var(--bd);border-radius:14px;background:var(--bg);color:var(--fg);overflow:hidden}
+.mental-map-viewer[open]{display:flex;flex-direction:column;gap:10px}
+.mental-map-viewer::backdrop{background:#000b}
+.mental-map-viewer>header{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.mental-map-viewer h2{font-size:18px;margin:0;line-height:1.4}
+.mental-map-viewer output{font-size:12px;min-width:40px;text-align:center;font-variant-numeric:tabular-nums}
+.mental-map-viewer-help{margin:0;color:var(--mu);font-size:12px}
+.mental-map-canvas{flex:1;min-height:0;overflow:auto;border-radius:9px;background:#151a1d;overscroll-behavior:contain}
+.mental-map-canvas img{display:block;max-width:none;height:auto;aspect-ratio:3/2;object-fit:contain}
+body.mental-map-viewing{overflow:hidden}
+.visual-map-panel :is(button,a,summary):focus-visible,.mental-map-viewer :is(button,.mental-map-canvas):focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+@media(max-width:1150px){.material-tabs.has-overview{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:700px){.material-tabs,.material-tabs.has-overview{grid-template-columns:repeat(3,minmax(0,1fr))}.visual-map-toolbar{padding:16px;align-items:flex-start;flex-direction:column}.visual-map-transcript{grid-template-columns:1fr}.visual-map-choices button{font-size:12px}.mental-map-viewer{width:calc(100vw - 16px);height:calc(100dvh - 16px);padding:12px}.mental-map-viewer>header{align-items:flex-start;flex-direction:column}.mental-map-viewer .visual-map-actions{gap:5px}.visual-map-toolbar h3{font-size:18px}}

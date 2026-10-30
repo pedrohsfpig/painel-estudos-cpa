@@ -77,7 +77,7 @@ class Browser(unittest.TestCase):
   self.page.evaluate("view='t';tr=13;go()")
   self.page.locator('.lesson-blocks [data-lesson-block="3"]').click()
   self.assertEqual(self.page.evaluate('lessonContent(13).id'),3)
-  for name,key in [('Mapa mental','mapa'),('Diagramas','diag'),('Tabelas','tab'),('Linha do tempo','tl'),('Flashcards','fc')]:
+  for name,key in [('Ramificações','mapa'),('Diagramas','diag'),('Tabelas','tab'),('Linha do tempo','tl'),('Flashcards','fc')]:
    self.page.evaluate("k=>{view='m';mt={a:13,c:k};fi=0;ff=0;go()}",key)
    self.assert_material_content(name);self.assertEqual(self.page.evaluate('currentMaterial().id'),3)
   self.page.evaluate("mt.c='geral';go()")

@@ -104,7 +104,7 @@ class Consulta(unittest.TestCase):
         self.assertEqual(self.page.locator('.consult-current .consult-facts').count(),0)
 
     def test_source_records_are_literal_and_do_not_include_distractor_alternatives(self):
-        self.assertTrue(self.page.evaluate('''()=>{const db=Consulta.index();return ['Resumo','Mapa mental','Tabela','Linha do tempo','Diagrama','Flashcard','Quadro comparativo','Explicação de questão','Explicação Bate-pronto'].every(t=>db.records.some(r=>r.type===t))&&new Set(db.records.map(r=>r.lesson)).size===AL.length}'''))
+        self.assertTrue(self.page.evaluate('''()=>{const db=Consulta.index();return ['Resumo','Ramificações','Tabela','Linha do tempo','Diagrama','Flashcard','Quadro comparativo','Explicação de questão','Explicação Bate-pronto'].every(t=>db.records.some(r=>r.type===t))&&new Set(db.records.map(r=>r.lesson)).size===AL.length}'''))
         for q in ['funções do Bacen','limites do FGC','Qual o mandato da CVM?','Comparação entre CVM e Susep','SPI','PIB','contraparte central']:
             self.assertTrue(self.page.evaluate('''q=>{const db=Consulta.index(),a=Consulta.answer(q);return a.items.length>0&&[...a.items,...a.comparisons.flatMap(r=>r.cells.flat())].every(i=>JSON.stringify(i.record.lines)===JSON.stringify(db.records[i.record.id].lines))}''',q),q)
         self.assertTrue(self.page.evaluate('''()=>Consulta.index().records.filter(r=>r.type==='Explicação de questão').every(r=>!r.lines.some(l=>l==='Normativos fiscalizam as instituições no dia a dia.'))'''))

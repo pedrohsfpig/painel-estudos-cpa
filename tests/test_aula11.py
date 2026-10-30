@@ -63,7 +63,7 @@ class Aula11Browser(unittest.TestCase):
   self.page.evaluate("mt.a=11;view='m';go()")
   for block in [1,2,3,0]:
    self.page.evaluate('b=>chooseLessonBlock(11,b)',block)
-   for name,key in [('Mapa mental','mapa'),('Diagramas','diag'),('Tabelas','tab'),('Linha do tempo','tl'),('Flashcards','fc')]:
+   for name,key in [('Ramificações','mapa'),('Diagramas','diag'),('Tabelas','tab'),('Linha do tempo','tl'),('Flashcards','fc')]:
     self.page.evaluate('k=>{mt.c=k;go()}',key);self.assert_material_content(name)
  def test_feedback_answers_history_and_results_in_all_modes(self):
   for mode,ids in [('e',[1001,1018,1070]),('h',[1009,1039,1099]),('b',[100501,100527,100550]),('s',[1001,1021,1042])]:

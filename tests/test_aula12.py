@@ -64,7 +64,7 @@ class Aula12Browser(unittest.TestCase):
   self.page.evaluate("mt.a=12;view='m';go()")
   for b in [1,2,3,0]:
    self.page.evaluate('b=>chooseLessonBlock(12,b)',b)
-   for name,key in [('Mapa mental','mapa'),('Diagramas','diag'),('Tabelas','tab'),('Linha do tempo','tl'),('Flashcards','fc')]:
+   for name,key in [('Ramificações','mapa'),('Diagramas','diag'),('Tabelas','tab'),('Linha do tempo','tl'),('Flashcards','fc')]:
     self.page.evaluate('k=>{mt.c=k;go()}',key);self.assert_material_content(name)
  def test_feedback_and_results_for_all_four_modes(self):
   for mode,ids in [('e',[1106,1148,1186]),('h',[1135,1157,1195]),('b',[100551,100576,100600]),('s',[1104,1150,1189])]:

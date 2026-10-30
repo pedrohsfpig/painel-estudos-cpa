@@ -1,0 +1,417 @@
+{
+  "date": "2026-10-30",
+  "preservation": {
+    "Q": "fcee4437ab1fffbd3ae039dee36d01b3efa13ced8d8c0c70d3713f0f929bab10",
+    "BP": "59261872481137ff7327e7e7ea93a516836fdf892928a5b54c55c1448612174d",
+    "AL": "43655abf0e3a6890022427e6bfd58e0fc255475064b1bf3ad472a83ac6277d59",
+    "MAT": "3f5f113546c489b25d4fb404d7523d9739f1d29cf9b332968589c22fb59fd385"
+  },
+  "scope": "Ramificações: somente rótulo. Mapas mentais: imagens adicionais de revisão com texto acessível. Fontes: MAT já cadastrado; sem informações externas ou mudança de questões.",
+  "maps": [
+    {
+      "id": "aula-01",
+      "lesson": 1,
+      "block": 0,
+      "title": "Sistema Financeiro Nacional",
+      "sourceTitle": "Sistema Financeiro Nacional (SFN)",
+      "sourceSha256": "b6a3e4f424c410b913cfe2d253cabe79cfd865e5d1e754b381ad29d7e6fb208e",
+      "src": "assets/mental-maps/aula-01.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 187632,
+      "sha256": "118026e20ecdf10302ebe179ccf8c6d55334d9465ae106f91bf7fce0d8458270"
+    },
+    {
+      "id": "aula-02",
+      "lesson": 2,
+      "block": 0,
+      "title": "Conselho Monetário Nacional",
+      "sourceTitle": "Conselho Monetário Nacional (CMN)",
+      "sourceSha256": "36fe28e1a7a5b70bfa4770289286dbf5728ac4aa47d8c7b24ad409bbb70b5666",
+      "src": "assets/mental-maps/aula-02.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 190684,
+      "sha256": "7d6f519aa8bfcd49417045d62026caf3b63bbe4771c8d10d2f3e55d443754021"
+    },
+    {
+      "id": "aula-03",
+      "lesson": 3,
+      "block": 0,
+      "title": "Banco Central do Brasil",
+      "sourceTitle": "Banco Central do Brasil",
+      "sourceSha256": "6d16b207a84f730b8fc79bb395989c17df5bf76cfd0eda68c43e8e0484a0d869",
+      "src": "assets/mental-maps/aula-03.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 191158,
+      "sha256": "26f163e9f757ed773516688bdb0b36c46b1b4583ea3948a698948e42a9105792"
+    },
+    {
+      "id": "aula-04",
+      "lesson": 4,
+      "block": 0,
+      "title": "Comissão de Valores Mobiliários",
+      "sourceTitle": "Comissão de Valores Mobiliários (CVM)",
+      "sourceSha256": "c7cbec518fefb4caa175b79193464579b9bc74ecc4971c60adfbe11dcb86a682",
+      "src": "assets/mental-maps/aula-04.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 218496,
+      "sha256": "bfdd5cc010eb73c9ac6ea3289579f3f6cce7b6b9e44bcd3ca9873c1c580db7d9"
+    },
+    {
+      "id": "aula-05",
+      "lesson": 5,
+      "block": 0,
+      "title": "Seguros e Previdência",
+      "sourceTitle": "Seguros e Previdência",
+      "sourceSha256": "894f64e3650c7becac53222221865045ac0b87981f6a8f7b76ba9f8680b06d4a",
+      "src": "assets/mental-maps/aula-05.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 178904,
+      "sha256": "7a4f72048ad13c06a96768297684bc9ccf0817e2bab2101a1b6cec7c9a2961d5"
+    },
+    {
+      "id": "aula-06",
+      "lesson": 6,
+      "block": 0,
+      "title": "Operadores Monetários",
+      "sourceTitle": "Operadores Monetários",
+      "sourceSha256": "6be4cf3cfcc1f88164910cd896aa36ca805e5301800d4c5e465a2fc783a11e9e",
+      "src": "assets/mental-maps/aula-06.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 185978,
+      "sha256": "666fa5ad257059138518e07395a04e1fa79d7dd5096777bda5937aadcc648a5a"
+    },
+    {
+      "id": "aula-07-1",
+      "lesson": 7,
+      "block": 1,
+      "title": "Bancos Especializados e Fomento",
+      "sourceTitle": "Bancos especializados e fomento",
+      "sourceSha256": "bf2df46c20ab47bc1f2e62e1fc5517cb6dcc06dc296071238b3875ef1218f6a5",
+      "src": "assets/mental-maps/aula-07-1.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 198508,
+      "sha256": "58e4ca509cdb32c95c2239e68f44175c7a8b44f3da83c804edac07379687ff36"
+    },
+    {
+      "id": "aula-07-2",
+      "lesson": 7,
+      "block": 2,
+      "title": "Crédito Especializado",
+      "sourceTitle": "Crédito especializado",
+      "sourceSha256": "3dc04266b8cb90f68160f7211ff29b02403b4132091c10049577d45ce9e15ff3",
+      "src": "assets/mental-maps/aula-07-2.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 196028,
+      "sha256": "9beae9f0fe726022ee3986cb7caf8ee2fc919e6dc120de38875cf128eb2b9a01"
+    },
+    {
+      "id": "aula-07-3",
+      "lesson": 7,
+      "block": 3,
+      "title": "Consórcios e Mercado de Capitais",
+      "sourceTitle": "Consórcios e mercado de capitais",
+      "sourceSha256": "2d4c5c310084eb8d8d9f517047ceeb02fdd2c1daf7a2bab581349835589d4fbc",
+      "src": "assets/mental-maps/aula-07-3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 200464,
+      "sha256": "785d1581949f9d4ae22eff97b1b62375955941e3529e46bf993214cd82c2f636"
+    },
+    {
+      "id": "aula-07-4",
+      "lesson": 7,
+      "block": 4,
+      "title": "Seguros, Capitalização e Previdência",
+      "sourceTitle": "Seguros, capitalização e previdência",
+      "sourceSha256": "e4012dfa9b37b6be95349368e064d694a461e9357aa2f1c42aa200efd58c008b",
+      "src": "assets/mental-maps/aula-07-4.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 202688,
+      "sha256": "cc622267fc004fb36ae174ec2f4f62aad7547c6868c3dca8c2eea150e4099b8c"
+    },
+    {
+      "id": "aula-08-1",
+      "lesson": 8,
+      "block": 1,
+      "title": "Instituições de Pagamento",
+      "sourceTitle": "Instituições de Pagamento",
+      "sourceSha256": "76d6672f93a9988c4f9b8a72f74fb795dd283145c1c49534ab4aa2b559907355",
+      "src": "assets/mental-maps/aula-08-1.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 201596,
+      "sha256": "add13774ed6309aff05f362ba2225a427f75cee3733dcf1bcd8c984f5dabb3de"
+    },
+    {
+      "id": "aula-08-2",
+      "lesson": 8,
+      "block": 2,
+      "title": "Fintechs de Crédito",
+      "sourceTitle": "Fintechs de Crédito",
+      "sourceSha256": "c0fadb3c130cde23c418d1de883343302ab92516e7fb1cd39b3ef96c9d5197ad",
+      "src": "assets/mental-maps/aula-08-2.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 209376,
+      "sha256": "544cce2ffe77824d80556913bf0f3e1e73a6fe4dcc87faa2f804f472f67467b2"
+    },
+    {
+      "id": "aula-08-3",
+      "lesson": 8,
+      "block": 3,
+      "title": "SPB e Arranjos de Pagamento",
+      "sourceTitle": "SPB e Arranjos de Pagamento",
+      "sourceSha256": "40253f56244c54d0e826fae9e8a15963010b53739cbd3de882730e4486181453",
+      "src": "assets/mental-maps/aula-08-3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 196604,
+      "sha256": "c65416becf4a463e7c72cbcf12414b3eb46f525ca067217f9260eacfc0de3f96"
+    },
+    {
+      "id": "aula-09-1",
+      "lesson": 9,
+      "block": 1,
+      "title": "Autorregulação e Profissionais",
+      "sourceTitle": "Autorreguladores",
+      "sourceSha256": "4dfbbb414ab3b1669ba80ef266c81a268404a0f0bb73921d3f290f2c8a09fabf",
+      "src": "assets/mental-maps/aula-09-1.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 184916,
+      "sha256": "b06afe601307384a18db090b1ab46f650449e629120e58d381eeb77934fbfa48"
+    },
+    {
+      "id": "aula-09-2",
+      "lesson": 9,
+      "block": 2,
+      "title": "FGC e FGCoop",
+      "sourceTitle": "FGC e FGCoop",
+      "sourceSha256": "0f3649d3e81d8b7cb939ebb21f553220dea355f272b73d5300109dcb2362bd04",
+      "src": "assets/mental-maps/aula-09-2.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 215632,
+      "sha256": "05afd71af578d39a057b4bc50d27b3c6559cf21c1a955e622477e65fde1d572a"
+    },
+    {
+      "id": "aula-09-3",
+      "lesson": 9,
+      "block": 3,
+      "title": "Liberdade Econômica",
+      "sourceTitle": "Liberdade Econômica — Lei 13.874/2019",
+      "sourceSha256": "51ef0f525669ab9f65de65c2c5c47234f3f124f5b4a27ff0c9accc975a9cb34a",
+      "src": "assets/mental-maps/aula-09-3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 221140,
+      "sha256": "e4fd470648e4bfc50ef0ca66d2c2a58d9554889d58615a177ad0bbe9846ed36d"
+    },
+    {
+      "id": "aula-10-1",
+      "lesson": 10,
+      "block": 1,
+      "title": "Mercados Financeiros",
+      "sourceTitle": "Mercados financeiros",
+      "sourceSha256": "fce83fcff50497f0d638122e8213b77dcb06087a64b2a73608d20284d62c9fa1",
+      "src": "assets/mental-maps/aula-10-1.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 161354,
+      "sha256": "48d60f7ba064450f20a5e33fa490cc97213d1e27b5fa8775c04da80ae74adc4f"
+    },
+    {
+      "id": "aula-10-2",
+      "lesson": 10,
+      "block": 2,
+      "title": "Infraestrutura e Pós-negociação",
+      "sourceTitle": "Clearing houses e pós-negociação",
+      "sourceSha256": "5f95857b0968ab7c90bfc7d8ceecec614d6dd02253e6339db3a40887d424b33d",
+      "src": "assets/mental-maps/aula-10-2.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 207118,
+      "sha256": "40842e3db3dd2c2dd4ec74e2148a9f432f24a801f5e6fd59c4bc9278469c4b9d"
+    },
+    {
+      "id": "aula-10-3",
+      "lesson": 10,
+      "block": 3,
+      "title": "Estabilidade e Liquidez",
+      "sourceTitle": "Estabilidade e liquidez",
+      "sourceSha256": "aedee87fd9ecb947b16aa8f6db2f54cafa9a87f59de4084575202e675d3b1346",
+      "src": "assets/mental-maps/aula-10-3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 196942,
+      "sha256": "6f0850b1472686e9ac32efb6053108bcd25f371a593c2bb25c4fa27d01b386b9"
+    },
+    {
+      "id": "aula-11-1",
+      "lesson": 11,
+      "block": 1,
+      "title": "Fluxo Circular da Renda",
+      "sourceTitle": "Fluxo circular da renda",
+      "sourceSha256": "fb82d9e99bdd2e5b692aea1702e31cb3259a822cfd51a8d2fcef41ead197ee2f",
+      "src": "assets/mental-maps/aula-11-1.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 158282,
+      "sha256": "ea34bab465db4ee98832d8028f3cb857afba53c3f2120c739a6ec4fe9e391f84"
+    },
+    {
+      "id": "aula-11-2",
+      "lesson": 11,
+      "block": 2,
+      "title": "Política Fiscal",
+      "sourceTitle": "Política fiscal",
+      "sourceSha256": "41d35f996eae14c525e8f08c13db07558aa394f834ef91fb83c331201d43f7c1",
+      "src": "assets/mental-maps/aula-11-2.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 195158,
+      "sha256": "23ebb24f656c9e726c2a60b2d02a40d459b9931461e5c4714ac01720e98fdb03"
+    },
+    {
+      "id": "aula-11-3",
+      "lesson": 11,
+      "block": 3,
+      "title": "Indicadores Econômicos",
+      "sourceTitle": "Indicadores econômicos",
+      "sourceSha256": "53fdd1cfbee6f299eb9c977147885a943008eeee1a55c60c887472d73359eba1",
+      "src": "assets/mental-maps/aula-11-3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 225662,
+      "sha256": "f483dd9d2b4cd89a15ab50d0f5547fe5ce3c26e1d0bc16df26bb6d6e971fc5e0"
+    },
+    {
+      "id": "aula-12-1",
+      "lesson": 12,
+      "block": 1,
+      "title": "Mercado de Câmbio",
+      "sourceTitle": "Mercado de câmbio",
+      "sourceSha256": "336ab03e0f50853972cf4524b621415f39610e1217ab2acb90b2bf403e4ed74d",
+      "src": "assets/mental-maps/aula-12-1.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 208690,
+      "sha256": "c49b2eaba2dc593fc30883ba646a0136f41aae045ff8552f3eb967ce8c8ed7bd"
+    },
+    {
+      "id": "aula-12-2",
+      "lesson": 12,
+      "block": 2,
+      "title": "Cupom Cambial e Swaps",
+      "sourceTitle": "Cupom cambial e swaps",
+      "sourceSha256": "9aeccf07fb5665ac3583ee965bec5bbd38b8ef2aecf881c7692464033d978c16",
+      "src": "assets/mental-maps/aula-12-2.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 223296,
+      "sha256": "e7d3168e29c6844c529f3495219a5a95b28793179fbd1286745118760bb8564a"
+    },
+    {
+      "id": "aula-12-3",
+      "lesson": 12,
+      "block": 3,
+      "title": "Taxas de Câmbio e Relações Econômicas",
+      "sourceTitle": "Taxas de câmbio e relações econômicas",
+      "sourceSha256": "2e81f2559dd24bbb561265c3d8db35fe787f650699d7af80e49cd82120a77f11",
+      "src": "assets/mental-maps/aula-12-3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 218012,
+      "sha256": "e254589f9bb1b1d8c130231f9afcee960661affdea6efa6a9be212913c9c8bf2"
+    },
+    {
+      "id": "aula-13-1",
+      "lesson": 13,
+      "block": 1,
+      "title": "Riscos Financeiros",
+      "sourceTitle": "Riscos Financeiros",
+      "sourceSha256": "0746210ec7ad10afe485f9f51c7308b608232f4a2d68a45f73c32b6a6d281499",
+      "src": "assets/mental-maps/aula-13-1.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 202544,
+      "sha256": "65af37ac4471b74d1f3e8d607287de7b5e5b2b7cee84b8a0c59ea8fb7b735259"
+    },
+    {
+      "id": "aula-13-2",
+      "lesson": 13,
+      "block": 2,
+      "title": "Crédito Privado",
+      "sourceTitle": "Crédito Privado",
+      "sourceSha256": "7ed3f59fdd41ec1c970773c8dcdd3587c505d0b09b18fd126a537fe15f0afcf0",
+      "src": "assets/mental-maps/aula-13-2.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 197756,
+      "sha256": "569af5a88b9978472f45abd941b22ae68fe6ec3447be671869f2f24532d996e2"
+    },
+    {
+      "id": "aula-13-3",
+      "lesson": 13,
+      "block": 3,
+      "title": "Fluxo de Pagamentos",
+      "sourceTitle": "Fluxo de Pagamentos",
+      "sourceSha256": "7861425a3a2ac7cd77074e95b391728f39906ee5d7257c0450028004ad38ccee",
+      "src": "assets/mental-maps/aula-13-3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 218750,
+      "sha256": "773eef381112b9100b629201fc6ac5cf66687fb631d465bccd969efb2355506b"
+    }
+  ],
+  "validation": [
+    {
+      "suite": "test_visual_mental_maps",
+      "passed": 7
+    },
+    {
+      "suite": "smoke",
+      "passed": 76
+    },
+    {
+      "suite": "test_content_search",
+      "passed": 11
+    },
+    {
+      "suite": "active_study/design/scope, consulta/context/refinements, search_refinements/filter_menus",
+      "passed": 69
+    },
+    {
+      "suite": "galeria + dashboard_hierarchy + practice_layout/navigation + question_navigation",
+      "passed": 26
+    },
+    {
+      "suite": "aulas 10/11/12/13 e internas",
+      "passed": 61
+    },
+    {
+      "suite": "test_active_study_scope + test_active_study_design após ajuste final",
+      "passed": 12
+    }
+  ],
+  "editorial_review": {
+    "images_reviewed_individually": 28,
+    "corrections": [
+      "Padronização dos fundos escuros",
+      "APIMEC: conduta ética e técnica",
+      "Restauração das notas de fintechs e FGC/FGCoop",
+      "Dimensões e margem do mapa FGC/FGCoop"
+    ],
+    "source_preservation": "Q, BP, AL e MAT idênticos aos dados anteriores; hashes conferidos no navegador",
+    "concept_bindings": "Ramos com assuntos próprios; na aula 13, associações explícitas aos assuntos completos já cadastrados. Nenhuma alteração nos vínculos das Ramificações."
+  }
+}

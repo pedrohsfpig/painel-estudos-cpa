@@ -215,6 +215,32 @@ da primeira renderização e respeite os destaques semânticos nos dois temas.
 
 ## Apresentação dos materiais de apoio
 
+### Ramificações e mapas mentais em imagem — 30/10/2026
+
+- Pedido explícito: preservar o desenho e TODO o conteúdo dos mapas antigos,
+  renomeando sua categoria para **Ramificações**. A chave interna `mapa`, os
+  dados `MAT.mm`, os controles por conceito e o renderizador `mapa()` permanecem.
+  As regras detalhadas abaixo sobre o desenho azul aplicam-se às Ramificações.
+- **Mapa mental** é uma categoria adicional (`visual`), com imagens de revisão
+  elaboradas a partir das aulas cadastradas. Nesta entrega: 28 mapas, cobrindo
+  as 13 aulas e os blocos recebidos. Não presumir as internas futuras da 13.
+  Catálogo em `mental-maps-data.js`; imagens locais em `assets/mental-maps`.
+- Exibir um mapa por vez, selecionar pelos assuntos e respeitar os filtros de
+  bloco/aula existentes. Incluir ampliar com zoom/rolagem/teclado/Esc, baixar e
+  versão em texto recolhida. Preservar foco, temas e sessão pendente.
+- Imagens são sínteses adicionais; não resumir/substituir dados de AL/MAT/Q/BP.
+  Não exigir modelo ou API em execução para visualizá-las. Conferir palavras,
+  números, fórmulas, negações e relações em cada imagem gerada antes de publicar.
+  Categoria par não vira sequência nem subordinação. Manter premissas nas cadeias.
+- Busca distingue Ramificações e Mapa mental; o novo resultado abre a imagem e
+  o bloco exatos. A Consulta continua citando os textos originais, agora com o
+  rótulo Ramificações, sem trocar as fontes integrais por sínteses visuais.
+- Um único atalho Fazer questões abaixo do mapa; conceitos no seletor, sem
+  botões dentro da imagem. Contar IDs únicos e preservar a sessão existente.
+- Registro e hashes: `docs/mapas-mentais-visuais.md` e `.json`. Ao alterar essa
+  área, executar `tests/test_visual_mental_maps.py`, busca, Consulta, estudo por
+  conceito, navegação e smoke. Não reescrever hashes históricos para fazê-los passar.
+
 ### Estudo ativo por conceito — pedido de 28/10/2026
 
 - Todos os conceitos de revisão oferecem Fazer questões com contagem exata:

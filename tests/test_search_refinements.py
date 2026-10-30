@@ -80,8 +80,8 @@ class SearchRefinements(unittest.TestCase):
 
     def test_material_tiles_show_counts_icons_and_filter_the_actual_kind(self):
         self.search('materiais')
-        self.assertEqual(self.page.locator('[data-search-material]').count(),8)
-        self.assertEqual(self.page.locator('.search-material-tiles button>.ui-icon').count(),8)
+        self.assertEqual(self.page.locator('[data-search-material]').count(),9)
+        self.assertEqual(self.page.locator('.search-material-tiles button>.ui-icon').count(),9)
         for kind in ['mapa','diag','tab','tl','fc','geral','sfn']:
             self.page.locator(f'[data-search-material="{kind}"]').click()
             self.assertTrue(self.page.evaluate('type=>filteredSearchResults().every(d=>d.type===type)',kind))

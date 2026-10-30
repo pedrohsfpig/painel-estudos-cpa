@@ -372,7 +372,7 @@ window.ActiveStudy=(()=>{
   matchCache.set(source,{stamp:Q.length,ids});return [...ids];
  }
  const entries=new Map(),keys=new Map();let nextKey=0,chooser=null;
- const DENSE_SCOPE='.mind-branch,.diagram-group,.diagram-sequence,.material-time-panel,.operator-overview';
+ const DENSE_SCOPE='.mind-branch,.diagram-group,.diagram-sequence,.material-time-panel,.operator-overview,.visual-map-panel';
  function register(source){
   const signature=JSON.stringify(source);let key=keys.get(signature);
   if(key===undefined){key=String(++nextKey);keys.set(signature,key);entries.set(key,{source,stamp:0,ids:[]})}
@@ -461,6 +461,18 @@ window.ActiveStudy=(()=>{
    document.querySelectorAll('#lesson-numbers .m').forEach(node=>footer(node,source(textOf(node.querySelector('.s')),textOf(node))));
   }
   if(view==='m'){
+   document.querySelectorAll('.visual-map-panel').forEach(panel=>{
+    const map=MentalMaps.current();if(!map)return;
+    panel.querySelectorAll('.visual-map-transcript>section').forEach((node,index)=>{
+     const [label,items]=map.branches[index],text=items.join(' · '),bindings=map.conceptBindings?.[index];
+     // A síntese não vira contexto dominante: cada ramo mantém seus assuntos.
+     // Estes nomes identificam assuntos completos já cadastrados. A síntese
+     // não deve estreitá-los por palavras incidentais de um único exemplo.
+     const concepts=(bindings||[]).map(name=>({...source(name,'',[],true,[name]),lockOwners:true}));
+     footer(node,{...source(label,text,[],true),...(concepts.length?{concepts,ownerHints:bindings,lockOwners:true}:{} )},true);
+    });
+    footer(panel,source(map.title,MentalMaps.text(map),[],true));
+   });
    document.querySelectorAll('.mind-branch').forEach(branch=>{
     const title=textOf(branch.querySelector('h3'));
     // Register descendants first so every group can include its own subgroups.

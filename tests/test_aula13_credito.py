@@ -113,7 +113,7 @@ class Browser(unittest.TestCase):
         self.page.locator('.lesson-blocks [data-lesson-block="2"]').click()
         self.assertEqual(self.page.evaluate('lessonContent(13).id'),2)
         self.assertIn('Crédito Privado',self.page.inner_text('#app'))
-        for name,key in [('Mapa mental','mapa'),('Diagramas','diag'),('Tabelas','tab'),('Linha do tempo','tl'),('Flashcards','fc')]:
+        for name,key in [('Ramificações','mapa'),('Diagramas','diag'),('Tabelas','tab'),('Linha do tempo','tl'),('Flashcards','fc')]:
             self.page.evaluate("k=>{view='m';mt={a:13,c:k};fi=0;ff=0;go()}",key)
             self.assert_material_content(name)
             self.assertEqual(self.page.evaluate('currentMaterial().id'),2)

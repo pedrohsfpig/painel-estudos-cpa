@@ -67,7 +67,7 @@ class Aula10Browser(unittest.TestCase):
   self.page.evaluate("mt.a=10;view='m';go()")
   for block in [1,2,3,0]:
    self.page.evaluate('b=>chooseLessonBlock(10,b)',block)
-   for name,key in [('Mapa mental','mapa'),('Diagramas','diag'),('Tabelas','tab'),('Linha do tempo','tl'),('Flashcards','fc')]:
+   for name,key in [('Ramificações','mapa'),('Diagramas','diag'),('Tabelas','tab'),('Linha do tempo','tl'),('Flashcards','fc')]:
     self.page.evaluate('k=>{mt.c=k;go()}',key)
     self.assertEqual(self.page.evaluate('currentMaterial()===MAT[10]'),block==0)
     if block:self.assertEqual(self.page.evaluate('currentMaterial().id'),block)
