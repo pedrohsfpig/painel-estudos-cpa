@@ -5,7 +5,7 @@ from collections import Counter
 from pathlib import Path
 from validate_bank import load_questions
 from question_revision import digest
-from final_block import before_portfolio_lesson,unit_count
+from final_block import before_portfolio_lesson,before_investor_lesson,unit_count
 from numbers_revision import restore_before_numbers
 import smoke as harness
 ROOT=Path(__file__).resolve().parents[1]
@@ -18,6 +18,7 @@ def exact(node):
 class Content(unittest.TestCase):
  def setUp(self):
   self.q=load_questions();self.bp=read('const BP=');self.al=read('const AL=');self.m=read('\n13:');self.report=json.loads((ROOT/'docs/aula-13-carteiras-cobertura.json').read_text())
+  self.q=self.q[:1400];self.bp=self.bp[:700];self.al,self.m=before_investor_lesson(self.al,self.m)
  def test_four_units_half_volumes_and_individual_angles(self):
   self.assertEqual((len(self.q),len(self.bp)),(1400,700));self.assertEqual([u['id'] for u in self.al[12]['b']],[1,2,3,4])
   self.assertEqual(Counter(q[2] for q in self.q[1350:]),{0:10,1:20,2:10,3:10})
@@ -73,7 +74,7 @@ class Browser(unittest.TestCase):
  def test_fourth_unit_and_combined_selection_in_all_modes(self):
   for mode,size in [('e',40),('s',40),('h',10),('b',25)]:
    self.page.evaluate("md=>{cfg={a:13,as:[],b:0,us:[],md,n:-1,m:'all',c:30};qz=null;view='q';go()}",mode)
-   self.assertEqual(self.page.evaluate('pool().length'),size*4)
+   self.assertEqual(self.page.evaluate('pool().length'),size*unit_count())
    self.page.locator('.practice-blocks [data-lesson-block="4"]').click()
    self.assertEqual(self.page.evaluate('pool().length'),size)
    self.assertEqual(self.page.evaluate('sessionPlan().groups.map(g=>g.unit)'),[4])
@@ -104,12 +105,13 @@ class Browser(unittest.TestCase):
  def test_summary_tips_and_pitfalls_have_relevant_links(self):
   self.page.evaluate("view='t';tr=13;selectedLessonBlocks[13]=4;go()")
   entries=self.page.evaluate('ActiveStudy.audit().filter(e=>e.source.lesson===13)')
-  self.assertGreaterEqual(len(entries),27)
+  self.assertEqual(len(entries),self.page.evaluate('lessonContent(13).r.length+lessonContent(13).d.length+lessonContent(13).p.length'))
+  self.assertEqual(self.page.locator('#lesson-numbers').count(),0)
   self.assertTrue(all(e['ids'] for e in entries))
   item=next(e for e in entries if e['source']['label']=='Vencimento contratual')
   self.assertEqual(item['profile']['owners'],['portfolio-maturity'])
   self.assertTrue(all(1351<=id<=1400 for id in item['ids']))
-  units=next(e for e in entries if e['source']['label']=='equivalência de um ano para uniformizar a unidade dos prazos')
+  units=next(e for e in entries if e['source']['label']=='Parte decimal do ano')
   self.assertEqual(set(units['ids']),{1364,1365})
  def test_every_original_material_string_and_formula_is_visible(self):
   for kind,name in [('mapa','Ramificações'),('diag','Diagramas'),('tab','Tabelas'),('tl','Linha do tempo'),('fc','Flashcards')]:

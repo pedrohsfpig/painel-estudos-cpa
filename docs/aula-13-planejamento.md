@@ -1,6 +1,6 @@
 # Aula 13 — bloco final com aulas internas
 
-Orientação atualizada em 30/10/2026, após recebimento da quarta aula interna.
+Orientação atualizada em 30/10/2026, após recebimento da quinta aula interna.
 
 - Uma entrada **Aula 13: Bloco Final**, com aulas internas separadas por assunto.
 - Cada aula interna: **50 questões**, sendo 10 fáceis, 20 médias, 10 difíceis
@@ -23,7 +23,10 @@ Orientação atualizada em 30/10/2026, após recebimento da quarta aula interna.
   fontes 26 e 27 com quatro slides. Ver `aula-13-carteiras.md`. Questões normais
   incluem cálculos; Bate-pronto e flashcards são conceituais.
 - Flashcards da quarta: 8/8/9; agregado 34/33/33. Total: 200 Q, 100 BP, 100 FC.
-- A última aula curta do professor ainda aguarda slides/transcrição.
+- Quinta cadastrada: **Aula 5: Classificação de Investidores**, fonte 29 e dois
+  slides. Ver `aula-13-investidores.md`. Flashcards 8/9/8; agregado 42/42/41.
+  Total recebido: 250 Q, 125 BP e 125 FC.
+- Não presumir conclusão do bloco pela numeração das fontes; novas aulas aguardam envio.
   Não antecipar temas, criar placeholders ou preencher questões sem fontes.
 - Cruzar as fontes, preservar cálculos e condições, evitar pistas gramaticais,
   siglas que revelem resposta e distratores sem contexto. Todas as alternativas

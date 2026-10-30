@@ -59,3 +59,8 @@ interna do bloco final acrescenta Prazos e Retornos de Carteiras. Os 28 arquivos
 e hashes da entrega original permanecem; o novo arquivo e sua fonte constam
 em `aula-13-carteiras-cobertura.json`. Verificação histórica reconstitui os dados
 anteriores à nova aula e à revisão autorizada dos cartões numéricos.
+
+
+Nova atualização de 30/10/2026: 30 mapas no catálogo. A quinta interna,
+Classificação de Investidores, acrescenta uma imagem sem modificar as 29
+anteriores. Fonte, hash e revisão visual em `aula-13-investidores-cobertura.json`.

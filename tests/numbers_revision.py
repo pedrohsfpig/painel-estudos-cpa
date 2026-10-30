@@ -4,8 +4,16 @@ A revisão autorizada é validada separadamente; manifests antigos não são alt
 import copy,json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-def restore_before_numbers(lessons):
+def restore_before_investor_numbers(lessons):
  lessons=copy.deepcopy(lessons)
+ audit=json.loads((ROOT/'docs/revisao-numeros-bloco-final.json').read_text())
+ lesson=lessons[12];lesson['n']=copy.deepcopy(audit['antes'])
+ for unit in lesson.get('b',[]):
+  if str(unit['id']) in audit['blocos_antes']:unit['n']=copy.deepcopy(audit['blocos_antes'][str(unit['id'])])
+ return lessons
+
+def restore_before_numbers(lessons):
+ lessons=restore_before_investor_numbers(lessons)
  for change in json.loads((ROOT/'docs/revisao-numeros-para-decorar.json').read_text())['alteracoes']:
   lesson=lessons[change['aula']-1];lesson['n']=copy.deepcopy(change['antes'])
   for unit in lesson.get('b',[]):

@@ -4,6 +4,11 @@ window.ActiveStudy=(()=>{
  'use strict';
  const fold=value=>String(value??'').replace(/\{\{(?:atencao|negacao)\|([^{}]+)\}\}/g,'$1').replace(/\*\*/g,'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
  const subjects=[
+  ['investor-categories','Categorias e relações',/classificacao de investidor|categorias de investidor|categorias e relacoes|enquadramento de investidor/],
+  ['investor-thresholds','Limites e ateste',/limites e ateste|limite de qualificacao|limite profissional|ateste|limites financeiros/],
+  ['investor-professionals','Profissionais e recursos próprios',/investidores? profissionais?|profissionais e recursos proprios|instituicoes profissionais|atuacao autorizada|instituicoes previstas/],
+  ['investor-qualification','Qualificação e gestão de clubes',/investidores? qualificados?|qualificacao e gestao de clubes|exames? elegiveis|certificacoes elegiveis|clubes? de investimento|cotistas? qualificados?/],
+  ['investor-nonresident','Não residentes e representação',/nao residentes?|nao residentes e representacao/],
   ['portfolio-weights','Médias e pesos',/medias e pesos|media aritmetica|media ponderada|pesos (?:financeiros|da carteira)|participacoes financeiras/],
   ['portfolio-maturity','Prazo médio e vencimento',/prazo medio|prazos medios|media dos vencimentos/],
   ['asset-history','Retorno histórico do ativo',/retorno historico do ativo|retorno de preco|variacao de cotacao/],
@@ -97,6 +102,9 @@ window.ActiveStudy=(()=>{
   ['structure',/singular|cooperativas? centrais|^central$|^centrais$|confederacao|piramide|carteiras|controle acionario|acionistas|minimo.*carteira/]
  ];
  const topicRules=[
+  [/^Investidores: categorias/,['investor-categories']],[/^Investidores: limites/,['investor-thresholds']],
+  [/^Investidores: profissionais/,['investor-professionals']],[/^Investidores: qualificação/,['investor-qualification']],
+  [/^Investidores: não residentes/,['investor-nonresident']],
   [/^Carteiras: médias/,['portfolio-weights']],[/^Carteiras: prazo/,['portfolio-maturity']],
   [/^Carteiras: retorno histórico do ativo/,['asset-history']],[/^Carteiras: retorno histórico da carteira/,['portfolio-history']],
   [/^Carteiras: retorno esperado/,['portfolio-expected']],
@@ -119,6 +127,11 @@ window.ActiveStudy=(()=>{
   [/^Cupom:.*retorno/,['cupom']],[/^Cupom:/,['swap']],[/^Taxas:.*cota/,['quotation']],[/^Taxas:.*real/,['realfx']],[/^Taxas:/,['fxflows']]
  ];
  const microRules={
+  'investor-categories':[['inclusion',/inclu|tambem|recipro|qualificad|profissiona/],['access',/oferta|publico|acesso|admit|produto|fundo/],['purpose',/categoria|classific|perfil|adequac|risco|liquidez/]],
+  'investor-thresholds':[['amount',/milhao|milhoes|saldo|limite|financeir|superior|igual/],['attestation',/ateste|document|escrito|comprov/],['base',/patrimonio|imove|imovel|renda|ordem|aplicad|investimento/]],
+  'investor-professionals':[['institutions',/instituic|banco|segurad|capitalizacao|previdencia/],['funds',/fundos?|cotas?|cotista/],['own',/proprios|propria|cliente|titular/],['authorization',/autoriz|administrador|analista|consultor|agente autonomo/]],
+  'investor-qualification':[['exams',/exame|certific|aprov|curso|elegib/],['management',/clube|cotista|gestao|gestor|gerid|gere|administrador/],['own',/proprios|propria|cliente|titular/]],
+  'investor-nonresident':[['territory',/residen|domicil|sede|nacionalidade|exterior|brasil/],['representation',/representa|instituic|autoriz/],['registration',/registro|registrad|comprov|cvm|bacen/],['regime',/regime|procedimento|operac|exigencia|universal/]],
   'portfolio-weights':[['simple',/aritmetic|simples|igual|soma dos valores/],['financial',/valor|posic|participac|financeir|peso/],['normalization',/normaliz|subconjunto|soma dos pesos|total|percentua|decimal/]],
   'portfolio-maturity':[['units',/unidade|convers|equival|decimal|ano.*mes|mes.*ano/],['allocation',/peso|posic|aporte|realoc|valor|participac/],['calendar',/calendario|vencimento|contrat|receb|principal|obrigac|data/]],
   'asset-history':[['base',/preco|cotac|cotad|comprad|percentual|base|inicial|final|taxa/],['sign',/sinal|negativ|positiv|perda|ganho|recuper/],['net',/custos?|despesa|liquid|recebimento/]],
@@ -167,6 +180,7 @@ window.ActiveStudy=(()=>{
  // Relações editoriais: o assunto também é efetivamente cobrado na questão,
  // e não apenas citado no contexto ou nos distratores. IDs continuam estáveis.
  const privateCreditCrossTopics={1257:['debt-repayment'],1258:['loan-contract'],1259:['loan-contract'],1260:['debt-repayment'],1266:['debt-repayment'],1269:['debt-repayment'],1273:['debt-yield'],1276:['debt-yield'],1288:['interest-capitalization'],1289:['interest-capitalization'],1290:['private-debt'],1299:['debt-yield','debt-repayment'],1300:['debt-repayment']};
+ const investorCrossTopics={1408:['investor-thresholds','investor-professionals'],1409:['investor-thresholds','investor-professionals'],1410:['investor-thresholds','investor-professionals'],1418:['investor-professionals'],1427:['investor-qualification'],1429:['investor-categories'],1430:['investor-categories','investor-qualification'],1434:['investor-thresholds'],1435:['investor-professionals'],1438:['investor-professionals'],1439:['investor-professionals','investor-categories'],1440:['investor-professionals']};
  const portfolioCrossTopics={1356:['portfolio-history'],1357:['portfolio-maturity'],1359:['portfolio-history'],1360:['portfolio-expected'],1379:['portfolio-expected'],1380:['payment-net'],1390:['payment-cashflow'],1395:['portfolio-history'],1400:['portfolio-history']};
  const paymentCrossTopics={1303:['payment-cashflow'],1306:['debt-repayment','payment-net'],1307:['debt-repayment'],1316:['payment-net'],1323:['interest-capitalization'],1324:['interest-capitalization'],1330:['interest-capitalization'],1332:['payment-cashflow'],1336:['payment-cashflow'],1337:['payment-cashflow'],1340:['payment-net'],1341:['timevalue'],1343:['debt-yield'],1347:['interest-capitalization'],1350:['payment-cashflow']};
  const found=text=>{const t=fold(text);let ids=subjects.filter(([, ,re])=>re.test(t)).map(([id])=>id);if(ids.includes('selicrate')&&/taxa selic|meta selic|taxa basica|copom/.test(t)&&!/sistema selic|custodia|liquidacao/.test(t))ids=ids.filter(id=>id!=='selicsystem');return ids};
@@ -197,6 +211,7 @@ window.ActiveStudy=(()=>{
   let owners=rule?[...rule[1]]:reduce(found(topic),lesson),parts=[];
   if(rule&&owners.length>1){const detected=reduce(found(body),lesson),specific=owners.filter(o=>detected.includes(o));if(specific.length)owners=specific;}
   if(lesson===13&&/^Crédito privado:/.test(topic))owners.push(...(privateCreditCrossTopics[id]||[]));
+  if(lesson===13&&/^Investidores:/.test(topic))owners.push(...(investorCrossTopics[id]||[]));
   if(lesson===13&&/^Carteiras:/.test(topic))owners.push(...(portfolioCrossTopics[id]||[]));
   if(lesson===13&&/^Fluxos:/.test(topic))owners.push(...(paymentCrossTopics[id]||[]));
   const base={2:'cmn',3:'bc',4:'cvm'}[lesson];
@@ -326,9 +341,16 @@ window.ActiveStudy=(()=>{
   if(hinted.length&&(lockOwners||!owners.some(o=>orgs.has(o))||hinted.some(o=>orgs.has(o))))owners=hinted;
   else if(whole&&!inherited?.length&&!owners.some(o=>orgs.has(o))&&!reduce(found(label),lesson).length)owners=reduce([...owners,...found(text)],lesson);
   if(lesson===13){
-   const riskIds=new Set(['portfolio-weights','portfolio-maturity','asset-history','portfolio-history','portfolio-expected','risk-liquidity','risk-credit','risk-market','risk-rates','rating','creditspread','spread','private-debt','debt-yield','debt-repayment','loan-contract','interest-capitalization','payment-calendar','payment-cashflow','timevalue','npv','payment-net']);
+   const riskIds=new Set(['investor-categories','investor-thresholds','investor-professionals','investor-qualification','investor-nonresident','portfolio-weights','portfolio-maturity','asset-history','portfolio-history','portfolio-expected','risk-liquidity','risk-credit','risk-market','risk-rates','rating','creditspread','spread','private-debt','debt-yield','debt-repayment','loan-contract','interest-capitalization','payment-calendar','payment-cashflow','timevalue','npv','payment-net']);
    const convert=ids=>unique(ids.map(id=>({liquidity:'risk-liquidity',credit:'risk-credit',markets:'risk-market'}[id]||id)).filter(id=>riskIds.has(id)));
    const anchor=value=>{const t=fold(value);
+    if(/^categorias$|^categorias e relacoes|^relacao entre categorias|^categorias.*acesso/.test(t))return ['investor-categories'];
+    if(/^limites e ateste|^limite de qualificacao|^limite profissional|^financeiro.*escrito|^mais de.*igual|^limite nao e patrimonio|^ateste qualificado|^via financeira|^via financeira de/.test(t))return ['investor-thresholds'];
+    if(/^profissionais e recursos proprios|^instituicoes profissionais|^atuacao autorizada|^cotista.*fundo|^recursos proprios.*cliente/.test(t))return ['investor-professionals'];
+    if(/^qualificacao e gestao de clubes|^exames e certificacoes|^clubes de investimento|^clube profissional|^cotista qualificado|^certificado generico/.test(t))return ['investor-qualification'];
+    if(/^autorizacao.*aprovacao/.test(t))return ['investor-professionals','investor-qualification'];
+    if(/^quem investe e de quem/.test(t))return ['investor-professionals','investor-qualification'];
+    if(/^nao residentes?|^representacao e registros|^nacionalidade|^registro.*autorizacao|^modelo operacional/.test(t))return ['investor-nonresident'];
     if(/^medias e pesos|^media aritmetica|^media ponderada|^pesos da carteira|^pesos em reais|^conferencia da media|^soma dos pesos de uma carteira|^subconjunto/.test(t))return ['portfolio-weights'];
     if(/^prazo medio|^media e calendario|^vencimento contratual|^parte decimal do ano|^exemplo proprio de prazo|^equivalencia de um ano|^calendario dos titulos/.test(t))return ['portfolio-maturity'];
     if(/^retorno historico do ativo|^preco.*taxa|^variacao de cotacao/.test(t))return ['asset-history'];
@@ -372,7 +394,7 @@ window.ActiveStudy=(()=>{
   }
   let micro=microFacets(owners,label+' '+text);
   if(!micro.length)micro=microFacets(owners,[...parents].reverse().find(p=>microFacets(owners,p).length)||'');
-  if(whole&&lesson===13&&['medias e pesos','prazo medio e vencimento','retorno historico do ativo','retorno historico da carteira','retorno esperado e comparacao','emissor e divida','juros e indexadores','amortizacao e resgate','emprestimo e mutuo','capitalizacao financeira','cronograma contratual','caixa e perspectivas','equivalencia temporal','valor presente liquido','cupons e retorno liquido'].includes(fold(label)))micro=[];
+  if(whole&&lesson===13&&['categorias e relacoes','limites e ateste','profissionais e recursos proprios','qualificacao e gestao de clubes','nao residentes e representacao','medias e pesos','prazo medio e vencimento','retorno historico do ativo','retorno historico da carteira','retorno esperado e comparacao','emissor e divida','juros e indexadores','amortizacao e resgate','emprestimo e mutuo','capitalizacao financeira','cronograma contratual','caixa e perspectivas','equivalencia temporal','valor presente liquido','cupons e retorno liquido'].includes(fold(label)))micro=[];
   return {owners:unique(owners),facets:unique(fs),micro};
  }
  function directMatching(source){

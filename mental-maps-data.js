@@ -1363,5 +1363,65 @@ window.MENTAL_MAPS=[
         "Retorno esperado e comparação"
       ]
     ]
+  },
+  {
+    "id": "aula-13-5",
+    "lesson": 13,
+    "block": 5,
+    "title": "Classificação de Investidores",
+    "branches": [
+      [
+        "Enquadramento",
+        [
+          "Profissional também é qualificado",
+          "Qualificado não é necessariamente profissional",
+          "Categoria não é perfil de risco"
+        ]
+      ],
+      [
+        "Limites financeiros",
+        [
+          "Qualificado: mais de R$ 1 milhão + ateste específico",
+          "Profissional: mais de R$ 10 milhões + ateste específico",
+          "Investimentos financeiros, não patrimônio total"
+        ]
+      ],
+      [
+        "Rotas específicas",
+        [
+          "Instituições previstas: profissionais",
+          "Atuação autorizada: recursos próprios",
+          "Exames elegíveis: qualificado em recursos próprios",
+          "Clubes: conferir quem gere a carteira"
+        ]
+      ],
+      [
+        "Não residente",
+        [
+          "Residência, sede ou domicílio no exterior",
+          "Investe no Brasil",
+          "Procedimentos: verificar regras aplicáveis"
+        ]
+      ]
+    ],
+    "note": "Limites financeiros são uma via de enquadramento. Outras categorias têm requisitos próprios.",
+    "src": "assets/mental-maps/aula-13-5.webp",
+    "sourceTitle": "Classificação de Investidores",
+    "sourceSha256": "85d37906a1b0ddf5f8466c7b3ffbe0a7f4f8fa66d78e7c05624b091029d85b9e",
+    "conceptBindings": [
+      [
+        "Categorias e relações"
+      ],
+      [
+        "Limites e ateste"
+      ],
+      [
+        "Profissionais e recursos próprios",
+        "Qualificação e gestão de clubes"
+      ],
+      [
+        "Não residentes e representação"
+      ]
+    ]
   }
 ];

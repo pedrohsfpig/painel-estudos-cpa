@@ -1,0 +1,1013 @@
+{
+  "data": "2026-10-30",
+  "aula": 13,
+  "unidade": 5,
+  "titulo": "Aula 5: Classificação de Investidores",
+  "quantidades": {
+    "Q": 50,
+    "niveis": [
+      10,
+      20,
+      10,
+      10
+    ],
+    "estudo_simulado": 40,
+    "HC": 10,
+    "BP": 25,
+    "FC": 25,
+    "FC_niveis": [
+      8,
+      9,
+      8
+    ]
+  },
+  "fontes": {
+    "transcricao": {
+      "sediment": "file_000000001a70820eaf81b402fd9e2df5",
+      "aula": 29,
+      "sha256": "27c6aa27af6b9528a08fe86637c2f7c6b1b692c647a843e3bdf9b0954e273c2f"
+    },
+    "slides": [
+      "1: Categorias e investidor profissional",
+      "2: Qualificado e não residente"
+    ]
+  },
+  "preservacao": {
+    "Q": {
+      "count": 1400,
+      "sha256": "c2633bce3bf36acf7b96719d285e3a18636a8e4eba2ea64429484cdd7db60492"
+    },
+    "BP": {
+      "count": 700,
+      "sha256": "c37cf58e26f1df340179bcef957bcb85013a475903da21a8d46a94f400e9228f"
+    },
+    "AL": "03f78cdeb11228822c30ee098d9332382abb9462d5bf54503c01ebd02ca96d17",
+    "MAT": "4ccb95c5f89e398fdefae4a529250389a15c298d283ce3fb7406e19454889d11",
+    "aula13_o": "Bloco final com Riscos Financeiros, Crédito Privado, Fluxo de Pagamentos e Prazos e Retornos de Carteiras. Revise cada aula interna ou pratique o conjunto.",
+    "unidades_AL": "16da58023f9629ba43dba05bdeba2cecdf3cbec1ff48f2e0db6c80b26a33a571",
+    "unidades_MAT": "a49e7c57be0e02d7ef1754315e40972be2f209342293593ff0807330044fbc45"
+  },
+  "itens": [
+    {
+      "id": 1401,
+      "tema": "Investidores: categorias e relações",
+      "nivel": 0,
+      "angulo": "Finalidade da classificação para acesso a produtos",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "6d8aaef42f4d16b24429ee898974add1380af58f8d09223542dd2724815d3113"
+    },
+    {
+      "id": 1402,
+      "tema": "Investidores: categorias e relações",
+      "nivel": 0,
+      "angulo": "Inclusão de profissional entre qualificados",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "bd3bd4aee74666b789571c9e21ab0cb29cc932af3e24343a936b0daa70167d61"
+    },
+    {
+      "id": 1403,
+      "tema": "Investidores: categorias e relações",
+      "nivel": 1,
+      "angulo": "Não inverter a implicação entre categorias",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "08a32995754624c6cc1ae76c527d5adb4381c8dc85409a1bba3da15cb8b8744b"
+    },
+    {
+      "id": 1404,
+      "tema": "Investidores: categorias e relações",
+      "nivel": 1,
+      "angulo": "Restrição profissional não se satisfaz só com qualificação",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "c45ce9f45146a6fbeb53eb8e40928b02d35f84860e9998bbc92355c620a65d4a"
+    },
+    {
+      "id": 1405,
+      "tema": "Investidores: categorias e relações",
+      "nivel": 1,
+      "angulo": "Categoria não substitui perfil de risco",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "d00a2e1779884e4bf4ca645185cbb3fbe7186c93120ed5ba629a237e0ab98b28"
+    },
+    {
+      "id": 1406,
+      "tema": "Investidores: categorias e relações",
+      "nivel": 1,
+      "angulo": "Instituição classificadora e autorização operacional",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "8bd7d935dbfad81a34adef7d9bab2b9cb3212d9b8a90f25b0ede951ab0b7fb5f"
+    },
+    {
+      "id": 1407,
+      "tema": "Investidores: categorias e relações",
+      "nivel": 2,
+      "angulo": "Classificação não é título ocupacional",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "0d79f2f8b96edaea93cc6e843e048abb200e47612f9dcb178ac27e72db360223"
+    },
+    {
+      "id": 1408,
+      "tema": "Investidores: categorias e relações",
+      "nivel": 2,
+      "angulo": "Testar afirmação universal sobre patrimônio de profissionais",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "1b091ad47958218a9ea0428a43ddad0a2935457365b592f531a9a0190ef3ad00"
+    },
+    {
+      "id": 1409,
+      "tema": "Investidores: categorias e relações",
+      "nivel": 3,
+      "angulo": "Alocar três perfis em duas ofertas com públicos diferentes",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "48ab7436291f12fe605e73ff252a5880b09ccdc476332547ce49e7c8c4648ef5"
+    },
+    {
+      "id": 1410,
+      "tema": "Investidores: categorias e relações",
+      "nivel": 3,
+      "angulo": "Separar ordem própria e dois clientes com requisitos distintos",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "39144d2d3fc61602988ce4cc555bc9dc943c8fef12135d9da5f1c54bb716c7c8"
+    },
+    {
+      "id": 1411,
+      "tema": "Investidores: limites e ateste",
+      "nivel": 0,
+      "angulo": "Limite financeiro de qualificação",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "83777d7c75a80830bd7a6643435d34a48d4453085947ac9104f216866357db95"
+    },
+    {
+      "id": 1412,
+      "tema": "Investidores: limites e ateste",
+      "nivel": 0,
+      "angulo": "Limite financeiro da condição profissional",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "d6fb85f92d2de9f578d742be9219c33a200de2fc61de2b17be3000db56bd4e38"
+    },
+    {
+      "id": 1413,
+      "tema": "Investidores: limites e ateste",
+      "nivel": 1,
+      "angulo": "Fronteira exata de um milhão",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "c47572b8041f351c491e41345ac9a6d22a342bef05cf592dc1a48d97363ab530"
+    },
+    {
+      "id": 1414,
+      "tema": "Investidores: limites e ateste",
+      "nivel": 1,
+      "angulo": "Fronteira exata de dez milhões",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "8d9eee90a7f96672199fa47e1500129a8017d4aab8b9d98c3634f2bd677f7e7a"
+    },
+    {
+      "id": 1415,
+      "tema": "Investidores: limites e ateste",
+      "nivel": 1,
+      "angulo": "Saldo alto sem ateste",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "30e18b68a4d32e62a0b0eec8cd44a1452cfcbc6b0cfc51c903a5180e1ce244da"
+    },
+    {
+      "id": 1416,
+      "tema": "Investidores: limites e ateste",
+      "nivel": 1,
+      "angulo": "Base financeira não inclui automaticamente patrimônio físico",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "b5b6b567ef7e18544b76d9d711fd9c6db9059e69f722c276ca4da5cfbaa1bdf3"
+    },
+    {
+      "id": 1417,
+      "tema": "Investidores: limites e ateste",
+      "nivel": 2,
+      "angulo": "Documento de categoria distinta não demonstra condição profissional",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "902287d169c7aecb26b86c751cc8d7073b5426b4824fdc8e4d7c32561e73628f"
+    },
+    {
+      "id": 1418,
+      "tema": "Investidores: limites e ateste",
+      "nivel": 2,
+      "angulo": "Distinguir PJ não financeira de instituição prevista",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "25a74320d32a862a27f342d4ae37c1eb9b65e634e69978ae8f1080491ede3d24"
+    },
+    {
+      "id": 1419,
+      "tema": "Investidores: limites e ateste",
+      "nivel": 3,
+      "angulo": "Avaliar três cadastros com condições cumulativas",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "d1c90f3bbb7a92e1fc52153714f0ef61680655e0a6281bf67fa8e2a022d920bf"
+    },
+    {
+      "id": 1420,
+      "tema": "Investidores: limites e ateste",
+      "nivel": 3,
+      "angulo": "Alocação não altera base total de enquadramento",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "cd2a504b0e75b674a94ebe571f0ad424c68ef7c8640b5ac52ffa2629d2c36df4"
+    },
+    {
+      "id": 1421,
+      "tema": "Investidores: profissionais e recursos próprios",
+      "nivel": 0,
+      "angulo": "Seguradora como instituição prevista",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1"
+      ],
+      "sha256": "a8213595eb37af4461931d7d14527caf485a83f6ac1df2bb1df86cab78be133a"
+    },
+    {
+      "id": 1422,
+      "tema": "Investidores: profissionais e recursos próprios",
+      "nivel": 0,
+      "angulo": "Previdência aberta e fechada previstas",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1"
+      ],
+      "sha256": "92d947cd247f6662c24fcb47c192e510cc94c2d947dc079ff05bfd67aef0981f"
+    },
+    {
+      "id": 1423,
+      "tema": "Investidores: profissionais e recursos próprios",
+      "nivel": 1,
+      "angulo": "Outras instituições autorizadas pelo BACEN",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1"
+      ],
+      "sha256": "ff94be53ff3320331a6f6f7057d3a60803640af2c52d1485167ed881018d21b4"
+    },
+    {
+      "id": 1424,
+      "tema": "Investidores: profissionais e recursos próprios",
+      "nivel": 1,
+      "angulo": "Fundo pode investir em outro fundo restrito",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1"
+      ],
+      "sha256": "c98662fcd1235d2fd03085508e8908da79a050420fb7edbebd1864481438fc7b"
+    },
+    {
+      "id": 1425,
+      "tema": "Investidores: profissionais e recursos próprios",
+      "nivel": 1,
+      "angulo": "Autorização profissional vale para recursos próprios",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1"
+      ],
+      "sha256": "155f6706a35fe0840c637ebabe93c886536bea7b1e0bf36127b4e11174f7ac8d"
+    },
+    {
+      "id": 1426,
+      "tema": "Investidores: profissionais e recursos próprios",
+      "nivel": 1,
+      "angulo": "Sociedade de capitalização não é regime composto",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1"
+      ],
+      "sha256": "de51dbaf596e59a48f2577ad3607b116d731595908ecf53be21c0e83b7f96eed"
+    },
+    {
+      "id": 1427,
+      "tema": "Investidores: profissionais e recursos próprios",
+      "nivel": 2,
+      "angulo": "Registro do profissional versus simples aprovação em exame",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "70bb5530e88000b4c6855e34a7c9929c4ab3fd8764a657f0f0cbf58557b3bf51"
+    },
+    {
+      "id": 1428,
+      "tema": "Investidores: profissionais e recursos próprios",
+      "nivel": 2,
+      "angulo": "Revisar exclusões indevidas de três grupos institucionais",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1"
+      ],
+      "sha256": "e0563087a5868f06a86ed31f29f82e26e95b3993805fb77d65a76a0ac1d5587b"
+    },
+    {
+      "id": 1429,
+      "tema": "Investidores: profissionais e recursos próprios",
+      "nivel": 3,
+      "angulo": "Separar patrimônio de fundo e categoria do cotista",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1"
+      ],
+      "sha256": "8a330231251abacfa45b9847bd3463e3e3bd4892096205ca5909ed652c858225"
+    },
+    {
+      "id": 1430,
+      "tema": "Investidores: profissionais e recursos próprios",
+      "nivel": 3,
+      "angulo": "Validar conjunto de afirmações sobre quatro vias de enquadramento",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "c059a3a5a83f9bf75a5a77ce3022b19e2ed3e047136cb2ad0b8c385ac2940a31"
+    },
+    {
+      "id": 1431,
+      "tema": "Investidores: qualificação e gestão de clubes",
+      "nivel": 0,
+      "angulo": "Via qualificada por exame elegível",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "617242457fc3c2e183c31318209589fa7d04f554c10390f31795d2ee3be78a06"
+    },
+    {
+      "id": 1432,
+      "tema": "Investidores: qualificação e gestão de clubes",
+      "nivel": 0,
+      "angulo": "Gestão do clube qualificado",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "fe494af0c176bf736f7ea35fcf96600e67a4f21a0b6365b5876b8dbb91fb6e55"
+    },
+    {
+      "id": 1433,
+      "tema": "Investidores: qualificação e gestão de clubes",
+      "nivel": 1,
+      "angulo": "Certificação genérica não é certificação elegível",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "073a49ce1fc76874a2cf561d5aae5cb7b89fc912fde20b135c33f028691592cf"
+    },
+    {
+      "id": 1434,
+      "tema": "Investidores: qualificação e gestão de clubes",
+      "nivel": 1,
+      "angulo": "Exame específico não exige um milhão nessa rota",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "0a965f4164b22e9ee42c57b7f572e5587e575944612b6030706c077e5aef534c"
+    },
+    {
+      "id": 1435,
+      "tema": "Investidores: qualificação e gestão de clubes",
+      "nivel": 1,
+      "angulo": "Clube profissional exige gestor autorizado",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "9e4f3b4751748a1f57a1727de90c9cb00778706895cb0c1393f362220ef710d7"
+    },
+    {
+      "id": 1436,
+      "tema": "Investidores: qualificação e gestão de clubes",
+      "nivel": 1,
+      "angulo": "Existência de cotista qualificado sem gestão não basta",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "37da1b2ad3b18c2981d34d4f9b4d3e3194306ac9fb1985637a478817d9045867"
+    },
+    {
+      "id": 1437,
+      "tema": "Investidores: qualificação e gestão de clubes",
+      "nivel": 2,
+      "angulo": "Não exigir todos os cotistas qualificados",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "bddf8b45a104d6c21bee047c9356c2fbcfd5f151f4066c1c8b22cc987dddd591"
+    },
+    {
+      "id": 1438,
+      "tema": "Investidores: qualificação e gestão de clubes",
+      "nivel": 2,
+      "angulo": "Cotista qualificado não é automaticamente administrador autorizado",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "73fcdfca52129a5e82d5e171d0915cc460befa5ade00bf09265622fbb94cf40c"
+    },
+    {
+      "id": 1439,
+      "tema": "Investidores: qualificação e gestão de clubes",
+      "nivel": 3,
+      "angulo": "Comparação integrada de gestão de dois clubes",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "0d1f882ea56b2acd1b56b3663638f0f50e8fd1c35b1349df96fa55b68fa0ff5f"
+    },
+    {
+      "id": 1440,
+      "tema": "Investidores: qualificação e gestão de clubes",
+      "nivel": 3,
+      "angulo": "Propriedade dos recursos em via de exame e cliente",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 1",
+        "Slide 2"
+      ],
+      "sha256": "b5f1e799acb579bd97cea5ca854327e17f6cb81dbd682b5970ff83a3fb0d844e"
+    },
+    {
+      "id": 1441,
+      "tema": "Investidores: não residentes e representação",
+      "nivel": 0,
+      "angulo": "Domicílio externo com investimento no Brasil",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 2"
+      ],
+      "sha256": "6b356046c7735fc98a0ab05b32b0e8613b85a8d8a23018ff65425a9c2476a1f7"
+    },
+    {
+      "id": 1442,
+      "tema": "Investidores: não residentes e representação",
+      "nivel": 0,
+      "angulo": "Tipos de sujeitos abrangidos pela definição",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 2"
+      ],
+      "sha256": "b90f1d08e7139d7c38f8b64b6915dbdd9ef7f2f524050106abb4bec9264b937a"
+    },
+    {
+      "id": 1443,
+      "tema": "Investidores: não residentes e representação",
+      "nivel": 1,
+      "angulo": "Nacionalidade brasileira não impede domicílio externo",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 2"
+      ],
+      "sha256": "ad2a96387a8178c6149ee2a19e4756e17c9701e48056d689591fa18d544ac6b7"
+    },
+    {
+      "id": 1444,
+      "tema": "Investidores: não residentes e representação",
+      "nivel": 1,
+      "angulo": "Não inverter residência do investidor e destino do investimento",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 2"
+      ],
+      "sha256": "322c424cd454863b963699ab68f9c61b1309c160371022b8d02afdee510c065b"
+    },
+    {
+      "id": 1445,
+      "tema": "Investidores: não residentes e representação",
+      "nivel": 1,
+      "angulo": "Operação com exigência expressa de registro: autoridade indicada",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 2"
+      ],
+      "sha256": "d1f97babf327e3e8806de995d5592f62579a0bd65f415d335628396d6e4d502c"
+    },
+    {
+      "id": 1446,
+      "tema": "Investidores: não residentes e representação",
+      "nivel": 1,
+      "angulo": "Representante local não muda domicílio do titular",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 2"
+      ],
+      "sha256": "7066729aa0071df1ca262b4ca959348d1d3a58bf8986687da20b854427e65783"
+    },
+    {
+      "id": 1447,
+      "tema": "Investidores: não residentes e representação",
+      "nivel": 2,
+      "angulo": "Natureza do representante no modelo estipulado",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 2"
+      ],
+      "sha256": "5fefca7de31b75b07ef23d2dfd815831b4c38afb9dd85b76e8699ccac32c61b8"
+    },
+    {
+      "id": 1448,
+      "tema": "Investidores: não residentes e representação",
+      "nivel": 2,
+      "angulo": "Registro do investidor não comprova o do representante",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 2"
+      ],
+      "sha256": "ff8fe210464ff13ccc28629242b02360cf0dd4698d687984da286ff8a1001924"
+    },
+    {
+      "id": 1449,
+      "tema": "Investidores: não residentes e representação",
+      "nivel": 3,
+      "angulo": "Conferência integrada do procedimento expressamente exigido",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 2"
+      ],
+      "sha256": "e012eebe9e90f34b328088059e3390c7307237f69806dc011e789eee0d20743e"
+    },
+    {
+      "id": 1450,
+      "tema": "Investidores: não residentes e representação",
+      "nivel": 3,
+      "angulo": "Não generalizar procedimento de um regime a todas as operações",
+      "fontes": [
+        "Transcrição 29",
+        "Slide 2"
+      ],
+      "sha256": "9abc95dfbf7786eb4ea08b9ee8dea7411b6927e2a67085d1f9922a09a10b0db4"
+    }
+  ],
+  "bate_pronto": [
+    {
+      "id": 100701,
+      "angulo": "Sentido da inclusão",
+      "sha256": "0fe574c4110151d8f31a53baa5a71f9cbce07263b18ed1bb465502d38a14f340"
+    },
+    {
+      "id": 100702,
+      "angulo": "Limite da recíproca",
+      "sha256": "9ef1a30b5bb4224ffc8677af77d0440fe60cc5f49218a48e717e76eb49c61ad8"
+    },
+    {
+      "id": 100703,
+      "angulo": "Categoria e adequação",
+      "sha256": "c20d69d3bd405f8c9aeba6b165b80c1c6bd1d0b7eff68a331ca3ecc964e1e0a1"
+    },
+    {
+      "id": 100704,
+      "angulo": "Instituição classificadora",
+      "sha256": "14d651499466d857a71d3fc34aee569b31b8f702d1e6684307dad9dfe7eb0a5b"
+    },
+    {
+      "id": 100705,
+      "angulo": "Requisitos cumulativos",
+      "sha256": "997a4360836c7b163c62a8c4091a10fb37ba96b75ccca193453a723218e68899"
+    },
+    {
+      "id": 100706,
+      "angulo": "Comparador estrito",
+      "sha256": "62e2647e5a9b460f74f88c549f398fde890abd3bb8b016f2d46d2f73a47f7b9d"
+    },
+    {
+      "id": 100707,
+      "angulo": "Natureza da base",
+      "sha256": "1d651494d3a564a6aea4ca546d9315c3ee5c26903a515f2d257474d01ab9be3f"
+    },
+    {
+      "id": 100708,
+      "angulo": "Documento adicional",
+      "sha256": "2dad3126def6588266af4c3ea8df158ee438aeb2fbf1f8ef00cfee0f2d027e3f"
+    },
+    {
+      "id": 100709,
+      "angulo": "Categoria declarada",
+      "sha256": "b55fdd7833876eebcdae64c5d85215f1039cb25ed374bcf987dd452dfb0e9933"
+    },
+    {
+      "id": 100710,
+      "angulo": "Sujeito da via financeira",
+      "sha256": "a9e80f68601407d02055b881ed728000558f59701ed86e8af716ed22e6d8bc79"
+    },
+    {
+      "id": 100711,
+      "angulo": "Seguros e categoria",
+      "sha256": "34733d61b560cfcaecdb141d5639112fb39e04f5c9fbb3d81c9993ba8dee95d1"
+    },
+    {
+      "id": 100712,
+      "angulo": "Previdência e categoria",
+      "sha256": "00cb39038e51a1cd05dd3bef64f24f5ef61b374ed66caaa0bbc2e0b35455b375"
+    },
+    {
+      "id": 100713,
+      "angulo": "Recursos na atuação autorizada",
+      "sha256": "362b099384389b7cff45df10c00a00edb5b583231c8e375b76b2005c24860443"
+    },
+    {
+      "id": 100714,
+      "angulo": "Fundo versus cotista",
+      "sha256": "6c1dd037cbfe1da2d0cd89d9d554caec7ae53c487c51fc3d4656e4692ab799c6"
+    },
+    {
+      "id": 100715,
+      "angulo": "Exame versus autorização",
+      "sha256": "ce9c915fc49127341626f37e9103308b258b959a0b43cfbb0492fbd5d0ae09ac"
+    },
+    {
+      "id": 100716,
+      "angulo": "Elegibilidade",
+      "sha256": "a816a9c474d590c2196208ca5ced06e047b1ea22acbb5feb4cb178428af6b92f"
+    },
+    {
+      "id": 100717,
+      "angulo": "Gestor qualificado",
+      "sha256": "dc599adf26b857bb7eed2f29ea1816314d8ec35722107b2cfb603bab313d523f"
+    },
+    {
+      "id": 100718,
+      "angulo": "Gestor profissional",
+      "sha256": "ea19ba8d4dd026ce5c6622a81a8f69f780e1999b64f0bd0feed43a1bf9346620"
+    },
+    {
+      "id": 100719,
+      "angulo": "Quantidade de cotistas",
+      "sha256": "3201ddf3b258110876fa224c95c32a39e0d177f6c43478b83fb9ce19fe0683c7"
+    },
+    {
+      "id": 100720,
+      "angulo": "Via independente",
+      "sha256": "11bca126acdce96508d064596913b119c58680db92d3b1343daadb94ba351a92"
+    },
+    {
+      "id": 100721,
+      "angulo": "Critério territorial",
+      "sha256": "d342cb3f30f8cdd28798c58ac947db45a5f19bbe1c567d219a2fe50393a92052"
+    },
+    {
+      "id": 100722,
+      "angulo": "Destino",
+      "sha256": "0fe6923508354bcb75a830b5a5d65e26d4a650be4492c0ccb1e50eb253955c18"
+    },
+    {
+      "id": 100723,
+      "angulo": "Representação e sede",
+      "sha256": "e192444e7d63f28ebc6c11997b96d17bde3f6bfdbe8361dbbaa14e3e10d65835"
+    },
+    {
+      "id": 100724,
+      "angulo": "Documentos distintos",
+      "sha256": "0aba676fca460b98813c5bcfe0dee6fb1cbeb5151d0b3db2ae9ccc45668e694e"
+    },
+    {
+      "id": 100725,
+      "angulo": "Regime aplicável",
+      "sha256": "8fcbf338112b6866c4acbf09a0f346ce84d33c5d17b1085657938ded7e77c93d"
+    }
+  ],
+  "flashcards": [
+    {
+      "indice": 0,
+      "nivel": 0,
+      "sha256": "a315cb72b99886363a2f7a3f5de68d81ba637f54ce0240d96188bb96f5cf885c"
+    },
+    {
+      "indice": 1,
+      "nivel": 0,
+      "sha256": "32b9ba185b5f931e3ca530c3cac7f8f0f4672300d4357098f899866a47f74026"
+    },
+    {
+      "indice": 2,
+      "nivel": 1,
+      "sha256": "54723d6d3e03400581b94eb88ca388e9895c165a304919182cb2287e302a9f00"
+    },
+    {
+      "indice": 3,
+      "nivel": 1,
+      "sha256": "7869db0453f2f2802505a34af7afdc5edaa0df9c32040b6a283bd7b52fbcb124"
+    },
+    {
+      "indice": 4,
+      "nivel": 2,
+      "sha256": "fee96e45c1d61987eab4abe195a65dd4e9293f87e1cd5994746ff861d6066ad5"
+    },
+    {
+      "indice": 5,
+      "nivel": 0,
+      "sha256": "db88c26030ad1b52d29c2eb9e80c32b4f48f1b2de076084e9314617522cdf2a1"
+    },
+    {
+      "indice": 6,
+      "nivel": 0,
+      "sha256": "dc1464d975fb8306099474c511d88def5d9e23f932e727a80e99a6ad382b6b9d"
+    },
+    {
+      "indice": 7,
+      "nivel": 1,
+      "sha256": "c8e5be74a24f46dc50c33a863df06c47d8dec12d33f98d7f881162e4f004fa81"
+    },
+    {
+      "indice": 8,
+      "nivel": 1,
+      "sha256": "395c2814319c47509f7d8fe21e0188e9a3b43bc7d6932867f8caecbcd63d3790"
+    },
+    {
+      "indice": 9,
+      "nivel": 2,
+      "sha256": "1e821646b6a01f3c7f3187d03b95d311aaa9a48defc2cd84ba1f9a41a2cc26a9"
+    },
+    {
+      "indice": 10,
+      "nivel": 0,
+      "sha256": "968de96dc607a34ef72ab2996c299cffc12fb3575d0c944a0f5d0cb266acb3e4"
+    },
+    {
+      "indice": 11,
+      "nivel": 0,
+      "sha256": "84fca40fb5d0a3dca0abdb3b20c60b4249816a6b1070c6381c14d7c211bba8e6"
+    },
+    {
+      "indice": 12,
+      "nivel": 1,
+      "sha256": "d13e83cd877e23cf7542b671d85ea82744ae300822d1f5c875921f5c82952d0c"
+    },
+    {
+      "indice": 13,
+      "nivel": 2,
+      "sha256": "409b9acdc2a3f50c57cbc3463e8da1f7d075f482ec224fd1c49f109d4ce3bdb1"
+    },
+    {
+      "indice": 14,
+      "nivel": 2,
+      "sha256": "4189a3b2373d250d7d4064eda8618ac84c8a66c14141762b0c1db9d7110cfab3"
+    },
+    {
+      "indice": 15,
+      "nivel": 0,
+      "sha256": "9743ba25c1a67a0faf62eaf11b6a5bb06945460fe83aa99ad770e5b1227456a8"
+    },
+    {
+      "indice": 16,
+      "nivel": 1,
+      "sha256": "383aa8d88bfdbb0cb37c07a89a36879319ad1dd4155c7ae248c017b708671453"
+    },
+    {
+      "indice": 17,
+      "nivel": 1,
+      "sha256": "f6b52511347e3efe255bdb08f14b7b55a1bbbd3b0e08fbdaf0c01742727c3898"
+    },
+    {
+      "indice": 18,
+      "nivel": 2,
+      "sha256": "359f6c4f43b2e997fc6adb133a7a76a51fcb6e046fdb3bf23ce1ee31919802aa"
+    },
+    {
+      "indice": 19,
+      "nivel": 2,
+      "sha256": "682bbbf5c7a1954a6141f404d40eeb89e08d70eac217b6592950be5f92280ceb"
+    },
+    {
+      "indice": 20,
+      "nivel": 0,
+      "sha256": "629fa6042c2b27b65c228246dddf50bb0847b3f9fb4c580d4b3e321cc12780a1"
+    },
+    {
+      "indice": 21,
+      "nivel": 1,
+      "sha256": "79c456d45e8cdc497c08e20dd15f969ad4808c28b1ee61cfd75ff945c0289143"
+    },
+    {
+      "indice": 22,
+      "nivel": 1,
+      "sha256": "cfc2148a044347918318e19d48cf080fa319e407c7674c8a5c1c81b04e46625c"
+    },
+    {
+      "indice": 23,
+      "nivel": 2,
+      "sha256": "4aa121fdab30e4dfe98404dd29acf5ceee7a73207792ba95a4c38056014685a1"
+    },
+    {
+      "indice": 24,
+      "nivel": 2,
+      "sha256": "7eeab4ffbe8c1c10d9414278d0b882b97416629650e8298e94c54fa324bfff26"
+    }
+  ],
+  "correcoes_fontes": [
+    "1k no quadro-resumo do slide e na fala abreviada não significa R$ 1 mil; o corpo especifica R$ 1 milhão.",
+    "Superior a não inclui igualdade; a fala pelo menos não altera os limites estritos escritos.",
+    "Investimentos financeiros, não patrimônio total, são a base da via financeira.",
+    "Atuação autorizada e exame elegível são condições distintas; recursos próprios não são recursos de clientes.",
+    "Categorias sobrepõem-se: profissional também é qualificado; não inverter a inclusão."
+  ],
+  "consulta_normativa": {
+    "tentada": true,
+    "fontes": [
+      "https://conteudo.cvm.gov.br/legislacao/resolucoes/resol030.html",
+      "https://conteudo.cvm.gov.br/legislacao/resolucoes/resol013.html"
+    ],
+    "resultado": "Acesso bloqueado pelo proxy: CONNECT 403",
+    "certificacao_de_vigencia": false,
+    "tratamento": "Procedimentos de não residentes identificados como modelo da fonte, sem afirmação de universalidade vigente. Questões operacionais estipulam as exigências no próprio caso; inclusão de não residente validada é premissa explícita quando cobrada."
+  },
+  "validacao": [
+    {
+      "suite": "validate_bank; audit_alternatives --check; test_alternative_quality; test_question_design",
+      "resultado": "aprovados"
+    },
+    {
+      "suite": "test_aula13_investidores",
+      "testes": 9,
+      "resultado": "aprovados; enunciados, fontes, preservação, materiais, modos, feedbacks e números atuais"
+    },
+    {
+      "suite": "quatro internas anteriores e test_visual_mental_maps",
+      "testes": 48,
+      "resultado": "aprovados; 30 mapas e reconstrução dos estados históricos"
+    },
+    {
+      "suite": "test_bate_pronto",
+      "testes": 8,
+      "resultado": "aprovados após corrigir limite de lacunas do teste para cada aula interna, sem alterar os cartões para atender uma constante antiga"
+    },
+    {
+      "suite": "test_question_feedback",
+      "testes": 7,
+      "resultado": "aprovados"
+    },
+    {
+      "suite": "test_consulta_refinements; test_content_search; test_search_refinements; test_practice_navigation; test_exam_guide",
+      "testes": 39,
+      "resultado": "aprovados"
+    },
+    {
+      "suite": "revisão editorial e visual",
+      "resultado": "50 questões com ângulos registrados; limites, recursos próprios, qualificadores e imagem conferidos; dois temas e três larguras"
+    },
+    {
+      "suite": "smoke",
+      "testes": 76,
+      "resultado": "aprovados; banco inteiro, sessões, navegação, persistência, materiais e feedbacks no navegador"
+    }
+  ],
+  "mapa_visual": {
+    "catalogo": {
+      "id": "aula-13-5",
+      "lesson": 13,
+      "block": 5,
+      "title": "Classificação de Investidores",
+      "branches": [
+        [
+          "Enquadramento",
+          [
+            "Profissional também é qualificado",
+            "Qualificado não é necessariamente profissional",
+            "Categoria não é perfil de risco"
+          ]
+        ],
+        [
+          "Limites financeiros",
+          [
+            "Qualificado: mais de R$ 1 milhão + ateste específico",
+            "Profissional: mais de R$ 10 milhões + ateste específico",
+            "Investimentos financeiros, não patrimônio total"
+          ]
+        ],
+        [
+          "Rotas específicas",
+          [
+            "Instituições previstas: profissionais",
+            "Atuação autorizada: recursos próprios",
+            "Exames elegíveis: qualificado em recursos próprios",
+            "Clubes: conferir quem gere a carteira"
+          ]
+        ],
+        [
+          "Não residente",
+          [
+            "Residência, sede ou domicílio no exterior",
+            "Investe no Brasil",
+            "Procedimentos: verificar regras aplicáveis"
+          ]
+        ]
+      ],
+      "note": "Limites financeiros são uma via de enquadramento. Outras categorias têm requisitos próprios.",
+      "src": "assets/mental-maps/aula-13-5.webp",
+      "sourceTitle": "Classificação de Investidores",
+      "sourceSha256": "85d37906a1b0ddf5f8466c7b3ffbe0a7f4f8fa66d78e7c05624b091029d85b9e",
+      "conceptBindings": [
+        [
+          "Categorias e relações"
+        ],
+        [
+          "Limites e ateste"
+        ],
+        [
+          "Profissionais e recursos próprios",
+          "Qualificação e gestão de clubes"
+        ],
+        [
+          "Não residentes e representação"
+        ]
+      ]
+    },
+    "arquivo_sha256": "0b0ae5ad93f293dd243a9ff7b0485b01b698f89db1fac746958215476f9687d0",
+    "dimensoes": [
+      1536,
+      1024
+    ],
+    "revisao": "Limites estritos, atestes, recursos próprios e relações conferidos visualmente."
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "data": "2026-10-30",
+  "criterio": "Cartões reservados a valores normativos/factuais específicos do conteúdo. Contagens didáticas, símbolos, identidades de fórmulas e conversões básicas ficam nas explicações, sem preencher Números para decorar.",
+  "aulas_verificadas": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "aula": 13,
+  "antes": [
+    [
+      "2",
+      "óticas da liquidez: financiamento e mercado"
+    ],
+    [
+      "1 período",
+      "simples e composto coincidem com mesmo capital e taxa, sem fluxos intermediários"
+    ],
+    [
+      "n",
+      "número de períodos compatível com a taxa i"
+    ],
+    [
+      "t = 0",
+      "data-base: o investimento inicial entra uma única vez"
+    ],
+    [
+      "VPL = 0",
+      "equivalência ao critério usado, não ausência de juros"
+    ],
+    [
+      "100% ou 1",
+      "soma dos pesos de uma carteira completa sem posições vendidas, conforme a representação"
+    ],
+    [
+      "12 meses",
+      "equivalência de um ano para uniformizar a unidade dos prazos"
+    ]
+  ],
+  "depois": [
+    [
+      "Mais de R$ 1 milhão",
+      "via financeira de qualificado: investimentos financeiros + ateste escrito dessa condição"
+    ],
+    [
+      "Mais de R$ 10 milhões",
+      "via financeira de profissional: investimentos financeiros + ateste escrito dessa condição"
+    ]
+  ],
+  "blocos_antes": {
+    "1": [
+      [
+        "2",
+        "óticas da liquidez: financiamento e mercado"
+      ]
+    ],
+    "2": [
+      [
+        "1 período",
+        "simples e composto coincidem com mesmo capital e taxa, sem fluxos intermediários"
+      ]
+    ],
+    "3": [
+      [
+        "n",
+        "número de períodos compatível com a taxa i"
+      ],
+      [
+        "t = 0",
+        "data-base: o investimento inicial entra uma única vez"
+      ],
+      [
+        "VPL = 0",
+        "equivalência ao critério usado, não ausência de juros"
+      ]
+    ],
+    "4": [
+      [
+        "100% ou 1",
+        "soma dos pesos de uma carteira completa sem posições vendidas, conforme a representação"
+      ],
+      [
+        "12 meses",
+        "equivalência de um ano para uniformizar a unidade dos prazos"
+      ]
+    ]
+  },
+  "blocos_depois": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [],
+    "5": [
+      [
+        "Mais de R$ 1 milhão",
+        "via financeira de qualificado: investimentos financeiros + ateste escrito dessa condição"
+      ],
+      [
+        "Mais de R$ 10 milhões",
+        "via financeira de profissional: investimentos financeiros + ateste escrito dessa condição"
+      ]
+    ]
+  },
+  "removidos": [
+    {
+      "item": [
+        "2",
+        "óticas da liquidez: financiamento e mercado"
+      ],
+      "motivo": "Contagem didática, relação matemática, símbolo ou conversão básica; não requisito numérico específico a memorizar"
+    },
+    {
+      "item": [
+        "1 período",
+        "simples e composto coincidem com mesmo capital e taxa, sem fluxos intermediários"
+      ],
+      "motivo": "Contagem didática, relação matemática, símbolo ou conversão básica; não requisito numérico específico a memorizar"
+    },
+    {
+      "item": [
+        "n",
+        "número de períodos compatível com a taxa i"
+      ],
+      "motivo": "Contagem didática, relação matemática, símbolo ou conversão básica; não requisito numérico específico a memorizar"
+    },
+    {
+      "item": [
+        "t = 0",
+        "data-base: o investimento inicial entra uma única vez"
+      ],
+      "motivo": "Contagem didática, relação matemática, símbolo ou conversão básica; não requisito numérico específico a memorizar"
+    },
+    {
+      "item": [
+        "VPL = 0",
+        "equivalência ao critério usado, não ausência de juros"
+      ],
+      "motivo": "Contagem didática, relação matemática, símbolo ou conversão básica; não requisito numérico específico a memorizar"
+    },
+    {
+      "item": [
+        "100% ou 1",
+        "soma dos pesos de uma carteira completa sem posições vendidas, conforme a representação"
+      ],
+      "motivo": "Contagem didática, relação matemática, símbolo ou conversão básica; não requisito numérico específico a memorizar"
+    },
+    {
+      "item": [
+        "12 meses",
+        "equivalência de um ano para uniformizar a unidade dos prazos"
+      ],
+      "motivo": "Contagem didática, relação matemática, símbolo ou conversão básica; não requisito numérico específico a memorizar"
+    }
+  ],
+  "novos": [
+    [
+      "Mais de R$ 1 milhão",
+      "via financeira de qualificado: investimentos financeiros + ateste escrito dessa condição"
+    ],
+    [
+      "Mais de R$ 10 milhões",
+      "via financeira de profissional: investimentos financeiros + ateste escrito dessa condição"
+    ]
+  ],
+  "alteracoes_fora_aula13": false
+}

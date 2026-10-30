@@ -23,7 +23,7 @@ completo para os focos temáticos e justificativas de cada linha.
   prioridade ou aula (1–13), sem opção Tema. A posição não
   muda ao filtrar; temas da tabela não renomeiam aulas já cadastradas.
 - Aula 13 tem Riscos Financeiros (28/10/2026), Crédito Privado e Fluxo de
-  Pagamentos (29/10/2026), Prazos e Retornos de Carteiras (30/10/2026).
+  Pagamentos (29/10/2026), Prazos e Retornos de Carteiras e Classificação de Investidores (30/10/2026).
   As demais aguardam fontes; o guia verifica o cadastro real ao exibir o aviso.
 - Preserve Q/BP/AL/MAT, H, cfg, filtros de outras telas, sessão e relógio. Os
   blocos deste guia não substituem os blocos internos das aulas. Sem API paga.
@@ -222,7 +222,7 @@ da primeira renderização e respeite os destaques semânticos nos dois temas.
   dados `MAT.mm`, os controles por conceito e o renderizador `mapa()` permanecem.
   As regras detalhadas abaixo sobre o desenho azul aplicam-se às Ramificações.
 - **Mapa mental** é uma categoria adicional (`visual`), com imagens de revisão
-  elaboradas a partir das aulas cadastradas. Catálogo atual: 29 mapas, cobrindo
+  elaboradas a partir das aulas cadastradas. Catálogo atual: 30 mapas, cobrindo
   as 13 aulas e os blocos recebidos. Não presumir as internas futuras da 13.
   Catálogo em `mental-maps-data.js`; imagens locais em `assets/mental-maps`.
 - Exibir um mapa por vez, selecionar pelos assuntos e respeitar os filtros de
@@ -446,9 +446,9 @@ de **Aula 13: Bloco Final**. A segunda, **Aula 2: Crédito Privado**, foi recebi
 em 29/10/2026: transcrição 24 e duas imagens. A terceira é **Aula 3: Fluxo de
 Pagamentos**, transcrição 25, dois slides e três complementos. A quarta,
 **Aula 4: Prazos e Retornos de Carteiras**, reúne as fontes 26 e 27
-(30/10/2026), quatro slides e transcrição conjunta. A última aula curta
-aguarda fontes; não criar
-placeholders ou conteúdo presumido.
+(30/10/2026), quatro slides e transcrição conjunta. A quinta, **Classificação de
+Investidores**, usa a transcrição 29 e dois slides. Não presumir que a numeração
+da fonte encerra o bloco; não criar placeholders de futuras aulas.
 
 Pedido FINAL explícito: metade do padrão **por aula interna**: **50 questões
 (10 fáceis, 20 médias, 10 difíceis, 10 Hardcore), 25 Bate-pronto e 25 flashcards**.
@@ -507,6 +507,28 @@ Rodar também `tests/test_aula13.py` ao alterar este bloco.
   Revisão global de 30/10: 13 entradas removidas nas aulas 1/10/12/13; ver
   `docs/revisao-numeros-para-decorar.md` e JSON. Preserve hashes históricos;
   testes reconstituem somente os cartões alterados ao comparar versões antigas.
+
+- Quinta interna: Classificação de Investidores, fonte 29 e dois slides.
+  Q 1401–1450, BP 100701–100725, 25 flashcards 8/9/8. Total recebido:
+  250 Q (200 normais/50 HC), 125 BP e 125 FC (42/42/41).
+  Via financeira: **mais de**, não igual a, R$ 1 milhão/10 milhões em
+  investimentos financeiros, com ateste escrito da condição correspondente.
+  Não confundir patrimônio/renda/tamanho da ordem, via financeira e institucional,
+  exame elegível e autorização, recursos próprios e de clientes, gestores e cotistas.
+  Profissional também é qualificado; a recíproca não é automática.
+  A fonte abrevia incorretamente um milhão como 1k; usar o valor do corpo do slide.
+  Conferência oficial CVM 30/13 bloqueada por proxy CONNECT 403. Procedimentos
+  de não residentes são identificados como modelo da fonte, sem universalidade
+  vigente certificada. Questões operacionais estipulam o regime exigido no caso;
+  inclusão profissional de não residente é premissa expressamente validada.
+  Ver `docs/aula-13-investidores.md` e `tests/test_aula13_investidores.py`.
+- Segunda revisão de números: remover também os sete cartões remanescentes da
+  Aula 13 (contagens conceituais, símbolos, identidades de fórmula, conversão
+  básica). Preservar as explicações nos materiais. Somente os dois limites
+  financeiros com atestes ficam em Números da 13. Nas quatro primeiras internas,
+  a seção fica ausente, sem cartões de preenchimento. Ver
+  `docs/revisao-numeros-bloco-final.md`; não reescrever a primeira revisão nem
+  os hashes históricos. Não criar cartões só para preencher a seção.
 
 ## Novas aulas com vários blocos
 

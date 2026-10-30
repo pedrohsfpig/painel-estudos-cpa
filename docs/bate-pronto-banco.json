@@ -4849,6 +4849,181 @@
       "tema": "Carteiras: retorno esperado e comparação",
       "fonte_Q": 1400,
       "modelo": "direto"
+    },
+    {
+      "id": 100701,
+      "aula": 13,
+      "tema": "Investidores: categorias e relações",
+      "fonte_Q": 1402,
+      "modelo": "direto"
+    },
+    {
+      "id": 100702,
+      "aula": 13,
+      "tema": "Investidores: categorias e relações",
+      "fonte_Q": 1403,
+      "modelo": "direto"
+    },
+    {
+      "id": 100703,
+      "aula": 13,
+      "tema": "Investidores: categorias e relações",
+      "fonte_Q": 1405,
+      "modelo": "direto"
+    },
+    {
+      "id": 100704,
+      "aula": 13,
+      "tema": "Investidores: categorias e relações",
+      "fonte_Q": 1406,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100705,
+      "aula": 13,
+      "tema": "Investidores: categorias e relações",
+      "fonte_Q": 1410,
+      "modelo": "direto"
+    },
+    {
+      "id": 100706,
+      "aula": 13,
+      "tema": "Investidores: limites e ateste",
+      "fonte_Q": 1413,
+      "modelo": "direto"
+    },
+    {
+      "id": 100707,
+      "aula": 13,
+      "tema": "Investidores: limites e ateste",
+      "fonte_Q": 1416,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100708,
+      "aula": 13,
+      "tema": "Investidores: limites e ateste",
+      "fonte_Q": 1415,
+      "modelo": "direto"
+    },
+    {
+      "id": 100709,
+      "aula": 13,
+      "tema": "Investidores: limites e ateste",
+      "fonte_Q": 1417,
+      "modelo": "direto"
+    },
+    {
+      "id": 100710,
+      "aula": 13,
+      "tema": "Investidores: limites e ateste",
+      "fonte_Q": 1418,
+      "modelo": "direto"
+    },
+    {
+      "id": 100711,
+      "aula": 13,
+      "tema": "Investidores: profissionais e recursos próprios",
+      "fonte_Q": 1421,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100712,
+      "aula": 13,
+      "tema": "Investidores: profissionais e recursos próprios",
+      "fonte_Q": 1422,
+      "modelo": "direto"
+    },
+    {
+      "id": 100713,
+      "aula": 13,
+      "tema": "Investidores: profissionais e recursos próprios",
+      "fonte_Q": 1425,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100714,
+      "aula": 13,
+      "tema": "Investidores: profissionais e recursos próprios",
+      "fonte_Q": 1429,
+      "modelo": "direto"
+    },
+    {
+      "id": 100715,
+      "aula": 13,
+      "tema": "Investidores: profissionais e recursos próprios",
+      "fonte_Q": 1427,
+      "modelo": "direto"
+    },
+    {
+      "id": 100716,
+      "aula": 13,
+      "tema": "Investidores: qualificação e gestão de clubes",
+      "fonte_Q": 1433,
+      "modelo": "direto"
+    },
+    {
+      "id": 100717,
+      "aula": 13,
+      "tema": "Investidores: qualificação e gestão de clubes",
+      "fonte_Q": 1436,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100718,
+      "aula": 13,
+      "tema": "Investidores: qualificação e gestão de clubes",
+      "fonte_Q": 1435,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100719,
+      "aula": 13,
+      "tema": "Investidores: qualificação e gestão de clubes",
+      "fonte_Q": 1437,
+      "modelo": "direto"
+    },
+    {
+      "id": 100720,
+      "aula": 13,
+      "tema": "Investidores: qualificação e gestão de clubes",
+      "fonte_Q": 1434,
+      "modelo": "direto"
+    },
+    {
+      "id": 100721,
+      "aula": 13,
+      "tema": "Investidores: não residentes e representação",
+      "fonte_Q": 1443,
+      "modelo": "direto"
+    },
+    {
+      "id": 100722,
+      "aula": 13,
+      "tema": "Investidores: não residentes e representação",
+      "fonte_Q": 1441,
+      "modelo": "lacuna"
+    },
+    {
+      "id": 100723,
+      "aula": 13,
+      "tema": "Investidores: não residentes e representação",
+      "fonte_Q": 1446,
+      "modelo": "direto"
+    },
+    {
+      "id": 100724,
+      "aula": 13,
+      "tema": "Investidores: não residentes e representação",
+      "fonte_Q": 1445,
+      "modelo": "direto"
+    },
+    {
+      "id": 100725,
+      "aula": 13,
+      "tema": "Investidores: não residentes e representação",
+      "fonte_Q": 1450,
+      "modelo": "direto"
     }
   ],
   "escopo": "Banco conceitual próprio: 50 por aula regular e 25 por aula interna do bloco final. Fontes e validação específicas registradas nos relatórios de cada aula; sem certificação normativa independente."

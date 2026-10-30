@@ -31,7 +31,16 @@ class BateProntoContentTests(unittest.TestCase):
             a=[r for r in rows if r[0]==lesson]
             self.assertEqual(len({r[2] for r in a}),25*unit_count() if lesson==13 else 50)
             self.assertGreater(sum('____' in r[2] for r in a),0)
-            self.assertLess(sum('____' in r[2] for r in a),25)
+            if lesson==13:
+                source=(ROOT/'index.html').read_text().split('const AL=',1)[1]
+                units=json.JSONDecoder().raw_decode(source)[0][12]['b']
+                for unit in units:
+                    cards=[r for r in a if r[1] in unit['topics']]
+                    gaps=sum('____' in r[2] for r in cards)
+                    self.assertGreater(gaps,0)
+                    self.assertLess(gaps,len(cards))
+            else:
+                self.assertLess(sum('____' in r[2] for r in a),25)
         for i,(r,record) in enumerate(zip(rows,ledger)):
             self.assertEqual(record['id'],100001+i)
             self.assertEqual(record['fonte_Q'],r[7])

@@ -1,5 +1,5 @@
 """Volume por aula interna e reconstrução histórica do bloco final."""
-from numbers_revision import restore_before_numbers
+from numbers_revision import restore_before_numbers,restore_before_investor_numbers
 import copy
 import json
 from pathlib import Path
@@ -51,3 +51,17 @@ def before_portfolio_lesson(lessons, material):
     for key in ['dg','tb','tl','fc']:
         material[key] = [x for u in material['b'] for x in u[key]]
     return lessons, material
+
+def before_investor_lesson(lessons, material):
+    """Entrega de carteiras, antes da quinta interna e da segunda limpeza numérica."""
+    report=json.loads((ROOT/'docs/aula-13-investidores-cobertura.json').read_text())
+    lessons,material=restore_before_investor_numbers(lessons),copy.deepcopy(material)
+    lessons[12]['b']=lessons[12]['b'][:4]
+    lessons[12]['o']=report['preservacao']['aula13_o']
+    for key in ['r','d','p','n']:
+        lessons[12][key]=[x for u in lessons[12]['b'] for x in u[key]]
+    material['b']=material['b'][:4]
+    material['mm'][1]=[x for u in material['b'] for x in u['mm'][1]]
+    for key in ['dg','tb','tl','fc']:
+        material[key]=[x for u in material['b'] for x in u[key]]
+    return lessons,material
