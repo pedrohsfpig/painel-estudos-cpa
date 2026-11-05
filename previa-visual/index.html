@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>CPA Estudos · Prévia visual</title>
+  <link rel="stylesheet" href="preview.css">
+  <script src="catalog.js" defer></script>
+  <script src="preview.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Ir ao conteúdo</a>
+  <aside class="sidebar" aria-label="Menu principal">
+    <div class="brand-row">
+      <a class="brand" href="?p=painel" aria-label="CPA Estudos, painel"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>CPA<span class="brand-sub">Estudos</span></span></a>
+      <button class="icon-button theme-control" type="button" aria-label="Ativar tema claro" title="Alternar tema"></button>
+    </div>
+    <div class="nav-caption">Seu espaço de estudo</div>
+    <nav class="main-nav"></nav>
+    <div class="sidebar-bottom">
+      <div class="library-status"><span class="status-dot"></span>Biblioteca de estudos<span>13 aulas · 1.450 questões</span></div>
+      <a class="original-link" href="../" target="_blank" rel="noopener">Abrir sistema atual <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" style="width:14px;height:14px"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+    </div>
+  </aside>
+  <div class="drawer-shade" hidden></div>
+  <main id="main" tabindex="-1">
+    <div class="mobile-bar"><button class="icon-button menu-control" aria-label="Abrir menu" aria-expanded="false"></button><span>CPA <span class="muted">Estudos</span></span><button class="icon-button theme-control" aria-label="Ativar tema claro"></button></div>
+    <div class="preview-caption"><span class="preview-indicator"></span>Prévia visual<span class="caption-divider"></span>Dados ilustrativos</div>
+    <div id="page"></div>
+  </main>
+  <dialog id="session-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-top"><span class="eyebrow">Configuração da sessão</span><button class="icon-button close-dialog" aria-label="Fechar"></button></div>
+    <h2 id="dialog-title">Sua sessão está preparada.</h2>
+    <p class="muted">Esta demonstração permite avaliar a configuração. As questões e o histórico do sistema atual permanecem preservados.</p>
+    <div id="session-summary"></div>
+    <button class="primary close-dialog">Voltar à prévia <span aria-hidden="true">↗</span></button>
+  </dialog>
+  <div class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
