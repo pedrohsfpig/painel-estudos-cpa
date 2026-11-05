@@ -42,8 +42,19 @@ class CompactResults(unittest.TestCase):
             for theme in ['light','dark']:
                 self.page.evaluate('x=>document.documentElement.dataset.theme=x',theme)
                 self.assertFalse(self.page.evaluate('document.documentElement.scrollWidth>innerWidth'))
-                self.assertLess(self.page.locator('.result-actions').bounding_box()['y'],460)
-                self.assertLess(self.page.locator('.result-charts').bounding_box()['height'],600)
+                # Letras maiores foram aprovadas na revisão visual global: os
+                # controles precisam continuar visíveis antes dos gráficos,
+                # sem depender da antiga posição absoluta em 460 px.
+                actions=self.page.locator('.result-actions').bounding_box()
+                self.assertGreaterEqual(actions['y'],0)
+                self.assertLessEqual(actions['y']+actions['height'],self.page.viewport_size['height'])
+                self.assertLessEqual(actions['y']+actions['height'],self.page.locator('.result-charts').bounding_box()['y'])
+                # Dez aulas podem ocupar mais altura com corpo de leitura maior;
+                # nenhum indicador pode ser cortado pelo painel que o contém.
+                self.assertTrue(self.page.locator('.result-panel .result-performance-card').evaluate_all('''nodes=>nodes.every(n=>{
+                    const p=n.closest('.result-panel').getBoundingClientRect(),r=n.getBoundingClientRect();
+                    return r.top>=p.top&&r.bottom<=p.bottom&&r.left>=p.left&&r.right<=p.right;
+                })'''))
                 self.assertTrue(self.page.locator('.result-panel,.result-overview,.result-stat').evaluate_all('nodes=>nodes.every(n=>n.scrollWidth<=n.clientWidth+1)'))
                 if width>=1280:
                     lesson=self.page.locator('[data-result-lesson="1"]').bounding_box()

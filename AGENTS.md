@@ -1442,3 +1442,28 @@ sistema. Não crie as tabelas da nova aula antes de receber os materiais.
   regra nos quatro modos e no diário, mantendo persistência e cronômetro.
 - Executar também `tests/test_risk_concepts_and_progress.py`, testes da aula 13,
   navegação e escopo por conceito, além dos checks obrigatórios de conteúdo/smoke.
+
+## Revisão visual global aprovada — 05/11/2026
+
+O usuário aprovou a prévia em `previa-visual/` e autorizou aplicar a linguagem ao
+sistema inteiro, com letras menores mais legíveis. A camada final `interface.css`
+é carregada depois dos estilos de cada área: grafite no escuro, branco quente no
+claro, azul nas ações e seleção, hierarquia e espaçamento consistentes, menos
+superfícies aninhadas. Preserve as cores semânticas dos conteúdos, respostas,
+dificuldades e estatísticas.
+
+- Texto de leitura em 15–17 px; rótulos normalmente em 14 px. Atalhos compactos e
+  contagens têm mínimo de 13 px, substituindo os tamanhos antigos de 10–12 px.
+  Enunciados normais seguem em 20 px; Bate-pronto mantém sua hierarquia maior.
+- Todos os campos, materiais, diagramas, tabelas, flashcards, resultados,
+  seletores e diálogos usam essa escala. Mapas em imagem preservam o conteúdo e
+  os controles de ampliação; não altere arquivos das aulas por uma revisão visual.
+- Praticar usa lista de aulas e painel lateral de sessão/configuração. O novo
+  `.practice-sidebar` apenas agrupa a marcação: não mude sorteio, filtros,
+  distribuição ou a contagem por esse motivo. Iniciar deve continuar acessível
+  nas telas de computador e durante a rolagem; em telas pequenas o painel se
+  reorganiza. Preserve o foco, teclado e os dois temas.
+- Q/BP/AL/MAT, histórico e sessão não mudam com estilos ou navegação. Não use os
+  dados ilustrativos da prévia no sistema real. Acompanhe as regressões existentes
+  com `python3 tests/test_interface.py`, que cobre leitura, tamanhos de tela,
+  materiais e preservação da sessão ao navegar/trocar o tema.
